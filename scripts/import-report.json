@@ -1,0 +1,5696 @@
+{
+  "commit": "ed476a8ee6e3f7b3a46fc48af6c7dabc02387b1d",
+  "sha256": "dc2fba41f24ed85ce0e29b426208e7ea06efc2b85ae8f2a14a06cda01648cd43",
+  "upstreamRecords": 4249,
+  "selected": 2987,
+  "excludedRecords": [
+    {
+      "key": "Amorites@Gen.10.16-Amo",
+      "type": "Group"
+    },
+    {
+      "key": "Anamim@Gen.10.13-1Ch",
+      "type": "Group"
+    },
+    {
+      "key": "Appaim@1Ch.2.30-",
+      "type": "Group"
+    },
+    {
+      "key": "Aramitess@1Ch.7.14",
+      "type": "Female"
+    },
+    {
+      "key": "Archites@Jos.16.2-1Ch",
+      "type": "Group"
+    },
+    {
+      "key": "Ariel@2Sa.23.20-1Ch",
+      "type": "Group"
+    },
+    {
+      "key": "Arkites@Gen.10.17-1Ch",
+      "type": "Group"
+    },
+    {
+      "key": "Arvadites@Gen.10.18-1Ch",
+      "type": "Group"
+    },
+    {
+      "key": "Asen@Neh.7.24",
+      "type": "Male"
+    },
+    {
+      "key": "Asshurim@Gen.25.3",
+      "type": "Group"
+    },
+    {
+      "key": "Avvim@Deu.2.23-Jos",
+      "type": "Group"
+    },
+    {
+      "key": "Birzaith@1Ch.7.31",
+      "type": "Male"
+    },
+    {
+      "key": "Buzites@Job.32.2-",
+      "type": "Group"
+    },
+    {
+      "key": "Canaanite_woman@Gen.46.10-Exo",
+      "type": "Female"
+    },
+    {
+      "key": "Caphtorim@Gen.10.14-1Ch",
+      "type": "Group"
+    },
+    {
+      "key": "Casluhim@Gen.10.14-1Ch",
+      "type": "Group"
+    },
+    {
+      "key": "Cherethite@2Sa.8.18-1Ch",
+      "type": "Group"
+    },
+    {
+      "key": "Dehavite@Ezr.4.9",
+      "type": "Group"
+    },
+    {
+      "key": "Dinaite@Ezr.4.9",
+      "type": "Male"
+    },
+    {
+      "key": "Dodanim@Gen.10.4-1Ch",
+      "type": "Group"
+    },
+    {
+      "key": "Emim@Gen.14.5-Deu",
+      "type": "Group"
+    },
+    {
+      "key": "Eznites@2Sa.23.8",
+      "type": "Group"
+    },
+    {
+      "key": "Garmites@1Ch.4.19",
+      "type": "Group"
+    },
+    {
+      "key": "Gibea@1Ch.2.49",
+      "type": "Female"
+    },
+    {
+      "key": "Girgashite@Gen.10.16-Neh",
+      "type": "Group"
+    },
+    {
+      "key": "Girzites@1Sa.27.8",
+      "type": "Group"
+    },
+    {
+      "key": "Gizonites@1Ch.11.34",
+      "type": "Group"
+    },
+    {
+      "key": "Goiim@Gen.14.1-Jos",
+      "type": "Group"
+    },
+    {
+      "key": "Hachmonite@2Sa.23.8-1Ch",
+      "type": "Group"
+    },
+    {
+      "key": "Hamathites@Gen.10.18-1Ch",
+      "type": "Group"
+    },
+    {
+      "key": "Hararites@2Sa.23.11-1Ch",
+      "type": "Group"
+    },
+    {
+      "key": "Haruphites@1Ch.12.5",
+      "type": "Group"
+    },
+    {
+      "key": "Hebrews@Gen.14.13-Heb",
+      "type": "Group"
+    },
+    {
+      "key": "Hivites@Gen.10.17-2Ch",
+      "type": "Group"
+    },
+    {
+      "key": "Horonites@Neh.2.10-",
+      "type": "Group"
+    },
+    {
+      "key": "huge_man@2Sa.21.20-1Ch",
+      "type": "Male"
+    },
+    {
+      "key": "Hushathites@2Sa.21.18-1Ch",
+      "type": "Group"
+    },
+    {
+      "key": "Ithrites@2Sa.23.38-1Ch",
+      "type": "Group"
+    },
+    {
+      "key": "Jebusites@Gen.10.16-Zec",
+      "type": "Group"
+    },
+    {
+      "key": "Jerusalem_wives@2Sa.5.13",
+      "type": "Female"
+    },
+    {
+      "key": "Jorkeam@1Ch.2.44",
+      "type": "Male"
+    },
+    {
+      "key": "Kadmonites@Gen.15.19",
+      "type": "Group"
+    },
+    {
+      "key": "Kenite@Gen.15.19-1Ch",
+      "type": "Group"
+    },
+    {
+      "key": "Kenizzites@Gen.15.19",
+      "type": "Group"
+    },
+    {
+      "key": "Kittim@Gen.10.4-1Ch",
+      "type": "Group"
+    },
+    {
+      "key": "Lecah@1Ch.4.21",
+      "type": "Male"
+    },
+    {
+      "key": "Lehabim@Gen.10.13-1Ch",
+      "type": "Group"
+    },
+    {
+      "key": "Letushim@Gen.25.3",
+      "type": "Group"
+    },
+    {
+      "key": "Leummim@Gen.25.3",
+      "type": "Group"
+    },
+    {
+      "key": "Ludim@Gen.10.13-1Ch",
+      "type": "Group"
+    },
+    {
+      "key": "Machbenah@1Ch.2.49",
+      "type": "Female"
+    },
+    {
+      "key": "Mahavites@1Ch.11.46",
+      "type": "Group"
+    },
+    {
+      "key": "Mareshah@1Ch.4.21",
+      "type": "Male"
+    },
+    {
+      "key": "Mecherathites@1Ch.11.36",
+      "type": "Group"
+    },
+    {
+      "key": "Meholathites@1Sa.18.19-2Sa",
+      "type": "Group"
+    },
+    {
+      "key": "Menuhoth@1Ch.2.52",
+      "type": "Group"
+    },
+    {
+      "key": "Meunim@Ezr.2.50-Neh",
+      "type": "Group"
+    },
+    {
+      "key": "Meunites@1Ch.4.41-2Ch",
+      "type": "Group"
+    },
+    {
+      "key": "Mezobaites@1Ch.11.47",
+      "type": "Group"
+    },
+    {
+      "key": "Mishraites@1Ch.2.53",
+      "type": "Group"
+    },
+    {
+      "key": "Mithnites@1Ch.11.43",
+      "type": "Group"
+    },
+    {
+      "key": "Naamathites@Job.2.11-",
+      "type": "Group"
+    },
+    {
+      "key": "Nahash@2Sa.17.25",
+      "type": "Disputed identity"
+    },
+    {
+      "key": "Naphtuhim@Gen.10.13-1Ch",
+      "type": "Group"
+    },
+    {
+      "key": "Nehelamite@Jer.29.24-",
+      "type": "Group"
+    },
+    {
+      "key": "Nephilim@Gen.6.4-Num",
+      "type": "Group"
+    },
+    {
+      "key": "Nephushesim@Ezr.2.50-Neh",
+      "type": "Group"
+    },
+    {
+      "key": "Parthians@Act.2.9",
+      "type": "Group"
+    },
+    {
+      "key": "Pathrusim@Gen.10.14-1Ch",
+      "type": "Group"
+    },
+    {
+      "key": "Pelethites@2Sa.8.18-1Ch",
+      "type": "Group"
+    },
+    {
+      "key": "Pelonites@2Sa.23.26-1Ch",
+      "type": "Group"
+    },
+    {
+      "key": "Perizzites@Gen.13.7-Neh",
+      "type": "Group"
+    },
+    {
+      "key": "Puthites@1Ch.2.53",
+      "type": "Group"
+    },
+    {
+      "key": "Ramathites@1Ch.27.27",
+      "type": "Group"
+    },
+    {
+      "key": "Rephaim@Gen.14.5-Jos",
+      "type": "Group"
+    },
+    {
+      "key": "Salome@Mat.14.6",
+      "type": "Female"
+    },
+    {
+      "key": "Scythians@Col.3.11",
+      "type": "Group"
+    },
+    {
+      "key": "Shilonites@Neh.11.5",
+      "type": "Group"
+    },
+    {
+      "key": "Shiphmites@1Ch.27.27",
+      "type": "Group"
+    },
+    {
+      "key": "Shuhites@Job.2.11-",
+      "type": "Group"
+    },
+    {
+      "key": "Shulammites@Sng.6.13",
+      "type": "Group"
+    },
+    {
+      "key": "Shumathites@1Ch.2.53",
+      "type": "Group"
+    },
+    {
+      "key": "Shunammites@1Ki.1.3-2Ki",
+      "type": "Group"
+    },
+    {
+      "key": "Sinites@Gen.10.17-1Ch",
+      "type": "Group"
+    },
+    {
+      "key": "Sukkiim@2Ch.12.3",
+      "type": "Group"
+    },
+    {
+      "key": "Tizites@1Ch.11.45",
+      "type": "Group"
+    },
+    {
+      "key": "Zemarites@Gen.10.18-1Ch",
+      "type": "Group"
+    },
+    {
+      "key": "Zorathites@1Ch.2.53-",
+      "type": "Group"
+    },
+    {
+      "key": "Zuzim@Gen.14.5",
+      "type": "Group"
+    },
+    {
+      "key": "Unnamed#1@1Ki.2.27",
+      "type": "Male"
+    },
+    {
+      "key": "Unnamed#1@Mat.1.15",
+      "type": "Male"
+    },
+    {
+      "key": "Unnamed#2@1Ki.2.27",
+      "type": "Male"
+    },
+    {
+      "key": "Unnamed#2@Mat.1.15",
+      "type": "Male"
+    },
+    {
+      "key": "Unnamed#3@1Ki.2.27",
+      "type": "Male"
+    },
+    {
+      "key": "Unnamed#3@Mat.1.15",
+      "type": "Male"
+    },
+    {
+      "key": "Unnamed#4@1Ki.2.27",
+      "type": "Male"
+    },
+    {
+      "key": "Unnamed#4@Mat.1.15",
+      "type": "Male"
+    },
+    {
+      "key": "Unnamed#5@Mat.1.15",
+      "type": "Male"
+    },
+    {
+      "key": "Unnamed#6@Mat.1.15",
+      "type": "Male"
+    },
+    {
+      "key": "Unnamed#7@Mat.1.15",
+      "type": "Male"
+    },
+    {
+      "key": "Unnamed#8@Mat.1.15",
+      "type": "Male"
+    },
+    {
+      "key": "Unnamed#9@Mat.1.15",
+      "type": "Male"
+    },
+    {
+      "key": "daughter_of_Annas@Jhn.18.13",
+      "type": "Female"
+    },
+    {
+      "key": "daughter_of_Machir@1Ch.2.21",
+      "type": "Female"
+    },
+    {
+      "key": "daughter_of_Meshullam@Neh.6.18",
+      "type": "Female"
+    },
+    {
+      "key": "daughter_of_Pharaoh@1Ki.3.1",
+      "type": "Female"
+    },
+    {
+      "key": "daughter_of_Pharaoh@Exo.2.5",
+      "type": "Female"
+    },
+    {
+      "key": "daughter_of_Putiel@Exo.6.25",
+      "type": "Female"
+    },
+    {
+      "key": "daughter_of_Sanballat@Neh.13.28",
+      "type": "Female"
+    },
+    {
+      "key": "daughter_of_Shecaniah@Neh.6.18",
+      "type": "Female"
+    },
+    {
+      "key": "daughter1_of_Lot@Gen.19.37",
+      "type": "Female"
+    },
+    {
+      "key": "daughter2_of_Lot@Gen.19.38",
+      "type": "Female"
+    },
+    {
+      "key": "father_of_Barnabas@Col.4.10",
+      "type": "Male"
+    },
+    {
+      "key": "father_of_Conaniah@2Ch.31.12",
+      "type": "Male"
+    },
+    {
+      "key": "father_of_Elizabeth@Luk.1.5",
+      "type": "Male"
+    },
+    {
+      "key": "father_of_Eunice@2Ti.1.5",
+      "type": "Male"
+    },
+    {
+      "key": "father_of_Hilkiah@Jer.32.7",
+      "type": "Male"
+    },
+    {
+      "key": "father_of_Hodiah@1Ch.4.19",
+      "type": "Male"
+    },
+    {
+      "key": "father_of_Lazarus@Luk.10.39",
+      "type": "Male"
+    },
+    {
+      "key": "father_of_Mamre@Gen.14.13",
+      "type": "Male"
+    },
+    {
+      "key": "father_of_Nathan@1Ch.11.38",
+      "type": "Male"
+    },
+    {
+      "key": "father_of_Tahpenes@1Ki.11.19",
+      "type": "Male"
+    },
+    {
+      "key": "father_of_Timothy@Act.16.1",
+      "type": "Male"
+    },
+    {
+      "key": "husband_of_Hammolecheth@1Ch.7.18",
+      "type": "Male"
+    },
+    {
+      "key": "husband_of_Mary@Act.12.12",
+      "type": "Male"
+    },
+    {
+      "key": "husband_of_Matred@Gen.36.39",
+      "type": "Male"
+    },
+    {
+      "key": "husband_of_Shimeath@2Ki.12.21",
+      "type": "Male"
+    },
+    {
+      "key": "husband_of_Zeruiah@1Sa.26.6",
+      "type": "Male"
+    },
+    {
+      "key": "motherInLaw_of_Peter@Mat.8.14-Luk",
+      "type": "Female"
+    },
+    {
+      "key": "sister_of_Tahpenes@1Ki.11.19",
+      "type": "Female"
+    },
+    {
+      "key": "son_of_Jashen@2Sa.23.32",
+      "type": "Male"
+    },
+    {
+      "key": "son_of_Joiada@Neh.13.28",
+      "type": "Male"
+    },
+    {
+      "key": "wife_of_Heli@Luk.1.5",
+      "type": "Female"
+    },
+    {
+      "key": "a_wife_of_Eliphaz@Gen.36.11-1Ch",
+      "type": "Female"
+    },
+    {
+      "key": "a_wife_of_Ezekiel@Ezk.24.18",
+      "type": "Female"
+    },
+    {
+      "key": "a_wife_of_Hezron@1Ch.2.9",
+      "type": "Female"
+    },
+    {
+      "key": "a_wife_of_Jerahmeel@1Ch.2.26",
+      "type": "Female"
+    },
+    {
+      "key": "a_wife_of_Josiah@1Ch.3.15",
+      "type": "Female"
+    },
+    {
+      "key": "a_wife_of_Lot@Gen.19.15-",
+      "type": "Female"
+    },
+    {
+      "key": "a_wife_of_Peter@Mat.8.14-1Co",
+      "type": "Female"
+    },
+    {
+      "key": "a_wife_of_Simeon@Gen.46.10",
+      "type": "Female"
+    },
+    {
+      "key": "a_wife_of_Solomon@1Ki.4.11",
+      "type": "Female"
+    },
+    {
+      "key": "Abana@2Ki.5.12",
+      "type": "Place"
+    },
+    {
+      "key": "Abdon@Jos.19.28-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Abel@1Sa.6.18",
+      "type": "Place"
+    },
+    {
+      "key": "Abel-beth-maacah@2Sa.20.14-2Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Abel-keramim@Jdg.11.33",
+      "type": "Place"
+    },
+    {
+      "key": "Abel-meholah@Jdg.7.22-1Ki",
+      "type": "Place"
+    },
+    {
+      "key": "Abilene@Luk.3.1",
+      "type": "Place"
+    },
+    {
+      "key": "Abronah@Num.33.34-",
+      "type": "Place"
+    },
+    {
+      "key": "Accad@Gen.10.10",
+      "type": "Place"
+    },
+    {
+      "key": "Acco@Jdg.1.31-Act",
+      "type": "Place"
+    },
+    {
+      "key": "Achaia@Act.18.12-1Th",
+      "type": "Place"
+    },
+    {
+      "key": "Achor_Valley@Jos.7.24-Hos",
+      "type": "Place"
+    },
+    {
+      "key": "Achshaph@Jos.11.1-",
+      "type": "Place"
+    },
+    {
+      "key": "Achzib@Gen.38.5-Mic",
+      "type": "Place"
+    },
+    {
+      "key": "Achzib@Jos.19.29-Jdg",
+      "type": "Place"
+    },
+    {
+      "key": "Adadah@Jos.15.22",
+      "type": "Place"
+    },
+    {
+      "key": "Adam@Jos.3.16",
+      "type": "Place"
+    },
+    {
+      "key": "Adamah@Jos.19.36",
+      "type": "Place"
+    },
+    {
+      "key": "Adami-nekeb@Jos.19.33",
+      "type": "Place"
+    },
+    {
+      "key": "Addan@Ezr.2.59-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Addar@Jos.15.3",
+      "type": "Place"
+    },
+    {
+      "key": "Adithaim@Jos.15.36",
+      "type": "Place"
+    },
+    {
+      "key": "Admah@Gen.10.19-Hos",
+      "type": "Place"
+    },
+    {
+      "key": "Adoraim@2Ch.11.9",
+      "type": "Place"
+    },
+    {
+      "key": "Adramyttium@Act.27.2",
+      "type": "Place"
+    },
+    {
+      "key": "Adriatic_Sea@Act.27.27",
+      "type": "Place"
+    },
+    {
+      "key": "Adullam@Gen.38.1-Mic",
+      "type": "Place"
+    },
+    {
+      "key": "Adummim@Jos.15.7-",
+      "type": "Place"
+    },
+    {
+      "key": "Aenon@Jhn.3.23",
+      "type": "Place"
+    },
+    {
+      "key": "Ahava@Ezr.8.15-",
+      "type": "Place"
+    },
+    {
+      "key": "Ahlab@Jos.19.29-Jdg",
+      "type": "Place"
+    },
+    {
+      "key": "Ai@Gen.12.8-Isa",
+      "type": "Place"
+    },
+    {
+      "key": "Ai@Jer.49.3",
+      "type": "Place"
+    },
+    {
+      "key": "Aijalon@Jos.10.12-2Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Ain@Jos.15.32-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Ain@Num.34.11-Zec",
+      "type": "Place"
+    },
+    {
+      "key": "Akeldama@Mat.27.7-Act",
+      "type": "Place"
+    },
+    {
+      "key": "Akrabbim@Num.34.4-Jdg",
+      "type": "Place"
+    },
+    {
+      "key": "Alemeth@Jos.21.18-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Alexandria@Act.6.9-",
+      "type": "Place"
+    },
+    {
+      "key": "Allammelech@Jos.19.26",
+      "type": "Place"
+    },
+    {
+      "key": "Allon@Jos.19.33",
+      "type": "Place"
+    },
+    {
+      "key": "Allon-bacuth@Gen.35.8",
+      "type": "Place"
+    },
+    {
+      "key": "Alush@Num.33.13-",
+      "type": "Place"
+    },
+    {
+      "key": "Amad@Jos.19.26",
+      "type": "Place"
+    },
+    {
+      "key": "Amalek@Gen.14.7-Psa",
+      "type": "Place"
+    },
+    {
+      "key": "Amam@Jos.15.26",
+      "type": "Place"
+    },
+    {
+      "key": "Amana@Sng.4.8",
+      "type": "Place"
+    },
+    {
+      "key": "Amaw@Num.22.5",
+      "type": "Place"
+    },
+    {
+      "key": "Ammah@2Sa.2.24",
+      "type": "Place"
+    },
+    {
+      "key": "Ammon@Gen.19.38-Zep",
+      "type": "Place"
+    },
+    {
+      "key": "Amphipolis@Act.17.1",
+      "type": "Place"
+    },
+    {
+      "key": "Anab@Jos.11.21-",
+      "type": "Place"
+    },
+    {
+      "key": "Anaharath@Jos.19.19",
+      "type": "Place"
+    },
+    {
+      "key": "Ananiah@Neh.11.32",
+      "type": "Place"
+    },
+    {
+      "key": "Anathoth@Jos.21.18-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Angle@2Ch.26.9",
+      "type": "Place"
+    },
+    {
+      "key": "Anim@Jos.15.50",
+      "type": "Place"
+    },
+    {
+      "key": "Antioch@Act.13.14-2Ti",
+      "type": "Place"
+    },
+    {
+      "key": "Antioch@Act.6.5-Gal",
+      "type": "Place"
+    },
+    {
+      "key": "Antipatris@Act.23.31",
+      "type": "Place"
+    },
+    {
+      "key": "Aphek@1Ki.20.26-2Ki",
+      "type": "Place"
+    },
+    {
+      "key": "Aphek@Jos.12.18-1Sa",
+      "type": "Place"
+    },
+    {
+      "key": "Aphek@Jos.13.4-Jdg",
+      "type": "Place"
+    },
+    {
+      "key": "Apollonia@Act.17.1",
+      "type": "Place"
+    },
+    {
+      "key": "Ar@Num.21.15-Isa",
+      "type": "Place"
+    },
+    {
+      "key": "Arab@Jos.15.52",
+      "type": "Place"
+    },
+    {
+      "key": "Arabah@Deu.1.1-Zec",
+      "type": "Place"
+    },
+    {
+      "key": "Arabia@2Sa.23.35-Gal",
+      "type": "Place"
+    },
+    {
+      "key": "Arad@Num.21.1-Jdg",
+      "type": "Place"
+    },
+    {
+      "key": "Aram-maacah@1Ch.19.6",
+      "type": "Place"
+    },
+    {
+      "key": "Aram-naharaim@Psa.60.0",
+      "type": "Place"
+    },
+    {
+      "key": "Aram-zobah@Psa.60.0",
+      "type": "Place"
+    },
+    {
+      "key": "Ararat@Gen.8.4-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Areopagus@Act.17.19-",
+      "type": "Place"
+    },
+    {
+      "key": "Argob@Deu.3.4-1Ki",
+      "type": "Place"
+    },
+    {
+      "key": "Arnon@Num.21.13-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Aroer@1Sa.30.28",
+      "type": "Place"
+    },
+    {
+      "key": "Aroer@Deu.2.36-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Aroer@Num.32.34-Isa",
+      "type": "Place"
+    },
+    {
+      "key": "Arpad@2Ki.18.34-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Arubboth@1Ki.4.10",
+      "type": "Place"
+    },
+    {
+      "key": "Arumah@Jdg.9.41-2Ki",
+      "type": "Place"
+    },
+    {
+      "key": "Arvad@Ezk.27.8-",
+      "type": "Place"
+    },
+    {
+      "key": "Ashan@Jos.15.42-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Ashdod@Jos.11.22-Act",
+      "type": "Place"
+    },
+    {
+      "key": "Ashkelon@Jos.13.3-Zec",
+      "type": "Place"
+    },
+    {
+      "key": "Ashkenaz@Jer.51.27",
+      "type": "Place"
+    },
+    {
+      "key": "Ashnah@Jos.15.33-",
+      "type": "Place"
+    },
+    {
+      "key": "Ashtaroth@Deu.1.4-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Ashteroth-karnaim@Gen.14.5-Amo",
+      "type": "Place"
+    },
+    {
+      "key": "Asia@Act.2.9-Rev",
+      "type": "Place"
+    },
+    {
+      "key": "Assos@Act.20.13-",
+      "type": "Place"
+    },
+    {
+      "key": "Assyria@Gen.2.14-Zec",
+      "type": "Place"
+    },
+    {
+      "key": "Atad@Gen.50.10-",
+      "type": "Place"
+    },
+    {
+      "key": "Ataroth@Jos.16.2-",
+      "type": "Place"
+    },
+    {
+      "key": "Ataroth@Num.32.3-",
+      "type": "Place"
+    },
+    {
+      "key": "Ataroth-addar@Jos.16.5-",
+      "type": "Place"
+    },
+    {
+      "key": "Athach@1Sa.30.30",
+      "type": "Place"
+    },
+    {
+      "key": "Atharim@Num.21.1",
+      "type": "Place"
+    },
+    {
+      "key": "Athens@Act.17.15-2Th",
+      "type": "Place"
+    },
+    {
+      "key": "Atroth-beth-joab@1Ch.2.54",
+      "type": "Place"
+    },
+    {
+      "key": "Atroth-shophan@Num.32.35",
+      "type": "Place"
+    },
+    {
+      "key": "Attalia@Act.14.25",
+      "type": "Place"
+    },
+    {
+      "key": "Aven_Valley@Amo.1.5",
+      "type": "Place"
+    },
+    {
+      "key": "Avith@Gen.36.35-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Avvim@Jos.18.23",
+      "type": "Place"
+    },
+    {
+      "key": "Azal@Zec.14.5",
+      "type": "Place"
+    },
+    {
+      "key": "Azekah@Jos.10.10-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Azmon@Num.34.4-Jos",
+      "type": "Place"
+    },
+    {
+      "key": "Aznoth-tabor@Jos.19.34",
+      "type": "Place"
+    },
+    {
+      "key": "Baalah@Jos.15.29",
+      "type": "Place"
+    },
+    {
+      "key": "Baalah_Mount@Jos.15.11",
+      "type": "Place"
+    },
+    {
+      "key": "Baalath@1Ki.9.18-2Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Baalath@Jos.19.44",
+      "type": "Place"
+    },
+    {
+      "key": "Baalath-beer@Jos.15.24-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Baal-hazor@2Sa.13.23",
+      "type": "Place"
+    },
+    {
+      "key": "Baal-meon@Num.32.3-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "Baal-perazim@2Sa.5.20-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Baal-shalishah@2Ki.4.42",
+      "type": "Place"
+    },
+    {
+      "key": "Baal-tamar@Jdg.20.33",
+      "type": "Place"
+    },
+    {
+      "key": "Baal-zephon@Exo.14.2-Num",
+      "type": "Place"
+    },
+    {
+      "key": "Babylon@Gen.10.10-Rev",
+      "type": "Place"
+    },
+    {
+      "key": "Bahurim@2Sa.3.16-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Bajith@Isa.15.2",
+      "type": "Place"
+    },
+    {
+      "key": "Balah@Jos.19.3",
+      "type": "Place"
+    },
+    {
+      "key": "Bamoth@Num.21.19-",
+      "type": "Place"
+    },
+    {
+      "key": "Bamoth-baal@Num.21.28-Jos",
+      "type": "Place"
+    },
+    {
+      "key": "Bashan@Num.21.33-Zec",
+      "type": "Place"
+    },
+    {
+      "key": "Bath-rabbim@Sng.7.4",
+      "type": "Place"
+    },
+    {
+      "key": "Beautiful_Gate@Act.3.2-",
+      "type": "Place"
+    },
+    {
+      "key": "Beer@Num.21.16",
+      "type": "Place"
+    },
+    {
+      "key": "Beer-elim@Isa.15.8",
+      "type": "Place"
+    },
+    {
+      "key": "Beer-lahai-roi@Gen.16.14-",
+      "type": "Place"
+    },
+    {
+      "key": "Beeroth@Jos.9.17-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Beersheba@Gen.21.14-Amo",
+      "type": "Place"
+    },
+    {
+      "key": "Bene-berak@Jos.19.45",
+      "type": "Place"
+    },
+    {
+      "key": "Bene-jaakan@Num.33.31-Deu",
+      "type": "Place"
+    },
+    {
+      "key": "Benjamin_Gate@Jer.20.2-",
+      "type": "Place"
+    },
+    {
+      "key": "Benjamin_Gate@Zec.14.10",
+      "type": "Place"
+    },
+    {
+      "key": "Beracah_Valley@2Ch.20.26",
+      "type": "Place"
+    },
+    {
+      "key": "Berea@Act.17.10-",
+      "type": "Place"
+    },
+    {
+      "key": "Bered@Gen.16.14",
+      "type": "Place"
+    },
+    {
+      "key": "Berothah@2Sa.8.8-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "Besor@1Sa.30.9-",
+      "type": "Place"
+    },
+    {
+      "key": "Betah@2Sa.8.8",
+      "type": "Place"
+    },
+    {
+      "key": "Beten@Jos.19.25",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-anath@Jos.19.38-Jdg",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-anoth@Jos.15.59",
+      "type": "Place"
+    },
+    {
+      "key": "Bethany@Mat.21.17-Jhn",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-arabah@Jos.15.6-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-arbel@Hos.10.14",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-ashbea@1Ch.4.21",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-Ashtoreth@1Sa.31.10",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-aven@Jos.7.2-Hos",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-azmaveth@Ezr.2.24-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-barah@Jdg.7.24-Jhn",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-biri@1Ch.4.31",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-car@1Sa.7.11",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-dagon@Jos.15.41",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-dagon@Jos.19.27",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-eden@Amo.1.5",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-eked@2Ki.10.12-",
+      "type": "Place"
+    },
+    {
+      "key": "Bethel@Gen.12.8-Zec",
+      "type": "Place"
+    },
+    {
+      "key": "Bethel@Jos.19.4-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-emek@Jos.19.27",
+      "type": "Place"
+    },
+    {
+      "key": "Bether_Mountain@Sng.2.17",
+      "type": "Place"
+    },
+    {
+      "key": "Bethesda@Jhn.5.2",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-ezel@Mic.1.11",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-gader@1Ch.2.51",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-gamul@Jer.48.23",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-haccherem@Neh.3.14-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-haggan@2Ki.9.27",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-haram@Num.32.36-Jos",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-hoglah@Jos.15.6-",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-horon_Lower@Jos.10.10-2Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-horon_Upper@Jos.16.5-2Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-jeshimoth@Num.33.49-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-lebaoth@Jos.19.6",
+      "type": "Place"
+    },
+    {
+      "key": "Bethlehem@Gen.35.16-Jhn",
+      "type": "Place"
+    },
+    {
+      "key": "Bethlehem@Jos.19.15",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-merhak@2Sa.15.17",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-millo@Jdg.9.6-2Ki",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-nimrah@Num.32.36-Jos",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-pazzez@Jos.19.21",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-pelet@Jos.15.27-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-peor@Deu.3.29-Jos",
+      "type": "Place"
+    },
+    {
+      "key": "Bethphage@Mat.21.1-Luk",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-rehob@Num.13.21-2Sa",
+      "type": "Place"
+    },
+    {
+      "key": "Bethsaida@Mat.11.21-Jhn",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-shean@Jos.17.11-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-shemesh@Jos.15.10-2Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-shemesh@Jos.19.22",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-shemesh@Jos.19.38-Jdg",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-shittah@Jdg.7.22",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-tappuah@Jos.15.53",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-togarmah@Ezk.27.14-",
+      "type": "Place"
+    },
+    {
+      "key": "Beth-zur@Jos.15.58-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Betonim@Jos.13.26",
+      "type": "Place"
+    },
+    {
+      "key": "Bezek@1Sa.11.8",
+      "type": "Place"
+    },
+    {
+      "key": "Bezek@Jdg.1.4-",
+      "type": "Place"
+    },
+    {
+      "key": "Bezer@Deu.4.43-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Bilhah@1Ch.4.29",
+      "type": "Place"
+    },
+    {
+      "key": "Bithron@2Sa.2.29",
+      "type": "Place"
+    },
+    {
+      "key": "Bithynia@Act.16.7-1Pe",
+      "type": "Place"
+    },
+    {
+      "key": "Biziothiah@Jos.15.28",
+      "type": "Place"
+    },
+    {
+      "key": "Bor-ashan@1Sa.30.30",
+      "type": "Place"
+    },
+    {
+      "key": "Bozez@1Sa.14.4",
+      "type": "Place"
+    },
+    {
+      "key": "Bozkath@Jos.15.39-2Ki",
+      "type": "Place"
+    },
+    {
+      "key": "Bozrah@Gen.36.33-Amo",
+      "type": "Place"
+    },
+    {
+      "key": "Broad_Wall@Neh.3.8-",
+      "type": "Place"
+    },
+    {
+      "key": "Brook_of_Egypt@Num.34.5-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "Brook_of_the_Arabah@Amo.6.14",
+      "type": "Place"
+    },
+    {
+      "key": "Brook_of_the_Willows@Isa.15.7",
+      "type": "Place"
+    },
+    {
+      "key": "Buz@Jer.25.23",
+      "type": "Place"
+    },
+    {
+      "key": "Cabbon@Jos.15.40",
+      "type": "Place"
+    },
+    {
+      "key": "Cabul@1Ki.9.13",
+      "type": "Place"
+    },
+    {
+      "key": "Cabul@Jos.19.27",
+      "type": "Place"
+    },
+    {
+      "key": "Caesarea@Act.8.40-",
+      "type": "Place"
+    },
+    {
+      "key": "Caesarea_Philippi@Mat.16.13-Mrk",
+      "type": "Place"
+    },
+    {
+      "key": "Calah@Gen.10.11-",
+      "type": "Place"
+    },
+    {
+      "key": "Caleb_Ephrathah@1Ch.2.24",
+      "type": "Place"
+    },
+    {
+      "key": "Calneh@Gen.10.10-Amo",
+      "type": "Place"
+    },
+    {
+      "key": "Canaan@Gen.10.18-Act",
+      "type": "Place"
+    },
+    {
+      "key": "Capernaum@Mat.4.13-Jhn",
+      "type": "Place"
+    },
+    {
+      "key": "Caphtor@Deu.2.23-Tit",
+      "type": "Place"
+    },
+    {
+      "key": "Cappadocia@Act.2.9-1Pe",
+      "type": "Place"
+    },
+    {
+      "key": "Carchemish@2Ch.35.20-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Carmel@Jos.12.22-Nam",
+      "type": "Place"
+    },
+    {
+      "key": "Carmel_Mount@1Ki.18.19-2Ki",
+      "type": "Place"
+    },
+    {
+      "key": "Casiphia@Ezr.8.17",
+      "type": "Place"
+    },
+    {
+      "key": "Cauda@Act.27.16",
+      "type": "Place"
+    },
+    {
+      "key": "Cenchreae@Act.18.18-Rom",
+      "type": "Place"
+    },
+    {
+      "key": "Chaldea@Gen.11.28-Act",
+      "type": "Place"
+    },
+    {
+      "key": "Chebar@Ezk.1.1-",
+      "type": "Place"
+    },
+    {
+      "key": "Chephar-ammoni@Jos.18.24",
+      "type": "Place"
+    },
+    {
+      "key": "Chephirah@Jos.9.17-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Cherith@1Ki.17.3-",
+      "type": "Place"
+    },
+    {
+      "key": "Cherub@Ezr.2.59-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Chesalon@Jos.15.10",
+      "type": "Place"
+    },
+    {
+      "key": "Chesil@Jos.15.30",
+      "type": "Place"
+    },
+    {
+      "key": "Chesulloth@Jos.19.12-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Chilmad@Ezk.27.23",
+      "type": "Place"
+    },
+    {
+      "key": "Chinnereth@Num.34.11-Jhn",
+      "type": "Place"
+    },
+    {
+      "key": "Chios@Act.20.15",
+      "type": "Place"
+    },
+    {
+      "key": "Chitlish@Jos.15.40",
+      "type": "Place"
+    },
+    {
+      "key": "Chorazin@Mat.11.21-Luk",
+      "type": "Place"
+    },
+    {
+      "key": "Cilicia@Act.6.9-Gal",
+      "type": "Place"
+    },
+    {
+      "key": "City_of_Salt@Jos.15.62",
+      "type": "Place"
+    },
+    {
+      "key": "Cnidus@Act.27.7",
+      "type": "Place"
+    },
+    {
+      "key": "Colossae@Col.1.2-",
+      "type": "Place"
+    },
+    {
+      "key": "Corban@Mat.27.6-Mrk",
+      "type": "Place"
+    },
+    {
+      "key": "Corinth@Act.18.1-2Ti",
+      "type": "Place"
+    },
+    {
+      "key": "Corner_Gate@2Ki.14.13-Zec",
+      "type": "Place"
+    },
+    {
+      "key": "Cos@Act.21.1",
+      "type": "Place"
+    },
+    {
+      "key": "Cush@Gen.2.13-Act",
+      "type": "Place"
+    },
+    {
+      "key": "Cushan@Hab.3.7",
+      "type": "Place"
+    },
+    {
+      "key": "Cuthah@2Ki.17.24-",
+      "type": "Place"
+    },
+    {
+      "key": "Cyprus@Num.24.24-Act",
+      "type": "Place"
+    },
+    {
+      "key": "Cyrene@Mat.27.32-Act",
+      "type": "Place"
+    },
+    {
+      "key": "Dabbesheth@Jos.19.11",
+      "type": "Place"
+    },
+    {
+      "key": "Daberath@Jos.19.12-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Dalmatia@2Ti.4.10",
+      "type": "Place"
+    },
+    {
+      "key": "Damascus@Gen.14.15-Gal",
+      "type": "Place"
+    },
+    {
+      "key": "Dan@Gen.14.14-Amo",
+      "type": "Place"
+    },
+    {
+      "key": "Dannah@Jos.15.49",
+      "type": "Place"
+    },
+    {
+      "key": "Debir@Jos.10.38-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Debir@Jos.15.7",
+      "type": "Place"
+    },
+    {
+      "key": "Decapolis@Mat.4.25-Mrk",
+      "type": "Place"
+    },
+    {
+      "key": "Dedan@Isa.21.13-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "Derbe@Act.14.6-",
+      "type": "Place"
+    },
+    {
+      "key": "Diblathaim@Num.33.46-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Dibon@Neh.11.25",
+      "type": "Place"
+    },
+    {
+      "key": "Dibon@Num.21.30-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Dilean@Jos.15.38",
+      "type": "Place"
+    },
+    {
+      "key": "Dimnah@Jos.19.13-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Dimonah@Jos.15.22",
+      "type": "Place"
+    },
+    {
+      "key": "Dinhabah@Gen.36.32-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Diviners'_Oak@Jdg.9.37",
+      "type": "Place"
+    },
+    {
+      "key": "Dizahab@Deu.1.1",
+      "type": "Place"
+    },
+    {
+      "key": "Dophkah@Num.33.12-",
+      "type": "Place"
+    },
+    {
+      "key": "Dor@Jos.11.2-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Dothan@Gen.37.17-2Ki",
+      "type": "Place"
+    },
+    {
+      "key": "Dragon_Spring@Neh.2.13",
+      "type": "Place"
+    },
+    {
+      "key": "Dumah@Isa.21.11",
+      "type": "Place"
+    },
+    {
+      "key": "Dumah@Jos.15.52",
+      "type": "Place"
+    },
+    {
+      "key": "Dung_Gate@Neh.2.13-",
+      "type": "Place"
+    },
+    {
+      "key": "Dura@Dan.3.1",
+      "type": "Place"
+    },
+    {
+      "key": "East@Jdg.6.3-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "East_Gate@Neh.3.29",
+      "type": "Place"
+    },
+    {
+      "key": "Ebal_Mount@Deu.11.29-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Ebenezer@1Sa.4.1-",
+      "type": "Place"
+    },
+    {
+      "key": "Ebez@Jos.19.20",
+      "type": "Place"
+    },
+    {
+      "key": "Ecbatana@Ezr.6.2",
+      "type": "Place"
+    },
+    {
+      "key": "Eden@2Ki.19.12-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "Eden@Gen.2.8-Jol",
+      "type": "Place"
+    },
+    {
+      "key": "Eder@Jos.15.21",
+      "type": "Place"
+    },
+    {
+      "key": "Edom@Gen.32.3-Mal",
+      "type": "Place"
+    },
+    {
+      "key": "Edrei@Num.21.33-Jos",
+      "type": "Place"
+    },
+    {
+      "key": "Eglaim@Isa.15.8",
+      "type": "Place"
+    },
+    {
+      "key": "Eglath-shelishiyah@Isa.15.5-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Eglon@Jos.10.3-",
+      "type": "Place"
+    },
+    {
+      "key": "Egypt@Gen.12.10-Rev",
+      "type": "Place"
+    },
+    {
+      "key": "Egypt_Sea@Isa.11.15",
+      "type": "Place"
+    },
+    {
+      "key": "Ekron@Jos.13.3-Zec",
+      "type": "Place"
+    },
+    {
+      "key": "Elah_Valley@1Sa.17.2-",
+      "type": "Place"
+    },
+    {
+      "key": "Elam@Gen.14.1-Act",
+      "type": "Place"
+    },
+    {
+      "key": "Elath@Deu.2.8-2Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Elealeh@Num.32.3-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Elim@Exo.15.27-Num",
+      "type": "Place"
+    },
+    {
+      "key": "Elkosh@Nam.1.1",
+      "type": "Place"
+    },
+    {
+      "key": "Ellasar@Gen.14.1-",
+      "type": "Place"
+    },
+    {
+      "key": "Elon@Jos.19.43",
+      "type": "Place"
+    },
+    {
+      "key": "Elonbeth-hanan@1Ki.4.9",
+      "type": "Place"
+    },
+    {
+      "key": "El-paran@Gen.14.6",
+      "type": "Place"
+    },
+    {
+      "key": "Eltekeh@Jos.19.44-",
+      "type": "Place"
+    },
+    {
+      "key": "Eltekon@Jos.15.59",
+      "type": "Place"
+    },
+    {
+      "key": "Eltolad@Jos.15.30-",
+      "type": "Place"
+    },
+    {
+      "key": "Emek-keziz@Jos.18.21",
+      "type": "Place"
+    },
+    {
+      "key": "Emmaus@Luk.24.13",
+      "type": "Place"
+    },
+    {
+      "key": "Enaim@Gen.38.14-",
+      "type": "Place"
+    },
+    {
+      "key": "Enam@Jos.15.34",
+      "type": "Place"
+    },
+    {
+      "key": "En-dor@Jos.17.11-Psa",
+      "type": "Place"
+    },
+    {
+      "key": "Eneglaim@Ezk.47.10",
+      "type": "Place"
+    },
+    {
+      "key": "En-gannim@Jos.15.34",
+      "type": "Place"
+    },
+    {
+      "key": "En-gannim@Jos.19.21-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Engedi@Gen.14.7-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "En-haddah@Jos.19.21",
+      "type": "Place"
+    },
+    {
+      "key": "En-hakkore@Jdg.15.19",
+      "type": "Place"
+    },
+    {
+      "key": "En-hazor@Jos.19.37",
+      "type": "Place"
+    },
+    {
+      "key": "En-rogel@Jos.15.7-1Ki",
+      "type": "Place"
+    },
+    {
+      "key": "En-shemesh@Jos.15.7-",
+      "type": "Place"
+    },
+    {
+      "key": "Ephah@Isa.60.6",
+      "type": "Place"
+    },
+    {
+      "key": "Ephes-dammim@1Sa.17.1-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Ephesus@Act.18.19-Rev",
+      "type": "Place"
+    },
+    {
+      "key": "Ephraim@2Sa.13.23-Jhn",
+      "type": "Place"
+    },
+    {
+      "key": "Ephraim_Gate@2Ki.14.13-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Ephron_Mount@Jos.15.9-",
+      "type": "Place"
+    },
+    {
+      "key": "Erech@Gen.10.10-Ezr",
+      "type": "Place"
+    },
+    {
+      "key": "Esau_Mount@Oba.1.8-",
+      "type": "Place"
+    },
+    {
+      "key": "Esek@Gen.26.20",
+      "type": "Place"
+    },
+    {
+      "key": "Eshan@Jos.15.52",
+      "type": "Place"
+    },
+    {
+      "key": "Eshcol_Valley@Num.13.23-Deu",
+      "type": "Place"
+    },
+    {
+      "key": "Eshtaol@Jos.15.33-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Eshtemoa@Jos.15.50-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Etam@1Ch.4.3-",
+      "type": "Place"
+    },
+    {
+      "key": "Etam@2Ch.11.6",
+      "type": "Place"
+    },
+    {
+      "key": "Etam@Jdg.15.8-",
+      "type": "Place"
+    },
+    {
+      "key": "Etham@Exo.13.20-Num",
+      "type": "Place"
+    },
+    {
+      "key": "Ether@Jos.15.42-",
+      "type": "Place"
+    },
+    {
+      "key": "Eth-kazin@Jos.19.13",
+      "type": "Place"
+    },
+    {
+      "key": "Euphrates@Gen.2.14-Rev",
+      "type": "Place"
+    },
+    {
+      "key": "Ezel_Stone@1Sa.20.19",
+      "type": "Place"
+    },
+    {
+      "key": "Ezem@Jos.15.29-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Ezion-geber@Num.33.35-2Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Fair_Havens@Act.27.8",
+      "type": "Place"
+    },
+    {
+      "key": "Fish_Gate@2Ch.33.14-Zep",
+      "type": "Place"
+    },
+    {
+      "key": "Forest_Ephraim@2Sa.18.6",
+      "type": "Place"
+    },
+    {
+      "key": "Forum_of_Appius@Act.28.15",
+      "type": "Place"
+    },
+    {
+      "key": "Foundation_Gate@2Ch.23.5",
+      "type": "Place"
+    },
+    {
+      "key": "Fountain_Gate@Neh.2.14-",
+      "type": "Place"
+    },
+    {
+      "key": "Gaash@Jos.24.30-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Gabbatha@Jhn.19.13",
+      "type": "Place"
+    },
+    {
+      "key": "Galatia@Act.16.6-1Pe",
+      "type": "Place"
+    },
+    {
+      "key": "Galilee@Jos.12.23-Act",
+      "type": "Place"
+    },
+    {
+      "key": "Gallim@1Sa.25.44-Isa",
+      "type": "Place"
+    },
+    {
+      "key": "Gamad@Ezk.27.11",
+      "type": "Place"
+    },
+    {
+      "key": "Gareb@Jer.31.39",
+      "type": "Place"
+    },
+    {
+      "key": "Gath@Jos.11.22-Mic",
+      "type": "Place"
+    },
+    {
+      "key": "Gath-hepher@Jos.19.13-2Ki",
+      "type": "Place"
+    },
+    {
+      "key": "Gath-rimmon@Jos.19.45-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Gaza@Gen.10.19-Act",
+      "type": "Place"
+    },
+    {
+      "key": "Geba@Jos.18.24-Zec",
+      "type": "Place"
+    },
+    {
+      "key": "Gebal@Jos.13.5-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "Gebim@Isa.10.31",
+      "type": "Place"
+    },
+    {
+      "key": "Gederah@Jos.15.36-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Gederoth@Jos.15.41-2Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Gederothaim@Jos.15.36",
+      "type": "Place"
+    },
+    {
+      "key": "Gedor@1Ch.4.39",
+      "type": "Place"
+    },
+    {
+      "key": "Gedor@Jos.12.13-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Ge-harashim@1Ch.4.14-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Gerar@Gen.10.19-2Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Gerasa@Mat.8.28-Luk",
+      "type": "Place"
+    },
+    {
+      "key": "Gerizim_Mount@Deu.11.29-Jdg",
+      "type": "Place"
+    },
+    {
+      "key": "Geruth_Chimham@Jer.41.17",
+      "type": "Place"
+    },
+    {
+      "key": "Geshur@Deu.3.14-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Gethsemane@Mat.26.36-Mrk",
+      "type": "Place"
+    },
+    {
+      "key": "Gezer@Jos.10.33-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Giah@2Sa.2.24",
+      "type": "Place"
+    },
+    {
+      "key": "Gibbethon@Jos.19.44-1Ki",
+      "type": "Place"
+    },
+    {
+      "key": "Gibeah@Jos.15.57-2Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Gibeah@Jos.18.28-Hos",
+      "type": "Place"
+    },
+    {
+      "key": "Gibeath-elohim@1Sa.10.5",
+      "type": "Place"
+    },
+    {
+      "key": "Gibeon@Jos.9.3-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "Gidom@Jdg.20.45",
+      "type": "Place"
+    },
+    {
+      "key": "Gihon@Gen.2.13-2Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Gilboa@1Sa.28.4-2Sa",
+      "type": "Place"
+    },
+    {
+      "key": "Gilboa_Mount@Jdg.7.3-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Gilead@Gen.31.21-Zec",
+      "type": "Place"
+    },
+    {
+      "key": "Gilgal@2Ki.2.1-",
+      "type": "Place"
+    },
+    {
+      "key": "Gilgal@Deu.11.30-Mic",
+      "type": "Place"
+    },
+    {
+      "key": "Giloh@Jos.15.51-2Sa",
+      "type": "Place"
+    },
+    {
+      "key": "Gimzo@2Ch.28.18",
+      "type": "Place"
+    },
+    {
+      "key": "Gittaim@2Sa.4.3-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Goah@Jer.31.39",
+      "type": "Place"
+    },
+    {
+      "key": "Gog@Ezk.38.2-Rev",
+      "type": "Place"
+    },
+    {
+      "key": "Golan@Deu.4.43-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Golgotha@Mat.27.33-Jhn",
+      "type": "Place"
+    },
+    {
+      "key": "Gomorrah@Gen.10.19-Jud",
+      "type": "Place"
+    },
+    {
+      "key": "Goshen@Gen.45.10-Exo",
+      "type": "Place"
+    },
+    {
+      "key": "Goshen@Jos.10.41-",
+      "type": "Place"
+    },
+    {
+      "key": "Gozan@2Ki.17.6-Isa",
+      "type": "Place"
+    },
+    {
+      "key": "Great_Sea@Exo.23.31-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "Greece@Isa.66.19-Act",
+      "type": "Place"
+    },
+    {
+      "key": "Guard_Gate@Neh.12.39",
+      "type": "Place"
+    },
+    {
+      "key": "Gur@2Ki.9.27",
+      "type": "Place"
+    },
+    {
+      "key": "Gurbaal@2Ch.26.7",
+      "type": "Place"
+    },
+    {
+      "key": "Habor@2Ki.17.6-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Hachilah@1Sa.23.19-",
+      "type": "Place"
+    },
+    {
+      "key": "Hadad-rimmon@Zec.12.11",
+      "type": "Place"
+    },
+    {
+      "key": "Hadashah@Jos.15.37",
+      "type": "Place"
+    },
+    {
+      "key": "Hadid@Ezr.2.33-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Hadrach@Zec.9.1",
+      "type": "Place"
+    },
+    {
+      "key": "Haeleph@Jos.18.28",
+      "type": "Place"
+    },
+    {
+      "key": "Halah@2Ki.17.6-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Halak_Mount@Jos.11.17-",
+      "type": "Place"
+    },
+    {
+      "key": "Halhul@Jos.15.58",
+      "type": "Place"
+    },
+    {
+      "key": "Hali@Jos.19.25",
+      "type": "Place"
+    },
+    {
+      "key": "Hall_of_Judgment@1Ki.7.7",
+      "type": "Place"
+    },
+    {
+      "key": "Hall_of_Pillars@1Ki.7.6",
+      "type": "Place"
+    },
+    {
+      "key": "Hall_of_the_Throne@1Ki.7.7",
+      "type": "Place"
+    },
+    {
+      "key": "Ham@Gen.14.5",
+      "type": "Place"
+    },
+    {
+      "key": "Hamath@Num.13.21-Zec",
+      "type": "Place"
+    },
+    {
+      "key": "Hammath@Jos.19.28-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Hamonah@Ezk.39.16",
+      "type": "Place"
+    },
+    {
+      "key": "Hamon-gog_Valley@Ezk.39.11-",
+      "type": "Place"
+    },
+    {
+      "key": "Hanes@Isa.30.4",
+      "type": "Place"
+    },
+    {
+      "key": "Hannathon@Jos.19.14",
+      "type": "Place"
+    },
+    {
+      "key": "Hara@1Ch.5.26",
+      "type": "Place"
+    },
+    {
+      "key": "Haradah@Num.33.24-",
+      "type": "Place"
+    },
+    {
+      "key": "Haran@Gen.11.31-Act",
+      "type": "Place"
+    },
+    {
+      "key": "Harmon@Amo.4.3",
+      "type": "Place"
+    },
+    {
+      "key": "Harod@Jdg.7.1-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Harosheth-hagoyim@Jdg.4.2-",
+      "type": "Place"
+    },
+    {
+      "key": "Hashmonah@Num.33.29-",
+      "type": "Place"
+    },
+    {
+      "key": "Hauran@Ezk.47.16-",
+      "type": "Place"
+    },
+    {
+      "key": "Havilah@Gen.2.11",
+      "type": "Place"
+    },
+    {
+      "key": "Havilah@Gen.25.18-1Sa",
+      "type": "Place"
+    },
+    {
+      "key": "Havvoth-jair@Num.32.41-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Hazar-addar@Num.34.4",
+      "type": "Place"
+    },
+    {
+      "key": "Hazar-enan@Num.34.9-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "Hazar-gaddah@Jos.15.27",
+      "type": "Place"
+    },
+    {
+      "key": "Hazar-shual@Jos.15.28-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Hazar-susah@Jos.19.5",
+      "type": "Place"
+    },
+    {
+      "key": "Hazar-susim@1Ch.4.31",
+      "type": "Place"
+    },
+    {
+      "key": "Hazer-hatticon@Ezk.47.16",
+      "type": "Place"
+    },
+    {
+      "key": "Hazerim@Deu.2.23",
+      "type": "Place"
+    },
+    {
+      "key": "Hazeroth@Num.11.35-Deu",
+      "type": "Place"
+    },
+    {
+      "key": "Hazor@Jer.49.28-",
+      "type": "Place"
+    },
+    {
+      "key": "Hazor@Jos.11.1-2Ki",
+      "type": "Place"
+    },
+    {
+      "key": "Hazor@Jos.15.23",
+      "type": "Place"
+    },
+    {
+      "key": "Hazor@Jos.15.25",
+      "type": "Place"
+    },
+    {
+      "key": "Hazor@Neh.11.33",
+      "type": "Place"
+    },
+    {
+      "key": "Hazor-hadattah@Jos.15.25",
+      "type": "Place"
+    },
+    {
+      "key": "Hebron@Gen.13.18-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Hebron_Valley@Gen.37.14",
+      "type": "Place"
+    },
+    {
+      "key": "Helam@2Sa.10.16-",
+      "type": "Place"
+    },
+    {
+      "key": "Helbah@Jdg.1.31",
+      "type": "Place"
+    },
+    {
+      "key": "Helbon@Ezk.27.18",
+      "type": "Place"
+    },
+    {
+      "key": "Helech@Ezk.27.11",
+      "type": "Place"
+    },
+    {
+      "key": "Heleph@Jos.19.33",
+      "type": "Place"
+    },
+    {
+      "key": "Helkath@Jos.19.25-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Helkath-hazzurim@2Sa.2.16",
+      "type": "Place"
+    },
+    {
+      "key": "Hena@2Ki.18.34-Isa",
+      "type": "Place"
+    },
+    {
+      "key": "Hepher@Jos.12.17-1Ki",
+      "type": "Place"
+    },
+    {
+      "key": "Heres@Jdg.8.13",
+      "type": "Place"
+    },
+    {
+      "key": "Hereth@1Sa.22.5",
+      "type": "Place"
+    },
+    {
+      "key": "Hermon_Mount@Num.34.7-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "Heshbon@Num.21.25-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Heshmon@Jos.15.27",
+      "type": "Place"
+    },
+    {
+      "key": "Hethlon@Ezk.47.15-",
+      "type": "Place"
+    },
+    {
+      "key": "Hierapolis@Col.4.13",
+      "type": "Place"
+    },
+    {
+      "key": "Hobah@Gen.14.15",
+      "type": "Place"
+    },
+    {
+      "key": "Holon@Jer.48.21",
+      "type": "Place"
+    },
+    {
+      "key": "Holon@Jos.15.51-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Holy_Place@Exo.26.33-Heb",
+      "type": "Place"
+    },
+    {
+      "key": "Hor_Mount@Num.20.22-Deu",
+      "type": "Place"
+    },
+    {
+      "key": "Horem@Jos.19.38",
+      "type": "Place"
+    },
+    {
+      "key": "Horesh@1Sa.23.15-",
+      "type": "Place"
+    },
+    {
+      "key": "Hor-haggidgad@Num.33.32-Deu",
+      "type": "Place"
+    },
+    {
+      "key": "Hormah@Num.14.45-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Horonaim@2Sa.13.34-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Horse_Gate@Neh.3.28-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Hosah@Jos.19.29",
+      "type": "Place"
+    },
+    {
+      "key": "House_of_the_Forest@1Ki.7.2-Isa",
+      "type": "Place"
+    },
+    {
+      "key": "Hukkok@Jos.19.34",
+      "type": "Place"
+    },
+    {
+      "key": "Humtah@Jos.15.54",
+      "type": "Place"
+    },
+    {
+      "key": "Ibleam@Jos.17.11-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Iconium@Act.13.51-2Ti",
+      "type": "Place"
+    },
+    {
+      "key": "Idalah@Jos.19.15",
+      "type": "Place"
+    },
+    {
+      "key": "Idumea@Mrk.3.8",
+      "type": "Place"
+    },
+    {
+      "key": "Iim@Jos.15.29",
+      "type": "Place"
+    },
+    {
+      "key": "Ijon@2Sa.24.6-2Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Illyricum@Rom.15.19",
+      "type": "Place"
+    },
+    {
+      "key": "Immer@Ezr.2.59-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "India@Est.1.1-",
+      "type": "Place"
+    },
+    {
+      "key": "Iphtah@Jos.15.43",
+      "type": "Place"
+    },
+    {
+      "key": "Iphtahel_Valley@Jos.19.14-",
+      "type": "Place"
+    },
+    {
+      "key": "Ir-nahash@1Ch.4.12",
+      "type": "Place"
+    },
+    {
+      "key": "Irpeel@Jos.18.27",
+      "type": "Place"
+    },
+    {
+      "key": "Italy@Act.10.1-Heb",
+      "type": "Place"
+    },
+    {
+      "key": "Ithlah@Jos.19.42",
+      "type": "Place"
+    },
+    {
+      "key": "Ithnan@Jos.15.23",
+      "type": "Place"
+    },
+    {
+      "key": "Ivvah@2Ki.17.24-Isa",
+      "type": "Place"
+    },
+    {
+      "key": "Iye-abarim@Num.21.11-",
+      "type": "Place"
+    },
+    {
+      "key": "Iyim@Num.33.45",
+      "type": "Place"
+    },
+    {
+      "key": "Jabbok@Gen.32.22-Jdg",
+      "type": "Place"
+    },
+    {
+      "key": "Jabesh@Jdg.21.8-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Jabez@1Ch.2.55",
+      "type": "Place"
+    },
+    {
+      "key": "Jabneel@Jos.15.11-2Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Jabneel@Jos.19.33",
+      "type": "Place"
+    },
+    {
+      "key": "Jagur@Jos.15.21",
+      "type": "Place"
+    },
+    {
+      "key": "Jahaz@Num.21.23-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Jair@Jos.13.30",
+      "type": "Place"
+    },
+    {
+      "key": "Janen@Num.21.19",
+      "type": "Place"
+    },
+    {
+      "key": "Janim@Jos.15.53",
+      "type": "Place"
+    },
+    {
+      "key": "Janoah@2Ki.15.29",
+      "type": "Place"
+    },
+    {
+      "key": "Janoah@Jos.16.6-",
+      "type": "Place"
+    },
+    {
+      "key": "Japhia@Jos.19.12",
+      "type": "Place"
+    },
+    {
+      "key": "Jarmuth@Jos.10.3-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Jarmuth@Jos.21.29",
+      "type": "Place"
+    },
+    {
+      "key": "Jattir@Jos.15.48-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Jazer@Num.21.32-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Jazer_Sea@Jer.48.32",
+      "type": "Place"
+    },
+    {
+      "key": "Jehud@Jos.19.45",
+      "type": "Place"
+    },
+    {
+      "key": "Jekabzeel@Neh.11.25",
+      "type": "Place"
+    },
+    {
+      "key": "Jemnath@Jos.15.46",
+      "type": "Place"
+    },
+    {
+      "key": "Jericho@Num.22.1-Heb",
+      "type": "Place"
+    },
+    {
+      "key": "Jericho_Valley@Deu.34.3",
+      "type": "Place"
+    },
+    {
+      "key": "Jeruel@2Ch.20.16",
+      "type": "Place"
+    },
+    {
+      "key": "Jerusalem@Gen.14.18-Rev",
+      "type": "Place"
+    },
+    {
+      "key": "Jeshanah@2Ch.13.19",
+      "type": "Place"
+    },
+    {
+      "key": "Jeshimon@1Sa.23.19-",
+      "type": "Place"
+    },
+    {
+      "key": "Jeshua@Neh.11.26",
+      "type": "Place"
+    },
+    {
+      "key": "Jetur@1Ch.5.19-Luk",
+      "type": "Place"
+    },
+    {
+      "key": "Jezreel@2Sa.4.4",
+      "type": "Place"
+    },
+    {
+      "key": "Jezreel@Jos.15.56-2Sa",
+      "type": "Place"
+    },
+    {
+      "key": "Jezreel@Jos.19.18-Hos",
+      "type": "Place"
+    },
+    {
+      "key": "Jezreel_Valley@Jos.17.16-Hos",
+      "type": "Place"
+    },
+    {
+      "key": "Jogbehah@Num.32.35-Jdg",
+      "type": "Place"
+    },
+    {
+      "key": "Jokdeam@Jos.15.56",
+      "type": "Place"
+    },
+    {
+      "key": "Jokneam@Jos.12.22-1Ki",
+      "type": "Place"
+    },
+    {
+      "key": "Joktheel@Jos.15.38",
+      "type": "Place"
+    },
+    {
+      "key": "Joppa@Jos.19.46-Act",
+      "type": "Place"
+    },
+    {
+      "key": "Jordan@Gen.13.10-Jhn",
+      "type": "Place"
+    },
+    {
+      "key": "Jotbah@2Ki.21.19",
+      "type": "Place"
+    },
+    {
+      "key": "Jotbathah@Num.33.33-Deu",
+      "type": "Place"
+    },
+    {
+      "key": "Judea@Ezr.9.9-1Th",
+      "type": "Place"
+    },
+    {
+      "key": "Juttah@Jos.15.55-",
+      "type": "Place"
+    },
+    {
+      "key": "Kabzeel@Jos.15.21-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Tahtim-hodshi@2Sa.24.6",
+      "type": "Place"
+    },
+    {
+      "key": "Kadesh@Gen.14.7-Psa",
+      "type": "Place"
+    },
+    {
+      "key": "Kain@Num.24.22-Jos",
+      "type": "Place"
+    },
+    {
+      "key": "Kamon@Jdg.10.5",
+      "type": "Place"
+    },
+    {
+      "key": "Kanah@Jos.16.8-",
+      "type": "Place"
+    },
+    {
+      "key": "Kanah@Jos.19.28-Jhn",
+      "type": "Place"
+    },
+    {
+      "key": "Karka@Jos.15.3",
+      "type": "Place"
+    },
+    {
+      "key": "Karkor@Jdg.8.10",
+      "type": "Place"
+    },
+    {
+      "key": "Kartan@Jos.21.32",
+      "type": "Place"
+    },
+    {
+      "key": "Kedemoth@Deu.2.26-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Kedesh@Jos.12.22-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Kehelathah@Num.33.22-",
+      "type": "Place"
+    },
+    {
+      "key": "Keilah@Jos.15.44-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Kenath@Num.21.30-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Kerioth-hezron@Jos.15.25",
+      "type": "Place"
+    },
+    {
+      "key": "Kibroth-hattaavah@Num.11.34-Deu",
+      "type": "Place"
+    },
+    {
+      "key": "Kibzaim@Jos.21.22-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Kidron@2Sa.15.23-Jhn",
+      "type": "Place"
+    },
+    {
+      "key": "Kinah@Jos.15.22",
+      "type": "Place"
+    },
+    {
+      "key": "King's_Highway@Num.20.17-",
+      "type": "Place"
+    },
+    {
+      "key": "King's_Valley@Gen.14.17-2Sa",
+      "type": "Place"
+    },
+    {
+      "key": "Kir@1Sa.22.3-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Kir@2Ki.16.9-Amo",
+      "type": "Place"
+    },
+    {
+      "key": "Kiriathaim@1Ch.6.76",
+      "type": "Place"
+    },
+    {
+      "key": "Kiriathaim@Gen.14.5-Amo",
+      "type": "Place"
+    },
+    {
+      "key": "Kiriath-huzoth@Num.22.39",
+      "type": "Place"
+    },
+    {
+      "key": "Kiriath-jearim@Jos.9.17-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Kishion@Jos.19.20-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Kishon@Jdg.4.7-Psa",
+      "type": "Place"
+    },
+    {
+      "key": "Kitron@Jos.19.15-Jdg",
+      "type": "Place"
+    },
+    {
+      "key": "Koa@Ezk.23.23",
+      "type": "Place"
+    },
+    {
+      "key": "Kue@1Ki.10.28-2Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Laban@Deu.1.1",
+      "type": "Place"
+    },
+    {
+      "key": "Lachish@Jos.10.3-Mic",
+      "type": "Place"
+    },
+    {
+      "key": "Lahmam@Jos.15.40",
+      "type": "Place"
+    },
+    {
+      "key": "Laishah@Isa.10.30",
+      "type": "Place"
+    },
+    {
+      "key": "Lakkum@Jos.19.33",
+      "type": "Place"
+    },
+    {
+      "key": "Laodicea@Col.2.1-Rev",
+      "type": "Place"
+    },
+    {
+      "key": "Lasea@Act.27.8",
+      "type": "Place"
+    },
+    {
+      "key": "Lasha@Gen.10.19-Num",
+      "type": "Place"
+    },
+    {
+      "key": "Lasharon@Jos.12.18",
+      "type": "Place"
+    },
+    {
+      "key": "Lebanon@Deu.1.7-Zec",
+      "type": "Place"
+    },
+    {
+      "key": "Lebanon_Mount@Jdg.3.3",
+      "type": "Place"
+    },
+    {
+      "key": "Lebanon_Valley@Jos.11.17-",
+      "type": "Place"
+    },
+    {
+      "key": "Lebaoth@Jos.15.32",
+      "type": "Place"
+    },
+    {
+      "key": "Lebonah@Jdg.21.19",
+      "type": "Place"
+    },
+    {
+      "key": "Lehi@Jdg.15.9-2Sa",
+      "type": "Place"
+    },
+    {
+      "key": "Libnah@Jos.10.29-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Libnah@Num.33.20-",
+      "type": "Place"
+    },
+    {
+      "key": "Libya@2Ch.12.3-Act",
+      "type": "Place"
+    },
+    {
+      "key": "Lod@1Ch.8.12-Act",
+      "type": "Place"
+    },
+    {
+      "key": "Lo-debar@Jos.13.26-Amo",
+      "type": "Place"
+    },
+    {
+      "key": "Luhith@Isa.15.5-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Luz@Jdg.1.26",
+      "type": "Place"
+    },
+    {
+      "key": "Lycaonia@Act.14.6-",
+      "type": "Place"
+    },
+    {
+      "key": "Lycia@Act.27.5",
+      "type": "Place"
+    },
+    {
+      "key": "Lystra@Act.14.6-2Ti",
+      "type": "Place"
+    },
+    {
+      "key": "Maacah@Deu.3.14-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Maarath@Jos.15.59",
+      "type": "Place"
+    },
+    {
+      "key": "Maareh-geba@Jdg.20.33",
+      "type": "Place"
+    },
+    {
+      "key": "Macedonia@Act.16.9-Tit",
+      "type": "Place"
+    },
+    {
+      "key": "Machpelah@Gen.23.9-",
+      "type": "Place"
+    },
+    {
+      "key": "Madmannah@Jos.15.31-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Madmen@Jer.48.2",
+      "type": "Place"
+    },
+    {
+      "key": "Madmenah@Isa.10.31",
+      "type": "Place"
+    },
+    {
+      "key": "Madon@Jos.11.1-",
+      "type": "Place"
+    },
+    {
+      "key": "Magadan@Mat.15.39-Jhn",
+      "type": "Place"
+    },
+    {
+      "key": "Magbish@Ezr.2.30",
+      "type": "Place"
+    },
+    {
+      "key": "Magog@Ezk.38.2-Rev",
+      "type": "Place"
+    },
+    {
+      "key": "Mahanaim@Gen.32.2-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Mahaneh-dan@Jdg.13.25-",
+      "type": "Place"
+    },
+    {
+      "key": "Makaz@1Ki.4.9",
+      "type": "Place"
+    },
+    {
+      "key": "Makheloth@Num.33.25-",
+      "type": "Place"
+    },
+    {
+      "key": "Makkedah@Jos.10.10-",
+      "type": "Place"
+    },
+    {
+      "key": "Malta@Act.28.1",
+      "type": "Place"
+    },
+    {
+      "key": "Mamre@Gen.13.18-",
+      "type": "Place"
+    },
+    {
+      "key": "Manahath@Jdg.20.43-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Maon@Jos.15.55-1Sa",
+      "type": "Place"
+    },
+    {
+      "key": "Marah@Exo.15.23-Num",
+      "type": "Place"
+    },
+    {
+      "key": "Mareal@Jos.19.11",
+      "type": "Place"
+    },
+    {
+      "key": "Mareshah@Jos.15.44-Mic",
+      "type": "Place"
+    },
+    {
+      "key": "Maroth@Mic.1.12",
+      "type": "Place"
+    },
+    {
+      "key": "Masrekah@Gen.36.36-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Massah@Exo.17.7-Psa",
+      "type": "Place"
+    },
+    {
+      "key": "Mattanah@Num.21.18-",
+      "type": "Place"
+    },
+    {
+      "key": "Mearah@Jos.13.4",
+      "type": "Place"
+    },
+    {
+      "key": "Meconah@Neh.11.28",
+      "type": "Place"
+    },
+    {
+      "key": "Medeba@Num.21.30-Isa",
+      "type": "Place"
+    },
+    {
+      "key": "Media@2Ki.17.6-Act",
+      "type": "Place"
+    },
+    {
+      "key": "Megiddo@Jos.12.21-Rev",
+      "type": "Place"
+    },
+    {
+      "key": "Me-jarkon@Jos.19.46",
+      "type": "Place"
+    },
+    {
+      "key": "Memphis@Isa.19.13-Hos",
+      "type": "Place"
+    },
+    {
+      "key": "Mephaath@Jos.13.18-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Meribah@Exo.17.7-Psa",
+      "type": "Place"
+    },
+    {
+      "key": "Meribah@Num.20.13-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "Merom@Jos.11.5-",
+      "type": "Place"
+    },
+    {
+      "key": "Meronothite@1Ch.27.30-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Meroz@Jdg.5.23",
+      "type": "Place"
+    },
+    {
+      "key": "Mesha@Gen.10.30",
+      "type": "Place"
+    },
+    {
+      "key": "Meshech@Psa.120.5-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "Meshech-Tubal@Ezk.32.26",
+      "type": "Place"
+    },
+    {
+      "key": "Mesopotamia@Gen.24.10-Act",
+      "type": "Place"
+    },
+    {
+      "key": "Michmash@1Sa.13.2-Isa",
+      "type": "Place"
+    },
+    {
+      "key": "Michmethath@Jos.16.6-",
+      "type": "Place"
+    },
+    {
+      "key": "Middin@Jos.15.61",
+      "type": "Place"
+    },
+    {
+      "key": "Midian@Gen.36.35-Act",
+      "type": "Place"
+    },
+    {
+      "key": "Migdal-el@Jos.19.38",
+      "type": "Place"
+    },
+    {
+      "key": "Migdal-gad@Jos.15.37",
+      "type": "Place"
+    },
+    {
+      "key": "Migdol@Exo.14.2-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "Migron@1Sa.14.2-Isa",
+      "type": "Place"
+    },
+    {
+      "key": "Miletus@Act.20.15-2Ti",
+      "type": "Place"
+    },
+    {
+      "key": "Millo@2Sa.5.9-Isa",
+      "type": "Place"
+    },
+    {
+      "key": "Minni@Jer.51.27",
+      "type": "Place"
+    },
+    {
+      "key": "Minnith@Jdg.11.33-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "Misgab@Jer.48.1",
+      "type": "Place"
+    },
+    {
+      "key": "Mishal@Jos.19.26-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Misrephoth-maim@Jos.11.8-",
+      "type": "Place"
+    },
+    {
+      "key": "Mithkah@Num.33.28-",
+      "type": "Place"
+    },
+    {
+      "key": "Mitylene@Act.20.14",
+      "type": "Place"
+    },
+    {
+      "key": "Mizar_Mount@Psa.42.6",
+      "type": "Place"
+    },
+    {
+      "key": "Mizpah@Jos.18.26-Jhn",
+      "type": "Place"
+    },
+    {
+      "key": "Mizpeh@Jos.15.38",
+      "type": "Place"
+    },
+    {
+      "key": "Mizpeh_Valley@Jos.11.3-",
+      "type": "Place"
+    },
+    {
+      "key": "Moab@Gen.19.37b-Zep",
+      "type": "Place"
+    },
+    {
+      "key": "Moab_Plains@Num.22.1-Jos",
+      "type": "Place"
+    },
+    {
+      "key": "Moladah@Jos.15.26-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Moreh@Gen.12.6-Deu",
+      "type": "Place"
+    },
+    {
+      "key": "Moreh@Jdg.7.1",
+      "type": "Place"
+    },
+    {
+      "key": "Moresheth@Jer.26.18-Mic",
+      "type": "Place"
+    },
+    {
+      "key": "Moriah_Mount@Gen.22.2-2Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Mortar@Zep.1.11",
+      "type": "Place"
+    },
+    {
+      "key": "Moserah@Deu.10.6",
+      "type": "Place"
+    },
+    {
+      "key": "Moseroth@Num.33.30-",
+      "type": "Place"
+    },
+    {
+      "key": "Most_Holy_Place@1Ki.6.16-Heb",
+      "type": "Place"
+    },
+    {
+      "key": "Mozah@Jos.18.26",
+      "type": "Place"
+    },
+    {
+      "key": "Muster_Gate@Neh.3.31",
+      "type": "Place"
+    },
+    {
+      "key": "Myra@Act.27.5",
+      "type": "Place"
+    },
+    {
+      "key": "Mysia@Act.16.7-",
+      "type": "Place"
+    },
+    {
+      "key": "Naamah@Jos.15.41",
+      "type": "Place"
+    },
+    {
+      "key": "Naaran@Jos.16.7-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Nahalol@Jos.19.15-Jdg",
+      "type": "Place"
+    },
+    {
+      "key": "Nain@Luk.7.11",
+      "type": "Place"
+    },
+    {
+      "key": "Naioth@1Sa.19.18-",
+      "type": "Place"
+    },
+    {
+      "key": "Naphath@Jos.17.11",
+      "type": "Place"
+    },
+    {
+      "key": "Nazareth@Mat.2.23-Act",
+      "type": "Place"
+    },
+    {
+      "key": "Neah@Jos.19.13-",
+      "type": "Place"
+    },
+    {
+      "key": "Neapolis@Act.16.11",
+      "type": "Place"
+    },
+    {
+      "key": "Neballat@Neh.11.34",
+      "type": "Place"
+    },
+    {
+      "key": "Nebo@Ezr.2.29-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Nebo@Num.32.3-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Nebo_Mount@Num.27.12-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Negeb@Gen.12.9-Zec",
+      "type": "Place"
+    },
+    {
+      "key": "Nephtoah@Jos.15.9-",
+      "type": "Place"
+    },
+    {
+      "key": "Netaim@1Ch.4.23",
+      "type": "Place"
+    },
+    {
+      "key": "Netophah@2Sa.23.28-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "New_Gate@Jer.26.10-",
+      "type": "Place"
+    },
+    {
+      "key": "Nezib@Jos.15.43",
+      "type": "Place"
+    },
+    {
+      "key": "Nibshan@Jos.15.62",
+      "type": "Place"
+    },
+    {
+      "key": "Nicopolis@Tit.3.12-",
+      "type": "Place"
+    },
+    {
+      "key": "Nile@Gen.41.1-Zec",
+      "type": "Place"
+    },
+    {
+      "key": "Nimrim@Isa.15.6-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Nineveh@Gen.10.11-Luk",
+      "type": "Place"
+    },
+    {
+      "key": "Nob@1Sa.21.1-Isa",
+      "type": "Place"
+    },
+    {
+      "key": "Nod@Gen.4.16",
+      "type": "Place"
+    },
+    {
+      "key": "Oboth@Num.21.10-",
+      "type": "Place"
+    },
+    {
+      "key": "Olives_Mount@2Sa.15.30-Act",
+      "type": "Place"
+    },
+    {
+      "key": "On@Gen.41.45-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "Ono@1Ch.8.12-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Ophel@2Ch.27.3-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Ophir@1Ki.9.28-Isa",
+      "type": "Place"
+    },
+    {
+      "key": "Ophni@Jos.18.24",
+      "type": "Place"
+    },
+    {
+      "key": "Ophrah@Jos.18.23-Mic",
+      "type": "Place"
+    },
+    {
+      "key": "Ophrah@Jos.19.19-Jdg",
+      "type": "Place"
+    },
+    {
+      "key": "Pacatiana@1Ti.6.21",
+      "type": "Place"
+    },
+    {
+      "key": "Paddan@Gen.25.20-Hos",
+      "type": "Place"
+    },
+    {
+      "key": "Pamphylia@Act.2.10-",
+      "type": "Place"
+    },
+    {
+      "key": "Paphos@Act.13.6-",
+      "type": "Place"
+    },
+    {
+      "key": "Parah@Jos.18.23",
+      "type": "Place"
+    },
+    {
+      "key": "Paran@Gen.21.21-1Ki",
+      "type": "Place"
+    },
+    {
+      "key": "Paran_Mount@Deu.33.2-Hab",
+      "type": "Place"
+    },
+    {
+      "key": "Parbar@1Ch.26.18",
+      "type": "Place"
+    },
+    {
+      "key": "Parvaim@2Ch.3.6",
+      "type": "Place"
+    },
+    {
+      "key": "Patara@Act.21.1",
+      "type": "Place"
+    },
+    {
+      "key": "Pathros@Isa.11.11-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "Patmos@Rev.1.9",
+      "type": "Place"
+    },
+    {
+      "key": "Pau@Gen.36.39-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Pelusium@Ezk.30.15-",
+      "type": "Place"
+    },
+    {
+      "key": "Peniel@Gen.32.30-1Ki",
+      "type": "Place"
+    },
+    {
+      "key": "People's_Gate@Jer.17.19",
+      "type": "Place"
+    },
+    {
+      "key": "Peor@Num.23.28-Jos",
+      "type": "Place"
+    },
+    {
+      "key": "Perazim_Mount@Isa.28.21",
+      "type": "Place"
+    },
+    {
+      "key": "Perez-uzza@1Ch.13.11",
+      "type": "Place"
+    },
+    {
+      "key": "Perga@Act.13.13-",
+      "type": "Place"
+    },
+    {
+      "key": "Pergamum@Rev.1.11-",
+      "type": "Place"
+    },
+    {
+      "key": "Persia@2Ch.36.20-Dan",
+      "type": "Place"
+    },
+    {
+      "key": "Pethor@Num.22.5-Deu",
+      "type": "Place"
+    },
+    {
+      "key": "Pharpar@2Ki.5.12",
+      "type": "Place"
+    },
+    {
+      "key": "Philadelphia@Rev.1.11-",
+      "type": "Place"
+    },
+    {
+      "key": "Philippi@Act.16.12-1Th",
+      "type": "Place"
+    },
+    {
+      "key": "Philistia@Gen.21.32-Zec",
+      "type": "Place"
+    },
+    {
+      "key": "Phoenicia@Act.11.19-",
+      "type": "Place"
+    },
+    {
+      "key": "Phoenix@Act.27.12",
+      "type": "Place"
+    },
+    {
+      "key": "Phrygia@Act.2.10-1Ti",
+      "type": "Place"
+    },
+    {
+      "key": "Pi-beseth@Ezk.30.17",
+      "type": "Place"
+    },
+    {
+      "key": "Pi-hahiroth@Exo.14.2-Num",
+      "type": "Place"
+    },
+    {
+      "key": "Pirathon@Jdg.12.13-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Pisgah@Num.21.20-Jos",
+      "type": "Place"
+    },
+    {
+      "key": "Pishon@Gen.2.11",
+      "type": "Place"
+    },
+    {
+      "key": "Pisidia@Act.13.14-",
+      "type": "Place"
+    },
+    {
+      "key": "Pithom@Exo.1.11",
+      "type": "Place"
+    },
+    {
+      "key": "Pontus@Act.2.9-1Pe",
+      "type": "Place"
+    },
+    {
+      "key": "Potsherd_Gate@Jer.19.2",
+      "type": "Place"
+    },
+    {
+      "key": "Punon@Num.33.42-",
+      "type": "Place"
+    },
+    {
+      "key": "Puteoli@Act.28.13",
+      "type": "Place"
+    },
+    {
+      "key": "Raamah@Ezk.27.22",
+      "type": "Place"
+    },
+    {
+      "key": "Raamses@Exo.1.11",
+      "type": "Place"
+    },
+    {
+      "key": "Rabbith@Jos.19.20",
+      "type": "Place"
+    },
+    {
+      "key": "Rakkath@Jos.19.35-Jhn",
+      "type": "Place"
+    },
+    {
+      "key": "Rakkon@Jos.19.46",
+      "type": "Place"
+    },
+    {
+      "key": "Ramah@Jos.18.25-Mat",
+      "type": "Place"
+    },
+    {
+      "key": "Ramah@Jos.19.29",
+      "type": "Place"
+    },
+    {
+      "key": "Ramah@Jos.19.36",
+      "type": "Place"
+    },
+    {
+      "key": "Ramath-lehi@Jdg.15.17",
+      "type": "Place"
+    },
+    {
+      "key": "Rameses@Gen.47.11-Num",
+      "type": "Place"
+    },
+    {
+      "key": "Ramoth@Gen.31.47-Hos",
+      "type": "Place"
+    },
+    {
+      "key": "Recah@1Ch.4.12",
+      "type": "Place"
+    },
+    {
+      "key": "Red_Sea@Exo.10.19-Heb",
+      "type": "Place"
+    },
+    {
+      "key": "Rehob@Jos.19.28",
+      "type": "Place"
+    },
+    {
+      "key": "Rehob@Jos.19.30-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Rehoboth@Gen.26.22",
+      "type": "Place"
+    },
+    {
+      "key": "Rehoboth@Gen.36.37-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Rekem@Jos.18.27",
+      "type": "Place"
+    },
+    {
+      "key": "Remeth@Jos.19.21-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Rephaim_Valley@Jos.15.8-Isa",
+      "type": "Place"
+    },
+    {
+      "key": "Rephidim@Exo.17.1-Num",
+      "type": "Place"
+    },
+    {
+      "key": "Resen@Gen.10.12",
+      "type": "Place"
+    },
+    {
+      "key": "Rezeph@2Ki.19.12-Isa",
+      "type": "Place"
+    },
+    {
+      "key": "Rhegium@Act.28.13",
+      "type": "Place"
+    },
+    {
+      "key": "Rhodes@Act.21.1",
+      "type": "Place"
+    },
+    {
+      "key": "Riblah@2Ki.23.33-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "Riblah@Num.34.11",
+      "type": "Place"
+    },
+    {
+      "key": "Rimmon@Jdg.20.45-",
+      "type": "Place"
+    },
+    {
+      "key": "Rimmon@Jos.15.32-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Rimmon-perez@Num.33.19-",
+      "type": "Place"
+    },
+    {
+      "key": "Rissah@Num.33.21-",
+      "type": "Place"
+    },
+    {
+      "key": "Rithmah@Num.33.18-",
+      "type": "Place"
+    },
+    {
+      "key": "Rock_of_Escape@1Sa.23.28",
+      "type": "Place"
+    },
+    {
+      "key": "Rogelim@2Sa.17.27-",
+      "type": "Place"
+    },
+    {
+      "key": "Rome@Jhn.11.48-Phm",
+      "type": "Place"
+    },
+    {
+      "key": "Sahar@Ezk.27.18",
+      "type": "Place"
+    },
+    {
+      "key": "Salamis@Act.13.5",
+      "type": "Place"
+    },
+    {
+      "key": "Salecah@Deu.3.10-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Salim@Jhn.3.23",
+      "type": "Place"
+    },
+    {
+      "key": "Salmone@Act.27.7",
+      "type": "Place"
+    },
+    {
+      "key": "Salt_Sea@Gen.14.3-2Ki",
+      "type": "Place"
+    },
+    {
+      "key": "Salt_Valley@2Sa.8.13-Psa",
+      "type": "Place"
+    },
+    {
+      "key": "Samaria@1Ki.13.32-Act",
+      "type": "Place"
+    },
+    {
+      "key": "Samos@Act.20.15",
+      "type": "Place"
+    },
+    {
+      "key": "Samothrace@Act.16.11",
+      "type": "Place"
+    },
+    {
+      "key": "Sansannah@Jos.15.31",
+      "type": "Place"
+    },
+    {
+      "key": "Sarid@Jos.19.10-",
+      "type": "Place"
+    },
+    {
+      "key": "Seba@Psa.72.10-Isa",
+      "type": "Place"
+    },
+    {
+      "key": "Sebam@Num.32.3",
+      "type": "Place"
+    },
+    {
+      "key": "Secacah@Jos.15.61",
+      "type": "Place"
+    },
+    {
+      "key": "Second_Quarter@2Ki.22.14-Zep",
+      "type": "Place"
+    },
+    {
+      "key": "Secu@1Sa.19.22",
+      "type": "Place"
+    },
+    {
+      "key": "Seir@Gen.14.6-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "Seir_Mount@Deu.1.2-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "Seir_Mount@Jos.15.10",
+      "type": "Place"
+    },
+    {
+      "key": "Seirah@Jdg.3.26",
+      "type": "Place"
+    },
+    {
+      "key": "Sela@Jdg.1.36-Isa",
+      "type": "Place"
+    },
+    {
+      "key": "Seleucia@Act.13.4",
+      "type": "Place"
+    },
+    {
+      "key": "Seneh@1Sa.14.4",
+      "type": "Place"
+    },
+    {
+      "key": "Sephar@Gen.10.30",
+      "type": "Place"
+    },
+    {
+      "key": "Sepharad@Oba.1.20-Rev",
+      "type": "Place"
+    },
+    {
+      "key": "Sepharvaim@2Ki.17.24-Isa",
+      "type": "Place"
+    },
+    {
+      "key": "Shaalbim@Jos.19.42-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Shaalim@1Sa.9.4",
+      "type": "Place"
+    },
+    {
+      "key": "Shaaraim@Jos.15.36-1Sa",
+      "type": "Place"
+    },
+    {
+      "key": "Shahazumah@Jos.19.22",
+      "type": "Place"
+    },
+    {
+      "key": "Shalishah@1Sa.9.4",
+      "type": "Place"
+    },
+    {
+      "key": "Shallecheth@1Ch.26.16",
+      "type": "Place"
+    },
+    {
+      "key": "Shamir@Jdg.10.1-",
+      "type": "Place"
+    },
+    {
+      "key": "Shamir@Jos.15.48",
+      "type": "Place"
+    },
+    {
+      "key": "Shaphir@Mic.1.11",
+      "type": "Place"
+    },
+    {
+      "key": "Sharon@1Ch.27.29-Act",
+      "type": "Place"
+    },
+    {
+      "key": "Sharon@1Ch.5.16",
+      "type": "Place"
+    },
+    {
+      "key": "Sharuhen@Jos.15.32-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Shaveh@Gen.14.5-",
+      "type": "Place"
+    },
+    {
+      "key": "Sheba@1Ki.10.1-Luk",
+      "type": "Place"
+    },
+    {
+      "key": "Shebarim@Jos.7.5",
+      "type": "Place"
+    },
+    {
+      "key": "Shechem@Gen.12.6-Act",
+      "type": "Place"
+    },
+    {
+      "key": "Sheep_Gate@Neh.3.1-Jhn",
+      "type": "Place"
+    },
+    {
+      "key": "Shelah@Neh.2.14-Jhn",
+      "type": "Place"
+    },
+    {
+      "key": "Shema@Jos.15.26",
+      "type": "Place"
+    },
+    {
+      "key": "Shen@1Sa.7.12",
+      "type": "Place"
+    },
+    {
+      "key": "Shepham@Num.34.10-",
+      "type": "Place"
+    },
+    {
+      "key": "Shephelah@Deu.1.7-Zec",
+      "type": "Place"
+    },
+    {
+      "key": "Shepher_Mount@Num.33.23-",
+      "type": "Place"
+    },
+    {
+      "key": "Shihor-libnath@Jos.19.26",
+      "type": "Place"
+    },
+    {
+      "key": "Shikkeron@Jos.15.11",
+      "type": "Place"
+    },
+    {
+      "key": "Shiloh@Jos.18.1-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Shimron@Jos.11.1-",
+      "type": "Place"
+    },
+    {
+      "key": "Shion@Jos.19.19",
+      "type": "Place"
+    },
+    {
+      "key": "Shittim@Num.25.1-Mic",
+      "type": "Place"
+    },
+    {
+      "key": "Shittim_Valley@Jol.3.18",
+      "type": "Place"
+    },
+    {
+      "key": "Shoa@Ezk.23.23",
+      "type": "Place"
+    },
+    {
+      "key": "Shual@1Sa.13.17",
+      "type": "Place"
+    },
+    {
+      "key": "Shunem@Jos.19.18-2Ki",
+      "type": "Place"
+    },
+    {
+      "key": "Shur@Gen.16.7-1Sa",
+      "type": "Place"
+    },
+    {
+      "key": "Sibmah@Num.32.38-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Sibraim@Ezk.47.16",
+      "type": "Place"
+    },
+    {
+      "key": "Siddim_Valley@Gen.14.3-",
+      "type": "Place"
+    },
+    {
+      "key": "Sidon@Gen.10.19-Act",
+      "type": "Place"
+    },
+    {
+      "key": "Silla@2Ki.12.20",
+      "type": "Place"
+    },
+    {
+      "key": "Sin@Exo.16.1-Num",
+      "type": "Place"
+    },
+    {
+      "key": "Sinai@Exo.3.1-Gal",
+      "type": "Place"
+    },
+    {
+      "key": "Sinai_Wilderness@Exo.19.1-Num",
+      "type": "Place"
+    },
+    {
+      "key": "Siphmoth@1Sa.30.28",
+      "type": "Place"
+    },
+    {
+      "key": "Sirah@2Sa.3.26",
+      "type": "Place"
+    },
+    {
+      "key": "Sitnah@Gen.26.21",
+      "type": "Place"
+    },
+    {
+      "key": "Smyrna@Rev.1.11-",
+      "type": "Place"
+    },
+    {
+      "key": "Socoh@Jos.15.35-2Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Socoh@Jos.15.48",
+      "type": "Place"
+    },
+    {
+      "key": "Sodom@Gen.10.19-Rev",
+      "type": "Place"
+    },
+    {
+      "key": "Solomon's_Portico@Act.3.11-",
+      "type": "Place"
+    },
+    {
+      "key": "Sorek_Valley@Jdg.16.4",
+      "type": "Place"
+    },
+    {
+      "key": "Spain@Rom.15.24-",
+      "type": "Place"
+    },
+    {
+      "key": "Straight@Act.9.11",
+      "type": "Place"
+    },
+    {
+      "key": "Succoth@Exo.12.37-Num",
+      "type": "Place"
+    },
+    {
+      "key": "Succoth@Gen.33.17-Psa",
+      "type": "Place"
+    },
+    {
+      "key": "Suph@Deu.1.1",
+      "type": "Place"
+    },
+    {
+      "key": "Suphah@Num.21.14",
+      "type": "Place"
+    },
+    {
+      "key": "Sur@2Ki.11.6",
+      "type": "Place"
+    },
+    {
+      "key": "Susa@Ezr.4.9-Dan",
+      "type": "Place"
+    },
+    {
+      "key": "Sychar@Jhn.4.5",
+      "type": "Place"
+    },
+    {
+      "key": "Syene@Isa.49.12-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "Syracuse@Act.28.12",
+      "type": "Place"
+    },
+    {
+      "key": "Syria@Jdg.10.6-Gal",
+      "type": "Place"
+    },
+    {
+      "key": "Syrtis@Act.27.17",
+      "type": "Place"
+    },
+    {
+      "key": "Taanach@Jos.12.21-1Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Taanath-shiloh@Jos.16.6",
+      "type": "Place"
+    },
+    {
+      "key": "Tabbath@Jdg.7.22",
+      "type": "Place"
+    },
+    {
+      "key": "Taberah@Num.11.3-Deu",
+      "type": "Place"
+    },
+    {
+      "key": "Tabor@1Sa.10.3",
+      "type": "Place"
+    },
+    {
+      "key": "Tabor_Mount@Jos.19.22-Hos",
+      "type": "Place"
+    },
+    {
+      "key": "Tadmor@1Ki.9.18-2Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Tahath@Num.33.26-",
+      "type": "Place"
+    },
+    {
+      "key": "Tahpanhes@Jer.2.16-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "Tamar@Ezk.47.18-",
+      "type": "Place"
+    },
+    {
+      "key": "Tappuah@Jos.12.17-",
+      "type": "Place"
+    },
+    {
+      "key": "Tappuah@Jos.15.34",
+      "type": "Place"
+    },
+    {
+      "key": "Taralah@Jos.18.27",
+      "type": "Place"
+    },
+    {
+      "key": "Tarshish@1Ki.10.22-Jon",
+      "type": "Place"
+    },
+    {
+      "key": "Tarsus@Act.9.11-",
+      "type": "Place"
+    },
+    {
+      "key": "Tekoa@2Sa.14.2-Amo",
+      "type": "Place"
+    },
+    {
+      "key": "Tel-abib@Ezk.3.15",
+      "type": "Place"
+    },
+    {
+      "key": "Telaim@1Sa.15.4",
+      "type": "Place"
+    },
+    {
+      "key": "Telassar@2Ki.19.12-Isa",
+      "type": "Place"
+    },
+    {
+      "key": "Telem@Jos.15.24",
+      "type": "Place"
+    },
+    {
+      "key": "Tel-harsha@Ezr.2.59-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Tel-melah@Ezr.2.59-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Tema@Job.6.19-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Teman@Jer.49.7-Hab",
+      "type": "Place"
+    },
+    {
+      "key": "Terah@Num.33.27-",
+      "type": "Place"
+    },
+    {
+      "key": "Thebes@Jer.46.25-Nam",
+      "type": "Place"
+    },
+    {
+      "key": "Thebez@Jdg.9.50-2Sa",
+      "type": "Place"
+    },
+    {
+      "key": "Thessalonica@Act.17.1-2Ti",
+      "type": "Place"
+    },
+    {
+      "key": "Three_Taverns@Act.28.15",
+      "type": "Place"
+    },
+    {
+      "key": "Thyatira@Act.16.14-Rev",
+      "type": "Place"
+    },
+    {
+      "key": "Tibhath@1Ch.18.8",
+      "type": "Place"
+    },
+    {
+      "key": "Tigris@Gen.2.14-Dan",
+      "type": "Place"
+    },
+    {
+      "key": "Timnah@Gen.38.12-2Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Timnah@Jos.15.57",
+      "type": "Place"
+    },
+    {
+      "key": "Timnath-heres@Jos.19.50-Jdg",
+      "type": "Place"
+    },
+    {
+      "key": "Tiphsah@1Ki.4.24",
+      "type": "Place"
+    },
+    {
+      "key": "Tiphsah@2Ki.15.16",
+      "type": "Place"
+    },
+    {
+      "key": "Tirzah@Jos.12.24-Sng",
+      "type": "Place"
+    },
+    {
+      "key": "Tishbe@1Ki.17.1-2Ki",
+      "type": "Place"
+    },
+    {
+      "key": "Tob@Jdg.11.3-2Sa",
+      "type": "Place"
+    },
+    {
+      "key": "Tochen@1Ch.4.32",
+      "type": "Place"
+    },
+    {
+      "key": "Tolad@1Ch.4.29",
+      "type": "Place"
+    },
+    {
+      "key": "Tophel@Deu.1.1",
+      "type": "Place"
+    },
+    {
+      "key": "Topheth@Jos.15.8-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Tower_of_Eder@Gen.35.21-Mic",
+      "type": "Place"
+    },
+    {
+      "key": "Tower_of_Hananel@Neh.3.1-Zec",
+      "type": "Place"
+    },
+    {
+      "key": "Tower_of_the_Hundred@Neh.3.1-",
+      "type": "Place"
+    },
+    {
+      "key": "Tower_of_the_Ovens@Neh.3.11-",
+      "type": "Place"
+    },
+    {
+      "key": "Trachonitis@Luk.3.1",
+      "type": "Place"
+    },
+    {
+      "key": "Travelers_Valley@Ezk.39.11",
+      "type": "Place"
+    },
+    {
+      "key": "Troas@Act.16.8-2Ti",
+      "type": "Place"
+    },
+    {
+      "key": "Trogyllium@Act.20.15",
+      "type": "Place"
+    },
+    {
+      "key": "Tubal@Isa.66.19-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "Tyre@Jos.19.29-Act",
+      "type": "Place"
+    },
+    {
+      "key": "Ulai@Dan.8.2-",
+      "type": "Place"
+    },
+    {
+      "key": "Ummah@Jos.19.30",
+      "type": "Place"
+    },
+    {
+      "key": "Uphaz@Jer.10.9-Dan",
+      "type": "Place"
+    },
+    {
+      "key": "Ur@Gen.11.28-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Uz@Job.1.1-Lam",
+      "type": "Place"
+    },
+    {
+      "key": "Uzal@Ezk.27.19",
+      "type": "Place"
+    },
+    {
+      "key": "Uzza@2Ki.21.18-",
+      "type": "Place"
+    },
+    {
+      "key": "Uzzen-sheerah@1Ch.7.24",
+      "type": "Place"
+    },
+    {
+      "key": "Valley_Gate@2Ch.26.9-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Vedan@Ezk.27.19",
+      "type": "Place"
+    },
+    {
+      "key": "Waheb@Num.21.14",
+      "type": "Place"
+    },
+    {
+      "key": "Washer's_Field@2Ki.18.17-Isa",
+      "type": "Place"
+    },
+    {
+      "key": "Water_Gate@Neh.3.26-",
+      "type": "Place"
+    },
+    {
+      "key": "Way_of_Holiness@Isa.35.8",
+      "type": "Place"
+    },
+    {
+      "key": "Wildgoats_Rocks@1Sa.24.2",
+      "type": "Place"
+    },
+    {
+      "key": "Yeshanah_Gate@Neh.3.6-",
+      "type": "Place"
+    },
+    {
+      "key": "Yiron@Jos.19.38",
+      "type": "Place"
+    },
+    {
+      "key": "Zaanan@Mic.1.11",
+      "type": "Place"
+    },
+    {
+      "key": "Zaanannim@Jos.19.33-Jdg",
+      "type": "Place"
+    },
+    {
+      "key": "Zalmonah@Num.33.41-",
+      "type": "Place"
+    },
+    {
+      "key": "Zanoah@Jos.15.34-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Zanoah@Jos.15.56",
+      "type": "Place"
+    },
+    {
+      "key": "Zaphon@Jos.13.27-Isa",
+      "type": "Place"
+    },
+    {
+      "key": "Zarephath@1Ki.17.9-Luk",
+      "type": "Place"
+    },
+    {
+      "key": "Zarethan@Jos.3.16-2Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Zeboiim@Gen.10.19-Hos",
+      "type": "Place"
+    },
+    {
+      "key": "Zeboim@Neh.11.34",
+      "type": "Place"
+    },
+    {
+      "key": "Zeboim_Valley@1Sa.13.18",
+      "type": "Place"
+    },
+    {
+      "key": "Zedad@Num.34.8-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "Zela@Jos.18.28-2Sa",
+      "type": "Place"
+    },
+    {
+      "key": "Zelzah@1Sa.10.2",
+      "type": "Place"
+    },
+    {
+      "key": "Zemaraim@Jos.18.22-2Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Zenan@Jos.15.37",
+      "type": "Place"
+    },
+    {
+      "key": "Zephathah_Valley@2Ch.14.10",
+      "type": "Place"
+    },
+    {
+      "key": "Zer@Jos.19.35",
+      "type": "Place"
+    },
+    {
+      "key": "Zered@Num.21.12-Deu",
+      "type": "Place"
+    },
+    {
+      "key": "Zeredah@1Ki.11.26",
+      "type": "Place"
+    },
+    {
+      "key": "Zereth-shahar@Jos.13.19",
+      "type": "Place"
+    },
+    {
+      "key": "Ziddim@Jos.19.35",
+      "type": "Place"
+    },
+    {
+      "key": "Ziklag@Jos.15.31-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Zimri@Jer.25.25",
+      "type": "Place"
+    },
+    {
+      "key": "Zin@Num.13.21-Jos",
+      "type": "Place"
+    },
+    {
+      "key": "Zior@Jos.15.54",
+      "type": "Place"
+    },
+    {
+      "key": "Ziph@Jos.15.24",
+      "type": "Place"
+    },
+    {
+      "key": "Ziph@Jos.15.55-Psa",
+      "type": "Place"
+    },
+    {
+      "key": "Ziphron@Num.34.9",
+      "type": "Place"
+    },
+    {
+      "key": "Ziz@2Ch.20.16",
+      "type": "Place"
+    },
+    {
+      "key": "Zoan@Num.13.22-Ezk",
+      "type": "Place"
+    },
+    {
+      "key": "Zoar@Gen.13.10-Jer",
+      "type": "Place"
+    },
+    {
+      "key": "Zobah@1Sa.14.47-2Ch",
+      "type": "Place"
+    },
+    {
+      "key": "Zophim@Num.23.14",
+      "type": "Place"
+    },
+    {
+      "key": "Zorah@Jos.15.33-Neh",
+      "type": "Place"
+    },
+    {
+      "key": "Zuph@1Sa.9.5",
+      "type": "Place"
+    },
+    {
+      "key": "Abaddon@Job.26.6-Rev",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Abib@Exo.13.4-Est",
+      "type": "Time"
+    },
+    {
+      "key": "Adar@Ezr.6.15-Est",
+      "type": "Time"
+    },
+    {
+      "key": "Alamoth@1Ch.15.20-Psa",
+      "type": "Musical"
+    },
+    {
+      "key": "Alpha@Rev.1.8-",
+      "type": "Other"
+    },
+    {
+      "key": "Al-taschith@Psa.57.0-",
+      "type": "Musical"
+    },
+    {
+      "key": "Amon@Jer.46.25-Nam",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Apharsachite@Ezr.4.9-",
+      "type": "Title"
+    },
+    {
+      "key": "Artemis@Act.19.24-",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Asherah@Exo.34.13-Mic",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Ashima@2Ki.17.30",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Ashtaroth@Jdg.2.13-1Sa",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Ashtoreth@1Ki.11.5-2Ki",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Azazel@Lev.16.8-",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Baal@Num.25.3-Rom",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Baal-berith@Jdg.8.33-",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Bear@Job.9.9-",
+      "type": "Star"
+    },
+    {
+      "key": "Behemoth@Job.40.15",
+      "type": "Other"
+    },
+    {
+      "key": "Bel@Isa.46.1-Jer",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Boaz@1Ki.7.21-2Ch",
+      "type": "Other"
+    },
+    {
+      "key": "Booths_Festival@Jhn.7.2",
+      "type": "Time"
+    },
+    {
+      "key": "Bul@1Ki.6.38",
+      "type": "Time"
+    },
+    {
+      "key": "Chemosh@Num.21.29-Jer",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Chislev@Neh.1.1-Zec",
+      "type": "Time"
+    },
+    {
+      "key": "Chronicles@1Ki.14.19-Est",
+      "type": "Other"
+    },
+    {
+      "key": "Dagon@Jdg.16.23-1Ch",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Dedication_Festival@Jhn.10.22",
+      "type": "Time"
+    },
+    {
+      "key": "Destiny@Isa.65.11",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Elul@Neh.6.15",
+      "type": "Time"
+    },
+    {
+      "key": "Epicurean@Act.17.18",
+      "type": "Group"
+    },
+    {
+      "key": "Ethanim@1Ki.8.2",
+      "type": "Time"
+    },
+    {
+      "key": "Fortune@Isa.65.11",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Freedmen@Act.6.9",
+      "type": "Group"
+    },
+    {
+      "key": "Gabriel@Dan.8.16-Luk",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Gittith@Psa.8.0-",
+      "type": "Musical"
+    },
+    {
+      "key": "Hermes@Act.14.12",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Herodian@Mat.22.16-Mrk",
+      "type": "Group"
+    },
+    {
+      "key": "Higgaion@Psa.9.16",
+      "type": "Musical"
+    },
+    {
+      "key": "Hosanna@Mat.21.9-Jhn",
+      "type": "Musical"
+    },
+    {
+      "key": "Jachin@1Ki.7.21-2Ch",
+      "type": "Other"
+    },
+    {
+      "key": "Jonath-elem-rechokim@Psa.56.0",
+      "type": "Musical"
+    },
+    {
+      "key": "Judaism@Gal.1.13-",
+      "type": "Other"
+    },
+    {
+      "key": "Kiyyun@Amo.5.26",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Legion@Mrk.5.9-Luk",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Leviathan@Job.3.8-Isa",
+      "type": "Other"
+    },
+    {
+      "key": "LORD@Gen.1.1-Rev",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Lucifer@Isa.14.12",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Mahalath@Psa.53.0-",
+      "type": "Musical"
+    },
+    {
+      "key": "Maranatha@1Co.16.22",
+      "type": "Musical"
+    },
+    {
+      "key": "Maskil@Psa.32.0-",
+      "type": "Musical"
+    },
+    {
+      "key": "Mazzaroth@Job.38.32",
+      "type": "Star"
+    },
+    {
+      "key": "Merodach@Jer.50.2",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Messiah@Jhn.1.41-",
+      "type": "Title"
+    },
+    {
+      "key": "Miktam@Psa.16.0-",
+      "type": "Musical"
+    },
+    {
+      "key": "Molech@Lev.18.21-Act",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Muth-labben@Psa.9.0",
+      "type": "Musical"
+    },
+    {
+      "key": "Nazirites@Num.6.2-Amo",
+      "type": "Group"
+    },
+    {
+      "key": "Nebo@Isa.46.1",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Nehushtan@2Ki.18.4",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Nergal@2Ki.17.30",
+      "type": "Supernatural"
+    },
+    {
+      "key": "New_Moon@Col.2.16",
+      "type": "Time"
+    },
+    {
+      "key": "Nibhaz@2Ki.17.31",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Nicolaitans@Rev.2.6-",
+      "type": "Group"
+    },
+    {
+      "key": "Nisroch@2Ki.19.37-Isa",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Omega@Rev.1.8-",
+      "type": "Other"
+    },
+    {
+      "key": "Orion@Job.9.9-Amo",
+      "type": "Star"
+    },
+    {
+      "key": "Passover@Exo.12.11-Heb",
+      "type": "Time"
+    },
+    {
+      "key": "Pharisee@Mat.3.7-Php",
+      "type": "Group"
+    },
+    {
+      "key": "Pleiades@Job.9.9-Amo",
+      "type": "Star"
+    },
+    {
+      "key": "Preparation_Festival@Mat.27.62-Jhn",
+      "type": "Time"
+    },
+    {
+      "key": "Purim@Est.3.7-",
+      "type": "Time"
+    },
+    {
+      "key": "Raca@Mat.5.22",
+      "type": "Title"
+    },
+    {
+      "key": "Rahab@Job.9.13-Isa",
+      "type": "Other"
+    },
+    {
+      "key": "Rephan@Act.7.43",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Rimmon@2Ki.5.18",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Sabbath@Exo.16.23-Heb",
+      "type": "Time"
+    },
+    {
+      "key": "Sadducee@Mat.3.7-Act",
+      "type": "Group"
+    },
+    {
+      "key": "Satan@Deu.13.13-Rev",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Selah@Psa.3.2-Hab",
+      "type": "Musical"
+    },
+    {
+      "key": "Shebat@Zec.1.7",
+      "type": "Time"
+    },
+    {
+      "key": "Sheminith@1Ch.15.21-Psa",
+      "type": "Musical"
+    },
+    {
+      "key": "Shibboleth@Jdg.12.6",
+      "type": "Other"
+    },
+    {
+      "key": "Shiggaion@Psa.7.0",
+      "type": "Musical"
+    },
+    {
+      "key": "Shigionoth@Hab.3.1",
+      "type": "Musical"
+    },
+    {
+      "key": "Shimeathite@1Ch.2.55",
+      "type": "Group"
+    },
+    {
+      "key": "Shushan_Eduth@Psa.60.0",
+      "type": "Musical"
+    },
+    {
+      "key": "Sikkuth@Amo.5.26",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Sivan@Est.8.9",
+      "type": "Time"
+    },
+    {
+      "key": "Stoic@Act.17.18",
+      "type": "Group"
+    },
+    {
+      "key": "Sucathite@1Ch.2.55",
+      "type": "Group"
+    },
+    {
+      "key": "Succoth-benoth@2Ki.17.30",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Tammuz@Ezk.8.14",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Tarpelite@Ezr.4.9",
+      "type": "Title"
+    },
+    {
+      "key": "Tartak@2Ki.17.31",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Tebeth@Est.2.16",
+      "type": "Time"
+    },
+    {
+      "key": "Thummim@Exo.28.30-Neh",
+      "type": "Other"
+    },
+    {
+      "key": "Tirathite@1Ch.2.55",
+      "type": "Group"
+    },
+    {
+      "key": "Urim@Exo.28.30-Neh",
+      "type": "Other"
+    },
+    {
+      "key": "Weeks@Exo.34.22-1Co",
+      "type": "Time"
+    },
+    {
+      "key": "Zealot@Mat.10.4-Mrk",
+      "type": "Group"
+    },
+    {
+      "key": "Zeus@Act.14.12-",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Ziv@1Ki.6.1-",
+      "type": "Time"
+    },
+    {
+      "key": "Latin@Luk.23.38-Jhn",
+      "type": "Language"
+    },
+    {
+      "key": "Aramaic@2Ki.18.26-Rev",
+      "type": "Language"
+    },
+    {
+      "key": "Greek@Isa.66.19-Rev",
+      "type": "Language"
+    },
+    {
+      "key": "Hebrew@2Ki.18.26-Isa",
+      "type": "Language"
+    },
+    {
+      "key": "Gentile@Gen.10.5-Rev",
+      "type": "Group"
+    },
+    {
+      "key": "Asiarch@Act.19.31",
+      "type": "Title"
+    },
+    {
+      "key": "Candace@Act.8.27",
+      "type": "Title"
+    },
+    {
+      "key": "Rabbi@Mat.23.7-Jhn",
+      "type": "Title"
+    },
+    {
+      "key": "Seraph@Isa.6.2-",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Teraphim@Gen.31.19-Zec",
+      "type": "Supernatural"
+    },
+    {
+      "key": "Sheol@Gen.37.35-Rev",
+      "type": "Supernatural"
+    }
+  ],
+  "stats": {
+    "people": 2987,
+    "relationships": 1803,
+    "curatedPeople": 157,
+    "indexedRelationships": 1600,
+    "verseRelationships": 203,
+    "excludedRelationshipClaims": 105
+  },
+  "excludedRelationships": [
+    {
+      "type": "parent",
+      "source": "Jesse@Rut.4.17-Rom",
+      "target": "Abigail@2Sa.17.25-1Ch",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Zeresh@Est.5.10-",
+      "target": "Adalia@Est.9.8",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Jacob@Mat.1.15-",
+      "target": "Alphaeus@Mat.10.3-Act",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "spouse",
+      "source": "Alphaeus@Mat.10.3-Act",
+      "target": "Mary@Mat.27.56-Jhn",
+      "reason": "The namesake identification is marked uncertain by the reverse source record."
+    },
+    {
+      "type": "parent",
+      "source": "Azubah@1Ch.2.18-",
+      "target": "Ardon@1Ch.2.18",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Zeresh@Est.5.10-",
+      "target": "Aridai@Est.9.9",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Zeresh@Est.5.10-",
+      "target": "Aridatha@Est.9.8",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Zeresh@Est.5.10-",
+      "target": "Arisai@Est.9.9",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Hananiah@1Ch.3.19-",
+      "target": "Arnan@1Ch.3.21",
+      "reason": "The syntax of 1 Chronicles 3:21 is ambiguous; a direct-son relationship is not secure."
+    },
+    {
+      "type": "parent",
+      "source": "Zeresh@Est.5.10-",
+      "target": "Aspatha@Est.9.7",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Jezebel@1Ki.16.31-Rev",
+      "target": "Athaliah@2Ki.8.26-2Ch",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "spouse",
+      "source": "Bithiah@1Ch.4.18",
+      "target": "Mered@1Ch.4.17-",
+      "reason": "Upstream marks this relation uncertain."
+    },
+    {
+      "type": "spouse",
+      "source": "Caleb@1Ch.2.9-",
+      "target": "Jahdai@1Ch.2.47",
+      "reason": "Upstream marks this relation uncertain."
+    },
+    {
+      "type": "parent",
+      "source": "Zeresh@Est.5.10-",
+      "target": "Dalphon@Est.9.7",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Salma@1Ch.2.51-",
+      "target": "Elimelech@Rut.1.2-",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Jahdai@1Ch.2.47",
+      "target": "Ephah@1Ch.2.47",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Hur@Exo.17.10-2Ch",
+      "target": "Ezer@1Ch.4.4",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Jahdai@1Ch.2.47",
+      "target": "Geshan@1Ch.2.47",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Maacah@1Ch.7.15-",
+      "target": "Gilead@Num.26.29-1Ch",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Naamah@Gen.4.22",
+      "target": "Ham@Gen.5.32-1Ch",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Maacah@1Ch.7.15-",
+      "target": "Hammolecheth@1Ch.7.18",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Shimei@1Ch.6.42-",
+      "target": "Haran@1Ch.23.9",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Shimei@1Ch.6.42-",
+      "target": "Haziel@1Ch.23.9",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Hur@Exo.17.10-2Ch",
+      "target": "Hazzelelponi@1Ch.4.3",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Mered@1Ch.4.17-",
+      "target": "Heber@1Ch.4.18",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Senaah@1Ch.9.7-Neh",
+      "target": "Hodaviah@1Ch.9.7",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "spouse",
+      "source": "Hodiah@1Ch.4.19",
+      "target": "Ishbah@1Ch.4.17",
+      "reason": "Upstream marks this relation uncertain."
+    },
+    {
+      "type": "parent",
+      "source": "Shealtiel@1Ch.3.17-Mat",
+      "target": "Hoshama@1Ch.3.18",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Hur@Exo.17.10-2Ch",
+      "target": "Idbash@1Ch.4.3",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Mered@1Ch.4.17-",
+      "target": "Ishbah@1Ch.4.17",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "spouse",
+      "source": "Ishbah@1Ch.4.17",
+      "target": "Hodiah@1Ch.4.19",
+      "reason": "Upstream marks this relation uncertain."
+    },
+    {
+      "type": "parent",
+      "source": "Ahinoam@1Sa.14.50",
+      "target": "Ish-bosheth@2Sa.2.8-1Ch",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Hur@Exo.17.10-2Ch",
+      "target": "Ishma@1Ch.4.3",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Koz@1Ch.4.8",
+      "target": "Jabez@1Ch.4.9-",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "spouse",
+      "source": "Jahdai@1Ch.2.47",
+      "target": "Caleb@1Ch.2.9-",
+      "reason": "Upstream marks this relation uncertain."
+    },
+    {
+      "type": "parent",
+      "source": "Mary@Mat.27.56-Jhn",
+      "target": "James@Mat.10.3-Act",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Joseph@Mat.1.16-Jhn",
+      "target": "James@Mat.13.55-Jud",
+      "reason": "Jesus' brethren are named, but their biological parentage is disputed across traditions and not explicit in Matthew 13:55."
+    },
+    {
+      "type": "parent",
+      "source": "Mary@Mat.1.16-Act",
+      "target": "James@Mat.13.55-Jud",
+      "reason": "Jesus' brethren are named, but their biological parentage is disputed across traditions and not explicit in Matthew 13:55."
+    },
+    {
+      "type": "parent",
+      "source": "Salome@Mat.20.20-Mrk",
+      "target": "James@Mat.4.21-Act",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Naamah@Gen.4.22",
+      "target": "Japheth@Gen.5.32-1Ch",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Elah@1Ch.4.15",
+      "target": "Jehallelel@1Ch.4.16",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Libni@Exo.6.17-1Ch",
+      "target": "Jehiel@1Ch.6.20-",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "spouse",
+      "source": "Jehudijah@1Ch.4.18",
+      "target": "Mered@1Ch.4.17-",
+      "reason": "Upstream marks this relation uncertain."
+    },
+    {
+      "type": "parent",
+      "source": "Shealtiel@1Ch.3.17-Mat",
+      "target": "Jekamiah@1Ch.3.18",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Mered@1Ch.4.17-",
+      "target": "Jekuthiel@1Ch.4.18",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Mered@1Ch.4.17-",
+      "target": "Jered@1Ch.4.18",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Azubah@1Ch.2.18-",
+      "target": "Jesher@1Ch.2.18",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Hur@Exo.17.10-2Ch",
+      "target": "Jezreel@1Ch.4.3",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Jezebel@1Ki.16.31-Rev",
+      "target": "Joash@1Ki.22.26-2Ch",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Libni@Exo.6.17-1Ch",
+      "target": "Joel@1Ch.23.8-",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Salome@Mat.20.20-Mrk",
+      "target": "John@Mat.4.21-Rev",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Eber@Gen.10.21-Luk",
+      "target": "Joktan@Gen.10.25-1Ch",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Gershom@Exo.2.22-1Ch",
+      "target": "Jonathan@Jdg.18.30",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Joseph@Mat.1.16-Jhn",
+      "target": "Joses@Mat.13.55-Mrk",
+      "reason": "Jesus' brethren are named, but their biological parentage is disputed across traditions and not explicit in Matthew 13:55."
+    },
+    {
+      "type": "parent",
+      "source": "Mary@Mat.1.16-Act",
+      "target": "Joses@Mat.13.55-Mrk",
+      "reason": "Jesus' brethren are named, but their biological parentage is disputed across traditions and not explicit in Matthew 13:55."
+    },
+    {
+      "type": "parent",
+      "source": "Jahdai@1Ch.2.47",
+      "target": "Jotham@1Ch.2.47",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "spouse",
+      "source": "Judah@Gen.29.35-Rev",
+      "target": "Tamar@Gen.38.6-Mat",
+      "reason": "Genesis 38 describes a sexual encounter and their children, not a marriage between Judah and Tamar."
+    },
+    {
+      "type": "parent",
+      "source": "Senaah@1Ch.9.7-Neh",
+      "target": "Judah@Neh.11.9",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Joseph@Mat.1.16-Jhn",
+      "target": "Jude@Mat.13.55-Jud",
+      "reason": "Jesus' brethren are named, but their biological parentage is disputed across traditions and not explicit in Matthew 13:55."
+    },
+    {
+      "type": "parent",
+      "source": "Mary@Mat.1.16-Act",
+      "target": "Jude@Mat.13.55-Jud",
+      "reason": "Jesus' brethren are named, but their biological parentage is disputed across traditions and not explicit in Matthew 13:55."
+    },
+    {
+      "type": "parent",
+      "source": "Tamar@2Sa.14.27",
+      "target": "Maacah@1Ki.15.2-2Ch",
+      "reason": "The mother relation is a disputed harmonization of the Maacah/Micaiah passages."
+    },
+    {
+      "type": "parent",
+      "source": "Abi@2Ki.18.2-2Ch",
+      "target": "Maaseiah@2Ch.28.7",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Zerah@Gen.38.30-Mat",
+      "target": "Mahol@1Ki.4.31",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Shealtiel@1Ch.3.17-Mat",
+      "target": "Malchiram@1Ch.3.18",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Heli@Luk.3.23",
+      "target": "Mary@Mat.1.16-Act",
+      "reason": "Luke 3:23 names Joseph in the genealogy; assigning Heli as Mary's biological father is a disputed harmonization, not explicit parenthood."
+    },
+    {
+      "type": "spouse",
+      "source": "Mary@Mat.27.56-Jhn",
+      "target": "Alphaeus@Mat.10.3-Act",
+      "reason": "The namesake identification is marked uncertain by the reverse source record."
+    },
+    {
+      "type": "parent",
+      "source": "Alphaeus@Mat.10.3-Act",
+      "target": "Matthew@Mat.9.9-Act",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Mary@Mat.27.56-Jhn",
+      "target": "Matthew@Mat.9.9-Act",
+      "reason": "The source harmonizes namesakes and mothers without explicit verse evidence for Mary's motherhood of Matthew."
+    },
+    {
+      "type": "parent",
+      "source": "Othniel@Jos.15.17-1Ch",
+      "target": "Meonothai@1Ch.4.14",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Achsah@Jos.15.16-Jdg",
+      "target": "Meonothai@1Ch.4.14",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "spouse",
+      "source": "Mered@1Ch.4.17-",
+      "target": "Bithiah@1Ch.4.18",
+      "reason": "Upstream marks this relation uncertain."
+    },
+    {
+      "type": "spouse",
+      "source": "Mered@1Ch.4.17-",
+      "target": "Jehudijah@1Ch.4.18",
+      "reason": "Upstream marks this relation uncertain."
+    },
+    {
+      "type": "parent",
+      "source": "Jerioth@1Ch.2.18",
+      "target": "Mesha@1Ch.2.42",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Mered@1Ch.4.17-",
+      "target": "Miriam@1Ch.4.17",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Bithiah@1Ch.4.18",
+      "target": "Miriam@1Ch.4.17",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "spouse",
+      "source": "Naamah@Gen.4.22",
+      "target": "Noah@Gen.5.29-2Pe",
+      "reason": "Upstream marks this relation uncertain."
+    },
+    {
+      "type": "parent",
+      "source": "Shealtiel@1Ch.3.17-Mat",
+      "target": "Nedabiah@1Ch.3.18",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "spouse",
+      "source": "Noah@Gen.5.29-2Pe",
+      "target": "Naamah@Gen.4.22",
+      "reason": "Upstream marks this relation uncertain."
+    },
+    {
+      "type": "parent",
+      "source": "Hananiah@1Ch.3.19-",
+      "target": "Obadiah@1Ch.3.21",
+      "reason": "The syntax of 1 Chronicles 3:21 is ambiguous; a direct-son relationship is not secure."
+    },
+    {
+      "type": "parent",
+      "source": "Zeresh@Est.5.10-",
+      "target": "Parmashta@Est.9.9",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Zeresh@Est.5.10-",
+      "target": "Parshandatha@Est.9.7",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Shealtiel@1Ch.3.17-Mat",
+      "target": "Pedaiah@1Ch.3.18-",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Jahdai@1Ch.2.47",
+      "target": "Pelet@1Ch.2.47",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Hur@Exo.17.10-2Ch",
+      "target": "Penuel@1Ch.4.4",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Zeresh@Est.5.10-",
+      "target": "Poratha@Est.9.8",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Jahdai@1Ch.2.47",
+      "target": "Regem@1Ch.2.47",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Hananiah@1Ch.3.19-",
+      "target": "Rephaiah@1Ch.3.21",
+      "reason": "The syntax of 1 Chronicles 3:21 is ambiguous; a direct-son relationship is not secure."
+    },
+    {
+      "type": "parent",
+      "source": "Heli@Luk.3.23",
+      "target": "Salome@Mat.20.20-Mrk",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "spouse",
+      "source": "Salome@Mat.20.20-Mrk",
+      "target": "Zebedee@Mat.4.21-Jhn",
+      "reason": "Upstream marks this relation uncertain."
+    },
+    {
+      "type": "parent",
+      "source": "Jahdai@1Ch.2.47",
+      "target": "Shaaph@1Ch.2.47",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Mered@1Ch.4.17-",
+      "target": "Shammai@1Ch.4.17",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Hananiah@1Ch.3.19-",
+      "target": "Shecaniah@1Ch.3.21-",
+      "reason": "The syntax of 1 Chronicles 3:21 is ambiguous; a direct-son relationship is not secure."
+    },
+    {
+      "type": "parent",
+      "source": "Naamah@Gen.4.22",
+      "target": "Shem@Gen.5.32-Luk",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Shealtiel@1Ch.3.17-Mat",
+      "target": "Shenazzar@1Ch.3.18",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Azubah@1Ch.2.18-",
+      "target": "Shobab@1Ch.2.18",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Joseph@Mat.1.16-Jhn",
+      "target": "Simon@Mat.13.55-Mrk",
+      "reason": "Jesus' brethren are named, but their biological parentage is disputed across traditions and not explicit in Matthew 13:55."
+    },
+    {
+      "type": "parent",
+      "source": "Mary@Mat.1.16-Act",
+      "target": "Simon@Mat.13.55-Mrk",
+      "reason": "Jesus' brethren are named, but their biological parentage is disputed across traditions and not explicit in Matthew 13:55."
+    },
+    {
+      "type": "spouse",
+      "source": "Tamar@2Sa.14.27",
+      "target": "Uriel@2Ch.13.2",
+      "reason": "The source infers a marriage while harmonizing the ancestry of Maacah/Micaiah; no explicit spouse statement."
+    },
+    {
+      "type": "spouse",
+      "source": "Tamar@Gen.38.6-Mat",
+      "target": "Judah@Gen.29.35-Rev",
+      "reason": "Genesis 38 describes a sexual encounter and their children, not a marriage between Judah and Tamar."
+    },
+    {
+      "type": "spouse",
+      "source": "Uriel@2Ch.13.2",
+      "target": "Tamar@2Sa.14.27",
+      "reason": "The source infers a marriage while harmonizing the ancestry of Maacah/Micaiah; no explicit spouse statement."
+    },
+    {
+      "type": "parent",
+      "source": "Zeresh@Est.5.10-",
+      "target": "Vaizatha@Est.9.9",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "spouse",
+      "source": "Zebedee@Mat.4.21-Jhn",
+      "target": "Salome@Mat.20.20-Mrk",
+      "reason": "Upstream marks this relation uncertain."
+    },
+    {
+      "type": "parent",
+      "source": "Jehoiachin@2Ki.24.6-Mat",
+      "target": "Zedekiah@1Ch.3.16",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "Libni@Exo.6.17-1Ch",
+      "target": "Zetham@1Ch.23.8-",
+      "reason": "Upstream marks this relation uncertain or non-direct."
+    },
+    {
+      "type": "parent",
+      "source": "step-G2536G",
+      "target": "shelah",
+      "reason": "Conflicts with curated genealogy; retained cited account."
+    }
+  ]
+}

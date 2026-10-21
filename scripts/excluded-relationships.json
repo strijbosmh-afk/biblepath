@@ -1,0 +1,20 @@
+[
+  {"type":"parent","source":"Heli@Luk.3.23","target":"Mary@Mat.1.16-Act","reason":"Luke 3:23 names Joseph in the genealogy; assigning Heli as Mary's biological father is a disputed harmonization, not explicit parenthood."},
+  {"type":"spouse","source":"Judah@Gen.29.35-Rev","target":"Tamar@Gen.38.6-Mat","reason":"Genesis 38 describes a sexual encounter and their children, not a marriage between Judah and Tamar."},
+  {"type":"parent","source":"Mary@Mat.1.16-Act","target":"James@Mat.13.55-Jud","reason":"Jesus' brethren are named, but their biological parentage is disputed across traditions and not explicit in Matthew 13:55."},
+  {"type":"parent","source":"Mary@Mat.1.16-Act","target":"Joses@Mat.13.55-Mrk","reason":"Jesus' brethren are named, but their biological parentage is disputed across traditions and not explicit in Matthew 13:55."},
+  {"type":"parent","source":"Mary@Mat.1.16-Act","target":"Simon@Mat.13.55-Mrk","reason":"Jesus' brethren are named, but their biological parentage is disputed across traditions and not explicit in Matthew 13:55."},
+  {"type":"parent","source":"Mary@Mat.1.16-Act","target":"Jude@Mat.13.55-Jud","reason":"Jesus' brethren are named, but their biological parentage is disputed across traditions and not explicit in Matthew 13:55."},
+  {"type":"parent","source":"Joseph@Mat.1.16-Jhn","target":"James@Mat.13.55-Jud","reason":"Jesus' brethren are named, but their biological parentage is disputed across traditions and not explicit in Matthew 13:55."},
+  {"type":"parent","source":"Joseph@Mat.1.16-Jhn","target":"Joses@Mat.13.55-Mrk","reason":"Jesus' brethren are named, but their biological parentage is disputed across traditions and not explicit in Matthew 13:55."},
+  {"type":"parent","source":"Joseph@Mat.1.16-Jhn","target":"Simon@Mat.13.55-Mrk","reason":"Jesus' brethren are named, but their biological parentage is disputed across traditions and not explicit in Matthew 13:55."},
+  {"type":"parent","source":"Joseph@Mat.1.16-Jhn","target":"Jude@Mat.13.55-Jud","reason":"Jesus' brethren are named, but their biological parentage is disputed across traditions and not explicit in Matthew 13:55."},
+  {"type":"parent","source":"Mary@Mat.27.56-Jhn","target":"Matthew@Mat.9.9-Act","reason":"The source harmonizes namesakes and mothers without explicit verse evidence for Mary's motherhood of Matthew."},
+  {"type":"spouse","source":"Alphaeus@Mat.10.3-Act","target":"Mary@Mat.27.56-Jhn","reason":"The namesake identification is marked uncertain by the reverse source record."},
+  {"type":"spouse","source":"Tamar@2Sa.14.27","target":"Uriel@2Ch.13.2","reason":"The source infers a marriage while harmonizing the ancestry of Maacah/Micaiah; no explicit spouse statement."},
+  {"type":"parent","source":"Tamar@2Sa.14.27","target":"Maacah@1Ki.15.2-2Ch","reason":"The mother relation is a disputed harmonization of the Maacah/Micaiah passages."},
+  {"type":"parent","source":"Hananiah@1Ch.3.19-","target":"Rephaiah@1Ch.3.21","reason":"The syntax of 1 Chronicles 3:21 is ambiguous; a direct-son relationship is not secure."},
+  {"type":"parent","source":"Hananiah@1Ch.3.19-","target":"Arnan@1Ch.3.21","reason":"The syntax of 1 Chronicles 3:21 is ambiguous; a direct-son relationship is not secure."},
+  {"type":"parent","source":"Hananiah@1Ch.3.19-","target":"Obadiah@1Ch.3.21","reason":"The syntax of 1 Chronicles 3:21 is ambiguous; a direct-son relationship is not secure."},
+  {"type":"parent","source":"Hananiah@1Ch.3.19-","target":"Shecaniah@1Ch.3.21-","reason":"The syntax of 1 Chronicles 3:21 is ambiguous; a direct-son relationship is not secure."}
+]

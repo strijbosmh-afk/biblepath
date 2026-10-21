@@ -1,0 +1,15 @@
+{
+  "Nahash@2Sa.17.25": {
+    "type": "Disputed identity",
+    "note": "Omitted this source identity pending review: 2 Samuel 17:25 names Nahash as Abigail’s parent, but does not identify Nahash as Jesse’s wife or the mother of Jesse’s sons. The upstream female identity and its ten unflagged family links rely on a disputed harmonization. Other Nahash identities remain available."
+  },
+  "Lappidoth@Jdg.4.4": {
+    "type": "Male",
+    "role": "Man living before Israel's Monarchy",
+    "note": "Corrected an upstream gender field: Judges 4:4 describes Deborah as Lappidoth’s wife, so Lappidoth is shown as her husband. Source: https://www.biblegateway.com/passage/?search=Judges%204%3A4&version=ESV"
+  },
+  "Deborah@Gen.35.8": {
+    "role": "Nurse living at the time of the Patriarchs",
+    "note": "Corrected an upstream role field: Genesis 35:8 identifies this Deborah as Rebekah’s nurse. She is distinct from the prophetess and judge in Judges 4–5. Source: https://www.biblegateway.com/passage/?search=Genesis%2035%3A8&version=ESV"
+  }
+}
