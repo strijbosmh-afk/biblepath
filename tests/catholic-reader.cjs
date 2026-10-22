@@ -38,7 +38,7 @@ class Element{
 const el=new Element(),changes=[];
 const reader=new Reader(el,catholic,{people:[]},{places:[]},{editionId:'catholic',editionOptions:[{id:'catholic',label:'Douay-Rheims · English · 73 books'},{id:'nl',label:'Statenvertaling · Dutch · 66 books'}],onEditionChange:id=>changes.push(id)});
 assert.match(el.innerHTML,/Volledige katholieke Bijbel: 73 boeken/);
-assert.match(el.innerHTML,/Douay-Rheims-tekst is Engelstalig/,'The Dutch interface must make the English text language explicit');
+assert.match(el.innerHTML,/De Bijbeltekst is in het Engels/,'The Dutch interface must make the English text language explicit');
 assert.match(reader.q('#reader-content').innerHTML,/De Douay-Rheims volgt haar eigen Vulgaatnummering/,'Numbering guidance is Dutch while the source text remains English');
 assert.match(el.innerHTML,/value="catholic" selected/);
 const sidebar=reader.qa('[data-reader-book]').map(button=>button.dataset.readerBook);
@@ -94,4 +94,53 @@ const recreated=new Reader(new Element(),catholic,{people:[]},{places:[]});recre
 assert.equal(recreated.model,web);recreated.restoreSelectedEdition();
 assert.equal(recreated.model,catholic);assert.deepEqual(plain(recreated.getState()),previous);
 assert.equal(recreated.location.bookId,'DAN');assert.equal(recreated.location.chapter,13);
-console.log('Catholic reader passed: Dutch default, 73-book grouping, multilingual names, all added-book search/navigation, additions, edition callback, edition-safe annotations, and source-edition restoration.');
+const dutchData=read('catholic-bible-data-nl.json'),dutch=new Model(dutchData,{people:[identity]});
+assert.equal(dutchData.meta.editionId,'catholic-nl');assert.equal(dutchData.meta.language,'nl');assert.equal(dutch.books().length,73);
+const dutchEl=new Element(),dutchReader=new Reader(dutchEl,dutch,{people:[identity]},{places:[]},{editionId:'catholic-nl',editionOptions:[{id:'catholic-nl',label:'Catholic Bible · Dutch · 73 books'},{id:'catholic',label:'Douay-Rheims · English · 73 books'}]});
+assert.match(dutchEl.innerHTML,/Katholieke Bijbel · Nederlands · 73 boeken/);assert.match(dutchEl.innerHTML,/De Bijbeltekst is in het Nederlands/);
+assert.doesNotMatch(dutchEl.innerHTML,/Douay-Rheims-tekst is Engelstalig|complete Catholic edition is available separately in English/);
+assert.equal(dutchReader.qa('[data-reader-book]').length,73);
+for(const [id]of added){
+  const verse=dutch.verse(id,1,1);assert(verse?.text,`${id} has Dutch text`);assert.notEqual(verse.text,catholic.verse(id,1,1).text,'Dutch text is not the English fallback');
+  dutchReader.qa('[data-reader-book]').find(button=>button.dataset.readerBook===id).fire('click');
+  dutchReader.q('#reader-query').value=verse.text;dutchReader.q('#reader-scope').value='book';dutchReader.q('#reader-search-form').fire('submit');
+  const result=dutchReader.qa('[data-reader-result]')[0];assert(result,`${id} Dutch full-text search has a real result`);result.fire('click');
+  assert.deepEqual(plain(dutchReader.location),{bookId:id,chapter:1,verse:1});
+}
+const dutchLinks=dutchReader.qa('[data-catholic-book]');
+assert(Array.isArray(dutchData.meta.catholicNavigation),'The Dutch edition provides its reviewed addition coordinates');
+assert.equal(dutchLinks.length,7+dutchData.meta.catholicNavigation.length);
+for(const sourceLink of dutchData.meta.catholicNavigation){
+  assert(dutch.reference(sourceLink),'Each edition-specific shortcut resolves');
+  const button=dutchLinks.find(item=>item.dataset.catholicBook===sourceLink.book&&Number(item.dataset.catholicChapter)===sourceLink.chapter&&Number(item.dataset.catholicVerse)===sourceLink.verse);
+  assert(button,`The Dutch shortcut ${sourceLink.label} uses its source coordinates`);button.fire('click');
+  assert.deepEqual(plain(dutchReader.location),{bookId:sourceLink.book,chapter:sourceLink.chapter,verse:sourceLink.verse});
+}
+assert.equal(dutch.referenceKeys(identity.refs.filter(ref=>ref.edition==='catholic')).size,0,'DRA person references cannot establish exact Dutch verse identity');
+// Preserve the source's bridged verse as one displayed text, reachable under
+// either source number and labeled accurately in full-text search.
+const bridge=dutch.verse('PSA',84,9);
+assert.equal(bridge.endNumber,10);assert.equal(bridge.numberLabel,'9–10');
+assert(dutchReader.open('Psalmen 84:10'),'The second number in a source bridge remains reachable');
+assert.equal(dutchReader.location.verse,9,'The normalized bridge opens its single displayed row');
+assert.match(dutchReader.q('#reader-content').innerHTML,/aria-label="Vers 9–10">9–10<\/span>/);
+assert.match(dutchReader.q('#reader-content').innerHTML,/class="reader-verse is-target" id="reader-verse-9"/);
+const bridgeState=plain(dutchReader.getState());dutchReader.setState(bridgeState);assert.deepEqual(plain(dutchReader.getState()),bridgeState);
+dutchReader.q('#reader-query').value=bridge.text;dutchReader.q('#reader-scope').value='book';dutchReader.q('#reader-search-form').fire('submit');
+assert.match(dutchReader.q('#reader-content').innerHTML,/Psalmen 84:9–10/);
+assert.equal(dutch.search(bridge.text,{bookId:'PSA'}).total,1,'A bridged text is indexed once');
+dutchReader.qa('[data-reader-result]')[0].fire('click');assert.equal(dutchReader.location.verse,9);
+// The historical supplement remains visible as a sourced supplement.
+for(const passage of ['Esther 15:1','Esther 16:1']){
+  assert(dutchReader.open(passage));const verse=dutch.verse('EST',dutchReader.location.chapter,dutchReader.location.verse);
+  assert(verse.sourceEdition);assert(verse.sourceUrl);assert(verse.notes?.length);
+  assert.match(dutchReader.q('#reader-content').innerHTML,/Bron van dit vers/);
+}
+
+const dutchState=plain(dutchReader.getState());
+for(const locale of ['en','fr','nl']){
+  I.setLanguage(locale);dutchReader.render();assert.equal(dutchReader.model.meta.language,'nl');assert.deepEqual(plain(dutchReader.getState()),dutchState);
+  if(locale!=='en')for(const field of ['credit','versificationNote','annotationNotice','license'])assert.notEqual(I.t(dutchData.meta[field]),dutchData.meta[field],`Dutch edition ${field} must be localized in ${locale}`);
+}
+assert.match(dutchEl.innerHTML,/href="data-notes.html#dutch-catholic"/,'The composite edition links to its detailed source record');
+console.log('Catholic reader passed: Dutch/English 73-book editions, multilingual grouping, real added-book search, source-specific additions, edition callbacks, reference isolation and source-edition restoration.');

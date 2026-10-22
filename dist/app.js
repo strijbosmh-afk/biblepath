@@ -22,7 +22,9 @@
   let returnToLibrary = null;
   let savedReaderState=null,savedCitiesState=null;
   const scriptureCache=new Map();
-  let initialBibleEdition='catholic';try{const saved=localStorage.getItem('biblepath-bible-edition');if(['catholic','locale'].includes(saved))initialBibleEdition=saved;}catch{}
+  const catholicEditions={'catholic-nl':{file:'catholic-bible-data-nl.json',label:'Catholic Bible · Dutch · 73 books'},catholic:{file:'catholic-bible-data.json',label:'Douay-Rheims · English · 73 books'}};
+  const isCatholicEdition=edition=>Object.hasOwn(catholicEditions,edition);
+  let initialBibleEdition='catholic-nl';try{const saved=localStorage.getItem('biblepath-bible-edition');if(isCatholicEdition(saved)||saved==='locale')initialBibleEdition=saved;}catch{}
   const bibleEditionStates=new Map();let readerRequest=0,catholicPeople=null,catholicPeopleLoading=null;
   let initialTradition='christianity';try{const saved=localStorage.getItem('biblepath-tradition');if(['christianity','judaism','islam'].includes(saved))initialTradition=saved;}catch{}
   let sacredReader=null,sacredLoading=null,sacredRequest=0;
@@ -247,15 +249,15 @@
     selectPeopleCollection(tradition,id);
   }
   function loadPlaces() {if(!placesPromise)placesPromise=loadJson('places-data.json').catch(error=>{placesPromise=null;throw error;});return placesPromise.then(data=>I.localizePlaces(data));}
-  function loadScripture(locale=I.language) {if(!scriptureCache.has(locale))scriptureCache.set(locale,loadJson(locale==='catholic'?'catholic-bible-data.json':locale==='en'?'bible-data.json':`bible-data-${locale}.json`).catch(error=>{scriptureCache.delete(locale);throw error;}));return scriptureCache.get(locale);}
+  function loadScripture(locale=I.language) {if(!scriptureCache.has(locale))scriptureCache.set(locale,loadJson(catholicEditions[locale]?.file||(locale==='en'?'bible-data.json':`bible-data-${locale}.json`)).catch(error=>{scriptureCache.delete(locale);throw error;}));return scriptureCache.get(locale);}
   function ensureCatholicPeople(){
     if(catholicPeople)return Promise.resolve(catholicPeople);
     if(!catholicPeopleLoading)catholicPeopleLoading=loadJson('catholic-people.json').then(data=>{catholicPeople=new window.CatholicPeople(data,people);updateCounts();return catholicPeople;}).finally(()=>{catholicPeopleLoading=null;});
     return catholicPeopleLoading;
   }
-  const bibleEditionKey=()=>state.bibleEdition==='catholic'?'catholic':I.language;
+  const bibleEditionKey=()=>state.bibleEdition==='locale'?I.language:state.bibleEdition;
   function selectBibleEdition(edition){
-    if(!['catholic','locale'].includes(edition)||edition===state.bibleEdition)return;
+    if((!isCatholicEdition(edition)&&edition!=='locale')||edition===state.bibleEdition)return;
     if(reader)bibleEditionStates.set(bibleEditionKey(),reader.getState());
     state.bibleEdition=edition;readerRequest++;reader=null;readerLoading=null;
     savedReaderState=bibleEditionStates.get(bibleEditionKey())||null;
@@ -299,7 +301,7 @@
       while(pendingPassage&&reader){
         const ref=pendingPassage,activeReader=reader;pendingPassage=null;
         try{
-          if(ref.edition==='catholic'){
+          if(isCatholicEdition(ref.edition)){
             activeReader.restoreSelectedEdition();
             const parsed=activeReader.model.reference(ref);
             if(reader===activeReader&&(!parsed||!activeReader.open({...parsed,endVerse:ref.endVerse||parsed.endVerse})))toast(I.t('This reference could not be located in the reader.'));
@@ -329,12 +331,12 @@
     if(readerLoading)return readerLoading;
     $('#reader-view').innerHTML='<div class="library-loading" role="status">Opening the Bible…</div>';
     const request=++readerRequest,edition=bibleEditionKey();
-    readerLoading=Promise.all([loadScripture(edition),loadPlaces(),edition==='catholic'?ensureCatholicPeople():null]).then(async([text,places])=>{
-      const readerPeople=edition==='catholic'?catholicPeople.readerPeople(I.language):window.BIBLE_DATA;
+    readerLoading=Promise.all([loadScripture(edition),loadPlaces(),isCatholicEdition(edition)?ensureCatholicPeople():null]).then(async([text,places])=>{
+      const readerPeople=isCatholicEdition(edition)?catholicPeople.readerPeople(I.language):window.BIBLE_DATA;
       const model=new window.BibleScripture(text,readerPeople,places);
       const sourceModel=savedReaderState?.atlasReference?new window.BibleScripture(await loadScripture('en'),window.BIBLE_DATA,places):null;
       if(request!==readerRequest||edition!==bibleEditionKey())return null;
-      reader=new window.BibleReader($('#reader-view'),model,readerPeople,places,{onPerson:id=>openLibraryPerson(id,'reader'),onPlace:openCity,editionId:state.bibleEdition,editionOptions:[{id:'catholic',label:I.t('Douay-Rheims · English · 73 books')},{id:'locale',label:I.t({nl:'Statenvertaling · Dutch · 66 books',en:'World English Bible · English · 66 books',fr:'Louis Segond · French · 66 books'}[I.language])}],onEditionChange:id=>{pendingPassage=null;selectBibleEdition(id);}});
+      reader=new window.BibleReader($('#reader-view'),model,readerPeople,places,{onPerson:id=>openLibraryPerson(id,'reader'),onPlace:openCity,editionId:state.bibleEdition,editionOptions:[...Object.entries(catholicEditions).map(([id,item])=>({id,label:I.t(item.label)})),{id:'locale',label:I.t({nl:'Statenvertaling · Dutch · 66 books',en:'World English Bible · English · 66 books',fr:'Louis Segond · French · 66 books'}[I.language])}],onEditionChange:id=>{pendingPassage=null;selectBibleEdition(id);}});
       if(savedReaderState){reader.setState(savedReaderState,sourceModel);savedReaderState=null;}
       await readPendingPassage();
       return reader;
@@ -348,9 +350,9 @@
     citiesLoading=loadPlaces().then(places=>{cities=new window.BibleCities($('#cities-view'),places,window.BIBLE_DATA,{onPerson:id=>openLibraryPerson(id,'cities'),onPassage:openPassage});if(savedCitiesState){cities.setState(savedCitiesState);savedCitiesState=null;}showPendingCity();return cities;}).catch(()=>{libraryError($('#cities-view'),ensureCities);return null;}).finally(()=>{citiesLoading=null;});
     return citiesLoading;
   }
-  function openPassage(reference) {pendingPassage=reference;if(reference.edition==='catholic')selectBibleEdition('catholic');selectTradition('christianity');}
+  function openPassage(reference) {pendingPassage=reference;if(isCatholicEdition(reference.edition))selectBibleEdition(reference.edition);selectTradition('christianity');}
   function openCity(id) {pendingCity=id;setView('cities');}
-  function openLibraryPerson(id,origin) {if(catholicPeople?.byId.has(id)&&state.bibleEdition==='catholic'&&origin==='reader'){openCatholicProfile(id);return;}returnToLibrary=origin;$('#return-to-library').textContent=origin==='reader'?'← Back to the Bible reader':'← Back to the city';explorePerson(id);}
+  function openLibraryPerson(id,origin) {if(catholicPeople?.byId.has(id)&&isCatholicEdition(state.bibleEdition)&&origin==='reader'){openCatholicProfile(id);return;}returnToLibrary=origin;$('#return-to-library').textContent=origin==='reader'?'← Back to the Bible reader':'← Back to the city';explorePerson(id);}
 
   function renderIndex() {
     updateCounts();
@@ -525,10 +527,10 @@
       <div class="info-fact">${people.length.toLocaleString(I.language)} people · ${relationships.length.toLocaleString(I.language)} family connections · Both testaments</div>
       <p>${escape(meta?.coverage || 'This is an initial curated collection, not yet an exhaustive index of every person in the Bible.')}</p>
       <p>The three layouts share one searchable collection. The original profiles retain their KJV passage links. Expanded entries link to the ESV passages used by the source index. Namesakes remain distinct people.</p>
-      <h3>Roman Catholic focus and current coverage</h3><p>The Christian account in the people comparison follows a Roman Catholic perspective, with biblical passages and separately identified references to the Catechism of the Catholic Church and Church teaching. Jewish and Islamic accounts retain their own sources and identities.</p><p>The complete Catholic reader contains all 73 books in the public-domain English Douay-Rheims 1899 edition, including Tobit, Judith, Wisdom, Sirach, Baruch, 1–2 Maccabees and the additions to Esther and Daniel. Its Vulgate numbering is retained. Dutch is the default interface language; the Catholic scripture text remains English. The existing 66-book World English Bible, Statenvertaling and Louis Segond editions remain available.</p><h3>Read each connection with its source</h3><p>Some family links cite a specific biblical passage; others cite STEP Bible’s editorial relationship index. An indexed link is not a claim that a particular verse explicitly establishes that relationship. Notes identify uncertainty, legal parenthood, and differing accounts.</p>
+      <h3>Roman Catholic focus and current coverage</h3><p>The Christian account in the people comparison follows a Roman Catholic perspective, with biblical passages and separately identified references to the Catechism of the Catholic Church and Church teaching. Jewish and Islamic accounts retain their own sources and identities.</p><p>The complete Catholic reader contains all 73 books in Dutch and English (Douay-Rheims 1899), including Tobit, Judith, Wisdom, Sirach, Baruch, 1–2 Maccabees and the additions to Esther and Daniel. Each edition keeps its own text and verse numbering. Dutch is the default interface language and the Dutch Catholic Bible is the default text edition for a first visit. Existing explicitly saved choices are retained. The 66-book World English Bible, Statenvertaling and Louis Segond editions remain available.</p><h3>Read each connection with its source</h3><p>Some family links cite a specific biblical passage; others cite STEP Bible’s editorial relationship index. An indexed link is not a claim that a particular verse explicitly establishes that relationship. Notes identify uncertainty, legal parenthood, and differing accounts.</p>
       <p>Catholic supplemental profiles cite the added corpus directly. The original family graph and city atlas retain their existing 66-book source scope. The supplemental profiles are a sourced selection, not an exhaustive concordance or inferred genealogy. Missing links indicate a gap in this map, not necessarily in Scripture. Namesakes remain separate; unsupported genealogical harmonizations are excluded.</p>
       <h3>Sources & attribution</h3>${(meta.sources || []).map(source=>`<p><a href="${escape(source.url)}" target="_blank" rel="noopener noreferrer">${escape(source.name)}</a>${source.license ? ` · ${escape(source.license)}` : ''}${source.credit ? `<br>${escape(source.credit)}` : ''}</p>`).join('')}
-      <p>The complete Catholic reader uses the <a href="https://ebible.org/engDRA/" target="_blank" rel="noopener noreferrer">Douay-Rheims 1899</a>, public domain, from eBible.org. The additional 66-book readers use the World English Bible, Statenvertaling and Louis Segond 1910, with edition sources in the reader. Cities combine STEP name references with <a href="https://www.openbible.info/geo/" target="_blank" rel="noopener noreferrer">OpenBible.info</a> settlement classifications, CC BY 4.0.</p>
+      <p>The Dutch Catholic reader uses Canisius 1939 with credited historical supplements. The text sources, supplement boundaries and attribution are recorded with the edition and in the data notes. The English Catholic reader uses the public-domain <a href="https://ebible.org/engDRA/" target="_blank" rel="noopener noreferrer">Douay-Rheims 1899</a> from eBible.org. Catholic supplemental profile citations continue opening their named English source edition, rather than assuming equal verse numbers in Dutch. The additional 66-book readers use the World English Bible, Statenvertaling and Louis Segond 1910. Cities combine STEP name references with <a href="https://www.openbible.info/geo/" target="_blank" rel="noopener noreferrer">OpenBible.info</a> settlement classifications, CC BY 4.0.</p>
       <p><a href="data-notes.html" target="_blank" rel="noopener noreferrer">Full data credits, scope, and editorial changes ↗</a></p>`;
     if(I.language!=='en')$('#info-content').innerHTML=window.BIBLE_INFO[I.language][mode];
     $('#info-dialog').showModal();

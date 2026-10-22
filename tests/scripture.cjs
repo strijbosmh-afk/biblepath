@@ -60,6 +60,20 @@ const possible=sample.annotate('GEN',1,5).find(a=>a.text==='Anna');assert.equal(
 assert.equal(sample.annotate('GEN',1,5).find(a=>a.text==='Salem').match,'verse');
 assert.equal(sample.annotate('GEN',1,6)[0].text,'Mary','A longer spelling-only alias must not override an indexed identity');
 
+const bridge=new Model({meta:{language:'nl',editionId:'catholic-nl'},books:[{id:'PSA',name:'Psalmen',testament:'OT',chapters:[{number:84,verses:[
+  {number:8,text:'Voorafgaande tekst.'},
+  {number:9,endNumber:10,numberLabel:'9–10',text:'Maria in een samengevoegd bronvers.'},
+  {number:11,text:'Volgende tekst.'}
+]}]}]},{people:[{id:'bridge-person',name:'Maria',refs:[{edition:'catholic-nl',book:'PSA',chapter:84,verse:10}]}]});
+assert.equal(bridge.verse('PSA',84,10),bridge.verse('PSA',84,9),'Both verse numbers resolve to one source text');
+assert.deepEqual(plain(bridge.reference('Psalmen 84:10')),{bookId:'PSA',chapter:84,verse:9,endVerse:10});
+assert.deepEqual(plain(bridge.reference({book:'PSA',chapter:84,verse:10,endVerse:11})),{bookId:'PSA',chapter:84,verse:9,endVerse:11});
+assert.equal(bridge.reference('Psalmen 84:12'),null);
+assert.equal(bridge.search('samengevoegd').total,1,'A verse bridge is searched once');
+assert.equal(bridge.search('samengevoegd').results[0].numberLabel,'9–10');
+assert.equal(bridge.chapter('PSA',84).verses.length,3,'Do not duplicate the bridge in chapter rendering');
+assert.equal(bridge.annotate('PSA',84,9)[0].match,'verse','Explicit edition references to the second bridge number annotate the displayed row');
+
 const personIds=new Set(people.people.map(p=>p.id)),placeIds=new Set(places.places.map(p=>p.id));
 let total=0,annotations=0;
 for(const book of data.books)for(const chapter of book.chapters)for(const verse of chapter.verses){

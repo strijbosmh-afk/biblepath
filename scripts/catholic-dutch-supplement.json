@@ -1,0 +1,227 @@
+{
+  "title": "De heilige boeken van het oude verbond. Deel 3. Het boek Esther",
+  "translator": "J. M. van Oers (Johannes/Joannes Marinus van Oers, 1869–1945)",
+  "edition": {
+    "year": 1933,
+    "description": "Tweede, ongewijzigde druk",
+    "firstEditionYear": 1895,
+    "publisher": "Teulings' Uitgevers-Mij, 's-Hertogenbosch",
+    "sourceUrl": "https://www.dbnl.org/tekst/_hei009heil11_01/colofon.php"
+  },
+  "license": "Public domain",
+  "rightsEvidence": [
+    {
+      "url": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0124.php",
+      "evidence": "The title section credits J. M. van Oers, Professor in het Seminarie te Hoeven, for the Esther translation."
+    },
+    {
+      "url": "https://www.dbnl.org/arch/_wie002wiei02_01/pag/_wie002wiei02_01.pdf",
+      "evidence": "Contemporary biographical entry: Oers, Johannes Marinus van, vicar-general of Breda, born Wouw 2 December 1869, formerly seminary professor."
+    },
+    {
+      "url": "https://www.online-familieberichten.nl/pers/1624971/Joannes-Marinus-van-Oers-1869-1945",
+      "evidence": "Transcription of funeral card: Joannes Marinus van Oers, born 2 December 1869, died Breda 8 April 1945. The author's original translation has passed the life-plus-70-year term."
+    },
+    {
+      "url": "https://www.dbnl.org/tekst/_hei009heil11_01/colofon.php",
+      "evidence": "DBNL identifies the 1933 edition as an unchanged second edition of the first edition published in 1895; the original title page says Kerkelijk goedgekeurd."
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0139.php",
+      "scope": "Esther 15:1",
+      "cacheFile": ".cache/DBNL-Esther15-search-source.txt"
+    },
+    {
+      "url": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0140.php",
+      "scope": "Esther 16:1–24",
+      "cacheFile": ".cache/DBNL-Esther16-search-source.txt"
+    },
+    {
+      "url": "https://www.dbnl.org/tekst/_hei009heil11_01/colofon.php",
+      "scope": "Edition provenance",
+      "cacheFile": ".cache/DBNL-Esther-edition-search-source.txt"
+    }
+  ],
+  "reviewedAt": "2026-10-22",
+  "processing": "Editorial transcription of the Dutch scripture column in the indexed DBNL page text, checked against the retained source excerpts. Latin, headings, commentary and footnote markers are excluded; whitespace and page-break hyphenation are normalized. Historical wording and spelling are preserved, including DBNL's 'ongehoorzaambeid' in 16:24. No scripture wording was newly translated or generated.",
+  "verses": [
+    {
+      "book": "EST",
+      "chapter": 15,
+      "number": 1,
+      "text": "En hij (ongetwijfeld Mardocheüs) beval haar tot den koning te gaan en te bidden voor haar volk en voor haar land.",
+      "sourceUrl": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0139.php"
+    },
+    {
+      "book": "EST",
+      "chapter": 16,
+      "number": 1,
+      "text": "Artaxerxes, de groote koning, aan de vorsten der honderd zeven en twintig provinciën van Indië tot Ethiopië, en aan de ons onderhoorige bestuurders, heil!",
+      "sourceUrl": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0140.php"
+    },
+    {
+      "book": "EST",
+      "chapter": 16,
+      "number": 2,
+      "text": "Velen misbruiken de goedheid der vorsten en de eer, die hun wordt aangedaan, tot hoovaardij;",
+      "sourceUrl": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0140.php"
+    },
+    {
+      "book": "EST",
+      "chapter": 16,
+      "number": 3,
+      "text": "en niet alleen trachten zij de onderdanen der koningen te verdrukken, maar, niet in staat de hun verleende eer te dragen, smeden zij aanslagen tegen hen, die haar bewezen.",
+      "sourceUrl": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0140.php"
+    },
+    {
+      "book": "EST",
+      "chapter": 16,
+      "number": 4,
+      "text": "En het is hun niet genoeg geen dankbaarheid te betoonen voor de weldaden en de rechten der hun betoonde menschelijke goedheid te schenden, maar zij wanen zelfs het oordeel van den alzienden God te kunnen ontkomen.",
+      "sourceUrl": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0140.php"
+    },
+    {
+      "book": "EST",
+      "chapter": 16,
+      "number": 5,
+      "text": "En tot zulk eene uitzinnigheid zijn zij vervoerd, dat zij degenen, die zich van de hun toevertrouwde bedieningen zorgvuldig kwijten en zich in alles zoo gedragen, dat zij aller lof waardig zijn, door bedrieglijke listen ten val zoeken te brengen,",
+      "sourceUrl": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0140.php"
+    },
+    {
+      "book": "EST",
+      "chapter": 16,
+      "number": 6,
+      "text": "terwijl zij de argelooze ooren der vorsten, die anderen naar hunne eigen inborst beoordeelen, door listig bedrog verschalken.",
+      "sourceUrl": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0140.php"
+    },
+    {
+      "book": "EST",
+      "chapter": 16,
+      "number": 7,
+      "text": "Dat dit zoo is, blijkt èn uit de oude geschiedboeken èn uit hetgeen dagelijks voorvalt, hoe (namelijk) door booze inblazingen van sommigen de bedoelingen der koningen ten kwade gekeerd worden.",
+      "sourceUrl": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0140.php"
+    },
+    {
+      "book": "EST",
+      "chapter": 16,
+      "number": 8,
+      "text": "Daarom dient er gezorgd voor de rust van al de provinciën.",
+      "sourceUrl": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0140.php"
+    },
+    {
+      "book": "EST",
+      "chapter": 16,
+      "number": 9,
+      "text": "En gij moet niet denken, dat, indien wij tegenstrijdige verordeningen geven, dit voortkomt uit lichtzinnigheid, maar dat wij beslissingen nemen naar den aard en de noodwendigheid der tijden, gelijk het welzijn van het gemeenebest vordert.",
+      "sourceUrl": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0140.php"
+    },
+    {
+      "book": "EST",
+      "chapter": 16,
+      "number": 10,
+      "text": "En opdat gij duidelijker begrijpt wat wij zeggen: Aman, de zoon van Amadathi, van inborst en afkomst een Macedoniër, die niets gemeen had met het bloed der Perzen en door zijne wreedheid onze goedertierenheid tot schande strekte, werd als gastvriend door ons opgenomen,",
+      "sourceUrl": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0140.php"
+    },
+    {
+      "book": "EST",
+      "chapter": 16,
+      "number": 11,
+      "text": "en heeft zoovele blijken van vriendschap jegens zich ondervonden, dat hij onze vader genoemd en door allen gehuldigd werd als de eerste na den koning.",
+      "sourceUrl": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0140.php"
+    },
+    {
+      "book": "EST",
+      "chapter": 16,
+      "number": 12,
+      "text": "Maar tot zulk een graad van laatdunkendheid heeft hij zich opgeblazen, dat hij er naar getracht heeft ons van kroon en leven te berooven.",
+      "sourceUrl": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0140.php"
+    },
+    {
+      "book": "EST",
+      "chapter": 16,
+      "number": 13,
+      "text": "Want Mardocheüs, aan wiens trouw en goede diensten wij het leven te danken hebben, en de deelgenoote van ons koningschap, Esther, met geheel haar volk, heeft hij door nieuwe en ongehoorde kuiperijen naar het leven gestaan;",
+      "sourceUrl": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0140.php"
+    },
+    {
+      "book": "EST",
+      "chapter": 16,
+      "number": 14,
+      "text": "met dit plan om, na hen gedood te hebben, ons in onze hulpeloosheid te belagen en de heerschappij der Perzen op de Macedoniërs over te brengen.",
+      "sourceUrl": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0140.php"
+    },
+    {
+      "book": "EST",
+      "chapter": 16,
+      "number": 15,
+      "text": "Wij nu bevinden dat de door den allerboosten der stervelingen ten doode bestemde Joden volstrekt aan niets schuldig zijn, maar integendeel naar rechtmatige wetten leven,",
+      "sourceUrl": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0140.php"
+    },
+    {
+      "book": "EST",
+      "chapter": 16,
+      "number": 16,
+      "text": "en dat zij kinderen zijn van den allerhoogsten en grootsten en altijd levenden God, door wiens goedheid èn onzen vaderen èn ons het koningschap is gegeven en tot den dag van heden in stand wordt gehouden.",
+      "sourceUrl": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0140.php"
+    },
+    {
+      "book": "EST",
+      "chapter": 16,
+      "number": 17,
+      "text": "Weet derhalve dat die brieven, die hij in onzen naam heeft afgezonden, krachteloos zijn.",
+      "sourceUrl": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0140.php"
+    },
+    {
+      "book": "EST",
+      "chapter": 16,
+      "number": 18,
+      "text": "En voor die misdaad hangt hij aan den paal voor de poorten van deze stad, Susan namelijk, zoowel hij, de aanlegger, als geheel zijne maagschap, terwijl niet wij maar God hem vergolden heeft naar verdienste.",
+      "sourceUrl": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0140.php"
+    },
+    {
+      "book": "EST",
+      "chapter": 16,
+      "number": 19,
+      "text": "Dit bevel nu, dat wij thans zenden, moet in alle steden worden aangeslagen, opdat het den Joden vrijsta naar hunne wetten te leven.",
+      "sourceUrl": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0140.php"
+    },
+    {
+      "book": "EST",
+      "chapter": 16,
+      "number": 20,
+      "text": "En gij moet hen bijstaan, opdat zij degenen, die gereed waren hen te dooden, kunnen ombrengen op den dertienden dag der twaalfde maand, die Adar genoemd wordt;",
+      "sourceUrl": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0140.php"
+    },
+    {
+      "book": "EST",
+      "chapter": 16,
+      "number": 21,
+      "text": "want dezen dag van droefheid en rouw heeft de almachtige God hun in vreugde verkeerd.",
+      "sourceUrl": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0140.php"
+    },
+    {
+      "book": "EST",
+      "chapter": 16,
+      "number": 22,
+      "text": "Daarom zult ook gij dezen dag onder de overige feestdagen rekenen en hem vieren met alle vroolijkheid, opdat men ook in de toekomst wete,",
+      "sourceUrl": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0140.php"
+    },
+    {
+      "book": "EST",
+      "chapter": 16,
+      "number": 23,
+      "text": "dat al degenen, die trouw aan de Perzen gehoorzamen, een verdiend loon voor hunne trouw ontvangen, maar dat zij, die hun koninkrijk belagen, om hunne misdaad omkomen.",
+      "sourceUrl": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0140.php"
+    },
+    {
+      "book": "EST",
+      "chapter": 16,
+      "number": 24,
+      "text": "En elke provincie en stad, die dit feest niet wil medevieren, zal door zwaard en vuur omkomen en dermate verdelgd worden, dat zij niet alleen voor de menschen, maar ook voor de dieren ontoegankelijk zij voor immer, tot een voorbeeld tegen versmading en ongehoorzaambeid.",
+      "sourceUrl": "https://www.dbnl.org/tekst/_hei009heil11_01/_hei009heil11_01_0140.php"
+    }
+  ]
+}
+

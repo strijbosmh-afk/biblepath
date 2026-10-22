@@ -31,11 +31,12 @@
         this._byBook.set(book.id,book);
         for (const alias of [book.id,book.name,...(book.aliases || [])]) this._bookAliases.set(searchKey(alias).replaceAll(' ',''),book.id);
         for (const chapter of book.chapters) for (const verse of chapter.verses) {
-          const key = `${book.id}.${chapter.number}.${verse.number}`;
-          this._verses.set(key,verse);
+          // A source can print a single text under a verse bridge (e.g. 9–10).
+          // Both locators resolve to that one row; the words are not duplicated.
+          for (let number=verse.number;number<=(verse.endNumber || verse.number);number++) this._verses.set(`${book.id}.${chapter.number}.${number}`,verse);
           const headingText = (chapter.headings || []).filter(heading => heading.beforeVerse === verse.number).map(heading => heading.text).join(' ');
           const searchableText = [headingText,verse.text].filter(Boolean).join(' ');
-          this._searchRows.push({bookId:book.id,bookName:book.name,testament:book.testament,chapter:chapter.number,verse:verse.number,text:searchableText,key:searchKey(searchableText)});
+          this._searchRows.push({bookId:book.id,bookName:book.name,testament:book.testament,chapter:chapter.number,verse:verse.number,...(verse.numberLabel?{numberLabel:verse.numberLabel}:{}),text:searchableText,key:searchKey(searchableText)});
         }
       }
       for (const names of BOOK_NAMES) names.split('|').forEach((name,index) => {if (this._byBook.has(BOOK_IDS[index])) this._bookAliases.set(searchKey(name).replaceAll(' ',''),BOOK_IDS[index]);});
@@ -46,20 +47,24 @@
 
     book(bookId) {return this._byBook.get(this._bookAliases.get(searchKey(bookId).replaceAll(' ',''))) || null;}
     books() {return this._books.map(book => ({id:book.id,name:book.name,testament:book.testament,chapterCount:book.chapters.length,verseCount:book.chapters.reduce((sum,ch) => sum+ch.verses.length,0)}));}
+    resolveReference(book,chapter,verse,endVerse) {
+      if (!book || chapter<1 || verse<1 || endVerse<verse) return null;
+      const start=this._verses.get(`${book.id}.${chapter}.${verse}`),end=this._verses.get(`${book.id}.${chapter}.${endVerse}`);
+      return start&&end ? {bookId:book.id,chapter,verse:start.number,endVerse:end.endNumber || end.number} : null;
+    }
     reference(label) {
       if (label && typeof label === 'object') {
         if (label.book && label.chapter && label.verse) {
           const book = this.book(label.book);
           const chapter=Number(label.chapter),verse=Number(label.verse),endVerse=Number(label.endVerse||verse);
-          return book && endVerse>=verse && this._verses.has(`${book.id}.${chapter}.${verse}`) && this._verses.has(`${book.id}.${chapter}.${endVerse}`) ? {bookId:book.id,chapter,verse,endVerse} : null;
+          return this.resolveReference(book,chapter,verse,endVerse);
         }
         label = label.label;
       }
       const match = String(label || '').trim().match(/^(.*?)\s*(\d+)\s*(?::\s*(\d+)(?:\s*[-–]\s*(\d+))?)?$/);
       if (!match) return null;
       const book = this.book(match[1]),chapter = Number(match[2]),verse = Number(match[3] || 1),endVerse = Number(match[4] || verse);
-      if (!book || chapter < 1 || verse < 1 || endVerse < verse || !this._verses.has(`${book.id}.${chapter}.${verse}`) || !this._verses.has(`${book.id}.${chapter}.${endVerse}`)) return null;
-      return {bookId:book.id,chapter,verse,endVerse};
+      return this.resolveReference(book,chapter,verse,endVerse);
     }
     // Atlas references use the English index's numbering. Equal numbers are
     // not an alignment when the selected edition flags a book as uncertain.
