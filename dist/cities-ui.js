@@ -5,12 +5,18 @@
   let instanceCount = 0;
   const PAGE_SIZE = 24;
   const escape = value => String(value ?? '').replace(/[&<>"']/g, character => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[character]));
+  const t=(s,p)=>window.BibleI18n?.t(s,p)??String(s).replace(/\{(\w+)\}/g,(match,key)=>p?.[key]??match);
+  const tr=(s,p)=>escape(t(s,p));
+  const language=()=>window.BibleI18n?.language||'en';
+  const number=value=>Number(value).toLocaleString(language());
+  const reference=value=>window.BibleI18n?.reference(String(value??''))||String(value??'');
+  const displayBook=value=>reference(`${value} 1:1`).replace(/\s+1:1$/,'');
   const normalize = value => String(value ?? '').toLocaleLowerCase('en').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();
   const safeUrl = value => {
     try { const url = new URL(String(value)); return ['https:','http:'].includes(url.protocol) ? url.href : ''; }
     catch { return ''; }
   };
-  const plural = (count, singular, multiple = `${singular}s`) => `${count.toLocaleString()} ${count === 1 ? singular : multiple}`;
+  const plural = (count, singular, multiple = `${singular}s`) => t(`{count} ${count === 1 ? singular : multiple}`,{count:number(count)});
   const bookOf = label => String(label || '').match(/^(.+?)\s+\d+(?::\d+)?(?:\D.*)?$/)?.[1] || '';
   // Deliberately exclude chapter-wide and range references. A person indexed
   // somewhere in a range is not necessarily indexed in every verse in it.
@@ -34,7 +40,10 @@
   class BibleCities {
     constructor(container, placesData, peopleData, callbacks = {}) {
       if (!container?.addEventListener) throw new TypeError('BibleCities requires a container element.');
+      container._bibleCities?.destroy();
       this.container = container;
+      container._bibleCities=this;
+      this.listeners=[];
       this.callbacks = callbacks;
       this.uid = `city-browser-${++instanceCount}`;
       this.meta = placesData?.meta || {};
@@ -55,21 +64,22 @@
         }).map(ref => ({...ref, label:String(ref.label), url:safeUrl(ref.url)}));
         const record = {...place, id:String(place.id), name:String(place.name), refs,
           aliases:(Array.isArray(place.aliases) ? place.aliases : []).map(String),
+          displayAliases:(Array.isArray(place.displayAliases) ? place.displayAliases : Array.isArray(place.aliases) ? place.aliases : []).map(String),
           testaments:(Array.isArray(place.testaments) ? place.testaments : []).filter(value => value === 'OT' || value === 'NT')};
         record.books = new Set(refs.map(ref => bookOf(ref.label)).filter(Boolean));
-        record.searchText = normalize([record.name,...record.aliases,record.description,...refs.map(ref => ref.label)].join(' '));
+        record.searchText = normalize([record.name,...record.aliases,record.description,...refs.flatMap(ref => [ref.label,reference(ref.label)])].join(' '));
         this.places.push(record); this.byId.set(record.id,record);
       }
-      this.places.sort((a,b) => a.name.localeCompare(b.name,'en') || a.id.localeCompare(b.id,'en'));
-      this.books = [...new Set(this.places.flatMap(place => [...place.books]))].sort((a,b) => a.localeCompare(b,'en'));
+      this.places.sort((a,b) => a.name.localeCompare(b.name,language()) || a.id.localeCompare(b.id));
+      this.books = [...new Set(this.places.flatMap(place => [...place.books]))].sort((a,b) => displayBook(a).localeCompare(displayBook(b),language()));
       this.container.classList.add('city-browser');
-      this.container.addEventListener('click', event => this.handleClick(event));
-      this.container.addEventListener('input', event => {
+      this.listen('click', event => this.handleClick(event));
+      this.listen('input', event => {
         if (event.target.matches('[data-city-search]')) {
           this.state.query = event.target.value; this.state.page = 1; this.renderResults();
         }
       });
-      this.container.addEventListener('change', event => {
+      this.listen('change', event => {
         if (event.target.matches('[data-city-book]')) this.state.book = event.target.value;
         else if (event.target.matches('[data-city-sort]')) this.state.sort = event.target.value;
         else return;
@@ -77,6 +87,8 @@
       });
       this.renderIndex();
     }
+    listen(type,handler){this.listeners.push([type,handler]);this.container.addEventListener(type,handler);}
+    destroy(){for(const [type,handler] of this.listeners)this.container.removeEventListener(type,handler);this.listeners=[];if(this.container._bibleCities===this)delete this.container._bibleCities;}
 
     matchingPlaces() {
       const terms = normalize(this.state.query).split(' ').filter(Boolean);
@@ -85,41 +97,41 @@
         (this.state.book === 'all' || place.books.has(this.state.book)) &&
         terms.every(term => place.searchText.includes(term)));
       return this.state.sort === 'references'
-        ? places.sort((a,b) => b.refs.length-a.refs.length || a.name.localeCompare(b.name,'en') || a.id.localeCompare(b.id,'en'))
+        ? places.sort((a,b) => b.refs.length-a.refs.length || a.name.localeCompare(b.name,language()) || a.id.localeCompare(b.id))
         : places;
     }
 
     testamentBadges(place) {
-      return place.testaments.map(testament => `<span class="city-badge city-badge-${testament.toLowerCase()}">${testament === 'OT' ? 'Old Testament' : 'New Testament'}</span>`).join('');
+      return place.testaments.map(testament => `<span class="city-badge city-badge-${testament.toLowerCase()}">${tr(testament === 'OT' ? 'Old Testament' : 'New Testament')}</span>`).join('');
     }
 
     credits() {
       const sources = (Array.isArray(this.meta.sources) ? this.meta.sources : []).map(source => {
         const url = safeUrl(source.url), licenseUrl = safeUrl(source.licenseUrl);
-        const name = url ? `<a href="${escape(url)}" target="_blank" rel="noopener noreferrer">${escape(source.name)}<span class="city-sr-only"> (opens in a new tab)</span></a>` : escape(source.name);
-        const license = source.license ? (licenseUrl ? `<a href="${escape(licenseUrl)}" target="_blank" rel="noopener noreferrer">${escape(source.license)}<span class="city-sr-only"> (opens in a new tab)</span></a>` : escape(source.license)) : '';
+        const name = url ? `<a href="${escape(url)}" target="_blank" rel="noopener noreferrer">${escape(source.name)}<span class="city-sr-only"> ${tr('(opens in a new tab)')}</span></a>` : escape(source.name);
+        const license = source.license ? (licenseUrl ? `<a href="${escape(licenseUrl)}" target="_blank" rel="noopener noreferrer">${tr(source.license)}<span class="city-sr-only"> ${tr('(opens in a new tab)')}</span></a>` : tr(source.license)) : '';
         return `${name}${license ? ` (${license})` : ''}`;
       });
-      return `<footer class="city-index-note">${escape(this.meta.scope || 'Every place leads back to its indexed biblical passages. Source details are included in each profile.')}${sources.length ? `<span class="city-credits">Place index adapted from ${sources.join(' and ')}.</span>` : ''}</footer>`;
+      return `<footer class="city-index-note">${tr(this.meta.scope || 'Every place leads back to its indexed biblical passages. Source details are included in each profile.')}${sources.length ? `<span class="city-credits">${tr('Place index adapted from')} ${sources.join(` ${tr('and')} `)}.</span>` : ''}</footer>`;
     }
 
     renderIndex() {
       const state = this.state;
       this.container.innerHTML = `
         <header class="city-intro">
-          <div><p class="city-eyebrow">THE PLACES OF SCRIPTURE</p><h1>Cities &amp; places</h1><p>Find a familiar name. Follow its story through Scripture.</p></div>
-          <div class="city-index-count"><span>${this.places.length.toLocaleString()}</span><p>places in the index${icon('city')}</p></div>
+          <div><p class="city-eyebrow">${tr('THE PLACES OF SCRIPTURE')}</p><h1>${tr('Cities & places')}</h1><p>${tr('Find a familiar name. Follow its story through Scripture.')}</p></div>
+          <div class="city-index-count"><span>${number(this.places.length)}</span><p>${tr('places in the index')}${icon('city')}</p></div>
         </header>
-        <section class="city-index" aria-label="Browse biblical cities and places">
+        <section class="city-index" aria-label="${tr('Browse biblical cities and places')}">
           <div class="city-filter-bar">
-            <label class="city-search" for="${this.uid}-search">${icon('search')}<span class="city-sr-only">Search cities, aliases, or references</span><input id="${this.uid}-search" data-city-search type="search" placeholder="Search a city, alias, or passage…" value="${escape(state.query)}" autocomplete="off"></label>
-            <div class="city-testaments" role="group" aria-label="Testament">
-              ${[['all','All places'],['OT','Old Testament'],['NT','New Testament']].map(([value,label]) => `<button type="button" data-city-action="testament" data-city-value="${value}" aria-pressed="${state.testament === value}">${label}</button>`).join('')}
+            <label class="city-search" for="${this.uid}-search">${icon('search')}<span class="city-sr-only">${tr('Search cities, aliases, or references')}</span><input id="${this.uid}-search" data-city-search type="search" placeholder="${tr('Search a city, alias, or passage…')}" value="${escape(state.query)}" autocomplete="off"></label>
+            <div class="city-testaments" role="group" aria-label="${tr('Testament')}">
+              ${[['all','All places'],['OT','Old Testament'],['NT','New Testament']].map(([value,label]) => `<button type="button" data-city-action="testament" data-city-value="${value}" aria-pressed="${state.testament === value}">${tr(label)}</button>`).join('')}
             </div>
           </div>
           <div class="city-results-bar">
             <p data-city-status role="status" aria-live="polite" aria-atomic="true"></p>
-            <div class="city-selects"><label>Book<select data-city-book aria-label="Filter places by Bible book"><option value="all">All books</option>${this.books.map(book => `<option value="${escape(book)}"${state.book === book ? ' selected' : ''}>${escape(book)}</option>`).join('')}</select></label><label>Sort<select data-city-sort aria-label="Sort places"><option value="name"${state.sort === 'name' ? ' selected' : ''}>Name A–Z</option><option value="references"${state.sort === 'references' ? ' selected' : ''}>Most references</option></select></label><button type="button" class="city-clear" data-city-action="clear" data-city-clear>Clear filters</button></div>
+            <div class="city-selects"><label>${tr('Book')}<select data-city-book aria-label="${tr('Filter places by Bible book')}"><option value="all">${tr('All books')}</option>${this.books.map(book => `<option value="${escape(book)}"${state.book === book ? ' selected' : ''}>${escape(displayBook(book))}</option>`).join('')}</select></label><label>${tr('Sort')}<select data-city-sort aria-label="${tr('Sort places')}"><option value="name"${state.sort === 'name' ? ' selected' : ''}>${tr('Name A–Z')}</option><option value="references"${state.sort === 'references' ? ' selected' : ''}>${tr('Most references')}</option></select></label><button type="button" class="city-clear" data-city-action="clear" data-city-clear>${tr('Clear filters')}</button></div>
           </div>
           <div data-city-results></div>
           ${this.credits()}
@@ -134,19 +146,19 @@
       this.state.page = Math.max(1,Math.min(this.state.page,pages));
       const offset = (this.state.page-1)*PAGE_SIZE, shown = places.slice(offset,offset+PAGE_SIZE);
       const status = this.container.querySelector('[data-city-status]');
-      if (status) status.textContent = places.length ? `${plural(places.length,'place')} · Showing ${offset+1}–${offset+shown.length}` : 'No places match these filters';
+      if (status) status.textContent = places.length ? `${plural(places.length,'place')} · ${t('Showing {start}–{end}',{start:number(offset+1),end:number(offset+shown.length)})}` : t('No places match these filters');
       const clear = this.container.querySelector('[data-city-clear]');
       if (clear) clear.hidden = !this.state.query && this.state.testament === 'all' && this.state.book === 'all';
       this.container.querySelectorAll('[data-city-action="testament"]').forEach(button => button.setAttribute('aria-pressed',String(button.dataset.cityValue === this.state.testament)));
-      results.innerHTML = shown.length ? `<div class="city-grid">${shown.map(place => this.card(place)).join('')}</div>${pages > 1 ? this.pagination(pages) : ''}` : `<div class="city-empty">${icon('search')}<h2>No places found</h2><p>Try another name or passage, or broaden the filters.</p><button type="button" class="city-primary" data-city-action="clear">Clear filters</button></div>`;
+      results.innerHTML = shown.length ? `<div class="city-grid">${shown.map(place => this.card(place)).join('')}</div>${pages > 1 ? this.pagination(pages) : ''}` : `<div class="city-empty">${icon('search')}<h2>${tr('No places found')}</h2><p>${tr('Try another name or passage, or broaden the filters.')}</p><button type="button" class="city-primary" data-city-action="clear">${tr('Clear filters')}</button></div>`;
     }
 
     card(place) {
       return `<article class="city-card">
-        <div class="city-card-top"><span class="city-card-symbol" aria-hidden="true">${icon('city')}</span><span class="city-card-count">${plural(place.refs.length,'reference')}</span></div>
-        <h2><button type="button" class="city-card-open" data-city-action="open" data-city-id="${escape(place.id)}">${escape(place.name)}<span class="city-sr-only"> — view place</span></button></h2>
-        <p class="city-card-alias">${place.aliases.length ? `Also ${escape(place.aliases.join(', '))}` : escape(place.disambiguation || place.refs[0]?.label || 'Biblical place index')}</p>
-        <p class="city-card-description">${escape(place.description || 'Explore the passages in which this place is indexed.')}</p>
+        <div class="city-card-top"><span class="city-card-symbol" aria-hidden="true">${icon('city')}</span><span class="city-card-count">${escape(plural(place.refs.length,'reference'))}</span></div>
+        <h2><button type="button" class="city-card-open" data-city-action="open" data-city-id="${escape(place.id)}">${escape(place.name)}<span class="city-sr-only"> — ${tr('view place')}</span></button></h2>
+        <p class="city-card-alias">${place.displayAliases.length ? tr('Also {aliases}',{aliases:place.displayAliases.join(', ')}) : escape(place.disambiguation || reference(place.refs[0]?.label) || t('Biblical place index'))}</p>
+        <p class="city-card-description">${tr(place.description || 'Explore the passages in which this place is indexed.')}</p>
         <div class="city-card-bottom"><div class="city-badges">${this.testamentBadges(place)}</div><span class="city-card-arrow" aria-hidden="true">${icon('arrow')}</span></div>
       </article>`;
     }
@@ -158,9 +170,9 @@
       const buttons = pageNumbers.map(page => {
         const gap = page-previous > 1 ? '<span class="city-page-gap" aria-hidden="true">…</span>' : '';
         previous = page;
-        return `${gap}<button type="button" data-city-action="page" data-city-page="${page}" aria-label="Page ${page}"${page === current ? ' aria-current="page"' : ''}>${page}</button>`;
+        return `${gap}<button type="button" data-city-action="page" data-city-page="${page}" aria-label="${tr('Page {page}',{page})}"${page === current ? ' aria-current="page"' : ''}>${page}</button>`;
       }).join('');
-      return `<nav class="city-pagination" aria-label="Place index pages"><button type="button" class="city-page-direction" data-city-action="page" data-city-page="${current-1}"${current === 1 ? ' disabled' : ''}>${icon('back')}<span>Previous</span></button><div>${buttons}</div><button type="button" class="city-page-direction" data-city-action="page" data-city-page="${current+1}"${current === pages ? ' disabled' : ''}><span>Next</span>${icon('arrow')}</button></nav>`;
+      return `<nav class="city-pagination" aria-label="${tr('Place index pages')}"><button type="button" class="city-page-direction" data-city-action="page" data-city-page="${current-1}"${current === 1 ? ' disabled' : ''}>${icon('back')}<span>${tr('Previous')}</span></button><div>${buttons}</div><button type="button" class="city-page-direction" data-city-action="page" data-city-page="${current+1}"${current === pages ? ' disabled' : ''}><span>${tr('Next')}</span>${icon('arrow')}</button></nav>`;
     }
 
     indexPeople() {
@@ -189,7 +201,7 @@
           if (!match.refs.includes(ref.label)) match.refs.push(ref.label);
         }
       }
-      return [...matches.values()].sort((a,b) => b.refs.length-a.refs.length || a.person.name.localeCompare(b.person.name,'en') || String(a.person.id).localeCompare(String(b.person.id),'en'));
+      return [...matches.values()].sort((a,b) => b.refs.length-a.refs.length || a.person.name.localeCompare(b.person.name,language()) || String(a.person.id).localeCompare(String(b.person.id)));
     }
 
     open(id) {
@@ -221,37 +233,37 @@
     renderDetail() {
       const place = this.byId.get(this.state.cityId);
       if (!place) return;
-      const sourceUrl = safeUrl(place.source?.url), sourceName = place.source?.name || 'Place index';
+      const sourceUrl = safeUrl(place.source?.url), sourceName = place.source?.name || t('Place index');
       this.container.innerHTML = `
-        <button type="button" class="city-back" data-city-action="index">${icon('back')}Back to cities &amp; places</button>
-        <header class="city-detail-hero"><div class="city-detail-emblem" aria-hidden="true">${icon('city')}</div><div class="city-detail-heading"><p class="city-eyebrow">A PLACE IN SCRIPTURE</p><h1 class="city-detail-title" tabindex="-1">${escape(place.name)}</h1><div class="city-badges">${this.testamentBadges(place)}</div>${place.aliases.length ? `<p class="city-aliases">Also indexed as ${escape(place.aliases.join(', '))}</p>` : ''}</div><div class="city-detail-stat"><strong>${place.refs.length.toLocaleString()}</strong><span>indexed ${place.refs.length === 1 ? 'reference' : 'references'}</span></div></header>
+        <button type="button" class="city-back" data-city-action="index">${icon('back')}${tr('Back to cities & places')}</button>
+        <header class="city-detail-hero"><div class="city-detail-emblem" aria-hidden="true">${icon('city')}</div><div class="city-detail-heading"><p class="city-eyebrow">${tr('A PLACE IN SCRIPTURE')}</p><h1 class="city-detail-title" tabindex="-1">${escape(place.name)}</h1><div class="city-badges">${this.testamentBadges(place)}</div>${place.displayAliases.length ? `<p class="city-aliases">${tr('Also indexed as {aliases}',{aliases:place.displayAliases.join(', ')})}</p>` : ''}</div><div class="city-detail-stat"><strong>${number(place.refs.length)}</strong><span>${tr(place.refs.length === 1 ? 'indexed reference' : 'indexed references')}</span></div></header>
         <div class="city-detail-layout"><div class="city-detail-main">
-          <section class="city-description-panel" aria-label="About this place"><p>${escape(place.description || 'This place appears in the biblical passages listed below. Read each passage for its context.')}</p>${(Array.isArray(place.notes) ? place.notes : []).map(note => `<p class="city-place-note">${escape(note)}</p>`).join('')}<div class="city-source"><span>PLACE INDEX SOURCE</span>${sourceUrl ? `<a href="${escape(sourceUrl)}" target="_blank" rel="noopener noreferrer">${escape(sourceName)}${icon('external')}<span class="city-sr-only"> (opens in a new tab)</span></a>` : `<strong>${escape(sourceName)}</strong>`}</div></section>
-          <section class="city-passages" aria-labelledby="${this.uid}-passages"><div class="city-section-heading"><div>${icon('book')}<h2 id="${this.uid}-passages">In Scripture</h2></div><span>${plural(place.books.size,'book')}</span></div><p class="city-section-note">Open a passage to read this place in context.</p><div data-city-passages>${this.referenceList(place)}</div></section>
-        </div><aside class="city-people-panel" aria-labelledby="${this.uid}-people"><div class="city-section-heading"><div>${icon('people')}<h2 id="${this.uid}-people">People indexed in these passages</h2></div></div><p class="city-section-note">Names with an exact verse match in the people index. Sharing a passage does not establish a person’s residence or visit.</p><div data-city-people>${this.peopleList()}</div></aside></div>${this.credits()}`;
+          <section class="city-description-panel" aria-label="${tr('About this place')}"><p>${tr(place.description || 'This place appears in the biblical passages listed below. Read each passage for its context.')}</p>${(Array.isArray(place.notes) ? place.notes : []).map(note => `<p class="city-place-note">${tr(note)}</p>`).join('')}<div class="city-source"><span>${tr('PLACE INDEX SOURCE')}</span>${sourceUrl ? `<a href="${escape(sourceUrl)}" target="_blank" rel="noopener noreferrer">${escape(sourceName)}${icon('external')}<span class="city-sr-only"> ${tr('(opens in a new tab)')}</span></a>` : `<strong>${escape(sourceName)}</strong>`}</div></section>
+          <section class="city-passages" aria-labelledby="${this.uid}-passages"><div class="city-section-heading"><div>${icon('book')}<h2 id="${this.uid}-passages">${tr('In Scripture')}</h2></div><span>${escape(plural(place.books.size,'book'))}</span></div><p class="city-section-note">${tr('Open a passage to read this place in context.')}</p><div data-city-passages>${this.referenceList(place)}</div></section>
+        </div><aside class="city-people-panel" aria-labelledby="${this.uid}-people"><div class="city-section-heading"><div>${icon('people')}<h2 id="${this.uid}-people">${tr('People indexed in these passages')}</h2></div></div><p class="city-section-note">${tr('Names with an exact verse match in the people index. Sharing a passage does not establish a person’s residence or visit.')}</p><div data-city-people>${this.peopleList()}</div></aside></div>${this.credits()}`;
     }
 
     referenceList(place) {
-      if (!place.refs.length) return '<p class="city-no-matches">No biblical references have been included for this place yet.</p>';
+      if (!place.refs.length) return `<p class="city-no-matches">${tr('No biblical references have been included for this place yet.')}</p>`;
       const groups = new Map();
       place.refs.slice(0,this.referenceLimit).forEach((ref,index) => {
         const book = bookOf(ref.label) || 'References';
         if (!groups.has(book)) groups.set(book,[]);
         groups.get(book).push({ref,index});
       });
-      const links = [...groups].map(([book,refs]) => `<div class="city-reference-group"><h3>${escape(book)}</h3><div>${refs.map(({ref,index}) => {
-        const label = `${escape(ref.label)}${icon(typeof this.callbacks.onPassage === 'function' ? 'arrow' : 'external')}`;
+      const links = [...groups].map(([book,refs]) => `<div class="city-reference-group"><h3>${escape(book === 'References'?t('References'):displayBook(book))}</h3><div>${refs.map(({ref,index}) => {
+        const label = `${escape(reference(ref.label))}${icon(typeof this.callbacks.onPassage === 'function' ? 'arrow' : 'external')}`;
         if (typeof this.callbacks.onPassage === 'function') return `<button type="button" class="city-verse" data-city-action="passage" data-city-ref="${index}">${label}</button>`;
-        return ref.url ? `<a class="city-verse" href="${escape(ref.url)}" target="_blank" rel="noopener noreferrer">${label}<span class="city-sr-only"> (opens in a new tab)</span></a>` : `<span class="city-verse">${escape(ref.label)}</span>`;
+        return ref.url ? `<a class="city-verse" href="${escape(ref.url)}" target="_blank" rel="noopener noreferrer">${label}<span class="city-sr-only"> ${tr('(opens in a new tab)')}</span></a>` : `<span class="city-verse">${escape(reference(ref.label))}</span>`;
       }).join('')}</div></div>`).join('');
       const remaining = place.refs.length-this.referenceLimit;
-      return `${links}${remaining > 0 ? `<button type="button" class="city-more" data-city-action="references-more">Show ${Math.min(24,remaining)} more references<span>${remaining.toLocaleString()} remaining</span></button>` : ''}`;
+      return `${links}${remaining > 0 ? `<button type="button" class="city-more" data-city-action="references-more">${tr('Show {count} more references',{count:Math.min(24,remaining)})}<span>${tr('{count} remaining',{count:number(remaining)})}</span></button>` : ''}`;
     }
 
     peopleList() {
       const people = this.relatedPeople || [], remaining = people.length-this.peopleLimit;
-      if (!people.length) return '<div class="city-no-matches">No exact verse matches in the current people index. The passages may mention other people.</div>';
-      return `<p class="city-people-count">${plural(people.length,'person','people')} with shared references</p><div class="city-people-list">${people.slice(0,this.peopleLimit).map(({person,refs}) => `<button type="button" class="city-person" data-city-action="person" data-city-person="${escape(person.id)}"${typeof this.callbacks.onPerson !== 'function' ? ' disabled' : ''}><span class="city-person-initial" aria-hidden="true">${escape(String(person.name).slice(0,1))}</span><span class="city-person-copy"><strong>${escape(person.name)}</strong>${person.disambiguation ? `<span class="city-person-identity">${escape(person.disambiguation)}</span>` : ''}<small>${escape(refs.slice(0,2).join(' · '))}${refs.length > 2 ? ` · +${refs.length-2}` : ''}</small></span>${icon('arrow')}</button>`).join('')}</div>${remaining > 0 ? `<button type="button" class="city-more" data-city-action="people-more">Show ${Math.min(12,remaining)} more people<span>${remaining.toLocaleString()} remaining</span></button>` : ''}`;
+      if (!people.length) return `<div class="city-no-matches">${tr('No exact verse matches in the current people index. The passages may mention other people.')}</div>`;
+      return `<p class="city-people-count">${tr(people.length===1?'{count} person with shared references':'{count} people with shared references',{count:number(people.length)})}</p><div class="city-people-list">${people.slice(0,this.peopleLimit).map(({person,refs}) => `<button type="button" class="city-person" data-city-action="person" data-city-person="${escape(person.id)}"${typeof this.callbacks.onPerson !== 'function' ? ' disabled' : ''}><span class="city-person-initial" aria-hidden="true">${escape(String(person.name).slice(0,1))}</span><span class="city-person-copy"><strong>${escape(person.name)}</strong>${person.disambiguation ? `<span class="city-person-identity">${escape(person.disambiguation)}</span>` : ''}<small>${escape(refs.slice(0,2).map(reference).join(' · '))}${refs.length > 2 ? ` · +${refs.length-2}` : ''}</small></span>${icon('arrow')}</button>`).join('')}</div>${remaining > 0 ? `<button type="button" class="city-more" data-city-action="people-more">${tr('Show {count} more people',{count:Math.min(12,remaining)})}<span>${tr('{count} remaining',{count:number(remaining)})}</span></button>` : ''}`;
     }
 
     handleClick(event) {
@@ -288,9 +300,18 @@
     }
 
     getState() {
-      return {...this.state,totalPlaces:this.places.length,resultCount:this.matchingPlaces().length,
+      return {...this.state,peopleLimit:this.peopleLimit,referenceLimit:this.referenceLimit,totalPlaces:this.places.length,resultCount:this.matchingPlaces().length,
         peopleCount:this.state.view === 'detail' ? this.relatedPeople?.length || 0 : 0,
         peopleShown:this.state.view === 'detail' ? Math.min(this.peopleLimit,this.relatedPeople?.length || 0) : 0};
+    }
+    setState(state={}) {
+      this.state={view:'index',cityId:null,query:String(state.query??''),testament:['OT','NT'].includes(state.testament)?state.testament:'all',book:this.books.includes(state.book)?state.book:'all',sort:state.sort==='references'?'references':'name',page:Math.max(1,Math.floor(Number(state.page)||1))};
+      if(state.view==='detail'&&this.byId.has(state.cityId)) {
+        this.state.view='detail';this.state.cityId=state.cityId;
+        this.peopleLimit=Math.max(12,Number(state.peopleLimit)||12);this.referenceLimit=Math.max(24,Number(state.referenceLimit)||24);
+        this.relatedPeople=this.peopleFor(this.byId.get(state.cityId));this.renderDetail();
+      } else this.renderIndex();
+      return this;
     }
   }
   window.BibleCities = BibleCities;

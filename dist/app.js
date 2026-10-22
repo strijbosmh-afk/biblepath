@@ -1,14 +1,17 @@
 (function () {
   'use strict';
+  const I = window.BibleI18n;
   const $ = selector => document.querySelector(selector);
   const $$ = selector => [...document.querySelectorAll(selector)];
   const escape = text => String(text ?? '').replace(/[&<>"']/g, value => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[value]));
   const icon = name => `<svg aria-hidden="true"><use href="#i-${name}"/></svg>`;
   const identityContext = (person, separator = ' · ') => {
     const context = person.disambiguation || person.era;
-    return context.includes(person.refs[0].label) ? escape(context) : `${escape(context)}${separator}${escape(person.refs[0].label)}`;
+    return context.includes(person.refs[0].label)||context.includes(I.reference(person.refs[0].label)) ? escape(context) : `${escape(context)}${separator}${escape(I.reference(person.refs[0].label))}`;
   };
   const {people, relationships, meta} = window.BIBLE_DATA;
+  const originalPeople = structuredClone(people);
+  I.localizePeople(window.BIBLE_DATA,originalPeople);
   const personById = new Map(people.map(person => [person.id, person]));
   const discovery = new window.BibleDiscovery(window.BIBLE_DATA);
   const pathFinder = new window.BiblePaths(window.BIBLE_DATA);
@@ -17,7 +20,9 @@
   let reader = null, cities = null, placesPromise = null, scripturePromise = null;
   let pendingPassage = null, pendingCity = null;
   let returnToLibrary = null;
-  const state = {layout:'constellation', focus:'abraham', selected:'abraham', depth:'auto', discoveryDepth:1, localRoots:[], testament:'all', spouses:true, view:'map', indexPage:1};
+  let savedReaderState=null,savedCitiesState=null;
+  const scriptureCache=new Map();
+  const state = {layout:'constellation', focus:'abraham', selected:'abraham', depth:'auto', discoveryDepth:1, localRoots:[], testament:'all', spouses:true, view:'reader', indexPage:1};
   let zoomBase = null, zoomTimer, rendering = false, lastSelection;
   const MAX_MAP_PEOPLE = 180, INDEX_PAGE_SIZE = 60;
   const graph = new window.BibleGraph($('#graph'), {
@@ -27,7 +32,7 @@
     onZoom: handleZoom
   });
   // Exposed read-only snapshots help verify navigation and graph behavior.
-  window.biblePath = {getState:() => ({...state, path:activePath ? {kind:activePath.kind,personIds:[...activePath.personIds],steps:activePath.steps.length,indexedCount:activePath.indexedCount} : null, graph:graph.getState(), peopleCount:people.length, relationshipCount:relationships.length})};
+  window.biblePath = {getState:() => ({...state, path:activePath ? {kind:activePath.kind,personIds:[...activePath.personIds],steps:activePath.steps.length,indexedCount:activePath.indexedCount} : null, graph:graph.getState(), language:I.language,reader:reader?.getState?.()||null,cities:cities?.getState?.()||null,peopleCount:people.length, relationshipCount:relationships.length})};
   let tooltipTimer, toastTimer, currentTooltipId;
   const normalize = text => text.toLocaleLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
   const searchable = new Map(people.map(p => [p.id, normalize([p.name,...(p.aliases || []),p.disambiguation || '',p.description,p.era,...(p.allReferences || p.refs.map(r=>r.label))].join(' '))]));
@@ -82,7 +87,7 @@
     $('#map-title').textContent = `${personById.get(state.focus).name}’s connections`;
     $('#discovery-title').textContent = state.depth === 'auto' ? 'Adaptive zoom' : 'Fixed reach';
     $('#discovery-level').textContent = `${depth === Infinity ? 'Extended network' : `${depth} ${depth === 1 ? 'step' : 'steps'}${state.localRoots.length ? ' + local branches' : ''}`} · ${edges.length} links`;
-    $('#discovery-description').textContent = lastSelection.omitted ? `${lastSelection.omitted.toLocaleString()} more people in this branch. Choose a person to explore farther.` : state.depth === 'auto' ? 'Zoom out for more relatives · Zoom in for detail' : 'Choose Adaptive zoom to reveal branches as you zoom';
+    $('#discovery-description').textContent = lastSelection.omitted ? `${lastSelection.omitted.toLocaleString(I.language)} more people in this branch. Choose a person to explore farther.` : state.depth === 'auto' ? 'Zoom out for more relatives · Zoom in for detail' : 'Choose Adaptive zoom to reveal branches as you zoom';
     $('.discovery-bar').classList.toggle('is-limited',lastSelection.omitted > 0);
     renderInspector(personById.get(state.selected));
     $$('.layout-option').forEach(button => {const active = button.dataset.layout === state.layout;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));});
@@ -109,15 +114,16 @@
     const notes = [...new Set([...(person.notes || []),...family.direct.filter(r=>r.note).map(r=>r.note)])];
     const referenceLinks = person.refs.slice(0,referenceLimit);
     const indexedRelations = family.direct.some(r=>r.evidence?.kind === 'index');
+    const displayAliases=person.displayAliases??person.aliases;
     $('#inspector').innerHTML = `
       ${activePath ? '<button class="back-to-path" id="back-to-path">← Back to the connecting path</button>' : ''}
       <div class="profile-topline"><span>A LIFE IN SCRIPTURE</span>${icon('book')}</div>
       <div class="profile-hero"><div class="profile-initial ${person.gender}">${escape(person.name[0])}</div><div><h2>${escape(person.name)}</h2><div class="era">${escape(person.era)}</div></div></div>
-      ${person.aliases?.length ? `<div class="profile-alias">Also known as ${person.aliases.map(escape).join(', ')}</div>` : ''}
+      ${displayAliases?.length ? `<div class="profile-alias">Also known as ${displayAliases.map(escape).join(', ')}</div>` : ''}
       <div class="profile-tags"><span>${person.testament === 'OT' ? 'Old Testament' : 'New Testament'}</span><span>${person.gender === 'female' ? 'Woman' : person.gender === 'male' ? 'Man' : 'Person'}</span></div>
       ${person.disambiguation ? `<p class="profile-identity">${escape(person.disambiguation)}</p>` : ''}
       <p class="profile-description">${escape(person.description)}</p>
-      <div class="profile-section"><h3>${icon('book')} IN SCRIPTURE <span class="reference-count">${(person.referenceCount || person.refs.length).toLocaleString()} refs</span></h3>${referenceLinks.map(ref=>`<a class="reference-link" href="${escape(ref.url)}" target="_blank" rel="noopener noreferrer"><span>${escape(ref.label)}${ref.provenance === 'indexed-name' ? '<small class="reference-provenance">Indexed name reference</small>' : ''}</span>${icon('external')}</a>`).join('')}${person.refs.length > referenceLimit ? `<button class="more-references" id="more-references">Show more passages (${person.refs.length-referenceLimit} remaining)</button>` : ''}${referenceLinks.some(ref=>ref.provenance === 'indexed-name') ? '<p class="reference-caveat">Name references may include descendants or a group bearing the same name. Read the passage in context.</p>' : ''}</div>
+      <div class="profile-section"><h3>${icon('book')} IN SCRIPTURE <span class="reference-count">${(person.referenceCount || person.refs.length).toLocaleString(I.language)} refs</span></h3>${referenceLinks.map(ref=>`<a class="reference-link" href="${escape(ref.url)}" target="_blank" rel="noopener noreferrer"><span>${escape(ref.label)}${ref.provenance === 'indexed-name' ? '<small class="reference-provenance">Indexed name reference</small>' : ''}</span>${icon('external')}</a>`).join('')}${person.refs.length > referenceLimit ? `<button class="more-references" id="more-references">Show more passages (${person.refs.length-referenceLimit} remaining)</button>` : ''}${referenceLinks.some(ref=>ref.provenance === 'indexed-name') ? '<p class="reference-caveat">Name references may include descendants or a group bearing the same name. Read the passage in context.</p>' : ''}</div>
       <div class="profile-section"><h3>${icon('tree')} FAMILY CONNECTIONS</h3>
         ${family.parents.length ? `<div class="family-row"><span class="family-label">Parents</span><div class="family-names">${relativeButtons(family.parents)}</div></div>` : ''}
         ${family.spouses.length ? `<div class="family-row"><span class="family-label">Spouse${family.spouses.length > 1 ? 's' : ''}</span><div class="family-names">${relativeButtons(family.spouses)}</div></div>` : ''}
@@ -176,8 +182,8 @@
   }
 
   function loadJson(file) {return fetch(file).then(response=>{if(!response.ok)throw new Error(`Could not load ${file}`);return response.json();});}
-  function loadPlaces() {if(!placesPromise)placesPromise=loadJson('places-data.json').catch(error=>{placesPromise=null;throw error;});return placesPromise;}
-  function loadScripture() {if(!scripturePromise)scripturePromise=loadJson('bible-data.json').catch(error=>{scripturePromise=null;throw error;});return scripturePromise;}
+  function loadPlaces() {if(!placesPromise)placesPromise=loadJson('places-data.json').catch(error=>{placesPromise=null;throw error;});return placesPromise.then(data=>I.localizePlaces(data));}
+  function loadScripture() {const locale=I.language;if(!scriptureCache.has(locale))scriptureCache.set(locale,loadJson(locale==='en'?'bible-data.json':`bible-data-${locale}.json`).catch(error=>{scriptureCache.delete(locale);throw error;}));return scriptureCache.get(locale);}
   function libraryError(container,retry) {container.innerHTML='<div class="library-empty"><h2>This collection could not load.</h2><p>Check your connection, then try again.</p><button class="solid-button library-retry">Try again</button></div>';container.querySelector('button').addEventListener('click',retry);}
   let readerLoading=null,citiesLoading=null;
   function readPendingPassage() {if(reader&&pendingPassage){const ref=pendingPassage;pendingPassage=null;if(!reader.open(ref))toast('This reference could not be located in the reader.');}}
@@ -185,10 +191,11 @@
   function ensureReader() {
     if(reader){readPendingPassage();return Promise.resolve(reader);}
     if(readerLoading)return readerLoading;
-    $('#reader-view').innerHTML='<div class="library-loading" role="status">Opening the complete World English Bible…</div>';
+    $('#reader-view').innerHTML='<div class="library-loading" role="status">Opening the Bible…</div>';
     readerLoading=Promise.all([loadScripture(),loadPlaces()]).then(([text,places])=>{
       const model=new window.BibleScripture(text,window.BIBLE_DATA,places);
       reader=new window.BibleReader($('#reader-view'),model,window.BIBLE_DATA,places,{onPerson:id=>openLibraryPerson(id,'reader'),onPlace:openCity});
+      if(savedReaderState){reader.setState(savedReaderState);savedReaderState=null;}
       readPendingPassage();
       return reader;
     }).catch(()=>{libraryError($('#reader-view'),ensureReader);return null;}).finally(()=>{readerLoading=null;});
@@ -198,7 +205,7 @@
     if(cities){showPendingCity();return Promise.resolve(cities);}
     if(citiesLoading)return citiesLoading;
     $('#cities-view').innerHTML='<div class="library-loading" role="status">Opening the cities collection…</div>';
-    citiesLoading=loadPlaces().then(places=>{cities=new window.BibleCities($('#cities-view'),places,window.BIBLE_DATA,{onPerson:id=>openLibraryPerson(id,'cities'),onPassage:openPassage});showPendingCity();return cities;}).catch(()=>{libraryError($('#cities-view'),ensureCities);return null;}).finally(()=>{citiesLoading=null;});
+    citiesLoading=loadPlaces().then(places=>{cities=new window.BibleCities($('#cities-view'),places,window.BIBLE_DATA,{onPerson:id=>openLibraryPerson(id,'cities'),onPassage:openPassage});if(savedCitiesState){cities.setState(savedCitiesState);savedCitiesState=null;}showPendingCity();return cities;}).catch(()=>{libraryError($('#cities-view'),ensureCities);return null;}).finally(()=>{citiesLoading=null;});
     return citiesLoading;
   }
   function openPassage(reference) {pendingPassage=reference;setView('reader');}
@@ -210,7 +217,7 @@
     const totalPages = Math.max(1,Math.ceil(matches.length/INDEX_PAGE_SIZE));
     state.indexPage = Math.min(state.indexPage,totalPages);
     const start = (state.indexPage-1)*INDEX_PAGE_SIZE, page = matches.slice(start,start+INDEX_PAGE_SIZE);
-    $('#index-result-count').textContent = matches.length ? `${(start+1).toLocaleString()}–${Math.min(start+INDEX_PAGE_SIZE,matches.length).toLocaleString()} of ${matches.length.toLocaleString()} people` : '0 people';
+    $('#index-result-count').textContent = matches.length ? `${(start+1).toLocaleString(I.language)}–${Math.min(start+INDEX_PAGE_SIZE,matches.length).toLocaleString(I.language)} of ${matches.length.toLocaleString(I.language)} people` : '0 people';
     $('#index-grid').innerHTML = page.map(person=>`<button class="person-card" data-person="${escape(person.id)}"><span class="avatar ${person.gender}">${escape(person.name[0])}</span><span class="person-card-copy"><strong>${escape(person.name)}</strong><small>${identityContext(person,'<br>')}</small></span>${icon('arrow')}</button>`).join('');
     $('#index-empty').hidden = matches.length > 0;
     $('#index-pagination').hidden = totalPages <= 1;
@@ -248,7 +255,7 @@
   function renderSearch() {
     const query = $('#global-search').value.trim();
     const matches = query ? matchingPeople(query,'all') : ['adam','abraham','sarah','jacob','moses','david','mary','jesus'].map(id=>personById.get(id)).filter(Boolean);
-    $('#search-heading').textContent = query ? `${matches.length.toLocaleString()} ${matches.length === 1 ? 'PERSON' : 'PEOPLE'} FOUND${matches.length>50 ? ' · FIRST 50 SHOWN — REFINE YOUR SEARCH' : ''}` : 'START WITH A FAMILIAR NAME';
+    $('#search-heading').textContent = query ? `${matches.length.toLocaleString(I.language)} ${matches.length === 1 ? 'PERSON' : 'PEOPLE'} FOUND${matches.length>50 ? ' · FIRST 50 SHOWN — REFINE YOUR SEARCH' : ''}` : 'START WITH A FAMILIAR NAME';
     $('#search-results').innerHTML = matches.length ? matches.slice(0,50).map(person=>`<button class="search-result" data-person="${escape(person.id)}"><span class="search-initial ${person.gender}">${escape(person.name[0])}</span><span><strong>${escape(person.name)}</strong><small>${identityContext(person)}</small></span>${icon('arrow')}</button>`).join('') : '<div class="search-empty">No matching people. Try another spelling or search the people index.</div>';
     $$('#search-results [data-person]').forEach(button=>button.addEventListener('click',()=>{$('#search-dialog').close();if(searchTarget){pickPathPerson(searchTarget,button.dataset.person);searchTarget=null;}else explorePerson(button.dataset.person);}));
   }
@@ -363,7 +370,7 @@
     $('#info-content').innerHTML = mode === 'help' ? `
       <div class="eyebrow">A LITTLE CURIOSITY GOES A LONG WAY</div><h2>Every life opens a story.</h2>
       <p>Start with a familiar name, then follow the connections to see how biblical families fit together.</p>
-      <h3>Read Scripture and explore its cities</h3><p><strong>Bible reader</strong> contains both testaments in the public-domain World English Bible. Browse books and chapters or search words, phrases and references. Underlined names open a family map or city profile. Dotted names offer possible identities rather than choosing one for you. Your reading position is kept when you follow a link.</p><p><strong>Cities explorer</strong> provides an alphabetical, searchable collection of settlements. Filter by testament or book, read the indexed passages, and follow people indexed in those passages. Shared references do not by themselves establish that a person lived in that city.</p>
+      <h3>Read Scripture and explore its cities</h3><p><strong>Bible reader</strong> contains both testaments in English (World English Bible), Dutch (Statenvertaling), and French (Louis Segond 1910). Choose the language in the top bar. Browse books and chapters or search words, phrases and references. Underlined names open a family map or city profile. Dotted names offer possible identities rather than choosing one for you. Your reading position is kept when you follow a link.</p><p><strong>Cities explorer</strong> provides an alphabetical, searchable collection of settlements. Filter by testament or book, read the indexed passages, and follow people indexed in those passages. Shared references do not by themselves establish that a person lived in that city.</p>
       <h3>Connect two people</h3><p>Use <strong>How are they connected?</strong> to choose a start and destination, then select <strong>Find connection</strong>. The gold route remains highlighted while you zoom, pan, or switch layouts. The side panel lists every connection with its source; select a step to locate that person.</p><p>The finder prefers a parent-to-child route when one exists, then searches other family connections. Bible-cited connections are the default. Uncheck that option to include STEP Bible’s indexed links, which are clearly labeled. A missing route means the collection has no recorded path under those settings.</p>
       <h3>Three ways to see the same people</h3><ul><li><strong>Constellation</strong> spreads a family into an organic network.</li><li><strong>Family tree</strong> arranges parents above their children.</li><li><strong>Ancestry rings</strong> places your starting person at the center, with each ring one family connection farther away. Spouses and descendants can appear alongside ancestors.</li></ul>
       <h3>Zoom into the story</h3><p><strong>Adaptive zoom</strong> starts with immediate family. Zoom out to reveal more distant relatives, up to eight family steps away. Zoom in near a person to uncover their immediate relatives and read relationship labels. Revealed branches stay on the map until you reset or choose another family; people stay in place as branches appear.</p>
@@ -372,14 +379,15 @@
       <p>Hover over a circle for a short biography and passage link. Select a person to open their profile; choose <strong>Explore their family</strong> to build a new map around them. On touchscreens, tap to open the profile.</p>
       <div class="info-fact">Solid arrows lead from parent to child. Dashed lines connect spouses. Hovering or selecting highlights that person’s links. Notes identify legal parenthood, uncertain identities, and indexed relationships that may reflect an editorial inference.</div>` : `
       <div class="eyebrow">A DEEPER LOOK AT BIBLICAL LIVES</div><h2>A growing atlas of Scripture.</h2>
-      <div class="info-fact">${people.length.toLocaleString()} people · ${relationships.length.toLocaleString()} family connections · Both testaments</div>
+      <div class="info-fact">${people.length.toLocaleString(I.language)} people · ${relationships.length.toLocaleString(I.language)} family connections · Both testaments</div>
       <p>${escape(meta?.coverage || 'This is an initial curated collection, not yet an exhaustive index of every person in the Bible.')}</p>
       <p>The three layouts share one searchable collection. The original profiles retain their KJV passage links. Expanded entries link to the ESV passages used by the source index. Namesakes remain distinct people.</p>
       <h3>Read each connection with its source</h3><p>Some family links cite a specific biblical passage; others cite STEP Bible’s editorial relationship index. An indexed link is not a claim that a particular verse explicitly establishes that relationship. Notes identify uncertainty, legal parenthood, and differing accounts.</p>
       <p>Missing links indicate a gap in this map, not necessarily in Scripture. Anonymous bridge identities, group identities, and unsupported genealogical harmonizations are excluded. This is a broad index of the 66-book Protestant canon, with further editorial review still possible.</p>
       <h3>Sources & attribution</h3>${(meta.sources || []).map(source=>`<p><a href="${escape(source.url)}" target="_blank" rel="noopener noreferrer">${escape(source.name)}</a>${source.license ? ` · ${escape(source.license)}` : ''}${source.credit ? `<br>${escape(source.credit)}` : ''}</p>`).join('')}
-      <p>The complete reader uses the <a href="https://ebible.org/engwebp/" target="_blank" rel="noopener noreferrer">World English Bible</a>, public domain, from eBible.org. Cities combine STEP name references with <a href="https://www.openbible.info/geo/" target="_blank" rel="noopener noreferrer">OpenBible.info</a> settlement classifications, CC BY 4.0.</p>
+      <p>The complete reader uses the <a href="https://ebible.org/engwebp/" target="_blank" rel="noopener noreferrer">World English Bible</a>, public domain, from eBible.org. Dutch uses the Statenvertaling and French uses Louis Segond 1910, with edition sources in the reader. Cities combine STEP name references with <a href="https://www.openbible.info/geo/" target="_blank" rel="noopener noreferrer">OpenBible.info</a> settlement classifications, CC BY 4.0.</p>
       <p><a href="data-notes.html" target="_blank" rel="noopener noreferrer">Full data credits, scope, and editorial changes ↗</a></p>`;
+    if(I.language!=='en')$('#info-content').innerHTML=window.BIBLE_INFO[I.language][mode];
     $('#info-dialog').showModal();
   }
 
@@ -430,7 +438,32 @@
     if(event.key==='Escape'){hideTooltip();closeSidebar();if($('#map-view').classList.contains('expanded')){$('#map-view').classList.remove('expanded');$('#map-fullscreen').setAttribute('aria-label','Expand map');requestAnimationFrame(()=>graph.fit());}}
   });
   window.addEventListener('resize',()=>{hideTooltip();syncSidebarAccess();});
-  $('#count-all').textContent=people.length.toLocaleString();$('#count-ot').textContent=people.filter(p=>discovery.allows(p,'OT')).length.toLocaleString();$('#count-nt').textContent=people.filter(p=>discovery.allows(p,'NT')).length.toLocaleString();
-  $('#index-count').textContent=people.length.toLocaleString();$('#coverage-summary').textContent=`${people.length.toLocaleString()} people · Expanded edition`;
-  setTestamentState('all');syncSidebarAccess();renderPathPickers();renderGraph();
+  function updateCounts() {
+  $('#count-all').textContent=people.length.toLocaleString(I.language);$('#count-ot').textContent=people.filter(p=>discovery.allows(p,'OT')).length.toLocaleString(I.language);$('#count-nt').textContent=people.filter(p=>discovery.allows(p,'NT')).length.toLocaleString(I.language);
+  $('#index-count').textContent=people.length.toLocaleString(I.language);$('#coverage-summary').textContent=`${people.length.toLocaleString(I.language)} people · Expanded edition`;
+  }
+  updateCounts();
+  async function changeLanguage(next) {
+    const select=$('#language-select');select.disabled=true;
+    // Finish any in-flight initialization before taking state, so a previous
+    // edition cannot overwrite the newly selected reader.
+    await Promise.allSettled([readerLoading,citiesLoading].filter(Boolean));
+    savedReaderState=reader?.getState?.()||savedReaderState;
+    savedCitiesState=cities?.getState?.()||savedCitiesState;
+    I.setLanguage(next);I.localizePeople(window.BIBLE_DATA,originalPeople);updateCounts();
+    searchable.clear();people.forEach(p=>searchable.set(p.id,normalize([p.name,...(p.aliases||[]),p.disambiguation||'',p.description,p.era,...p.refs.map(r=>I.reference(r.label))].join(' '))));
+    reader=null;cities=null;readerLoading=null;citiesLoading=null;
+    $('#reader-view').replaceChildren();$('#cities-view').replaceChildren();
+    $('#info-dialog').close();$('#search-dialog').close();
+    if(activePath){const from=personById.get(pathPicks.from),to=personById.get(pathPicks.to);$('#path-status').textContent=activePath.status==='same'?`${from.name} is the same person — no connecting steps are needed.`:`${from.name} → ${to.name} · ${activePath.steps.length} connections · ${activePath.verseCount} Bible-cited${activePath.indexedCount?` · ${activePath.indexedCount} indexed`:''}`;}
+    renderPathPickers();renderGraph({preserveView:true});setView(state.view);
+    if(returnToLibrary)$('#return-to-library').textContent=returnToLibrary==='reader'?'← Back to the Bible reader':'← Back to the city';
+    document.title=I.t('BiblePath — Bible & connections');
+    I.translateDOM();select.disabled=false;
+  }
+  $('#language-select').value=I.language;
+  $('#language-select').addEventListener('change',event=>changeLanguage(event.target.value));
+  setTestamentState('all');syncSidebarAccess();renderPathPickers();renderGraph();setView('reader');
+  I.setLanguage(I.language);I.observe();
+  document.title=I.t('BiblePath — Bible & connections');
 })();

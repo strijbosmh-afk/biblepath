@@ -2,6 +2,10 @@
 
 A dependency-free web app for reading Scripture and exploring its people and cities. Family maps offer three interactive SVG layouts: Constellation, Family tree, and Ancestry rings.
 
+Live app: https://biblepath-people-atlas.glossy-chord-2394.chatgpt.site/ · [Development handover](RESUME_BUILDING.md)
+
+English, Dutch, and French are available throughout the app. The reader uses the World English Bible, Statenvertaling, and Louis Segond 1910 respectively, with localized person/city profiles and source metadata. The language selector preserves reading and explorer state. Navigation starts with the Bible reader, followed by People index, Relationship map, and Cities explorer; the scoped People filter appears only in the two people views.
+
 ## Run locally
 
 From this directory, run `python -m http.server 5173 --directory dist` and open http://localhost:5173.

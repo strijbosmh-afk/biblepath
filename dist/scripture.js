@@ -7,19 +7,29 @@
   // These spellings also occur as ordinary words or descriptive titles. They may
   // link with verse evidence, but never from a capitalized word alone.
   const COMMON = new Set('on so will mark job lot ham ram ben nun judge king queen prince priest servant father mother brother sister son daughter man woman lord god beloved friends lover desolate forsaken married even most high light joy grace word wisdom truth free strong beloved stranger'.split(' '));
-  const COLLECTIVE = new Set(['israel','judah','ephraim','dan','gad','asher','benjamin','naphtali','reuben','simeon','zebulun','manasseh','levi','edom','moab','ammon']);
-  const DEMONYMS = new Set(['jew','jews','jewess','hebrew','hebrews','roman','romans','greek','greeks','christian','christians']);
+  // Edition-specific homographs stay available when the verse index identifies
+  // the person. Only speculative, spelling-only links are suppressed.
+  const LOCAL_COMMON = {nl:new Set(['dan','naam','men']),fr:new Set(['toi'])};
+  const COLLECTIVE = new Set(['israel','judah','juda','ephraim','efraim','dan','gad','asher','aser','benjamin','naphtali','naftali','reuben','ruben','simeon','zebulun','zebulon','manasseh','manasse','levi','edom','moab','ammon']);
+  const DEMONYMS = new Set(['jew','jews','jewess','hebrew','hebrews','roman','romans','greek','greeks','christian','christians','jood','joden','juif','juifs','juive','juives','hebreux','hebreer','hebreers','hebreen','hebreens','israelite','israelites','israelieten','romeinen','romain','romains','grec','grecs','grieken','chretien','chretiens','christenen']);
   const BOOK_ALIASES = {psalm:'PSA',ps:'PSA',songofsongs:'SNG',canticles:'SNG',song:'SNG',sos:'SNG',eze:'EZK',joel:'JOL',nah:'NAM',mark:'MRK',mar:'MRK',john:'JHN',joh:'JHN',phil:'PHP',phi:'PHP',james:'JAS',jam:'JAS','1jo':'1JN','2jo':'2JN','3jo':'3JN'};
+  const BOOK_IDS = 'GEN EXO LEV NUM DEU JOS JDG RUT 1SA 2SA 1KI 2KI 1CH 2CH EZR NEH EST JOB PSA PRO ECC SNG ISA JER LAM EZK DAN HOS JOL AMO OBA JON MIC NAM HAB ZEP HAG ZEC MAL MAT MRK LUK JHN ACT ROM 1CO 2CO GAL EPH PHP COL 1TH 2TH 1TI 2TI TIT PHM HEB JAS 1PE 2PE 1JN 2JN 3JN JUD REV'.split(' ');
+  const BOOK_NAMES = [
+    'Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|1 Samuel|2 Samuel|1 Kings|2 Kings|1 Chronicles|2 Chronicles|Ezra|Nehemiah|Esther|Job|Psalms|Proverbs|Ecclesiastes|Song of Solomon|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|Romans|1 Corinthians|2 Corinthians|Galatians|Ephesians|Philippians|Colossians|1 Thessalonians|2 Thessalonians|1 Timothy|2 Timothy|Titus|Philemon|Hebrews|James|1 Peter|2 Peter|1 John|2 John|3 John|Jude|Revelation',
+    'Genesis|Exodus|Leviticus|Numeri|Deuteronomium|Jozua|Richteren|Ruth|1 Samuel|2 Samuel|1 Koningen|2 Koningen|1 Kronieken|2 Kronieken|Ezra|Nehemia|Esther|Job|Psalmen|Spreuken|Prediker|Hooglied|Jesaja|Jeremia|Klaagliederen|Ezechiël|Daniël|Hosea|Joël|Amos|Obadja|Jona|Micha|Nahum|Habakuk|Zefanja|Haggaï|Zacharia|Maleachi|Mattheüs|Markus|Lukas|Johannes|Handelingen|Romeinen|1 Korinthe|2 Korinthe|Galaten|Efeze|Filippenzen|Kolossenzen|1 Thessalonicenzen|2 Thessalonicenzen|1 Timotheüs|2 Timotheüs|Titus|Filemon|Hebreeën|Jakobus|1 Petrus|2 Petrus|1 Johannes|2 Johannes|3 Johannes|Judas|Openbaring',
+    'Genèse|Exode|Lévitique|Nombres|Deutéronome|Josué|Juges|Ruth|1 Samuel|2 Samuel|1 Rois|2 Rois|1 Chroniques|2 Chroniques|Esdras|Néhémie|Esther|Job|Psaumes|Proverbes|Ecclésiaste|Cantique des cantiques|Ésaïe|Jérémie|Lamentations|Ézéchiel|Daniel|Osée|Joël|Amos|Abdias|Jonas|Michée|Nahum|Habacuc|Sophonie|Aggée|Zacharie|Malachie|Matthieu|Marc|Luc|Jean|Actes|Romains|1 Corinthiens|2 Corinthiens|Galates|Éphésiens|Philippiens|Colossiens|1 Thessaloniciens|2 Thessaloniciens|1 Timothée|2 Timothée|Tite|Philémon|Hébreux|Jacques|1 Pierre|2 Pierre|1 Jean|2 Jean|3 Jean|Jude|Apocalypse'
+  ];
 
   class BibleScripture {
     constructor(bibleData,peopleData={people:[]},placesData={places:[]}) {
       this.meta = bibleData.meta;
+      this._uncertainVerseBooks = new Set(bibleData.meta?.verseIdentityUncertainBooks || []);
       this._books = bibleData.books;
       this._byBook = new Map();this._bookAliases = new Map();this._verses = new Map();this._searchRows = [];
       this._nameRoot = {children:new Map(),candidates:[]};this._annotationCache = new Map();
       for (const book of this._books) {
         this._byBook.set(book.id,book);
-        for (const alias of [book.id,book.name]) this._bookAliases.set(searchKey(alias).replaceAll(' ',''),book.id);
+        for (const alias of [book.id,book.name,...(book.aliases || [])]) this._bookAliases.set(searchKey(alias).replaceAll(' ',''),book.id);
         for (const chapter of book.chapters) for (const verse of chapter.verses) {
           const key = `${book.id}.${chapter.number}.${verse.number}`;
           this._verses.set(key,verse);
@@ -28,6 +38,7 @@
           this._searchRows.push({bookId:book.id,bookName:book.name,testament:book.testament,chapter:chapter.number,verse:verse.number,text:searchableText,key:searchKey(searchableText)});
         }
       }
+      for (const names of BOOK_NAMES) names.split('|').forEach((name,index) => {if (this._byBook.has(BOOK_IDS[index])) this._bookAliases.set(searchKey(name).replaceAll(' ',''),BOOK_IDS[index]);});
       for (const [alias,id] of Object.entries(BOOK_ALIASES)) if (this._byBook.has(id)) this._bookAliases.set(alias,id);
       for (const person of peopleData?.people || []) this.indexEntity(person,'person');
       for (const place of placesData?.places || []) this.indexEntity(place,'place');
@@ -121,8 +132,8 @@
           node = node.children.get(tokens[j].key);
           if (!node) break;
           if (!node.candidates.length) continue;
-          const exact = node.candidates.filter(candidate => candidate.refs.has(verseKey));
-          const fallbackAllowed = j > i || (!COMMON.has(tokens[i].key) && tokens[i].key.length > 2);
+          const exact = this._uncertainVerseBooks.has(book.id) ? [] : node.candidates.filter(candidate => candidate.refs.has(verseKey));
+          const fallbackAllowed = j > i || (!COMMON.has(tokens[i].key) && !LOCAL_COMMON[this.meta.language]?.has(tokens[i].key) && tokens[i].key.length > 2);
           const candidates = exact.length ? exact : fallbackAllowed ? node.candidates : [];
           if (candidates.length && (exact.length || !best || best.match !== 'verse')) best = {endIndex:j,candidates,match:exact.length ? 'verse' : 'name'};
         }
@@ -133,7 +144,7 @@
         const collective = personIds.length > 0 && COLLECTIVE.has(tokens[i].key);
         annotations.push({start,end,text:text.slice(start,end),kind:personIds.length && placeIds.length ? 'entity' : personIds.length ? 'person' : 'place',personIds,placeIds,match:best.match,
           ambiguous:personIds.length+placeIds.length > 1 || best.match === 'name' || collective,
-          note:collective ? 'This name can also refer to a people or territory; the atlas index does not establish an individual in every occurrence.' : best.match === 'name' ? 'Possible atlas match by spelling; this verse is not listed for the candidate.' : 'Name indexed in this verse; candidate identities follow the atlas source.'});
+          note:collective ? 'This name can also refer to a people or territory; the atlas index does not establish an individual in every occurrence.' : this._uncertainVerseBooks.has(book.id) ? 'Verse numbering in this book differs from the atlas. These are possible matches by spelling.' : best.match === 'name' ? 'Possible atlas match by spelling; this verse is not listed for the candidate.' : 'Name indexed in this verse; candidate identities follow the atlas source.'});
         i = best.endIndex;
       }
       if (!customText) this._annotationCache.set(verseKey,annotations);

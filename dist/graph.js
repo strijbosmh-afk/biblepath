@@ -1,6 +1,7 @@
 /* BiblePath graph — local, dependency-free SVG rendering. */
 (function () {
   'use strict';
+  const t=(source,params)=>window.BibleI18n?.t(source,params)||source;
   const NS = 'http://www.w3.org/2000/svg';
   let nextGraphId = 0;
   const el = (name, attributes = {}) => {
@@ -615,10 +616,10 @@
     }
 
     relationshipLabel(relation) {
-      if(relation.type==='spouse')return'Spouse';
-      if(/legal parent|legal father|adopt/i.test(relation.note||''))return'Legal parent';
+      if(relation.type==='spouse')return t('Spouse');
+      if(/legal parent|legal father|adopt/i.test(relation.note||''))return t('Legal parent');
       const gender=this.peopleById.get(relation.source)?.gender;
-      return gender==='female'?'Mother':gender==='male'?'Father':'Parent';
+      return t(gender==='female'?'Mother':gender==='male'?'Father':'Parent');
     }
 
     draw() {
@@ -653,7 +654,7 @@
       });
       this.people.forEach(person => {
         const point = this.positions.get(person.id);
-        const group = el('g', {transform: `translate(${point.x} ${point.y})`, class: `graph-node ${person.gender || ''} ${person.testament?.toLowerCase() || ''}`, 'data-person-id': person.id, role: 'button', tabindex: '0', 'aria-label': `${person.name}. ${person.description || ''} Select to view family and Bible references.`});
+        const group = el('g', {transform: `translate(${point.x} ${point.y})`, class: `graph-node ${person.gender || ''} ${person.testament?.toLowerCase() || ''}`, 'data-person-id': person.id, role: 'button', tabindex: '0', 'aria-label': `${person.name}. ${person.description || ''} ${t('Select to view family and Bible references.')}`});
         group.style.cursor = 'pointer';
         const outer = el('circle', {class: 'node-halo', r: this.radius + 7, fill: 'none', stroke: '#88987c', 'stroke-width': 1, opacity: 0});
         const circle = el('circle', {class: 'node-circle', r: this.radius, fill: person.gender === 'female' ? '#edd8c8' : '#dce5d0', stroke: person.gender === 'female' ? '#cda88d' : '#b2c39e', 'stroke-width': 1.3});
