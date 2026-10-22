@@ -18,11 +18,13 @@ class Control extends Element {
   close(){this.open=false;}showModal(){this.open=true;}scrollIntoView(){}focus(){}
 }
 const controls=new Map(),control=selector=>{if(!controls.has(selector))controls.set(selector,new Control());return controls.get(selector);};
-const nav=['reader','map','index','compare','cities'].map(view=>new Control({view}));
+const religions=['christianity','judaism','islam'].map(religion=>new Control({religion}));
+const religionMenus=['christianity','judaism','islam'].map(religionMenu=>new Control({religionMenu}));
+const nav=['christianity','judaism','islam'].flatMap(navTradition=>(navTradition==='christianity'?['reader','index','map','cities']:['reader','index']).map(view=>new Control({view,navTradition}))).concat(new Control({view:'compare'}));
 const traditions=['christianity','judaism','islam'].map(tradition=>new Control({tradition}));
 const peopleTraditions=['christianity','judaism','islam'].map(peopleTradition=>new Control({peopleTradition}));
 const groups=new Map([
-  ['.nav-item',nav],['[data-tradition]',traditions],['[data-people-tradition]',peopleTraditions],
+  ['.nav-item',nav],['[data-religion]',religions],['[data-religion-menu]',religionMenus],['[data-tradition]',traditions],['[data-people-tradition]',peopleTraditions],
   ['.layout-option',['constellation','lineage','radial'].map(layout=>new Control({layout}))],
   ['.journey',['abraham','david','jesus'].map(person=>new Control({person}))],
   ['.testament',['all','OT','NT'].map(testament=>new Control({testament}))]
@@ -35,6 +37,7 @@ context.structuredClone=structuredClone;context.URL=URL;
 const storage=new Map();context.localStorage={getItem:key=>storage.get(key),setItem:(key,value)=>storage.set(key,String(value))};
 if(process.argv.includes('--pending-passage-race'))storage.set('biblepath-bible-edition','locale');
 if(process.argv.includes('--saved-catholic'))storage.set('biblepath-bible-edition','catholic');
+if(process.argv.includes('--saved-religion')){storage.set('biblepath-tradition','islam');storage.set('biblepath-people-tradition','judaism');}
 const timers=new Map();let nextTimer=0;
 context.setTimeout=callback=>{timers.set(++nextTimer,callback);return nextTimer;};context.clearTimeout=id=>timers.delete(id);
 const requests=[];
@@ -86,7 +89,66 @@ const abrahamRef=context.window.BIBLE_DATA.people.find(person=>person.id==='abra
 personPassages.references[`${abrahamRef.translation?'atlas-'+abrahamRef.translation:'atlas'}|${abrahamRef.label}`]={status:'mapped',targets:[{book:'GEN',chapter:12,verse:2,endVerse:4,edition:'catholic-nl'}]};
 function initialCatholic(edition='catholic-nl'){respond(edition==='catholic-nl'?'catholic-bible-data-nl.json':'catholic-bible-data.json',{meta:{language:edition==='catholic-nl'?'nl':'en',editionId:edition,canon:'catholic'}});respond('catholic-people.json',catholicPeople);respond('places-data.json',{places:[]});}
 for(const file of ['discovery.js','paths.js','sacred-library.js','catholic-people-ui.js','person-passage-map.js','app.js'])vm.runInContext(fs.readFileSync(path.join(root,'dist',file),'utf8'),context);
-const snapshot=()=>context.window.biblePath.getState(),selectTradition=name=>traditions.find(button=>button.dataset.tradition===name).click(),selectView=name=>nav.find(button=>button.dataset.view===name).click(),selectPeople=name=>peopleTraditions.find(button=>button.dataset.peopleTradition===name).click();
+const snapshot=()=>context.window.biblePath.getState(),selectTradition=name=>traditions.find(button=>button.dataset.tradition===name).click(),selectView=(name,tradition='christianity')=>nav.find(button=>button.dataset.view===name&&(!button.dataset.navTradition||button.dataset.navTradition===tradition)).click(),selectPeople=name=>peopleTraditions.find(button=>button.dataset.peopleTradition===name).click();
+
+const selectReligion=name=>religions.find(button=>button.dataset.religion===name).click();
+const activeNav=()=>nav.filter(button=>button.attrs['aria-current']==='page');
+async function religionNavigationRegression(){
+  initialCatholic();await settle();
+  assert.equal(snapshot().tradition,'christianity');assert.equal(snapshot().peopleTradition,'christianity');
+  assert.equal(control('#religion-crumb').textContent,'Roman Catholic Christianity');
+  assert.equal(control('.breadcrumb strong').textContent,'Holy books');
+  assert.equal(control('#index-count').textContent,(snapshot().peopleCount+1).toLocaleString('nl'),'The Catholic submenu counts people, not traditions');
+  assert.equal(activeNav().length,1);assert.equal(activeNav()[0].dataset.navTradition,'christianity');
+  assert.deepEqual(religionMenus.map(menu=>menu.hidden),[false,true,true]);
+  bibleReaders[0].state.location={bookId:'JHN',chapter:3,verse:16};
+  context.window.matchMedia=()=>({matches:true});
+  control('#sidebar').classList.add('open');control('#sidebar-shade').classList.add('open');
+  selectReligion('judaism');
+  assert.equal(snapshot().view,'reader');assert.equal(snapshot().tradition,'judaism');assert.equal(snapshot().peopleTradition,'judaism');
+  assert(control('#sidebar').classList.contains('open'),'Selecting a religion keeps the mobile submenu open');
+  assert.equal(control('#search-trigger').hidden,true);assert.equal(control('.journeys').hidden,true);assert.equal(control('.journey-label').hidden,true);assert.equal(control('.sidebar-bottom .edition').hidden,true);
+  assert.equal(control('#tradition-controls').hidden,true);assert.equal(control('#people-collection-controls').hidden,true);
+  assert.deepEqual(religionMenus.map(menu=>menu.hidden),[true,false,true]);
+  assert.equal(religions[1].attrs['aria-expanded'],'true');
+  assert.equal(activeNav().length,1);assert.equal(activeNav()[0].dataset.navTradition,'judaism');
+  assert.equal(control('#religion-crumb').textContent,'Judaism');
+  selectView('index','judaism');
+  assert(!control('#sidebar').classList.contains('open'),'Selecting a child destination closes the mobile menu');
+  assert.equal(snapshot().view,'index');assert.equal(control('#people-testament-filters').hidden,true);
+  respond('torah-people.json',torahPeople);respond('tanakh-data.json',tanakh);await settle();
+  assert.equal(peopleIndexes.at(-1).tradition,'judaism');
+  assert.equal(snapshot().view,'index','A late book load cannot move away from the selected people section');
+  selectReligion('islam');assert.equal(snapshot().view,'index','Switching religion keeps a shared subview');
+  respond('quran-people.json',quranPeople);await settle();
+  assert.equal(peopleIndexes.at(-1).tradition,'islam');
+  selectView('reader','islam');respond('quran-data.json',quran);await settle();
+  const quranReader=sacredReaders.at(-1);quranReader.state.location={unit:'1',chapter:1,verse:4};
+  selectView('index','islam');await settle();selectView('reader','islam');await settle();
+  assert.equal(sacredReaders.at(-1),quranReader,'Books and people within a religion retain the current reader');
+  assert.equal(quranReader.state.location.verse,4);
+  assert.equal(storage.get('biblepath-tradition'),'islam');assert.equal(storage.get('biblepath-people-tradition'),'islam');
+  selectView('compare');respond('person-comparisons.json',comparisons);await settle();
+  assert.deepEqual(religionMenus.map(menu=>menu.hidden),[true,true,true],'Comparison is outside the individual religions');
+  assert.equal(activeNav().length,1);assert.equal(activeNav()[0].dataset.view,'compare');
+  assert.equal(control('#search-trigger').hidden,true);
+  comparisonViews[0].callbacks.onPerson('christianity','moses');await settle();
+  assert.equal(snapshot().view,'map');assert.equal(snapshot().tradition,'christianity');assert.equal(snapshot().peopleTradition,'christianity');
+  assert.equal(control('#search-trigger').hidden,false);assert.equal(control('.journeys').hidden,false);assert.equal(control('.sidebar-bottom .edition').hidden,false);
+  assert.equal(control('#religion-crumb').textContent,'Roman Catholic Christianity');
+  assert.equal(activeNav().length,1);assert.equal(activeNav()[0].dataset.view,'map');
+  selectReligion('judaism');assert.equal(snapshot().view,'reader','Bible-only subviews fall back to holy books in another religion');
+  await settle();selectView('reader','christianity');await settle();
+  assert.deepEqual(bibleReaders.at(-1).state.location,{bookId:'JHN',chapter:3,verse:16},'Religion changes retain the Catholic reading position');
+}
+async function savedReligionRegression(){
+  assert.equal(snapshot().tradition,'islam');assert.equal(snapshot().peopleTradition,'islam','The saved religion is authoritative for both sections');
+  assert.equal(storage.get('biblepath-people-tradition'),'islam','The older independent people selection is reconciled');
+  assert(pending('quran-data.json'));assert(!pending('catholic-bible-data-nl.json'));
+  respond('quran-data.json',quran);await settle();
+  assert.equal(control('#religion-crumb').textContent,'Islam');
+  assert.equal(activeNav().length,1);assert.equal(activeNav()[0].dataset.navTradition,'islam');
+}
 
 async function pendingProfileLanguageRegression(){
   // A fresh app is essential: the destination collection must still be loading
@@ -174,11 +236,11 @@ async function main(){
   selectView('index');await settle();
   assert.equal(control('#index-view').hidden,false);assert.equal(control('#tradition-people-view').hidden,true);
   assert.equal(control('#people-testament-filters').hidden,false,'Testament filter belongs to the Bible index');
-  assert.equal(control('#people-collection-controls').hidden,false);assert.equal(control('#tradition-controls').hidden,true);
+  assert.equal(control('#people-collection-controls').hidden,true);assert.equal(control('#tradition-controls').hidden,true,'Religion selection has a single place in the main navigation');
 
   selectPeople('judaism');assert.equal(snapshot().peopleTradition,'judaism');assert(pending('torah-people.json'));
   assert.equal(control('#people-testament-filters').hidden,true,'Torah collection must not inherit Old/New Testament filters');
-  assert.equal(snapshot().tradition,'islam','Selecting Torah people must not change the independent scripture tradition');
+  assert.equal(snapshot().tradition,'judaism','Selecting Torah people also selects the Jewish context for books');
   selectPeople('islam');assert(pending('quran-people.json'));
   respond('quran-people.json',null,{ok:false});await settle();
   assert.match(control('#tradition-people-view').innerHTML,/library-retry/,'Failed people data offers a retry');
@@ -200,7 +262,7 @@ async function main(){
   assert.equal(requests.filter(request=>request.file==='torah-people.json').length,1,'A safely ignored late response remains reusable in its own cache');
   assert.equal(requests.filter(request=>request.file==='quran-people.json').length,2,'Only the failed Quran people request is retried');
   assert.equal(requests.filter(request=>request.file==='quran-data.json').length,1,'People data does not reload or replace scripture data');
-  assert.equal(storage.get('biblepath-people-tradition'),'judaism');assert.equal(storage.get('biblepath-tradition'),'islam','Separate selections have separate persisted keys');
+  assert.equal(storage.get('biblepath-people-tradition'),'judaism');assert.equal(storage.get('biblepath-tradition'),'judaism','Books and people persist the same selected religion');
 
   selectView('compare');assert.equal(control('#comparison-view').hidden,false);assert.equal(control('#people-testament-filters').hidden,true);
   assert.equal(control('#people-collection-controls').hidden,true);assert.equal(control('#tradition-people-view').hidden,true);
@@ -225,7 +287,7 @@ async function main(){
   comparisonViews[0].callbacks.onPerson('judaism','torah:moses');await settle();
   assert.equal(snapshot().view,'index');assert.equal(snapshot().peopleTradition,'judaism');
   assert.equal(peopleIndexes[0].selected,'torah:moses','Jewish comparison opens the independent Torah identity');
-  assert.equal(snapshot().tradition,'islam');
+  assert.equal(snapshot().tradition,'judaism','A linked Torah identity selects the Jewish context');
   assert.deepEqual(peopleIndexes[0].comparisonKeys,['moses','abraham']);
   await control('#language-select').change('nl');await settle();
   assert.equal(peopleIndexes[0].selected,'torah:moses','Language changes retain selected people profiles');
@@ -235,12 +297,12 @@ async function main(){
   comparisonViews[0].callbacks.onPerson('christianity','moses');await settle();
   assert.equal(snapshot().view,'map');assert.equal(snapshot().focus,'moses','Christianity comparison routes to the existing Bible person');
   assert.equal(control('#people-testament-filters').hidden,false,'Bible relationship map keeps its own testament filters');
-  assert.equal(snapshot().tradition,'islam','Exploring a Bible comparison does not change the reader choice');
+  assert.equal(snapshot().tradition,'christianity','Exploring a Bible comparison selects the Catholic context');
   selectPeople('christianity');await settle();
   assert.equal(control('#index-view').hidden,false);assert.equal(control('#tradition-people-view').hidden,true);
   assert.equal(control('#people-testament-filters').hidden,false);
   selectView('reader');await settle();
-  assert.equal(control('#sacred-reader-view').rendered,'islam:nl');assert.equal(control('#people-testament-filters').hidden,true);
+  assert.equal(control('#reader-view').hidden,false);assert.equal(control('#sacred-reader-view').hidden,true);assert.equal(control('#people-testament-filters').hidden,true);
   assert.equal(snapshot().peopleCount,originalPeopleCount);assert.equal(snapshot().relationshipCount,originalRelationships,'Separate index data never mutates Bible graph identities or edges');
   selectTradition('christianity');await settle();
   if(pending('bible-data.json')){respond('bible-data.json',{meta:{language:'en'}});await settle();}
@@ -290,6 +352,7 @@ async function main(){
   assert.equal(bibleReaders.at(-1).state.location.bookId,'GEN');assert.equal(bibleReaders.at(-1).state.location.verse,2);
   assert.equal(bibleReaders.at(-1).state.personPassage.originalReference.translation,abrahamRef.translation,'Source translation metadata reaches the resolver');
   assert.equal(requests.filter(request=>request.file==='person-passage-map.json').length,1,'Both person collections share a successful map download');
+  for(const scenario of ['--religion-navigation','--saved-religion']){const check=spawnSync(process.execPath,[__filename,scenario],{encoding:'utf8'});assert.equal(check.status,0,check.stderr||check.stdout);}
   const pendingProfileCheck=spawnSync(process.execPath,[__filename,'--pending-profile-language'],{encoding:'utf8'});
   assert.equal(pendingProfileCheck.status,0,pendingProfileCheck.stderr||pendingProfileCheck.stdout);
   const dutchRetryCheck=spawnSync(process.execPath,[__filename,'--dutch-edition-retry'],{encoding:'utf8'});
@@ -304,7 +367,7 @@ async function main(){
     const pendingPassageCheck=spawnSync(process.execPath,[__filename,'--pending-passage-race',order],{encoding:'utf8'});
     assert.equal(pendingPassageCheck.status,0,`${order}: ${pendingPassageCheck.stderr||pendingPassageCheck.stdout}`);
   }
-  console.log('Interfaith app passed: Dutch startup, reader and person collection isolation, lazy caches, failed-load retries, late-response guards, independent filters, comparison callbacks, Bible graph routing and language changes.');
+  console.log('Interfaith app passed: religion-first navigation, mobile submenu behavior, shared religion persistence, independent readers and people collections, lazy caches, retries, late-response guards, filters, comparison routing and language changes.');
 }
 async function dutchEditionRetryRegression(){
   respond('catholic-bible-data-nl.json',null,{ok:false});respond('catholic-people.json',catholicPeople);respond('places-data.json',{places:[]});await settle();
@@ -347,4 +410,4 @@ async function personPassageCancelRegression(){
   assert.equal(bibleReaders.at(-1).state.personPassage,undefined,'Cancellation removes the stale loading state');
 }
 async function savedCatholicRegression(){assert.equal(snapshot().bibleEdition,'catholic');assert(!pending('catholic-bible-data-nl.json'));initialCatholic('catholic');await settle();assert.equal(bibleReaders.at(-1).model.meta.language,'en','An explicitly saved English edition remains selected');}
-(process.argv.includes('--pending-profile-language')?pendingProfileLanguageRegression():process.argv.includes('--pending-passage-race')?pendingPassageEditionRegression():process.argv.includes('--saved-catholic')?savedCatholicRegression():process.argv.includes('--dutch-edition-retry')?dutchEditionRetryRegression():process.argv.includes('--person-passage-retry')?personPassageRetryRegression():process.argv.includes('--person-passage-cancel')?personPassageCancelRegression():main()).catch(error=>{console.error(error);process.exitCode=1;});
+(process.argv.includes('--religion-navigation')?religionNavigationRegression():process.argv.includes('--saved-religion')?savedReligionRegression():process.argv.includes('--pending-profile-language')?pendingProfileLanguageRegression():process.argv.includes('--pending-passage-race')?pendingPassageEditionRegression():process.argv.includes('--saved-catholic')?savedCatholicRegression():process.argv.includes('--dutch-edition-retry')?dutchEditionRetryRegression():process.argv.includes('--person-passage-retry')?personPassageRetryRegression():process.argv.includes('--person-passage-cancel')?personPassageCancelRegression():main()).catch(error=>{console.error(error);process.exitCode=1;});

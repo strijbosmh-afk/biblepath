@@ -1,7 +1,21 @@
 (() => {
   'use strict';
   window.BibleI18n.registerRows([
-    ['Scripture readers','Schriftlezers','Lecteurs des Écritures'],
+    ['Sources and context','Bronnen en context','Sources et contexte'],
+    ['Holy books','Heilige boeken','Livres sacrés'],
+    ['RELIGIONS','RELIGIES','RELIGIONS'],
+    ['Religions and topics','Religies en onderdelen','Religions et rubriques'],
+    ['Christianity','Christendom','Christianisme'],
+    ['Roman Catholic Christianity','Christendom · rooms-katholiek','Christianisme catholique romain'],
+    ['COMPARE','VERGELIJKEN','COMPARER'],
+    ['Compare religions','Religies vergelijken','Comparer les religions'],
+    ['Read the Catholic Bible and explore its texts, people and context.','Lees de katholieke Bijbel en ontdek de teksten, personen en hun context.','Lisez la Bible catholique et découvrez ses textes, ses personnages et leur contexte.'],
+    ['Read the Tanakh and explore its Jewish context.','Lees de Tenach en ontdek de Joodse context.','Lisez le Tanakh et découvrez son contexte juif.'],
+    ['Read the Qur’an and explore its Islamic context.','Lees de Koran en ontdek de islamitische context.','Lisez le Coran et découvrez son contexte islamique.'],
+    ['People in the Catholic Bible','Personen in de katholieke Bijbel','Personnages de la Bible catholique'],
+    ['People in the Torah','Personen in de Tora','Personnages de la Torah'],
+    ['People in the Qur’an','Personen in de Koran','Personnages du Coran'],
+    ['Explore people and follow their passages within this religion.','Ontdek personen en lees de passages over hen binnen deze religie.','Découvrez les personnages et lisez les passages qui les concernent dans cette religion.'],
     ['Choose a tradition','Kies een traditie','Choisir une tradition'],
     ['Roman Catholic','Rooms-katholiek','Catholique romain'],['Judaism','Jodendom','Judaïsme'],['Islam','Islam','Islam'],
     ['Roman Catholic perspective','Rooms-katholiek perspectief','Perspective catholique romaine'],

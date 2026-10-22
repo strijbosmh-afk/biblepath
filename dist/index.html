@@ -7,7 +7,7 @@
   <meta name="description" content="Lees de Bijbel, Tenach en Koran. Verken aparte personenindexen en vergelijk rooms-katholieke, Joodse en islamitische perspectieven met bronverwijzingen.">
   <title>BiblePath — Bible & connections</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=a61943068172">
   <link rel="stylesheet" href="reader.css">
   <link rel="stylesheet" href="sacred-reader.css">
   <link rel="stylesheet" href="people-traditions.css">
@@ -16,7 +16,7 @@
   <script src="app-locales.js" defer></script>
   <script src="info-locales.js" defer></script>
   <script src="library-locales.js" defer></script>
-  <script src="interfaith-locales.js" defer></script>
+  <script src="interfaith-locales.js?v=e5077495c4ef" defer></script>
   <script src="catholic-locales.js" defer></script>
   <script src="entity-locales.js" defer></script>
   <script src="data.js" defer></script>
@@ -27,11 +27,11 @@
   <script src="reader-ui.js" defer></script>
   <script src="sacred-library.js" defer></script>
   <script src="sacred-reader.js" defer></script>
-  <script src="people-traditions.js" defer></script>
+  <script src="people-traditions.js?v=8b150cf2fa91" defer></script>
   <script src="catholic-people-ui.js" defer></script>
   <script src="person-passage-map.js" defer></script>
   <script src="cities-ui.js" defer></script>
-  <script src="app.js" defer></script>
+  <script src="app.js?v=24ca2b0533bc" defer></script>
 </head>
 <body>
   <svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
@@ -52,13 +52,33 @@
   <aside class="sidebar" id="sidebar">
     <a href="./" class="brand" aria-label="BiblePath home"><span class="brand-mark"><svg><use href="#i-map"/></svg></span><span>Bible<span class="brand-light">Path</span><small>EVERY LIFE, CONNECTED.</small></span></a>
     <button class="search-trigger" id="search-trigger"><svg><use href="#i-search"/></svg><span>Find a Bible person</span><kbd>/</kbd></button>
-    <div class="nav-label">YOUR EXPLORER</div>
-    <nav class="main-nav" aria-label="Explorer views">
-      <button class="nav-item active" data-view="reader"><svg><use href="#i-book"/></svg>Scripture readers<span class="nav-count">3</span></button>
-      <button class="nav-item" data-view="index"><svg><use href="#i-people"/></svg>People index<span id="index-count" class="nav-count"></span></button>
-      <button class="nav-item" data-view="compare"><svg><use href="#i-people"/></svg>Across traditions</button>
-      <button class="nav-item" data-view="map"><svg><use href="#i-map"/></svg>Relationship map</button>
-      <button class="nav-item" data-view="cities"><svg><use href="#i-city"/></svg>Cities explorer</button>
+    <div class="nav-label">RELIGIONS</div>
+    <nav class="main-nav religion-nav" aria-label="Religions and topics">
+      <div class="religion-group">
+        <button type="button" class="religion-button" id="religion-christianity" data-religion="christianity" aria-expanded="true" aria-controls="religion-menu-christianity"><span><strong>Christianity</strong><small>Roman Catholic</small></span><span class="religion-chevron" aria-hidden="true">›</span></button>
+        <div class="religion-submenu" id="religion-menu-christianity" data-religion-menu="christianity" role="group" aria-labelledby="religion-christianity">
+          <button class="nav-item active" data-view="reader" data-nav-tradition="christianity"><svg><use href="#i-book"/></svg>Holy books</button>
+          <button class="nav-item" data-view="index" data-nav-tradition="christianity"><svg><use href="#i-people"/></svg>People index<span id="index-count" class="nav-count"></span></button>
+          <button class="nav-item" data-view="map" data-nav-tradition="christianity"><svg><use href="#i-map"/></svg>Relationship map</button>
+          <button class="nav-item" data-view="cities" data-nav-tradition="christianity"><svg><use href="#i-city"/></svg>Cities explorer</button>
+        </div>
+      </div>
+      <div class="religion-group">
+        <button type="button" class="religion-button" id="religion-judaism" data-religion="judaism" aria-expanded="false" aria-controls="religion-menu-judaism"><span><strong>Judaism</strong></span><span class="religion-chevron" aria-hidden="true">›</span></button>
+        <div class="religion-submenu" id="religion-menu-judaism" data-religion-menu="judaism" role="group" aria-labelledby="religion-judaism" hidden>
+          <button class="nav-item" data-view="reader" data-nav-tradition="judaism"><svg><use href="#i-book"/></svg>Holy books</button>
+          <button class="nav-item" data-view="index" data-nav-tradition="judaism"><svg><use href="#i-people"/></svg>People index</button>
+        </div>
+      </div>
+      <div class="religion-group">
+        <button type="button" class="religion-button" id="religion-islam" data-religion="islam" aria-expanded="false" aria-controls="religion-menu-islam"><span><strong>Islam</strong></span><span class="religion-chevron" aria-hidden="true">›</span></button>
+        <div class="religion-submenu" id="religion-menu-islam" data-religion-menu="islam" role="group" aria-labelledby="religion-islam" hidden>
+          <button class="nav-item" data-view="reader" data-nav-tradition="islam"><svg><use href="#i-book"/></svg>Holy books</button>
+          <button class="nav-item" data-view="index" data-nav-tradition="islam"><svg><use href="#i-people"/></svg>People index</button>
+        </div>
+      </div>
+      <div class="nav-label comparison-label">COMPARE</div>
+      <button class="nav-item comparison-nav" data-view="compare"><svg><use href="#i-people"/></svg>Across traditions</button>
     </nav>
     <div class="sidebar-divider"></div>
     <div id="people-testament-filters"><div class="nav-label">PEOPLE FILTER</div><p class="filter-scope">Bible people and family map only.</p>
@@ -77,7 +97,7 @@
   </aside>
   <div class="sidebar-shade" id="sidebar-shade"></div>
   <main>
-    <header class="topbar"><div class="breadcrumb"><button class="icon-button mobile-menu" id="mobile-menu" aria-label="Open navigation"><svg><use href="#i-menu"/></svg></button><svg><use href="#i-book"/></svg><span>The Scripture atlas</span><span class="crumb-slash">/</span><strong>People & connections</strong></div><div class="topbar-tools"><label class="language-picker"><span>Language</span><select id="language-select" aria-label="Choose language"><option value="en" lang="en">English</option><option value="nl" lang="nl" selected>Nederlands</option><option value="fr" lang="fr">Français</option></select></label><button class="help-button" id="help-button"><svg><use href="#i-info"/></svg><span>How to explore</span></button></div></header>
+    <header class="topbar"><div class="breadcrumb"><button class="icon-button mobile-menu" id="mobile-menu" aria-label="Open navigation"><svg><use href="#i-menu"/></svg></button><svg><use href="#i-book"/></svg><span id="religion-crumb">Roman Catholic Christianity</span><span class="crumb-slash">/</span><strong>Holy books</strong></div><div class="topbar-tools"><label class="language-picker"><span>Language</span><select id="language-select" aria-label="Choose language"><option value="en" lang="en">English</option><option value="nl" lang="nl" selected>Nederlands</option><option value="fr" lang="fr">Français</option></select></label><button class="help-button" id="help-button"><svg><use href="#i-info"/></svg><span>How to explore</span></button></div></header>
     <section class="page-content">
       <div class="intro"><div><div class="eyebrow">DISCOVER THE LIVES BEHIND THE VERSES</div><h1>One story. Many connections.</h1><p>Explore the people of the Bible, one relationship at a time.</p></div><div class="intro-note"><span class="live-dot"></span>Old & New Testament<br><small>A living collection of biblical lives</small></div></div>
       <button class="reader-return-shortcut" id="return-to-library" hidden>← Back to reading</button>
@@ -106,7 +126,7 @@
         </div>
         <aside class="inspector" id="inspector" aria-label="Selected person"></aside>
       </section>
-      <section id="people-collection-controls" class="people-collection-tabs" role="group" aria-label="Choose a people collection" hidden>
+      <section id="people-collection-controls" class="people-collection-tabs legacy-tradition-controls" role="group" aria-label="Choose a people collection" hidden>
         <button data-people-tradition="christianity" aria-pressed="true">Bible · Roman Catholic<small>Indexed Bible collection</small></button>
         <button data-people-tradition="judaism" aria-pressed="false">Torah · Judaism<small>Genesis – Deuteronomy</small></button>
         <button data-people-tradition="islam" aria-pressed="false">Qur’an · Islam<small>114 surahs</small></button>
@@ -114,7 +134,7 @@
       <section class="index-view" id="index-view" hidden><div class="index-heading"><div><div class="eyebrow">THE PEOPLE BEHIND THE STORY</div><h2>People index</h2></div><label class="index-search"><svg><use href="#i-search"/></svg><input id="index-search" type="search" placeholder="Search names, stories, or references…" aria-label="Search people index"></label></div><p class="index-intro">Search distinct people, including namesakes, then open a life to explore their family.</p><aside class="catholic-context"><strong>People of the Catholic Bible</strong><p>The index includes the deuterocanonical books and additions to Esther and Daniel. Reading links open reviewed passages in the Dutch Catholic Bible; original sources remain available separately.</p><p id="catholic-index-status" aria-live="polite"></p></aside><div class="index-result-count" id="index-result-count" aria-live="polite"></div><div id="index-grid" class="index-grid"></div><div class="index-pagination" id="index-pagination"><button id="index-previous">← Previous</button><span id="index-page"></span><button id="index-next">Next →</button></div><div id="index-empty" class="index-empty" hidden>No matching people. Try a name such as Mary or Moses.</div></section>
       <section id="tradition-people-view" translate="no" hidden></section>
       <section id="comparison-view" translate="no" hidden></section>
-      <section class="tradition-controls" id="tradition-controls" aria-label="Choose a tradition" hidden>
+      <section class="tradition-controls legacy-tradition-controls" id="tradition-controls" aria-label="Choose a tradition" hidden>
         <div><span class="library-kicker">A reading path for each tradition</span><h2>Choose a tradition</h2></div>
         <div class="tradition-options" role="group" aria-label="Choose a tradition">
           <button type="button" data-tradition="christianity" aria-pressed="true"><strong>Roman Catholic</strong><span>Bible</span></button>
@@ -123,9 +143,9 @@
         </div>
       </section>
       <section class="reader-view" id="reader-view" aria-label="Bible reader" hidden></section>
-      <section class="reader-view sacred-reader-view" id="sacred-reader-view" translate="no" aria-label="Scripture readers" hidden></section>
+      <section class="reader-view sacred-reader-view" id="sacred-reader-view" translate="no" aria-label="Holy books" hidden></section>
       <section class="cities-view" id="cities-view" aria-label="Biblical cities explorer" hidden></section>
-      <footer class="page-footer"><span>Many lives. One unfolding story.</span><button id="sources-button"><svg><use href="#i-book"/></svg>Grounded in Scripture</button></footer>
+      <footer class="page-footer"><span>Many lives. One unfolding story.</span><button id="sources-button"><svg><use href="#i-book"/></svg>Sources and context</button></footer>
     </section>
   </main>
   <div class="person-tooltip" id="person-tooltip" role="tooltip" hidden></div>
