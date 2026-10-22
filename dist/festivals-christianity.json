@@ -1,0 +1,1259 @@
+{
+  "meta": {
+    "tradition": "christianity",
+    "reviewedAt": "2026-10-22",
+    "scope": {
+      "nl": "Rooms-katholiek christendom, met de Romeinse ritus als uitgangspunt. Bestudeer teksten, kerkelijke interpretatie en geleefde praktijk als onderscheiden bronnen; gebruiken kunnen lokaal verschillen.",
+      "en": "Roman Catholic Christianity, taking the Roman Rite as the starting point. Study texts, Church interpretation and lived practice as distinct sources; customs can differ locally.",
+      "fr": "Christianisme catholique romain, avec le rite romain comme point de départ. Étudier les textes, l’interprétation ecclésiale et les pratiques vécues comme des sources distinctes ; les coutumes peuvent varier localement."
+    }
+  },
+  "entries": [
+    {
+      "id": "christianity:christmas",
+      "tradition": "christianity",
+      "kind": "feast",
+      "order": 1,
+      "title": {
+        "nl": "Kerstmis",
+        "en": "Christmas",
+        "fr": "Noël"
+      },
+      "summary": {
+        "nl": "Geboorte van Jezus, menswording en de verhouding tussen evangelieverhaal en latere verbeelding.",
+        "en": "Jesus’ birth, the Incarnation and the relationship between Gospel narrative and later representation.",
+        "fr": "Naissance de Jésus, Incarnation et rapport entre récit évangélique et représentations ultérieures."
+      },
+      "calendar": {
+        "text": {
+          "nl": "25 december; de liturgische viering begint op kerstavond. De kersttijd loopt door tot het feest van de Doop van de Heer.",
+          "en": "25 December; liturgical celebration begins on Christmas Eve. Christmas Time continues until the feast of the Baptism of the Lord.",
+          "fr": "Le 25 décembre ; la célébration liturgique commence la veille. Le temps de Noël se poursuit jusqu’à la fête du Baptême du Seigneur."
+        },
+        "sourceIds": [
+          "christmas-calendar"
+        ]
+      },
+      "sections": [
+        {
+          "id": "meaning",
+          "text": {
+            "nl": "Katholieken vieren Jezus’ geboorte als de menswording van Gods Zoon. Lucas 2 vertelt over Maria, Jozef en herders; het verhaal geeft zelf geen geboortedatum.",
+            "en": "Catholics celebrate Jesus’ birth as the Incarnation of the Son of God. Luke 2 describes Mary, Joseph and shepherds; the narrative itself supplies no date of birth.",
+            "fr": "Les catholiques célèbrent la naissance de Jésus comme l’Incarnation du Fils de Dieu. Luc 2 présente Marie, Joseph et les bergers ; le récit ne donne pas de date de naissance."
+          },
+          "sourceIds": [
+            "christmas-luke",
+            "christmas-teaching"
+          ]
+        },
+        {
+          "id": "history",
+          "text": {
+            "nl": "Paus Franciscus verbond de kerststal in 2019 met Greccio in 1223, verwijzend naar Thomas van Celano. Dat documenteert geloofsverbeelding, niet onafhankelijk Jezus’ geboorte.",
+            "en": "In 2019 Pope Francis linked the nativity scene to Greccio in 1223, citing Thomas of Celano. This documents religious representation, not independent evidence of Jesus’ birth.",
+            "fr": "En 2019, le pape François relie la crèche à Greccio en 1223, citant Thomas de Celano. Cela documente une représentation religieuse, non une preuve indépendante de la naissance de Jésus."
+          },
+          "sourceIds": [
+            "christmas-creche"
+          ]
+        },
+        {
+          "id": "practice",
+          "text": {
+            "nl": "De kerstliturgie begint met vieringen op kerstavond. Kerstbomen, kerststallen en geschenken verbinden het kerkelijke feest daarnaast met de huiselijke omgeving.",
+            "en": "The Christmas liturgy begins with celebrations on Christmas Eve. Christmas trees, nativity scenes and gifts also connect the Church feast with the domestic setting.",
+            "fr": "La liturgie de Noël commence par les célébrations de la veille. Sapins, crèches et cadeaux relient aussi la fête ecclésiale au cadre domestique."
+          },
+          "sourceIds": [
+            "christmas-calendar"
+          ]
+        },
+        {
+          "id": "diversity",
+          "text": {
+            "nl": "Kerststallen kennen diverse materialen en figuren. Vergelijk deze volksdevotie met Lucas zonder elke toevoeging aan diens tekst toe te schrijven.",
+            "en": "Nativity scenes use diverse materials and figures. Compare this popular devotion with Luke without attributing every addition to his text.",
+            "fr": "Les crèches utilisent divers matériaux et personnages. Comparer cette piété populaire avec Luc sans attribuer chaque ajout à son texte."
+          },
+          "sourceIds": [
+            "christmas-creche",
+            "christmas-luke"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": {
+            "nl": "Welke uitspraken in Lucas 2 zijn verhalend, welke theologisch, en welke aanvullende bronnen zou een historicus nodig hebben?",
+            "en": "Which claims in Luke 2 are narrative, which are theological, and what additional sources would a historian need?",
+            "fr": "Quelles affirmations de Luc 2 sont narratives ou théologiques, et de quelles sources supplémentaires un historien aurait-il besoin ?"
+          },
+          "sourceIds": [
+            "christmas-luke"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Hoe verandert de betekenis wanneer een evangelieverhaal een tastbare kerststal wordt? Analyseer ook wat wordt toegevoegd of weggelaten.",
+            "en": "How does meaning change when a Gospel narrative becomes a material nativity scene? Analyse what is added or omitted.",
+            "fr": "Comment le sens change-t-il lorsqu’un récit évangélique devient une crèche matérielle ? Analyser aussi les ajouts et les omissions."
+          },
+          "sourceIds": [
+            "christmas-luke",
+            "christmas-creche"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Hoe zou je in veldonderzoek onderscheid maken tussen kerkelijke liturgie, familiegebruiken en commerciële kerstcultuur?",
+            "en": "How would fieldwork distinguish Church liturgy, family customs and commercial Christmas culture?",
+            "fr": "Comment une enquête de terrain distinguerait-elle liturgie ecclésiale, coutumes familiales et culture commerciale de Noël ?"
+          },
+          "sourceIds": [
+            "christmas-calendar",
+            "christmas-creche"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "id": "christmas-luke",
+          "kind": "scripture",
+          "label": {
+            "nl": "Lucas 2:1–20",
+            "en": "Luke 2:1–20",
+            "fr": "Luc 2,1–20"
+          },
+          "url": "https://bible.usccb.org/bible/luke/2",
+          "context": {
+            "nl": "Geboorteverhaal en bezoek van de herders.",
+            "en": "Birth narrative and the shepherds’ visit.",
+            "fr": "Récit de la naissance et visite des bergers."
+          },
+          "passage": {
+            "tradition": "christianity",
+            "book": "LUK",
+            "chapter": 2,
+            "verse": 1,
+            "endVerse": 20,
+            "edition": "catholic-nl"
+          }
+        },
+        {
+          "id": "christmas-calendar",
+          "kind": "tradition",
+          "label": {
+            "nl": "USCCB — Christmas, inleiding en normen 32–34",
+            "en": "USCCB — Christmas, introduction and norms 32–34",
+            "fr": "USCCB — Christmas, introduction et normes 32–34"
+          },
+          "url": "https://www.usccb.org/prayer-worship/liturgical-year/christmas",
+          "context": {
+            "nl": "Romeinse kalender en huiselijke kerstgebruiken.",
+            "en": "Roman calendar and domestic Christmas customs.",
+            "fr": "Calendrier romain et coutumes domestiques de Noël."
+          }
+        },
+        {
+          "id": "christmas-creche",
+          "kind": "historical",
+          "label": {
+            "nl": "Admirabile signum (2019), §§1–3",
+            "en": "Admirabile signum (2019), §§1–3",
+            "fr": "Admirabile signum (2019), §§1–3"
+          },
+          "url": "https://www.vatican.va/content/francesco/en/apost_letters/documents/papa-francesco-lettera-ap_20191201_admirabile-signum.html",
+          "context": {
+            "nl": "Pauselijke duiding met verwijzingen naar Franciscaanse getuigenissen.",
+            "en": "Papal interpretation citing Franciscan witnesses.",
+            "fr": "Interprétation pontificale renvoyant aux témoignages franciscains."
+          }
+        },
+        {
+          "id": "christmas-teaching",
+          "kind": "tradition",
+          "label": {
+            "nl": "Compendium Catechismus, §§85–86 en 103",
+            "en": "Compendium of the Catechism, §§85–86 and 103",
+            "fr": "Compendium du Catéchisme, §§85–86 et 103"
+          },
+          "url": "https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_en.html",
+          "context": {
+            "nl": "Katholieke leer over menswording en geboorte.",
+            "en": "Catholic teaching on the Incarnation and Nativity.",
+            "fr": "Doctrine catholique sur l’Incarnation et la Nativité."
+          }
+        }
+      ]
+    },
+    {
+      "id": "christianity:lent",
+      "tradition": "christianity",
+      "kind": "season",
+      "order": 2,
+      "title": {
+        "nl": "Veertigdagentijd",
+        "en": "Lent",
+        "fr": "Carême"
+      },
+      "summary": {
+        "nl": "Voorbereiding op Pasen: bekering, doop en de sociale betekenis van vasten.",
+        "en": "Preparation for Easter: conversion, baptism and the social meaning of fasting.",
+        "fr": "Préparation à Pâques : conversion, baptême et dimension sociale du jeûne."
+      },
+      "calendar": {
+        "text": {
+          "nl": "Van Aswoensdag tot vóór de avondmis van Witte Donderdag in de Romeinse ritus. De benaming verwijst naar het bijbelse getal veertig; de kalenderperiode en vastentelling vallen niet eenvoudig samen.",
+          "en": "From Ash Wednesday until before the evening Mass of Holy Thursday in the Roman Rite. The name recalls the biblical number forty; the liturgical period and the count of fasting days do not simply coincide.",
+          "fr": "Du mercredi des Cendres jusqu’avant la messe du soir du Jeudi saint dans le rite romain. Le nom renvoie au nombre biblique quarante ; la période liturgique et le décompte des jours de jeûne ne coïncident pas simplement."
+        },
+        "sourceIds": [
+          "lent-calendar",
+          "lent-practice"
+        ]
+      },
+      "sections": [
+        {
+          "id": "meaning",
+          "text": {
+            "nl": "Matteüs 4 verbindt Jezus’ voorbereiding met beproeving en veertig dagen vasten. Het verhaal vormt een interpretatiekader voor de vastentijd, maar schrijft geen jaarlijkse kerkelijke kalender voor.",
+            "en": "Matthew 4 connects Jesus’ preparation with temptation and forty days of fasting. The narrative provides an interpretive framework for Lent but does not prescribe an annual Church calendar.",
+            "fr": "Matthieu 4 relie la préparation de Jésus à la tentation et à quarante jours de jeûne. Le récit fournit un cadre d’interprétation du Carême sans prescrire un calendrier ecclésial annuel."
+          },
+          "sourceIds": [
+            "lent-matthew"
+          ]
+        },
+        {
+          "id": "history",
+          "text": {
+            "nl": "Vaticanum II vroeg in 1963 om de doop en boetvaardigheid opnieuw duidelijker in de vastenliturgie te verbinden. Dit document getuigt van bewuste hervorming binnen een oudere traditie.",
+            "en": "In 1963 Vatican II requested a clearer connection between baptism and penitence in Lenten worship. The document records deliberate reform within an older tradition.",
+            "fr": "En 1963, Vatican II a demandé de mieux articuler baptême et pénitence dans la liturgie du Carême. Ce document témoigne d’une réforme délibérée au sein d’une tradition plus ancienne."
+          },
+          "sourceIds": [
+            "lent-council"
+          ]
+        },
+        {
+          "id": "practice",
+          "text": {
+            "nl": "Gebed, vasten en materiële steun aan anderen vormen samen het katholieke ideaal. Bestudeer daarom ook de maatschappelijke betekenis van plaatselijke vastenacties.",
+            "en": "Prayer, fasting and material support for others together form the Catholic ideal. Local Lenten initiatives can therefore also be studied for their social meaning.",
+            "fr": "Prière, jeûne et soutien matériel à autrui composent ensemble l’idéal catholique. Les initiatives locales de Carême peuvent donc aussi être étudiées dans leur dimension sociale."
+          },
+          "sourceIds": [
+            "lent-practice"
+          ]
+        },
+        {
+          "id": "diversity",
+          "text": {
+            "nl": "De gekoppelde USCCB-richtlijnen zijn Amerikaans. Vergelijk ze met lokale regels en individuele omstandigheden voordat je praktijken generaliseert.",
+            "en": "The linked USCCB guidelines are American. Compare them with local rules and individual circumstances before generalising about practice.",
+            "fr": "Les directives liées de l’USCCB sont américaines. Les comparer aux règles locales et aux situations individuelles avant de généraliser les pratiques."
+          },
+          "sourceIds": [
+            "lent-practice"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": {
+            "nl": "Welke functie heeft het getal veertig in Matteüs 4, en wat verlies je wanneer je het alleen als kalenderberekening leest?",
+            "en": "What function does forty serve in Matthew 4, and what is lost when it is read only as a calendar calculation?",
+            "fr": "Quelle fonction le nombre quarante remplit-il en Matthieu 4, et que perd-on en le lisant seulement comme un calcul calendaire ?"
+          },
+          "sourceIds": [
+            "lent-matthew",
+            "lent-calendar"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Wat zegt de hervorming van 1963 over de verhouding tussen continuïteit, kerkelijk gezag en verandering van rituelen?",
+            "en": "What does the 1963 reform reveal about continuity, Church authority and ritual change?",
+            "fr": "Que révèle la réforme de 1963 sur la continuité, l’autorité ecclésiale et la transformation des rites ?"
+          },
+          "sourceIds": [
+            "lent-council"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Ontwerp een vergelijking van vastenpraktijken die zowel solidariteit als verschillen in gezondheid, middelen en sociale positie onderzoekt.",
+            "en": "Design a comparison of fasting practices that examines solidarity alongside differences in health, resources and social position.",
+            "fr": "Concevoir une comparaison des pratiques de jeûne examinant la solidarité ainsi que les différences de santé, de ressources et de position sociale."
+          },
+          "sourceIds": [
+            "lent-practice"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "id": "lent-matthew",
+          "kind": "scripture",
+          "label": {
+            "nl": "Matteüs 4:1–11",
+            "en": "Matthew 4:1–11",
+            "fr": "Matthieu 4,1–11"
+          },
+          "url": "https://bible.usccb.org/bible/matthew/4",
+          "context": {
+            "nl": "Jezus’ beproeving en verwijzingen naar de Tora.",
+            "en": "Jesus’ temptation and references to the Torah.",
+            "fr": "Tentation de Jésus et références à la Torah."
+          },
+          "passage": {
+            "tradition": "christianity",
+            "book": "MAT",
+            "chapter": 4,
+            "verse": 1,
+            "endVerse": 11,
+            "edition": "catholic-nl"
+          }
+        },
+        {
+          "id": "lent-calendar",
+          "kind": "tradition",
+          "label": {
+            "nl": "USCCB — Why is Lent 40 Days? (2019)",
+            "en": "USCCB — Why is Lent 40 Days? (2019)",
+            "fr": "USCCB — Why is Lent 40 Days? (2019)"
+          },
+          "url": "https://www.usccb.org/resources/why-lent-40-days",
+          "context": {
+            "nl": "Liturgische grenzen en symboliek van veertig; vergelijk de telwijzen.",
+            "en": "Liturgical boundaries and forty’s symbolism; compare the counting conventions.",
+            "fr": "Limites liturgiques et symbolisme de quarante ; comparer les décomptes."
+          }
+        },
+        {
+          "id": "lent-practice",
+          "kind": "tradition",
+          "label": {
+            "nl": "USCCB — What is Lent?, inleiding en FAQ",
+            "en": "USCCB — What is Lent?, introduction and FAQ",
+            "fr": "USCCB — What is Lent?, introduction et FAQ"
+          },
+          "url": "https://www.usccb.org/prayer-worship/liturgical-year/lent",
+          "context": {
+            "nl": "Praktijken en Amerikaanse richtlijnen, inclusief uitzonderingen.",
+            "en": "Practices and US guidelines, including exceptions.",
+            "fr": "Pratiques et directives américaines, y compris les exceptions."
+          }
+        },
+        {
+          "id": "lent-council",
+          "kind": "historical",
+          "label": {
+            "nl": "Sacrosanctum Concilium (1963), §§109–110",
+            "en": "Sacrosanctum Concilium (1963), §§109–110",
+            "fr": "Sacrosanctum Concilium (1963), §§109–110"
+          },
+          "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19631204_sacrosanctum-concilium_en.html",
+          "context": {
+            "nl": "Concilietekst over vernieuwing van de vastentijd.",
+            "en": "Conciliar text on reforming Lent.",
+            "fr": "Texte conciliaire sur le renouveau du Carême."
+          }
+        }
+      ]
+    },
+    {
+      "id": "christianity:easter",
+      "tradition": "christianity",
+      "kind": "feast",
+      "order": 3,
+      "title": {
+        "nl": "Pasen en het Paastriduüm",
+        "en": "Easter and the Paschal Triduum",
+        "fr": "Pâques et le Triduum pascal"
+      },
+      "summary": {
+        "nl": "Lijden, dood en verrijzenis van Jezus als samenhangend centrum van het katholieke kerkelijk jaar.",
+        "en": "Jesus’ passion, death and resurrection as the connected centre of the Catholic liturgical year.",
+        "fr": "Passion, mort et résurrection de Jésus comme centre unifié de l’année liturgique catholique."
+      },
+      "calendar": {
+        "text": {
+          "nl": "Het Paastriduüm loopt van Witte Donderdagavond tot paaszondagavond. De jaarlijkse paasdatum verschuift; de paaswake wordt in de nacht vóór paaszondag gevierd.",
+          "en": "The Paschal Triduum runs from Holy Thursday evening to Easter Sunday evening. Easter’s annual date varies; the Easter Vigil is celebrated during the preceding night.",
+          "fr": "Le Triduum pascal s’étend du soir du Jeudi saint au soir du dimanche de Pâques. La date annuelle varie ; la Vigile pascale se célèbre la nuit précédente."
+        },
+        "sourceIds": [
+          "easter-triduum",
+          "easter-vigil"
+        ]
+      },
+      "sections": [
+        {
+          "id": "meaning",
+          "text": {
+            "nl": "Katholieken belijden in Pasen Jezus’ verrijzenis. Johannes 20 verbindt het lege graf met ontmoeting en getuigenis, waarbij Maria Magdalena een centrale rol krijgt.",
+            "en": "At Easter Catholics profess Jesus’ resurrection. John 20 links the empty tomb with encounter and testimony, giving Mary Magdalene a central role.",
+            "fr": "À Pâques, les catholiques professent la résurrection de Jésus. Jean 20 associe le tombeau vide à la rencontre et au témoignage, avec un rôle central pour Marie de Magdala."
+          },
+          "sourceIds": [
+            "easter-john"
+          ]
+        },
+        {
+          "id": "history",
+          "text": {
+            "nl": "Vaticanum II vroeg in 1963 om herziening van de misorde en ruimere Bijbellezing. De huidige vieringsvorm is dus mede gevormd door kerkelijke hervorming.",
+            "en": "In 1963 Vatican II requested revision of the order of Mass and broader biblical readings. Church reform has thus helped shape today’s celebrations.",
+            "fr": "En 1963, Vatican II a demandé une révision du rite de la messe et davantage de lectures bibliques. La réforme ecclésiale a donc contribué aux célébrations actuelles."
+          },
+          "sourceIds": [
+            "easter-council"
+          ]
+        },
+        {
+          "id": "practice",
+          "text": {
+            "nl": "Witte Donderdag gedenkt het Laatste Avondmaal; Goede Vrijdag kent een viering van het lijden. De paaswake verbindt licht, Schriftlezing, doopliturgie en eucharistie.",
+            "en": "Holy Thursday commemorates the Last Supper; Good Friday has a celebration of the Passion. The Easter Vigil connects light, Scripture readings, baptismal liturgy and Eucharist.",
+            "fr": "Le Jeudi saint commémore la Cène ; le Vendredi saint comporte une célébration de la Passion. La Vigile pascale associe lumière, lectures bibliques, liturgie baptismale et eucharistie."
+          },
+          "sourceIds": [
+            "easter-triduum",
+            "easter-vigil"
+          ]
+        },
+        {
+          "id": "diversity",
+          "text": {
+            "nl": "De paaswake bevat voorgeschreven onderdelen én toegelaten keuzes, bijvoorbeeld in het aantal oudtestamentische lezingen. Een waargenomen parochieviering moet daarom naast het missaal worden bestudeerd.",
+            "en": "The Easter Vigil combines prescribed elements with permitted choices, such as the number of Old Testament readings. An observed parish celebration should therefore be studied alongside the Missal.",
+            "fr": "La Vigile pascale combine des éléments prescrits et des choix autorisés, notamment le nombre de lectures de l’Ancien Testament. Une célébration paroissiale observée doit donc être étudiée avec le Missel."
+          },
+          "sourceIds": [
+            "easter-vigil"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": {
+            "nl": "Welke rol spelen zien, herkennen en getuigen in Johannes 20? Onderscheid literaire analyse van een oordeel over geloofswaarheid.",
+            "en": "What roles do seeing, recognition and testimony play in John 20? Distinguish literary analysis from a judgement about religious truth.",
+            "fr": "Quels rôles jouent la vision, la reconnaissance et le témoignage en Jean 20 ? Distinguer analyse littéraire et jugement sur la vérité religieuse."
+          },
+          "sourceIds": [
+            "easter-john"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Hoe maken licht, water en het verloop van de nacht betekenis zichtbaar? Onderbouw je analyse met de liturgische bron én observaties.",
+            "en": "How do light, water and the passage of the night make meaning visible? Support your analysis with both the liturgical source and observations.",
+            "fr": "Comment la lumière, l’eau et le déroulement de la nuit rendent-ils le sens visible ? Appuyer l’analyse sur la source liturgique et des observations."
+          },
+          "sourceIds": [
+            "easter-vigil"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Welke continuïteit en verandering kun je aantonen door het conciliedocument met de huidige paaswake te vergelijken? Welke conclusies blijven onzeker?",
+            "en": "What continuity and change can you demonstrate by comparing the conciliar document with the current Easter Vigil? Which conclusions remain uncertain?",
+            "fr": "Quelles continuités et transformations peut-on établir en comparant le document conciliaire à la Vigile actuelle ? Quelles conclusions restent incertaines ?"
+          },
+          "sourceIds": [
+            "easter-council",
+            "easter-vigil"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "id": "easter-john",
+          "kind": "scripture",
+          "label": {
+            "nl": "Johannes 20:1–18",
+            "en": "John 20:1–18",
+            "fr": "Jean 20,1–18"
+          },
+          "url": "https://bible.usccb.org/bible/john/20",
+          "context": {
+            "nl": "Het lege graf en Maria Magdalena’s getuigenis.",
+            "en": "The empty tomb and Mary Magdalene’s testimony.",
+            "fr": "Le tombeau vide et le témoignage de Marie de Magdala."
+          },
+          "passage": {
+            "tradition": "christianity",
+            "book": "JHN",
+            "chapter": 20,
+            "verse": 1,
+            "endVerse": 18,
+            "edition": "catholic-nl"
+          }
+        },
+        {
+          "id": "easter-triduum",
+          "kind": "tradition",
+          "label": {
+            "nl": "USCCB — Easter Triduum",
+            "en": "USCCB — Easter Triduum",
+            "fr": "USCCB — Easter Triduum"
+          },
+          "url": "https://www.usccb.org/prayer-worship/liturgical-year/triduum",
+          "context": {
+            "nl": "De samenhang en grenzen van het Triduüm.",
+            "en": "The unity and boundaries of the Triduum.",
+            "fr": "Unité et limites du Triduum."
+          }
+        },
+        {
+          "id": "easter-vigil",
+          "kind": "tradition",
+          "label": {
+            "nl": "USCCB — Roman Missal and the Easter Vigil",
+            "en": "USCCB — Roman Missal and the Easter Vigil",
+            "fr": "USCCB — Roman Missal and the Easter Vigil"
+          },
+          "url": "https://www.usccb.org/prayer-and-worship/liturgical-year-and-calendar/triduum/roman-missal-and-the-easter-vigil",
+          "context": {
+            "nl": "Onderdelen, nachtelijk tijdstip en keuzes in de Romeinse paaswake.",
+            "en": "Elements, night-time setting and options in the Roman Easter Vigil.",
+            "fr": "Éléments, horaire nocturne et choix dans la Vigile romaine."
+          }
+        },
+        {
+          "id": "easter-council",
+          "kind": "historical",
+          "label": {
+            "nl": "Sacrosanctum Concilium (1963), §§50–51",
+            "en": "Sacrosanctum Concilium (1963), §§50–51",
+            "fr": "Sacrosanctum Concilium (1963), §§50–51"
+          },
+          "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19631204_sacrosanctum-concilium_en.html",
+          "context": {
+            "nl": "Primaire bron voor twintigste-eeuwse liturgische hervorming.",
+            "en": "Primary source for twentieth-century liturgical reform.",
+            "fr": "Source primaire de la réforme liturgique du XXe siècle."
+          }
+        }
+      ]
+    },
+    {
+      "id": "christianity:pentecost",
+      "tradition": "christianity",
+      "kind": "feast",
+      "order": 4,
+      "title": {
+        "nl": "Pinksteren",
+        "en": "Pentecost",
+        "fr": "Pentecôte"
+      },
+      "summary": {
+        "nl": "De Heilige Geest, meertaligheid en de vorming van een gemeenschap over grenzen heen.",
+        "en": "The Holy Spirit, multilingual communication and the formation of a community across boundaries.",
+        "fr": "L’Esprit Saint, le plurilinguisme et la formation d’une communauté au-delà des frontières."
+      },
+      "calendar": {
+        "text": {
+          "nl": "De vijftigste dag van Pasen, paaszondag meegerekend: zeven weken later. Pinksteren sluit de Romeinse paastijd af.",
+          "en": "The fiftieth day of Easter, counting Easter Sunday: seven weeks later. Pentecost concludes the Roman Easter season.",
+          "fr": "Le cinquantième jour de Pâques, dimanche de Pâques inclus : sept semaines plus tard. La Pentecôte clôt le temps pascal romain."
+        },
+        "sourceIds": [
+          "pentecost-calendar"
+        ]
+      },
+      "sections": [
+        {
+          "id": "meaning",
+          "text": {
+            "nl": "Handelingen 2 situeert de gave van de Geest tijdens een Joods feest in Jeruzalem. Wind, vuur en verstaanbare talen verbeelden in het verhaal de goddelijke oorsprong van de zending.",
+            "en": "Acts 2 places the gift of the Spirit during a Jewish festival in Jerusalem. Wind, fire and intelligible languages portray the mission’s divine origin within the narrative.",
+            "fr": "Actes 2 situe le don de l’Esprit pendant une fête juive à Jérusalem. Le vent, le feu et les langues compréhensibles figurent l’origine divine de la mission dans le récit."
+          },
+          "sourceIds": [
+            "pentecost-acts"
+          ]
+        },
+        {
+          "id": "history",
+          "text": {
+            "nl": "Johannes Paulus II verbond in 1998 Pinksteren met de Sinaïtraditie en verwees daarbij naar Augustinus en Severianus van Gabala. Zo documenteert zijn toespraak de voortzetting van oudere christelijke tekstinterpretatie.",
+            "en": "In 1998 John Paul II connected Pentecost with the Sinai tradition, citing Augustine and Severian of Gabala. His address thus documents the continuation of older Christian textual interpretation.",
+            "fr": "En 1998, Jean-Paul II a relié la Pentecôte à la tradition du Sinaï, en citant Augustin et Sévérien de Gabala. Son discours documente ainsi la reprise d’une interprétation chrétienne plus ancienne."
+          },
+          "sourceIds": [
+            "pentecost-reception"
+          ]
+        },
+        {
+          "id": "practice",
+          "text": {
+            "nl": "Naast de dagmis kent het Romeinse missaal een uitgebreide vigilie met meerdere oudtestamentische lezingen. Deze opbouw laat studenten onderzoeken hoe liturgische selectie teksten met elkaar verbindt.",
+            "en": "Alongside the daytime Mass, the Roman Missal provides an extended vigil with several Old Testament readings. This structure invites study of how liturgical selection connects texts.",
+            "fr": "À côté de la messe du jour, le Missel romain prévoit une vigile développée avec plusieurs lectures de l’Ancien Testament. Cette structure permet d’étudier comment la sélection liturgique relie les textes."
+          },
+          "sourceIds": [
+            "pentecost-calendar"
+          ]
+        },
+        {
+          "id": "diversity",
+          "text": {
+            "nl": "Johannes 20:19–23 situeert de gave van de Geest op de avond van Pasen; Handelingen kiest een ander vertelverloop. Bewaar die verschillen en behandel de christelijke interpretatie niet als volledige uitleg van het Joodse Sjavoeot.",
+            "en": "John 20:19–23 places the gift of the Spirit on Easter evening; Acts uses a different narrative sequence. Preserve these differences and do not treat the Christian interpretation as a complete account of Jewish Shavuot.",
+            "fr": "Jean 20,19–23 situe le don de l’Esprit au soir de Pâques ; les Actes suivent un autre déroulement narratif. Préserver ces différences et ne pas traiter l’interprétation chrétienne comme une explication complète du Chavouot juif."
+          },
+          "sourceIds": [
+            "pentecost-john",
+            "pentecost-acts",
+            "pentecost-reception"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": {
+            "nl": "Wat verandert wanneer je Handelingen 2 en Johannes 20 naast elkaar leest in plaats van ze tot één tijdlijn samen te voegen?",
+            "en": "What changes when Acts 2 and John 20 are read alongside one another rather than merged into one timeline?",
+            "fr": "Que change la lecture parallèle d’Actes 2 et de Jean 20, plutôt que leur fusion en une seule chronologie ?"
+          },
+          "sourceIds": [
+            "pentecost-acts",
+            "pentecost-john"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Hoe werkt de verwijzing naar Sinaï in de pauselijke interpretatie? Welke Joodse bronnen zijn nodig voor een wederkerige vergelijking?",
+            "en": "How does the reference to Sinai function in the papal interpretation? Which Jewish sources are needed for a reciprocal comparison?",
+            "fr": "Comment la référence au Sinaï fonctionne-t-elle dans l’interprétation pontificale ? Quelles sources juives faut-il pour une comparaison réciproque ?"
+          },
+          "sourceIds": [
+            "pentecost-reception"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Hoe zou je onderzoeken of de meertaligheid van Handelingen herkenbaar is in de taalkeuzes en machtsverhoudingen van een huidige gemeenschap?",
+            "en": "How would you investigate whether Acts’ multilingualism is reflected in a contemporary community’s language choices and power relations?",
+            "fr": "Comment étudier si le plurilinguisme des Actes se reflète dans les choix linguistiques et les rapports de pouvoir d’une communauté actuelle ?"
+          },
+          "sourceIds": [
+            "pentecost-acts"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "id": "pentecost-acts",
+          "kind": "scripture",
+          "label": {
+            "nl": "Handelingen 2:1–13",
+            "en": "Acts 2:1–13",
+            "fr": "Actes 2,1–13"
+          },
+          "url": "https://bible.usccb.org/bible/acts/2",
+          "context": {
+            "nl": "Pinksterverhaal, Joodse toehoorders en taalverschillen.",
+            "en": "Pentecost narrative, Jewish listeners and linguistic diversity.",
+            "fr": "Récit de Pentecôte, auditeurs juifs et diversité linguistique."
+          },
+          "passage": {
+            "tradition": "christianity",
+            "book": "ACT",
+            "chapter": 2,
+            "verse": 1,
+            "endVerse": 13,
+            "edition": "catholic-nl"
+          }
+        },
+        {
+          "id": "pentecost-calendar",
+          "kind": "tradition",
+          "label": {
+            "nl": "USCCB — Easter, onderdeel Pentecost en normen 22–23",
+            "en": "USCCB — Easter, Pentecost section and norms 22–23",
+            "fr": "USCCB — Easter, section Pentecost et normes 22–23"
+          },
+          "url": "https://www.usccb.org/prayer-worship/liturgical-year/easter",
+          "context": {
+            "nl": "Paastijd en uitgebreide pinkstervigilie.",
+            "en": "Easter season and extended Pentecost vigil.",
+            "fr": "Temps pascal et vigile développée de Pentecôte."
+          }
+        },
+        {
+          "id": "pentecost-reception",
+          "kind": "historical",
+          "label": {
+            "nl": "Johannes Paulus II — Audiëntie 17 juni 1998, §§1–4",
+            "en": "John Paul II — Audience of 17 June 1998, §§1–4",
+            "fr": "Jean-Paul II — Audience du 17 juin 1998, §§1–4"
+          },
+          "url": "https://www.vatican.va/content/john-paul-ii/en/audiences/1998/documents/hf_jp-ii_aud_17061998.html",
+          "context": {
+            "nl": "Een gedateerde katholieke interpretatie met oudere getuigenissen.",
+            "en": "A dated Catholic interpretation citing earlier witnesses.",
+            "fr": "Une interprétation catholique datée citant des témoins antérieurs."
+          }
+        },
+        {
+          "id": "pentecost-john",
+          "kind": "scripture",
+          "label": {
+            "nl": "Johannes 20:19–23",
+            "en": "John 20:19–23",
+            "fr": "Jean 20,19–23"
+          },
+          "url": "https://bible.usccb.org/bible/john/20",
+          "context": {
+            "nl": "Een andere vertelcontext voor de gave van de Geest.",
+            "en": "A different narrative setting for the gift of the Spirit.",
+            "fr": "Un autre cadre narratif pour le don de l’Esprit."
+          },
+          "passage": {
+            "tradition": "christianity",
+            "book": "JHN",
+            "chapter": 20,
+            "verse": 19,
+            "endVerse": 23,
+            "edition": "catholic-nl"
+          }
+        }
+      ]
+    },
+    {
+      "id": "christianity:all-saints",
+      "tradition": "christianity",
+      "kind": "feast",
+      "order": 5,
+      "title": {
+        "nl": "Allerheiligen en Allerzielen",
+        "en": "All Saints and All Souls",
+        "fr": "Toussaint et commémoration des défunts"
+      },
+      "summary": {
+        "nl": "Twee onderscheiden dagen om heiligheid, sterfelijkheid en verbondenheid met overledenen te bestuderen.",
+        "en": "Two distinct days for studying holiness, mortality and bonds with the dead.",
+        "fr": "Deux jours distincts pour étudier sainteté, mortalité et liens avec les défunts."
+      },
+      "calendar": {
+        "text": {
+          "nl": "1 november: Allerheiligen. 2 november: Allerzielen, de gedachtenis van alle overleden gelovigen, in de Romeinse kalender.",
+          "en": "1 November: All Saints. 2 November: All Souls, the commemoration of all the faithful departed, in the Roman calendar.",
+          "fr": "Le 1er novembre : la Toussaint. Le 2 novembre : la commémoration de tous les fidèles défunts, dans le calendrier romain."
+        },
+        "sourceIds": [
+          "saints-calendar"
+        ]
+      },
+      "sections": [
+        {
+          "id": "meaning",
+          "text": {
+            "nl": "Allerheiligen viert volgens de katholieke traditie de gemeenschap van heiligen; Allerzielen richt zich op gebed voor overleden gelovigen. Openbaring 7 verbeeldt een menigte uit alle volken bij God, zonder deze kalenderdagen vast te leggen.",
+            "en": "In Catholic tradition All Saints celebrates the communion of saints; All Souls focuses on prayer for deceased believers. Revelation 7 pictures a multitude from all peoples before God, without establishing these calendar dates.",
+            "fr": "Dans la tradition catholique, la Toussaint célèbre la communion des saints ; le 2 novembre est consacré à la prière pour les fidèles défunts. Apocalypse 7 représente une foule de tous les peuples devant Dieu, sans fixer ces dates."
+          },
+          "sourceIds": [
+            "saints-calendar",
+            "saints-revelation"
+          ]
+        },
+        {
+          "id": "history",
+          "text": {
+            "nl": "Lumen gentium bevestigde in 1964 de heiligenverering en riep tegelijk op misbruiken te corrigeren. Die combinatie laat zien dat traditie ook intern wordt beoordeeld en hervormd.",
+            "en": "In 1964 Lumen gentium affirmed the veneration of saints while calling for abuses to be corrected. This combination shows that tradition is also evaluated and reformed from within.",
+            "fr": "En 1964, Lumen gentium a confirmé le culte des saints tout en demandant la correction des abus. Cette combinaison montre que la tradition est également évaluée et réformée de l’intérieur."
+          },
+          "sourceIds": [
+            "saints-council"
+          ]
+        },
+        {
+          "id": "practice",
+          "text": {
+            "nl": "Johannes Paulus II koppelde Allerzielen in 2000 aan graven, herinnering en gebed. Deze pauselijke bron documenteert een katholiek ideaal; een bezoek aan een begraafplaats alleen bewijst niet wat een deelnemer gelooft.",
+            "en": "In 2000 John Paul II connected All Souls with graves, remembrance and prayer. This papal source documents a Catholic ideal; visiting a cemetery alone does not establish what a participant believes.",
+            "fr": "En 2000, Jean-Paul II a associé la commémoration des défunts aux tombes, au souvenir et à la prière. Cette source pontificale documente un idéal catholique ; une visite au cimetière ne suffit pas à établir les croyances du visiteur."
+          },
+          "sourceIds": [
+            "saints-remembrance"
+          ]
+        },
+        {
+          "id": "diversity",
+          "text": {
+            "nl": "Kerkelijke betekenis en persoonlijke rouw hoeven niet samen te vallen. Onderzoek lokale herinneringspraktijken met aandacht voor familiegeschiedenis en voor deelnemers die zich anders tot de kerk verhouden.",
+            "en": "Church meanings and personal grief need not coincide. Investigate local remembrance practices with attention to family histories and participants with different relationships to the Church.",
+            "fr": "Le sens ecclésial et le deuil personnel ne coïncident pas nécessairement. Étudier les pratiques locales en tenant compte des histoires familiales et des différents rapports à l’Église."
+          },
+          "sourceIds": [
+            "saints-remembrance",
+            "saints-calendar"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": {
+            "nl": "Waarom is het analytisch onjuist om Allerheiligen en Allerzielen als één identiek feest te beschrijven? Gebruik de bronnen om het verschil uit te werken.",
+            "en": "Why is it analytically inaccurate to describe All Saints and All Souls as one identical feast? Use the sources to explain the distinction.",
+            "fr": "Pourquoi est-il analytiquement inexact de décrire la Toussaint et le 2 novembre comme une seule fête identique ? Expliquer la distinction à partir des sources."
+          },
+          "sourceIds": [
+            "saints-calendar"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Welke spanning bestaat tussen kerkelijk erkende heiligheid, volksdevotie en kerkelijke correctie? Wat kan Lumen gentium hierover wel en niet aantonen?",
+            "en": "What tensions exist between Church-recognised holiness, popular devotion and ecclesial correction? What can Lumen gentium establish, and what can it not?",
+            "fr": "Quelles tensions existent entre sainteté reconnue, piété populaire et correction ecclésiale ? Que peut établir Lumen gentium, et que ne peut-il pas établir ?"
+          },
+          "sourceIds": [
+            "saints-council"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Hoe kun je herinneringsrituelen onderzoeken zonder uit uiterlijk gedrag automatisch een geloofsovertuiging af te leiden?",
+            "en": "How can remembrance rituals be studied without automatically inferring beliefs from outward behaviour?",
+            "fr": "Comment étudier les rites du souvenir sans déduire automatiquement les croyances des comportements visibles ?"
+          },
+          "sourceIds": [
+            "saints-remembrance",
+            "saints-revelation"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "id": "saints-revelation",
+          "kind": "scripture",
+          "label": {
+            "nl": "Openbaring 7:9–17",
+            "en": "Revelation 7:9–17",
+            "fr": "Apocalypse 7,9–17"
+          },
+          "url": "https://bible.usccb.org/bible/revelation/7",
+          "context": {
+            "nl": "Visioen van een menigte bij God; lees het als apocalyptische beeldtaal.",
+            "en": "Vision of a multitude before God; read as apocalyptic imagery.",
+            "fr": "Vision d’une foule devant Dieu ; lire comme un langage apocalyptique."
+          },
+          "passage": {
+            "tradition": "christianity",
+            "book": "REV",
+            "chapter": 7,
+            "verse": 9,
+            "endVerse": 17,
+            "edition": "catholic-nl"
+          }
+        },
+        {
+          "id": "saints-calendar",
+          "kind": "tradition",
+          "label": {
+            "nl": "Benedictus XVI — Angelus 1 november 2006",
+            "en": "Benedict XVI — Angelus of 1 November 2006",
+            "fr": "Benoît XVI — Angélus du 1er novembre 2006"
+          },
+          "url": "https://www.vatican.va/content/benedict-xvi/en/angelus/2006/documents/hf_ben-xvi_ang_20061101_all-saints.html",
+          "context": {
+            "nl": "Onderscheid tussen beide dagen en hun katholieke betekenis.",
+            "en": "Distinction between the two days and their Catholic meaning.",
+            "fr": "Distinction entre les deux jours et leur sens catholique."
+          }
+        },
+        {
+          "id": "saints-council",
+          "kind": "historical",
+          "label": {
+            "nl": "Lumen gentium (1964), §§50–51",
+            "en": "Lumen gentium (1964), §§50–51",
+            "fr": "Lumen gentium (1964), §§50–51"
+          },
+          "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19641121_lumen-gentium_en.html",
+          "context": {
+            "nl": "Concilietekst over heiligenverering en interne correctie.",
+            "en": "Conciliar text on saint veneration and internal correction.",
+            "fr": "Texte conciliaire sur le culte des saints et sa correction interne."
+          }
+        },
+        {
+          "id": "saints-remembrance",
+          "kind": "tradition",
+          "label": {
+            "nl": "Johannes Paulus II — Angelus 1 november 2000, §2",
+            "en": "John Paul II — Angelus of 1 November 2000, §2",
+            "fr": "Jean-Paul II — Angélus du 1er novembre 2000, §2"
+          },
+          "url": "https://www.vatican.va/content/john-paul-ii/en/angelus/2000/documents/hf_jp-ii_ang_20001101_ognissanti.html",
+          "context": {
+            "nl": "Een katholieke verwoording van verbondenheid met overledenen.",
+            "en": "A Catholic expression of bonds with the deceased.",
+            "fr": "Une expression catholique des liens avec les défunts."
+          }
+        }
+      ]
+    },
+    {
+      "id": "christianity:baptism",
+      "tradition": "christianity",
+      "kind": "ritual",
+      "order": 6,
+      "title": {
+        "nl": "Doop en christelijke initiatie",
+        "en": "Baptism and Christian initiation",
+        "fr": "Baptême et initiation chrétienne"
+      },
+      "summary": {
+        "nl": "Water, toetreding tot een gemeenschap en de verhouding tussen persoonlijke keuze en ontvangen traditie.",
+        "en": "Water, entry into a community and the relationship between personal choice and received tradition.",
+        "fr": "Eau, entrée dans une communauté et rapport entre choix personnel et tradition reçue."
+      },
+      "calendar": {
+        "text": {
+          "nl": "Geen vaste jaarlijkse datum: doop kan elke dag plaatsvinden. Het Latijnse kerkelijk recht beveelt de zondag of, indien mogelijk, de paaswake aan.",
+          "en": "No fixed annual date: baptism may take place on any day. Latin canon law recommends Sunday or, where possible, the Easter Vigil.",
+          "fr": "Aucune date annuelle fixe : le baptême peut avoir lieu chaque jour. Le droit canonique latin recommande le dimanche ou, si possible, la Vigile pascale."
+        },
+        "sourceIds": [
+          "baptism-law"
+        ]
+      },
+      "sections": [
+        {
+          "id": "meaning",
+          "text": {
+            "nl": "Romeinen 6 duidt de doop als delen in Christus’ dood en nieuw leven. In het katholieke begrip gaat het om een sacrament en geloofsinitiatie, waarvoor zowel kinderen als ongedoopte volwassenen in aanmerking komen.",
+            "en": "Romans 6 interprets baptism as participation in Christ’s death and new life. In Catholic understanding it is a sacrament and initiation into faith, available to both children and unbaptised adults.",
+            "fr": "Romains 6 interprète le baptême comme participation à la mort du Christ et à une vie nouvelle. Dans la compréhension catholique, c’est un sacrement d’initiation accessible aux enfants comme aux adultes non baptisés."
+          },
+          "sourceIds": [
+            "baptism-romans",
+            "baptism-candidates"
+          ]
+        },
+        {
+          "id": "history",
+          "text": {
+            "nl": "De catechismus beschrijft uiteenlopende historische initiatievormen. Hij verwijst naar het herstel van een stapsgewijs volwassenencatechumenaat door Vaticanum II.",
+            "en": "The Catechism describes changing historical forms of initiation. It points to Vatican II’s restoration of a staged adult catechumenate.",
+            "fr": "Le Catéchisme décrit des formes d’initiation ayant évolué dans l’histoire. Il renvoie au rétablissement par Vatican II d’un catéchuménat adulte par étapes."
+          },
+          "sourceIds": [
+            "baptism-development"
+          ]
+        },
+        {
+          "id": "practice",
+          "text": {
+            "nl": "Het kerkelijk recht voorziet in voorbereiding en in doop door onderdompeling of begieting. Bij kinderdoop krijgen ouders en peetouders een voorbereidende rol.",
+            "en": "Canon law provides for preparation and baptism by immersion or pouring. For infant baptism it assigns a preparatory role to parents and godparents.",
+            "fr": "Le droit canonique prévoit une préparation et le baptême par immersion ou infusion. Pour le baptême des enfants, il attribue un rôle préparatoire aux parents et aux parrains."
+          },
+          "sourceIds": [
+            "baptism-law"
+          ]
+        },
+        {
+          "id": "diversity",
+          "text": {
+            "nl": "Oosterse katholieke riten verbinden bij kinderen doop, vormsel en eucharistie onmiddellijk. De Romeinse ritus spreidt deze doorgaans over de opvoeding.",
+            "en": "Eastern Catholic rites immediately join children’s baptism, confirmation and Eucharist. The Roman Rite generally distributes these across their upbringing.",
+            "fr": "Les rites catholiques orientaux associent immédiatement baptême, confirmation et eucharistie des enfants. Le rite romain les répartit généralement durant leur éducation."
+          },
+          "sourceIds": [
+            "baptism-development"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": {
+            "nl": "Hoe geeft de beeldspraak van sterven en nieuw leven in Romeinen 6 betekenis aan water? Onderscheid materiële handeling en theologische duiding.",
+            "en": "How does the imagery of dying and new life in Romans 6 give meaning to water? Distinguish the material action from its theological interpretation.",
+            "fr": "Comment les images de mort et de vie nouvelle en Romains 6 donnent-elles sens à l’eau ? Distinguer l’acte matériel et son interprétation théologique."
+          },
+          "sourceIds": [
+            "baptism-romans"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Hoe veranderen vragen over instemming, geloofsoverdracht en gemeenschap wanneer je kinderdoop en volwassenendoop vergelijkt?",
+            "en": "How do questions of consent, transmission of faith and community change when infant and adult baptism are compared?",
+            "fr": "Comment les questions de consentement, de transmission et de communauté changent-elles lorsqu’on compare baptême des enfants et des adultes ?"
+          },
+          "sourceIds": [
+            "baptism-candidates",
+            "baptism-law"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Wat leert de variatie tussen katholieke riten over het onderscheid tussen een sacrament en zijn historisch gegroeide organisatie?",
+            "en": "What does variation among Catholic rites reveal about the distinction between a sacrament and its historically developed organisation?",
+            "fr": "Que révèle la diversité des rites catholiques sur la distinction entre un sacrement et son organisation historiquement constituée ?"
+          },
+          "sourceIds": [
+            "baptism-development"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "id": "baptism-romans",
+          "kind": "scripture",
+          "label": {
+            "nl": "Romeinen 6:3–5",
+            "en": "Romans 6:3–5",
+            "fr": "Romains 6,3–5"
+          },
+          "url": "https://bible.usccb.org/bible/romans/6",
+          "context": {
+            "nl": "Paulus’ theologische duiding van de doop.",
+            "en": "Paul’s theological interpretation of baptism.",
+            "fr": "Interprétation théologique du baptême par Paul."
+          },
+          "passage": {
+            "tradition": "christianity",
+            "book": "ROM",
+            "chapter": 6,
+            "verse": 3,
+            "endVerse": 5,
+            "edition": "catholic-nl"
+          }
+        },
+        {
+          "id": "baptism-development",
+          "kind": "historical",
+          "label": {
+            "nl": "Catechismus, §§1229–1233",
+            "en": "Catechism, §§1229–1233",
+            "fr": "Catéchisme, §§1229–1233"
+          },
+          "url": "https://www.vatican.va/content/catechism/en/part_two/section_two/chapter_one/article_1/iii_how_is_the_sacrament_of_baptism_celebrated.index.html",
+          "context": {
+            "nl": "Kerkelijke beschrijving van initiatiegeschiedenis en ritusverschillen.",
+            "en": "Church account of initiation history and ritual differences.",
+            "fr": "Présentation ecclésiale de l’histoire et des différences rituelles."
+          }
+        },
+        {
+          "id": "baptism-candidates",
+          "kind": "tradition",
+          "label": {
+            "nl": "Catechismus, §§1246–1255",
+            "en": "Catechism, §§1246–1255",
+            "fr": "Catéchisme, §§1246–1255"
+          },
+          "url": "https://www.vatican.va/content/catechism/en/part_two/section_two/chapter_one/article_1/iv_who_can_receive_baptism.html",
+          "context": {
+            "nl": "Kinderen, volwassenen en de rol van geloofsgemeenschap.",
+            "en": "Children, adults and the faith community’s role.",
+            "fr": "Enfants, adultes et rôle de la communauté croyante."
+          }
+        },
+        {
+          "id": "baptism-law",
+          "kind": "tradition",
+          "label": {
+            "nl": "Kerkelijk Wetboek, canones 851, 854 en 856 (Spaans)",
+            "en": "Code of Canon Law, canons 851, 854 and 856 (Spanish)",
+            "fr": "Code de droit canonique, canons 851, 854 et 856 (espagnol)"
+          },
+          "url": "https://www.vatican.va/archive/cod-iuris-canonici/esp/documents/cic_libro4_cann850-860_sp.html",
+          "context": {
+            "nl": "Latijnse normen voor voorbereiding, waterhandeling en tijdstip.",
+            "en": "Latin norms for preparation, use of water and timing.",
+            "fr": "Normes latines sur la préparation, l’eau et le moment."
+          }
+        }
+      ]
+    },
+    {
+      "id": "christianity:eucharist",
+      "tradition": "christianity",
+      "kind": "ritual",
+      "order": 7,
+      "title": {
+        "nl": "Eucharistie en communie",
+        "en": "Eucharist and Communion",
+        "fr": "Eucharistie et communion"
+      },
+      "summary": {
+        "nl": "Maaltijd, gedachtenis, sacramentele aanwezigheid en de grenzen van gemeenschappelijkheid.",
+        "en": "Meal, memorial, sacramental presence and the boundaries of belonging.",
+        "fr": "Repas, mémorial, présence sacramentelle et frontières de l’appartenance."
+      },
+      "calendar": {
+        "text": {
+          "nl": "Herhaalde viering met een belangrijk zondagsritme; geen vaste jaarlijkse datum.",
+          "en": "Repeated celebration with an important Sunday rhythm; no fixed annual date.",
+          "fr": "Célébration répétée, au rythme notamment dominical ; aucune date annuelle fixe."
+        },
+        "sourceIds": [
+          "eucharist-history"
+        ]
+      },
+      "sections": [
+        {
+          "id": "meaning",
+          "text": {
+            "nl": "Volgens de katholieke leer is Christus werkelijk aanwezig onder de gedaanten van brood en wijn; transsubstantiatie benoemt de verandering van hun substantie. Paulus verbindt de maaltijd bovendien met kritiek op vernedering van armen.",
+            "en": "Catholic teaching holds that Christ is really present under the appearances of bread and wine; transubstantiation names the change of their substance. Paul also connects the meal with criticism of humiliating the poor.",
+            "fr": "Selon la doctrine catholique, le Christ est réellement présent sous les apparences du pain et du vin ; la transsubstantiation désigne le changement de leur substance. Paul associe aussi le repas à une critique de l’humiliation des pauvres."
+          },
+          "sourceIds": [
+            "eucharist-presence",
+            "eucharist-paul"
+          ]
+        },
+        {
+          "id": "history",
+          "text": {
+            "nl": "Justinus beschreef rond 155 lezingen, gebed en maaltijd. Die getuigenis vertegenwoordigt niet alle toenmalige gemeenschappen.",
+            "en": "Around 155 Justin described readings, prayer and a meal. This witness does not represent every contemporary community.",
+            "fr": "Vers 155, Justin décrit lectures, prière et repas. Ce témoignage ne représente pas toutes les communautés de son époque."
+          },
+          "sourceIds": [
+            "eucharist-history"
+          ]
+        },
+        {
+          "id": "practice",
+          "text": {
+            "nl": "De mis omvat Woordliturgie en eucharistische liturgie. Lezingen, dankgebed en communie vormen een samenhang.",
+            "en": "Mass includes the Liturgy of the Word and the Eucharistic liturgy. Readings, thanksgiving and Communion form a connected whole.",
+            "fr": "La messe comprend liturgie de la Parole et liturgie eucharistique. Lectures, action de grâce et communion forment un ensemble."
+          },
+          "sourceIds": [
+            "eucharist-history"
+          ]
+        },
+        {
+          "id": "diversity",
+          "text": {
+            "nl": "Aanwezig zijn bij een katholieke mis betekent niet automatisch deelnemen aan de communie. Kerkelijke toelating hangt samen met geloof en kerkgemeenschap; de regels kennen specifieke uitzonderingen, ook voor sommige oosterse christenen.",
+            "en": "Attendance at Catholic Mass does not automatically mean receiving Communion. Church admission is linked to faith and ecclesial communion; the rules contain specific exceptions, including for some Eastern Christians.",
+            "fr": "Assister à une messe catholique ne signifie pas automatiquement communier. L’admission ecclésiale dépend de la foi et de la communion entre Églises ; les règles comportent des exceptions précises, notamment pour certains chrétiens orientaux."
+          },
+          "sourceIds": [
+            "eucharist-communion"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": {
+            "nl": "Waarom is Paulus’ kritiek op ongelijkheid in 1 Korintiërs 11 relevant voor de interpretatie van een rituele maaltijd?",
+            "en": "Why is Paul’s criticism of inequality in 1 Corinthians 11 relevant to interpreting a ritual meal?",
+            "fr": "Pourquoi la critique paulinienne des inégalités en 1 Corinthiens 11 est-elle pertinente pour interpréter un repas rituel ?"
+          },
+          "sourceIds": [
+            "eucharist-paul"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Welke overeenkomsten met een huidige mis ondersteunt Justinus’ getuigenis, en welke historische continuïteit kun je daaruit niet zonder meer afleiden?",
+            "en": "Which similarities with a present-day Mass does Justin’s account support, and what historical continuity cannot simply be inferred from it?",
+            "fr": "Quelles ressemblances avec une messe actuelle le témoignage de Justin étaye-t-il, et quelle continuité historique ne peut-on pas simplement en déduire ?"
+          },
+          "sourceIds": [
+            "eucharist-history"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Hoe verhouden de aanspraak op gemeenschap en de toelatingsregels voor communie zich tot elkaar? Beschrijf eerst de katholieke redenering en formuleer daarna een kritische analyse.",
+            "en": "How do the claim to community and the admission rules for Communion relate? First describe the Catholic reasoning, then develop a critical analysis.",
+            "fr": "Comment l’affirmation de la communauté et les règles d’admission à la communion s’articulent-elles ? Décrire d’abord le raisonnement catholique, puis proposer une analyse critique."
+          },
+          "sourceIds": [
+            "eucharist-communion",
+            "eucharist-presence"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "id": "eucharist-paul",
+          "kind": "scripture",
+          "label": {
+            "nl": "1 Korintiërs 11:17–34",
+            "en": "1 Corinthians 11:17–34",
+            "fr": "1 Corinthiens 11,17–34"
+          },
+          "url": "https://bible.usccb.org/bible/1corinthians/11",
+          "context": {
+            "nl": "Avondmaalsoverlevering binnen een conflict over sociale ongelijkheid.",
+            "en": "Supper tradition within a conflict over social inequality.",
+            "fr": "Tradition de la Cène dans un conflit d’inégalité sociale."
+          },
+          "passage": {
+            "tradition": "christianity",
+            "book": "1CO",
+            "chapter": 11,
+            "verse": 17,
+            "endVerse": 34,
+            "edition": "catholic-nl"
+          }
+        },
+        {
+          "id": "eucharist-history",
+          "kind": "historical",
+          "label": {
+            "nl": "Catechismus, §§1345–1355; Justinus, Eerste Apologie 65–67",
+            "en": "Catechism, §§1345–1355; Justin, First Apology 65–67",
+            "fr": "Catéchisme, §§1345–1355 ; Justin, Première Apologie 65–67"
+          },
+          "url": "https://www.vatican.va/content/catechism/en/part_two/section_two/chapter_one/article_3/iv_the_liturgical_celebration_of_the_eucharist.index.html",
+          "context": {
+            "nl": "Vroege getuigenis en huidige vieringsstructuur.",
+            "en": "Early witness and current liturgical structure.",
+            "fr": "Témoignage ancien et structure liturgique actuelle."
+          }
+        },
+        {
+          "id": "eucharist-presence",
+          "kind": "tradition",
+          "label": {
+            "nl": "Catechismus, §§1362–1367 en 1374–1376",
+            "en": "Catechism, §§1362–1367 and 1374–1376",
+            "fr": "Catéchisme, §§1362–1367 et 1374–1376"
+          },
+          "url": "https://www.vatican.va/content/catechism/en/part_two/section_two/chapter_one/article_3/v_the_sacramental_sacrifice_thanksgiving_memorial_presence.index.html",
+          "context": {
+            "nl": "Katholieke begrippen gedachtenis, offer en werkelijke aanwezigheid.",
+            "en": "Catholic concepts of memorial, sacrifice and real presence.",
+            "fr": "Notions catholiques de mémorial, sacrifice et présence réelle."
+          }
+        },
+        {
+          "id": "eucharist-communion",
+          "kind": "tradition",
+          "label": {
+            "nl": "USCCB — Guidelines for the Reception of Communion (1996)",
+            "en": "USCCB — Guidelines for the Reception of Communion (1996)",
+            "fr": "USCCB — Guidelines for the Reception of Communion (1996)"
+          },
+          "url": "https://www.usccb.org/prayer-and-worship/the-mass/order-of-mass/liturgy-of-the-eucharist/guidelines-for-the-reception-of-communion",
+          "context": {
+            "nl": "Amerikaanse uitleg van katholieke toelatingsregels met verwijzing naar canon 844.",
+            "en": "US explanation of Catholic admission rules referencing canon 844.",
+            "fr": "Explication américaine des règles catholiques d’admission, renvoyant au canon 844."
+          }
+        }
+      ]
+    }
+  ]
+}
+

@@ -44,6 +44,8 @@ const restored=new Reader(new Root(),tanakh);assert.equal(restored.edition,'nl')
 const qEl=new Root(),qReader=new Reader(qEl,quran);
 assert.equal(qReader.edition,'nl');assert.match(qEl.innerHTML,/lang="ar" translate="no"/);assert.match(qEl.innerHTML,/lang="nl" dir="ltr" translate="no"/);
 qEl.search('2:255');assert.equal(qReader.location.unit,'2');assert.equal(qReader.location.verse,255);
+qEl.search('2:183-185');assert.equal(qReader.location.endVerse,185);assert.equal((qEl.innerHTML.match(/sacred-verse is-target/g)||[]).length,3,'All verses in a study passage must be highlighted');assert.match(qEl.innerHTML,/2:183–185/);
+qEl.change('sacred-verse','186');assert.equal(qReader.location.endVerse,undefined);assert.equal((qEl.innerHTML.match(/sacred-verse is-target/g)||[]).length,1,'Manual verse selection clears the old range');
 assert.match(qEl.innerHTML,/sacred-bismillah/,'Unnumbered opening formula remains separate from numbered ayahs');
 qEl.change('sacred-original','',false);assert.doesNotMatch(qEl.innerHTML,/<p class="sacred-original" dir="rtl" lang="ar"/);
 qEl.change('sacred-edition','ar');assert.match(qEl.innerHTML,/lang="ar" dir="rtl"/);qEl.search('الحمد');assert(qReader.results.some(result=>result.unit==='1'&&result.verse===2));

@@ -1,0 +1,1396 @@
+{
+  "meta": {
+    "tradition": "islam",
+    "reviewedAt": "2026-10-22",
+    "scope": {
+      "nl": "Een selectie voor hoger onderwijs. Onderscheid korantekst, overlevering, rechtsopvatting en historische analyse; moslimgemeenschappen zijn intern divers. De maankalender verschuift ten opzichte van het zonnejaar. Concrete data volgen de gekozen lokale of institutionele kalender.",
+      "en": "A selection for higher education. Distinguish Quranic text, transmitted tradition, legal opinion and historical analysis; Muslim communities are internally diverse. The lunar calendar shifts against the solar year. Actual dates follow the chosen local or institutional calendar.",
+      "fr": "Une sélection pour l'enseignement supérieur. Distinguez texte coranique, tradition transmise, avis juridique et analyse historique ; les communautés musulmanes sont diverses. Le calendrier lunaire se décale par rapport à l'année solaire. Les dates suivent le calendrier local ou institutionnel retenu."
+    }
+  },
+  "entries": [
+    {
+      "id": "islam:salat",
+      "tradition": "islam",
+      "kind": "ritual",
+      "order": 1,
+      "title": {
+        "nl": "Salat — het dagelijkse gebed",
+        "en": "Salat — daily prayer",
+        "fr": "Salat — la prière quotidienne"
+      },
+      "summary": {
+        "nl": "Een dagelijks ritme waarin tekst, lichaam en gemeenschap samenkomen.",
+        "en": "A daily rhythm bringing together text, body and community.",
+        "fr": "Un rythme quotidien reliant texte, corps et communauté."
+      },
+      "calendar": {
+        "text": {
+          "nl": "Dagelijks: fajr, zuhr, asr, maghrib en isha. De tijdvensters volgen de zon; plaats, seizoen en rechtsinterpretatie beïnvloeden de concrete tijden.",
+          "en": "Daily: fajr, zuhr, asr, maghrib and isha. Their windows follow the sun; location, season and legal interpretation affect actual times.",
+          "fr": "Chaque jour : fajr, zuhr, asr, maghrib et isha. Les plages horaires suivent le soleil ; lieu, saison et interprétation juridique influencent les horaires."
+        },
+        "sourceIds": [
+          "salat-times",
+          "salat-sistani-times"
+        ]
+      },
+      "sections": [
+        {
+          "id": "meaning",
+          "text": {
+            "nl": "Salat structureert het leven door regelmatige gerichtheid op God. Koran 4:103 verbindt gebed met vastgestelde tijden, in een passage over gebed bij gevaar en veiligheid.",
+            "en": "Salat structures life through regular attention to God. Quran 4:103 connects prayer with appointed times, within a passage about danger and security.",
+            "fr": "La salat structure la vie par une attention régulière à Dieu. Le Coran 4:103 associe la prière à des moments déterminés, dans un passage sur le danger et la sécurité."
+          },
+          "sourceIds": [
+            "salat-quran"
+          ]
+        },
+        {
+          "id": "history",
+          "text": {
+            "nl": "De Koran geeft geen volledig stappenplan van alle vijf gebeden. Hadithverzamelingen bewaren overleveringen over Mohammeds voorbeeld; rechtsgeleerden werken zulke gegevens uit tot gebedsregels.",
+            "en": "The Quran gives no complete step-by-step account of all five prayers. Hadith collections preserve reports about Muhammad's example; jurists develop such material into prayer rules.",
+            "fr": "Le Coran ne détaille pas toutes les étapes des cinq prières. Les recueils de hadiths transmettent des récits sur l'exemple de Muhammad ; les juristes en élaborent les règles."
+          },
+          "sourceIds": [
+            "salat-example",
+            "salat-sistani"
+          ]
+        },
+        {
+          "id": "practice",
+          "text": {
+            "nl": "De vijf dagelijkse gebeden bestaan uit gebedseenheden met recitatie en lichaamshoudingen. De regels voorzien ook aanpassingen, bijvoorbeeld verkorting van bepaalde gebeden tijdens een reis.",
+            "en": "The five daily prayers consist of units combining recitation and bodily postures. The rules also provide adjustments, such as shortening certain prayers during travel.",
+            "fr": "Les cinq prières quotidiennes comportent des unités associant récitation et postures. Les règles prévoient aussi des adaptations, notamment le raccourcissement de certaines prières en voyage."
+          },
+          "sourceIds": [
+            "salat-sistani"
+          ]
+        },
+        {
+          "id": "diversity",
+          "text": {
+            "nl": "Tijdregels zijn niet overal identiek. Sistani's twaalver-sjiitische rechtsleer kent voor zuhr en asr een gedeeld tijdvenster met behoud van hun volgorde: samen uitvoeren betekent niet dat één gebed vervalt.",
+            "en": "Timing rules are not identical everywhere. Sistani's Twelver Shia jurisprudence gives zuhr and asr a shared window while retaining their order: performing them together does not remove either prayer.",
+            "fr": "Les horaires ne sont pas identiques partout. Le droit chiite duodécimain de Sistani accorde à zuhr et asr une plage commune en maintenant leur ordre : les enchaîner ne supprime aucune prière."
+          },
+          "sourceIds": [
+            "salat-sistani-times",
+            "salat-times"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": {
+            "nl": "Welke verschillende soorten gezag oefenen een koranvers, een hadith en een hedendaags rechtsboek uit? Onderbouw je vergelijking met deze bronnen.",
+            "en": "What different kinds of authority do a Quranic verse, a hadith and a contemporary legal manual exercise? Support your comparison with these sources.",
+            "fr": "Quels types d'autorité différents exercent un verset coranique, un hadith et un manuel juridique contemporain ? Appuyez votre comparaison sur ces sources."
+          },
+          "sourceIds": [
+            "salat-quran",
+            "salat-example",
+            "salat-sistani"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Hoe verandert een religieuze tijdsindeling de organisatie van studie of werk? Onderscheid tekstuele normen van je aannames over feitelijk gedrag.",
+            "en": "How might religious time structure study or work? Distinguish textual norms from your assumptions about actual behaviour.",
+            "fr": "Comment un rythme religieux peut-il structurer les études ou le travail ? Distinguez les normes textuelles de vos hypothèses sur les comportements réels."
+          },
+          "sourceIds": [
+            "salat-times"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Vergelijk de tijdvensters bij Muslim en Sistani. Welke extra informatie heb je nodig voordat je verschillen in geleefde praktijk kunt verklaren?",
+            "en": "Compare the time windows in Muslim and Sistani. What further evidence would you need before explaining differences in lived practice?",
+            "fr": "Comparez les plages horaires chez Muslim et Sistani. Quelles données supplémentaires faudrait-il pour expliquer les différences de pratique vécue ?"
+          },
+          "sourceIds": [
+            "salat-times",
+            "salat-sistani-times"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "id": "salat-quran",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 4:103 — gebedstijden",
+            "en": "Quran 4:103 — prayer times",
+            "fr": "Coran 4:103 — horaires de prière"
+          },
+          "url": "https://quran.com/4/103",
+          "context": {
+            "nl": "Lees ook de context van gevaar en veiligheid.",
+            "en": "Also consider the context of danger and security.",
+            "fr": "Considérez aussi le contexte de danger et de sécurité."
+          },
+          "passage": {
+            "tradition": "islam",
+            "surah": 4,
+            "verse": 103,
+            "endVerse": 103,
+            "edition": "nl"
+          }
+        },
+        {
+          "id": "salat-example",
+          "kind": "tradition",
+          "label": {
+            "nl": "Al-Bukhari 631 — leren door het voorbeeld",
+            "en": "Al-Bukhari 631 — learning through example",
+            "fr": "Al-Bukhari 631 — apprendre par l'exemple"
+          },
+          "url": "https://sunnah.com/bukhari:631",
+          "context": {
+            "nl": "Soennitische hadith over overdracht van gebedspraktijk.",
+            "en": "Sunni hadith about transmitting prayer practice.",
+            "fr": "Hadith sunnite sur la transmission de la prière."
+          }
+        },
+        {
+          "id": "salat-times",
+          "kind": "tradition",
+          "label": {
+            "nl": "Muslim 612a — vijf tijdvensters",
+            "en": "Muslim 612a — five time windows",
+            "fr": "Muslim 612a — cinq plages horaires"
+          },
+          "url": "https://sunnah.com/muslim:612a",
+          "context": {
+            "nl": "Overlevering over de tijden van de vijf gebeden.",
+            "en": "Report concerning the times of the five prayers.",
+            "fr": "Récit concernant les horaires des cinq prières."
+          }
+        },
+        {
+          "id": "salat-sistani",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sistani — regels voor de eredienst",
+            "en": "Sistani — rules of worship",
+            "fr": "Sistani — règles du culte"
+          },
+          "url": "https://www.sistani.org/files-new/book-pdf/english-summary-of-the-rules-of-worship.pdf",
+          "context": {
+            "nl": "Engelse pdf; hedendaagse twaalver-sjiitische rechtsleer.",
+            "en": "English PDF; contemporary Twelver Shia jurisprudence.",
+            "fr": "PDF anglais ; droit chiite duodécimain contemporain."
+          }
+        },
+        {
+          "id": "salat-sistani-times",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sistani — zuhr en asr",
+            "en": "Sistani — zuhr and asr",
+            "fr": "Sistani — zuhr et asr"
+          },
+          "url": "https://www.sistani.org/english/book/48/2209/",
+          "context": {
+            "nl": "Regel 717 over een gedeeld tijdvenster en vaste volgorde.",
+            "en": "Ruling 717 on a shared time window and required order.",
+            "fr": "Règle 717 sur une plage commune et un ordre prescrit."
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:ramadan",
+      "tradition": "islam",
+      "kind": "season",
+      "order": 2,
+      "title": {
+        "nl": "Ramadan — vasten en openbaring",
+        "en": "Ramadan — fasting and revelation",
+        "fr": "Ramadan — jeûne et révélation"
+      },
+      "summary": {
+        "nl": "Een maand van vasten, koranlezing en reflectie op verantwoordelijkheid.",
+        "en": "A month of fasting, Quran reading and reflection on responsibility.",
+        "fr": "Un mois de jeûne, de lecture du Coran et de réflexion sur la responsabilité."
+      },
+      "calendar": {
+        "text": {
+          "nl": "Ramadan is de negende maanmaand. Begin en einde worden per gemeenschap vastgesteld; verschillende opvattingen over maanwaarneming kunnen verschillende kalenderdagen opleveren.",
+          "en": "Ramadan is the ninth lunar month. Communities determine its beginning and end; differing approaches to moon sighting can produce different calendar dates.",
+          "fr": "Le ramadan est le neuvième mois lunaire. Les communautés en fixent le début et la fin ; des conceptions différentes de l'observation lunaire peuvent produire des dates distinctes."
+        },
+        "sourceIds": [
+          "ramadan-moon"
+        ]
+      },
+      "sections": [
+        {
+          "id": "meaning",
+          "text": {
+            "nl": "Koran 2:183–185 verbindt vasten met godsbewustzijn en Ramadan met de openbaring van de Koran. Dezelfde passage noemt uitzonderingen bij ziekte en reizen.",
+            "en": "Quran 2:183–185 connects fasting with awareness of God and Ramadan with Quranic revelation. The same passage provides exceptions for illness and travel.",
+            "fr": "Le Coran 2:183–185 associe le jeûne à la conscience de Dieu et le ramadan à la révélation coranique. Le passage prévoit des exceptions pour la maladie et le voyage."
+          },
+          "sourceIds": [
+            "ramadan-quran"
+          ]
+        },
+        {
+          "id": "history",
+          "text": {
+            "nl": "Een overlevering bij al-Bukhari beschrijft hoe Umar nachtelijke gebedsgroepen onder één voorganger bijeenbracht. Zij laat zien hoe de traditie ook organisatie na Mohammed bespreekt; zij is geen volledig verslag van de ontwikkeling van Ramadan.",
+            "en": "A report in al-Bukhari describes Umar gathering night-prayer groups under one leader. It shows tradition discussing organisation after Muhammad, without providing a complete history of Ramadan.",
+            "fr": "Un récit d'al-Bukhari décrit Umar réunissant des groupes de prière nocturne sous un même responsable. Il témoigne d'une organisation après Muhammad, sans constituer une histoire complète du ramadan."
+          },
+          "sourceIds": [
+            "ramadan-umar"
+          ]
+        },
+        {
+          "id": "practice",
+          "text": {
+            "nl": "Koran 2:187 regelt onthouding overdag en eten en drinken tijdens de nacht. Naast het vasten kennen veel soennitische gemeenschappen tarawih, extra nachtgebeden.",
+            "en": "Quran 2:187 regulates daytime abstinence and eating and drinking at night. Alongside fasting, many Sunni communities practise tarawih, additional night prayers.",
+            "fr": "Le Coran 2:187 règle l'abstinence diurne ainsi que les repas et boissons nocturnes. Beaucoup de communautés sunnites pratiquent aussi les tarawih, des prières nocturnes supplémentaires."
+          },
+          "sourceIds": [
+            "ramadan-day",
+            "ramadan-tarawih"
+          ]
+        },
+        {
+          "id": "diversity",
+          "text": {
+            "nl": "Ook binnen het soennisme bestaat discussie over het aantal tarawih-eenheden. Dar al-Ifta verdedigt een bepaalde rechtsopvatting: lees deze fatwa als een positie in een debat, niet als een beschrijving van alle moslims.",
+            "en": "Even within Sunni Islam, the number of tarawih units is debated. Dar al-Ifta defends a particular legal position: read its fatwa as an intervention in a debate, not a description of all Muslims.",
+            "fr": "Même dans le sunnisme, le nombre d'unités des tarawih est discuté. Dar al-Ifta défend une position juridique : sa fatwa intervient dans un débat et ne décrit pas tous les musulmans."
+          },
+          "sourceIds": [
+            "ramadan-tarawih"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": {
+            "nl": "Hoe verhouden de doelstelling van het vasten en de uitzonderingen zich tot elkaar in 2:183–185? Onderbouw twee mogelijke interpretaties.",
+            "en": "How do the purpose of fasting and its exceptions relate in 2:183–185? Support two possible interpretations.",
+            "fr": "Comment l'objectif du jeûne et ses exceptions s'articulent-ils dans 2:183–185 ? Étayez deux interprétations possibles."
+          },
+          "sourceIds": [
+            "ramadan-quran"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Wat kan de Umar-overlevering aantonen over rituele organisatie, en wat vraagt aanvullend historisch onderzoek?",
+            "en": "What can the Umar report show about ritual organisation, and what requires further historical research?",
+            "fr": "Que peut montrer le récit d'Umar sur l'organisation rituelle, et quels points exigent des recherches historiques supplémentaires ?"
+          },
+          "sourceIds": [
+            "ramadan-umar"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Vergelijk meningsverschillen over maanwaarneming en tarawih. Hoe spelen interpretatie en institutioneel gezag in beide debatten een rol?",
+            "en": "Compare disagreements over moon sighting and tarawih. How do interpretation and institutional authority shape each debate?",
+            "fr": "Comparez les désaccords sur l'observation lunaire et les tarawih. Quel rôle jouent l'interprétation et l'autorité institutionnelle dans ces débats ?"
+          },
+          "sourceIds": [
+            "ramadan-moon",
+            "ramadan-tarawih"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "id": "ramadan-quran",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 2:183–185 — vasten",
+            "en": "Quran 2:183–185 — fasting",
+            "fr": "Coran 2:183–185 — jeûne"
+          },
+          "url": "https://quran.com/2/183-185",
+          "context": {
+            "nl": "Doel, maand en uitzonderingen van het vasten.",
+            "en": "Purpose, month and exceptions of fasting.",
+            "fr": "Objectif, mois et exceptions du jeûne."
+          },
+          "passage": {
+            "tradition": "islam",
+            "surah": 2,
+            "verse": 183,
+            "endVerse": 185,
+            "edition": "nl"
+          }
+        },
+        {
+          "id": "ramadan-day",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 2:187 — dag en nacht",
+            "en": "Quran 2:187 — day and night",
+            "fr": "Coran 2:187 — jour et nuit"
+          },
+          "url": "https://quran.com/2/187",
+          "context": {
+            "nl": "Grenzen van dagelijkse onthouding.",
+            "en": "Boundaries of daily abstinence.",
+            "fr": "Limites de l'abstinence quotidienne."
+          },
+          "passage": {
+            "tradition": "islam",
+            "surah": 2,
+            "verse": 187,
+            "endVerse": 187,
+            "edition": "nl"
+          }
+        },
+        {
+          "id": "ramadan-umar",
+          "kind": "tradition",
+          "label": {
+            "nl": "Al-Bukhari 2010 — Umar en nachtgebed",
+            "en": "Al-Bukhari 2010 — Umar and night prayer",
+            "fr": "Al-Bukhari 2010 — Umar et la prière nocturne"
+          },
+          "url": "https://sunnah.com/bukhari:2010",
+          "context": {
+            "nl": "Een overgeleverd verhaal over gemeenschappelijke gebedsorganisatie.",
+            "en": "A transmitted account of organising collective prayer.",
+            "fr": "Un récit transmis sur l'organisation de la prière collective."
+          }
+        },
+        {
+          "id": "ramadan-tarawih",
+          "kind": "tradition",
+          "label": {
+            "nl": "Dar al-Ifta — debat over tarawih",
+            "en": "Dar al-Ifta — debate over tarawih",
+            "fr": "Dar al-Ifta — débat sur les tarawih"
+          },
+          "url": "https://www.dar-alifta.org/en/fatwa/details/6530/what-is-the-correct-ruling-of-the-number-of-units-of-prayer-in-tarawih",
+          "context": {
+            "nl": "Een Egyptische soennitische fatwa, geen neutrale inventaris.",
+            "en": "An Egyptian Sunni fatwa, not a neutral inventory.",
+            "fr": "Une fatwa sunnite égyptienne, non un inventaire neutre."
+          }
+        },
+        {
+          "id": "ramadan-moon",
+          "kind": "tradition",
+          "label": {
+            "nl": "Jordaanse Iftaa — verschillende maanwaarnemingen",
+            "en": "Jordanian Iftaa — differing moon sightings",
+            "fr": "Iftaa jordanienne — observations lunaires divergentes"
+          },
+          "url": "https://www.aliftaa.jo/QuestionPrintEn.aspx?QuestionId=3496",
+          "context": {
+            "nl": "Vergelijkt rechtsopvattingen over lokale en ruimere geldigheid.",
+            "en": "Compares legal views of local and wider validity.",
+            "fr": "Compare les conceptions juridiques de validité locale ou élargie."
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:eid-al-fitr",
+      "tradition": "islam",
+      "kind": "feast",
+      "order": 3,
+      "title": {
+        "nl": "Eid al-Fitr — het einde van de vastenmaand",
+        "en": "Eid al-Fitr — the end of Ramadan",
+        "fr": "Aïd al-Fitr — la fin du ramadan"
+      },
+      "summary": {
+        "nl": "Een feest waarin dankbaarheid en sociale solidariteit elkaar ontmoeten.",
+        "en": "A feast connecting gratitude and social solidarity.",
+        "fr": "Une fête reliant gratitude et solidarité sociale."
+      },
+      "calendar": {
+        "text": {
+          "nl": "Op 1 Shawwal, na Ramadan. De concrete datum kan per gemeenschap verschillen door de vaststelling van de nieuwe maanmaand.",
+          "en": "On 1 Shawwal, after Ramadan. The actual date can differ between communities through determination of the new lunar month.",
+          "fr": "Le 1er chawwal, après le ramadan. La date effective peut varier selon la détermination du nouveau mois lunaire par les communautés."
+        },
+        "sourceIds": [
+          "fitr-moon",
+          "fitr-local"
+        ]
+      },
+      "sections": [
+        {
+          "id": "meaning",
+          "text": {
+            "nl": "Het feest markeert de voltooiing van Ramadan. Koran 2:185 biedt een kader van dankbaarheid, maar benoemt Eid al-Fitr niet als feest.",
+            "en": "The feast marks the completion of Ramadan. Quran 2:185 provides a framework of gratitude but does not name Eid al-Fitr as a festival.",
+            "fr": "La fête marque l'achèvement du ramadan. Le Coran 2:185 fournit un cadre de gratitude sans nommer l'Aïd al-Fitr comme fête."
+          },
+          "sourceIds": [
+            "fitr-quran"
+          ]
+        },
+        {
+          "id": "history",
+          "text": {
+            "nl": "Abu Dawud bewaart een overlevering waarin Mohammed twee bestaande feestdagen in Medina vervangt door twee islamitische feesten. Dit is een traditionele oorsprongsvertelling, overgeleverd in een latere verzameling.",
+            "en": "Abu Dawud preserves a report in which Muhammad replaces two existing Medina celebrations with two Islamic festivals. This is a traditional origin account transmitted in a later collection.",
+            "fr": "Abu Dawud transmet un récit où Muhammad remplace deux fêtes de Médine par deux fêtes islamiques. Il s'agit d'un récit traditionnel d'origine conservé dans un recueil ultérieur."
+          },
+          "sourceIds": [
+            "fitr-origin"
+          ]
+        },
+        {
+          "id": "practice",
+          "text": {
+            "nl": "Feestgebed en zakat al-fitr horen bij de rituele praktijk. Al-Bukhari 1503 verbindt de gift in voedsel met het moment vóór het feestgebed.",
+            "en": "Festival prayer and zakat al-fitr belong to ritual practice. Al-Bukhari 1503 connects a food contribution with the period before the festival prayer.",
+            "fr": "La prière festive et la zakat al-fitr font partie du rituel. Al-Bukhari 1503 situe le don alimentaire avant la prière de la fête."
+          },
+          "sourceIds": [
+            "fitr-giving"
+          ]
+        },
+        {
+          "id": "diversity",
+          "text": {
+            "nl": "Een gezamenlijke kalender is niet vanzelfsprekend. De Egyptische Dar al-Ifta bespreekt expliciet reizen tussen landen met verschillende feestdata; Dubai combineert observatie met astronomische gegevens.",
+            "en": "A shared calendar is not automatic. Egypt's Dar al-Ifta explicitly discusses travel between countries with different festival dates; Dubai combines observation with astronomical data.",
+            "fr": "Un calendrier commun ne va pas de soi. Dar al-Ifta d'Égypte traite explicitement des voyages entre pays aux dates festives différentes ; Dubaï associe observation et données astronomiques."
+          },
+          "sourceIds": [
+            "fitr-local",
+            "fitr-moon"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": {
+            "nl": "Wat verandert er wanneer je Koran 2:185 leest als context voor het feest in plaats van als expliciet instellingsverhaal?",
+            "en": "What changes when Quran 2:185 is read as context for the feast rather than an explicit institution narrative?",
+            "fr": "Que change une lecture du Coran 2:185 comme contexte de la fête plutôt que comme récit explicite de son institution ?"
+          },
+          "sourceIds": [
+            "fitr-quran",
+            "fitr-origin"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Hoe kan een voorgeschreven gift sociale verbondenheid vormgeven? Welke gegevens ontbreken om het feitelijke effect te beoordelen?",
+            "en": "How might a prescribed contribution shape social belonging? What evidence is missing to assess its actual effect?",
+            "fr": "Comment un don prescrit peut-il façonner l'appartenance sociale ? Quelles données manquent pour évaluer son effet réel ?"
+          },
+          "sourceIds": [
+            "fitr-giving"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Vergelijk de rol van religieuze autoriteiten en astronomische kennis bij de kalenderbepaling. Waarom volgt uit één religieuze norm niet altijd één datum?",
+            "en": "Compare religious authority and astronomical knowledge in calendar decisions. Why does one religious norm not always produce one date?",
+            "fr": "Comparez autorité religieuse et connaissances astronomiques dans le calendrier. Pourquoi une norme religieuse ne produit-elle pas toujours une date unique ?"
+          },
+          "sourceIds": [
+            "fitr-local",
+            "fitr-moon"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "id": "fitr-quran",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 2:185 — voltooiing en dankbaarheid",
+            "en": "Quran 2:185 — completion and gratitude",
+            "fr": "Coran 2:185 — achèvement et gratitude"
+          },
+          "url": "https://quran.com/2/185",
+          "context": {
+            "nl": "Thematische context; de feestnaam staat niet in dit vers.",
+            "en": "Thematic context; this verse does not name the feast.",
+            "fr": "Contexte thématique ; le verset ne nomme pas la fête."
+          },
+          "passage": {
+            "tradition": "islam",
+            "surah": 2,
+            "verse": 185,
+            "endVerse": 185,
+            "edition": "nl"
+          }
+        },
+        {
+          "id": "fitr-origin",
+          "kind": "tradition",
+          "label": {
+            "nl": "Abu Dawud 1134 — twee feesten",
+            "en": "Abu Dawud 1134 — two festivals",
+            "fr": "Abu Dawud 1134 — deux fêtes"
+          },
+          "url": "https://sunnah.com/abudawud:1134",
+          "context": {
+            "nl": "Hadith over het verbreken van het vasten en het offerfeest.",
+            "en": "Hadith about breaking the fast and the sacrifice festival.",
+            "fr": "Hadith sur la rupture du jeûne et la fête du sacrifice."
+          }
+        },
+        {
+          "id": "fitr-giving",
+          "kind": "tradition",
+          "label": {
+            "nl": "Al-Bukhari 1503 — zakat al-fitr",
+            "en": "Al-Bukhari 1503 — zakat al-fitr",
+            "fr": "Al-Bukhari 1503 — zakat al-fitr"
+          },
+          "url": "https://sunnah.com/bukhari:1503",
+          "context": {
+            "nl": "Voedselgift en feestgebed in de overlevering.",
+            "en": "Food contribution and festival prayer in the tradition.",
+            "fr": "Don alimentaire et prière festive dans la tradition."
+          }
+        },
+        {
+          "id": "fitr-moon",
+          "kind": "historical",
+          "label": {
+            "nl": "IACAD Dubai — vaststelling van Shawwal",
+            "en": "IACAD Dubai — determining Shawwal",
+            "fr": "IACAD Dubaï — détermination de chawwal"
+          },
+          "url": "https://www.iacad.gov.ae/en/media/news/iacad-observes-shawwal-crescent-today-under-approved-moon-sighting-system",
+          "context": {
+            "nl": "Hedendaags institutioneel voorbeeld; geen universele kalender.",
+            "en": "A contemporary institutional example, not a universal calendar.",
+            "fr": "Un exemple institutionnel contemporain, non un calendrier universel."
+          }
+        },
+        {
+          "id": "fitr-local",
+          "kind": "tradition",
+          "label": {
+            "nl": "Dar al-Ifta — vasten in verschillende landen",
+            "en": "Dar al-Ifta — fasting across countries",
+            "fr": "Dar al-Ifta — jeûner dans différents pays"
+          },
+          "url": "https://www.dar-alifta.org/en/article/details/535/dar-al-iftaa-starting-ramadan-in-one-country-and-ending-it-in-another-with-whic",
+          "context": {
+            "nl": "Een fatwa over reizen en uiteenlopende feestdata.",
+            "en": "A fatwa on travel and differing festival dates.",
+            "fr": "Une fatwa sur les voyages et les dates festives différentes."
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:hajj",
+      "tradition": "islam",
+      "kind": "ritual",
+      "order": 4,
+      "title": {
+        "nl": "Hajj — bedevaart naar Mekka",
+        "en": "Hajj — pilgrimage to Mecca",
+        "fr": "Hajj — pèlerinage à La Mecque"
+      },
+      "summary": {
+        "nl": "Bedevaart als samenspel van heilige ruimte, herinnering en gemeenschap.",
+        "en": "Pilgrimage connecting sacred space, memory and community.",
+        "fr": "Un pèlerinage reliant espace sacré, mémoire et communauté."
+      },
+      "calendar": {
+        "text": {
+          "nl": "De centrale rituelen vallen op 8–13 Dhu al-Hijja, met Arafat op de negende dag. De concrete planning volgt de officieel vastgestelde bedevaartkalender.",
+          "en": "The central rites fall on 8–13 Dhu al-Hijja, with Arafat on the ninth day. Actual scheduling follows the officially established pilgrimage calendar.",
+          "fr": "Les rites principaux se déroulent du 8 au 13 dhou al-hijja, avec Arafat le neuvième jour. Le programme suit le calendrier officiel du pèlerinage."
+        },
+        "sourceIds": [
+          "hajj-guide",
+          "hajj-nusuk"
+        ]
+      },
+      "sections": [
+        {
+          "id": "meaning",
+          "text": {
+            "nl": "Koran 22:26–29 verbindt de bedevaart met Ibrahim, het heiligdom en zorg voor behoeftigen. Zo komen geloofsherinnering en sociale verantwoordelijkheid in één rituele ruimte samen.",
+            "en": "Quran 22:26–29 links pilgrimage with Ibrahim, the sanctuary and care for those in need. Religious memory and social responsibility meet within one ritual space.",
+            "fr": "Le Coran 22:26–29 relie le pèlerinage à Ibrahim, au sanctuaire et au soutien des personnes démunies. Mémoire religieuse et responsabilité sociale se rejoignent dans un espace rituel."
+          },
+          "sourceIds": [
+            "hajj-quran"
+          ]
+        },
+        {
+          "id": "history",
+          "text": {
+            "nl": "Muslim 1218a situeert Mohammeds bedevaart in het tiende jaar na de migratie naar Medina en beschrijft zijn handelingen uitvoerig. Het is een overgeleverd voorbeeldverhaal dat latere rituele regels helpt onderbouwen.",
+            "en": "Muslim 1218a situates Muhammad's pilgrimage in the tenth year after migration to Medina and describes his actions in detail. This transmitted exemplary account helps underpin later ritual rules.",
+            "fr": "Muslim 1218a situe le pèlerinage de Muhammad dans la dixième année après la migration à Médine et détaille ses gestes. Ce récit exemplaire transmis contribue à fonder les règles rituelles ultérieures."
+          },
+          "sourceIds": [
+            "hajj-jabir"
+          ]
+        },
+        {
+          "id": "practice",
+          "text": {
+            "nl": "De rituelen omvatten onder meer de rondgang om de Kaäba, het gaan tussen Safa en Marwa en het verblijf bij Arafat. Nusuk, de officiële Saoedische gids, verbindt deze plaatsen met religieuze herinnering.",
+            "en": "Rites include circling the Kaaba, moving between Safa and Marwa, and being at Arafat. Nusuk, the official Saudi guide, connects these places with religious memory.",
+            "fr": "Les rites comprennent notamment les tours autour de la Kaaba, le parcours entre Safa et Marwa et la station à Arafat. Le guide officiel saoudien Nusuk relie ces lieux à la mémoire religieuse."
+          },
+          "sourceIds": [
+            "hajj-nusuk"
+          ]
+        },
+        {
+          "id": "diversity",
+          "text": {
+            "nl": "De hajj kent verschillende rituele vormen, zoals ifrad, qiran en tamattu, met uiteenlopende combinaties van hajj en umra. De plicht wordt bovendien verbonden met lichamelijke en financiële mogelijkheden.",
+            "en": "Hajj has different ritual forms, including ifrad, qiran and tamattu, combining hajj and umra in different ways. Obligation is also linked to physical and financial capacity.",
+            "fr": "Le hajj comporte différentes formes rituelles, dont ifrad, qiran et tamattu, associant différemment hajj et umra. L'obligation dépend aussi des capacités physiques et financières."
+          },
+          "sourceIds": [
+            "hajj-guide",
+            "hajj-nusuk"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": {
+            "nl": "Hoe maken ruimtelijke handelingen een verhaal over Ibrahim of Hajar tot beleefde herinnering? Onderscheid korantekst en latere duiding.",
+            "en": "How do spatial actions turn a story about Ibrahim or Hajar into lived memory? Distinguish Quranic text from later interpretation.",
+            "fr": "Comment les gestes dans l'espace transforment-ils un récit sur Ibrahim ou Hajar en mémoire vécue ? Distinguez texte coranique et interprétation ultérieure."
+          },
+          "sourceIds": [
+            "hajj-quran",
+            "hajj-nusuk"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Vergelijk het reisverslag bij Muslim met een hedendaagse officiële gids. Welke doelen, lezers en soorten gezag verschillen?",
+            "en": "Compare Muslim's pilgrimage account with a contemporary official guide. How do their purposes, audiences and forms of authority differ?",
+            "fr": "Comparez le récit chez Muslim à un guide officiel contemporain. En quoi leurs objectifs, publics et formes d'autorité diffèrent-ils ?"
+          },
+          "sourceIds": [
+            "hajj-jabir",
+            "hajj-nusuk"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Hoe zou je onderzoeken of het ideaal van gemeenschappelijke verbondenheid samengaat met ongelijke toegang tot de hajj? Benoem benodigde gegevens.",
+            "en": "How would you investigate whether communal belonging coexists with unequal access to hajj? Identify the evidence required.",
+            "fr": "Comment étudier la coexistence entre l'idéal de communauté et un accès inégal au hajj ? Précisez les données nécessaires."
+          },
+          "sourceIds": [
+            "hajj-nusuk"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "id": "hajj-quran",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 22:26–29 — oproep tot bedevaart",
+            "en": "Quran 22:26–29 — call to pilgrimage",
+            "fr": "Coran 22:26–29 — appel au pèlerinage"
+          },
+          "url": "https://quran.com/22/26-29",
+          "context": {
+            "nl": "Ibrahim, het heiligdom en het delen van voedsel.",
+            "en": "Ibrahim, the sanctuary and sharing food.",
+            "fr": "Ibrahim, le sanctuaire et le partage alimentaire."
+          },
+          "passage": {
+            "tradition": "islam",
+            "surah": 22,
+            "verse": 26,
+            "endVerse": 29,
+            "edition": "nl"
+          }
+        },
+        {
+          "id": "hajj-jabir",
+          "kind": "tradition",
+          "label": {
+            "nl": "Muslim 1218a — Jabirs bedevaartverslag",
+            "en": "Muslim 1218a — Jabir's pilgrimage account",
+            "fr": "Muslim 1218a — récit du pèlerinage de Jabir"
+          },
+          "url": "https://sunnah.com/muslim:1218a",
+          "context": {
+            "nl": "Uitvoerige hadith; onderscheid overlevering en rechtstreeks ooggetuigendocument.",
+            "en": "An extended hadith; distinguish transmission from a direct eyewitness document.",
+            "fr": "Un long hadith ; distinguez transmission et document directement contemporain."
+          }
+        },
+        {
+          "id": "hajj-nusuk",
+          "kind": "tradition",
+          "label": {
+            "nl": "Nusuk — rituelen van de hajj",
+            "en": "Nusuk — hajj rituals",
+            "fr": "Nusuk — rites du hajj"
+          },
+          "url": "https://hajj.nusuk.sa/nusuk/hajj-rituals",
+          "context": {
+            "nl": "Hedendaagse officiële Saoedische presentatie van de bedevaart.",
+            "en": "Contemporary official Saudi presentation of pilgrimage.",
+            "fr": "Présentation officielle saoudienne contemporaine du pèlerinage."
+          }
+        },
+        {
+          "id": "hajj-guide",
+          "kind": "tradition",
+          "label": {
+            "nl": "Dar al-Ifta — overzicht van de bedevaartrituelen",
+            "en": "Dar al-Ifta — overview of pilgrimage rites",
+            "fr": "Dar al-Ifta — aperçu des rites du pèlerinage"
+          },
+          "url": "https://www.dar-alifta.org/en/article/details/29/overview-of-the-rites-of-hajj-and-umrah",
+          "context": {
+            "nl": "Rituele vormen en volgorde van de bedevaartdagen.",
+            "en": "Ritual forms and sequence of pilgrimage days.",
+            "fr": "Formes rituelles et succession des jours du pèlerinage."
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:eid-al-adha",
+      "tradition": "islam",
+      "kind": "feast",
+      "order": 5,
+      "title": {
+        "nl": "Eid al-Adha — het Offerfeest",
+        "en": "Eid al-Adha — the Feast of Sacrifice",
+        "fr": "Aïd al-Adha — la fête du Sacrifice"
+      },
+      "summary": {
+        "nl": "Ibrahims beproeving, toewijding en delen met anderen.",
+        "en": "Ibrahim's trial, devotion and sharing with others.",
+        "fr": "L'épreuve d'Ibrahim, le dévouement et le partage."
+      },
+      "calendar": {
+        "text": {
+          "nl": "Vanaf 10 Dhu al-Hijja, tijdens de hajj. De toegestane offerperiode verschilt volgens rechtsopvatting; de Jordaanse Iftaa hanteert tot zonsondergang op de dertiende dag.",
+          "en": "From 10 Dhu al-Hijja, during hajj. The permitted sacrifice period varies by legal interpretation; Jordan's Iftaa uses sunset on the thirteenth day as its end.",
+          "fr": "À partir du 10 dhou al-hijja, pendant le hajj. La période autorisée varie selon l'interprétation juridique ; l'Iftaa jordanienne la clôt au coucher du soleil du treizième jour."
+        },
+        "sourceIds": [
+          "adha-law",
+          "adha-differences",
+          "adha-sistani"
+        ]
+      },
+      "sections": [
+        {
+          "id": "meaning",
+          "text": {
+            "nl": "Het feest wordt verbonden met Ibrahims bereidheid tot offeren. Koran 37:102–107 noemt de zoon niet bij naam; Koran 22:36–37 benadrukt godsbewustzijn en het voeden van anderen.",
+            "en": "The feast is associated with Ibrahim's willingness to sacrifice. Quran 37:102–107 does not name the son; Quran 22:36–37 stresses awareness of God and feeding others.",
+            "fr": "La fête est liée à la disposition d'Ibrahim à sacrifier. Le Coran 37:102–107 ne nomme pas le fils ; 22:36–37 souligne la conscience de Dieu et le partage alimentaire."
+          },
+          "sourceIds": [
+            "adha-story",
+            "adha-ethics"
+          ]
+        },
+        {
+          "id": "history",
+          "text": {
+            "nl": "De feestnaam komt uit de rituele overlevering, niet uit deze koranpassages. Houd het heilige verhaal, de hadith en latere juridische uitwerking als verschillende bronlagen uit elkaar.",
+            "en": "The festival name comes from ritual tradition, not these Quranic passages. Distinguish sacred narrative, hadith and later legal elaboration as different layers of evidence.",
+            "fr": "Le nom de la fête appartient à la tradition rituelle, non à ces passages coraniques. Distinguez récit sacré, hadith et élaboration juridique ultérieure."
+          },
+          "sourceIds": [
+            "adha-origin",
+            "adha-story",
+            "adha-law"
+          ]
+        },
+        {
+          "id": "practice",
+          "text": {
+            "nl": "Feestgebed, een offer volgens de betrokken rechtsregels en het delen van voedsel vormen belangrijke praktijken. Niet iedere moslim heeft dezelfde verplichting: middelen en rechtsopvatting spelen mee.",
+            "en": "Festival prayer, sacrifice under the relevant legal rules and sharing food are important practices. Muslims do not all have the same obligation: resources and legal interpretation matter.",
+            "fr": "Prière festive, sacrifice selon les règles concernées et partage alimentaire sont des pratiques importantes. Les obligations dépendent notamment des moyens et de l'interprétation juridique."
+          },
+          "sourceIds": [
+            "adha-law",
+            "adha-differences",
+            "adha-ethics"
+          ]
+        },
+        {
+          "id": "diversity",
+          "text": {
+            "nl": "Rechtsgeleerden verschillen over de status van het offer en de toegestane offerdagen. Een instelling spreekt vanuit een bepaalde juridische traditie; één fatwa vertegenwoordigt niet alle islamitische praktijk.",
+            "en": "Jurists differ over the sacrifice's legal status and permitted days. An institution speaks from a particular legal tradition; one fatwa does not represent all Islamic practice.",
+            "fr": "Les juristes divergent sur le statut du sacrifice et les jours autorisés. Une institution s'exprime depuis une tradition juridique particulière ; une fatwa ne représente pas toutes les pratiques musulmanes."
+          },
+          "sourceIds": [
+            "adha-differences",
+            "adha-sistani"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": {
+            "nl": "Welke aannames breng je mee over de identiteit van Ibrahims zoon? Markeer wat de korantekst zelf zegt en wat uit andere tradities komt.",
+            "en": "What assumptions do you bring about the identity of Ibrahim's son? Mark what the Quranic text says and what comes from other traditions.",
+            "fr": "Quels présupposés avez-vous sur l'identité du fils d'Ibrahim ? Distinguez ce que dit le texte coranique de ce qui vient d'autres traditions."
+          },
+          "sourceIds": [
+            "adha-story"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Hoe verbindt 22:36–37 materiële handelingen met intentie en sociale zorg? Onderbouw je lezing met beide verzen.",
+            "en": "How does 22:36–37 connect material actions with intention and social care? Support your reading with both verses.",
+            "fr": "Comment 22:36–37 relie-t-il gestes matériels, intention et solidarité ? Appuyez votre lecture sur les deux versets."
+          },
+          "sourceIds": [
+            "adha-ethics"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Hoe zou je een maatschappelijk debat over het Offerfeest analyseren zonder de juridische en praktische verscheidenheid te reduceren?",
+            "en": "How would you analyse a public debate about Eid al-Adha without reducing its legal and practical diversity?",
+            "fr": "Comment analyser un débat public sur l'Aïd al-Adha sans réduire sa diversité juridique et pratique ?"
+          },
+          "sourceIds": [
+            "adha-law",
+            "adha-differences"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "id": "adha-story",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 37:102–107 — Ibrahim en zijn zoon",
+            "en": "Quran 37:102–107 — Ibrahim and his son",
+            "fr": "Coran 37:102–107 — Ibrahim et son fils"
+          },
+          "url": "https://quran.com/37/102-107",
+          "context": {
+            "nl": "De zoon blijft in deze passage naamloos.",
+            "en": "The son remains unnamed in this passage.",
+            "fr": "Le fils reste anonyme dans ce passage."
+          },
+          "passage": {
+            "tradition": "islam",
+            "surah": 37,
+            "verse": 102,
+            "endVerse": 107,
+            "edition": "nl"
+          }
+        },
+        {
+          "id": "adha-ethics",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 22:36–37 — offer en intentie",
+            "en": "Quran 22:36–37 — sacrifice and intention",
+            "fr": "Coran 22:36–37 — sacrifice et intention"
+          },
+          "url": "https://quran.com/22/36-37",
+          "context": {
+            "nl": "Heilige handeling, voedselverdeling en godsbewustzijn.",
+            "en": "Sacred action, food distribution and awareness of God.",
+            "fr": "Geste sacré, partage alimentaire et conscience de Dieu."
+          },
+          "passage": {
+            "tradition": "islam",
+            "surah": 22,
+            "verse": 36,
+            "endVerse": 37,
+            "edition": "nl"
+          }
+        },
+        {
+          "id": "adha-origin",
+          "kind": "tradition",
+          "label": {
+            "nl": "Abu Dawud 1134 — feestoverlevering",
+            "en": "Abu Dawud 1134 — festival tradition",
+            "fr": "Abu Dawud 1134 — tradition festive"
+          },
+          "url": "https://sunnah.com/abudawud:1134",
+          "context": {
+            "nl": "Hadith, geen koranvers.",
+            "en": "Hadith, not a Quranic verse.",
+            "fr": "Hadith, non verset coranique."
+          }
+        },
+        {
+          "id": "adha-law",
+          "kind": "tradition",
+          "label": {
+            "nl": "Jordaanse Iftaa — offerperiode",
+            "en": "Jordanian Iftaa — sacrifice period",
+            "fr": "Iftaa jordanienne — période du sacrifice"
+          },
+          "url": "https://aliftaa.jo/QuestionPrintEn.aspx?QuestionId=4361",
+          "context": {
+            "nl": "Een hedendaagse uitspraak over de toegestane tijd.",
+            "en": "A contemporary ruling on the permitted period.",
+            "fr": "Un avis contemporain sur la période autorisée."
+          }
+        },
+        {
+          "id": "adha-differences",
+          "kind": "tradition",
+          "label": {
+            "nl": "Dar al-Ifta — regels van het offer",
+            "en": "Dar al-Ifta — sacrifice rules",
+            "fr": "Dar al-Ifta — règles du sacrifice"
+          },
+          "url": "https://www.dar-alifta.org/en/fatwa/details/2146/defining-the-udhiyyah-and-the-reasons-for-its-legislation",
+          "context": {
+            "nl": "Fatwa die uiteenlopende opvattingen over de verplichting bespreekt.",
+            "en": "A fatwa discussing differing views of obligation.",
+            "fr": "Fatwa examinant les divergences sur l'obligation."
+          }
+        },
+        {
+          "id": "adha-sistani",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sistani — het vrijwillige offer",
+            "en": "Sistani — recommended sacrifice",
+            "fr": "Sistani — sacrifice recommandé"
+          },
+          "url": "https://www.sistani.org/english/qa/02825/",
+          "context": {
+            "nl": "Twaalver-sjiitische regels; onderscheid met het bedevaartoffer.",
+            "en": "Twelver Shia rules; distinguishes the pilgrimage offering.",
+            "fr": "Règles chiites duodécimaines ; distinction avec l'offrande du pèlerinage."
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:ashura",
+      "tradition": "islam",
+      "kind": "ritual",
+      "order": 6,
+      "title": {
+        "nl": "Ashura — herinnering, vasten en rouw",
+        "en": "Ashura — memory, fasting and mourning",
+        "fr": "Achoura — mémoire, jeûne et deuil"
+      },
+      "summary": {
+        "nl": "Eén kalenderdag met verschillende religieuze herinneringen.",
+        "en": "One calendar day carrying different religious memories.",
+        "fr": "Une même date porteuse de mémoires religieuses différentes."
+      },
+      "calendar": {
+        "text": {
+          "nl": "Op 10 Muharram, de eerste maand van de islamitische maankalender.",
+          "en": "On 10 Muharram, the first month of the Islamic lunar calendar.",
+          "fr": "Le 10 mouharram, premier mois du calendrier lunaire islamique."
+        },
+        "sourceIds": [
+          "ashura-study"
+        ]
+      },
+      "sections": [
+        {
+          "id": "meaning",
+          "text": {
+            "nl": "Een soennitische hadith verbindt het vasten met de redding van Musa en zijn volk. Voor veel sjiitische moslims staat de dood van Husayn bij Karbala centraal.",
+            "en": "A Sunni hadith connects fasting with the deliverance of Musa and his people. For many Shia Muslims, Husayn's death at Karbala is central.",
+            "fr": "Un hadith sunnite associe le jeûne au salut de Moussa et de son peuple. Pour de nombreux musulmans chiites, la mort de Husayn à Karbala est centrale."
+          },
+          "sourceIds": [
+            "ashura-fasting",
+            "ashura-karbala"
+          ]
+        },
+        {
+          "id": "history",
+          "text": {
+            "nl": "Husayn, een kleinzoon van Mohammed, werd in 61 AH/680 bij Karbala gedood door het leger van het Omajjadische gezag. De latere herdenking moet worden onderscheiden van het koranverhaal over Musa: dat stelt Ashura niet in.",
+            "en": "Husayn, Muhammad's grandson, was killed at Karbala in 61 AH/680 by the Umayyad authorities' army. Later commemoration must be distinguished from the Quranic story of Musa, which does not establish Ashura.",
+            "fr": "Husayn, petit-fils de Muhammad, fut tué à Karbala en 61 AH/680 par l'armée du pouvoir omeyyade. La commémoration ultérieure se distingue du récit coranique de Moussa, qui n'institue pas l'Achoura."
+          },
+          "sourceIds": [
+            "ashura-karbala",
+            "ashura-quran"
+          ]
+        },
+        {
+          "id": "practice",
+          "text": {
+            "nl": "Vrijwillig vasten is een soennitische praktijk. Sjiitische vormen omvatten rouwbijeenkomsten en processies die Husayns lot in herinnering brengen.",
+            "en": "Voluntary fasting is a Sunni practice. Shia forms include mourning gatherings and processions remembering Husayn's fate.",
+            "fr": "Le jeûne volontaire est une pratique sunnite. Les formes chiites incluent des assemblées de deuil et des processions rappelant le destin de Husayn."
+          },
+          "sourceIds": [
+            "ashura-fasting",
+            "ashura-study"
+          ]
+        },
+        {
+          "id": "diversity",
+          "text": {
+            "nl": "De uitvoering verandert per plaats en periode. Open University beschrijft bijvoorbeeld bloeddonatie bij hedendaagse herdenkingen: religieuze herinnering kan nieuwe sociale vormen aannemen.",
+            "en": "Observance changes across places and periods. Open University describes blood donation in contemporary commemorations: religious memory can take new social forms.",
+            "fr": "Les pratiques évoluent selon les lieux et les époques. Open University décrit notamment le don de sang lors de commémorations contemporaines : la mémoire religieuse peut prendre de nouvelles formes sociales."
+          },
+          "sourceIds": [
+            "ashura-study"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": {
+            "nl": "Hoe verschilt de verbinding met Musa in de hadith van de verbinding met Karbala in historische herinnering? Vergelijk bronsoort, tijd en functie.",
+            "en": "How does the hadith's connection with Musa differ from the connection with Karbala in historical memory? Compare source type, time and function.",
+            "fr": "Comment le lien avec Moussa dans le hadith diffère-t-il du lien avec Karbala dans la mémoire historique ? Comparez type de source, époque et fonction."
+          },
+          "sourceIds": [
+            "ashura-fasting",
+            "ashura-karbala"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Welke aanvullende bronnen heb je nodig om de overgang van de gebeurtenis in 680 naar hedendaagse rouwrituelen te reconstrueren?",
+            "en": "What additional sources would you need to reconstruct the transition from the event in 680 to contemporary mourning rituals?",
+            "fr": "Quelles sources supplémentaires permettraient de reconstruire le passage de l'événement de 680 aux rites de deuil contemporains ?"
+          },
+          "sourceIds": [
+            "ashura-karbala",
+            "ashura-study"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Hoe kan bloeddonatie continuïteit én verandering in een herdenking uitdrukken? Ontwerp een onderzoeksvraag die deelnemers zelf aan het woord laat.",
+            "en": "How can blood donation express both continuity and change in commemoration? Design a research question that includes participants' own voices.",
+            "fr": "Comment le don de sang peut-il exprimer continuité et changement dans une commémoration ? Formulez une question de recherche donnant la parole aux participants."
+          },
+          "sourceIds": [
+            "ashura-study"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "id": "ashura-quran",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 26:63–68 — Musa en de zee",
+            "en": "Quran 26:63–68 — Musa and the sea",
+            "fr": "Coran 26:63–68 — Moussa et la mer"
+          },
+          "url": "https://quran.com/ash-shuara/63-68",
+          "context": {
+            "nl": "Verhaalcontext; geen voorschrift voor Ashura of verwijzing naar Karbala.",
+            "en": "Narrative context; neither an Ashura prescription nor a reference to Karbala.",
+            "fr": "Contexte narratif ; ni prescription de l'Achoura, ni référence à Karbala."
+          },
+          "passage": {
+            "tradition": "islam",
+            "surah": 26,
+            "verse": 63,
+            "endVerse": 68,
+            "edition": "nl"
+          }
+        },
+        {
+          "id": "ashura-fasting",
+          "kind": "tradition",
+          "label": {
+            "nl": "Al-Bukhari 2004 — vasten en Musa",
+            "en": "Al-Bukhari 2004 — fasting and Musa",
+            "fr": "Al-Bukhari 2004 — jeûne et Moussa"
+          },
+          "url": "https://sunnah.com/bukhari:2004",
+          "context": {
+            "nl": "Soennitische overlevering over Ashura en de redding van Israël.",
+            "en": "Sunni tradition connecting Ashura with Israel's deliverance.",
+            "fr": "Tradition sunnite reliant l'Achoura au salut d'Israël."
+          }
+        },
+        {
+          "id": "ashura-karbala",
+          "kind": "historical",
+          "label": {
+            "nl": "Institute of Ismaili Studies — Karbala",
+            "en": "Institute of Ismaili Studies — Karbala",
+            "fr": "Institute of Ismaili Studies — Karbala"
+          },
+          "url": "https://www.iis.ac.uk/glossary/karbala/",
+          "context": {
+            "nl": "Historische situering van Husayns dood en de herdenkingsplaats.",
+            "en": "Historical location of Husayn's death and its commemorative site.",
+            "fr": "Situation historique de la mort de Husayn et du lieu de mémoire."
+          }
+        },
+        {
+          "id": "ashura-study",
+          "kind": "historical",
+          "label": {
+            "nl": "Hugh Beattie, Open University — Ashura",
+            "en": "Hugh Beattie, Open University — Ashura",
+            "fr": "Hugh Beattie, Open University — Achoura"
+          },
+          "url": "https://www.open.edu/openlearn/history-the-arts/religious-studies/ashura",
+          "context": {
+            "nl": "Academische inleiding tot historische ontwikkeling en hedendaagse verscheidenheid.",
+            "en": "Academic introduction to historical development and contemporary diversity.",
+            "fr": "Introduction universitaire au développement historique et à la diversité contemporaine."
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:mawlid",
+      "tradition": "islam",
+      "kind": "feast",
+      "order": 7,
+      "title": {
+        "nl": "Mawlid — de geboorteherdenking van Mohammed",
+        "en": "Mawlid — commemorating Muhammad's birth",
+        "fr": "Mawlid — commémoration de la naissance de Muhammad"
+      },
+      "summary": {
+        "nl": "Een casus over liefde voor de profeet, traditie en betwiste vernieuwing.",
+        "en": "A case study in love for the Prophet, tradition and contested innovation.",
+        "fr": "Une étude de l'amour du Prophète, de la tradition et de l'innovation contestée."
+      },
+      "calendar": {
+        "text": {
+          "nl": "Veel vieringen vallen op 12 Rabi al-Awwal; veel twaalver-sjiitische gemeenschappen herdenken de geboorte op de zeventiende. Niet alle moslims vieren Mawlid.",
+          "en": "Many celebrations fall on 12 Rabi al-Awwal; many Twelver Shia communities commemorate the birth on the seventeenth. Not all Muslims celebrate Mawlid.",
+          "fr": "De nombreuses célébrations ont lieu le 12 rabi al-awwal ; beaucoup de communautés chiites duodécimaines commémorent la naissance le 17. Tous les musulmans ne célèbrent pas le Mawlid."
+        },
+        "sourceIds": [
+          "mawlid-calendar",
+          "mawlid-shia",
+          "mawlid-baz"
+        ]
+      },
+      "sections": [
+        {
+          "id": "meaning",
+          "text": {
+            "nl": "Vierders drukken verbondenheid met Mohammed uit. Koran 33:21 noemt hem een voorbeeld, maar schrijft geen jaarlijks geboortefeest voor; een hadith over maandagvasten is evenmin een beschrijving van een jaarlijkse Mawlidviering.",
+            "en": "Celebrants express attachment to Muhammad. Quran 33:21 calls him an example but does not prescribe an annual birthday festival; a hadith about Monday fasting likewise does not describe an annual Mawlid celebration.",
+            "fr": "Les participants expriment leur attachement à Muhammad. Le Coran 33:21 le présente comme modèle sans prescrire de fête annuelle ; un hadith sur le jeûne du lundi ne décrit pas non plus un Mawlid annuel."
+          },
+          "sourceIds": [
+            "mawlid-quran",
+            "mawlid-monday",
+            "mawlid-ifta"
+          ]
+        },
+        {
+          "id": "history",
+          "text": {
+            "nl": "Mawlid ontwikkelde zich tot publieke vertel- en vieringscultuur in de middeleeuwse islamitische wereld. Historica Marion Holmes Katz onderzoekt daarbij ook de rol van gewone gelovigen en vrouwen, naast juridische debatten.",
+            "en": "Mawlid developed into a public culture of narratives and celebration in the medieval Islamic world. Historian Marion Holmes Katz also examines ordinary believers and women alongside legal debates.",
+            "fr": "Le Mawlid s'est développé en une culture publique de récits et de célébrations dans le monde islamique médiéval. L'historienne Marion Holmes Katz étudie aussi les fidèles ordinaires et les femmes, au-delà des débats juridiques."
+          },
+          "sourceIds": [
+            "mawlid-history"
+          ]
+        },
+        {
+          "id": "practice",
+          "text": {
+            "nl": "Dar al-Ifta noemt koranrecitatie, lofpoëzie en gezamenlijke maaltijden als vormen van herdenking. De instelling legitimeert deze praktijken als uitingen van liefde voor de profeet.",
+            "en": "Dar al-Ifta lists Quran recitation, praise poetry and shared meals as commemorative forms. The institution legitimises these practices as expressions of love for the Prophet.",
+            "fr": "Dar al-Ifta mentionne la récitation coranique, la poésie de louange et les repas partagés. L'institution légitime ces pratiques comme expressions d'amour pour le Prophète."
+          },
+          "sourceIds": [
+            "mawlid-ifta"
+          ]
+        },
+        {
+          "id": "diversity",
+          "text": {
+            "nl": "Dar al-Ifta staat viering toe, terwijl Ibn Baz haar afwijst als ongeoorloofde religieuze vernieuwing. Beide beroepen zich op trouw aan Mohammed; hun meningsverschil gaat mede over wat geldige navolging inhoudt.",
+            "en": "Dar al-Ifta permits celebration, while Ibn Baz rejects it as an unauthorised religious innovation. Both appeal to fidelity to Muhammad; they disagree partly over what valid emulation entails.",
+            "fr": "Dar al-Ifta autorise la célébration, tandis qu'Ibn Baz la rejette comme innovation religieuse non autorisée. Tous deux invoquent la fidélité à Muhammad et divergent notamment sur le sens d'une imitation légitime."
+          },
+          "sourceIds": [
+            "mawlid-ifta",
+            "mawlid-baz"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": {
+            "nl": "Welke interpretatieve stappen zijn nodig om van 33:21 of maandagvasten tot een argument over een jaarlijks feest te komen?",
+            "en": "What interpretative steps are needed to move from 33:21 or Monday fasting to an argument about an annual festival?",
+            "fr": "Quelles étapes interprétatives permettent de passer de 33:21 ou du jeûne du lundi à un argument sur une fête annuelle ?"
+          },
+          "sourceIds": [
+            "mawlid-quran",
+            "mawlid-monday"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Vergelijk de argumenten van Dar al-Ifta en Ibn Baz. Hoe verschillen hun criteria voor traditie en vernieuwing zonder hun gedeelde uitgangspunten te negeren?",
+            "en": "Compare Dar al-Ifta's and Ibn Baz's arguments. How do their criteria for tradition and innovation differ despite shared premises?",
+            "fr": "Comparez les arguments de Dar al-Ifta et d'Ibn Baz. Comment leurs critères de tradition et d'innovation diffèrent-ils malgré des prémisses communes ?"
+          },
+          "sourceIds": [
+            "mawlid-ifta",
+            "mawlid-baz"
+          ]
+        },
+        {
+          "question": {
+            "nl": "Wat kan historisch onderzoek naar deelname van vrouwen zichtbaar maken dat een fatwa niet onderzoekt? Formuleer een vraag en een geschikte bronsoort.",
+            "en": "What can historical research on women's participation reveal that a fatwa does not examine? Formulate a question and a suitable source type.",
+            "fr": "Que peut révéler l'étude historique de la participation des femmes qu'une fatwa n'examine pas ? Proposez une question et un type de source adapté."
+          },
+          "sourceIds": [
+            "mawlid-history",
+            "mawlid-ifta"
+          ]
+        }
+      ],
+      "references": [
+        {
+          "id": "mawlid-quran",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 33:21 — Mohammed als voorbeeld",
+            "en": "Quran 33:21 — Muhammad as an example",
+            "fr": "Coran 33:21 — Muhammad comme modèle"
+          },
+          "url": "https://quran.com/33/21",
+          "context": {
+            "nl": "Thematische verwijzing; geen instelling van een geboortefeest.",
+            "en": "Thematic reference; does not establish a birthday festival.",
+            "fr": "Référence thématique ; n'institue pas de fête de naissance."
+          },
+          "passage": {
+            "tradition": "islam",
+            "surah": 33,
+            "verse": 21,
+            "endVerse": 21,
+            "edition": "nl"
+          }
+        },
+        {
+          "id": "mawlid-monday",
+          "kind": "tradition",
+          "label": {
+            "nl": "Muslim 1162b — maandagvasten",
+            "en": "Muslim 1162b — Monday fasting",
+            "fr": "Muslim 1162b — jeûne du lundi"
+          },
+          "url": "https://sunnah.com/muslim:1162b",
+          "context": {
+            "nl": "Hadith die geboorte en openbaring met maandag verbindt.",
+            "en": "Hadith connecting birth and revelation with Monday.",
+            "fr": "Hadith associant naissance et révélation au lundi."
+          }
+        },
+        {
+          "id": "mawlid-history",
+          "kind": "historical",
+          "label": {
+            "nl": "Marion Holmes Katz — studie van Mawlid (2007)",
+            "en": "Marion Holmes Katz — study of Mawlid (2007)",
+            "fr": "Marion Holmes Katz — étude du Mawlid (2007)"
+          },
+          "url": "https://www.routledge.com/The-Birth-of-The-Prophet-Muhammad/Katz/p/book/9780415551878",
+          "context": {
+            "nl": "Uitgeverspagina van een historische monografie; volledige tekst niet vrij beschikbaar.",
+            "en": "Publisher's page for a historical monograph; full text is not freely available.",
+            "fr": "Page éditoriale d'une monographie historique ; texte intégral non accessible gratuitement."
+          }
+        },
+        {
+          "id": "mawlid-ifta",
+          "kind": "tradition",
+          "label": {
+            "nl": "Dar al-Ifta — toestemming voor Mawlid",
+            "en": "Dar al-Ifta — permitting Mawlid",
+            "fr": "Dar al-Ifta — autorisation du Mawlid"
+          },
+          "url": "https://www.dar-alifta.org/en/fatwa/details/6655/celebrating-prophet-muhammad%E2%80%99s-birth",
+          "context": {
+            "nl": "Een Egyptisch soennitisch pleidooi voor viering.",
+            "en": "An Egyptian Sunni argument supporting celebration.",
+            "fr": "Un argumentaire sunnite égyptien favorable à la célébration."
+          }
+        },
+        {
+          "id": "mawlid-baz",
+          "kind": "tradition",
+          "label": {
+            "nl": "Ibn Baz — afwijzing van Mawlid (Arabisch)",
+            "en": "Ibn Baz — rejecting Mawlid (Arabic)",
+            "fr": "Ibn Baz — rejet du Mawlid (arabe)"
+          },
+          "url": "https://binbaz.org.sa/fatwas/20/في-حكم-الاحتفال-بالموالد-النبوية-وغيرها",
+          "context": {
+            "nl": "Een tegengestelde soennitische rechtsopvatting, op zijn officiële website.",
+            "en": "A contrasting Sunni legal position on his official website.",
+            "fr": "Une position juridique sunnite opposée, sur son site officiel."
+          }
+        },
+        {
+          "id": "mawlid-calendar",
+          "kind": "tradition",
+          "label": {
+            "nl": "Dar al-Ifta — Rabi al-Awwal",
+            "en": "Dar al-Ifta — Rabi al-Awwal",
+            "fr": "Dar al-Ifta — rabi al-awwal"
+          },
+          "url": "https://dar-alifta.org/en/article/details/1914/the-islamic-calendar-a-festive-tree-bearing-fruits-of-mercy",
+          "context": {
+            "nl": "Voorbeeld van een traditie die de twaalfde dag hanteert.",
+            "en": "Example of a tradition observing the twelfth day.",
+            "fr": "Exemple d'une tradition retenant le douzième jour."
+          }
+        },
+        {
+          "id": "mawlid-shia",
+          "kind": "historical",
+          "label": {
+            "nl": "IMAM-US — geboorteherdenking op 17 Rabi al-Awwal",
+            "en": "IMAM-US — birth commemoration on 17 Rabi al-Awwal",
+            "fr": "IMAM-US — commémoration le 17 rabi al-awwal"
+          },
+          "url": "https://imam-us.org/birth-anniversary-of-prophet-muhammad-pbuhhp-imam-jafar-al-sadiq-p-1447-a-h",
+          "context": {
+            "nl": "Hedendaags voorbeeld uit een twaalver-sjiitische instelling.",
+            "en": "A contemporary example from a Twelver Shia institution.",
+            "fr": "Exemple contemporain d'une institution chiite duodécimaine."
+          }
+        }
+      ]
+    }
+  ]
+}

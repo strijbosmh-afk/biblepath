@@ -20,7 +20,7 @@ BiblePath is a working static web app for reading the Bible, Tanakh and Qur’an
 3. A two-person connection finder. It prioritizes a parent-to-child path, then a reverse ancestral path, then a shortest family path. Gold highlights survive zoom, selection, and layout changes. Each connection has a source. Bible-cited links are the default; indexed links require opting in. Adam → Jesus has 63 steps and includes Joseph's legal parenthood.
 4. A full searchable Bible reader with links from identified names to people or cities, plus a searchable cities explorer.
 5. English, Dutch, and French language choices, localized profiles and controls. Dutch is the first-visit interface default; an explicitly saved supported language wins. The first-visit Catholic edition is the Dutch collection (`catholic-nl`), based on Canisius 1939 with separately attributed historical Catholic supplements; English Douay-Rheims 1899 (`catholic`) remains available; the existing 66-book WEB, Dutch Statenvertaling and French Louis Segond editions remain available. Interface language and text edition are distinct. Language persists in local storage; reader location and city state survive a language change.
-6. Student-facing navigation is religion-first: Christianity (Roman Catholic), Judaism, Islam. Each group contains Holy books (Dutch: Heilige boeken) and People; Relationship map and Cities explorer are Christian subviews. Comparing traditions remains global. Religion selection synchronizes the reader and person collection; parent selection retains a compatible current subview, while selecting a child closes the mobile menu. The reader is the landing view. “People filter” is visible only in the Bible index and family map; Torah and Qur’an indexes have separate searches. The reader and cities have their own filters.
+6. Student-facing navigation is religion-first: Christianity (Roman Catholic), Judaism, Islam. Each group contains Holy books (Dutch: Heilige boeken), People and Festivals & rituals (Dutch: Feestdagen & rituelen); Relationship map and Cities explorer are Christian subviews. Comparing traditions remains global. Religion selection synchronizes the reader and person collection; parent selection retains a compatible current subview, while selecting a child closes the mobile menu. The reader is the landing view. “People filter” is visible only in the Bible index and family map; Torah and Qur’an indexes have separate searches. The reader and cities have their own filters.
 7. Publish the source here with this handover file.
 8. A Roman Catholic Christianity / Judaism / Islam navigation hierarchy and full Tanakh and Qur’an readers. Tanakh follows Torah, Prophets and Writings, with 24 canonical books represented by 39 navigation components. Four independently numbered editions are available: Hebrew WLC, Jewish JPS 1917, Dutch Statenvertaling and French Segond. The latter two are prominently identified as Christian translation aids. The Qur’an has all 114 surahs and 6,236 numbered ayahs, Arabic original text and Dutch/English/French translations. Readers include search, references, navigation, edition credits and local notes. External Jewish commentary and tafsir links are separate from scripture.
 
@@ -159,6 +159,8 @@ node tests/torah-people.cjs
 node tests/quran-people.cjs
 node tests/person-comparisons.cjs
 node tests/people-traditions.cjs
+node tests/festivals-data.cjs
+node tests/festivals-ui.cjs
 python tests/import-bible.py
 python tests/import-bible-locales.py
 python tests/import-catholic-bible.py
@@ -192,8 +194,13 @@ Run any additional Catholic people/reader suites in `tests/` and the supplementa
 - French Jerusalem → Psalms 51:18 opens the English passage about Jerusalem, with a translated explanation and return to the prior LSG reading position.
 - Adaptive discoveries and the selected person survive all three layout changes; Reset returns to immediate family. Family tree keeps parents above children even when spouse chains cross generations.
 - Desktop and narrow mobile layouts, keyboard labels, no horizontal page overflow, and no console errors.
+- Feestdagen & rituelen under each religion: separate topic lists, search/filter/selection, all three languages, cited historical and interpretive context, and three study questions per dossier. Test internal passage actions for Catholic Dutch, Hebrew Tanakh and Dutch Qur’an, complete range highlights, return to the dossier, and original-source links. A late or failed download must not overwrite another religion or trap the user without retry.
 
 Do not add a test that merely repeats implementation constants; assert user-visible behavior, identity correctness, preserved text, or meaningful geometric constraints.
+
+## Festival dossier maintenance
+
+The three `dist/festivals-*.json` assets contain 22 higher-education dossiers and 66 critical questions in NL/EN/FR. Maintain distinct scripture, tradition/interpretation and historical/contemporary source labels. Each calendar, section and question cites local reference IDs. Internal passage coordinates are edition-specific (`catholic-nl`, Hebrew `he`, QuranEnc Dutch `nl`); validate them against the real corpora, rather than inferring equivalence. Calendars give recurring rules and diversity, not generated dates. Search/filter/selection stay scoped to the religion. `festivals.js` owns the model/view/locales; `app.js` lazy-loads it and routes reading actions with cancellation guards.
 
 ## Publishing and Git
 

@@ -32,6 +32,8 @@
   const sacredCache=new Map();
   let peopleIndex=null,comparisonView=null,peopleRequest=0,comparisonLoading=null,pendingPeopleProfile=null;
   const peopleCache=new Map();
+  let festivalView=null,festivalRequest=0,festivalPassageRequest=0,returnToFestivals=null;
+  const festivalCache=new Map();
   const state = {layout:'constellation', focus:'abraham', selected:'abraham', depth:'auto', discoveryDepth:1, localRoots:[], testament:'all', spouses:true, view:'reader', tradition:initialTradition, bibleEdition:initialBibleEdition, peopleTradition:initialTradition, indexPage:1};
   let zoomBase = null, zoomTimer, rendering = false, lastSelection;
   const MAX_MAP_PEOPLE = 180, INDEX_PAGE_SIZE = 60;
@@ -178,6 +180,7 @@
   function useReligion(tradition){
     if(!Object.hasOwn(religionNames,tradition))return false;
     if(tradition!==state.tradition){
+      festivalRequest++;festivalPassageRequest++;returnToFestivals=null;
       if(tradition!=='christianity')cancelPersonRequest();
       sacredRequest++;sacredReader?.destroy();sacredReader=null;sacredLoading=null;
       state.tradition=tradition;
@@ -188,9 +191,11 @@
   }
   function navigateReligion(tradition,view,{keepSidebar=false}={}){
     if(!useReligion(tradition))return;
-    setView(view||(['reader','index'].includes(state.view)?state.view:'reader'),{keepSidebar});
+    setView(view||(['reader','index','festivals'].includes(state.view)?state.view:'reader'),{keepSidebar});
   }
   function setView(view,{keepSidebar=false}={}) {
+    festivalPassageRequest++;
+    if(!['reader','festivals'].includes(view))returnToFestivals=null;
     // Bible-only destinations explicitly restore their religious context.
     if(view==='map'||view==='cities')useReligion('christianity');
     clearTimeout(zoomTimer);
@@ -200,6 +205,9 @@
     $('#people-collection-controls').hidden=true;
     $('#tradition-people-view').hidden=view!=='index'||state.peopleTradition==='christianity';
     $('#comparison-view').hidden=view!=='compare';
+    $('#festivals-view').hidden=view!=='festivals';
+    $('#return-to-festivals').hidden=view!=='reader'||returnToFestivals?.tradition!==state.tradition;
+    $('#return-to-festivals').textContent=I.t('← Back to festivals & rituals');
     $$('[data-people-tradition]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.peopleTradition===state.peopleTradition)));
     $('.layout-picker').hidden = view !== 'map';
     $('#path-finder').hidden = view !== 'map';
@@ -207,7 +215,7 @@
     $('#sacred-reader-view').hidden=view!=='reader'||state.tradition==='christianity';
     $('#sacred-reader-view').setAttribute('aria-label',I.t(state.tradition==='islam'?'Qur’an':'Tanakh'));
     $('#tradition-controls').hidden=true;
-    $('.intro-note').hidden=['reader','index','compare'].includes(view);
+    $('.intro-note').hidden=['reader','index','compare','festivals'].includes(view);
     $('.intro .eyebrow').textContent=I.t(view==='compare'?'Compare religions':religionNames[state.tradition]);
     $$('[data-tradition]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.tradition===state.tradition)));
     $('#people-testament-filters').hidden = view!=='map'&&(view!=='index'||state.peopleTradition!=='christianity');
@@ -219,9 +227,10 @@
       islam:'Read the Qur’an and explore its Islamic context.'
     }[state.tradition]];
     if(view==='index')titles.index=[{christianity:'People in the Catholic Bible',judaism:'People in the Torah',islam:'People in the Qur’an'}[state.tradition],'Explore people and follow their passages within this religion.'];
+    if(view==='festivals')titles.festivals=['Festivals & rituals','Study celebrations and practices through their sources, historical development and internal diversity.'];
     $('.intro h1').textContent=I.t(titles[view][0]);$('.intro p').textContent=I.t(titles[view][1]);
     $('#religion-crumb').textContent=I.t(view==='compare'?'Compare religions':religionNames[state.tradition]);
-    $('.breadcrumb strong').textContent=I.t({map:'Relationship map',index:'People index',compare:'Across traditions',reader:'Holy books',cities:'Cities explorer'}[view]);
+    $('.breadcrumb strong').textContent=I.t({map:'Relationship map',index:'People index',compare:'Across traditions',reader:'Holy books',cities:'Cities explorer',festivals:'Festivals & rituals'}[view]);
     $$('[data-religion]').forEach(button=>{const active=view!=='compare'&&button.dataset.religion===state.tradition;button.classList.toggle('active',active);button.setAttribute('aria-expanded',String(active));button.setAttribute('aria-pressed',String(active));});
     $$('[data-religion-menu]').forEach(menu=>{menu.hidden=view==='compare'||menu.dataset.religionMenu!==state.tradition;});
     $$('.nav-item').forEach(button=>{const active=button.dataset.view===view&&(!button.dataset.navTradition||button.dataset.navTradition===state.tradition);button.classList.toggle('active',active);button.setAttribute('aria-current',active?'page':'false');});
@@ -229,6 +238,7 @@
     $('#search-trigger').hidden=!bibleTools;$('.journey-label').hidden=!bibleTools;$('.journeys').hidden=!bibleTools;$('.sidebar-bottom .edition').hidden=!bibleTools;
     if (view === 'index') {if(state.peopleTradition==='christianity'){renderIndex();ensureCatholicPeople().then(()=>{if(state.view==='index'&&state.peopleTradition==='christianity')renderIndex();}).catch(()=>{libraryError($('#catholic-index-status'),()=>setView('index'));});}else ensurePeopleIndex();}
     if (view === 'compare') ensureComparisons();
+    if (view === 'festivals') ensureFestivals();
     if (view === 'reader') ensureReader();
     if (view === 'cities') ensureCities();
     updateCounts();
@@ -236,6 +246,39 @@
   }
 
   function loadJson(file) {return fetch(file).then(response=>{if(!response.ok)throw new Error(`Could not load ${file}`);return response.json();});}
+  function ensureFestivals(){
+    const tradition=state.tradition,request=++festivalRequest,container=$('#festivals-view');
+    if(festivalView?.tradition===tradition){festivalView.changeLanguage();return Promise.resolve(festivalView);}
+    container.innerHTML=`<div class="library-loading" role="status">${escape(I.t('Opening this collection…'))}</div>`;
+    if(!festivalCache.has(tradition))festivalCache.set(tradition,loadJson(`festivals-${tradition}.json`).catch(error=>{festivalCache.delete(tradition);throw error;}));
+    return festivalCache.get(tradition).then(data=>{
+      if(request!==festivalRequest||tradition!==state.tradition||state.view!=='festivals')return null;
+      if(!festivalView)festivalView=new window.FestivalView(container,{onPassage:openFestivalPassage});
+      festivalView.setCollection(data);return festivalView;
+    }).catch(()=>{festivalCache.delete(tradition);if(request===festivalRequest&&state.view==='festivals')libraryError(container,ensureFestivals);return null;});
+  }
+  async function openFestivalPassage(passage,entryId){
+    const tradition=passage.tradition;
+    if(tradition!==state.tradition||!Object.hasOwn(religionNames,tradition))return;
+    returnToFestivals={tradition,entryId};
+    if(tradition==='christianity')selectBibleEdition('catholic-nl');
+    selectTradition(tradition);
+    const request=++festivalPassageRequest,active=await ensureReader();
+    if(request!==festivalPassageRequest||state.view!=='reader'||state.tradition!==tradition)return;
+    if(!active){libraryError($(tradition==='christianity'?'#reader-view':'#sacred-reader-view'),()=>openFestivalPassage(passage,entryId));return;}
+    if(tradition==='christianity'){
+      active.restoreSelectedEdition();
+      const target=active.model.reference(passage);
+      if(target)active.open({...target,endVerse:passage.endVerse||target.endVerse});
+      else toast(I.t('This reference could not be located in the reader.'));
+    }else{
+      const edition=tradition==='judaism'?'he':'nl';
+      const reference=tradition==='judaism'?`${passage.book} ${passage.chapter}:${passage.verse}-${passage.endVerse||passage.verse}`:`${passage.surah}:${passage.verse}-${passage.endVerse||passage.verse}`;
+      const target=active.model.reference(reference,edition,I.language);
+      if(target){active.selectEdition(edition);active.open(target);}
+      else toast(I.t('This reference could not be located in the reader.'));
+    }
+  }
   function loadPeopleCollection(key){
     const files={judaism:'torah-people.json',islam:'quran-people.json',compare:'person-comparisons.json'};
     if(!peopleCache.has(key))peopleCache.set(key,loadJson(files[key]).catch(error=>{peopleCache.delete(key);throw error;}));
@@ -620,6 +663,7 @@
   $('#path-scripture-only').addEventListener('change',()=>{if(activePath)findConnection();});
   $('#path-clear').addEventListener('click',()=>clearPath());
   $('#return-to-library').addEventListener('click',()=>{if(returnToLibrary)setView(returnToLibrary);});
+  $('#return-to-festivals').addEventListener('click',()=>{if(returnToFestivals?.tradition===state.tradition)setView('festivals');});
   $('#path-details').addEventListener('click',()=>{renderPathInspector();$('#inspector').scrollIntoView({block:'nearest',behavior:'smooth'});});
   $('#map-fullscreen').addEventListener('click',()=>{const expanded=$('#map-view').classList.toggle('expanded');$('#map-fullscreen').setAttribute('aria-label',expanded?'Exit expanded map':'Expand map');requestAnimationFrame(()=>graph.fit());});
   $('#empty-reset').addEventListener('click',()=>{setTestamentState('all');explorePerson('abraham','auto');});

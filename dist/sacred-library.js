@@ -45,7 +45,10 @@
       if(!state||typeof state!=='object')state={};
       const units=this.units();const unit=units.some(u=>u.id===state.unit)?state.unit:units[0].id;
       const chapters=this.chapters(edition,unit);const chapter=chapters.includes(Number(state.chapter))?Number(state.chapter):chapters[0];
-      const verses=this.verses(edition,unit,chapter);return {unit,chapter,verse:verses.some(v=>v.number===Number(state.verse))?Number(state.verse):null};
+      const verses=this.verses(edition,unit,chapter),verse=verses.some(v=>v.number===Number(state.verse))?Number(state.verse):null;
+      const location={unit,chapter,verse};
+      if(verse&&Number(state.endVerse)>verse&&verses.some(v=>v.number===Number(state.endVerse)))location.endVerse=Number(state.endVerse);
+      return location;
     }
     move(edition,location,delta){
       if(!this.editions[edition]||![-1,1].includes(delta))return null;

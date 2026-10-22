@@ -20,7 +20,7 @@ class Control extends Element {
 const controls=new Map(),control=selector=>{if(!controls.has(selector))controls.set(selector,new Control());return controls.get(selector);};
 const religions=['christianity','judaism','islam'].map(religion=>new Control({religion}));
 const religionMenus=['christianity','judaism','islam'].map(religionMenu=>new Control({religionMenu}));
-const nav=['christianity','judaism','islam'].flatMap(navTradition=>(navTradition==='christianity'?['reader','index','map','cities']:['reader','index']).map(view=>new Control({view,navTradition}))).concat(new Control({view:'compare'}));
+const nav=['christianity','judaism','islam'].flatMap(navTradition=>(navTradition==='christianity'?['reader','index','festivals','map','cities']:['reader','index','festivals']).map(view=>new Control({view,navTradition}))).concat(new Control({view:'compare'}));
 const traditions=['christianity','judaism','islam'].map(tradition=>new Control({tradition}));
 const peopleTraditions=['christianity','judaism','islam'].map(peopleTradition=>new Control({peopleTradition}));
 const groups=new Map([
@@ -61,6 +61,13 @@ context.window.SacredReader=class {
   constructor(el,model){this.el=el;this.model=model;this.state={edition:model.defaultEdition(I.language),location:{unit:model.units()[0].id,chapter:1,verse:null}};this.render();sacredReaders.push(this);}
   render(){this.el.rendered=`${this.model.tradition}:${I.language}`;this.el.innerHTML=`<article>${this.el.rendered}</article>`;}
   getState(){return structuredClone(this.state);}destroy(){this.destroyed=true;}changeLanguage(){this.render();}
+  selectEdition(edition){this.state.edition=edition;this.render();}open(location){this.state.location=structuredClone(location);this.render();}
+};
+let festivalView;
+context.window.FestivalView=class {
+  constructor(el,callbacks){this.el=el;this.callbacks=callbacks;festivalView=this;}
+  setCollection(data){this.tradition=data.meta.tradition;this.changeLanguage();}
+  changeLanguage(){this.el.rendered=`festivals:${this.tradition}:${I.language}`;}
 };
 context.window.PeopleIndexView=class {
   constructor(el,callbacks){this.el=el;this.callbacks=callbacks;this.collectionHistory=[];this.comparisonKeys=[];this.selected=null;this.languageChanges=0;peopleIndexes.push(this);}
@@ -352,7 +359,7 @@ async function main(){
   assert.equal(bibleReaders.at(-1).state.location.bookId,'GEN');assert.equal(bibleReaders.at(-1).state.location.verse,2);
   assert.equal(bibleReaders.at(-1).state.personPassage.originalReference.translation,abrahamRef.translation,'Source translation metadata reaches the resolver');
   assert.equal(requests.filter(request=>request.file==='person-passage-map.json').length,1,'Both person collections share a successful map download');
-  for(const scenario of ['--religion-navigation','--saved-religion']){const check=spawnSync(process.execPath,[__filename,scenario],{encoding:'utf8'});assert.equal(check.status,0,check.stderr||check.stdout);}
+  for(const scenario of ['--religion-navigation','--saved-religion','--festivals']){const check=spawnSync(process.execPath,[__filename,scenario],{encoding:'utf8'});assert.equal(check.status,0,check.stderr||check.stdout);}
   const pendingProfileCheck=spawnSync(process.execPath,[__filename,'--pending-profile-language'],{encoding:'utf8'});
   assert.equal(pendingProfileCheck.status,0,pendingProfileCheck.stderr||pendingProfileCheck.stdout);
   const dutchRetryCheck=spawnSync(process.execPath,[__filename,'--dutch-edition-retry'],{encoding:'utf8'});
@@ -410,4 +417,37 @@ async function personPassageCancelRegression(){
   assert.equal(bibleReaders.at(-1).state.personPassage,undefined,'Cancellation removes the stale loading state');
 }
 async function savedCatholicRegression(){assert.equal(snapshot().bibleEdition,'catholic');assert(!pending('catholic-bible-data-nl.json'));initialCatholic('catholic');await settle();assert.equal(bibleReaders.at(-1).model.meta.language,'en','An explicitly saved English edition remains selected');}
-(process.argv.includes('--religion-navigation')?religionNavigationRegression():process.argv.includes('--saved-religion')?savedReligionRegression():process.argv.includes('--pending-profile-language')?pendingProfileLanguageRegression():process.argv.includes('--pending-passage-race')?pendingPassageEditionRegression():process.argv.includes('--saved-catholic')?savedCatholicRegression():process.argv.includes('--dutch-edition-retry')?dutchEditionRetryRegression():process.argv.includes('--person-passage-retry')?personPassageRetryRegression():process.argv.includes('--person-passage-cancel')?personPassageCancelRegression():main()).catch(error=>{console.error(error);process.exitCode=1;});
+
+async function festivalRegression(){
+  initialCatholic();await settle();
+  assert(!requests.some(r=>r.file.startsWith('festivals-')),'Dossiers load only when opened');
+  selectView('festivals');assert(pending('festivals-christianity.json'));
+  selectReligion('judaism');assert.equal(snapshot().view,'festivals');assert(pending('festivals-judaism.json'));
+  selectReligion('islam');respond('festivals-islam.json',{meta:{tradition:'islam'}});await settle();
+  assert.equal(festivalView.tradition,'islam');assert.equal(control('#festivals-view').hidden,false);
+  respond('festivals-christianity.json',null,{ok:false});respond('festivals-judaism.json',{meta:{tradition:'judaism'}});await settle();
+  assert.equal(festivalView.tradition,'islam','Late dossier downloads cannot replace the selected religion');
+  await control('#language-select').change('fr');assert.equal(control('#festivals-view').rendered,'festivals:islam:fr');
+  assert.equal(activeNav().length,1);assert.equal(activeNav()[0].dataset.navTradition,'islam');
+  const qref={tradition:'islam',surah:1,verse:1,endVerse:1,edition:'nl'};
+  const opening=festivalView.callbacks.onPassage(qref,'islam:salat');respond('quran-data.json',quran);await opening;await settle();
+  assert.equal(snapshot().view,'reader');assert.equal(sacredReaders.at(-1).state.edition,'nl','Study links choose the explicitly documented edition');
+  assert.equal(sacredReaders.at(-1).state.location.unit,'1');assert.equal(sacredReaders.at(-1).state.location.verse,1);
+  assert.equal(control('#return-to-festivals').hidden,false);control('#return-to-festivals').click();await settle();assert.equal(snapshot().view,'festivals');
+  selectReligion('judaism');await settle();assert.equal(festivalView.tradition,'judaism');
+  const he=structuredClone(tanakh);he.editions.he=structuredClone(he.editions.en);he.editions.he.books[0].chapters[0].verses.push({number:2,text:'Hebrew fixture'});
+  const jref={tradition:'judaism',book:'GEN',chapter:1,verse:1,endVerse:2,edition:'he'};
+  const jopening=festivalView.callbacks.onPassage(jref,'judaism:shabbat');respond('tanakh-data.json',he);await jopening;
+  assert.equal(sacredReaders.at(-1).state.edition,'he');assert.equal(sacredReaders.at(-1).state.location.endVerse,2);
+  control('#return-to-festivals').click();await settle();selectReligion('christianity');
+  respond('festivals-christianity.json',null,{ok:false});await settle();assert.match(control('#festivals-view').innerHTML,/library-retry/);
+  control('#festivals-view').querySelector('button').click();respond('festivals-christianity.json',{meta:{tradition:'christianity'}});await settle();assert.equal(festivalView.tradition,'christianity');
+  const cref={tradition:'christianity',book:'JHN',chapter:20,verse:1,endVerse:18,edition:'catholic-nl'};
+  await festivalView.callbacks.onPassage(cref,'christianity:easter');await settle();assert.equal(snapshot().bibleEdition,'catholic-nl');assert.equal(bibleReaders.at(-1).state.location.endVerse,18);
+  control('#return-to-festivals').click();await settle();
+  const prior=structuredClone(bibleReaders.at(-1).state.location),cancelled=festivalView.callbacks.onPassage({...cref,chapter:21},'christianity:easter');selectView('index');await cancelled;
+  assert.deepEqual(structuredClone(bibleReaders.at(-1).state.location),prior,'Leaving the reader cancels a pending festival passage');assert.equal(control('#festivals-view').hidden,true);
+  console.log('Festival app regression passed: lazy separate collections, religion-first navigation, late responses, retry, language, edition-specific ranges and return routing.');
+}
+
+(process.argv.includes('--festivals')?festivalRegression():process.argv.includes('--religion-navigation')?religionNavigationRegression():process.argv.includes('--saved-religion')?savedReligionRegression():process.argv.includes('--pending-profile-language')?pendingProfileLanguageRegression():process.argv.includes('--pending-passage-race')?pendingPassageEditionRegression():process.argv.includes('--saved-catholic')?savedCatholicRegression():process.argv.includes('--dutch-edition-retry')?dutchEditionRetryRegression():process.argv.includes('--person-passage-retry')?personPassageRetryRegression():process.argv.includes('--person-passage-cancel')?personPassageCancelRegression():main()).catch(error=>{console.error(error);process.exitCode=1;});

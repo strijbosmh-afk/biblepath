@@ -18,6 +18,16 @@ The English Catholic reader contains all 73 books (46 Old Testament and 27 New T
 
 City references use the atlas's English verse numbering. When the selected edition has unaligned numbering for a book, the reader opens that citation in the English World English Bible with an explanation and a return control. The interface stays in the selected language; returning restores the previous reading position in that edition.
 
+## Festivals and rituals
+
+Each religion has its own **Feestdagen & rituelen** submenu for higher education: seven Roman Catholic dossiers, eight Jewish dossiers and seven Islamic dossiers. The collection covers celebrations, seasons and recurrent rituals rather than an exhaustive calendar. Each dossier supplies a recurring calendar rule, meaning and texts, historical context, practice, internal diversity, three critical study questions and attributed references in Dutch, English and French. Sacred texts, tradition/interpretation and historical studies have distinct labels; numbered citations connect claims and questions to their sources.
+
+The editorial assets are `dist/festivals-christianity.json`, `dist/festivals-judaism.json` and `dist/festivals-islam.json`. They load on demand and keep religion-specific search, filtering and selection state. Calendar rules are descriptive, not automatically calculated annual dates. Institutional religious sources represent their stated perspectives, not a consensus of all adherents; historical accounts and theological claims must remain distinguishable.
+
+Internal reading links carry reviewed edition-specific coordinates: Dutch Catholic `catholic-nl`, Hebrew Tanakh `he`, and Dutch Qur’an `nl`. The Jewish links deliberately use Hebrew numbering rather than assuming the Dutch Christian reading aid shares it. Original sources remain available beside the local reader action. A return control restores the selected study dossier. Tanakh and Qur’an references now retain and highlight full verse ranges. Scripture wording and imported source assets are unchanged.
+
+Run `node tests/festivals-data.cjs` for source IDs, languages, distinct religious scope and every internal passage against the actual editions; `node tests/festivals-ui.cjs` for searches, filters, source actions and per-religion state; and `node tests/interfaith-app.cjs` for asynchronous navigation, retries, language changes and reader return paths. Source interpretation still requires editorial review, beyond automated schema and coordinate checks.
+
 ## Run locally
 
 From this directory, run `python -m http.server 5173 --directory dist` and open http://localhost:5173.
