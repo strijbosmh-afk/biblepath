@@ -19,7 +19,7 @@
         "label": "World English Bible · shared biblical text, not a Catholic edition",
         "url": "https://ebible.org/eng-web/",
         "license": "Public-domain scripture; summaries are original editorial prose.",
-        "note": "Biblical evidence is distinguished from Catholic interpretation and doctrine. The bundled reader contains 66 shared books and does not yet cover the complete Catholic canon."
+        "note": "Biblical evidence is distinguished from Catholic interpretation and doctrine. These comparison citations retain their WEB source locators. The separate Douay-Rheims 1899 reader contains the complete 73-book Catholic canon; its Vulgate numbering is not assumed aligned with WEB."
       },
       {
         "id": "tanakh",

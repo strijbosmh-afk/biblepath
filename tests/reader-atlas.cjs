@@ -84,8 +84,8 @@ console.log('City passage accuracy, selected-edition return, fallback state, and
 // Catholic framing must never rebrand the bundled editions or claim a full canon.
 const catholicRows={en:{},nl:{},fr:{}};
 context.window.BibleI18n.registerRows=rows=>rows.forEach(([en,nl,fr])=>{catholicRows.nl[en]=nl;catholicRows.fr[en]=fr;});
-vm.runInContext(fs.readFileSync(path.join(root,'dist/interfaith-locales.js'),'utf8'),context);
-for(const [locale,focus,missing] of [['en','Roman Catholic perspective','not yet included'],['nl','Rooms-katholiek perspectief','nog niet opgenomen'],['fr','Perspective catholique romaine','pas encore inclus']]){
+for(const file of ['interfaith-locales.js','catholic-locales.js'])vm.runInContext(fs.readFileSync(path.join(root,'dist',file),'utf8'),context);
+for(const [locale,focus,missing] of [['en','Roman Catholic perspective','66 shared books'],['nl','Rooms-katholiek perspectief','66 gedeelde boeken'],['fr','Perspective catholique romaine','66 livres communs']]){
   const I=context.window.BibleI18n;I.language=locale;
   I.t=(text,params)=>(catholicRows[locale][text]||context.window.BibleLibraryLocales[locale]?.[text]||text).replace(/\{(\w+)\}/g,(match,key)=>params?.[key]??match);
   display.model=models[locale];display.books=display.model.books();display.render();
@@ -95,4 +95,4 @@ for(const [locale,focus,missing] of [['en','Roman Catholic perspective','not yet
   assert.ok(el.innerHTML.includes(models[locale].meta.title),'Published edition identity remains visible');
   assert.doesNotMatch(el.innerHTML,/THE COMPLETE SCRIPTURES/,'The reader must not imply complete Catholic coverage');
 }
-console.log('Catholic reader context passed in EN/NL/FR: actual edition retained and incomplete canon explained.');
+console.log('Catholic reader context passed in EN/NL/FR: actual edition retained and 66-book alternative distinguished from the complete Catholic edition.');

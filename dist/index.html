@@ -17,6 +17,7 @@
   <script src="info-locales.js" defer></script>
   <script src="library-locales.js" defer></script>
   <script src="interfaith-locales.js" defer></script>
+  <script src="catholic-locales.js" defer></script>
   <script src="entity-locales.js" defer></script>
   <script src="data.js" defer></script>
   <script src="graph.js" defer></script>
@@ -27,6 +28,7 @@
   <script src="sacred-library.js" defer></script>
   <script src="sacred-reader.js" defer></script>
   <script src="people-traditions.js" defer></script>
+  <script src="catholic-people-ui.js" defer></script>
   <script src="cities-ui.js" defer></script>
   <script src="app.js" defer></script>
 </head>
@@ -108,7 +110,7 @@
         <button data-people-tradition="judaism" aria-pressed="false">Torah · Judaism<small>Genesis – Deuteronomy</small></button>
         <button data-people-tradition="islam" aria-pressed="false">Qur’an · Islam<small>114 surahs</small></button>
       </section>
-      <section class="index-view" id="index-view" hidden><div class="index-heading"><div><div class="eyebrow">THE PEOPLE BEHIND THE STORY</div><h2>People index</h2></div><label class="index-search"><svg><use href="#i-search"/></svg><input id="index-search" type="search" placeholder="Search names, stories, or references…" aria-label="Search people index"></label></div><p class="index-intro">Search distinct people, including namesakes, then open a life to explore their family.</p><aside class="catholic-context"><strong>Roman Catholic perspective</strong><p>This index covers the 66 shared books. Explore Roman Catholic interpretations, with Catechism references, in Across traditions.</p><details><summary>Text edition and Catholic canon</summary><p>The seven deuterocanonical books and the Greek additions to Esther and Daniel are not yet included. The World English Bible, Statenvertaling and Louis Segond are the available text editions; they are not Catholic editions.</p><a href="https://www.vatican.va/content/catechism/en/part_one/section_one/chapter_two/article_3/iv_the_canon_of_scripture.html" target="_blank" rel="noopener noreferrer"><span>Catholic canon · Catechism §120</span> ↗</a></details></aside><div class="index-result-count" id="index-result-count" aria-live="polite"></div><div id="index-grid" class="index-grid"></div><div class="index-pagination" id="index-pagination"><button id="index-previous">← Previous</button><span id="index-page"></span><button id="index-next">Next →</button></div><div id="index-empty" class="index-empty" hidden>No matching people. Try a name such as Mary or Moses.</div></section>
+      <section class="index-view" id="index-view" hidden><div class="index-heading"><div><div class="eyebrow">THE PEOPLE BEHIND THE STORY</div><h2>People index</h2></div><label class="index-search"><svg><use href="#i-search"/></svg><input id="index-search" type="search" placeholder="Search names, stories, or references…" aria-label="Search people index"></label></div><p class="index-intro">Search distinct people, including namesakes, then open a life to explore their family.</p><aside class="catholic-context"><strong>People of the Catholic Bible</strong><p>The index now includes profiles from the deuterocanonical books and the additions to Esther and Daniel. Sources open in the complete English Douay–Rheims edition.</p><p id="catholic-index-status" aria-live="polite"></p></aside><div class="index-result-count" id="index-result-count" aria-live="polite"></div><div id="index-grid" class="index-grid"></div><div class="index-pagination" id="index-pagination"><button id="index-previous">← Previous</button><span id="index-page"></span><button id="index-next">Next →</button></div><div id="index-empty" class="index-empty" hidden>No matching people. Try a name such as Mary or Moses.</div></section>
       <section id="tradition-people-view" translate="no" hidden></section>
       <section id="comparison-view" translate="no" hidden></section>
       <section class="tradition-controls" id="tradition-controls" aria-label="Choose a tradition" hidden>
@@ -128,6 +130,7 @@
   <div class="person-tooltip" id="person-tooltip" role="tooltip" hidden></div>
   <dialog id="search-dialog" class="search-dialog"><div class="dialog-searchbar"><svg><use href="#i-search"/></svg><input id="global-search" type="search" placeholder="Whose story will you discover?" aria-label="Find a biblical person" autocomplete="off"><button class="icon-button" data-close="search-dialog" aria-label="Close search"><svg><use href="#i-close"/></svg></button></div><div class="search-heading" id="search-heading">START WITH A FAMILIAR NAME</div><div id="search-results" class="search-results"></div><div class="search-footer">Search names, aliases, descriptions, or biblical references.<kbd>ESC</kbd></div></dialog>
   <dialog id="info-dialog" class="info-dialog"><button class="icon-button dialog-close" data-close="info-dialog" aria-label="Close information"><svg><use href="#i-close"/></svg></button><div id="info-content"></div></dialog>
+  <dialog id="catholic-profile-dialog" class="info-dialog catholic-profile-dialog" aria-labelledby="catholic-profile-title"><button class="icon-button dialog-close" data-close="catholic-profile-dialog" aria-label="Close information"><svg><use href="#i-close"/></svg></button><div id="catholic-profile-content" translate="no"></div></dialog>
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 </body>
 </html>

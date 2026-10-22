@@ -1,0 +1,18 @@
+'use strict';
+const assert=require('node:assert/strict');
+const {CatholicPeople}=require('../dist/catholic-people-ui.js');
+const base=[{id:'daniel',name:'Daniël',aliases:['Daniel'],description:'Profeet',testament:'OT',refs:[{label:'Daniel 1:6',book:'DAN',chapter:1,verse:6}]},{id:'jesus',name:'Jezus',aliases:['Jesus'],description:'Christus',testament:'NT',refs:[]}];
+const original=structuredClone(base);
+const profile=(id,names,refs,bibleId)=>({id,bibleId,names,aliases:[],summary:{nl:'Bijbels persoon',en:'Biblical person',fr:'Personnage biblique'},roles:{nl:['Persoon'],en:['Person'],fr:['Personnage']},refs});
+const data={people:[profile('catholic:daniel',{nl:'Daniël',en:'Daniel',fr:'Daniel'},[{label:'Daniel 13:45',book:'DAN',chapter:13,verse:45,edition:'catholic'}],'daniel'),profile('catholic:susanna',{nl:'Susanna',en:'Susanna',fr:'Suzanne'},[{label:'Daniel 13:2',book:'DAN',chapter:13,verse:2,edition:'catholic'}])]};
+const model=new CatholicPeople(data,base),entries=model.entries('nl');
+assert.equal(entries.length,3);assert.equal(entries.filter(p=>p.id==='daniel').length,1,'An explicitly mapped person appears once');
+assert.equal(entries.find(p=>p.id==='daniel').refs.length,2);assert.equal(entries.find(p=>p.id==='daniel').refs[1].edition,'catholic');
+assert.equal(model.search('DANIEL','nl')[0].id,'daniel','Accent-insensitive search finds existing mapped identities');
+assert.equal(model.search('Suzanne','nl')[0].id,'catholic:susanna','Aliases include names across interface languages');
+assert.equal(model.search('susanna','nl','NT').length,0);assert.equal(model.search('jezus','nl','NT')[0].id,'jesus');
+assert.equal(model.entries('fr').find(p=>p.id==='catholic:susanna').name,'Suzanne');
+assert.deepEqual(model.readerPeople('nl').people,entries);assert.deepEqual(base,original,'Additional references never mutate base graph identities');
+assert.throws(()=>new CatholicPeople({people:[{...data.people[0],bibleId:'missing'}]},base),/Unknown/);
+assert.throws(()=>new CatholicPeople({people:[data.people[0],data.people[0]]},base),/Duplicate/);
+console.log('Catholic index integration passed: identity merging, multilingual search, testament filters, edition tags and base-data preservation.');

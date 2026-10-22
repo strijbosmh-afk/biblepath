@@ -18,12 +18,12 @@ BiblePath is a working static web app for reading the Bible, Tanakh and Qur’an
 2. Wider circle spacing, lines routed around unrelated circles, and adaptive zoom that reveals more family branches. Layout switches preserve discovered branches and selection. Family-tree expansion keeps existing positions when possible; if a new parental chain needs extra generation rows, it rearranges around the same anchor while retaining the camera. The map loads at most 180 people at once; all people remain searchable.
 3. A two-person connection finder. It prioritizes a parent-to-child path, then a reverse ancestral path, then a shortest family path. Gold highlights survive zoom, selection, and layout changes. Each connection has a source. Bible-cited links are the default; indexed links require opting in. Adam → Jesus has 63 steps and includes Joseph's legal parenthood.
 4. A full searchable Bible reader with links from identified names to people or cities, plus a searchable cities explorer.
-5. English, Dutch, and French language choices, localized profiles and controls, and a corresponding full Bible edition. Dutch is the first-visit default; an explicitly saved supported language wins. Language persists in local storage; reader location and city state survive a language change.
+5. English, Dutch, and French language choices, localized profiles and controls. Dutch is the first-visit interface default; an explicitly saved supported language wins. The complete Catholic Bible is English Douay-Rheims 1899; the existing 66-book WEB, Dutch Statenvertaling and French Louis Segond editions remain available. Interface language and text edition are distinct. Language persists in local storage; reader location and city state survive a language change.
 6. Navigation order: Scripture readers, People index, Across traditions, Relationship map, Cities explorer. The reader is the landing view. “People filter” is visible only in the Bible index and family map; Torah and Qur’an indexes have separate searches. The reader and cities have their own filters.
 7. Publish the source here with this handover file.
 8. A Roman Catholic Christianity / Judaism / Islam selector and full Tanakh and Qur’an readers. Tanakh follows Torah, Prophets and Writings, with 24 canonical books represented by 39 navigation components. Four independently numbered editions are available: Hebrew WLC, Jewish JPS 1917, Dutch Statenvertaling and French Segond. The latter two are prominently identified as Christian translation aids. The Qur’an has all 114 surahs and 6,236 numbered ayahs, Arabic original text and Dutch/English/French translations. Readers include search, references, navigation, edition credits and local notes. External Jewish commentary and tafsir links are separate from scripture.
 
-9. The Christian account now explicitly follows a Roman Catholic perspective. The 24 comparison figures use Catholic framing and separately attributed references to the Catechism and Church teaching. Jewish and Islamic accounts remain separate. The corpus limitation is visible: the existing Bible readers and biblical people/city indexes still cover 66 shared books, not the full 73-book Catholic canon.
+9. The Christian account explicitly follows a Roman Catholic perspective. The 24 comparison figures use Catholic framing and separately attributed references to the Catechism and Church teaching. Jewish and Islamic accounts remain separate. The English Douay-Rheims 1899 reader contains the complete 73-book Catholic canon, including the Esther/Daniel additions. Catholic supplemental person profiles cite that edition directly. The original family graph and city atlas retain their existing 66-book scope; a complete scripture corpus does not imply an exhaustive person or relationship index.
 
 ## Important files
 
@@ -48,7 +48,11 @@ The people expansion adds a separate Torah index (481 identities from 4,325 orig
 | `dist/info-locales.js`, `dist/notes-locales.js` | Translated help, about, and methodology |
 | `dist/entity-locales.js` | Generated NL/FR per-identity profile patches |
 | `dist/data.js` | People and family relationships |
-| `dist/bible-data.json`, `dist/bible-data-nl.json`, `dist/bible-data-fr.json` | Complete edition text and source metadata |
+| `dist/bible-data.json`, `dist/bible-data-nl.json`, `dist/bible-data-fr.json` | Existing 66-book WEB, Statenvertaling and Segond text and source metadata |
+| `dist/catholic-bible-data.json` | Complete 73-book English Douay-Rheims text, additions, Vulgate numbering and source metadata |
+| `scripts/import-catholic-bible.py` | Checksum-pinned Catholic import and deterministic `--check` reproduction |
+| `dist/catholic-people.json`, `dist/catholic-people-ui.js` | Sourced Catholic supplemental profiles and their index/profile UI |
+| `scripts/catholic-people-copy.cjs`, `scripts/build-catholic-people.cjs` | Authored NL/EN/FR Catholic profiles and deterministic builder |
 | `dist/tanakh-data.json`, `dist/quran-data.json` | Complete tradition-specific editions, native text, provenance and licenses |
 | `scripts/import-tanakh.py`, `scripts/import-quran.py` | Pinned imports and deterministic `--check` reproduction |
 | `dist/places-data.json` | Settlement identities and references |
@@ -56,8 +60,9 @@ The people expansion adds a separate Torah index (481 identities from 4,325 orig
 
 ## Data and sources
 
-- People: 2,987 distinct identities, 1,803 relationships, over 20,000 indexed references. This includes 157 original curated profiles and 203 relationships with direct biblical citations; 1,600 relationships cite the STEP editorial index.
+- Base atlas: 2,987 distinct identities, 1,803 relationships, over 20,000 indexed references. This includes 157 original curated profiles and 203 relationships with direct biblical citations; 1,600 relationships cite the STEP editorial index. Catholic supplemental profiles add independently sourced coverage without altering this graph or inferring new family edges.
 - Cities: 604 settlements, 4,125 verse references.
+- Catholic Bible: English Douay-Rheims American Edition of 1899, official public-domain eBible `engDRA` USFX source; 73 books (46 OT + 27 NT), 1,334 chapters, 35,811 numbered verses. Download SHA-256: `def7a79a4fd11a9489ea7d25579658b70f0727a8dcf7f71c3ca1c9e5cca2d5db`. Complete text is retained with source punctuation and Vulgate numbering, apart from documented whitespace normalization. This is an English text even when the interface is Dutch or French.
 - English: World English Bible, eBible.org Protestant/American edition; 66 books, 1,189 chapters, 31,103 numbered verses. Public domain. Preserve the trademark/source credit.
 - Dutch: Statenvertaling, 1888 text transcription from Isidore-Guild; 66 books, 1,189 chapters, 31,102 numbered verses. Public-domain text, CC0 transcription.
 - French: Louis Segond 1910 from eBible.org; 66 books, 1,189 chapters, 31,170 numbered verses. Public domain; numbered Psalm superscriptions are preserved.
@@ -69,7 +74,7 @@ The people expansion adds a separate Torah index (481 identities from 4,325 orig
 
 Exact source URLs, hashes, retrieval dates, processing decisions, and edition metadata are in the datasets and import scripts. Unmodified downloads go in ignored `.cache/`. Keep all attribution when redistributing the data. This repository does not replace the upstream data licenses or assign a new license to third-party text.
 
-The Catholic canon is 46 Old Testament books plus 27 New Testament books ([Catechism §120](https://www.vatican.va/content/catechism/en/part_one/section_one/chapter_two/article_3/iv_the_canon_of_scripture.html)). The bundled corpus does not yet include Tobit, Judith, Wisdom, Sirach, Baruch, 1 and 2 Maccabees, or the Greek additions to Esther and Daniel. Do not label the existing WEB, Statenvertaling or Louis Segond files as Catholic editions or a complete Catholic Bible. The comparison’s Catholic doctrinal sources are editorial context, not added biblical verses.
+The complete Catholic reader includes Tobit, Judith, Wisdom, Sirach, Baruch, 1 and 2 Maccabees, Esther 10:4–16:24, Daniel 3:24–90 and chapters 13–14, and the Letter of Jeremiah in Baruch 6. These locators follow the Douay-Rheims/Vulgate source and must not be silently aligned with WEB, Hebrew or other edition coordinates. The canon is 46 Old Testament books plus 27 New Testament books ([Catechism §120](https://www.vatican.va/content/catechism/en/part_one/section_one/chapter_two/article_3/iv_the_canon_of_scripture.html)). Do not label the existing 66-book WEB, Statenvertaling or Louis Segond files as complete Catholic editions. The comparison’s Catholic doctrinal sources are editorial context, distinct from biblical verses; its existing WEB citations retain their own source locators.
 
 ## Rebuild data deliberately
 
@@ -77,6 +82,8 @@ The Catholic canon is 46 Old Testament books plus 27 New Testament books ([Catec
 node scripts/import-tipnr.cjs
 python scripts/import-bible.py
 python scripts/import-bible-locales.py
+python scripts/import-catholic-bible.py
+node scripts/build-catholic-people.cjs
 python scripts/import-tanakh.py
 python scripts/import-quran.py
 node scripts/import-places.cjs
@@ -85,7 +92,7 @@ node scripts/build-entity-locales.cjs
 
 Inspect importer arguments before running. Sources are pinned and cached; do not casually upgrade them and overwrite reviewed identity mappings. Entity translations are authored in `scripts/entity-locale-copy.cjs` and generated by `scripts/build-entity-locales.cjs`. Edit the source of generated data, then regenerate and validate.
 
-`python scripts/import-tanakh.py --check` and `python scripts/import-quran.py --check` compare deterministic rebuilds with the saved assets without modifying them. Tanakh translation aids depend on the existing Dutch/French Bible assets. Cached reproducibility is separate from checking upstream updates: follow Tanzil and QuranEnc update links, review changed text and source terms, then deliberately update pins and rerun validation. QuranEnc requires unchanged republication, retained attribution and transcript information, following updates, reporting translation issues to the source, and avoiding inappropriate advertising alongside the text.
+`python scripts/import-catholic-bible.py --check`, `python scripts/import-tanakh.py --check` and `python scripts/import-quran.py --check` compare deterministic rebuilds with the saved assets without modifying them. Tanakh translation aids depend on the existing Dutch/French Bible assets. Cached reproducibility is separate from checking upstream updates: follow Tanzil and QuranEnc update links, review changed text and source terms, then deliberately update pins and rerun validation. QuranEnc requires unchanged republication, retained attribution and transcript information, following updates, reporting translation issues to the source, and avoiding inappropriate advertising alongside the text.
 
 ## Rules that protect accuracy
 
@@ -94,6 +101,7 @@ Inspect importer arguments before running. Sources are pinned and cached; do not
 - A name index reference is not proof that a verse establishes a relationship. Imported family links cite the STEP relationship record, not an arbitrary verse mentioning the name.
 - Genealogical lists can omit generations. The Adam–Jesus route combines selected accounts and is not presented as a verbatim reproduction of Luke's genealogy.
 - Preserve original Bible text exactly, apart from documented whitespace normalization. Do not translate the WEB with an automatic translator. Load the selected published edition.
+- Preserve Catholic edition identity and Vulgate numbering. All shared 66 books are conservatively marked as uncertain for legacy atlas exact-verse identity in Douay-Rheims. Catholic supplement references explicitly cite `edition: catholic` and the source book/chapter/verse; named profiles are curated evidence, not exhaustive text concordances or automatically inferred relationships.
 - Preserve the Tanakh edition boundary: JPS 1917 is a Jewish translation; Statenvertaling and Segond are Christian reading aids. Do not present the latter as Jewish translations. Canonical-book identities and navigation components are separate concepts.
 - Do not align Tanakh passages merely because chapter/verse numbers match. Hebrew Joel has four chapters and Malachi three, while the translation sources use three and four respectively. Keep reading positions per edition. Hebrew and Arabic search normalization must never modify the displayed or saved source text.
 - Keep Qur’an translation, original Arabic and translator notes distinguishable. No biblical people/genealogy links are inferred in either new reader. External Sefaria/Quran.com commentary may have different authors and editions and must remain separately attributed.
@@ -102,7 +110,7 @@ Inspect importer arguments before running. Sources are pinned and cached; do not
 - Shared city/person verse references do not establish residence or physical presence.
 - Localized proper names include conventional spellings and edition variants. Original aliases remain searchable. Obscure names may retain their source transliteration; an exhaustive multilingual scholarly onomasticon is not claimed.
 - External source links can remain in their original language. Distinguish source provenance from the selected reader edition.
-- The biblical people/city atlas covers the 66 books shared with the Protestant canon; its Roman Catholic editorial focus does not fill the missing deuterocanonical coverage. The separate Tanakh and Qur’an readers do not expand that atlas’s identity or relationship claims. Other canons and interpretations are not claimed to be exhaustive.
+- The original biblical family graph and city atlas cover the 66 shared books. The Catholic people supplement adds sourced profiles for the deuterocanonical books and additions, while retaining distinct identities, source locators and limits. The Tanakh and Qur’an readers do not expand the base atlas’s identity or relationship claims. Other canons and interpretations are not claimed to be exhaustive.
 
 ## Localization architecture
 
@@ -130,6 +138,10 @@ node tests/places.cjs
 node tests/entity-locales.cjs
 node tests/i18n.cjs
 node tests/scripture-locales.cjs
+node tests/catholic-bible-data.cjs
+node tests/catholic-reader.cjs
+node tests/catholic-people-ui.cjs
+node tests/catholic-people.cjs
 node tests/interfaith-app.cjs
 node tests/sacred-library.cjs
 node tests/sacred-reader.cjs
@@ -141,16 +153,20 @@ node tests/person-comparisons.cjs
 node tests/people-traditions.cjs
 python tests/import-bible.py
 python tests/import-bible-locales.py
+python tests/import-catholic-bible.py
+python scripts/import-catholic-bible.py --check
+node scripts/build-catholic-people.cjs --check
 python scripts/import-tanakh.py --check
 python scripts/import-quran.py --check
 node scripts/build-torah-people.cjs --check
 node scripts/build-quran-people.cjs --check
 ```
 
-These are 22 Node suites, two Python importer suites and four additional reproducibility checks. Run additional locale tests in `tests/` when changing translations or edition importers. Syntax-check edited JavaScript with `node --check`. Browser verification should cover:
+Run any additional Catholic people/reader suites in `tests/` and the supplemental people builder’s `--check` alongside these checks. Run locale tests when changing translations or edition importers. Syntax-check edited JavaScript with `node --check`. Browser verification should cover:
 
 - EN → NL → FR → EN, including a reload to verify stored language.
 - A fresh browser defaults to Dutch, while an existing explicit language preference is retained.
+- The complete Catholic edition visibly remains English in the Dutch/French interface. Open Tobit, Judith, Wisdom, Sirach, Baruch 6, 1–2 Maccabees, Esther 16, Daniel 3:24–90, Daniel 13 and Daniel 14; verify search, final verses and source links. Switch to a 66-book edition from an added book/chapter without leaving an invalid location. Catholic person references open the Catholic edition; legacy atlas citations use their original source edition rather than assuming matching verse numbers.
 - Bible → Torah → Qur’an people indexes preserve separate queries and profiles; Torah has no New Testament entries or copied Christian biographies. Arabic aliases work in the Qur’an index. Bible testament controls are hidden for the other collections.
 - Across traditions shows a Roman Catholic account alongside separate Jewish and Islamic accounts, with biblical passages distinct from Catechism/Church-teaching sources; profile comparison buttons and return links route to the correct collection. Compare Moses, Jesus and Mary/Miriam, then switch languages without losing selection.
 - Christianity → Judaism → Islam → Christianity, preserving separate edition positions, including a reload. Verify failed-download retry and switching traditions during a pending download.
@@ -182,4 +198,4 @@ These are proposals, not implemented features:
 2. **Historical timeline:** show people and events by era alongside the family map, with explicitly approximate or disputed dates and sources.
 3. **Geographic journeys map:** plot cities and routes such as the Exodus and Paul's travels, with geographic uncertainty clearly marked and source links for every route segment.
 
-Other known improvements include a licensed, reviewed Catholic Bible edition with the full deuterocanonical corpus and corresponding person/place indexes, reviewed cross-edition verse alignment, wider proper-name alias coverage, further editorial verification of imported relationships, and offline asset caching. Preserve the current working app while adding them incrementally.
+Other known improvements include licensed modern Dutch/French Catholic translations, expanded reviewed Catholic person and place coverage, reviewed cross-edition verse alignment, wider proper-name alias coverage, further editorial verification of imported relationships, and offline asset caching. Preserve the current working app while adding them incrementally.

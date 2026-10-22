@@ -15,7 +15,7 @@ class Control extends Element {
   querySelector(selector){if(!this.nodes.has(selector))this.nodes.set(selector,new Control());return this.nodes.get(selector);}
   querySelectorAll(){return [];}
   replaceChildren(...children){super.replaceChildren(...children);this.innerHTML='';}
-  close(){}scrollIntoView(){}focus(){}
+  close(){this.open=false;}showModal(){this.open=true;}scrollIntoView(){}focus(){}
 }
 const controls=new Map(),control=selector=>{if(!controls.has(selector))controls.set(selector,new Control());return controls.get(selector);};
 const nav=['reader','map','index','compare','cities'].map(view=>new Control({view}));
@@ -33,6 +33,7 @@ context.window.matchMedia=()=>({matches:false});context.window.addEventListener=
 const I=context.window.BibleI18n={language:'nl',reference:text=>text,t:(text,params={})=>text.replace(/\{(\w+)\}/g,(_,key)=>params[key]??`{${key}}`),localizePeople(){},localizePlaces:data=>data,setLanguage(next){this.language=next;},translateDOM(){},observe(){}};
 context.structuredClone=structuredClone;context.URL=URL;
 const storage=new Map();context.localStorage={getItem:key=>storage.get(key),setItem:(key,value)=>storage.set(key,String(value))};
+if(process.argv.includes('--pending-passage-race'))storage.set('biblepath-bible-edition','locale');
 const timers=new Map();let nextTimer=0;
 context.setTimeout=callback=>{timers.set(++nextTimer,callback);return nextTimer;};context.clearTimeout=id=>timers.delete(id);
 const requests=[];
@@ -41,11 +42,13 @@ const pending=file=>requests.find(request=>request.file===file&&!request.done);
 function respond(file,data,{ok=true}={}){const request=pending(file);assert(request,`Expected a request for ${file}`);request.done=true;request.resolve({ok,json:async()=>data});}
 const settle=async()=>{for(let i=0;i<5;i++)await new Promise(resolve=>setImmediate(resolve));};
 const bibleReaders=[],sacredReaders=[],cityReaders=[],peopleIndexes=[],comparisonViews=[];
-context.window.BibleScripture=class {constructor(data){this.meta=data.meta;}atlasReference(){return true;}};
+context.window.BibleScripture=class {constructor(data){this.meta=data.meta;}atlasReference(){return true;}reference(ref){return {...ref,bookId:ref.book};}};
 context.window.BibleReader=class {
   constructor(el,model,people,places,callbacks){this.el=el;this.model=model;this.selectedModel=model;this.callbacks=callbacks;this.state={location:{bookId:'GEN',chapter:1,verse:null}};el.rendered=`bible:${model.meta.language}`;bibleReaders.push(this);}
   getState(){return structuredClone(this.state);}setState(value){this.state=structuredClone(value);}
   openAtlas(reference){this.state.atlasReference=reference;return true;}
+  open(reference){this.state.location=reference;delete this.state.atlasReference;return true;}
+  restoreSelectedEdition(){this.model=this.selectedModel;}
 };
 context.window.BibleCities=class {constructor(el,places,people,callbacks){this.callbacks=callbacks;this.state={cityId:'jerusalem'};cityReaders.push(this);}getState(){return structuredClone(this.state);}setState(value){this.state=structuredClone(value);}open(id){this.state.cityId=id;}};
 context.window.SacredReader=class {
@@ -72,13 +75,15 @@ const quran={editions:{ar:{language:'ar'},nl:{language:'nl'}},surahs:[{number:1,
 const torahPeople={meta:{tradition:'judaism'},people:[{id:'torah:moses',comparisonKey:'moses'},{id:'torah:abraham',comparisonKey:'abraham'}]};
 const quranPeople={meta:{tradition:'islam'},people:[{id:'quran:moses',comparisonKey:'moses'},{id:'quran:abraham',comparisonKey:'abraham'}]};
 const comparisons={people:[{key:'moses'},{key:'abraham'}]};
-for(const file of ['discovery.js','paths.js','sacred-library.js','app.js'])vm.runInContext(fs.readFileSync(path.join(root,'dist',file),'utf8'),context);
+const catholicPeople={meta:{referenceNote:{en:'Source edition'}},people:[{id:'catholic:judith',names:{nl:'Judit',en:'Judith',fr:'Judith'},roles:{nl:['Heldin'],en:['Heroine'],fr:['Héroïne']},summary:{nl:'Heldin in Judit.',en:'Heroine in Judith.',fr:'Héroïne dans Judith.'},disambiguation:{nl:'De heldin',en:'The heroine',fr:'L’héroïne'},refs:[{book:'JDT',chapter:8,verse:1,label:'Judith 8:1',edition:'catholic',url:'https://ebible.org/engDRA/JDT08.htm'}]}]};
+function initialCatholic(){respond('catholic-bible-data.json',{meta:{language:'en',editionId:'catholic',canon:'catholic'}});respond('catholic-people.json',catholicPeople);respond('places-data.json',{places:[]});}
+for(const file of ['discovery.js','paths.js','sacred-library.js','catholic-people-ui.js','app.js'])vm.runInContext(fs.readFileSync(path.join(root,'dist',file),'utf8'),context);
 const snapshot=()=>context.window.biblePath.getState(),selectTradition=name=>traditions.find(button=>button.dataset.tradition===name).click(),selectView=name=>nav.find(button=>button.dataset.view===name).click(),selectPeople=name=>peopleTraditions.find(button=>button.dataset.peopleTradition===name).click();
 
 async function pendingProfileLanguageRegression(){
   // A fresh app is essential: the destination collection must still be loading
   // when the language picker refreshes the current view.
-  respond('bible-data-nl.json',{meta:{language:'nl'}});respond('places-data.json',{places:[]});await settle();
+  initialCatholic();await settle();
   selectView('compare');respond('person-comparisons.json',comparisons);await settle();
   comparisonViews[0].callbacks.onPerson('judaism','torah:moses');
   assert(pending('torah-people.json'),'The linked collection is still loading');
@@ -91,12 +96,39 @@ async function pendingProfileLanguageRegression(){
   assert.equal(requests.filter(request=>request.file==='torah-people.json').length,1,'Language refresh shares the pending collection download');
 }
 
+async function pendingPassageEditionRegression(){
+  // Start with the Dutch edition so Catholic text is still an uncached load.
+  respond('bible-data-nl.json',{meta:{language:'nl'}});respond('places-data.json',{places:[]});await settle();
+  const personButton=new Control({person:'catholic:judith'}),passageButton=new Control({catholicPassage:'0'});
+  groups.set('#index-grid [data-person]',[personButton]);groups.set('#catholic-profile-content [data-catholic-passage]',[passageButton]);
+  selectView('index');respond('catholic-people.json',catholicPeople);await settle();
+  selectView('cities');await settle();
+  bibleReaders.at(-1).selectedModel.atlasReference=()=>null;
+  cityReaders.at(-1).callbacks.onPassage({label:'Psalms 51:18'});await settle();
+  assert(pending('bible-data.json'),'A source-edition city passage remains in flight');
+  selectView('index');personButton.click();assert.equal(control('#catholic-profile-dialog').open,true);
+  passageButton.click();assert(pending('catholic-bible-data.json'));assert.equal(snapshot().reader,null,'The Catholic replacement reader is still loading');
+  const respondCatholic=()=>respond('catholic-bible-data.json',{meta:{language:'en',editionId:'catholic',canon:'catholic'}});
+  const respondSource=()=>respond('bible-data.json',{meta:{language:'en'}});
+  const order=process.argv.at(-1);
+  if(order==='reader-first'){respondCatholic();await settle();respondSource();}
+  else if(order==='same-turn'){respondSource();respondCatholic();}
+  else {respondSource();await settle();assert.equal(snapshot().reader,null);respondCatholic();}
+  await settle();
+  assert.equal(snapshot().bibleEdition,'catholic');
+  assert.equal(bibleReaders.at(-1).selectedModel.meta.editionId,'catholic');
+  assert.equal(bibleReaders.at(-1).state.location.bookId,'JDT','A new Catholic passage must survive an older source-edition lookup');
+  assert.equal(bibleReaders.at(-1).state.location.chapter,8);assert.equal(bibleReaders.at(-1).state.location.verse,1);
+  assert.equal(bibleReaders.at(-1).state.atlasReference,undefined,'The old city reference cannot overwrite the new Catholic request');
+  assert.doesNotMatch(control('#toast').textContent||'',/could not load|could not be located/,'A queued passage must not be consumed while its reader is null');
+}
+
 async function main(){
   assert.equal(snapshot().language,'nl');assert.equal(snapshot().tradition,'christianity');
   assert.equal(snapshot().peopleTradition,'christianity');
-  assert(!requests.some(request=>/people|comparisons/.test(request.file)),'People assets are lazy, not downloaded on scripture startup');
-  assert(pending('bible-data-nl.json'),'Initial scripture request must use Dutch');
-  respond('bible-data-nl.json',{meta:{language:'nl'}});respond('places-data.json',{places:[]});await settle();
+  assert(!requests.some(request=>/torah-people|quran-people|comparisons/.test(request.file)),'Other collections remain lazy');
+  assert.equal(snapshot().bibleEdition,'catholic');assert(pending('catholic-bible-data.json'),'The complete Catholic edition is the default, with Dutch controls');
+  initialCatholic();await settle();
   assert.equal(control('#reader-view').hidden,false);assert.equal(control('#sacred-reader-view').hidden,true);
   bibleReaders[0].state.location={bookId:'JHN',chapter:3,verse:16};
 
@@ -114,7 +146,7 @@ async function main(){
   selectTradition('christianity');await settle();
   assert.equal(control('#reader-view').hidden,false);assert.equal(control('#sacred-reader-view').hidden,true);
   assert.deepEqual(bibleReaders.at(-1).getState().location,{bookId:'JHN',chapter:3,verse:16},'Returning to Bible preserves the reading position');
-  assert.equal(requests.filter(r=>r.file==='bible-data-nl.json').length,1,'A tradition switch must not reload the Bible unnecessarily');
+  assert.equal(requests.filter(r=>r.file==='catholic-bible-data.json').length,1,'A tradition switch must not reload the Bible unnecessarily');
 
   selectTradition('judaism');await settle();assert.equal(control('#sacred-reader-view').rendered,'judaism:nl');
   selectView('cities');await settle();assert.equal(control('#sacred-reader-view').hidden,true);assert.equal(control('#cities-view').hidden,false);
@@ -199,8 +231,37 @@ async function main(){
   selectView('reader');await settle();
   assert.equal(control('#sacred-reader-view').rendered,'islam:nl');assert.equal(control('#people-testament-filters').hidden,true);
   assert.equal(snapshot().peopleCount,originalPeopleCount);assert.equal(snapshot().relationshipCount,originalRelationships,'Separate index data never mutates Bible graph identities or edges');
+  selectTradition('christianity');await settle();
+  if(pending('bible-data.json')){respond('bible-data.json',{meta:{language:'en'}});await settle();}
+  const catholicLocation=structuredClone(bibleReaders.at(-1).state.location);
+  bibleReaders.at(-1).callbacks.onEditionChange('locale');assert(pending('bible-data-nl.json'));
+  respond('bible-data-nl.json',{meta:{language:'nl'}});await settle();
+  assert.equal(snapshot().bibleEdition,'locale');assert.equal(bibleReaders.at(-1).model.meta.language,'nl');
+  bibleReaders.at(-1).state.location={bookId:'EXO',chapter:3,verse:2};
+  bibleReaders.at(-1).callbacks.onEditionChange('catholic');await settle();
+  assert.deepEqual(bibleReaders.at(-1).state.location,catholicLocation,'Each edition preserves its own reading position');
+  const passageButton=new Control({catholicPassage:'0'});groups.set('#catholic-profile-content [data-catholic-passage]',[passageButton]);
+  bibleReaders.at(-1).callbacks.onPerson('catholic:judith');
+  assert.equal(control('#catholic-profile-dialog').open,true);assert.match(control('#catholic-profile-content').innerHTML,/Judit/);
+  bibleReaders.at(-1).model={reference(){throw Error('Wrong edition: a legacy city reference temporarily selected WEB');}};
+  passageButton.click();await settle();assert.equal(control('#catholic-profile-dialog').open,false);
+  assert.equal(bibleReaders.at(-1).state.location.bookId,'JDT');assert.equal(bibleReaders.at(-1).state.location.chapter,8);
+  assert.equal(bibleReaders.at(-1).state.atlasReference,undefined,'Catholic references use their exact edition without legacy fallback');
+  assert.equal(snapshot().peopleCount,originalPeopleCount);assert.equal(snapshot().relationshipCount,originalRelationships);
+  bibleReaders.at(-1).callbacks.onEditionChange('locale');await settle();
+  assert.equal(bibleReaders.at(-1).state.location.bookId,'EXO');
+  await control('#language-select').change('fr');await settle();
+  respond('bible-data-fr.json',{meta:{language:'fr'}});await settle();
+  assert.equal(bibleReaders.at(-1).state.location.bookId,'GEN','A different text edition does not inherit unaligned verse numbers');
+  bibleReaders.at(-1).state.location={bookId:'PSA',chapter:23,verse:1};
+  await control('#language-select').change('nl');await settle();
+  assert.equal(bibleReaders.at(-1).state.location.bookId,'EXO','Returning to Dutch restores the Dutch edition position');
   const pendingProfileCheck=spawnSync(process.execPath,[__filename,'--pending-profile-language'],{encoding:'utf8'});
   assert.equal(pendingProfileCheck.status,0,pendingProfileCheck.stderr||pendingProfileCheck.stdout);
+  for(const order of ['source-first','reader-first','same-turn']){
+    const pendingPassageCheck=spawnSync(process.execPath,[__filename,'--pending-passage-race',order],{encoding:'utf8'});
+    assert.equal(pendingPassageCheck.status,0,`${order}: ${pendingPassageCheck.stderr||pendingPassageCheck.stdout}`);
+  }
   console.log('Interfaith app passed: Dutch startup, reader and person collection isolation, lazy caches, failed-load retries, late-response guards, independent filters, comparison callbacks, Bible graph routing and language changes.');
 }
-(process.argv.includes('--pending-profile-language')?pendingProfileLanguageRegression():main()).catch(error=>{console.error(error);process.exitCode=1;});
+(process.argv.includes('--pending-profile-language')?pendingProfileLanguageRegression():process.argv.includes('--pending-passage-race')?pendingPassageEditionRegression():main()).catch(error=>{console.error(error);process.exitCode=1;});
