@@ -9,6 +9,7 @@
     ['Public domain text; CC0 1.0 transcription','Tekst in het publieke domein; CC0 1.0-transcriptie','Texte du domaine public ; transcription CC0 1.0'],
     ['THE COMPLETE SCRIPTURES','DE VOLLEDIGE BIJBEL','LA BIBLE COMPLÈTE'],
     ['Read the story.','Lees het verhaal.','Lisez le récit.'],
+    ['About verse numbering','Over de versnummering','À propos de la numérotation des versets'],
     ['This city reference uses atlas verse numbering. Reading the English World English Bible so the cited passage is accurate; numbering in your selected edition may differ.','Deze stadsverwijzing gebruikt de versnummering van de atlas. Je leest de Engelse World English Bible zodat de aangehaalde passage klopt; de nummering in je gekozen editie kan verschillen.','Cette référence de ville utilise la numérotation de l’atlas. Le passage est affiché dans la World English Bible en anglais pour respecter la référence citée ; la numérotation de votre édition peut différer.'],
     ['Return to {edition}','Terug naar {edition}','Revenir à {edition}'],
     ['The cited passage could not load. Select the city reference again to retry.','De aangehaalde passage kon niet worden geladen. Selecteer de stadsverwijzing opnieuw om het nogmaals te proberen.','Le passage cité n’a pas pu être chargé. Sélectionnez à nouveau la référence de la ville pour réessayer.'],

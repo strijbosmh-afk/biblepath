@@ -44,6 +44,24 @@ class Host{
 const host=new Host(),callbacks=[];const view=new PlacesMapView(host,{onPlace:r=>callbacks.push(r)});view.setData(geo,collections);assert.match(host.querySelector('.pm-map-error').textContent,/kaart is niet beschikbaar/,'Search and links remain available without map library');
 assert.equal(host.attrs.translate,'no');assert.equal(view.matches.length,1);assert.match(host.querySelector('.pm-status').textContent,/1 plaats ·/);
 view.setTradition('all');assert.equal(view.matches.length,4);assert.equal(callbacks.length,0,'Programmatic filters do not navigate');
+// A result selected far down the mobile list must reveal its detail above it.
+// Visible desktop details must keep their current page position.
+const detailPanel=host.querySelector('.pm-detail'),detailHeading=host.querySelector('.pm-detail h3'),scrolls=[];
+const originalViewportHeight=globalThis.innerHeight;globalThis.innerHeight=844;
+let detailBounds={top:160,bottom:198};
+detailHeading.getBoundingClientRect=()=>detailBounds;
+detailPanel.scrollIntoView=options=>scrolls.push(options);
+detailPanel.scrollTop=230;
+view.selectPlace('islam|islam:unknown');
+assert.equal(detailPanel.scrollTop,0,'New detail starts at its heading, even after scrolling a previous profile');
+assert.equal(scrolls.length,0,'A visible desktop detail does not jump the page');
+detailBounds={top:-1308,bottom:-1270};host.click({pmSelect:'islam|islam:unknown'});
+assert.deepEqual(scrolls.at(-1),{block:'start',inline:'nearest',behavior:'auto'},'Selecting a low mobile result reveals its offscreen detail');
+assert.equal(host.focused,'.pm-detail h3','The selected heading remains the keyboard focus target');
+detailBounds={top:950,bottom:988};host.click({pmSelect:'islam|islam:jerusalem'});
+assert.equal(scrolls.length,2,'A marker also reveals a detail below the mobile viewport');
+view.selectPlace('islam|islam:unknown',{focus:false});assert.equal(scrolls.length,2,'Silent programmatic selection does not scroll');
+if(originalViewportHeight===undefined)delete globalThis.innerHeight;else globalThis.innerHeight=originalViewportHeight;
 host.input('Jeruzalem');host.click({pmSelect:'islam|islam:jerusalem'});for(const lang of ['en','fr','nl']){I.language=lang;view.changeLanguage();assert.equal(view.state.query,'Jeruzalem');assert.equal(view.matches.length,3,'A saved Dutch query retains Christian, Jewish and Islamic profiles after language changes');assert.equal(view.state.selected,'islam|islam:jerusalem','Language changes preserve the selected religious profile');}
 host.input('17:1');assert.equal(view.matches.length,1);assert.equal(view.matches[0].tradition,'islam');host.click({pmSelect:'islam|islam:jerusalem'});assert.equal(view.state.selected,'islam|islam:jerusalem');assert.match(host.querySelector('.pm-detail').innerHTML,/Traditionele identificatie/);assert.match(host.querySelector('.pm-detail').innerHTML,/Personen en tekstpassages/);assert.match(host.querySelector('.pm-detail').innerHTML,/noopener noreferrer/);
 host.click({pmOpen:view.state.selected});assert.deepEqual(callbacks,[{tradition:'islam',id:'islam:jerusalem'}]);

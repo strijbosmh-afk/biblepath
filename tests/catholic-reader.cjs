@@ -40,6 +40,7 @@ const reader=new Reader(el,catholic,{people:[]},{places:[]},{editionId:'catholic
 assert.match(el.innerHTML,/Volledige katholieke Bijbel: 73 boeken/);
 assert.match(el.innerHTML,/De Bijbeltekst is in het Engels/,'The Dutch interface must make the English text language explicit');
 assert.match(reader.q('#reader-content').innerHTML,/De Douay-Rheims volgt haar eigen Vulgaatnummering/,'Numbering guidance is Dutch while the source text remains English');
+assert.match(reader.q('#reader-content').innerHTML,/<details class="reader-versification-note"><summary>Over de versnummering<\/summary><p>/,'Numbering guidance is available in a compact, initially closed native disclosure');
 assert.match(el.innerHTML,/value="catholic" selected/);
 const sidebar=reader.qa('[data-reader-book]').map(button=>button.dataset.readerBook);
 assert.equal(sidebar.length,73);assert.equal(new Set(sidebar).size,73);
@@ -140,6 +141,8 @@ for(const passage of ['Esther 15:1','Esther 16:1']){
 const dutchState=plain(dutchReader.getState());
 for(const locale of ['en','fr','nl']){
   I.setLanguage(locale);dutchReader.render();assert.equal(dutchReader.model.meta.language,'nl');assert.deepEqual(plain(dutchReader.getState()),dutchState);
+  assert.match(dutchReader.q('#reader-content').innerHTML,{en:/<summary>About verse numbering<\/summary>/,nl:/<summary>Over de versnummering<\/summary>/,fr:/<summary>À propos de la numérotation des versets<\/summary>/}[locale],'The numbering disclosure label follows the interface language');
+  assert(dutchReader.q('#reader-content').innerHTML.includes(I.t(dutchData.meta.versificationNote)),'Collapsing the note must preserve the full source-specific numbering guidance');
   assert.match(dutchReader.q('#reader-content').innerHTML,{en:/separately reviewed Dutch passage correspondences/,nl:/afzonderlijk gecontroleerde Nederlandse passagekoppelingen/,fr:/correspondances néerlandaises vérifiées séparément/}[locale]);
   assert(!dutchReader.q('#reader-content').innerHTML.includes(I.t(dutchData.meta.annotationNotice)),'The displayed identity guidance distinguishes reviewed person navigation from inline editorial name links');
   if(locale!=='en')for(const field of ['credit','versificationNote','annotationNotice','license'])assert.notEqual(I.t(dutchData.meta[field]),dutchData.meta[field],`Dutch edition ${field} must be localized in ${locale}`);

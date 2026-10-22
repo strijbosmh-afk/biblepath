@@ -147,7 +147,17 @@
     }
     selectPlace(key,{pan=true,focus=true}={}){
       if(typeof key==='object')key=keyOf(key.tradition,key.id);const record=this.model?.byKey.get(key);if(!record||!(this.matches||[]).some(r=>r.key===key))return false;
-      this.state.selected=key;this.renderDetail();this.renderResults();this.renderMarkers();if(this.map&&record.mapped&&pan)this.map.panTo([record.lat,record.lon]);if(focus)this.container.querySelector('.pm-detail h3')?.focus?.({preventScroll:true});return true;
+      this.state.selected=key;this.renderDetail();this.renderResults();this.renderMarkers();if(this.map&&record.mapped&&pan)this.map.panTo([record.lat,record.lon]);
+      const panel=this.container.querySelector('.pm-detail');panel.scrollTop=0;
+      if(focus){
+        const heading=panel.querySelector?.('h3')||this.container.querySelector('.pm-detail h3');
+        heading?.focus?.({preventScroll:true});
+        const bounds=heading?.getBoundingClientRect?.(),viewportHeight=root.innerHeight||root.document?.documentElement?.clientHeight;
+        // Results sit below the detail on phones. Reveal a newly selected place
+        // when it is offscreen, without moving an already visible desktop panel.
+        if(bounds&&viewportHeight&&(bounds.top<0||bounds.bottom>viewportHeight))panel.scrollIntoView?.({block:'start',inline:'nearest',behavior:'auto'});
+      }
+      return true;
     }
     renderMarkers(){
       if(!this.map||!this.markerLayer||!this.model)return;const L=root.L;this.markerLayer.clearLayers();
