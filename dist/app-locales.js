@@ -1,6 +1,12 @@
 (function(){
 const I=window.BibleI18n;
 I.registerRows([
+['Places map','Plaatsenkaart','Carte des lieux'],
+['Explore places by religion, then follow their people and texts.','Verken plaatsen per religie en volg de bijbehorende personen en teksten.','Explorez les lieux par religion, puis leurs personnages et leurs textes.'],
+['Opening the places map…','De plaatsenkaart wordt geopend…','Ouverture de la carte des lieux…'],
+['← Back to the places map','← Terug naar de plaatsenkaart','← Retour à la carte des lieux'],
+['Explore places','Plaatsen verkennen','Explorer les lieux'],
+['Map','Kaart','Carte'],['List','Lijst','Liste'],
 ['Family relationships in this tradition, with a source for every connection.','Familiebanden binnen deze traditie, met een bron bij elke verbinding.','Les liens familiaux dans cette tradition, avec une source pour chaque relation.'],
 ['Cities and places in this tradition, with textual sources and historical context.','Steden en plaatsen binnen deze traditie, met tekstbronnen en historische context.','Villes et lieux de cette tradition, avec sources textuelles et contexte historique.'],
 ['← Back to the family map','← Terug naar de familiekaart','← Revenir à la carte familiale'],

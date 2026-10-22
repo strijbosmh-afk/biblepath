@@ -24,9 +24,17 @@ City references use the atlas's English verse numbering. When the selected editi
 
 Judaism and Islam have independent curated family maps and place explorers in `dist/tradition-atlas-judaism.json` and `dist/tradition-atlas-islam.json`. Every relationship cites its evidence. Parentage, spouses, siblings, care and adoption have distinct types; the Islamic collection distinguishes Qur’anic claims from later tradition. Jewish records follow the Tanakh. These are selective accounts, not exhaustive or independently established historical genealogies.
 
-Choose a family, search/select people, zoom or scroll the SVG and inspect the relationship sources. Places offer search, type filtering, historical context, location uncertainty and sourced person associations. Maps, place selections and filters remain independent by religion. Reading links open edition-checked Hebrew Tanakh or Dutch Qur’an passages, with a return action. Optional person-index links only target existing identities. The existing Christian graph and its three layouts remain available.
+Choose a family and search/select people. All traditions now use the same `BibleGraph` renderer, circular nodes, subtle relationship lines and three layouts. Jewish and Islamic maps start with immediate family, offer the full selected family, retain pan/zoom and keep sources/relationship detail expandable. Places offer search, type filtering, historical context, location uncertainty and sourced person associations. Maps, place selections and filters remain independent by religion. Reading links open edition-checked Hebrew Tanakh or Dutch Qur’an passages, with a return action. Optional person-index links only target existing identities. The existing Christian graph and its three layouts remain available.
 
 Run `node tests/tradition-atlas-data.cjs`, `node tests/tradition-atlas-ui.cjs` and `node tests/interfaith-app.cjs` to verify source/schema boundaries, real scripture coordinates, graph geometry, interactions, language changes, asynchronous loading and return navigation.
+
+## Interactive places map
+
+The Cities explorer opens a Leaflet map with religion filters, search, zoom/pan and grouped markers. Place profiles remain separate by religion even when coordinates coincide. An explicit action opens the existing profile with its people and edition-safe text links; returning preserves filters, selection and viewport. The List control retains the original browsers. Unknown locations stay searchable without a fabricated marker.
+
+`dist/place-geography.json` supplements all 639 existing place records without changing their identities, passages or collection scope. It records source-backed candidate points, identification uncertainty, representative region points and alternatives. Build with `node scripts/build-place-geography.cjs`; `--check` validates reproducibility from the pinned OpenBible cache and explicit reviewed overrides. Run `node tests/place-geography.cjs`, `node tests/places-map.cjs` and `node tests/interfaith-app.cjs`.
+
+Leaflet 1.9.4 is self-hosted under `dist/vendor/leaflet/` with its license. OpenStreetMap tiles are fetched only as the map is used, with visible attribution and normal browser caching; no API key or user geolocation is used. If tiles are unavailable, place search, geographic notes and profile links remain available.
 
 ## Festivals and rituals
 
@@ -90,4 +98,4 @@ Person-reference checks include `node tests/person-passage-map.cjs`, `node tests
 
 Checks cover source provenance, complete scripture editions, native-script search, numbering boundaries, saved positions/notes, language and tradition switching, late or failed downloads, namesakes, paths, persistent highlights, progressive discovery, parent/child generation order, circle/arrow clearance and edition-safe city references. The place rebuild check requires the pinned `.cache/TIPNR.txt` and `.cache/OpenBible-ancient.jsonl` inputs used by `scripts/import-places.cjs`.
 
-Google Fonts provides typography with system fallbacks. The application needs no external runtime library or data service after its static assets load.
+Google Fonts provides typography with system fallbacks. Reader and index functionality needs no external data service after its static assets load. The geographic map uses OpenStreetMap background tiles, while Leaflet and all place data are hosted with the app.

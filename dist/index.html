@@ -13,17 +13,19 @@
   <link rel="stylesheet" href="sacred-reader.css?v=b91fc132aca0">
   <link rel="stylesheet" href="people-traditions.css?v=d31aef809b03">
   <link rel="stylesheet" href="festivals.css?v=f95161fc55b7">
-  <link rel="stylesheet" href="tradition-atlas.css?v=5dbdfec27732">
+  <link rel="stylesheet" href="tradition-atlas.css?v=b38e3fbad6b1">
   <link rel="stylesheet" href="cities.css?v=12681cf3d2d7">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css?v=a78371028241">
+  <link rel="stylesheet" href="places-map.css?v=67873787cd18">
   <script src="i18n.js?v=428479504949" defer></script>
-  <script src="app-locales.js?v=5e623e281459" defer></script>
-  <script src="info-locales.js?v=2de68e075f6c" defer></script>
+  <script src="app-locales.js?v=66e1c0a69229" defer></script>
+  <script src="info-locales.js?v=7a61d5b36695" defer></script>
   <script src="library-locales.js?v=de8d899768e4" defer></script>
   <script src="interfaith-locales.js?v=e5077495c4ef" defer></script>
   <script src="catholic-locales.js?v=5c5cbe530c68" defer></script>
   <script src="entity-locales.js?v=1812bcb1f29d" defer></script>
   <script src="data.js?v=bf7523354725" defer></script>
-  <script src="graph.js?v=9d640a1137b5" defer></script>
+  <script src="graph.js?v=b74c691b83b3" defer></script>
   <script src="discovery.js?v=2491092bda3f" defer></script>
   <script src="paths.js?v=e5a6f389056b" defer></script>
   <script src="scripture.js?v=c4afb22f5d38" defer></script>
@@ -35,8 +37,10 @@
   <script src="person-passage-map.js?v=dbcdb5026742" defer></script>
   <script src="cities-ui.js?v=03eaa70ce78f" defer></script>
   <script src="festivals.js?v=2abc491f792d" defer></script>
-  <script src="tradition-atlas.js?v=79010ff2c949" defer></script>
-  <script src="app.js?v=d77b1ccdf09a" defer></script>
+  <script src="tradition-atlas.js?v=e22db7b41336" defer></script>
+  <script src="vendor/leaflet/leaflet.js?v=db49d009c841" defer></script>
+  <script src="places-map.js?v=dc27899b9117" defer></script>
+  <script src="app.js?v=fb2261ca3c75" defer></script>
 </head>
 <body>
   <svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
@@ -115,6 +119,11 @@
       <button class="reader-return-shortcut" id="return-to-library" hidden>← Back to reading</button>
       <button class="reader-return-shortcut" id="return-to-festivals" hidden>← Back to festivals & rituals</button>
       <button class="reader-return-shortcut" id="return-to-atlas" hidden>← Back to the family map</button>
+      <button class="reader-return-shortcut" id="return-to-geography" hidden>← Back to the places map</button>
+      <div id="cities-view-switch" class="cities-view-switch" role="group" aria-label="Explore places" hidden>
+        <button type="button" id="cities-show-map">Map</button><button type="button" id="cities-show-list">List</button>
+      </div>
+      <section id="places-map-view" translate="no" hidden></section>
       <section class="path-finder" id="path-finder" aria-labelledby="path-finder-title">
         <div class="path-finder-heading"><div><div class="eyebrow">FOLLOW THE THREAD</div><h2 id="path-finder-title">How are they connected?</h2></div><p>Choose two lives. Trace the family links between them.</p></div>
         <form id="path-form" class="path-form">

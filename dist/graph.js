@@ -63,7 +63,7 @@
       this.pointerPositions = new Map();
       this.cleanups = [];
       this.id = `bible-graph-${++nextGraphId}`;
-      this.svg = el('svg', {class: 'bible-graph', role: 'group', 'aria-label': 'Interactive biblical family map. Drag to pan, scroll or pinch to zoom. Use arrow keys to pan and plus or minus to zoom.', tabindex: '0', width: '100%', height: '100%'});
+      this.svg = el('svg', {class: 'bible-graph', role: 'group', 'aria-label': callbacks.mapLabel || 'Interactive biblical family map. Drag to pan, scroll or pinch to zoom. Use arrow keys to pan and plus or minus to zoom.', tabindex: '0', width: '100%', height: '100%'});
       Object.assign(this.svg.style, {display: 'block', width: '100%', height: '100%', touchAction: 'none', userSelect: 'none', cursor: 'grab', overflow: 'hidden'});
       this.svg.innerHTML = `<defs><marker id="${this.id}-arrow" markerWidth="7" markerHeight="7" refX="6.2" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L6 3.5 L1 6" fill="none" stroke="#99aa8c" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="${this.id}-path-arrow" markerWidth="9" markerHeight="9" refX="7.2" refY="4.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1.5 1.5 L7 4.5 L1.5 7.5" fill="none" stroke="#a37622" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>`;
       this.viewport = el('g', {class: 'graph-viewport'});
@@ -679,7 +679,11 @@
     }
 
     relationshipLabel(relation) {
+      if(relation.displayLabel)return relation.displayLabel;
       if(relation.type==='spouse')return t('Spouse');
+      if(relation.type==='sibling')return t('Siblings');
+      if(relation.type==='guardian')return t('Guardianship');
+      if(relation.type==='adoptive')return t('Adoptive relationship');
       if(/legal parent|legal father|adopt/i.test(relation.note||''))return t('Legal parent');
       const gender=this.peopleById.get(relation.source)?.gender;
       return t(gender==='female'?'Mother':gender==='male'?'Father':'Parent');
@@ -701,15 +705,16 @@
       [...this.routes].sort((a,b)=>Number(this.pathEdgeKeys.has(edgeKey(a)))-Number(this.pathEdgeKeys.has(edgeKey(b)))).forEach(relation => {
         if(relation.failed||relation.points.length<2)return;
         const path=relation.points.map((point,index)=>`${index?'L':'M'} ${point.x.toFixed(2)} ${point.y.toFixed(2)}`).join(' ');
-        const element = el('path', {d:path, class: `graph-edge ${relation.type}`, fill: 'none', stroke: '#ccd5c5', 'stroke-width': 1.2, 'stroke-linecap':'round','stroke-linejoin':'round', 'data-source': relation.source, 'data-target': relation.target});
+        const element = el('path', {d:path, class: `graph-edge ${relation.type}`, fill: 'none', stroke: '#ccd5c5', 'stroke-width': 1.2, 'stroke-linecap':'round','stroke-linejoin':'round', 'data-source': relation.source, 'data-target': relation.target, 'data-relation-type': relation.type});
         const title=el('title');
-        title.textContent=`${this.peopleById.get(relation.source).name} ${relation.type==='spouse'?'—':'→'} ${this.peopleById.get(relation.target).name}: ${relation.ref?.label||''}${relation.note?' — '+relation.note:''}`;
+        title.textContent=`${this.peopleById.get(relation.source).name} ${relation.type==='parent'?'→':'—'} ${this.peopleById.get(relation.target).name}: ${relation.ref?.label||''}${relation.note?' — '+relation.note:''}`;
         element.append(title);
         if (relation.type === 'spouse') element.setAttribute('stroke-dasharray', '4 5');
-        else element.setAttribute('marker-end', `url(#${this.id}-arrow)`);
+        else if(relation.type==='parent')element.setAttribute('marker-end', `url(#${this.id}-arrow)`);
+        else element.setAttribute('stroke-dasharray', {sibling:'2 5',guardian:'8 4 2 4',adoptive:'5 4'}[relation.type]||'3 5');
         this.edgeLayer.append(element);
         const midpoint=this.routeMidpoint(relation.points),labelText=this.relationshipLabel(relation);
-        const group=el('g',{class:'graph-relationship-label',transform:`translate(${midpoint.x} ${midpoint.y})`,'data-source':relation.source,'data-target':relation.target,visibility:'hidden'});
+        const group=el('g',{class:'graph-relationship-label',transform:`translate(${midpoint.x} ${midpoint.y})`,'data-source':relation.source,'data-target':relation.target,'data-relation-type':relation.type,visibility:'hidden'});
         const width=labelText.length*5.6+14;
         const background=el('rect',{x:-width/2,y:-9,width,height:18,rx:5,fill:'#fafcf5',stroke:'#e2e9d9','stroke-width':0.7});
         const label=el('text',{'text-anchor':'middle',y:3.5,fill:'#627651',stroke:'none','font-size':9,'font-family':'inherit'});label.textContent=labelText;
@@ -717,7 +722,7 @@
       });
       this.people.forEach(person => {
         const point = this.positions.get(person.id);
-        const group = el('g', {transform: `translate(${point.x} ${point.y})`, class: `graph-node ${person.gender || ''} ${person.testament?.toLowerCase() || ''}`, 'data-person-id': person.id, role: 'button', tabindex: '0', 'aria-label': `${person.name}. ${person.description || ''} ${t('Select to view family and Bible references.')}`});
+        const group = el('g', {transform: `translate(${point.x} ${point.y})`, class: `graph-node ${person.gender || ''} ${person.testament?.toLowerCase() || ''}`, 'data-person-id': person.id, role: 'button', tabindex: '0', 'aria-label': `${person.name}. ${person.description || ''} ${this.callbacks.nodeHint || t('Select to view family and Bible references.')}`});
         group.style.cursor = 'pointer';
         const outer = el('circle', {class: 'node-halo', r: this.radius + 7, fill: 'none', stroke: '#88987c', 'stroke-width': 1, opacity: 0});
         const circle = el('circle', {class: 'node-circle', r: this.radius, fill: person.gender === 'female' ? '#edd8c8' : '#dce5d0', stroke: person.gender === 'female' ? '#cda88d' : '#b2c39e', 'stroke-width': 1.3});
@@ -789,13 +794,13 @@
         endpointLabel.style.fill='#947027';
         endpointLabel.setAttribute('visibility',endpoint?'visible':'hidden');
         endpointLabel.textContent=start&&end?'START & END':start?'START':end?'END':'';
-        group.setAttribute('aria-label',`${person.name}. ${person.description||''}${start?' Start of highlighted path.':''}${end?' End of highlighted path.':''} Select to view family and Bible references.`);
+        group.setAttribute('aria-label',`${person.name}. ${person.description||''}${start?' Start of highlighted path.':''}${end?' End of highlighted path.':''} ${this.callbacks.nodeHint || t('Select to view family and Bible references.')}`);
         group.setAttribute('aria-pressed', String(selected));
       });
       [...this.edgeLayer.children].forEach(edge => {
         const activeId=hoverId||this.selectedId;
         const connected = activeId && (edge.dataset.source === activeId || edge.dataset.target === activeId);
-        const type=edge.classList.contains('spouse')?'spouse':'parent';
+        const type=edge.dataset.relationType || (edge.classList.contains('spouse')?'spouse':'parent');
         const onPath=this.pathEdgeKeys.has(edgeKey({source:edge.dataset.source,target:edge.dataset.target,type}));
         edge.classList.toggle('is-highlighted', !!connected);
         edge.classList.toggle('is-on-path',onPath);
@@ -811,7 +816,7 @@
       const activeId=this.hoverId||this.selectedId,rectangles=[];
       [...this.labelLayer.children].forEach(label=>{
         const connected=activeId&&(label.dataset.source===activeId||label.dataset.target===activeId);
-        const route=this.routes.find(item=>item.source===label.dataset.source&&item.target===label.dataset.target);
+        const route=this.routes.find(item=>item.source===label.dataset.source&&item.target===label.dataset.target&&(!label.dataset.relationType||item.type===label.dataset.relationType));
         const onPath=route&&this.pathEdgeKeys.has(edgeKey(route));
         label.children[0].setAttribute('fill',onPath?'#fff8e6':'#fafcf5');
         label.children[0].setAttribute('stroke',onPath?'#ddc38a':'#e2e9d9');

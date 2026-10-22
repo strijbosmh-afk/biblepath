@@ -1,0 +1,2768 @@
+{
+  "reviewedAt": "2026-10-22",
+  "notes": [
+    "Explicit geographical associations; they do not merge religious identities or textual accounts.",
+    "Wikidata revisions pin P625 coordinate facts, under CC0.",
+    "UNESCO DMS coordinate facts were converted to decimal degrees.",
+    "OpenBible IDs were reviewed against place scope and cited passages; same-name alternatives were not matched automatically.",
+    "Hunayn, al-Judi and al-Ahqaf remain visible without a marker where this release has no sufficiently reviewed location.",
+    "Reviewed additional Christian source IDs only when an existing profile name form and an exact cited passage both matched the OpenBible record. These explicitly stored joins retain alternative contexts; they do not assert identity.",
+    "Secu is a regional orientation point despite the source labelling its coordinate type point; Vedan remains unmapped because the textual reading does not justify a certain Dan identification."
+  ],
+  "places": {
+    "judaism:place-ur": {
+      "openBibleIds": [
+        "a6cf75c"
+      ]
+    },
+    "judaism:place-haran": {
+      "openBibleIds": [
+        "a6d9af3"
+      ]
+    },
+    "judaism:place-shechem": {
+      "openBibleIds": [
+        "adf74d4"
+      ]
+    },
+    "judaism:place-bethel": {
+      "openBibleIds": [
+        "a64f355"
+      ]
+    },
+    "judaism:place-hebron": {
+      "openBibleIds": [
+        "a85151a"
+      ]
+    },
+    "judaism:place-beersheba": {
+      "openBibleIds": [
+        "a075d61"
+      ]
+    },
+    "judaism:place-jerusalem": {
+      "openBibleIds": [
+        "a15257a"
+      ]
+    },
+    "judaism:place-bethlehem": {
+      "openBibleIds": [
+        "a112427"
+      ]
+    },
+    "judaism:place-jericho": {
+      "openBibleIds": [
+        "a231f80"
+      ]
+    },
+    "judaism:place-shiloh": {
+      "openBibleIds": [
+        "aa4680a"
+      ]
+    },
+    "judaism:place-gibeon": {
+      "openBibleIds": [
+        "aede336"
+      ]
+    },
+    "judaism:place-ramesses": {
+      "openBibleIds": [
+        "a079b21"
+      ]
+    },
+    "judaism:place-moab": {
+      "openBibleIds": [
+        "aa0b1d6"
+      ]
+    },
+    "judaism:place-midian": {
+      "openBibleIds": [
+        "acc6d8e"
+      ]
+    },
+    "judaism:place-goshen": {
+      "openBibleIds": [
+        "a60f092"
+      ]
+    },
+    "judaism:place-on": {
+      "openBibleIds": [
+        "acd9137"
+      ]
+    },
+    "judaism:place-dothan": {
+      "openBibleIds": [
+        "ab635e4"
+      ]
+    },
+    "judaism:place-megiddo": {
+      "openBibleIds": [
+        "a8554e3"
+      ]
+    },
+    "judaism:place-hazor": {
+      "openBibleIds": [
+        "a6f33c5"
+      ]
+    },
+    "judaism:place-sinai": {
+      "lat": 28.5384,
+      "lon": 33.9752,
+      "status": "traditional",
+      "coordinateType": "point",
+      "note": {
+        "nl": "De marker toont Jebel Musa, een traditionele identificatie van de Sinaï. Hij stelt de historische plaats van de openbaring niet vast.",
+        "en": "The marker shows Jebel Musa, a traditional identification of Sinai. It does not establish the historical location of the revelation.",
+        "fr": "Le repère montre le djebel Musa, une identification traditionnelle du Sinaï. Il n’établit pas le lieu historique de la révélation."
+      },
+      "sources": [
+        {
+          "label": "Wikidata — Mount Sinai (CC0)",
+          "url": "https://www.wikidata.org/w/index.php?title=Q377485&oldid=2558549257"
+        },
+        {
+          "label": "UNESCO — Saint Catherine Area",
+          "url": "https://whc.unesco.org/en/list/954/"
+        }
+      ]
+    },
+    "islam:sinai": {
+      "lat": 28.5384,
+      "lon": 33.9752,
+      "status": "traditional",
+      "coordinateType": "point",
+      "note": {
+        "nl": "De marker toont de traditionele identificatie Jebel Musa. De Koran bepaalt hier geen moderne coördinaten; voor de vallei Tuwa wordt geen apart punt aangenomen.",
+        "en": "The marker shows the traditional identification Jebel Musa. The Qur’an supplies no modern coordinates here; no separate point is assumed for the valley of Tuwa.",
+        "fr": "Le repère montre l’identification traditionnelle du djebel Musa. Le Coran ne fournit pas de coordonnées modernes ici ; aucun point distinct n’est supposé pour la vallée de Tuwa."
+      },
+      "sources": [
+        {
+          "label": "Wikidata — Mount Sinai (CC0)",
+          "url": "https://www.wikidata.org/w/index.php?title=Q377485&oldid=2558549257"
+        },
+        {
+          "label": "UNESCO — Saint Catherine Area",
+          "url": "https://whc.unesco.org/en/list/954/"
+        }
+      ]
+    },
+    "islam:mecca": {
+      "lat": 21.4225,
+      "lon": 39.826111,
+      "status": "identified",
+      "coordinateType": "point",
+      "note": {
+        "nl": "Oriëntatiepunt voor Mekka bij het centrale heiligdom. De marker geeft geen stadsgrens of archeologische datering van de Kaäba aan.",
+        "en": "Reference point for Mecca at the central sanctuary. The marker indicates neither city boundaries nor an archaeological date for the Kaaba.",
+        "fr": "Point de repère de La Mecque au sanctuaire central. Il ne représente ni les limites de la ville ni une datation archéologique de la Kaaba."
+      },
+      "sources": [
+        {
+          "label": "Wikidata — Mecca (CC0)",
+          "url": "https://www.wikidata.org/w/index.php?title=Q5806&oldid=2550396135"
+        },
+        {
+          "label": "Saudipedia — Makkah al-Mukarramah City",
+          "url": "https://saudipedia.com/en/makkah-al-mukarramah-city"
+        }
+      ]
+    },
+    "islam:medina": {
+      "lat": 24.47,
+      "lon": 39.61,
+      "status": "identified",
+      "coordinateType": "point",
+      "note": {
+        "nl": "Oriëntatiepunt voor de huidige stad Medina. Het is geen afbakening van de zevende-eeuwse stad of een specifieke gebeurtenis.",
+        "en": "Reference point for the present city of Medina. It does not delimit the seventh-century city or locate a particular event.",
+        "fr": "Point de repère de la ville actuelle de Médine. Il ne délimite pas la ville du VIIe siècle et ne localise pas un événement précis."
+      },
+      "sources": [
+        {
+          "label": "Wikidata — Medina (CC0)",
+          "url": "https://www.wikidata.org/w/index.php?title=Q35484&oldid=2559347212"
+        }
+      ]
+    },
+    "islam:jerusalem": {
+      "openBibleIds": [
+        "a15257a"
+      ],
+      "note": {
+        "nl": "De marker lokaliseert Jeruzalem. De verbinding met de verste moskee uit Koran 17:1 berust op islamitische interpretatie; de passage noemt de stad niet bij naam.",
+        "en": "The marker locates Jerusalem. The association with the farthest mosque in Qur’an 17:1 belongs to Islamic interpretation; the passage does not name the city.",
+        "fr": "Le repère localise Jérusalem. Le lien avec la mosquée la plus lointaine du Coran 17:1 relève de l’interprétation islamique ; le passage ne nomme pas la ville."
+      },
+      "sources": [
+        {
+          "label": "Metropolitan Museum — Jerusalem and the Dome of the Rock",
+          "url": "https://www.metmuseum.org/exhibitions/listings/2016/jerusalem/exhibition-galleries"
+        }
+      ]
+    },
+    "islam:badr": {
+      "lat": 23.78,
+      "lon": 38.790556,
+      "status": "approximate",
+      "coordinateType": "representative point",
+      "note": {
+        "nl": "Oriëntatiepunt bij Badr volgens de geografische registratie van het gouvernement. Dit is geen precieze afbakening van het slagveld.",
+        "en": "Reference point near Badr from the governorate’s geographical record. This is not a precise delimitation of the battlefield.",
+        "fr": "Point de repère près de Badr issu de la notice géographique du gouvernorat. Il ne délimite pas précisément le champ de bataille."
+      },
+      "sources": [
+        {
+          "label": "Wikidata — Badr (CC0)",
+          "url": "https://www.wikidata.org/w/index.php?title=Q27256&oldid=2557919848"
+        },
+        {
+          "label": "Saudipedia — Site of the Battle of Badr",
+          "url": "https://saudipedia.com/en/the-site-of-the-battle-of-badr"
+        }
+      ]
+    },
+    "islam:safa-marwa": {
+      "lat": 21.423611,
+      "lon": 39.827222,
+      "status": "approximate",
+      "coordinateType": "representative point",
+      "note": {
+        "nl": "Eén oriëntatiepunt voor het rituele gebied tussen Safa en Marwa. De twee heuvels en het volledige traject vallen niet samen met deze ene marker.",
+        "en": "One reference point for the ritual area between Safa and Marwa. The two hills and the entire route do not coincide with this single marker.",
+        "fr": "Un point de repère pour l’espace rituel entre Safâ et Marwa. Les deux collines et le parcours entier ne se confondent pas avec cet unique repère."
+      },
+      "sources": [
+        {
+          "label": "Wikidata — Al-Safa and Al-Marwah (CC0)",
+          "url": "https://www.wikidata.org/w/index.php?title=Q900671&oldid=2521617296"
+        },
+        {
+          "label": "Saudipedia — Safa and Marwa",
+          "url": "https://saudipedia.com/en/safa-and-marwa"
+        }
+      ]
+    },
+    "islam:arafat": {
+      "lat": 21.354831,
+      "lon": 39.983886,
+      "status": "approximate",
+      "coordinateType": "representative point",
+      "note": {
+        "nl": "Oriëntatiepunt voor de vlakte van Arafat bij Jabal al-Rahmah. De marker geeft niet de omvang of rituele grens van het hele gebied weer.",
+        "en": "Reference point for the plain of Arafat near Jabal al-Rahmah. The marker does not represent the extent or ritual boundary of the whole area.",
+        "fr": "Point de repère pour la plaine d’Arafat près de Jabal al-Rahmah. Il ne représente ni l’étendue ni la limite rituelle de l’ensemble."
+      },
+      "sources": [
+        {
+          "label": "Wikidata — Plain of Arafat (CC0)",
+          "url": "https://www.wikidata.org/w/index.php?title=Q16912386&oldid=2548200232"
+        },
+        {
+          "label": "Saudipedia — Arafat ritual site",
+          "url": "https://saudipedia.com/en/arafat-ritual-site"
+        }
+      ]
+    },
+    "islam:midian": {
+      "openBibleIds": [
+        "acc6d8e"
+      ],
+      "status": "approximate",
+      "note": {
+        "nl": "Globaal oriëntatiepunt voor Midjan/Madyan. Dit regionale punt lokaliseert niet de naamloze vader, de waterplaats of Shuaybs woonplaats uit de verschillende verhalen.",
+        "en": "Broad reference point for Midian/Madyan. This regional point does not locate the unnamed father, the water source or Shuayb’s home in the different accounts.",
+        "fr": "Repère général pour Madian/Madyan. Ce point régional ne localise ni le père anonyme, ni le point d’eau, ni la demeure de Shuayb dans les différents récits."
+      }
+    },
+    "islam:egypt": {
+      "openBibleIds": [
+        "af301ca"
+      ],
+      "status": "approximate",
+      "note": {
+        "nl": "Een representatief punt in de Nijldelta geeft het verhaallandschap Egypte aan. Het is geen specifieke stad, geen locatie van Yusuf of Musa en geen historische landsgrens.",
+        "en": "A representative point in the Nile Delta indicates the narrative region Egypt. It is not a particular city, a location of Yusuf or Musa, or a historical national boundary.",
+        "fr": "Un point représentatif dans le delta du Nil indique l’espace narratif de l’Égypte. Ce n’est ni une ville précise, ni un lieu de Yusuf ou Musa, ni une frontière historique."
+      }
+    },
+    "islam:babylon": {
+      "openBibleIds": [
+        "a217d18"
+      ],
+      "sources": [
+        {
+          "label": "UNESCO — Babylon",
+          "url": "https://whc.unesco.org/en/list/278/"
+        }
+      ],
+      "note": {
+        "nl": "De marker lokaliseert de archeologische stad Babylon. Hij bewijst geen aanwezigheid van Sulayman of andere personen die in dezelfde passage worden genoemd.",
+        "en": "The marker locates archaeological Babylon. It does not establish the presence of Sulayman or other persons mentioned in the same passage.",
+        "fr": "Le repère localise la ville archéologique de Babylone. Il n’établit pas la présence de Sulayman ou d’autres personnes évoquées dans le même passage."
+      }
+    },
+    "islam:sheba": {
+      "lat": 15.426877777777777,
+      "lon": 45.33522777777778,
+      "status": "approximate",
+      "coordinateType": "representative point",
+      "note": {
+        "nl": "De oude stad Ma’rib dient als oriëntatiepunt voor het koninkrijk Saba. Saba wordt niet gelijkgesteld aan één stad; de marker lokaliseert geen paleis of koningin uit het verhaal.",
+        "en": "The ancient city of Ma’rib serves as a reference point for the kingdom of Saba. Saba is not equated with one city; the marker does not locate a palace or queen from the account.",
+        "fr": "La ville antique de Ma’rib sert de repère pour le royaume de Saba. Saba n’est pas réduit à une seule ville ; le repère ne localise ni palais ni reine du récit."
+      },
+      "sources": [
+        {
+          "label": "UNESCO — Landmarks of Ancient Saba, Marib",
+          "url": "https://whc.unesco.org/en/list/1700/"
+        },
+        {
+          "label": "UNESCO nomination table — component 1700-001 (Ma’rib coordinates)",
+          "url": "https://whc.unesco.org/document/197732"
+        }
+      ]
+    },
+    "islam:hijr": {
+      "lat": 26.783611111111114,
+      "lon": 37.955000000000005,
+      "status": "identified",
+      "coordinateType": "point",
+      "note": {
+        "nl": "UNESCO-oriëntatiepunt voor Hegra. De plaats is archeologisch identificeerbaar; de marker schrijft de zichtbare Nabateese graven niet toe aan Salihs volk.",
+        "en": "UNESCO reference point for Hegra. The site is archaeologically identifiable; the marker does not attribute its visible Nabataean tombs to Salih’s people.",
+        "fr": "Point de repère UNESCO de Hegra. Le site est identifiable archéologiquement ; le repère n’attribue pas ses tombeaux nabatéens visibles au peuple de Salih."
+      },
+      "sources": [
+        {
+          "label": "UNESCO — Hegra Archaeological Site",
+          "url": "https://whc.unesco.org/en/list/1293/"
+        }
+      ]
+    },
+    "islam:hunayn": {
+      "lat": null,
+      "lon": null,
+      "status": "unmapped",
+      "note": {
+        "nl": "Voor dit profiel is geen voldoende onderbouwd modern kaartpunt opgenomen. De tekstbron en de toelichting blijven beschikbaar; een omstreden identificatie wordt niet als vaststaande locatie getoond.",
+        "en": "No sufficiently supported modern map point has been included for this profile. The text and location notes remain available; a disputed identification is not shown as an established site.",
+        "fr": "Aucun point cartographique moderne suffisamment étayé n’est retenu pour ce profil. Le texte et les précisions restent accessibles ; une identification discutée n’est pas présentée comme un lieu établi."
+      },
+      "sources": [
+        {
+          "label": "Quran.com — textual place designation",
+          "url": "https://quran.com/9/25-26"
+        }
+      ]
+    },
+    "islam:judi": {
+      "lat": null,
+      "lon": null,
+      "status": "unmapped",
+      "note": {
+        "nl": "Voor dit profiel is geen voldoende onderbouwd modern kaartpunt opgenomen. De tekstbron en de toelichting blijven beschikbaar; een omstreden identificatie wordt niet als vaststaande locatie getoond.",
+        "en": "No sufficiently supported modern map point has been included for this profile. The text and location notes remain available; a disputed identification is not shown as an established site.",
+        "fr": "Aucun point cartographique moderne suffisamment étayé n’est retenu pour ce profil. Le texte et les précisions restent accessibles ; une identification discutée n’est pas présentée comme un lieu établi."
+      },
+      "sources": [
+        {
+          "label": "Quran.com — textual place designation",
+          "url": "https://quran.com/11/44"
+        }
+      ]
+    },
+    "islam:ahqaf": {
+      "lat": null,
+      "lon": null,
+      "status": "unmapped",
+      "note": {
+        "nl": "Voor dit profiel is geen voldoende onderbouwd modern kaartpunt opgenomen. De tekstbron en de toelichting blijven beschikbaar; een omstreden identificatie wordt niet als vaststaande locatie getoond.",
+        "en": "No sufficiently supported modern map point has been included for this profile. The text and location notes remain available; a disputed identification is not shown as an established site.",
+        "fr": "Aucun point cartographique moderne suffisamment étayé n’est retenu pour ce profil. Le texte et les précisions restent accessibles ; une identification discutée n’est pas présentée comme un lieu établi."
+      },
+      "sources": [
+        {
+          "label": "Quran.com — textual place designation",
+          "url": "https://quran.com/46/21-26"
+        }
+      ]
+    },
+    "place-H5658G": {
+      "openBibleIds": [
+        "a728e07",
+        "a72a1ff"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a72a1ff",
+          "sourceName": "Abdon",
+          "matchingPassages": [
+            "JOS 21:30",
+            "1CH 6:74"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H5910": {
+      "openBibleIds": [
+        "abc2af0",
+        "a5f4dfc"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a5f4dfc",
+          "sourceName": "Acco",
+          "matchingPassages": [
+            "JDG 1:31"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H0392G": {
+      "openBibleIds": [
+        "a2270e4",
+        "ab41e6b",
+        "a44cac9"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ab41e6b",
+          "sourceName": "Chezib",
+          "matchingPassages": [
+            "GEN 38:5"
+          ]
+        },
+        {
+          "openBibleId": "a44cac9",
+          "sourceName": "Cozeba",
+          "matchingPassages": [
+            "1CH 4:22"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H0303": {
+      "openBibleIds": [
+        "a36348c",
+        "ac6f1a8"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ac6f1a8",
+          "sourceName": "Mahalab",
+          "matchingPassages": [
+            "JOS 19:29"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H5857G": {
+      "openBibleIds": [
+        "a7e13e1",
+        "a63c70b"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a63c70b",
+          "sourceName": "Ai 3",
+          "matchingPassages": [
+            "EZR 2:28",
+            "NEH 7:32"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H5871H": {
+      "openBibleIds": [
+        "afb265c",
+        "adbc931",
+        "ab28e2e"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "adbc931",
+          "sourceName": "Ain 3",
+          "matchingPassages": [
+            "JOS 21:16"
+          ]
+        },
+        {
+          "openBibleId": "ab28e2e",
+          "sourceName": "En-rimmon",
+          "matchingPassages": [
+            "NEH 11:29"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H5871G": {
+      "openBibleIds": [
+        "a89511f",
+        "a8da370"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a8da370",
+          "sourceName": "Rimmon 2",
+          "matchingPassages": [
+            "ZEC 14:10"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H5964G": {
+      "openBibleIds": [
+        "ad4ad26",
+        "ada3369"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ada3369",
+          "sourceName": "Almon",
+          "matchingPassages": [
+            "JOS 21:18"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H0663G": {
+      "openBibleIds": [
+        "a7b2e63",
+        "ae46bcd"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ae46bcd",
+          "sourceName": "Aphekah",
+          "matchingPassages": [
+            "JOS 15:53"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H0663H": {
+      "openBibleIds": [
+        "ac4f712",
+        "a4cf129",
+        "a012133"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a4cf129",
+          "sourceName": "Aphek 4",
+          "matchingPassages": [
+            "JOS 13:4"
+          ]
+        },
+        {
+          "openBibleId": "a012133",
+          "sourceName": "Aphik",
+          "matchingPassages": [
+            "JDG 1:31"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H6177G": {
+      "openBibleIds": [
+        "af74969",
+        "ae46f2e"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ae46f2e",
+          "sourceName": "Aroer 1",
+          "matchingPassages": [
+            "NUM 32:34",
+            "2SA 24:5",
+            "1CH 5:8",
+            "ISA 17:2"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H0725": {
+      "openBibleIds": [
+        "af536fb",
+        "a0009b3"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a0009b3",
+          "sourceName": "Rumah",
+          "matchingPassages": [
+            "2KI 23:36"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H6252H": {
+      "openBibleIds": [
+        "a6fea11",
+        "a293fbf"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a293fbf",
+          "sourceName": "Beeshterah",
+          "matchingPassages": [
+            "JOS 21:27"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H6255": {
+      "openBibleIds": [
+        "afe4be0",
+        "adf5c7b"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "adf5c7b",
+          "sourceName": "Karnaim",
+          "matchingPassages": [
+            "AMO 6:13"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H1186": {
+      "openBibleIds": [
+        "a76f7b7",
+        "a882ef5",
+        "a78580c"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a882ef5",
+          "sourceName": "Beon",
+          "matchingPassages": [
+            "NUM 32:3"
+          ]
+        },
+        {
+          "openBibleId": "a78580c",
+          "sourceName": "Beth-meon",
+          "matchingPassages": [
+            "JER 48:23"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H1192": {
+      "openBibleIds": [
+        "a03cc2d",
+        "a14325e",
+        "ab049cf"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a14325e",
+          "sourceName": "Bealoth 1",
+          "matchingPassages": [
+            "JOS 15:24"
+          ]
+        },
+        {
+          "openBibleId": "ab049cf",
+          "sourceName": "Ramoth 2",
+          "matchingPassages": [
+            "1SA 30:27"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H0894": {
+      "openBibleIds": [
+        "a217d18",
+        "ab8fdbc",
+        "ae5ede9",
+        "a3f0756"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ae5ede9",
+          "sourceName": "Babylon 2",
+          "matchingPassages": [
+            "1PE 5:13"
+          ]
+        },
+        {
+          "openBibleId": "a3f0756",
+          "sourceName": "Babylon 3",
+          "matchingPassages": [
+            "REV 14:8",
+            "REV 16:19",
+            "REV 17:5",
+            "REV 18:2",
+            "REV 18:10",
+            "REV 18:21"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H0881G": {
+      "openBibleIds": [
+        "a046454",
+        "a520374"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a520374",
+          "sourceName": "Beer 2",
+          "matchingPassages": [
+            "JDG 9:21"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H0884": {
+      "openBibleIds": [
+        "ad2f6c2",
+        "a075d61",
+        "ae44746"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ae44746",
+          "sourceName": "Sheba 2",
+          "matchingPassages": [
+            "JOS 19:2"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H1268A": {
+      "openBibleIds": [
+        "a14b9f1",
+        "a942d07",
+        "a70f9d3"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a942d07",
+          "sourceName": "Berothai",
+          "matchingPassages": [
+            "2SA 8:8"
+          ]
+        },
+        {
+          "openBibleId": "a70f9d3",
+          "sourceName": "Cun",
+          "matchingPassages": [
+            "1CH 18:8"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H1032I": {
+      "openBibleIds": [
+        "a094036",
+        "a75b45e"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a75b45e",
+          "sourceName": "Beth-horon",
+          "matchingPassages": [
+            "JOS 10:10",
+            "JOS 10:11",
+            "JOS 18:14",
+            "JOS 21:22",
+            "1SA 13:18",
+            "1CH 6:68",
+            "2CH 25:13"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H1039": {
+      "openBibleIds": [
+        "af66b89",
+        "a314731"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a314731",
+          "sourceName": "Nimrah",
+          "matchingPassages": [
+            "NUM 32:3"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H1053G": {
+      "openBibleIds": [
+        "a3b5b53",
+        "ad6cc26"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ad6cc26",
+          "sourceName": "Ir-shemesh",
+          "matchingPassages": [
+            "JOS 19:41"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H1008G": {
+      "openBibleIds": [
+        "a64f355",
+        "af3ccdf",
+        "abcc0cf",
+        "a859268",
+        "a30b045",
+        "a397042"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "af3ccdf",
+          "sourceName": "Aven",
+          "matchingPassages": [
+            "HOS 10:8"
+          ]
+        },
+        {
+          "openBibleId": "abcc0cf",
+          "sourceName": "Bethel 3",
+          "matchingPassages": [
+            "JER 48:13",
+            "ZEC 7:2"
+          ]
+        },
+        {
+          "openBibleId": "a859268",
+          "sourceName": "Bochim",
+          "matchingPassages": [
+            "JDG 2:1",
+            "JDG 2:5"
+          ]
+        },
+        {
+          "openBibleId": "a30b045",
+          "sourceName": "El-bethel",
+          "matchingPassages": [
+            "GEN 35:7"
+          ]
+        },
+        {
+          "openBibleId": "a397042",
+          "sourceName": "Luz 1",
+          "matchingPassages": [
+            "GEN 28:19",
+            "GEN 35:6",
+            "GEN 48:3",
+            "JOS 16:2",
+            "JOS 18:13",
+            "JDG 1:23"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H1035G": {
+      "openBibleIds": [
+        "a112427",
+        "ab1a343",
+        "af4e985",
+        "a9ea180"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ab1a343",
+          "sourceName": "Bethlehem 3",
+          "matchingPassages": [
+            "JDG 12:8",
+            "JDG 12:10"
+          ]
+        },
+        {
+          "openBibleId": "af4e985",
+          "sourceName": "Ephrath",
+          "matchingPassages": [
+            "GEN 35:16",
+            "GEN 35:19",
+            "GEN 48:7"
+          ]
+        },
+        {
+          "openBibleId": "a9ea180",
+          "sourceName": "Lehem",
+          "matchingPassages": [
+            "1CH 4:22"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H1221G": {
+      "openBibleIds": [
+        "a0cd098",
+        "a8adc43"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a8adc43",
+          "sourceName": "Bozrah 2",
+          "matchingPassages": [
+            "JER 48:24"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H3694": {
+      "openBibleIds": [
+        "ac3d92d",
+        "a898f06",
+        "af614df"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a898f06",
+          "sourceName": "Chisloth-tabor",
+          "matchingPassages": [
+            "JOS 19:12"
+          ]
+        },
+        {
+          "openBibleId": "af614df",
+          "sourceName": "Tabor 2",
+          "matchingPassages": [
+            "1CH 6:77"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H5963": {
+      "openBibleIds": [
+        "aeb052c",
+        "a0d784a",
+        "ac99af3"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ac99af3",
+          "sourceName": "Beth-diblathaim",
+          "matchingPassages": [
+            "JER 48:22"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H1769G": {
+      "openBibleIds": [
+        "a0d784a",
+        "ae8badb"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ae8badb",
+          "sourceName": "Dibon 3",
+          "matchingPassages": [
+            "ISA 15:9"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H1829": {
+      "openBibleIds": [
+        "a971a54",
+        "a813f22",
+        "a655b28"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a813f22",
+          "sourceName": "Rimmon 3",
+          "matchingPassages": [
+            "JOS 19:13"
+          ]
+        },
+        {
+          "openBibleId": "a655b28",
+          "sourceName": "Rimmono",
+          "matchingPassages": [
+            "1CH 6:77"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H5873H": {
+      "openBibleIds": [
+        "a8eae19",
+        "ad13f27"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ad13f27",
+          "sourceName": "Anem",
+          "matchingPassages": [
+            "1CH 6:73"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H0669L": {
+      "openBibleIds": [
+        "ad14500",
+        "a507da9"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a507da9",
+          "sourceName": "Ephraim 1",
+          "matchingPassages": [
+            "2SA 13:23"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H5804": {
+      "openBibleIds": [
+        "aa8edd2",
+        "aba3717"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "aba3717",
+          "sourceName": "Ayyah",
+          "matchingPassages": [
+            "1CH 7:28"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H1387G": {
+      "openBibleIds": [
+        "a264254",
+        "a33cfcc",
+        "ae14b1d"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a33cfcc",
+          "sourceName": "Geba 3",
+          "matchingPassages": [
+            "2KI 23:8",
+            "ZEC 14:10"
+          ]
+        },
+        {
+          "openBibleId": "ae14b1d",
+          "sourceName": "Geba 4",
+          "matchingPassages": [
+            "JOS 18:24"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H1380": {
+      "openBibleIds": [
+        "a9a2541",
+        "a59b2e2"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a59b2e2",
+          "sourceName": "Gebal 2",
+          "matchingPassages": [
+            "PSA 83:7"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H1446G": {
+      "openBibleIds": [
+        "af054ba",
+        "a55d681",
+        "aa9be2b",
+        "a47678a"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a55d681",
+          "sourceName": "Geder",
+          "matchingPassages": [
+            "JOS 12:13"
+          ]
+        },
+        {
+          "openBibleId": "aa9be2b",
+          "sourceName": "Gedor 3",
+          "matchingPassages": [
+            "1CH 4:18"
+          ]
+        },
+        {
+          "openBibleId": "a47678a",
+          "sourceName": "Gedor 4",
+          "matchingPassages": [
+            "1CH 12:7"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H1507": {
+      "openBibleIds": [
+        "aed6538",
+        "aea4530"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "aea4530",
+          "sourceName": "Gob",
+          "matchingPassages": [
+            "2SA 21:18",
+            "2SA 21:19"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H1390H": {
+      "openBibleIds": [
+        "ac24f5f",
+        "a3bba31",
+        "ac25f34"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a3bba31",
+          "sourceName": "Gibeah 3",
+          "matchingPassages": [
+            "JOS 24:33"
+          ]
+        },
+        {
+          "openBibleId": "ac25f34",
+          "sourceName": "Gibeah 4",
+          "matchingPassages": [
+            "JOS 18:28"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H1391": {
+      "openBibleIds": [
+        "aede336",
+        "a849ca2",
+        "a264254",
+        "a2d3ca1",
+        "af0ee3a"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a849ca2",
+          "sourceName": "Bamah",
+          "matchingPassages": [
+            "EZK 20:29"
+          ]
+        },
+        {
+          "openBibleId": "a264254",
+          "sourceName": "Geba 1",
+          "matchingPassages": [
+            "JOS 21:17"
+          ]
+        },
+        {
+          "openBibleId": "a2d3ca1",
+          "sourceName": "Geba 2",
+          "matchingPassages": [
+            "2SA 5:25"
+          ]
+        },
+        {
+          "openBibleId": "af0ee3a",
+          "sourceName": "Gibbar",
+          "matchingPassages": [
+            "EZR 2:20"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H1537G": {
+      "openBibleIds": [
+        "ab94aea",
+        "aea5552",
+        "a0c9a06",
+        "a97126d",
+        "aed8df9",
+        "a84a509"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "aea5552",
+          "sourceName": "Beth-gilgal",
+          "matchingPassages": [
+            "NEH 12:29"
+          ]
+        },
+        {
+          "openBibleId": "a0c9a06",
+          "sourceName": "Geliloth",
+          "matchingPassages": [
+            "JOS 18:17",
+            "JOS 22:10",
+            "JOS 22:11"
+          ]
+        },
+        {
+          "openBibleId": "a97126d",
+          "sourceName": "Gibeath-haaraloth",
+          "matchingPassages": [
+            "JOS 5:3"
+          ]
+        },
+        {
+          "openBibleId": "aed8df9",
+          "sourceName": "Gilgal 3",
+          "matchingPassages": [
+            "JOS 15:7"
+          ]
+        },
+        {
+          "openBibleId": "a84a509",
+          "sourceName": "Gilgal 4",
+          "matchingPassages": [
+            "DEU 11:30"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H2674G": {
+      "openBibleIds": [
+        "a6f33c5",
+        "ad5c4a1"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ad5c4a1",
+          "sourceName": "Hezron",
+          "matchingPassages": [
+            "JOS 15:3"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H2520": {
+      "openBibleIds": [
+        "a1d1918",
+        "a5c4318"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a5c4318",
+          "sourceName": "Hukok",
+          "matchingPassages": [
+            "1CH 6:75"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H2767": {
+      "openBibleIds": [
+        "ada25df",
+        "a6163e0"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a6163e0",
+          "sourceName": "Zephath",
+          "matchingPassages": [
+            "JDG 1:17"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H2991": {
+      "openBibleIds": [
+        "a878d66",
+        "ac959b2",
+        "ab33b54"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ac959b2",
+          "sourceName": "Bileam",
+          "matchingPassages": [
+            "1CH 6:70"
+          ]
+        },
+        {
+          "openBibleId": "ab33b54",
+          "sourceName": "Gath-rimmon 2",
+          "matchingPassages": [
+            "JOS 21:25"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H3405G": {
+      "openBibleIds": [
+        "a231f80",
+        "aaf03fa",
+        "a529e92",
+        "ac4ff01"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a529e92",
+          "sourceName": "City of Palms 1",
+          "matchingPassages": [
+            "DEU 34:3",
+            "JDG 3:13",
+            "2CH 28:15"
+          ]
+        },
+        {
+          "openBibleId": "ac4ff01",
+          "sourceName": "City of Palms 2",
+          "matchingPassages": [
+            "JDG 1:16"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H3389": {
+      "openBibleIds": [
+        "a15257a",
+        "a8754c4",
+        "a403c45",
+        "aad7e4e",
+        "af20c46"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a8754c4",
+          "sourceName": "Ariel",
+          "matchingPassages": [
+            "ISA 29:1",
+            "ISA 29:2",
+            "ISA 29:7"
+          ]
+        },
+        {
+          "openBibleId": "a403c45",
+          "sourceName": "Jebus",
+          "matchingPassages": [
+            "JOS 15:8",
+            "JOS 18:28",
+            "JDG 19:10",
+            "JDG 19:11",
+            "1CH 11:4",
+            "1CH 11:5"
+          ]
+        },
+        {
+          "openBibleId": "aad7e4e",
+          "sourceName": "Salem",
+          "matchingPassages": [
+            "GEN 14:18",
+            "PSA 76:2",
+            "HEB 7:1",
+            "HEB 7:2"
+          ]
+        },
+        {
+          "openBibleId": "af20c46",
+          "sourceName": "Zion",
+          "matchingPassages": [
+            "2SA 5:7",
+            "1KI 8:1",
+            "2KI 19:21",
+            "1CH 11:5",
+            "2CH 5:2",
+            "PSA 2:6",
+            "PSA 9:11",
+            "PSA 9:14",
+            "PSA 14:7",
+            "PSA 20:2",
+            "PSA 48:12",
+            "PSA 50:2",
+            "PSA 51:18",
+            "PSA 53:6",
+            "PSA 65:1",
+            "PSA 69:35",
+            "PSA 76:2",
+            "PSA 84:7",
+            "PSA 87:2",
+            "PSA 87:5",
+            "PSA 97:8",
+            "PSA 99:2",
+            "PSA 102:13",
+            "PSA 102:16",
+            "PSA 102:21",
+            "PSA 110:2",
+            "PSA 126:1",
+            "PSA 128:5",
+            "PSA 129:5",
+            "PSA 132:13",
+            "PSA 133:3",
+            "PSA 134:3",
+            "PSA 135:21",
+            "PSA 137:1",
+            "PSA 137:3",
+            "PSA 146:10",
+            "PSA 147:12",
+            "PSA 149:2",
+            "SNG 3:11",
+            "ISA 1:8",
+            "ISA 1:27",
+            "ISA 2:3",
+            "ISA 3:16",
+            "ISA 3:17",
+            "ISA 4:3",
+            "ISA 4:4",
+            "ISA 10:24",
+            "ISA 10:32",
+            "ISA 12:6",
+            "ISA 14:32",
+            "ISA 16:1",
+            "ISA 28:16",
+            "ISA 30:19",
+            "ISA 31:9",
+            "ISA 33:5",
+            "ISA 33:14",
+            "ISA 33:20",
+            "ISA 34:8",
+            "ISA 35:10",
+            "ISA 37:22",
+            "ISA 40:9",
+            "ISA 41:27",
+            "ISA 46:13",
+            "ISA 49:14",
+            "ISA 51:3",
+            "ISA 51:11",
+            "ISA 51:16",
+            "ISA 52:1",
+            "ISA 52:2",
+            "ISA 52:7",
+            "ISA 52:8",
+            "ISA 59:20",
+            "ISA 60:14",
+            "ISA 61:3",
+            "ISA 62:1",
+            "ISA 62:11",
+            "ISA 64:10",
+            "ISA 66:8",
+            "JER 3:14",
+            "JER 4:6",
+            "JER 4:31",
+            "JER 6:2",
+            "JER 6:23",
+            "JER 8:19",
+            "JER 9:19",
+            "JER 14:19",
+            "JER 26:18",
+            "JER 30:17",
+            "JER 31:6",
+            "JER 31:12",
+            "JER 50:5",
+            "JER 50:28",
+            "JER 51:10",
+            "JER 51:24",
+            "JER 51:35",
+            "LAM 1:4",
+            "LAM 1:6",
+            "LAM 1:17",
+            "LAM 2:1",
+            "LAM 2:4",
+            "LAM 2:6",
+            "LAM 2:8",
+            "LAM 2:10",
+            "LAM 2:13",
+            "LAM 2:18",
+            "LAM 4:2",
+            "LAM 4:11",
+            "LAM 4:22",
+            "LAM 5:11",
+            "JOL 2:1",
+            "JOL 2:15",
+            "JOL 2:23",
+            "JOL 3:16",
+            "JOL 3:17",
+            "JOL 3:21",
+            "AMO 1:2",
+            "AMO 6:1",
+            "MIC 1:13",
+            "MIC 3:10",
+            "MIC 3:12",
+            "MIC 4:2",
+            "MIC 4:8",
+            "MIC 4:10",
+            "MIC 4:11",
+            "MIC 4:13",
+            "ZEP 3:14",
+            "ZEP 3:16",
+            "ZEC 1:14",
+            "ZEC 1:17",
+            "ZEC 2:7",
+            "ZEC 2:10",
+            "ZEC 8:2",
+            "ZEC 8:3",
+            "ZEC 9:9",
+            "ZEC 9:13",
+            "MAT 21:5",
+            "JHN 12:15",
+            "ROM 9:33",
+            "ROM 11:26",
+            "1PE 2:6"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H3362": {
+      "openBibleIds": [
+        "a5c92e1",
+        "ab2e402"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ab2e402",
+          "sourceName": "Jokmeam 1",
+          "matchingPassages": [
+            "1KI 4:12"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H6943G": {
+      "openBibleIds": [
+        "a321cb8",
+        "ad74690",
+        "a662eed",
+        "a48191b"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ad74690",
+          "sourceName": "Kedesh 4",
+          "matchingPassages": [
+            "JDG 4:9",
+            "JDG 4:10",
+            "JDG 4:11"
+          ]
+        },
+        {
+          "openBibleId": "a662eed",
+          "sourceName": "Kedesh 5",
+          "matchingPassages": [
+            "JOS 19:37",
+            "JOS 20:7"
+          ]
+        },
+        {
+          "openBibleId": "a48191b",
+          "sourceName": "Kedesh-naphtali",
+          "matchingPassages": [
+            "JDG 4:6"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H7079": {
+      "openBibleIds": [
+        "a4f650b",
+        "aa23a3e",
+        "a9bf50d",
+        "aed6b0e"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "aa23a3e",
+          "sourceName": "Nobah 1",
+          "matchingPassages": [
+            "NUM 32:42"
+          ]
+        },
+        {
+          "openBibleId": "a9bf50d",
+          "sourceName": "Nobah 2",
+          "matchingPassages": [
+            "JDG 8:11"
+          ]
+        },
+        {
+          "openBibleId": "aed6b0e",
+          "sourceName": "Nophah",
+          "matchingPassages": [
+            "NUM 21:30"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H6911": {
+      "openBibleIds": [
+        "a5187a4",
+        "aaa8b2e"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "aaa8b2e",
+          "sourceName": "Jokmeam 2",
+          "matchingPassages": [
+            "1CH 6:68"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H7024A": {
+      "openBibleIds": [
+        "a1a57d0",
+        "ab55371",
+        "ac702f1"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ac702f1",
+          "sourceName": "Mizpeh 3",
+          "matchingPassages": [
+            "1SA 22:3"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H7157": {
+      "openBibleIds": [
+        "a9bba61",
+        "ac2f5ea",
+        "a66f19c",
+        "a8fe6a4"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ac2f5ea",
+          "sourceName": "Baalah 2",
+          "matchingPassages": [
+            "JOS 15:9",
+            "JOS 15:10",
+            "1CH 13:6"
+          ]
+        },
+        {
+          "openBibleId": "a66f19c",
+          "sourceName": "Baale-judah",
+          "matchingPassages": [
+            "2SA 6:2"
+          ]
+        },
+        {
+          "openBibleId": "a8fe6a4",
+          "sourceName": "Jaar",
+          "matchingPassages": [
+            "PSA 132:6"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H7156G": {
+      "openBibleIds": [
+        "ad54201",
+        "a2d84de"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a2d84de",
+          "sourceName": "Kerioth",
+          "matchingPassages": [
+            "JER 48:24",
+            "AMO 2:2"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H7191": {
+      "openBibleIds": [
+        "a20364a",
+        "adb5ae4"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "adb5ae4",
+          "sourceName": "Kedesh 3",
+          "matchingPassages": [
+            "1CH 6:72"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H7003": {
+      "openBibleIds": [
+        "ae5cc46",
+        "ac0f6e7",
+        "a6536c9"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ac0f6e7",
+          "sourceName": "Kartah",
+          "matchingPassages": [
+            "JOS 21:34"
+          ]
+        },
+        {
+          "openBibleId": "a6536c9",
+          "sourceName": "Kattath",
+          "matchingPassages": [
+            "JOS 19:15"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H3810": {
+      "openBibleIds": [
+        "a376eed",
+        "ac6416d"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ac6416d",
+          "sourceName": "Debir 3",
+          "matchingPassages": [
+            "JOS 13:26"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H4089G": {
+      "openBibleIds": [
+        "a8661e2",
+        "a87f8f5"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a87f8f5",
+          "sourceName": "Beth-marcaboth",
+          "matchingPassages": [
+            "JOS 19:5",
+            "1CH 4:31"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-G3093": {
+      "openBibleIds": [
+        "ad14067",
+        "ae8d09d"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ae8d09d",
+          "sourceName": "Dalmanutha",
+          "matchingPassages": [
+            "MRK 8:10"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H4506A": {
+      "openBibleIds": [
+        "a6e2c95",
+        "ab4d194"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ab4d194",
+          "sourceName": "Nohah",
+          "matchingPassages": [
+            "JDG 20:43"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H4023": {
+      "openBibleIds": [
+        "a8554e3",
+        "a105543"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a105543",
+          "sourceName": "Armageddon",
+          "matchingPassages": [
+            "REV 16:16"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H4709G": {
+      "openBibleIds": [
+        "a736f6c",
+        "af3d9fc",
+        "afc2466",
+        "a6d57ed",
+        "a90f6e1",
+        "a54ef72"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "af3d9fc",
+          "sourceName": "Arimathea",
+          "matchingPassages": [
+            "MAT 27:57",
+            "MRK 15:43",
+            "JHN 19:38"
+          ]
+        },
+        {
+          "openBibleId": "afc2466",
+          "sourceName": "Mizpeh 1",
+          "matchingPassages": [
+            "JOS 18:26"
+          ]
+        },
+        {
+          "openBibleId": "a6d57ed",
+          "sourceName": "Ramah 1",
+          "matchingPassages": [
+            "1KI 15:22",
+            "2CH 16:6"
+          ]
+        },
+        {
+          "openBibleId": "a90f6e1",
+          "sourceName": "Ramah 4",
+          "matchingPassages": [
+            "1SA 1:19",
+            "1SA 2:11",
+            "1SA 7:17",
+            "1SA 8:4",
+            "1SA 15:34",
+            "1SA 16:13",
+            "1SA 19:18",
+            "1SA 19:19",
+            "1SA 19:22",
+            "1SA 19:23",
+            "1SA 20:1",
+            "1SA 25:1",
+            "1SA 28:3"
+          ]
+        },
+        {
+          "openBibleId": "a54ef72",
+          "sourceName": "Ramathaim-zophim",
+          "matchingPassages": [
+            "1SA 1:1"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H5295": {
+      "openBibleIds": [
+        "a9f5289",
+        "a179865"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a179865",
+          "sourceName": "Naarah",
+          "matchingPassages": [
+            "JOS 16:7"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H5015G": {
+      "openBibleIds": [
+        "accdd09",
+        "ac51ba3"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ac51ba3",
+          "sourceName": "Nebo 3",
+          "matchingPassages": [
+            "EZR 10:43"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H5210": {
+      "openBibleIds": [
+        "a70fd5d",
+        "a260ff1"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a260ff1",
+          "sourceName": "Rehoboth-Ir",
+          "matchingPassages": [
+            "GEN 10:11"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H0207": {
+      "openBibleIds": [
+        "ae6bfe2",
+        "a607415"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a607415",
+          "sourceName": "Hakkephirim",
+          "matchingPassages": [
+            "NEH 6:2"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H6084G": {
+      "openBibleIds": [
+        "a53b82d",
+        "a95a37b"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a95a37b",
+          "sourceName": "Beth-le-aphrah",
+          "matchingPassages": [
+            "MIC 1:10"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H6084H": {
+      "openBibleIds": [
+        "abd637f",
+        "a6309c7"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a6309c7",
+          "sourceName": "Hapharaim",
+          "matchingPassages": [
+            "JOS 19:19"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H7557": {
+      "openBibleIds": [
+        "ac9adc9",
+        "a204528"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a204528",
+          "sourceName": "Rakkath",
+          "matchingPassages": [
+            "JOS 19:35"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H7414G": {
+      "openBibleIds": [
+        "a6d57ed",
+        "aaa4c6e",
+        "a75be6f"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "aaa4c6e",
+          "sourceName": "Ramah 6",
+          "matchingPassages": [
+            "JOS 19:8"
+          ]
+        },
+        {
+          "openBibleId": "a75be6f",
+          "sourceName": "Ramah 7",
+          "matchingPassages": [
+            "NEH 11:33"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H7216H": {
+      "openBibleIds": [
+        "a2fe63c",
+        "a0f8af9",
+        "a694ea2",
+        "ad27541",
+        "a63c954",
+        "a95147f"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a0f8af9",
+          "sourceName": "Mizpah 1",
+          "matchingPassages": [
+            "JDG 10:17",
+            "JDG 11:11",
+            "JDG 11:29",
+            "JDG 11:34",
+            "HOS 5:1"
+          ]
+        },
+        {
+          "openBibleId": "a694ea2",
+          "sourceName": "Mizpah 4",
+          "matchingPassages": [
+            "GEN 31:47",
+            "GEN 31:48",
+            "GEN 31:49"
+          ]
+        },
+        {
+          "openBibleId": "ad27541",
+          "sourceName": "Ramah 5",
+          "matchingPassages": [
+            "2KI 8:29",
+            "2CH 22:6"
+          ]
+        },
+        {
+          "openBibleId": "a63c954",
+          "sourceName": "Ramath-mizpeh",
+          "matchingPassages": [
+            "JOS 13:26"
+          ]
+        },
+        {
+          "openBibleId": "a95147f",
+          "sourceName": "Ramoth 3",
+          "matchingPassages": [
+            "DEU 4:43",
+            "JOS 20:8",
+            "JOS 21:38",
+            "1CH 6:80"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H7432": {
+      "openBibleIds": [
+        "ae259d9",
+        "ada2a0b"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ada2a0b",
+          "sourceName": "Ramoth 1",
+          "matchingPassages": [
+            "1CH 6:73"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H8111": {
+      "openBibleIds": [
+        "a041bb3",
+        "a282dce"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a282dce",
+          "sourceName": "Samaria 2",
+          "matchingPassages": [
+            "LUK 17:11",
+            "JHN 4:4",
+            "JHN 4:5",
+            "JHN 4:7",
+            "JHN 4:9",
+            "ACT 1:8",
+            "ACT 8:1",
+            "ACT 8:5",
+            "ACT 8:9",
+            "ACT 8:14",
+            "ACT 9:31",
+            "ACT 15:3"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H5614": {
+      "openBibleIds": [
+        "aab4a5f",
+        "a0a98de"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a0a98de",
+          "sourceName": "Sepharad",
+          "matchingPassages": [
+            "OBA 1:20"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H8287": {
+      "openBibleIds": [
+        "a887d36",
+        "a488856",
+        "a8fe47a"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a488856",
+          "sourceName": "Shaaraim 2",
+          "matchingPassages": [
+            "1CH 4:31"
+          ]
+        },
+        {
+          "openBibleId": "a8fe47a",
+          "sourceName": "Shilhim",
+          "matchingPassages": [
+            "JOS 15:32"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H8110A": {
+      "openBibleIds": [
+        "a072bae",
+        "ae20466"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ae20466",
+          "sourceName": "Shimron-meron",
+          "matchingPassages": [
+            "JOS 12:20"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H7755G": {
+      "openBibleIds": [
+        "a39a6b9",
+        "a64ff72"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a64ff72",
+          "sourceName": "Socoh 3",
+          "matchingPassages": [
+            "1KI 4:10"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H8590": {
+      "openBibleIds": [
+        "a6f05f6",
+        "a2a145b"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a2a145b",
+          "sourceName": "Aner",
+          "matchingPassages": [
+            "1CH 6:70"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H8412": {
+      "openBibleIds": [
+        "ad797fe",
+        "ab066d7"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ab066d7",
+          "sourceName": "Tamar 1",
+          "matchingPassages": [
+            "1KI 9:18"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H8599B": {
+      "openBibleIds": [
+        "a03be2e",
+        "ad6b2b7"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "ad6b2b7",
+          "sourceName": "En-tappuah",
+          "matchingPassages": [
+            "JOS 17:7"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H8553G": {
+      "openBibleIds": [
+        "a21f909",
+        "a17c178"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a17c178",
+          "sourceName": "Timnah 3",
+          "matchingPassages": [
+            "GEN 38:12",
+            "GEN 38:13",
+            "GEN 38:14"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H6891": {
+      "openBibleIds": [
+        "afa84ca",
+        "a6dc035",
+        "a0bccbd"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a6dc035",
+          "sourceName": "Zeredah 2",
+          "matchingPassages": [
+            "2CH 4:17"
+          ]
+        },
+        {
+          "openBibleId": "a0bccbd",
+          "sourceName": "Zererah",
+          "matchingPassages": [
+            "JDG 7:22"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H6820": {
+      "openBibleIds": [
+        "aacfcda",
+        "a74c453"
+      ],
+      "status": "uncertain",
+      "review": [
+        {
+          "openBibleId": "a74c453",
+          "sourceName": "Zair",
+          "matchingPassages": [
+            "2KI 8:21"
+          ]
+        }
+      ],
+      "note": {
+        "nl": "De marker toont één liggingssuggestie: {candidate}. Dit bronprofiel bundelt verschillende naamvormen of tekstcontexten; die worden niet als één bewezen historische locatie opgevat. Andere kandidaten staan bij de bronnen.",
+        "en": "The marker shows one location suggestion: {candidate}. This source profile combines name forms or textual contexts; these are not treated as one proven historical location. Other candidates are listed with the sources.",
+        "fr": "Le repère montre une localisation proposée : {candidate}. Ce profil source rassemble plusieurs noms ou contextes textuels, sans les considérer comme un seul lieu historique prouvé. Les autres candidats figurent avec les sources."
+      }
+    },
+    "place-H7906": {
+      "openBibleIds": [
+        "a4052df"
+      ],
+      "status": "approximate",
+      "coordinateType": "representative point",
+      "note": {
+        "nl": "Het bronpunt wordt omschreven als tussen Gibea en Rama. Het dient alleen als globale oriëntatie; de exacte ligging van Sekoe en de waterput is hiermee niet vastgesteld.",
+        "en": "The source point is described as between Gibeah and Ramah. It serves only as broad orientation; it does not establish the exact location of Secu or the well.",
+        "fr": "Le point source est décrit comme situé entre Guibéa et Rama. Ce n’est qu’un repère général ; il n’établit pas l’emplacement exact de Sécu ou du puits."
+      }
+    },
+    "place-H2051": {
+      "openBibleIds": [
+        "a513646"
+      ],
+      "lat": null,
+      "lon": null,
+      "status": "unmapped",
+      "note": {
+        "nl": "De lezing Vedan in Ezechiël 27:19 is tekstkritisch onzeker. De koppeling van de bronindex met Dan is onvoldoende om hier een vast kaartpunt bij Tel Dan te plaatsen.",
+        "en": "The reading Vedan in Ezekiel 27:19 is textually uncertain. The source index’s link to Dan is insufficient to place a fixed map point at Tel Dan here.",
+        "fr": "La lecture Vedan en Ézéchiel 27:19 présente une incertitude textuelle. Le lien de l’index source avec Dan ne suffit pas à fixer ici un repère à Tel Dan."
+      },
+      "sources": [
+        {
+          "label": "NET Bible — Ezekiel 27:19, translation notes",
+          "url": "https://classic.net.bible.org/verse.php?book=Eze&chapter=27&theme=false&verse=19"
+        }
+      ]
+    }
+  }
+}
