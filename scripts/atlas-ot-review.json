@@ -1,0 +1,1122 @@
+{
+  "JOS.24:33": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "JOS",
+        "chapter": 24,
+        "verse": 33,
+        "endVerse": 33
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Toen ook Elazar, de zoon van Aäron, gestorven was, begroef men hem op de heuvel van zijn zoon Pinechas, welke hem in het bergland van Efraïm was afgestaan."
+  },
+  "HOS.6:7": {
+    "status": "partial",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "HOS",
+        "chapter": 6,
+        "verse": 7,
+        "endVerse": 7
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Maar laaghartig hebben zij mijn verbond overtreden, En zijn Mij toen ontrouw geworden. Textual difference: Partial correspondence: this Dutch text does not name Adam here, but reads “laaghartig” (basely). The corresponding passage about the broken covenant opens.",
+    "note": {
+      "nl": "Gedeeltelijk overeenkomstig: deze Nederlandse tekst noemt Adam hier niet, maar heeft “laaghartig”. De overeenkomstige passage over het verbroken verbond wordt geopend.",
+      "en": "Partial correspondence: this Dutch text does not name Adam here, but reads “laaghartig” (basely). The corresponding passage about the broken covenant opens.",
+      "fr": "Correspondance partielle : ce texte néerlandais ne nomme pas Adam ici, mais emploie « laaghartig » (bassement). Le passage correspondant sur l’alliance rompue est ouvert."
+    }
+  },
+  "1KI.22:41": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "1KI",
+        "chapter": 22,
+        "verse": 41,
+        "endVerse": 41
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: In het vierde jaar der regering van Achab over Israël werd Josafat, de zoon van Asa, koning van Juda."
+  },
+  "GEN.37:2": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "GEN",
+        "chapter": 37,
+        "verse": 2,
+        "endVerse": 2
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: En dit is de familiegeschiedenis van Jakob: Toen Josef zeventien jaar oud en dus nog een knaap was, en hij met zijn broers, met de zonen van Bilha en de zonen van Zilpa, de vrouwen…"
+  },
+  "1SA.17:55": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "1SA",
+        "chapter": 17,
+        "verse": 55,
+        "endVerse": 55
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Toen Saul David den Filistijn tegemoet zag gaan, vroeg hij aan Abner, den legeroverste: Wiens zoon is die knaap, Abner? Abner antwoordde: Zowaar gij leeft, koning, ik weet het niet…"
+  },
+  "1SA.17:57": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "1SA",
+        "chapter": 17,
+        "verse": 57,
+        "endVerse": 57
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Toen David dus van zijn overwinning op den Filistijn terugkeerde, nam Abner hem mee, en bracht hem, met het hoofd van den Filistijn in zijn hand, voor Saul."
+  },
+  "1SA.17:58": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "1SA",
+        "chapter": 17,
+        "verse": 58,
+        "endVerse": 58
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Saul vroeg hem: Wiens zoon zijt ge, mijn jongen? David antwoordde: De zoon van uw dienaar Jesse, den Betlehemiet."
+  },
+  "1SA.18:30": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "1SA",
+        "chapter": 18,
+        "verse": 30,
+        "endVerse": 30
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Want als de Filistijnse vorsten uitrukten, was David telkens voorspoediger dan de dienaren van Saul, en werd zijn naam hoe langer hoe meer beroemd."
+  },
+  "1KI.11:24": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "1KI",
+        "chapter": 11,
+        "verse": 24,
+        "endVerse": 24
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Toen David de Arameën had verslagen, verzamelde Rezon mannen om zich heen, werd bendeleider en nam Damascus in. Daar vestigde hij zich, en werd koning van Damascus."
+  },
+  "1KI.11:43": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "1KI",
+        "chapter": 11,
+        "verse": 43,
+        "endVerse": 43
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Toen ging Salomon bij zijn vaderen te ruste. Hij werd in de Davidstad, de stad van zijn vader, begraven, en zijn zoon Roboam volgde hem op."
+  },
+  "HOS.6:4": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "HOS",
+        "chapter": 6,
+        "verse": 4,
+        "endVerse": 4
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Efraïm, wat zal Ik u doen, Juda, hoe met u handelen? Uw vroomheid is als een morgenwolk, Vergankelijk als de ochtenddauw!"
+  },
+  "HOS.6:10": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "HOS",
+        "chapter": 6,
+        "verse": 10,
+        "endVerse": 10
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: In Betel heb Ik gruwelen aanschouwd: Daar heeft Efraïm ontucht bedreven. Israël heeft zich bezoedeld;"
+  },
+  "GEN.37:1": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "GEN",
+        "chapter": 37,
+        "verse": 1,
+        "endVerse": 1
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Jakob bleef in het land Kanaän wonen, waar ook zijn vader had vertoefd."
+  },
+  "LEV.16:34": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "LEV",
+        "chapter": 16,
+        "verse": 34,
+        "endVerse": 34
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Dit moet voor u een eeuwig geldende wet zijn, om eenmaal per jaar voor Israëls kinderen verzoening te verkrijgen en kwijtschelding van hun zonden. En Aäron deed, zoals Jahweh het M…"
+  },
+  "DEU.24:7": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "DEU",
+        "chapter": 24,
+        "verse": 7,
+        "endVerse": 7
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Wanneer iemand er op wordt betrapt, dat hij een van zijn broeders, een Israëliet, rooft, hem als slaaf behandelt of verkoopt, dan moet die dief sterven. Zo moet ge dit kwaad uit uw…"
+  },
+  "JOS.6:1": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "JOS",
+        "chapter": 6,
+        "verse": 1,
+        "endVerse": 1
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Intussen bleef Jericho nu met het oog op de Israëlieten zorgvuldig gesloten; niemand kwam er uit of in."
+  },
+  "JOS.6:18": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "JOS",
+        "chapter": 6,
+        "verse": 18,
+        "endVerse": 18
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Maar weest voorzichtig met de ban, opdat ge niet uit hebzucht iets neemt wat met de ban is geslagen; anders brengt ge het leger van Israël onder de ban, en stort ge het in het onge…"
+  },
+  "JOS.6:23": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "JOS",
+        "chapter": 6,
+        "verse": 23,
+        "endVerse": 23
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: De verkenners gingen naar binnen, en haalden Rachab met haar vader, moeder en broers en met al haar verwanten naar buiten. Ze brachten haar hele familie de stad uit, en wezen hun b…"
+  },
+  "JOS.6:25": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "JOS",
+        "chapter": 6,
+        "verse": 25,
+        "endVerse": 25
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Josuë liet Rachab, de deerne, met het huis van haar vader en al haar verwanten in leven; tot op de huidige dag woont haar familie onder de Israëlieten, omdat ze de boden had schuil…"
+  },
+  "JOS.10:43": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "JOS",
+        "chapter": 10,
+        "verse": 43,
+        "endVerse": 43
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Toen keerde Josuë met heel Israël naar het kamp in Gilgal terug."
+  },
+  "JOS.13:33": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "JOS",
+        "chapter": 13,
+        "verse": 33,
+        "endVerse": 33
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Maar aan de stam Levi heeft Moses geen erfdeel gegeven; Jahweh, Israëls God, moest hun erfdeel zijn, zoals hij hun had gezegd."
+  },
+  "1KI.11:25": {
+    "status": "partial",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "1KI",
+        "chapter": 11,
+        "verse": 25,
+        "endVerse": 25
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Hij was een tegenstander van Israël, zolang Salomon leefde. En dit is het kwaad dat Hadad deed: Hij drong Israël terug en werd koning over Edom. Textual difference: Partial correspondence: both texts describe opposition to Israel during Solomon’s reign. The Dutch continuation concerns Hadad and Edom; the English text there concerns Rezon and Syria.",
+    "note": {
+      "nl": "Gedeeltelijk overeenkomstig: beide teksten noemen de tegenstand tegen Israël onder Salomon. Het Nederlandse vervolg noemt Hadad en Edom; de Engelse tekst spreekt daar over Rezon en Syrië.",
+      "en": "Partial correspondence: both texts describe opposition to Israel during Solomon’s reign. The Dutch continuation concerns Hadad and Edom; the English text there concerns Rezon and Syria.",
+      "fr": "Correspondance partielle : les deux textes décrivent l’opposition à Israël sous Salomon. La suite néerlandaise concerne Hadad et Édom ; le texte anglais y concerne Rézon et la Syrie."
+    }
+  },
+  "1KI.11:42": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "1KI",
+        "chapter": 11,
+        "verse": 42,
+        "endVerse": 42
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Veertig jaar regeerde Salomon te Jerusalem over geheel Israël."
+  },
+  "1KI.22:42": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "1KI",
+        "chapter": 22,
+        "verse": 42,
+        "endVerse": 42
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Josafat was vijf en dertig jaar oud, toen hij koning werd, en hij regeerde vijf en twintig jaar te Jerusalem. Zijn moeder heette Azoeba, en was de dochter van Sjilchi."
+  },
+  "1KI.14:22": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "1KI",
+        "chapter": 14,
+        "verse": 22,
+        "endVerse": 22
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Juda deed wat kwaad was in de ogen van Jahweh; meer dan hun vaderen prikkelden zij zijn ijverzucht door de zonden, die zij bedreven;"
+  },
+  "2CH.36:23": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "2CH",
+        "chapter": 36,
+        "verse": 23,
+        "endVerse": 23
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Zo spreekt Cyrus, de koning van Perzië! Jahweh, de God des hemels, heeft mij alle koninkrijken der aarde gegeven. Hij is het, die mij bevolen heeft, Hem een tempel te bouwen in Jer…"
+  },
+  "HOS.6:11": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "HOS",
+        "chapter": 6,
+        "verse": 11,
+        "endVerse": 11
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Juda, ook u is een oogst weggelegd: Al zou Ik het lot van mijn volk ten beste keren, En Israël willen genezen!"
+  },
+  "DEU.24:9": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "DEU",
+        "chapter": 24,
+        "verse": 9,
+        "endVerse": 9
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Denk aan wat Jahweh, uw God, bij uw uittocht uit Egypte onderweg aan Mirjam heeft gedaan."
+  },
+  "JOS.6:17": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "JOS",
+        "chapter": 6,
+        "verse": 17,
+        "endVerse": 17
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Ter ere van Jahweh moet de stad en al, wat erin is, met de banvloek worden geslagen; alleen de deerne Rachab moet met al haar familieleden gespaard blijven, omdat ze de boden, die …"
+  },
+  "1KI.9:10": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "1KI",
+        "chapter": 9,
+        "verse": 10,
+        "endVerse": 10
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Toen Salomon na verloop van twintig jaar de beide bouwwerken, de tempel van Jahweh en het koninklijk paleis, had voltooid,"
+  },
+  "1KI.11:14": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "1KI",
+        "chapter": 11,
+        "verse": 14,
+        "endVerse": 14
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Daarom deed Jahweh tegen Salomon een bestrijder opstaan in den Edomiet Hadad, die uit de koninklijke familie van Edom stamde."
+  },
+  "EST.1:10": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 1,
+        "verse": 10,
+        "endVerse": 10
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Toen de koning nu, op de zevende dag, vrolijk was van de wijn, beval hij Mehoeman, Bizta, Charbona, Bigta, Abagta, Zetar en Karkas, de zeven kamerlingen, die bij koning Achasjweros…"
+  },
+  "1KI.4:4": {
+    "status": "partial",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "1KI",
+        "chapter": 4,
+        "verse": 4,
+        "endVerse": 4
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Benajáhoe, de zoon van Jehojada, was legeroverste; Textual difference: Partial correspondence: the Dutch text names Benaiah as army commander. The separate mention of Zadok and Abiathar as priests is absent here.",
+    "note": {
+      "nl": "Gedeeltelijk overeenkomstig: de Nederlandse tekst bevat Benaja als legeroverste. De afzonderlijke vermelding van Sadok en Abjatar als priesters ontbreekt hier.",
+      "en": "Partial correspondence: the Dutch text names Benaiah as army commander. The separate mention of Zadok and Abiathar as priests is absent here.",
+      "fr": "Correspondance partielle : le texte néerlandais nomme Benaya comme chef de l’armée. La mention distincte de Sadoc et d’Abiathar comme prêtres est absente ici."
+    }
+  },
+  "EST.1:14": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 1,
+        "verse": 14,
+        "endVerse": 14
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: die aan zijn hof zijn; het waren Karsjena, Sjetar, Admata, Tarsjisj, Méres, Marsena en Memoekan, de zeven vorsten der Perzen en Meden, vertrouwelingen van den koning, die de eerste…"
+  },
+  "EST.1:1": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 1,
+        "verse": 1,
+        "endVerse": 1
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Hierna gebeurde het, dat Achasjwerosj, die van Hoddoe tot Koesj over honderd zeven en twintig provincies regeerde,"
+  },
+  "EST.1:2": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 1,
+        "verse": 2,
+        "endVerse": 2
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: en op zijn koninklijke troon in de vesting Sjoesjan zetelde,"
+  },
+  "EST.1:9": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 1,
+        "verse": 9,
+        "endVerse": 9
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Intussen had ook koningin Wasjti in het paleis van koning Achasjwerosj een maaltijd aangericht voor de vrouwen."
+  },
+  "EST.1:15": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 1,
+        "verse": 15,
+        "endVerse": 15
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Hij vroeg hun, wat men volgens het recht met koningin Wasjti moest doen, nu zij niet gehoorzaamd had aan het bevel van koning Achasjwerosj, dat haar door de kamerlingen was overgeb…"
+  },
+  "EST.1:16": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 1,
+        "verse": 16,
+        "endVerse": 16
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Hierop zei Memoekan tot den koning en de vorsten: Niet alleen tegen den koning heeft koningin Wasjti misdreven, maar ook tegen alle vorsten en volkeren in alle provincies van konin…"
+  },
+  "EST.1:17": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 1,
+        "verse": 17,
+        "endVerse": 17
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Want het optreden van de koningin zal aan alle vrouwen bekend worden, en zij zullen ongezeglijk worden voor haar mannen, wanneer men vertelt: Koning Achasjwerosj heeft koningin Was…"
+  },
+  "EST.1:19": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 1,
+        "verse": 19,
+        "endVerse": 19
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Wanneer het dus den koning behaagt, worde namens hem een koninklijk bevel uitgevaardigd en in de wetten van Perzen en Meden opgenomen, zodat het onherroepelijk is: dat Wasjti niet …"
+  },
+  "EST.8:12": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 8,
+        "verse": 12,
+        "endVerse": 12
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: en wel in alle provincies van koning Achasjwerosj op een en dezelfde dag, namelijk op de dertiende van Adar, de tweede maand."
+  },
+  "EST.9:30": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 9,
+        "verse": 30,
+        "endVerse": 30
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Hij zond beide brieven naar alle Joden van de honderd zeven en twintig provincies van het rijk van Achasjwerosj met betuigingen van vriendschap en trouw,"
+  },
+  "EST.10:3": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 10,
+        "verse": 3,
+        "endVerse": 3
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Want de Jood Mordokai bleef de eerste na koning Achasjwerosj. Ook stond hij in aanzien bij de Joden, en was bemind bij zijn talrijke broeders; want hij meende het goed met zijn vol…"
+  },
+  "1KI.4:3": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "1KI",
+        "chapter": 4,
+        "verse": 3,
+        "endVerse": 3
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Elichóref en Achi-ja, de zonen van Sjisja, waren geheimschrijvers; Jehosjafat, de zoon van Achiloed, was kanselier;"
+  },
+  "1KI.4:2": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "1KI",
+        "chapter": 4,
+        "verse": 2,
+        "endVerse": 2
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Dit waren zijn rijksgroten: Azarjáhoe, de zoon van Sadok, was priester;"
+  },
+  "1KI.4:5": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "1KI",
+        "chapter": 4,
+        "verse": 5,
+        "endVerse": 5
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Azarjáhoe, de zoon van Natan, was opperlandvoogd; Zaboed, de zoon van Natan, was koninklijk raadsman;"
+  },
+  "1KI.11:23": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "1KI",
+        "chapter": 11,
+        "verse": 23,
+        "endVerse": 23
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Daarenboven verwekte God hem een tegenstander in Rezon, den zoon van Eljada, die zijn heer Hadadézer, den koning van Soba, ontvlucht was."
+  },
+  "EST.4:17": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 4,
+        "verse": 17,
+        "endVerse": 17
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Mordokai ging dus rond, en deed al wat Ester hem bevolen had."
+  },
+  "EST.5:1": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 5,
+        "verse": 1,
+        "endVerse": 1
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: De derde dag bekleedde Ester zich met een koninklijk gewaad, begaf zich naar de binnenhof van het koninklijk paleis, en bleef tegenover de ingang van de troonzaal staan. Daar zat d…"
+  },
+  "EST.5:2": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 5,
+        "verse": 2,
+        "endVerse": 2
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Maar zodra hij koningin Ester in de voorhof zag staan, was hij haar goedgunstig gezind, en reikte haar de gouden schepter toe, die hij in de hand had. Daarop kwam Ester naderbij en…"
+  },
+  "EST.5:3": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 5,
+        "verse": 3,
+        "endVerse": 3
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Daarop sprak de koning haar toe: Wat hebt ge koningin Ester, en wat verlangt ge? Al is het de helft van mijn koninkrijk, het zal u worden gegeven."
+  },
+  "EST.5:4": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 5,
+        "verse": 4,
+        "endVerse": 4
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Ester antwoordde: Als het den koning behaagt, kome hij vandaag met Haman aan de maaltijd, die ik voor hem heb bereid."
+  },
+  "EST.5:5": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 5,
+        "verse": 5,
+        "endVerse": 5
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: De koning beval: Gaat onmiddellijk Haman halen, opdat wij aan Esters verlangen kunnen voldoen. Zo kwam de koning met Haman aan de maaltijd. die Ester bereid had."
+  },
+  "EST.5:6": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 5,
+        "verse": 6,
+        "endVerse": 6
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: En bij het wijndrinken vroeg de koning aan Ester: Wat is uw verlangen? Het wordt ingewilligd. Al wat ge vraagt, al was het ook de helft van mijn rijk, het zal u worden gegeven."
+  },
+  "EST.5:7": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 5,
+        "verse": 7,
+        "endVerse": 7
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Ester antwoordde: Mijn verlangen en bede?"
+  },
+  "EST.5:12": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 5,
+        "verse": 12,
+        "endVerse": 12
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: En hij zeide: Zelfs koningin Ester heeft niemand anders dan mij uitgenodigd tot een maaltijd, die zij bereid had; ook voor morgen ben ik weer met den koning bij haar gevraagd."
+  },
+  "EST.9:31": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 9,
+        "verse": 31,
+        "endVerse": 31
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: om hen op te wekken, dat ze zich zouden houden aan de vastgestelde tijd der Poerimdagen, zoals deze door koningin Ester en den Jood Mordokai was vastgelegd, en aan de voorschriften…"
+  },
+  "EST.9:32": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 9,
+        "verse": 32,
+        "endVerse": 32
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Zo werden de Poerimvoorschriften door een uitspraak van Ester geregeld en in een boek opgeschreven."
+  },
+  "EST.3:15": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 3,
+        "verse": 15,
+        "endVerse": 15
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: De ijlboden vertrokken dus op koninklijk bevel. En terwijl de wet ook in de vesting Sjoesjan werd uitgevaardigd, en de stad Sjoesjan in beroering kwam, zaten de koning en Haman rus…"
+  },
+  "EST.5:8": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 5,
+        "verse": 8,
+        "endVerse": 8
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Als ik bij den koning genade heb gevonden en het hem behaagt, mijn wens te vervullen en mijn bede te verhoren, dan kome hij met Haman morgen weer aan de maaltijd, die ik hem zal be…"
+  },
+  "EST.5:9": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 5,
+        "verse": 9,
+        "endVerse": 9
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Die dag verliet Haman vrolijk en welgemoed het paleis; maar toen hij in het koninklijke poortgebouw Mordokai zag, die niet opstond en zich niet voor hem verroerde, werd hij woedend…"
+  },
+  "EST.5:10": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 5,
+        "verse": 10,
+        "endVerse": 10
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Hij bedwong zich echter en ging naar huis. Daar liet hij zijn vrienden en zijn vrouw Zéresj bij zich komen,"
+  },
+  "EST.5:11": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 5,
+        "verse": 11,
+        "endVerse": 11
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: en pochte voor hen op zijn grote rijkdom en zijn talrijke zonen, op de grootheid, waartoe hij door ‘s konings gunst gekomen was, en zijn verheffing boven alle vorsten en koninklijk…"
+  },
+  "EST.5:14": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 5,
+        "verse": 14,
+        "endVerse": 14
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Daarom gaven zijn vrouw Zéresj en al zijn vrienden hem de raad: Laat een hoge paal maken, vijftig el hoog, en vraag morgenvroeg den koning verlof, daar Mordokai aan op te hangen; d…"
+  },
+  "JOB.35:16": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "JOB",
+        "chapter": 35,
+        "verse": 16,
+        "endVerse": 16
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Job opent zijn mond tot ijdel gezwets, Spreekt grote woorden in onverstand."
+  },
+  "JOS.6:2": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "JOS",
+        "chapter": 6,
+        "verse": 2,
+        "endVerse": 2
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Maar Jahweh sprak tot Josuë: Let op; Ik lever Jericho met zijn koning en dapperen aan u over."
+  },
+  "JOS.6:6": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "JOS",
+        "chapter": 6,
+        "verse": 6,
+        "endVerse": 6
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Josuë, de zoon van Noen, riep dus de priesters, en zeide hun: Neemt de Verbondsark op, en laat zeven priesters voor de ark van Jahweh uit zeven bazuinen van ramshorens dragen."
+  },
+  "JOS.6:8": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "JOS",
+        "chapter": 6,
+        "verse": 8,
+        "endVerse": 8
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Toen Josuë tot het volk had gesproken, trokken de zeven priesters op, terwijl ze de zeven bazuinen van ramshorens vóór Jahweh uit droegen en er op bliezen; de ark van Jahweh’s Verb…"
+  },
+  "JOS.6:10": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "JOS",
+        "chapter": 6,
+        "verse": 10,
+        "endVerse": 10
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Maar Josuë beval het volk eveneens: Schreeuwt niet, en laat uw stem zelfs niet horen; geen woord mag er over uw lippen komen tot de dag. waarop ik u zeg: Schreeuwt; en dan moet ge …"
+  },
+  "JOS.6:12": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "JOS",
+        "chapter": 6,
+        "verse": 12,
+        "endVerse": 12
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Zodra Josuë de volgende morgen alles geregeld had, namen de priesters de ark van Jahweh weer op,"
+  },
+  "JOS.6:16": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "JOS",
+        "chapter": 6,
+        "verse": 16,
+        "endVerse": 16
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: En toen de priesters bij de zevende keer op de bazuinen bliezen, riep Josuë het volk toe: Schreeuwt; want Jahweh levert u de stad over!"
+  },
+  "JOS.6:22": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "JOS",
+        "chapter": 6,
+        "verse": 22,
+        "endVerse": 22
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Maar tot de beide mannen, die het land hadden verkend, zei Josuë: Gaat naar het huis van de deerne, en haalt de vrouw eruit met allen, die bij haar behoren zoals ge het haar gezwor…"
+  },
+  "JOS.6:26": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "JOS",
+        "chapter": 6,
+        "verse": 26,
+        "endVerse": 26
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: In die dagen zwoer Josuë: Vervloekt voor Jahweh de man, Die het waagt, deze stad te herbouwen. Op zijn eerstgeborene zal hij Jericho’s grondvesten leggen, Op zijn jongsten zoon haa…"
+  },
+  "JOS.6:27": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "JOS",
+        "chapter": 6,
+        "verse": 27,
+        "endVerse": 27
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Zo was Jahweh met Josuë; en zijn faam ging door het hele land."
+  },
+  "JOS.9:27": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "JOS",
+        "chapter": 9,
+        "verse": 27,
+        "endVerse": 27
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: maar Josuë gaf hun die dag tot taak, hout te hakken en water te putten voor heel het volk en voor Jahweh’s altaar op de plaats, welke hij zou uitkiezen. En dat doen ze nu nog."
+  },
+  "ZEC.3:3": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "ZEC",
+        "chapter": 3,
+        "verse": 3,
+        "endVerse": 3
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Want Jehosjóea stond met besmeurde kleren voor den engel."
+  },
+  "ZEC.3:6": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "ZEC",
+        "chapter": 3,
+        "verse": 6,
+        "endVerse": 6
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Toen bezwoer de engel van Jahweh Jehosjóea: Zo spreekt Jahweh der heirscharen!"
+  },
+  "ZEC.3:8": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "ZEC",
+        "chapter": 3,
+        "verse": 8,
+        "endVerse": 8
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Hoor nu, Jehosjóea, hogepriester, Gij en uw ambtgenoten, die voor u zitten: Gij zult tot voorteken zijn, Dat Ik mijn Dienaar, den Spruit zal verwekken;"
+  },
+  "ZEC.3:9": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "ZEC",
+        "chapter": 3,
+        "verse": 9,
+        "endVerse": 9
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Want zie, Ik leg de steen voor Jehosjóea neer, Op die éne steen zijn zeven ogen gericht! Zie, Ik heb er een inschrift op gebeiteld, Is de godsspraak van Jahweh der heirscharen: Op …"
+  },
+  "EST.1:21": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 1,
+        "verse": 21,
+        "endVerse": 21
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: De raad van Memoekan vond bijval bij den koning en de vorsten, en de koning handelde er naar."
+  },
+  "EST.5:13": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 5,
+        "verse": 13,
+        "endVerse": 13
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Maar dat alles is niets, zolang ik dien jood Mordokai in het koninklijke poortgebouw zie zitten."
+  },
+  "EST.8:15": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 8,
+        "verse": 15,
+        "endVerse": 15
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Daarna verliet Mordokai den koning in een koninklijk gewaad van violet en wit, met een grote gouden diadeem, en een mantel van byssus en purper. De stad Sjoesjan jubelde van blijds…"
+  },
+  "EST.1:11": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 1,
+        "verse": 11,
+        "endVerse": 11
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: koningin Wasjti met de koninklijke kroon op het hoofd voor den koning te geleiden, om haar schoonheid aan de volken en vorsten te tonen; want ze was bijzonder mooi."
+  },
+  "EST.1:12": {
+    "status": "mapped",
+    "targets": [
+      {
+        "edition": "catholic-nl",
+        "book": "EST",
+        "chapter": 1,
+        "verse": 12,
+        "endVerse": 12
+      }
+    ],
+    "evidence": "Manually compared the complete bundled WEB and Dutch verse: the corresponding passage remains at this locator. Dutch anchor: Koningin Wasjti verzette zich echter tegen het bevel van den koning, dat haar door de kamerlingen werd overgebracht, en weigerde te komen. Toen ontstak de koning in vreselijk hefti…"
+  }
+}

@@ -79,9 +79,9 @@ function build() {
         'Complément éditorial de figures humaines des sept livres deutérocanoniques et des additions grecques à Esther et Daniel. Des personnages bibliques existants reçoivent aussi des passages supplémentaires. Il ne s’agit pas d’une concordance exhaustive ; anges, démons et groupes sont hors de cet index. Les liens familiaux existants sont conservés ; aucun nouveau lien n’est déduit ici.'
       ]),
       referenceNote: L([
-        'Verwijzingen openen de volledige Engelstalige Douay–Rheims (1899), met de eigen Vulgaatnummering: Ester 10:4–16:24 en Daniël 3:24–90, 13 en 14. De brief van Jeremia staat in Baruch 6. Gelijke versnummers in andere vertalingen zijn niet automatisch gelijkwaardige passages.',
-        'References open the complete English Douay–Rheims (1899), using its own Vulgate numbering: Esther 10:4–16:24 and Daniel 3:24–90, 13 and 14. The Letter of Jeremiah is Baruch 6. Matching verse numbers in other translations are not automatically equivalent passages.',
-        'Les références ouvrent la Douay–Rheims complète en anglais (1899), avec sa numérotation de la Vulgate : Esther 10:4–16:24 et Daniel 3:24–90, 13 et 14. La Lettre de Jérémie est Baruch 6. Des numéros identiques dans d’autres traductions ne désignent pas automatiquement des passages équivalents.'
+        'Leesknoppen openen de gecontroleerde overeenkomstige passage in de Nederlandse katholieke Bijbel. De oorspronkelijke bronverwijzingen blijven Douay–Rheims (1899), met eigen Vulgaatnummering, en zijn apart beschikbaar. De lezer toont de Nederlandse versnummers en licht afwijkende, gesplitste of onvolledige overeenkomsten toe.',
+        'Reading buttons open the reviewed corresponding passage in the Dutch Catholic Bible. Original citations remain Douay–Rheims (1899), with their own Vulgate numbering, and are available separately. The reader shows Dutch coordinates and explains changed, split or partial correspondences.',
+        'Les boutons de lecture ouvrent le passage correspondant vérifié dans la Bible catholique néerlandaise. Les références originales restent celles de Douay–Rheims (1899), avec leur numérotation de la Vulgate, et sont accessibles séparément. Le lecteur affiche les coordonnées néerlandaises et explique les correspondances différentes, fractionnées ou partielles.'
       ]),
       sources: [{ id: 'douay-rheims', label: 'Douay–Rheims 1899 (eBible.org)', url: 'https://ebible.org/engDRA/', license: 'Public domain', licenseUrl: 'https://ebible.org/engDRA/copyright.htm' }],
       sourceHashes: {

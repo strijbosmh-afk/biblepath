@@ -49,6 +49,7 @@ The people expansion adds a separate Torah index (481 identities from 4,325 orig
 | `dist/entity-locales.js` | Generated NL/FR per-identity profile patches |
 | `dist/data.js` | People and family relationships |
 | `dist/bible-data.json`, `dist/bible-data-nl.json`, `dist/bible-data-fr.json` | Existing 66-book WEB, Statenvertaling and Segond text and source metadata |
+| `dist/person-passage-map.js`, `dist/person-passage-map.json`, `scripts/build-person-passage-map.cjs` | Reviewed source-to-Dutch person passage navigation and deterministic builder |
 | `dist/catholic-bible-data-nl.json`, `scripts/import-catholic-dutch.py` | Dutch Catholic collection, source-specific supplements, attribution and deterministic importer |
 | `dist/catholic-bible-data.json` | Complete 73-book English Douay-Rheims text, additions, Vulgate numbering and source metadata |
 | `scripts/import-catholic-bible.py` | Checksum-pinned Catholic import and deterministic `--check` reproduction |
@@ -144,6 +145,8 @@ node tests/scripture-locales.cjs
 node tests/catholic-bible-data.cjs
 node tests/catholic-dutch-data.cjs
 node tests/catholic-reader.cjs
+node tests/person-passage-map.cjs
+node tests/person-passage-resolver.cjs
 node tests/catholic-people-ui.cjs
 node tests/catholic-people.cjs
 node tests/interfaith-app.cjs
@@ -162,6 +165,7 @@ python tests/import-catholic-dutch.py
 python scripts/import-catholic-bible.py --check
 python scripts/import-catholic-dutch.py --check
 node scripts/build-catholic-people.cjs --check
+node scripts/build-person-passage-map.cjs --check
 python scripts/import-tanakh.py --check
 python scripts/import-quran.py --check
 node scripts/build-torah-people.cjs --check
@@ -172,7 +176,7 @@ Run any additional Catholic people/reader suites in `tests/` and the supplementa
 
 - EN → NL → FR → EN, including a reload to verify stored language.
 - A fresh browser defaults to Dutch, while an existing explicit language preference is retained.
-- A fresh visit starts with Dutch controls and Dutch Catholic scripture. Open all seven deuterocanonical books, Baruch 6, Esther additions including chapter 16, Daniel’s prayer/song and chapters 13–14; verify actual Dutch text, source notes, search, final verses and links. Test the English edition separately. Switch interface language without replacing the fixed edition, then switch Dutch/English editions and verify separate reading positions. Switch to a 66-book edition from an added book/chapter without leaving an invalid location. Catholic person references open the Catholic edition; legacy atlas citations use their original source edition rather than assuming matching verse numbers.
+- A fresh visit starts with Dutch controls and Dutch Catholic scripture. Open all seven deuterocanonical books, Baruch 6, Esther additions including chapter 16, Daniel’s prayer/song and chapters 13–14; verify actual Dutch text, source notes, search, final verses and links. Test the English edition separately. Switch interface language without replacing the fixed edition, then switch Dutch/English editions and verify separate reading positions. Switch to a 66-book edition from an added book/chapter without leaving an invalid location. Bible person references use the reviewed Dutch passage map regardless of the saved reader edition. Original source links remain separate. Check moved verses, whole-range highlighting, multiple target passages, variant notes, unavailable mappings and retries. City references retain their separate source-edition fallback.
 - Bible → Torah → Qur’an people indexes preserve separate queries and profiles; Torah has no New Testament entries or copied Christian biographies. Arabic aliases work in the Qur’an index. Bible testament controls are hidden for the other collections.
 - Across traditions shows a Roman Catholic account alongside separate Jewish and Islamic accounts, with biblical passages distinct from Catechism/Church-teaching sources; profile comparison buttons and return links route to the correct collection. Compare Moses, Jesus and Mary/Miriam, then switch languages without losing selection.
 - Christianity → Judaism → Islam → Christianity, preserving separate edition positions, including a reload. Verify failed-download retry and switching traditions during a pending download.

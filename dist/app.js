@@ -26,6 +26,7 @@
   const isCatholicEdition=edition=>Object.hasOwn(catholicEditions,edition);
   let initialBibleEdition='catholic-nl';try{const saved=localStorage.getItem('biblepath-bible-edition');if(isCatholicEdition(saved)||saved==='locale')initialBibleEdition=saved;}catch{}
   const bibleEditionStates=new Map();let readerRequest=0,catholicPeople=null,catholicPeopleLoading=null;
+  let personPassages=null,personPassagesLoading=null,personPassageRequest=0;
   let initialTradition='christianity';try{const saved=localStorage.getItem('biblepath-tradition');if(['christianity','judaism','islam'].includes(saved))initialTradition=saved;}catch{}
   let sacredReader=null,sacredLoading=null,sacredRequest=0;
   const sacredCache=new Map();
@@ -134,7 +135,7 @@
       <div class="profile-tags"><span>${person.testament === 'OT' ? 'Old Testament' : 'New Testament'}</span><span>${person.gender === 'female' ? 'Woman' : person.gender === 'male' ? 'Man' : 'Person'}</span></div>
       ${person.disambiguation ? `<p class="profile-identity">${escape(person.disambiguation)}</p>` : ''}
       <p class="profile-description">${escape(person.description)}</p>
-      <div class="profile-section"><h3>${icon('book')} IN SCRIPTURE <span class="reference-count">${(person.referenceCount || person.refs.length).toLocaleString(I.language)} refs</span></h3>${referenceLinks.map(ref=>`<a class="reference-link" href="${escape(ref.url)}" target="_blank" rel="noopener noreferrer"><span>${escape(ref.label)}${ref.provenance === 'indexed-name' ? '<small class="reference-provenance">Indexed name reference</small>' : ''}</span>${icon('external')}</a>`).join('')}${person.refs.length > referenceLimit ? `<button class="more-references" id="more-references">Show more passages (${person.refs.length-referenceLimit} remaining)</button>` : ''}${referenceLinks.some(ref=>ref.provenance === 'indexed-name') ? '<p class="reference-caveat">Name references may include descendants or a group bearing the same name. Read the passage in context.</p>' : ''}</div>
+      <div class="profile-section"><h3>${icon('book')} IN SCRIPTURE <span class="reference-count">${(person.referenceCount || person.refs.length).toLocaleString(I.language)} refs</span></h3>${referenceLinks.map((ref,index)=>`<div class="person-reference-row"><button class="reference-link" data-person-passage="${index}" aria-label="${escape(I.t('Read {reference} in the Dutch Catholic Bible',{reference:I.reference(ref.label)}))}"><span>${escape(I.reference(ref.label))}${ref.provenance === 'indexed-name' ? '<small class="reference-provenance">Indexed name reference</small>' : ''}</span>${icon('arrow')}</button><a class="person-reference-source" href="${escape(ref.url)}" target="_blank" rel="noopener noreferrer">${escape(I.t('Original source'))} ↗</a></div>`).join('')}${person.refs.length > referenceLimit ? `<button class="more-references" id="more-references">Show more passages (${person.refs.length-referenceLimit} remaining)</button>` : ''}${referenceLinks.some(ref=>ref.provenance === 'indexed-name') ? '<p class="reference-caveat">Name references may include descendants or a group bearing the same name. Read the passage in context.</p>' : ''}</div>
       <div class="profile-section"><h3>${icon('tree')} FAMILY CONNECTIONS</h3>
         ${family.parents.length ? `<div class="family-row"><span class="family-label">Parents</span><div class="family-names">${relativeButtons(family.parents)}</div></div>` : ''}
         ${family.spouses.length ? `<div class="family-row"><span class="family-label">Spouse${family.spouses.length > 1 ? 's' : ''}</span><div class="family-names">${relativeButtons(family.spouses)}</div></div>` : ''}
@@ -147,6 +148,7 @@
       <div class="profile-path-actions"><button data-path-endpoint="from">Use as start</button><button data-path-endpoint="to">Use as destination</button></div>
       ${family.direct.length ? `<details class="relationship-sources"><summary>Sources for these relationships</summary>${family.direct.map(r=>`<a href="${escape(r.ref.url)}" target="_blank" rel="noopener noreferrer"><span>${escape(personById.get(r.source).name)} ${r.type === 'spouse' ? '&' : '→'} ${escape(personById.get(r.target).name)}</span><small>${escape(r.ref.label)} ↗</small></a>`).join('')}</details>` : ''}
       ${person.source?.url ? `<a class="profile-source" href="${escape(person.source.url)}" target="_blank" rel="noopener noreferrer">Indexed with ${escape(person.source.name || 'STEP Bible')} ↗</a>` : ''}`;
+    $$('#inspector [data-person-passage]').forEach(button=>button.addEventListener('click',()=>openPersonPassage(referenceLinks[Number(button.dataset.personPassage)])));
     $$('#inspector [data-relative]').forEach(button=>button.addEventListener('click',()=>explorePerson(button.dataset.relative)));
     $('#focus-person').addEventListener('click',()=>explorePerson(person.id));
     $('#back-to-path')?.addEventListener('click',renderPathInspector);
@@ -175,6 +177,7 @@
 
   function setView(view) {
     clearTimeout(zoomTimer);
+    if(view!=='reader')cancelPersonRequest();
     state.view = view;
     $('#map-view').hidden = view !== 'map'; $('#index-view').hidden = view !== 'index'||state.peopleTradition!=='christianity';
     $('#people-collection-controls').hidden=view!=='index';
@@ -255,6 +258,11 @@
     if(!catholicPeopleLoading)catholicPeopleLoading=loadJson('catholic-people.json').then(data=>{catholicPeople=new window.CatholicPeople(data,people);updateCounts();return catholicPeople;}).finally(()=>{catholicPeopleLoading=null;});
     return catholicPeopleLoading;
   }
+  function loadPersonPassages(){
+    if(personPassages)return Promise.resolve(personPassages);
+    if(!personPassagesLoading)personPassagesLoading=loadJson('person-passage-map.json').then(data=>personPassages=new window.PersonPassageMap(data)).finally(()=>{personPassagesLoading=null;});
+    return personPassagesLoading;
+  }
   const bibleEditionKey=()=>state.bibleEdition==='locale'?I.language:state.bibleEdition;
   function selectBibleEdition(edition){
     if((!isCatholicEdition(edition)&&edition!=='locale')||edition===state.bibleEdition)return;
@@ -267,14 +275,15 @@
   function openCatholicProfile(id){
     const profile=catholicPeople?.byId.get(id);if(!profile)return;
     const local=value=>typeof value==='string'?value:value?.[I.language]||value?.en||'';
-    $('#catholic-profile-content').innerHTML=`<span class="library-kicker">${escape(I.t('People of the Catholic Bible'))}</span><h2 id="catholic-profile-title">${escape(local(profile.names))}</h2><p>${escape(local(profile.disambiguation))}</p><div class="collection-role-tags">${local(profile.roles).map(role=>`<span>${escape(role)}</span>`).join('')}</div><p class="collection-summary">${escape(local(profile.summary))}</p><h3>${escape(I.t('Passages and sources'))}</h3><p>${escape(I.t('These passages use the English Douay–Rheims edition and its own verse numbering.'))}</p><div class="catholic-profile-passages">${profile.refs.map((ref,index)=>`<div><button class="collection-reader-link" data-catholic-passage="${index}">${escape(I.reference(ref.label))} →</button><a href="${escape(ref.url)}" target="_blank" rel="noopener noreferrer">${escape(I.t('Read the source'))} ↗</a></div>`).join('')}</div>${profile.bibleId?`<button class="solid-button" id="catholic-profile-family">${escape(I.t('Open the existing family map'))}</button>`:`<p>${escape(I.t('This profile has sourced passages; family relationships have not been added to the map.'))}</p>`}<p class="collection-source-note">${escape(local(catholicPeople.data.meta.referenceNote))}</p>`;
-    $$('#catholic-profile-content [data-catholic-passage]').forEach(button=>button.addEventListener('click',()=>{const ref=profile.refs[Number(button.dataset.catholicPassage)];$('#catholic-profile-dialog').close();openPassage(ref);}));
+    $('#catholic-profile-content').innerHTML=`<span class="library-kicker">${escape(I.t('People of the Catholic Bible'))}</span><h2 id="catholic-profile-title">${escape(local(profile.names))}</h2><p>${escape(local(profile.disambiguation))}</p><div class="collection-role-tags">${local(profile.roles).map(role=>`<span>${escape(role)}</span>`).join('')}</div><p class="collection-summary">${escape(local(profile.summary))}</p><h3>${escape(I.t('Passages and sources'))}</h3><p>${escape(I.t('Read these passages in the Dutch Catholic Bible. The original source references remain available separately.'))}</p><div class="catholic-profile-passages">${profile.refs.map((ref,index)=>`<div><button class="collection-reader-link" data-catholic-passage="${index}">${escape(I.reference(ref.label))} · ${escape(I.t('Read in Dutch'))} →</button><a href="${escape(ref.url)}" target="_blank" rel="noopener noreferrer">${escape(I.t('Read the source'))} ↗</a></div>`).join('')}</div>${profile.bibleId?`<button class="solid-button" id="catholic-profile-family">${escape(I.t('Open the existing family map'))}</button>`:`<p>${escape(I.t('This profile has sourced passages; family relationships have not been added to the map.'))}</p>`}<p class="collection-source-note">${escape(local(catholicPeople.data.meta.referenceNote))}</p>`;
+    $$('#catholic-profile-content [data-catholic-passage]').forEach(button=>button.addEventListener('click',()=>{const ref=profile.refs[Number(button.dataset.catholicPassage)];$('#catholic-profile-dialog').close();openPersonPassage(ref);}));
     $('#catholic-profile-family')?.addEventListener('click',()=>{$('#catholic-profile-dialog').close();explorePerson(profile.bibleId);});
     $('#catholic-profile-dialog').showModal();
   }
   function libraryError(container,retry) {container.innerHTML=`<div class="library-empty"><h2>${escape(I.t('This collection could not load.'))}</h2><p>${escape(I.t('Check your connection, then try again.'))}</p><button class="solid-button library-retry">${escape(I.t('Try again'))}</button></div>`;container.querySelector('button').addEventListener('click',retry);}
   function selectTradition(tradition){
     if(!['christianity','judaism','islam'].includes(tradition))return;
+    if(tradition!=='christianity')cancelPersonRequest();
     if(tradition!==state.tradition){sacredRequest++;sacredReader?.destroy();sacredReader=null;sacredLoading=null;state.tradition=tradition;}
     try{localStorage.setItem('biblepath-tradition',tradition);}catch{}
     setView('reader');
@@ -292,6 +301,10 @@
     return sacredLoading;
   }
   let readerLoading=null,citiesLoading=null,passageLoading=null;
+  function cancelPersonRequest(){
+    personPassageRequest++;if(pendingPassage?.personPassage)pendingPassage=null;
+    if(reader?.personPassage?.status==='loading'){reader.personPassage=null;reader.render();}
+  }
   function readPendingPassage() {
     if(passageLoading)return passageLoading;
     if(!reader||!pendingPassage)return Promise.resolve(reader);
@@ -301,6 +314,14 @@
       while(pendingPassage&&reader){
         const ref=pendingPassage,activeReader=reader;pendingPassage=null;
         try{
+          if(ref.personPassage){
+            activeReader.openPersonPassage({status:'loading',targets:[],sourceLabel:ref.label,sourceUrl:ref.url,originalReference:ref});
+            const passages=await loadPersonPassages();
+            if(reader!==activeReader||ref.passageRequest!==personPassageRequest||state.view!=='reader'||state.tradition!=='christianity'||state.bibleEdition!=='catholic-nl')continue;
+            activeReader.restoreSelectedEdition();
+            activeReader.openPersonPassage({...passages.resolve(ref),originalReference:ref});
+            continue;
+          }
           if(isCatholicEdition(ref.edition)){
             activeReader.restoreSelectedEdition();
             const parsed=activeReader.model.reference(ref);
@@ -313,7 +334,11 @@
             sourceModel=new window.BibleScripture(text,window.BIBLE_DATA,places);
           }
           if(reader===activeReader&&!activeReader.openAtlas(ref,sourceModel))toast('This reference could not be located in the reader.');
-        }catch{toast(I.t('The cited passage could not load. Select the city reference again to retry.'));}
+        }catch{
+          if(ref.personPassage){
+            if(reader===activeReader&&ref.passageRequest===personPassageRequest&&state.view==='reader'&&state.tradition==='christianity'&&state.bibleEdition==='catholic-nl')activeReader.openPersonPassage({status:'error',targets:[],sourceLabel:ref.label,sourceUrl:ref.url,originalReference:ref});
+          }else toast(I.t('The cited passage could not load. Select the city reference again to retry.'));
+        }
       }
       return reader;
     })().finally(()=>{
@@ -336,7 +361,7 @@
       const model=new window.BibleScripture(text,readerPeople,places);
       const sourceModel=savedReaderState?.atlasReference?new window.BibleScripture(await loadScripture('en'),window.BIBLE_DATA,places):null;
       if(request!==readerRequest||edition!==bibleEditionKey())return null;
-      reader=new window.BibleReader($('#reader-view'),model,readerPeople,places,{onPerson:id=>openLibraryPerson(id,'reader'),onPlace:openCity,editionId:state.bibleEdition,editionOptions:[...Object.entries(catholicEditions).map(([id,item])=>({id,label:I.t(item.label)})),{id:'locale',label:I.t({nl:'Statenvertaling · Dutch · 66 books',en:'World English Bible · English · 66 books',fr:'Louis Segond · French · 66 books'}[I.language])}],onEditionChange:id=>{pendingPassage=null;selectBibleEdition(id);}});
+      reader=new window.BibleReader($('#reader-view'),model,readerPeople,places,{onPerson:id=>openLibraryPerson(id,'reader'),onPlace:openCity,editionId:state.bibleEdition,editionOptions:[...Object.entries(catholicEditions).map(([id,item])=>({id,label:I.t(item.label)})),{id:'locale',label:I.t({nl:'Statenvertaling · Dutch · 66 books',en:'World English Bible · English · 66 books',fr:'Louis Segond · French · 66 books'}[I.language])}],onPersonPassageRetry:openPersonPassage,onPersonPassageCancel:cancelPersonRequest,onEditionChange:id=>{cancelPersonRequest();pendingPassage=null;selectBibleEdition(id);}});
       if(savedReaderState){reader.setState(savedReaderState,sourceModel);savedReaderState=null;}
       await readPendingPassage();
       return reader;
@@ -350,7 +375,11 @@
     citiesLoading=loadPlaces().then(places=>{cities=new window.BibleCities($('#cities-view'),places,window.BIBLE_DATA,{onPerson:id=>openLibraryPerson(id,'cities'),onPassage:openPassage});if(savedCitiesState){cities.setState(savedCitiesState);savedCitiesState=null;}showPendingCity();return cities;}).catch(()=>{libraryError($('#cities-view'),ensureCities);return null;}).finally(()=>{citiesLoading=null;});
     return citiesLoading;
   }
-  function openPassage(reference) {pendingPassage=reference;if(isCatholicEdition(reference.edition))selectBibleEdition(reference.edition);selectTradition('christianity');}
+  function openPassage(reference) {cancelPersonRequest();pendingPassage=reference;if(isCatholicEdition(reference.edition))selectBibleEdition(reference.edition);selectTradition('christianity');}
+  function openPersonPassage(reference){
+    pendingPassage={...(typeof reference==='string'?{label:reference}:reference),personPassage:true,passageRequest:++personPassageRequest};
+    selectBibleEdition('catholic-nl');selectTradition('christianity');
+  }
   function openCity(id) {pendingCity=id;setView('cities');}
   function openLibraryPerson(id,origin) {if(catholicPeople?.byId.has(id)&&isCatholicEdition(state.bibleEdition)&&origin==='reader'){openCatholicProfile(id);return;}returnToLibrary=origin;$('#return-to-library').textContent=origin==='reader'?'← Back to the Bible reader':'← Back to the city';explorePerson(id);}
 
@@ -526,11 +555,11 @@
       <div class="eyebrow">A DEEPER LOOK AT BIBLICAL LIVES</div><h2>A growing atlas of Scripture.</h2>
       <div class="info-fact">${people.length.toLocaleString(I.language)} people · ${relationships.length.toLocaleString(I.language)} family connections · Both testaments</div>
       <p>${escape(meta?.coverage || 'This is an initial curated collection, not yet an exhaustive index of every person in the Bible.')}</p>
-      <p>The three layouts share one searchable collection. The original profiles retain their KJV passage links. Expanded entries link to the ESV passages used by the source index. Namesakes remain distinct people.</p>
+      <p>The three layouts share one searchable collection. Person reading buttons open the reviewed Dutch Catholic correspondence. Separate source links retain the original KJV or ESV citations used by the atlas. Namesakes remain distinct people.</p>
       <h3>Roman Catholic focus and current coverage</h3><p>The Christian account in the people comparison follows a Roman Catholic perspective, with biblical passages and separately identified references to the Catechism of the Catholic Church and Church teaching. Jewish and Islamic accounts retain their own sources and identities.</p><p>The complete Catholic reader contains all 73 books in Dutch and English (Douay-Rheims 1899), including Tobit, Judith, Wisdom, Sirach, Baruch, 1–2 Maccabees and the additions to Esther and Daniel. Each edition keeps its own text and verse numbering. Dutch is the default interface language and the Dutch Catholic Bible is the default text edition for a first visit. Existing explicitly saved choices are retained. The 66-book World English Bible, Statenvertaling and Louis Segond editions remain available.</p><h3>Read each connection with its source</h3><p>Some family links cite a specific biblical passage; others cite STEP Bible’s editorial relationship index. An indexed link is not a claim that a particular verse explicitly establishes that relationship. Notes identify uncertainty, legal parenthood, and differing accounts.</p>
       <p>Catholic supplemental profiles cite the added corpus directly. The original family graph and city atlas retain their existing 66-book source scope. The supplemental profiles are a sourced selection, not an exhaustive concordance or inferred genealogy. Missing links indicate a gap in this map, not necessarily in Scripture. Namesakes remain separate; unsupported genealogical harmonizations are excluded.</p>
       <h3>Sources & attribution</h3>${(meta.sources || []).map(source=>`<p><a href="${escape(source.url)}" target="_blank" rel="noopener noreferrer">${escape(source.name)}</a>${source.license ? ` · ${escape(source.license)}` : ''}${source.credit ? `<br>${escape(source.credit)}` : ''}</p>`).join('')}
-      <p>The Dutch Catholic reader uses Canisius 1939 with credited historical supplements. The text sources, supplement boundaries and attribution are recorded with the edition and in the data notes. The English Catholic reader uses the public-domain <a href="https://ebible.org/engDRA/" target="_blank" rel="noopener noreferrer">Douay-Rheims 1899</a> from eBible.org. Catholic supplemental profile citations continue opening their named English source edition, rather than assuming equal verse numbers in Dutch. The additional 66-book readers use the World English Bible, Statenvertaling and Louis Segond 1910. Cities combine STEP name references with <a href="https://www.openbible.info/geo/" target="_blank" rel="noopener noreferrer">OpenBible.info</a> settlement classifications, CC BY 4.0.</p>
+      <p>The Dutch Catholic reader uses Canisius 1939 with credited historical supplements. The text sources, supplement boundaries and attribution are recorded with the edition and in the data notes. The English Catholic reader uses the public-domain <a href="https://ebible.org/engDRA/" target="_blank" rel="noopener noreferrer">Douay-Rheims 1899</a> from eBible.org. Catholic supplemental profile buttons open their reviewed Dutch Catholic passages and retain a separate link to the original English source. Changed verse numbers, split passages and incomplete correspondences are shown explicitly. The additional 66-book readers use the World English Bible, Statenvertaling and Louis Segond 1910. Cities combine STEP name references with <a href="https://www.openbible.info/geo/" target="_blank" rel="noopener noreferrer">OpenBible.info</a> settlement classifications, CC BY 4.0.</p>
       <p><a href="data-notes.html" target="_blank" rel="noopener noreferrer">Full data credits, scope, and editorial changes ↗</a></p>`;
     if(I.language!=='en')$('#info-content').innerHTML=window.BIBLE_INFO[I.language][mode];
     $('#info-dialog').showModal();

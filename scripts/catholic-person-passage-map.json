@@ -1,0 +1,3230 @@
+{
+  "meta": {
+    "version": 1,
+    "reviewedAt": "2026-10-22",
+    "scope": "176 Catholic person-index reference occurrences; 153 unique Douay-Rheims source passages. Only these explicit ranges are aligned; this is not a general edition-to-edition verse map.",
+    "method": "Manual parallel reading of the actual bundled DRA and Dutch Catholic passages, including their endpoints and adjacent material where numbering changes. Dutch targets include whole verse rows where sentence boundaries differ. Original person-index source references remain immutable.",
+    "sourceEdition": "catholic",
+    "targetEdition": "catholic-nl",
+    "sourceTextSha256": "eb591a6e0aa32fd5924f9f01042366ec55eadf3d17399a371d61b46f7ce70342",
+    "targetTextSha256": "7004ec13f9f492b18a534742da9093ff73a2be625709231e142a205d461c4b5e",
+    "sourceAsset": "dist/catholic-bible-data.json",
+    "targetAsset": "dist/catholic-bible-data-nl.json",
+    "occurrenceCount": 176,
+    "referenceCount": 153,
+    "changedRangeCount": 28,
+    "partialReferenceCount": 6
+  },
+  "references": {
+    "catholic|Tobit 1:1-9": {
+      "source": {
+        "edition": "catholic",
+        "book": "TOB",
+        "chapter": 1,
+        "verse": 1,
+        "endVerse": 9
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "TOB",
+          "chapter": 1,
+          "verse": 1,
+          "endVerse": 9
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 1: Tobit was uit de stam van Neftali, en uit een stad, die in Opper-Galilea ligt ten noorden van Chasor, dus ten noord… / 9: Nadat hij man was geworden, nam hij een vrouw uit zijn stam, Anna geheten, en verwekte bij haar een zoon, wien hij …"
+    },
+    "catholic|Tobit 1:19-22": {
+      "source": {
+        "edition": "catholic",
+        "book": "TOB",
+        "chapter": 1,
+        "verse": 19,
+        "endVerse": 22
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "TOB",
+          "chapter": 1,
+          "verse": 19,
+          "endVerse": 22
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 19: doch Tobit bleef dagelijks al zijn verwanten bezoeken, om hen te troosten en aan iedereen, zoveel hij kon, van zijn… / 22: Maar toen dat aan den koning werd overgebracht, gaf deze bevel, hem te vermoorden en heel zijn vermogen in beslag t…"
+    },
+    "catholic|Tobit 14:1-5": {
+      "source": {
+        "edition": "catholic",
+        "book": "TOB",
+        "chapter": 14,
+        "verse": 1,
+        "endVerse": 5
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "TOB",
+          "chapter": 14,
+          "verse": 1,
+          "endVerse": 5
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 1: En dit is het einde der geschiedenis van Tobit. Nadat Tobit het gezicht had teruggekregen, leefde hij nog twee en v… / 5: Maar toen hij ging sterven, liet hij zijn zoon Tobias met diens zeven jonge zonen, zijn kleinkinderen, komen, en sp…"
+    },
+    "catholic|Tobit 1:9": {
+      "source": {
+        "edition": "catholic",
+        "book": "TOB",
+        "chapter": 1,
+        "verse": 9,
+        "endVerse": 9
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "TOB",
+          "chapter": 1,
+          "verse": 9,
+          "endVerse": 9
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 9: Nadat hij man was geworden, nam hij een vrouw uit zijn stam, Anna geheten, en verwekte bij haar een zoon, wien hij …"
+    },
+    "catholic|Tobit 7:10-17": {
+      "source": {
+        "edition": "catholic",
+        "book": "TOB",
+        "chapter": 7,
+        "verse": 10,
+        "endVerse": 17
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "TOB",
+          "chapter": 7,
+          "verse": 10,
+          "endVerse": 17
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 10: sprak Tobias: Ik eet of drink hier niet vandaag, vóórdat gij mijn verzoek hebt ingewilligd en mij belooft, Sara, uw… / 17: Daarna gingen zij aan tafel en prezen God."
+    },
+    "catholic|Tobit 8:4-10": {
+      "source": {
+        "edition": "catholic",
+        "book": "TOB",
+        "chapter": 8,
+        "verse": 4,
+        "endVerse": 10
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "TOB",
+          "chapter": 8,
+          "verse": 4,
+          "endVerse": 10
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 4: Daarna richtte Tobias zich tot het meisje en sprak tot haar: Sara, sta op; wij moeten vandaag, morgen en overmorgen… / 10: Ook Sara sprak: Ontferm U over ons, Heer, ontferm U onzer, en houd ons beiden samen gezond tot op onze oude dag."
+    },
+    "catholic|Tobit 2:19-23": {
+      "source": {
+        "edition": "catholic",
+        "book": "TOB",
+        "chapter": 2,
+        "verse": 19,
+        "endVerse": 23
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "TOB",
+          "chapter": 2,
+          "verse": 19,
+          "endVerse": 23
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 19: Intussen ging Anna, zijn vrouw, dagelijks uit weven en bracht dan de eetwaren thuis, die zij voor haar handenarbeid… / 23: En op een dergelijke manier bleef zij hem verwijten doen."
+    },
+    "catholic|Tobit 3:7-15": {
+      "source": {
+        "edition": "catholic",
+        "book": "TOB",
+        "chapter": 3,
+        "verse": 7,
+        "endVerse": 15
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "TOB",
+          "chapter": 3,
+          "verse": 7,
+          "endVerse": 15
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 7: Nu gebeurde het dezelfde dag, dat Sara, de dochter van Raguël in Ekbátana, de stad der Meden, eveneens verwijten mo… / 15: Ik bid U, Heer, mij uit de boeien dezer schande te bevrijden, of anders mij weg te nemen van de aarde."
+    },
+    "catholic|Tobit 7:1-17": {
+      "source": {
+        "edition": "catholic",
+        "book": "TOB",
+        "chapter": 7,
+        "verse": 1,
+        "endVerse": 17
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "TOB",
+          "chapter": 7,
+          "verse": 1,
+          "endVerse": 17
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 1: Daarna gingen zij bij Raguël binnen, die hen vol vreugde ontving. / 17: Daarna gingen zij aan tafel en prezen God."
+    },
+    "catholic|Tobit 8:15-20": {
+      "source": {
+        "edition": "catholic",
+        "book": "TOB",
+        "chapter": 8,
+        "verse": 15,
+        "endVerse": 20
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "TOB",
+          "chapter": 8,
+          "verse": 15,
+          "endVerse": 20
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 15: Zij stuurde dus een van haar meisjes; deze ging de kamer binnen en vond ze gezond en wel, beiden in slaap. / 20: Onmiddellijk gaf Raguël nu aan zijn knechten bevel, om het graf, dat zij gedolven hadden, nog vóór het daglicht dic…"
+    },
+    "catholic|Tobit 7:2": {
+      "source": {
+        "edition": "catholic",
+        "book": "TOB",
+        "chapter": 7,
+        "verse": 2,
+        "endVerse": 2
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "TOB",
+          "chapter": 7,
+          "verse": 2,
+          "endVerse": 2
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 2: Toen Raguël nu Tobias goed aankeek, zei hij tot Anna, zijn vrouw: Wat lijkt die jongeman op mijn neef!"
+    },
+    "catholic|Tobit 7:8": {
+      "source": {
+        "edition": "catholic",
+        "book": "TOB",
+        "chapter": 7,
+        "verse": 8,
+        "endVerse": 8
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "TOB",
+          "chapter": 7,
+          "verse": 8,
+          "endVerse": 8
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 8: Ook Anna, zijn vrouw, en Sara, hun dochter, begonnen te schreien."
+    },
+    "catholic|Tobit 7:18-20": {
+      "source": {
+        "edition": "catholic",
+        "book": "TOB",
+        "chapter": 7,
+        "verse": 18,
+        "endVerse": 20
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "TOB",
+          "chapter": 7,
+          "verse": 18,
+          "endVerse": 20
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 18: Intussen riep Raguël zijn vrouw Anna binnen, en zeide haar, de andere kamer gereed te maken. / 20: Maar zij sprak tot haar: Houd moed, mijn kind; de Heer des Hemels zal u vreugde geven in ruil voor al het verdriet,…"
+    },
+    "catholic|Tobit 1:16-17": {
+      "source": {
+        "edition": "catholic",
+        "book": "TOB",
+        "chapter": 1,
+        "verse": 16,
+        "endVerse": 17
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "TOB",
+          "chapter": 1,
+          "verse": 16,
+          "endVerse": 17
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 16: Toen hij dus eens in Rages kwam, een stad in Medië, met tien talenten zilver bij zich, waarmee de koning hem had ve… / 17: trof hij daar onder de vele lieden van zijn eigen volk zijn stamgenoot Gabaël aan; aan dezen gaf hij de genoemde so…"
+    },
+    "catholic|Tobit 9:3-8": {
+      "source": {
+        "edition": "catholic",
+        "book": "TOB",
+        "chapter": 9,
+        "verse": 3,
+        "endVerse": 8
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "TOB",
+          "chapter": 9,
+          "verse": 3,
+          "endVerse": 8
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 3: Toch heb ik nog een verzoek aan u: Neem rijdieren en slaven met u mee, en ga naar Gabaël in Rages, de stad der Mede… / 8: Toen Gabaël het huis van Raguël binnenkwam, trof hij Tobias aan tafel; deze sprong op en zij kusten elkander. En Ga…"
+    },
+    "catholic|Tobit 11:20": {
+      "source": {
+        "edition": "catholic",
+        "book": "TOB",
+        "chapter": 11,
+        "verse": 20,
+        "endVerse": 20
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "TOB",
+          "chapter": 11,
+          "verse": 20,
+          "endVerse": 20
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 20: Nu kwamen ook Achior en Nabat, de neven van Tobias, vol blijdschap hem bezoeken, om hem geluk te wensen met al de w…"
+    },
+    "catholic|Tobit 1:18-24": {
+      "source": {
+        "edition": "catholic",
+        "book": "TOB",
+        "chapter": 1,
+        "verse": 18,
+        "endVerse": 24
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "TOB",
+          "chapter": 1,
+          "verse": 18,
+          "endVerse": 24
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 18: Maar toen lange tijd later, na de dood van koning Salmanassar, diens zoon Sinacherib in zijn plaats regeerde, begon… / 24: Maar toen vijf en veertig dagen later de koning door zijn eigen zonen werd vermoord,"
+    },
+    "catholic|Judith 8:1-10": {
+      "source": {
+        "edition": "catholic",
+        "book": "JDT",
+        "chapter": 8,
+        "verse": 1,
+        "endVerse": 10
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "JDT",
+          "chapter": 8,
+          "verse": 1,
+          "endVerse": 10
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 1: Deze uitspraak werd ook gehoord door een weduwe, die Judit heette. Zij was de dochter van Merari, den zoon van Oezz… / 10: En toen dezen bij haar gekomen waren, sprak zij tot hen: Hoe is het mogelijk, dat Oezzi-ja de eis heeft ingewilligd…"
+    },
+    "catholic|Judith 13:6-11": {
+      "source": {
+        "edition": "catholic",
+        "book": "JDT",
+        "chapter": 13,
+        "verse": 6,
+        "endVerse": 11
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "JDT",
+          "chapter": 13,
+          "verse": 6,
+          "endVerse": 11
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 6: Nu trad Judit voor het bed en met tranen in de ogen bad zij in stilte, terwijl alleen haar lippen bewogen: / 11: Onmiddellijk daarop ging ze naar buiten, gaf het hoofd van Holoférnes aan haar dienstmaagd, en beduidde haar, het i…"
+    },
+    "catholic|Judith 16:26": {
+      "source": {
+        "edition": "catholic",
+        "book": "JDT",
+        "chapter": 16,
+        "verse": 26,
+        "endVerse": 26
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "JDT",
+          "chapter": 16,
+          "verse": 26,
+          "endVerse": 26
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 26: omdat zij niet alleen moedig was, maar ook kuis. Want nadat Manasse haar man was gestorven, had zij heel haar verde…"
+    },
+    "catholic|Judith 8:2-4": {
+      "source": {
+        "edition": "catholic",
+        "book": "JDT",
+        "chapter": 8,
+        "verse": 2,
+        "endVerse": 4
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "JDT",
+          "chapter": 8,
+          "verse": 2,
+          "endVerse": 4
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 2: Haar man heette Manasse, en was tijdens de gersteoogst gestorven. / 4: De achtergebleven Judit was op dit ogenblik reeds drie jaar en zes maanden weduwe."
+    },
+    "catholic|Judith 2:4-7": {
+      "source": {
+        "edition": "catholic",
+        "book": "JDT",
+        "chapter": 2,
+        "verse": 4,
+        "endVerse": 7
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "JDT",
+          "chapter": 2,
+          "verse": 4,
+          "endVerse": 7
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 4: Toen dit plan algemene instemming had gevonden, liet koning Nabukodonosor zijn opperbevelhebber Holoférnes bij zich… / 7: Daarop werden alle veldheren en aanvoerders van het assyrische leger door Holoférnes opgeroepen, en begon hij, zoal…"
+    },
+    "catholic|Judith 13:6-10": {
+      "source": {
+        "edition": "catholic",
+        "book": "JDT",
+        "chapter": 13,
+        "verse": 6,
+        "endVerse": 10
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "JDT",
+          "chapter": 13,
+          "verse": 6,
+          "endVerse": 10
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 6: Nu trad Judit voor het bed en met tranen in de ogen bad zij in stilte, terwijl alleen haar lippen bewogen: / 10: En met twee krachtige slagen in zijn nek sloeg zij hem het hoofd af. Ze duwde de romp van het bed en trok het muski…"
+    },
+    "catholic|Judith 5:5-21": {
+      "source": {
+        "edition": "catholic",
+        "book": "JDT",
+        "chapter": 5,
+        "verse": 5,
+        "endVerse": 21
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "JDT",
+          "chapter": 5,
+          "verse": 5,
+          "endVerse": 21
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 5: Toen antwoordde Achior, het hoofd van alle Ammonieten: Zo ge naar mij wilt luisteren, zal ik u de waarheid zeggen o… / 21: Zolang zij dus voor het aanschijn van hun God geen zonde bedreven, hadden zij voorspoed; want hun God haat de onger…"
+    },
+    "catholic|Judith 14:6": {
+      "source": {
+        "edition": "catholic",
+        "book": "JDT",
+        "chapter": 14,
+        "verse": 6,
+        "endVerse": 6
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "JDT",
+          "chapter": 14,
+          "verse": 6,
+          "endVerse": 6
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 6: Toen nu Achior zag, op hoe krachtige wijze de God van Israël Zich openbaarde, zwoer hij de heidense godsdienst af e…"
+    },
+    "catholic|Judith 6:11": {
+      "source": {
+        "edition": "catholic",
+        "book": "JDT",
+        "chapter": 6,
+        "verse": 11,
+        "endVerse": 11
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "JDT",
+          "chapter": 6,
+          "verse": 11,
+          "endVerse": 11
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 11: In die dagen waren Oezzi-ja, de zoon van Mika uit de stam Simeon, en Karmi, die ook Gotoniël heette, de bestuurders…"
+    },
+    "catholic|Judith 6:19": {
+      "source": {
+        "edition": "catholic",
+        "book": "JDT",
+        "chapter": 6,
+        "verse": 19,
+        "endVerse": 19
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "JDT",
+          "chapter": 6,
+          "verse": 19,
+          "endVerse": 19
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 19: Na dit onderhoud nam Oezzi-ja hem mee naar zijn huis, en richtte voor hem een groot feestmaal aan."
+    },
+    "catholic|Judith 7:23": {
+      "source": {
+        "edition": "catholic",
+        "book": "JDT",
+        "chapter": 7,
+        "verse": 23,
+        "endVerse": 23
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "JDT",
+          "chapter": 7,
+          "verse": 23,
+          "endVerse": 23
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 23: stond Oezzi-ja op, en sprak met tranen in de ogen: Broeders, houdt moed; laat ons nog vijf dagen wachten op Gods ba…"
+    },
+    "catholic|Judith 8:9-10": {
+      "source": {
+        "edition": "catholic",
+        "book": "JDT",
+        "chapter": 8,
+        "verse": 9,
+        "endVerse": 10
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "JDT",
+          "chapter": 8,
+          "verse": 9,
+          "endVerse": 10
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 9: Toen zij dan hoorde, dat Oezzi-ja beloofd had, de stad na vijf dagen te zullen overgeven, liet zij de oudsten Kabri… / 10: En toen dezen bij haar gekomen waren, sprak zij tot hen: Hoe is het mogelijk, dat Oezzi-ja de eis heeft ingewilligd…"
+    },
+    "catholic|Judith 4:5-10": {
+      "source": {
+        "edition": "catholic",
+        "book": "JDT",
+        "chapter": 4,
+        "verse": 5,
+        "endVerse": 10
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "JDT",
+          "chapter": 4,
+          "verse": 5,
+          "endVerse": 11
+        }
+      ],
+      "evidence": "Eljakims bevel over de bergpassen en zijn rondreis. DRA 4:5 is gesplitst in Nederlandse verzen 5–6; DRA 4:10 staat in vers 11. Nederlandse tekstankers: 5: Ook zond de priester Eljakim een schrijven aan alle bewoners van Betoel, dat tegenover Esdrelon ligt, nog vóór de v… / 11: Daarop trok Eljakim, de hogepriester van den Heer, geheel Israël rond en sprak hun toe:",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise."
+      }
+    },
+    "catholic|Judith 12:10-13": {
+      "source": {
+        "edition": "catholic",
+        "book": "JDT",
+        "chapter": 12,
+        "verse": 10,
+        "endVerse": 13
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "JDT",
+          "chapter": 12,
+          "verse": 10,
+          "endVerse": 13
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 10: Maar de vierde dag gaf Holoférnes een maaltijd aan zijn dienaars. En hij beval Vágao, zijn kamerdienaar: Ga naar de… / 13: Judit antwoordde: Hoe zou ik het durven wagen, mij tegen mijn heer te verzetten?"
+    },
+    "catholic|Judith 1:1-6": {
+      "source": {
+        "edition": "catholic",
+        "book": "JDT",
+        "chapter": 1,
+        "verse": 1,
+        "endVerse": 6
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "JDT",
+          "chapter": 1,
+          "verse": 1,
+          "endVerse": 6
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 1: Toen Arpaksad, de koning der Meden, een groot aantal volkeren aan zijn heerschappij had onderworpen, bouwde hij een… / 6: in de grote vlakte, die Ragaoe heet. Hij werd daarbij geholpen door de bevolking aan de Eufraat, de Tiger en de Jád…"
+    },
+    "catholic|Judith 1:5-6": {
+      "source": {
+        "edition": "catholic",
+        "book": "JDT",
+        "chapter": 1,
+        "verse": 5,
+        "endVerse": 6
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "JDT",
+          "chapter": 1,
+          "verse": 5,
+          "endVerse": 6
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 5: Maar in het twaalfde jaar van zijn regering ondernam Nabukodonosor, de koning der Assyriërs, die in de grote stad N… / 6: in de grote vlakte, die Ragaoe heet. Hij werd daarbij geholpen door de bevolking aan de Eufraat, de Tiger en de Jád…"
+    },
+    "catholic|Wisdom 7:1-7": {
+      "source": {
+        "edition": "catholic",
+        "book": "WIS",
+        "chapter": 7,
+        "verse": 1,
+        "endVerse": 7
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "WIS",
+          "chapter": 7,
+          "verse": 1,
+          "endVerse": 7
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 1: Ook ik ben sterfelijk, zoals alle anderen, Een nazaat van den eerste, en die werd uit aarde gemaakt; In de schoot v… / 7: Daarom heb ik gebeden: toen werd mij inzicht gegeven; Ik smeekte: en de geest van wijsheid kwam in mij."
+    },
+    "catholic|Wisdom 9:7-12": {
+      "source": {
+        "edition": "catholic",
+        "book": "WIS",
+        "chapter": 9,
+        "verse": 7,
+        "endVerse": 12
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "WIS",
+          "chapter": 9,
+          "verse": 7,
+          "endVerse": 12
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 7: Toch hebt Gijzelf mij verkoren tot koning van uw volk, Tot vorst van uw zonen en dochters. / 12: Dan zullen mijn werken welbehaaglijk zijn, Zal ik uw volk rechtvaardig besturen, En de troon van mijn vader waardig…"
+    },
+    "catholic|Sirach 50:29-31": {
+      "source": {
+        "edition": "catholic",
+        "book": "SIR",
+        "chapter": 50,
+        "verse": 29,
+        "endVerse": 31
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "SIR",
+          "chapter": 50,
+          "verse": 27,
+          "endVerse": 29
+        }
+      ],
+      "evidence": "De auteursvermelding Jesus, zoon van Sirach, en de afsluitende spreuken voor de lezer staan in Nederlands 27–29. Nederlandse tekstankers: 27: Onderricht, wijsheid en passende spreuken, Van Jesus, den zoon van Elazar, zoon van Sirach: Die uit zijn hart uitle… / 29: Wie ze volbrengt, is tot alles bekwaam; Want de vreze des Heren is zijn richtsnoer.",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie. Sirach volgt in deze editie een kortere tekstvorm; de link opent de overeenkomstige passage, met de volledige Nederlandse grensverzen.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition. This edition follows a shorter form of Sirach; the link opens the corresponding passage and includes its complete Dutch boundary verses.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise. Cette édition suit une forme plus courte du Siracide ; le lien ouvre le passage correspondant, avec les versets néerlandais de début et de fin en entier."
+      }
+    },
+    "catholic|Sirach 50:1-21": {
+      "source": {
+        "edition": "catholic",
+        "book": "SIR",
+        "chapter": 50,
+        "verse": 1,
+        "endVerse": 21
+      },
+      "status": "partial",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "SIR",
+          "chapter": 50,
+          "verse": 1,
+          "endVerse": 19
+        }
+      ],
+      "evidence": "Hogepriester Sjimon, zoon van Onias, en de tempeldienst tot de voltooiing van de offerdienst. De zegen van de priester begint pas in Nederlands 20 (DRA 22). Nederlandse tekstankers: 1: Is Sjimon, de zoon van Onias, de hogepriester! In zijn dagen werd de tempel hersteld, Het heiligdom in die tijd ver… / 19: En al het volk juichte mee, Biddend voor het aanschijn van den Barmhartige. Wanneer hij dan de dienst aan het altaa…",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie. Sirach volgt in deze editie een kortere tekstvorm; de link opent de overeenkomstige passage, met de volledige Nederlandse grensverzen. Gedeeltelijk overeenkomstig: Sjimon en zijn tempeldienst staan in 50:1–19. De afzonderlijke DRA-uitspraak over het vergroten van de ingang en het voorhof (50:5) ontbreekt in deze tekstvorm.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition. This edition follows a shorter form of Sirach; the link opens the corresponding passage and includes its complete Dutch boundary verses. Partial correspondence: Simon and his Temple service are in 50:1–19. The distinct DRA statement about enlarging the entrance and court (50:5) is absent from this text form.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise. Cette édition suit une forme plus courte du Siracide ; le lien ouvre le passage correspondant, avec les versets néerlandais de début et de fin en entier. Correspondance partielle : Simon et son service au Temple se trouvent en 50:1–19. La proposition distincte de la DRA sur l’agrandissement de l’entrée et du parvis (50:5) est absente de cette forme du texte."
+      }
+    },
+    "catholic|Sirach 44:16": {
+      "source": {
+        "edition": "catholic",
+        "book": "SIR",
+        "chapter": 44,
+        "verse": 16,
+        "endVerse": 16
+      },
+      "status": "partial",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "SIR",
+          "chapter": 44,
+          "verse": 16,
+          "endVerse": 16
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 16: Henok verkeerde met Jahweh en werd opgenomen: Een toonbeeld van wijsheid voor alle geslachten.",
+      "note": {
+        "nl": "Sirach volgt in deze editie een kortere tekstvorm; de link opent de overeenkomstige passage, met de volledige Nederlandse grensverzen. Gedeeltelijk overeenkomstig: de Nederlandse tekst noemt Henok een toonbeeld van wijsheid; de afzonderlijke DRA-uitspraak over boetvaardigheid van de volkeren ontbreekt.",
+        "en": "This edition follows a shorter form of Sirach; the link opens the corresponding passage and includes its complete Dutch boundary verses. Partial correspondence: the Dutch text calls Enoch a model of wisdom; the distinct DRA statement about repentance for the nations is absent.",
+        "fr": "Cette édition suit une forme plus courte du Siracide ; le lien ouvre le passage correspondant, avec les versets néerlandais de début et de fin en entier. Correspondance partielle : le texte néerlandais présente Hénoch comme un modèle de sagesse ; la proposition distincte de la DRA sur la pénitence des nations est absente."
+      }
+    },
+    "catholic|Sirach 44:17-19": {
+      "source": {
+        "edition": "catholic",
+        "book": "SIR",
+        "chapter": 44,
+        "verse": 17,
+        "endVerse": 19
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "SIR",
+          "chapter": 44,
+          "verse": 17,
+          "endVerse": 18
+        }
+      ],
+      "evidence": "Noë, het behouden overblijfsel en het verbond tegen een nieuwe algehele zondvloed. DRA 17–18 delen Nederlands vers 17. Nederlandse tekstankers: 17: Noë werd rechtschapen en onberispelijk bevonden; In de tijd der verdelging werd hij een nieuwe stam. Om zijnentwil … / 18: Een eeuwig verbond werd er met hem gesloten, Dat nooit meer alle vlees zou worden verdelgd.",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie. Sirach volgt in deze editie een kortere tekstvorm; de link opent de overeenkomstige passage, met de volledige Nederlandse grensverzen.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition. This edition follows a shorter form of Sirach; the link opens the corresponding passage and includes its complete Dutch boundary verses.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise. Cette édition suit une forme plus courte du Siracide ; le lien ouvre le passage correspondant, avec les versets néerlandais de début et de fin en entier."
+      }
+    },
+    "catholic|Sirach 44:20-23": {
+      "source": {
+        "edition": "catholic",
+        "book": "SIR",
+        "chapter": 44,
+        "verse": 20,
+        "endVerse": 23
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "SIR",
+          "chapter": 44,
+          "verse": 19,
+          "endVerse": 21
+        }
+      ],
+      "evidence": "Abraham, het verbond, de beproeving en de belofte van talrijk nageslacht en land. Nederlandse tekstankers: 19: Abraham werd de vader van vele volken; Er kleefde geen smet op zijn eer. / 21: Daarom beloofde Hij hem onder ede: De volkeren te zegenen in zijn zaad, Hem talrijk te maken als het zand op de aar…",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie. Sirach volgt in deze editie een kortere tekstvorm; de link opent de overeenkomstige passage, met de volledige Nederlandse grensverzen.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition. This edition follows a shorter form of Sirach; the link opens the corresponding passage and includes its complete Dutch boundary verses.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise. Cette édition suit une forme plus courte du Siracide ; le lien ouvre le passage correspondant, avec les versets néerlandais de début et de fin en entier."
+      }
+    },
+    "catholic|Sirach 44:24": {
+      "source": {
+        "edition": "catholic",
+        "book": "SIR",
+        "chapter": 44,
+        "verse": 24,
+        "endVerse": 24
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "SIR",
+          "chapter": 44,
+          "verse": 22,
+          "endVerse": 22
+        }
+      ],
+      "evidence": "Dezelfde belofte aan Isaäk omwille van Abraham. Nederlandse tekstankers: 22: Ook aan Isaäk beloofde Hij hetzelfde, Om wille van Abraham, zijn vader.",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie. Sirach volgt in deze editie een kortere tekstvorm; de link opent de overeenkomstige passage, met de volledige Nederlandse grensverzen.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition. This edition follows a shorter form of Sirach; the link opens the corresponding passage and includes its complete Dutch boundary verses.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise. Cette édition suit une forme plus courte du Siracide ; le lien ouvre le passage correspondant, avec les versets néerlandais de début et de fin en entier."
+      }
+    },
+    "catholic|Sirach 44:25-26": {
+      "source": {
+        "edition": "catholic",
+        "book": "SIR",
+        "chapter": 44,
+        "verse": 25,
+        "endVerse": 26
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "SIR",
+          "chapter": 44,
+          "verse": 23,
+          "endVerse": 23
+        }
+      ],
+      "evidence": "Jakob/Israël ontvangt het verbond, de zegen en het erfdeel voor twaalf stammen; één Nederlands vers. Nederlandse tekstankers: 23: Daarna schonk Hij aan Israël het verbond der vaderen, En de zegen rustte op zijn hoofd. Want hèm stelde Hij in het …",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie. Sirach volgt in deze editie een kortere tekstvorm; de link opent de overeenkomstige passage, met de volledige Nederlandse grensverzen.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition. This edition follows a shorter form of Sirach; the link opens the corresponding passage and includes its complete Dutch boundary verses.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise. Cette édition suit une forme plus courte du Siracide ; le lien ouvre le passage correspondant, avec les versets néerlandais de début et de fin en entier."
+      }
+    },
+    "catholic|Sirach 45:1-6": {
+      "source": {
+        "edition": "catholic",
+        "book": "SIR",
+        "chapter": 45,
+        "verse": 1,
+        "endVerse": 6
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "SIR",
+          "chapter": 45,
+          "verse": 1,
+          "endVerse": 5
+        }
+      ],
+      "evidence": "Moses, Gods stem in de wolk en de wet voor Jakob en Israël. DRA 5–6 delen Nederlands vers 5. Nederlandse tekstankers: 1: Uit hem liet Hij een man ontspruiten, Die genade vond in aller oog, Bemind bij God en bij de mensen: Moses, zijn ge… / 5: Hij liet hem zijn eigen stem vernemen, Toen Hij hem binnenvoerde in de wolk; Hij legde de geboden in zijn hand, De …",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie. Sirach volgt in deze editie een kortere tekstvorm; de link opent de overeenkomstige passage, met de volledige Nederlandse grensverzen.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition. This edition follows a shorter form of Sirach; the link opens the corresponding passage and includes its complete Dutch boundary verses.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise. Cette édition suit une forme plus courte du Siracide ; le lien ouvre le passage correspondant, avec les versets néerlandais de début et de fin en entier."
+      }
+    },
+    "catholic|Sirach 45:7-22": {
+      "source": {
+        "edition": "catholic",
+        "book": "SIR",
+        "chapter": 45,
+        "verse": 7,
+        "endVerse": 22
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "SIR",
+          "chapter": 45,
+          "verse": 6,
+          "endVerse": 18
+        }
+      ],
+      "evidence": "Aärons priesterschap, gewaden, zalving, onderricht en de opstand van Datan, Abiram en Kore. Nederlandse tekstankers: 6: Hij verhief Aäron, even heilig als hij, Zijn broeder uit de stam van Levi. / 18: Onbevoegden stonden tegen hem op Uit afgunst in de woestijn: De mannen van Datan en Abiram, En de bent van Kore in …",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie. Sirach volgt in deze editie een kortere tekstvorm; de link opent de overeenkomstige passage, met de volledige Nederlandse grensverzen.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition. This edition follows a shorter form of Sirach; the link opens the corresponding passage and includes its complete Dutch boundary verses.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise. Cette édition suit une forme plus courte du Siracide ; le lien ouvre le passage correspondant, avec les versets néerlandais de début et de fin en entier."
+      }
+    },
+    "catholic|Sirach 45:28-30": {
+      "source": {
+        "edition": "catholic",
+        "book": "SIR",
+        "chapter": 45,
+        "verse": 28,
+        "endVerse": 30
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "SIR",
+          "chapter": 45,
+          "verse": 23,
+          "endVerse": 24
+        }
+      ],
+      "evidence": "Pinechas, zoon van Elazar, zijn ijver, verzoening en het verbond van een blijvend priesterschap. Nederlandse tekstankers: 23: Vervolgens Pinechas, de zoon van Elazar: Hij was de derde, die dit ambt bekleedde, Omdat hij voor den God van het h… / 24: Daarom sloot Hij ook met hem een verbond, Een verbond van vrede, om het heiligdom te verzorgen, Zodat bij hem en bi…",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie. Sirach volgt in deze editie een kortere tekstvorm; de link opent de overeenkomstige passage, met de volledige Nederlandse grensverzen.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition. This edition follows a shorter form of Sirach; the link opens the corresponding passage and includes its complete Dutch boundary verses.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise. Cette édition suit une forme plus courte du Siracide ; le lien ouvre le passage correspondant, avec les versets néerlandais de début et de fin en entier."
+      }
+    },
+    "catholic|Sirach 46:16-23": {
+      "source": {
+        "edition": "catholic",
+        "book": "SIR",
+        "chapter": 46,
+        "verse": 16,
+        "endVerse": 23
+      },
+      "status": "partial",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "SIR",
+          "chapter": 46,
+          "verse": 13,
+          "endVerse": 20
+        }
+      ],
+      "evidence": "Samuël stelt koningen aan, bidt, getuigt over zijn onkreukbaarheid en spreekt na zijn dood tot de koning. Nederlandse tekstankers: 13: Geëerd bij zijn volk, door zijn Schepper bemind, Was hij, wiens geboorte werd afgebeden: Aan Jahweh gewijd in het p… / 20: Zelfs na zijn dood werd hij nog ondervraagd En voorspelde den koning zijn lot; Hij verhief uit de aarde zijn profet…",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie. Sirach volgt in deze editie een kortere tekstvorm; de link opent de overeenkomstige passage, met de volledige Nederlandse grensverzen. Gedeeltelijk overeenkomstig: Samuëls levensbeschrijving is aanwezig, maar de afzonderlijke DRA-uitspraak dat hij de God van het licht zag (46:18) ontbreekt.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition. This edition follows a shorter form of Sirach; the link opens the corresponding passage and includes its complete Dutch boundary verses. Partial correspondence: Samuel’s life is described, but the distinct DRA statement that he saw the God of light (46:18) is absent.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise. Cette édition suit une forme plus courte du Siracide ; le lien ouvre le passage correspondant, avec les versets néerlandais de début et de fin en entier. Correspondance partielle : la vie de Samuel est décrite, mais la proposition distincte de la DRA selon laquelle il vit le Dieu de lumière (46:18) est absente."
+      }
+    },
+    "catholic|Sirach 47:1": {
+      "source": {
+        "edition": "catholic",
+        "book": "SIR",
+        "chapter": 47,
+        "verse": 1,
+        "endVerse": 1
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "SIR",
+          "chapter": 47,
+          "verse": 1,
+          "endVerse": 1
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 1: Na hem trad Natan op, En stond voor het aanschijn van David.",
+      "note": {
+        "nl": "Sirach volgt in deze editie een kortere tekstvorm; de link opent de overeenkomstige passage, met de volledige Nederlandse grensverzen.",
+        "en": "This edition follows a shorter form of Sirach; the link opens the corresponding passage and includes its complete Dutch boundary verses.",
+        "fr": "Cette édition suit une forme plus courte du Siracide ; le lien ouvre le passage correspondant, avec les versets néerlandais de début et de fin en entier."
+      }
+    },
+    "catholic|Sirach 47:2-14": {
+      "source": {
+        "edition": "catholic",
+        "book": "SIR",
+        "chapter": 47,
+        "verse": 2,
+        "endVerse": 14
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "SIR",
+          "chapter": 47,
+          "verse": 2,
+          "endVerse": 12
+        }
+      ],
+      "evidence": "Davids daden, eredienst, vergeving en koningschap; de passage eindigt met zijn wijze zoon en opvolger. Nederlandse tekstankers: 2: Ja, zoals het vet wordt afgezonderd van het offer, Zo David van Israël. / 12: Om zijnentwil stond een zoon na hem op, Een wijs man, die ongestoord woonde.",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie. Sirach volgt in deze editie een kortere tekstvorm; de link opent de overeenkomstige passage, met de volledige Nederlandse grensverzen.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition. This edition follows a shorter form of Sirach; the link opens the corresponding passage and includes its complete Dutch boundary verses.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise. Cette édition suit une forme plus courte du Siracide ; le lien ouvre le passage correspondant, avec les versets néerlandais de début et de fin en entier."
+      }
+    },
+    "catholic|Sirach 47:15-26": {
+      "source": {
+        "edition": "catholic",
+        "book": "SIR",
+        "chapter": 47,
+        "verse": 15,
+        "endVerse": 26
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "SIR",
+          "chapter": 47,
+          "verse": 13,
+          "endVerse": 23
+        }
+      ],
+      "evidence": "Salomons vrederijk, wijsheid, misstappen en dood. Nederlands vers 23 bevat zijn dood én de volgende zin over Roboam. Nederlandse tekstankers: 13: Salomon was koning in dagen van vrede; Want God schonk hem rust in het rond, Opdat hij zijn Naam een huis zou bouwe… / 23: Salomon ontsliep hoogbejaard, En liet een zoon na, vol overmoed, Groot in dwaasheid en klein van verstand, Roboam, …",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie. Sirach volgt in deze editie een kortere tekstvorm; de link opent de overeenkomstige passage, met de volledige Nederlandse grensverzen.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition. This edition follows a shorter form of Sirach; the link opens the corresponding passage and includes its complete Dutch boundary verses.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise. Cette édition suit une forme plus courte du Siracide ; le lien ouvre le passage correspondant, avec les versets néerlandais de début et de fin en entier."
+      }
+    },
+    "catholic|Sirach 48:1-12": {
+      "source": {
+        "edition": "catholic",
+        "book": "SIR",
+        "chapter": 48,
+        "verse": 1,
+        "endVerse": 12
+      },
+      "status": "partial",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "SIR",
+          "chapter": 48,
+          "verse": 1,
+          "endVerse": 11
+        }
+      ],
+      "evidence": "De lof van Elias tot het slot over hen die hem zagen en zullen leven. De Nederlandse tekst heeft een kortere, afwijkende slotzin in 11; Nederlands 12 begint al over Eliseus. Nederlandse tekstankers: 1: Toen stond Elias op, een profeet als vuur, Met woorden als een gloeiende oven. / 11: Gelukkig wie u zag, voordat hij stierf; Maar gelukkiger nog, wie dan leeft!",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie. Sirach volgt in deze editie een kortere tekstvorm; de link opent de overeenkomstige passage, met de volledige Nederlandse grensverzen. Gedeeltelijk overeenkomstig: de lof van Elias staat in 48:1–11. De afzonderlijke DRA-slotzin over ons leven en onze naam na de dood (48:12) ontbreekt; de Nederlandse slotzin in 48:11 wijkt af.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition. This edition follows a shorter form of Sirach; the link opens the corresponding passage and includes its complete Dutch boundary verses. Partial correspondence: the praise of Elijah is in 48:1–11. The separate DRA closing statement about our life and name after death (48:12) is absent; the Dutch ending in 48:11 differs.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise. Cette édition suit une forme plus courte du Siracide ; le lien ouvre le passage correspondant, avec les versets néerlandais de début et de fin en entier. Correspondance partielle : l’éloge d’Élie se trouve en 48:1–11. La conclusion distincte de la DRA sur notre vie et notre nom après la mort (48:12) est absente ; la fin néerlandaise de 48:11 diffère."
+      }
+    },
+    "catholic|Sirach 48:13-16": {
+      "source": {
+        "edition": "catholic",
+        "book": "SIR",
+        "chapter": 48,
+        "verse": 13,
+        "endVerse": 16
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "SIR",
+          "chapter": 48,
+          "verse": 12,
+          "endVerse": 15
+        }
+      ],
+      "evidence": "Eliseus ontvangt Elias geest, verricht wonderen en profeteert na zijn dood; het volk blijft onbekeerd en wordt verstrooid. Nederlandse tekstankers: 12: Toen Elias opvoer in de orkaan, Werd Eliseus van zijn geest vervuld. Hij verrichtte nog eens zoveel tekenen; Wonder… / 15: Maar het volk bekeerde zich niet; Zij lieten niet af van hun zonden, Daarom werden zij tenslotte uit hun land verdr…",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie. Sirach volgt in deze editie een kortere tekstvorm; de link opent de overeenkomstige passage, met de volledige Nederlandse grensverzen.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition. This edition follows a shorter form of Sirach; the link opens the corresponding passage and includes its complete Dutch boundary verses.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise. Cette édition suit une forme plus courte du Siracide ; le lien ouvre le passage correspondant, avec les versets néerlandais de début et de fin en entier."
+      }
+    },
+    "catholic|Sirach 48:19-23": {
+      "source": {
+        "edition": "catholic",
+        "book": "SIR",
+        "chapter": 48,
+        "verse": 19,
+        "endVerse": 23
+      },
+      "status": "partial",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "SIR",
+          "chapter": 48,
+          "verse": 17,
+          "endVerse": 20
+        }
+      ],
+      "evidence": "Ezekias versterkt de stad en leidt water binnen; Sinacherib dreigt en God hoort het gebed en redt door Isaias. Nederlandse tekstankers: 17: Ezekias versterkte zijn stad, Door er water binnen te leiden; Hij doorboorde de rotsen met ijzer, En versperde de b… / 20: Maar ze riepen tot den allerhoogsten God, En strekten hun hand naar Hem uit. En Hij gaf gehoor aan hun gebed, En re…",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie. Sirach volgt in deze editie een kortere tekstvorm; de link opent de overeenkomstige passage, met de volledige Nederlandse grensverzen. Gedeeltelijk overeenkomstig: de redding door Isaias staat in 48:20. De afzonderlijke DRA-uitspraak dat God hun zonden niet indachtig was (48:23) ontbreekt.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition. This edition follows a shorter form of Sirach; the link opens the corresponding passage and includes its complete Dutch boundary verses. Partial correspondence: deliverance through Isaiah is in 48:20. The distinct DRA statement that God was not mindful of their sins (48:23) is absent.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise. Cette édition suit une forme plus courte du Siracide ; le lien ouvre le passage correspondant, avec les versets néerlandais de début et de fin en entier. Correspondance partielle : le salut par Isaïe se trouve en 48:20. La proposition distincte de la DRA selon laquelle Dieu ne se souvint pas de leurs péchés (48:23) est absente."
+      }
+    },
+    "catholic|Sirach 48:23-28": {
+      "source": {
+        "edition": "catholic",
+        "book": "SIR",
+        "chapter": 48,
+        "verse": 23,
+        "endVerse": 28
+      },
+      "status": "partial",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "SIR",
+          "chapter": 48,
+          "verse": 20,
+          "endVerse": 25
+        }
+      ],
+      "evidence": "Redding door Isaias, de Assyrische nederlaag, Ezekias, de teruggaande zon en Isaias toekomstvisioenen. Nederlands 20 bevat ook het voorafgaande gebed. Nederlandse tekstankers: 20: Maar ze riepen tot den allerhoogsten God, En strekten hun hand naar Hem uit. En Hij gaf gehoor aan hun gebed, En re… / 25: Tot in verre tijden voorspelde hij de toekomst En wat verborgen was, voordat het geschiedde.",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie. Sirach volgt in deze editie een kortere tekstvorm; de link opent de overeenkomstige passage, met de volledige Nederlandse grensverzen. Gedeeltelijk overeenkomstig: de redding door Isaias en zijn visioenen staan in 48:20–25. De afzonderlijke DRA-uitspraak dat God hun zonden niet indachtig was (48:23) ontbreekt.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition. This edition follows a shorter form of Sirach; the link opens the corresponding passage and includes its complete Dutch boundary verses. Partial correspondence: deliverance through Isaiah and his visions are in 48:20–25. The distinct DRA statement that God was not mindful of their sins (48:23) is absent.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise. Cette édition suit une forme plus courte du Siracide ; le lien ouvre le passage correspondant, avec les versets néerlandais de début et de fin en entier. Correspondance partielle : le salut par Isaïe et ses visions se trouvent en 48:20–25. La proposition distincte de la DRA selon laquelle Dieu ne se souvint pas de leurs péchés (48:23) est absente."
+      }
+    },
+    "catholic|Sirach 49:1-5": {
+      "source": {
+        "edition": "catholic",
+        "book": "SIR",
+        "chapter": 49,
+        "verse": 1,
+        "endVerse": 5
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "SIR",
+          "chapter": 49,
+          "verse": 1,
+          "endVerse": 4
+        }
+      ],
+      "evidence": "Josias herinnering, zijn hervorming en David, Ezekias en Josias als uitzonderingen. Nederlands 4 bevat ook de toelichting over Juda’s koningen. Nederlandse tekstankers: 1: Josias' naam is als geurige wierook, Met zout gemengd, het werk van den balsembereider; Zijn gedachtenis is zoet al… / 4: Behalve David, Ezekias en Josias, Hebben zij allen gezondigd; Want zij verlieten de Wet van den Allerhoogste, De ko…",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie. Sirach volgt in deze editie een kortere tekstvorm; de link opent de overeenkomstige passage, met de volledige Nederlandse grensverzen.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition. This edition follows a shorter form of Sirach; the link opens the corresponding passage and includes its complete Dutch boundary verses.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise. Cette édition suit une forme plus courte du Siracide ; le lien ouvre le passage correspondant, avec les versets néerlandais de début et de fin en entier."
+      }
+    },
+    "catholic|Sirach 49:8-9": {
+      "source": {
+        "edition": "catholic",
+        "book": "SIR",
+        "chapter": 49,
+        "verse": 8,
+        "endVerse": 9
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "SIR",
+          "chapter": 49,
+          "verse": 6,
+          "endVerse": 7
+        }
+      ],
+      "evidence": "De verbranding van de heilige stad en Jeremias, die reeds vanaf de moederschoot tot profeet was bestemd. Nederlandse tekstankers: 6: Dat de heilige stad in brand stak, En haar straten verlaten liet liggen. / 7: Het was om Jeremias, dien ze hadden mishandeld, Ofschoon hij van de moederschoot af tot profeet was bestemd, Om nee…",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie. Sirach volgt in deze editie een kortere tekstvorm; de link opent de overeenkomstige passage, met de volledige Nederlandse grensverzen.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition. This edition follows a shorter form of Sirach; the link opens the corresponding passage and includes its complete Dutch boundary verses.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise. Cette édition suit une forme plus courte du Siracide ; le lien ouvre le passage correspondant, avec les versets néerlandais de début et de fin en entier."
+      }
+    },
+    "catholic|2 Maccabees 15:12-16": {
+      "source": {
+        "edition": "catholic",
+        "book": "2MA",
+        "chapter": 15,
+        "verse": 12,
+        "endVerse": 16
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "2MA",
+          "chapter": 15,
+          "verse": 12,
+          "endVerse": 16
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 12: Dit was het droomgezicht, dat hij had: Hij zag Onias, den vroegeren hogepriester, die een goed en edel mens was gew… / 16: Ontvang dit heilige zwaard als een geschenk van God. Hiermee zult ge uw vijand verslaan!"
+    },
+    "catholic|Sirach 49:13": {
+      "source": {
+        "edition": "catholic",
+        "book": "SIR",
+        "chapter": 49,
+        "verse": 13,
+        "endVerse": 13
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "SIR",
+          "chapter": 49,
+          "verse": 11,
+          "endVerse": 11
+        }
+      ],
+      "evidence": "Zorobabel als zegelring aan de rechterhand. Nederlandse tekstankers: 11: Hoe zullen we Zorobabel prijzen! Hij toch was als een zegelring aan de rechterhand.",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie. Sirach volgt in deze editie een kortere tekstvorm; de link opent de overeenkomstige passage, met de volledige Nederlandse grensverzen.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition. This edition follows a shorter form of Sirach; the link opens the corresponding passage and includes its complete Dutch boundary verses.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise. Cette édition suit une forme plus courte du Siracide ; le lien ouvre le passage correspondant, avec les versets néerlandais de début et de fin en entier."
+      }
+    },
+    "catholic|Sirach 49:14": {
+      "source": {
+        "edition": "catholic",
+        "book": "SIR",
+        "chapter": 49,
+        "verse": 14,
+        "endVerse": 14
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "SIR",
+          "chapter": 49,
+          "verse": 12,
+          "endVerse": 12
+        }
+      ],
+      "evidence": "Jehosjoea/Jesus, zoon van Josadak, en het herbouwen van de tempel. Nederlandse tekstankers: 12: Hoe ook, Jehosjóea, den zoon van Josadak? Want zij herbouwden in hun dagen de tempel, En richtten het heiligdom wee…",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie. Sirach volgt in deze editie een kortere tekstvorm; de link opent de overeenkomstige passage, met de volledige Nederlandse grensverzen.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition. This edition follows a shorter form of Sirach; the link opens the corresponding passage and includes its complete Dutch boundary verses.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise. Cette édition suit une forme plus courte du Siracide ; le lien ouvre le passage correspondant, avec les versets néerlandais de début et de fin en entier."
+      }
+    },
+    "catholic|Sirach 49:15": {
+      "source": {
+        "edition": "catholic",
+        "book": "SIR",
+        "chapter": 49,
+        "verse": 15,
+        "endVerse": 15
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "SIR",
+          "chapter": 49,
+          "verse": 13,
+          "endVerse": 13
+        }
+      ],
+      "evidence": "Nehemias herstelt de ruïnen, poorten en grendels. Nederlandse tekstankers: 13: Nehemias: zijn gedachtenis blijve in ere! Want hij heeft onze ruïnen hersteld; Hij richtte onze puinhopen weer op, …",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie. Sirach volgt in deze editie een kortere tekstvorm; de link opent de overeenkomstige passage, met de volledige Nederlandse grensverzen.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition. This edition follows a shorter form of Sirach; the link opens the corresponding passage and includes its complete Dutch boundary verses.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise. Cette édition suit une forme plus courte du Siracide ; le lien ouvre le passage correspondant, avec les versets néerlandais de début et de fin en entier."
+      }
+    },
+    "catholic|Baruch 1:1-5": {
+      "source": {
+        "edition": "catholic",
+        "book": "BAR",
+        "chapter": 1,
+        "verse": 1,
+        "endVerse": 5
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "BAR",
+          "chapter": 1,
+          "verse": 1,
+          "endVerse": 5
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 1: Dit is de inhoud van het boek, dat Baruk, de zoon van Neri-ja, zoon van Machseja, zoon van Sedekias, zoon van Chasa… / 5: weenden zij, en vastten en baden tot den Heer."
+    },
+    "catholic|Baruch 1:3-5": {
+      "source": {
+        "edition": "catholic",
+        "book": "BAR",
+        "chapter": 1,
+        "verse": 3,
+        "endVerse": 5
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "BAR",
+          "chapter": 1,
+          "verse": 3,
+          "endVerse": 5
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 3: Toen Baruk de inhoud van dit boek had voorgelezen ten aanhoren van Jekonias, den zoon van Jojakim en koning van Jud… / 5: weenden zij, en vastten en baden tot den Heer."
+    },
+    "catholic|Baruch 1:6-7": {
+      "source": {
+        "edition": "catholic",
+        "book": "BAR",
+        "chapter": 1,
+        "verse": 6,
+        "endVerse": 7
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "BAR",
+          "chapter": 1,
+          "verse": 6,
+          "endVerse": 7
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 6: Zij zamelden geld in, zoveel ieder kon missen, / 7: en zonden het naar Jerusalem aan den priester Jojakim, den zoon van Chilki-ja, zoon van Salom, en aan de andere pri…"
+    },
+    "catholic|Baruch 1:9-12": {
+      "source": {
+        "edition": "catholic",
+        "book": "BAR",
+        "chapter": 1,
+        "verse": 9,
+        "endVerse": 12
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "BAR",
+          "chapter": 1,
+          "verse": 9,
+          "endVerse": 12
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 9: nadat Nabukodonosor, de koning van Babel, Jekonias met de aanvoerders, bankwerkers, edelen en het gewone volk uit J… / 12: en opdat de Heer ons kracht moge schenken en onze ogen verlichten, om in de schaduw van Nabukodonosor, den koning v…"
+    },
+    "catholic|Baruch 6:1-2": {
+      "source": {
+        "edition": "catholic",
+        "book": "BAR",
+        "chapter": 6,
+        "verse": 1,
+        "endVerse": 2
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "BAR",
+          "chapter": 6,
+          "verse": 2,
+          "endVerse": 3
+        }
+      ],
+      "evidence": "Nabukodonosors ballingschap en de terugkeer na zeven geslachten. De Nederlandse briefaanhef telt mee als vers 1. Nederlandse tekstankers: 2: Om de zonden, die gij tegen God hebt bedreven, wordt gij door Nabukodonosor, den koning der Babyloniërs, in balling… / 3: En wanneer ge in Babel zijt aangekomen, zult ge daar vele jaren en lange tijd verblijven, gedurende zeven geslachte…",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise."
+      }
+    },
+    "catholic|Esther 14:1-19": {
+      "source": {
+        "edition": "catholic",
+        "book": "EST",
+        "chapter": 14,
+        "verse": 1,
+        "endVerse": 19
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "EST",
+          "chapter": 14,
+          "verse": 1,
+          "endVerse": 19
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 1: Ook koningin Ester nam in haar dodelijke angst haar toevlucht tot den Heer. / 19: God. Gij die sterker zijt dan allen, verhoor onze vertwijfelde bede, red ons uit de hand van de zondaars en verlos …"
+    },
+    "catholic|Esther 15:1-19": {
+      "source": {
+        "edition": "catholic",
+        "book": "EST",
+        "chapter": 15,
+        "verse": 1,
+        "endVerse": 19
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "EST",
+          "chapter": 15,
+          "verse": 1,
+          "endVerse": 19
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 1: En hij (ongetwijfeld Mardocheüs) beval haar tot den koning te gaan en te bidden voor haar volk en voor haar land. / 19: Nu schrok de koning nog meer, en heel zijn hofhouding trachtte haar bij te brengen."
+    },
+    "catholic|Esther 10:4-13": {
+      "source": {
+        "edition": "catholic",
+        "book": "EST",
+        "chapter": 10,
+        "verse": 4,
+        "endVerse": 13
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "EST",
+          "chapter": 10,
+          "verse": 4,
+          "endVerse": 13
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 4: Nu sprak Mordokai: Dit is het werk van God geweest! / 13: Daarom zullen de veertiende en de vijftiende dag van de maand Adar feestdagen voor hen zijn; onder Israël, het volk…"
+    },
+    "catholic|Esther 13:8-18": {
+      "source": {
+        "edition": "catholic",
+        "book": "EST",
+        "chapter": 13,
+        "verse": 8,
+        "endVerse": 18
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "EST",
+          "chapter": 13,
+          "verse": 8,
+          "endVerse": 18
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 8: En al de wonderwerken des Heren indachtig, bad Mordokai aldus: / 18: En heel Israël jammerde uit alle macht; want het had de dood voor ogen."
+    },
+    "catholic|Esther 12:6": {
+      "source": {
+        "edition": "catholic",
+        "book": "EST",
+        "chapter": 12,
+        "verse": 6,
+        "endVerse": 6
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "EST",
+          "chapter": 12,
+          "verse": 6,
+          "endVerse": 6
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 6: Maar de Agagiet Haman, de zoon van Hammedata, die bij den koning in hoog aanzien stond, zocht naar een gelegenheid,…"
+    },
+    "catholic|Esther 16:10-14": {
+      "source": {
+        "edition": "catholic",
+        "book": "EST",
+        "chapter": 16,
+        "verse": 10,
+        "endVerse": 14
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "EST",
+          "chapter": 16,
+          "verse": 10,
+          "endVerse": 14
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 10: En opdat gij duidelijker begrijpt wat wij zeggen: Aman, de zoon van Amadathi, van inborst en afkomst een Macedoniër… / 14: met dit plan om, na hen gedood te hebben, ons in onze hulpeloosheid te belagen en de heerschappij der Perzen op de …"
+    },
+    "catholic|Esther 11:1": {
+      "source": {
+        "edition": "catholic",
+        "book": "EST",
+        "chapter": 11,
+        "verse": 1,
+        "endVerse": 1
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "EST",
+          "chapter": 11,
+          "verse": 1,
+          "endVerse": 1
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 1: In het vierde jaar van de regering van Ptoleméus en Kléopatra brachten Dositéus, die zeide, dat hij priester en lev…"
+    },
+    "catholic|Daniel 3:24-45": {
+      "source": {
+        "edition": "catholic",
+        "book": "DAN",
+        "chapter": 3,
+        "verse": 24,
+        "endVerse": 45
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "DAN",
+          "chapter": 3,
+          "verse": 24,
+          "endVerse": 45
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 24: liepen ze vrij rond midden in de vlammen; ze loofden God, en zegenden den Heer. / 45: Opdat ze erkennen, dat Gij alleen zijt: God de Heer, Verheerlijkt over heel de aarde!"
+    },
+    "catholic|Daniel 3:88": {
+      "source": {
+        "edition": "catholic",
+        "book": "DAN",
+        "chapter": 3,
+        "verse": 88,
+        "endVerse": 88
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "DAN",
+          "chapter": 3,
+          "verse": 88,
+          "endVerse": 88
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 88: Looft den Heer, Chananja, Azarja en Misjaël; Prijst en verheft Hem voor eeuwig! Want Hij heeft ons ontrukt aan het …"
+    },
+    "catholic|Daniel 3:88-90": {
+      "source": {
+        "edition": "catholic",
+        "book": "DAN",
+        "chapter": 3,
+        "verse": 88,
+        "endVerse": 90
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "DAN",
+          "chapter": 3,
+          "verse": 88,
+          "endVerse": 90
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 88: Looft den Heer, Chananja, Azarja en Misjaël; Prijst en verheft Hem voor eeuwig! Want Hij heeft ons ontrukt aan het … / 90: Looft den Heer, den God der goden, gij allen, zijn vromen, Prijst en verheft Hem, want Hij is barmhartig voor eeuwi…"
+    },
+    "catholic|Daniel 13:1-4": {
+      "source": {
+        "edition": "catholic",
+        "book": "DAN",
+        "chapter": 13,
+        "verse": 1,
+        "endVerse": 4
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "DAN",
+          "chapter": 13,
+          "verse": 1,
+          "endVerse": 4
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 1: Er woonde toen in Babel een man, die Joakim heette. / 4: Joakim was zeer rijk. Zo bezat hij ook een tuin, die aan zijn huis grensde; en omdat hij de aanzienlijkste van alle…"
+    },
+    "catholic|Daniel 13:22-23": {
+      "source": {
+        "edition": "catholic",
+        "book": "DAN",
+        "chapter": 13,
+        "verse": 22,
+        "endVerse": 23
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "DAN",
+          "chapter": 13,
+          "verse": 22,
+          "endVerse": 23
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 22: Susanna zuchtte en sprak: Het is me van alle kanten benauwd; want doe ik het, dan wacht me de dood; doe ik het niet… / 23: Maar toch is het veel beter, het niet te doen, en in úw handen te vallen, dan te zondigen voor het aanschijn des He…"
+    },
+    "catholic|Daniel 13:42-63": {
+      "source": {
+        "edition": "catholic",
+        "book": "DAN",
+        "chapter": 13,
+        "verse": 42,
+        "endVerse": 63
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "DAN",
+          "chapter": 13,
+          "verse": 42,
+          "endVerse": 63
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 42: Toen brak Susanna in luide weeklachten uit, en sprak: Eeuwige God, die het verborgene kent; die alles weet, zelfs e… / 63: Helkias en zijn vrouw loofden God om hun dochter Susanna; en Joakim, haar man, en al haar verwanten, sloten zich bi…"
+    },
+    "catholic|Daniel 13:63": {
+      "source": {
+        "edition": "catholic",
+        "book": "DAN",
+        "chapter": 13,
+        "verse": 63,
+        "endVerse": 63
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "DAN",
+          "chapter": 13,
+          "verse": 63,
+          "endVerse": 63
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 63: Helkias en zijn vrouw loofden God om hun dochter Susanna; en Joakim, haar man, en al haar verwanten, sloten zich bi…"
+    },
+    "catholic|Daniel 13:2-3": {
+      "source": {
+        "edition": "catholic",
+        "book": "DAN",
+        "chapter": 13,
+        "verse": 2,
+        "endVerse": 3
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "DAN",
+          "chapter": 13,
+          "verse": 2,
+          "endVerse": 3
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 2: Hij had zich een vrouw genomen, Susanna genaamd, de dochter van Helkias. Ze was buitengewoon schoon en godvrezend; / 3: want daar ook haar ouders godvruchtige mensen waren, hadden ze hun dochter naar de wet van Moses opgevoed."
+    },
+    "catholic|Daniel 13:45-62": {
+      "source": {
+        "edition": "catholic",
+        "book": "DAN",
+        "chapter": 13,
+        "verse": 45,
+        "endVerse": 62
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "DAN",
+          "chapter": 13,
+          "verse": 45,
+          "endVerse": 62
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 45: Want toen ze ter dood werd geleid, wekte de Heer de heilige geest in een jongeman, Daniël genaamd. / 62: en overeenkomstig de wet van Moses werden ze ter dood gebracht. Zo werd die dag onschuldig bloed van de ondergang g…"
+    },
+    "catholic|Daniel 14:1-27": {
+      "source": {
+        "edition": "catholic",
+        "book": "DAN",
+        "chapter": 14,
+        "verse": 1,
+        "endVerse": 27
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "DAN",
+          "chapter": 14,
+          "verse": 1,
+          "endVerse": 27
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 1: Zo werd Daniël tafelvriend van den koning, en was boven al zijn gezellen geëerd. / 27: Toen de Babyloniërs hiervan hoorden, werden ze woedend; ze schoolden tegen den koning samen, en zeiden: De koning i…"
+    },
+    "catholic|Daniel 14:32-38": {
+      "source": {
+        "edition": "catholic",
+        "book": "DAN",
+        "chapter": 14,
+        "verse": 32,
+        "endVerse": 38
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "DAN",
+          "chapter": 14,
+          "verse": 32,
+          "endVerse": 38
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 32: Toen leefde er in Juda een profeet, Habakuk genaamd. Deze had een moes gekookt, en daarbij brood in een schotel geb… / 38: Toen stond Daniël op, en at. En Gods engel bracht Habakuk in een enkel ogenblik terug op zijn plaats."
+    },
+    "catholic|Daniel 13:65": {
+      "source": {
+        "edition": "catholic",
+        "book": "DAN",
+        "chapter": 13,
+        "verse": 65,
+        "endVerse": 65
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "DAN",
+          "chapter": 13,
+          "verse": 65,
+          "endVerse": 65
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 65: Toen koning Astyages tot zijn vaderen was verzameld, en Cyrus, de Pers, zijn koninkrijk had overgenomen."
+    },
+    "catholic|Daniel 14:1-6": {
+      "source": {
+        "edition": "catholic",
+        "book": "DAN",
+        "chapter": 14,
+        "verse": 1,
+        "endVerse": 6
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "DAN",
+          "chapter": 14,
+          "verse": 1,
+          "endVerse": 6
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 1: Zo werd Daniël tafelvriend van den koning, en was boven al zijn gezellen geëerd. / 6: Daniël sprak lachend: Laat u toch niet bedriegen, o koning: dat ding is van binnen van leem, van buiten van koper, …"
+    },
+    "catholic|Daniel 14:23-27": {
+      "source": {
+        "edition": "catholic",
+        "book": "DAN",
+        "chapter": 14,
+        "verse": 23,
+        "endVerse": 27
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "DAN",
+          "chapter": 14,
+          "verse": 23,
+          "endVerse": 27
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 23: En de koning zei tot Daniël: Van hem kunt ge toch zeker niet zeggen, dat hij geen levende god is; / 27: Toen de Babyloniërs hiervan hoorden, werden ze woedend; ze schoolden tegen den koning samen, en zeiden: De koning i…"
+    },
+    "catholic|1 Maccabees 2:1-7": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 2,
+        "verse": 1,
+        "endVerse": 7
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 2,
+          "verse": 1,
+          "endVerse": 7
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 1: In die dagen trad Mattatias op, een zoon van Johannes en kleinzoon van Sjimon. Hij was priester uit het geslacht va… / 7: sprak hij: Wee mij! Waartoe werd ik geboren, Nu ik de ondergang van mijn volk aanschouw, de ruïne der heilige stad;…"
+    },
+    "catholic|1 Maccabees 2:19-28": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 2,
+        "verse": 19,
+        "endVerse": 28
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 2,
+          "verse": 19,
+          "endVerse": 28
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 19: Maar Mattatias antwoordde met luider stem: Al gehoorzamen hem alle volken in het rijksgebied van den koning, al val… / 28: Daarop vluchtte hij met zijn zonen naar het gebergte, en ze lieten have en goed in de stad."
+    },
+    "catholic|1 Maccabees 2:2": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 2,
+        "verse": 2,
+        "endVerse": 2
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 2,
+          "verse": 2,
+          "endVerse": 2
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 2: Hij had vijf zonen: Johannes met de bijnaam Gaddi,"
+    },
+    "catholic|1 Maccabees 2:3": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 2,
+        "verse": 3,
+        "endVerse": 3
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 2,
+          "verse": 3,
+          "endVerse": 3
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 3: Sjimon met de bijnaam Tassi,"
+    },
+    "catholic|1 Maccabees 14:35-43": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 14,
+        "verse": 35,
+        "endVerse": 43
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 14,
+          "verse": 35,
+          "endVerse": 43
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 35: Toen het volk zag, hoe trouw Sjimon volhield, en hoe hij er naar streefde, het volk in aanzien te brengen, stelde m… / 43: Hij zal ook de zorg voor het heiligdom hebben. Men zal hem in alles moeten gehoorzamen, en alle contracten in het l…"
+    },
+    "catholic|1 Maccabees 16:11-16": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 16,
+        "verse": 11,
+        "endVerse": 16
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 16,
+          "verse": 11,
+          "endVerse": 16
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 11: Intussen was Ptoleméus, de zoon van Aboébus, tot bevelhebber over de vlakte van Jericho aangesteld. Hij bezat veel … / 16: Toen Sjimon en zijn zonen dan ook dronken waren, kwamen Ptoleméus en zijn mannen te voorschijn, grepen hun wapens, …"
+    },
+    "catholic|1 Maccabees 2:4": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 2,
+        "verse": 4,
+        "endVerse": 4
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 2,
+          "verse": 4,
+          "endVerse": 4
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 4: Judas die Makkabeër genoemd werd,"
+    },
+    "catholic|1 Maccabees 3:1-9": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 3,
+        "verse": 1,
+        "endVerse": 9
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 3,
+          "verse": 1,
+          "endVerse": 9
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 1: Zijn zoon Judas, de Makkabeër genaamd, volgde hem op. / 9: Tot de grenzen der aarde reikt zijn roem, Zijn gedachtenis blijft eeuwig in ere!"
+    },
+    "catholic|1 Maccabees 4:36-59": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 4,
+        "verse": 36,
+        "endVerse": 59
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 4,
+          "verse": 36,
+          "endVerse": 59
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 36: Nu spraken Judas en zijn broers: Ziet, onze vijanden zijn verslagen! Laat ons nu optrekken, om het heiligdom te rei… / 59: Daarom nam Judas met zijn broers en heel het volk van Israël het besluit, om zolang zij leefden, elk jaar de dagen …"
+    },
+    "catholic|1 Maccabees 2:5": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 2,
+        "verse": 5,
+        "endVerse": 5
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 2,
+          "verse": 5,
+          "endVerse": 5
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 5: Elazar met de bijnaam Hauran, en Jonatan, die ook Affoes heette."
+    },
+    "catholic|1 Maccabees 6:43-46": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 6,
+        "verse": 43,
+        "endVerse": 46
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 6,
+          "verse": 43,
+          "endVerse": 46
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 43: Intussen had Elazar, ook Hauran genoemd, bemerkt, hoe een der dieren met de koninklijke pantserversiering was opget… / 46: Nu kroop hij onder den olifant, doorstak hem van onderen, en doodde hem. Het dier zakte bovenop hem in elkaar, en h…"
+    },
+    "catholic|1 Maccabees 9:28-31": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 9,
+        "verse": 28,
+        "endVerse": 31
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 9,
+          "verse": 28,
+          "endVerse": 31
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 28: Daarom sloten alle aanhangers van Juda zich aaneen, en zeiden tot Jonatan: / 31: Zo nam Jonatan toen de leiding op zich, en trad in de plaats van zijn broer Judas."
+    },
+    "catholic|1 Maccabees 10:18-21": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 10,
+        "verse": 18,
+        "endVerse": 21
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 10,
+          "verse": 18,
+          "endVerse": 21
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 18: Koning Alexander aan zijn broeder Jonatan: heil! / 21: Daarom bekleedde Jonatan op het loofhuttenfeest in de zevende maand van het jaar 160 zich met het heilig gewaad. Oo…"
+    },
+    "catholic|1 Maccabees 1:11": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 1,
+        "verse": 11,
+        "endVerse": 11
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 1,
+          "verse": 10,
+          "endVerse": 10
+        }
+      ],
+      "evidence": "De introductie van Antiochus Epifanes, zijn gijzelaarschap in Rome en regeringsbegin staat in Nederlands vers 10. Nederlandse tekstankers: 10: Uit hen nu ontsproot een goddeloos wicht, Antiochus Epifanes, een zoon van koning Antiochus. Hij was in Rome gijzel…",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise."
+      }
+    },
+    "catholic|1 Maccabees 1:43-57": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 1,
+        "verse": 43,
+        "endVerse": 57
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 1,
+          "verse": 41,
+          "endVerse": 54
+        }
+      ],
+      "evidence": "Antiochus beveelt eenheid van godsdienst; de passage eindigt met de gruwel op het altaar en de altaren in Juda. Nederlandse tekstankers: 41: Daarna vaardigde koning Antiochus voor heel zijn rijk het bevel uit, dat allen één volk moesten worden, / 54: Op de vijftiende Kislew van het jaar 145 plaatsten ze de gruwel der ontheiliging op het offeraltaar, terwijl men ov…",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise."
+      }
+    },
+    "catholic|1 Maccabees 1:1-10": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 1,
+        "verse": 1,
+        "endVerse": 10
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 1,
+          "verse": 1,
+          "endVerse": 9
+        }
+      ],
+      "evidence": "Alexander, zijn dood en de opvolgers. De Nederlandse verzen 3–4 bundelen de inhoud van DRA 3–5. Nederlandse tekstankers: 1: Nadat Alexander van Macedonië, de zoon van Filippus, die uit het land Kittim was komen opzetten, Darius, den koning… / 9: lieten zich allen na zijn dood tot koning kronen. Later deden hun zonen jarenlang hetzelfde, en brachten veel ellen…",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise."
+      }
+    },
+    "catholic|1 Maccabees 3:10-12": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 3,
+        "verse": 10,
+        "endVerse": 12
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 3,
+          "verse": 10,
+          "endVerse": 12
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 10: Nu riep Apollónius zijn heidense troepen en een grote legermacht uit Samaria op, om tegen Israël te strijden. / 12: Men bemachtigde de legerbuit, en Judas legde beslag op het zwaard van Apollónius, en bleef er heel zijn leven mee s…"
+    },
+    "catholic|1 Maccabees 3:13-24": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 3,
+        "verse": 13,
+        "endVerse": 24
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 3,
+          "verse": 13,
+          "endVerse": 24
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 13: Intussen had Séron, de aanvoerder van het syrische leger, vernomen, dat Judas een leger had bijeengebracht met een … / 24: Ze achtervolgden hen in de pas van Bet-Choron tot aan de vlakte; er sneuvelden van hen ongeveer achthonderd man, en…"
+    },
+    "catholic|1 Maccabees 3:32-35": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 3,
+        "verse": 32,
+        "endVerse": 35
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 3,
+          "verse": 32,
+          "endVerse": 36
+        }
+      ],
+      "evidence": "Lusias krijgt het bestuur en de opdracht Israël uit te roeien. Het wissen van de herinnering (einde DRA 35) staat aan het begin van Nederlands 36; dat vers bevat ook de verdere opdracht. Nederlandse tekstankers: 32: Hij liet echter Lúsias achter, een hooggeplaatst persoon van koninklijke adel, om de staatszaken te regelen in de l… / 36: al wat in die streek aan hen kon herinneren, moest hij uitroeien, hun hele gebied met vreemdelingen bevolken, en hu…",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise."
+      }
+    },
+    "catholic|1 Maccabees 4:28-35": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 4,
+        "verse": 28,
+        "endVerse": 35
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 4,
+          "verse": 28,
+          "endVerse": 35
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 28: Daarom wierf hij het volgende jaar een leger aan van zestigduizend uitstekende soldaten en vijfduizend ruiters, om … / 35: Toen Lúsias de nederlaag van zijn eigen leger moest aanzien, en de moed zag stijgen van Judas' troepen, die vast be…"
+    },
+    "catholic|1 Maccabees 3:38-41": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 3,
+        "verse": 38,
+        "endVerse": 41
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 3,
+          "verse": 38,
+          "endVerse": 41
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 38: Nu wees Lúsias onder de vertrouwelingen van den koning enkele dappere mannen aan; het waren Ptoleméus, de zoon van … / 41: Toen de handelaars uit de omtrek het gerucht ervan hoorden, namen zij grote hoeveelheden zilver en goud en tevens v…"
+    },
+    "catholic|1 Maccabees 3:38": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 3,
+        "verse": 38,
+        "endVerse": 38
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 3,
+          "verse": 38,
+          "endVerse": 38
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 38: Nu wees Lúsias onder de vertrouwelingen van den koning enkele dappere mannen aan; het waren Ptoleméus, de zoon van …"
+    },
+    "catholic|2 Maccabees 15:25-36": {
+      "source": {
+        "edition": "catholic",
+        "book": "2MA",
+        "chapter": 15,
+        "verse": 25,
+        "endVerse": 36
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "2MA",
+          "chapter": 15,
+          "verse": 25,
+          "endVerse": 36
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 25: Nikánors troepen rukten vooruit onder trompetgeschal en krijgsgezang; / 36: Tenslotte namen zij allen eenstemmig het besluit, deze dag niet ongemerkt te laten voorbijgaan, maar hem plechtig t…"
+    },
+    "catholic|1 Maccabees 4:1-5": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 4,
+        "verse": 1,
+        "endVerse": 5
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 4,
+          "verse": 1,
+          "endVerse": 5
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 1: Intussen had Górgias vijfduizend man voetvolk en duizend uitstekende ruiters uitgekozen, en was in de nacht uit de … / 5: Toen Górgias dus in de nacht bij het legerkamp van Judas kwam, trof hij er niemand meer aan. Hij ging ze nu in de b…"
+    },
+    "catholic|1 Maccabees 5:6-8": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 5,
+        "verse": 6,
+        "endVerse": 8
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 5,
+          "verse": 6,
+          "endVerse": 8
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 6: Vandaar trok hij verder naar de zonen van Ammon, waar hij op een sterke weermacht stiet met veel soldaten, die onde… / 8: En nadat hij ook Jazer had bedwongen met de onderhorige plaatsen, keerde hij naar Judea terug."
+    },
+    "catholic|1 Maccabees 6:17": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 6,
+        "verse": 17,
+        "endVerse": 17
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 6,
+          "verse": 17,
+          "endVerse": 17
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 17: Maar toen Lúsias hoorde, dat de koning gestorven was, riep hij diens zoon Antiochus, dien hij in zijn jeugd had opg…"
+    },
+    "catholic|1 Maccabees 7:1-9": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 7,
+        "verse": 1,
+        "endVerse": 9
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 7,
+          "verse": 1,
+          "endVerse": 9
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 1: In het jaar 151 wist Demétrius, de zoon van Seleúkus, uit Rome te ontsnappen. Hij landde met een klein gevolg bij e… / 9: Hem zond hij nu op de Israëlieten af tegelijk met den goddelozen Alkimus, dien hij als hogepriester aanstelde, en b…"
+    },
+    "catholic|1 Maccabees 7:5-9": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 7,
+        "verse": 5,
+        "endVerse": 9
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 7,
+          "verse": 5,
+          "endVerse": 9
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 5: Nu gingen alle afvallige en goddeloze Israëlieten naar hem toe, met Alkimus aan het hoofd, die het er op aanlegde, … / 9: Hem zond hij nu op de Israëlieten af tegelijk met den goddelozen Alkimus, dien hij als hogepriester aanstelde, en b…"
+    },
+    "catholic|1 Maccabees 7:8-9": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 7,
+        "verse": 8,
+        "endVerse": 9
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 7,
+          "verse": 8,
+          "endVerse": 9
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 8: Daarom wees de koning onder zijn vertrouwelingen Bakchides aan, die landvoogd was aan de overkant der Rivier, grote… / 9: Hem zond hij nu op de Israëlieten af tegelijk met den goddelozen Alkimus, dien hij als hogepriester aanstelde, en b…"
+    },
+    "catholic|1 Maccabees 9:1-6": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 9,
+        "verse": 1,
+        "endVerse": 6
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 9,
+          "verse": 1,
+          "endVerse": 6
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 1: Toen Demétrius vernomen had, dat Nikánor en zijn leger in de strijd waren gevallen, zond hij Bakchides en Alkimus v… / 6: Maar toen de Joden nu de geweldige overmacht zagen, begonnen er velen bang te worden, en vluchtten weg uit het lege…"
+    },
+    "catholic|1 Maccabees 8:17-20": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 8,
+        "verse": 17,
+        "endVerse": 20
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 8,
+          "verse": 17,
+          "endVerse": 20
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 17: Daarom koos Judas nu Eupólemus uit, den zoon van Johannes en kleinzoon van Akkus, met Jáson, den zoon van Elazar, e… / 20: Judas de Makkabeër, zijn broeders en het volk der Joden zenden ons tot u, om bondgenootschap en vrede met u te slui…"
+    },
+    "catholic|1 Maccabees 10:1-3": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 10,
+        "verse": 1,
+        "endVerse": 3
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 10,
+          "verse": 1,
+          "endVerse": 3
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 1: In het jaar 160 begon Alexander Epifanes, de zoon van Antiochus, een veldtocht en veroverde Ptolemáis, waar hij als… / 3: Daarom zond Demétrius een brief aan Jonatan, waarin hij hem sprak van vrede en van zijn hoogachting."
+    },
+    "catholic|1 Maccabees 10:57-58": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 10,
+        "verse": 57,
+        "endVerse": 58
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 10,
+          "verse": 57,
+          "endVerse": 58
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 57: Vergezeld van zijn dochter Kleópatra verliet dus Ptoleméus Egypte, en kwam in het jaar 162 te Ptolemáis aan, / 58: waar koning Alexander hem tegemoet was gereisd. Hij gaf hem zijn dochter Kleópatra tot vrouw, en vierde daar in Pto…"
+    },
+    "catholic|1 Maccabees 10:67-69": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 10,
+        "verse": 67,
+        "endVerse": 69
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 10,
+          "verse": 67,
+          "endVerse": 69
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 67: In het jaar 165 ging Demétrius, de zoon van Demétrius, van Kreta naar het land zijner vaderen. / 69: Demétrius stelde Apollónius Táos tot stadhouder van Celesyrië aan. Deze bracht een groot leger op de been, en sloeg…"
+    },
+    "catholic|1 Maccabees 11:19-21": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 11,
+        "verse": 19,
+        "endVerse": 21
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 11,
+          "verse": 19,
+          "endVerse": 21
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 19: Zo kwam Demétrius in het jaar aan de regering. / 21: gingen enkele afvalligen, die hun volk haatten, naar den koning, en berichtten hem, dat Jonatan de burcht belegerde…"
+    },
+    "catholic|1 Maccabees 11:39-40": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 11,
+        "verse": 39,
+        "endVerse": 40
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 11,
+          "verse": 39,
+          "endVerse": 40
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 39: Toen Trúfon, een vroegere aanhanger van Alexander, dan ook zag, dat heel het leger tegen Demétrius mopperde, ging h… / 40: en verzocht hem dringend, hem den knaap toe te vertrouwen, opdat deze in plaats van zijn vader zou kunnen regeren. …"
+    },
+    "catholic|1 Maccabees 13:31-32": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 13,
+        "verse": 31,
+        "endVerse": 32
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 13,
+          "verse": 31,
+          "endVerse": 32
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 31: Intussen was Trúfon op verraderlijke wijze tegen den jongen koning Antiochus te werk gegaan, en had hem laten vermo… / 32: Hij trad in zijn plaats als koning op, zette zich de kroon van Azië op het hoofd, en bracht veel onheil over het la…"
+    },
+    "catholic|1 Maccabees 11:54-57": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 11,
+        "verse": 54,
+        "endVerse": 57
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 11,
+          "verse": 54,
+          "endVerse": 57
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 54: Enige tijd later keerde Trúfon terug met Antiochus, die nog een zeer jonge knaap was; hij stelde hem aan tot koning… / 57: Toen liet de jonge Antiochus aan Jonatan schrijven:Ik handhaaf u als hogepriester en stel u aan over de vier gewest…"
+    },
+    "catholic|1 Maccabees 12:16": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 12,
+        "verse": 16,
+        "endVerse": 16
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 12,
+          "verse": 16,
+          "endVerse": 16
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 16: Nu hebben wij Noeménius, den zoon van Antiochus, en Antipater, den zoon van Jáson, uitgekozen en hen naar de Romein…"
+    },
+    "catholic|1 Maccabees 14:22": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 14,
+        "verse": 22,
+        "endVerse": 22
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 14,
+          "verse": 22,
+          "endVerse": 22
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 22: De onderhandelingen hebben wij als volgt in de staatsbesluiten opgenomen: Noeménius, de zoon van Antiochus, en Anti…"
+    },
+    "catholic|1 Maccabees 15:1-9": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 15,
+        "verse": 1,
+        "endVerse": 9
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 15,
+          "verse": 1,
+          "endVerse": 9
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 1: Nu zond Antiochus, de zoon van koning Demétrius, van de eilanden in de Middellandse Zee een brief aan Sjimon, den p… / 9: Zodra wij ons rijk weer hebben bemachtigd, zullen wij u, uw volk en de tempel op bijzondere wijze eren, zodat uw ro…"
+    },
+    "catholic|1 Maccabees 15:38-41": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 15,
+        "verse": 38,
+        "endVerse": 41
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 15,
+          "verse": 38,
+          "endVerse": 41
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 38: Nu stelde de koning Kendebéus tot onderbevelhebber over de zeekust aan, voorzag hem van voetvolk en ruiters, / 41: Ook bouwde hij Kedron tot vesting om, en legde er ruiterij en voetvolk in, om volgens het bevel van den koning uitv…"
+    },
+    "catholic|1 Maccabees 16:1-10": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 16,
+        "verse": 1,
+        "endVerse": 10
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 16,
+          "verse": 1,
+          "endVerse": 10
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 1: Daarom trok Johannes uit Gézer, om zijn vader Sjimon mede te delen, wat Kendebéus had uitgericht. / 10: Nu vluchtten zij naar de vestingen in het gebied van Asjdod; maar hij stak de stad in brand, en er sneuvelden van h…"
+    },
+    "catholic|1 Maccabees 16:21-24": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 16,
+        "verse": 21,
+        "endVerse": 24
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 16,
+          "verse": 21,
+          "endVerse": 24
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 21: Maar er was iemand vooruit gelopen, om Johannes in Gézer te melden, dat zijn vader en zijn broers waren vermoord, e… / 24: ziet, dat alles is opgetekend in de kronieken van zijn hogepriesterschap, van het ogenblik af, dat hij zijn vader o…"
+    },
+    "catholic|1 Maccabees 16:11-17": {
+      "source": {
+        "edition": "catholic",
+        "book": "1MA",
+        "chapter": 16,
+        "verse": 11,
+        "endVerse": 17
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "1MA",
+          "chapter": 16,
+          "verse": 11,
+          "endVerse": 17
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 11: Intussen was Ptoleméus, de zoon van Aboébus, tot bevelhebber over de vlakte van Jericho aangesteld. Hij bezat veel … / 17: Zo maakte hij zich aan grote trouweloosheid schuldig, en vergold goed met kwaad."
+    },
+    "catholic|2 Maccabees 2:24-29": {
+      "source": {
+        "edition": "catholic",
+        "book": "2MA",
+        "chapter": 2,
+        "verse": 24,
+        "endVerse": 29
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "2MA",
+          "chapter": 2,
+          "verse": 23,
+          "endVerse": 28
+        }
+      ],
+      "evidence": "Jáson van Cyrene als schrijver van vijf boeken en de werkwijze van de samenvatter. Beide grenzen staan in de Nederlandse editie één vers eerder. Nederlandse tekstankers: 23: dit alles heeft Jáson van Cyréne in vijf boeken beschreven, en wij willen beproeven, hiervan in één boek een korte … / 28: Terwijl wij dus het nauwkeurig onderzoek van de feiten aan den geschiedschrijver overlaten, besteden wij alle zorg …",
+      "note": {
+        "nl": "De versnummering is aangepast aan de Nederlandse katholieke leeseditie.",
+        "en": "The verse numbers have been adjusted to the Dutch Catholic reading edition.",
+        "fr": "Les numéros des versets ont été adaptés à l’édition catholique néerlandaise."
+      }
+    },
+    "catholic|2 Maccabees 3:1-12": {
+      "source": {
+        "edition": "catholic",
+        "book": "2MA",
+        "chapter": 3,
+        "verse": 1,
+        "endVerse": 12
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "2MA",
+          "chapter": 3,
+          "verse": 1,
+          "endVerse": 12
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 1: Er heerste volkomen vrede in de heilige stad, en de wetten werden, dank zij de vroomheid van den hogepriester Onias… / 12: Het zou gewoon een laagheid zijn, mensen te benadelen, die vertrouwd hadden op de heiligheid van de plaats en op de…"
+    },
+    "catholic|2 Maccabees 4:33-35": {
+      "source": {
+        "edition": "catholic",
+        "book": "2MA",
+        "chapter": 4,
+        "verse": 33,
+        "endVerse": 35
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "2MA",
+          "chapter": 4,
+          "verse": 33,
+          "endVerse": 35
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 33: Toen Onias hierover nauwkeurig was ingelicht, zond hij een heftig protest uit zijn vrijplaats te Dáfne, bij Antioch… / 35: Hierover waren niet alleen de Joden, maar ook verschillende andere volksgroepen ontdaan; zij waren verontwaardigd o…"
+    },
+    "catholic|2 Maccabees 3:3-7": {
+      "source": {
+        "edition": "catholic",
+        "book": "2MA",
+        "chapter": 3,
+        "verse": 3,
+        "endVerse": 7
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "2MA",
+          "chapter": 3,
+          "verse": 3,
+          "endVerse": 7
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 3: Zo bestreed Seleúkus uit eigen middelen alle uitgaven, die voor de offerdienst nodig waren. / 7: Daarom ging Apollónius naar den koning, en stelde hem op de hoogte van de schatten, die men hem had verraden. Deze …"
+    },
+    "catholic|2 Maccabees 3:4-6": {
+      "source": {
+        "edition": "catholic",
+        "book": "2MA",
+        "chapter": 3,
+        "verse": 4,
+        "endVerse": 6
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "2MA",
+          "chapter": 3,
+          "verse": 4,
+          "endVerse": 6
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 4: Maar een zekere Sjimon, die tempeloverste was en tot de stam van Levi behoorde, had onenigheid gekregen met den hog… / 6: Hij vertelde, dat er in de schatkamer te Jerusalem onnoemelijke rijkdommen lagen opgestapeld, en dat de sommen geld…"
+    },
+    "catholic|2 Maccabees 3:5-7": {
+      "source": {
+        "edition": "catholic",
+        "book": "2MA",
+        "chapter": 3,
+        "verse": 5,
+        "endVerse": 7
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "2MA",
+          "chapter": 3,
+          "verse": 5,
+          "endVerse": 7
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 5: en daar Onias zich niet gewonnen gaf, wendde hij zich tot Apollónius van Társus, die toen stadhouder was van Celesy… / 7: Daarom ging Apollónius naar den koning, en stelde hem op de hoogte van de schatten, die men hem had verraden. Deze …"
+    },
+    "catholic|2 Maccabees 3:7-14": {
+      "source": {
+        "edition": "catholic",
+        "book": "2MA",
+        "chapter": 3,
+        "verse": 7,
+        "endVerse": 14
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "2MA",
+          "chapter": 3,
+          "verse": 7,
+          "endVerse": 14
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 7: Daarom ging Apollónius naar den koning, en stelde hem op de hoogte van de schatten, die men hem had verraden. Deze … / 14: Na een dag te hebben vastgesteld, ging hij er heen, om alles in ogenschouw te nemen en te regelen. En diepe verslag…"
+    },
+    "catholic|2 Maccabees 3:23-35": {
+      "source": {
+        "edition": "catholic",
+        "book": "2MA",
+        "chapter": 3,
+        "verse": 23,
+        "endVerse": 35
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "2MA",
+          "chapter": 3,
+          "verse": 23,
+          "endVerse": 35
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 23: Intussen ging Heliodórus er heen, om zijn plan ten uitvoer te brengen. / 35: Nu bracht Heliodórus den Heer een offer en deed Hem de heiligste geloften, daar Hij zijn leven had gespaard. Daarna…"
+    },
+    "catholic|2 Maccabees 3:11": {
+      "source": {
+        "edition": "catholic",
+        "book": "2MA",
+        "chapter": 3,
+        "verse": 11,
+        "endVerse": 11
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "2MA",
+          "chapter": 3,
+          "verse": 11,
+          "endVerse": 11
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 11: en dat een gedeelte toebehoorde aan een zekeren Hyrkánus, den zoon van Tobias, een man van zeer grote invloed. De z…"
+    },
+    "catholic|2 Maccabees 4:7-13": {
+      "source": {
+        "edition": "catholic",
+        "book": "2MA",
+        "chapter": 4,
+        "verse": 7,
+        "endVerse": 13
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "2MA",
+          "chapter": 4,
+          "verse": 7,
+          "endVerse": 13
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 7: Toen Antiochus Epifanes na de dood van Seleúkus de regering had overgenomen, wist Jáson, de broer van Onias, op sli… / 13: Geholpen door de verregaande schaamteloosheid van den goddelozen en onpriesterlijken Jáson, dreef men nu de helleni…"
+    },
+    "catholic|2 Maccabees 4:23-27": {
+      "source": {
+        "edition": "catholic",
+        "book": "2MA",
+        "chapter": 4,
+        "verse": 23,
+        "endVerse": 27
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "2MA",
+          "chapter": 4,
+          "verse": 23,
+          "endVerse": 27
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 23: Maar toen Jáson drie jaren later Meneláus, den broer van bovengenoemden Sjimon, naar den koning zond, om het geld a… / 27: Nu had Meneláus de macht wel in handen, maar voor het geld, dat hij den koning beloofd had, zorgde hij niet, ondank…"
+    },
+    "catholic|2 Maccabees 4:32-34": {
+      "source": {
+        "edition": "catholic",
+        "book": "2MA",
+        "chapter": 4,
+        "verse": 32,
+        "endVerse": 34
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "2MA",
+          "chapter": 4,
+          "verse": 32,
+          "endVerse": 34
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 32: In de mening, deze gunstige gelegenheid te moeten benutten, roofde Meneláus enkele gouden voorwerpen uit de tempel … / 34: Het gevolg hiervan was, dat Meneláus er in het geheim bij Andrónikus op aandrong, Onias uit de weg te ruimen. Deze …"
+    },
+    "catholic|2 Maccabees 4:27-29": {
+      "source": {
+        "edition": "catholic",
+        "book": "2MA",
+        "chapter": 4,
+        "verse": 27,
+        "endVerse": 29
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "2MA",
+          "chapter": 4,
+          "verse": 27,
+          "endVerse": 29
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 27: Nu had Meneláus de macht wel in handen, maar voor het geld, dat hij den koning beloofd had, zorgde hij niet, ondank… / 29: Meneláus liet zijn broer Lusimachus als plaatsvervangend hogepriester achter, en Sostrátes stelde Krátes, den bevel…"
+    },
+    "catholic|2 Maccabees 4:29": {
+      "source": {
+        "edition": "catholic",
+        "book": "2MA",
+        "chapter": 4,
+        "verse": 29,
+        "endVerse": 29
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "2MA",
+          "chapter": 4,
+          "verse": 29,
+          "endVerse": 29
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 29: Meneláus liet zijn broer Lusimachus als plaatsvervangend hogepriester achter, en Sostrátes stelde Krátes, den bevel…"
+    },
+    "catholic|2 Maccabees 4:39-42": {
+      "source": {
+        "edition": "catholic",
+        "book": "2MA",
+        "chapter": 4,
+        "verse": 39,
+        "endVerse": 42
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "2MA",
+          "chapter": 4,
+          "verse": 39,
+          "endVerse": 42
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 39: Intussen werd er door Lusimachus, met toestemming van Meneláus, in de stad telkens tempelroof gepleegd. Toen het be… / 42: Zo verwondden zij een groot aantal van hen, sloegen anderen neer, joegen de hele troep op de vlucht, en vermoordden…"
+    },
+    "catholic|2 Maccabees 4:31-38": {
+      "source": {
+        "edition": "catholic",
+        "book": "2MA",
+        "chapter": 4,
+        "verse": 31,
+        "endVerse": 38
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "2MA",
+          "chapter": 4,
+          "verse": 31,
+          "endVerse": 38
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 31: In allerijl trok dus de koning er heen, om het oproer te onderdrukken, en liet Andrónikus, een van zijn hoge ambten… / 38: en in woede ontstoken, nam hij Andrónikus onmiddellijk zijn purper af, liet hem de kleren van het lijf rukken, door…"
+    },
+    "catholic|2 Maccabees 6:18-31": {
+      "source": {
+        "edition": "catholic",
+        "book": "2MA",
+        "chapter": 6,
+        "verse": 18,
+        "endVerse": 31
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "2MA",
+          "chapter": 6,
+          "verse": 18,
+          "endVerse": 31
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 18: Elazar, een der meest vooraanstaande schriftgeleerden, tevens een hoogbejaarde, indrukwekkende verschijning, werd g… / 31: Zo stierf hij, en liet door zijn dood niet alleen aan de jongeren, maar ook aan het grootste deel van het volk een …"
+    },
+    "catholic|2 Maccabees 7:1": {
+      "source": {
+        "edition": "catholic",
+        "book": "2MA",
+        "chapter": 7,
+        "verse": 1,
+        "endVerse": 1
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "2MA",
+          "chapter": 7,
+          "verse": 1,
+          "endVerse": 1
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 1: Zo gebeurde het ook, dat zeven broers met hun moeder werden gevangen genomen. De koning liet hen met roeden en riem…"
+    },
+    "catholic|2 Maccabees 7:20-29": {
+      "source": {
+        "edition": "catholic",
+        "book": "2MA",
+        "chapter": 7,
+        "verse": 20,
+        "endVerse": 29
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "2MA",
+          "chapter": 7,
+          "verse": 20,
+          "endVerse": 29
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 20: Maar ook de moeder heeft recht op onze bewondering, en haar nagedachtenis verdient in ere te blijven. Want ofschoon… / 29: Wees dus niet bang voor dien beul, maar toon, dat ge uw broers waardig zijt; aanvaard de dood, opdat ik je met de b…"
+    },
+    "catholic|2 Maccabees 7:41": {
+      "source": {
+        "edition": "catholic",
+        "book": "2MA",
+        "chapter": 7,
+        "verse": 41,
+        "endVerse": 41
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "2MA",
+          "chapter": 7,
+          "verse": 41,
+          "endVerse": 41
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 41: En na haar zonen stierf tenslotte de moeder."
+    },
+    "catholic|2 Maccabees 12:19": {
+      "source": {
+        "edition": "catholic",
+        "book": "2MA",
+        "chapter": 12,
+        "verse": 19,
+        "endVerse": 19
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "2MA",
+          "chapter": 12,
+          "verse": 19,
+          "endVerse": 19
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 19: Daar trokken twee veldheren van den Makkabeër, Dositéus en Sosipatros nu op af, en vermoordden allen, die Timóteus …"
+    },
+    "catholic|2 Maccabees 12:24": {
+      "source": {
+        "edition": "catholic",
+        "book": "2MA",
+        "chapter": 12,
+        "verse": 24,
+        "endVerse": 24
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "2MA",
+          "chapter": 12,
+          "verse": 24,
+          "endVerse": 24
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 24: Timóteus zelf werd door de troepen van Dositéus en Sosipatros gevangen genomen, en moest om behoud van zijn leven s…"
+    },
+    "catholic|2 Maccabees 14:37-40": {
+      "source": {
+        "edition": "catholic",
+        "book": "2MA",
+        "chapter": 14,
+        "verse": 37,
+        "endVerse": 40
+      },
+      "status": "mapped",
+      "targets": [
+        {
+          "edition": "catholic-nl",
+          "book": "2MA",
+          "chapter": 14,
+          "verse": 37,
+          "endVerse": 40
+        }
+      ],
+      "evidence": "De volledige aangehaalde passage en haar grenzen zijn in beide gebundelde edities gecontroleerd; de passage behoudt hier dezelfde hoofdstuk- en versgrenzen. Nederlandse tekstankers: 37: Daarop werd een van de oudsten uit Jerusalem, Rages genaamd, bij Nikánor aangeklaagd. Hij was een man, die zijn med… / 40: Want hij was overtuigd, dat deze aanhouding voor de Joden een zware slag zou betekenen."
+    }
+  }
+}

@@ -140,7 +140,38 @@ for(const passage of ['Esther 15:1','Esther 16:1']){
 const dutchState=plain(dutchReader.getState());
 for(const locale of ['en','fr','nl']){
   I.setLanguage(locale);dutchReader.render();assert.equal(dutchReader.model.meta.language,'nl');assert.deepEqual(plain(dutchReader.getState()),dutchState);
+  assert.match(dutchReader.q('#reader-content').innerHTML,{en:/separately reviewed Dutch passage correspondences/,nl:/afzonderlijk gecontroleerde Nederlandse passagekoppelingen/,fr:/correspondances néerlandaises vérifiées séparément/}[locale]);
+  assert(!dutchReader.q('#reader-content').innerHTML.includes(I.t(dutchData.meta.annotationNotice)),'The displayed identity guidance distinguishes reviewed person navigation from inline editorial name links');
   if(locale!=='en')for(const field of ['credit','versificationNote','annotationNotice','license'])assert.notEqual(I.t(dutchData.meta[field]),dutchData.meta[field],`Dutch edition ${field} must be localized in ${locale}`);
 }
 assert.match(dutchEl.innerHTML,/href="data-notes.html#dutch-catholic"/,'The composite edition links to its detailed source record');
+// Reviewed mappings can reorder or split a source range across Dutch chapters.
+// The reader displays the Dutch coordinates and keeps the original citation.
+const mappedPassage={status:'mapped',sourceLabel:'Daniel 3:98-100; 4:1-3',sourceUrl:'https://ebible.org/engDRA/DAN03.htm',originalReference:{label:'Daniel 3:98-100; 4:1-3',edition:'catholic'},note:{nl:'De nummering verschilt per uitgave.',en:'The editions use different numbering.',fr:'La numérotation varie selon l’édition.'},targets:[{book:'DAN',chapter:3,verse:98,endVerse:100,edition:'catholic-nl'},{book:'DAN',chapter:4,verse:1,endVerse:3,edition:'catholic-nl'}]};
+assert(dutchReader.openPersonPassage(mappedPassage));
+assert.match(dutchEl.innerHTML,/Daniël 3:98–100/);assert.match(dutchEl.innerHTML,/Daniël 4:1–3/);
+assert.match(dutchEl.innerHTML,/Oorspronkelijke verwijzing/);assert.match(dutchEl.innerHTML,/href="https:\/\/ebible.org\/engDRA\/DAN03.htm"/);
+assert.match(dutchEl.innerHTML,/De nummering verschilt per uitgave/);
+const highlighted=()=>Array.from(dutchReader.q('#reader-content').innerHTML.matchAll(/class="reader-verse is-target" id="reader-verse-(\d+)"/g),match=>Number(match[1]));
+assert.deepEqual(highlighted(),[98,99,100],'Every verse in the target range is highlighted');
+assert.equal(dutchReader.qa('[data-person-target]').length,2);
+dutchReader.qa('[data-person-target]')[1].fire('click');
+assert.deepEqual(plain(dutchReader.location),{bookId:'DAN',chapter:4,verse:1,endVerse:3});assert.deepEqual(highlighted(),[1,2,3]);
+assert.equal(dutchReader.personPassage.selectedTarget,1);
+const passageState=plain(dutchReader.getState());dutchReader.setState(passageState);assert.deepEqual(plain(dutchReader.getState()),passageState);
+I.setLanguage('fr');dutchReader.render();assert.match(dutchEl.innerHTML,/La numérotation varie selon l/);assert.deepEqual(plain(dutchReader.getState()),passageState);I.setLanguage('nl');
+dutchReader.openPersonPassage({...mappedPassage,status:'partial'});assert.match(dutchEl.innerHTML,/slechts gedeeltelijk/,'Partial correspondences are explicit');
+dutchReader.q('#reader-chapter').fire('change',{target:{value:'4'}});assert.equal(dutchReader.personPassage,null);assert.equal(dutchReader.location.endVerse,undefined);
+dutchReader.openPersonPassage({...mappedPassage,status:'unavailable',targets:[]});
+assert.match(dutchEl.innerHTML,/geen gecontroleerde passage/);assert.doesNotMatch(dutchReader.q('#reader-content').innerHTML,/reader-verse/,'An unmapped citation must not leave an unrelated chapter visible as its result');
+let retried=null;dutchReader.callbacks.onPersonPassageRetry=ref=>{retried=ref;};
+dutchReader.openPersonPassage({...mappedPassage,status:'error',targets:[]});dutchReader.q('#person-passage-retry').fire('click');assert.deepEqual(plain(retried),mappedPassage.originalReference);
+dutchReader.changeBook('GEN');assert.equal(dutchReader.personPassage,null);assert.match(dutchReader.q('#reader-content').innerHTML,/reader-verse/);
+const variant=dutchData.books.flatMap(book=>book.chapters.flatMap(chapter=>chapter.verses.filter(verse=>/^[–-]+$/.test(verse.text.trim())&&verse.notes?.length).map(verse=>({book:book.id,chapter:chapter.number,verse:verse.number,endVerse:verse.number,edition:'catholic-nl'}))))[0];
+assert(variant,'The edition includes explicit dash markers with textual notes');
+assert(dutchReader.openPersonPassage({...mappedPassage,targets:[variant]}));
+assert.match(dutchReader.q('#reader-content').innerHTML,/class="verse-notes" open/,'A targeted textual omission expands its explanation');
+let cancelled=0;dutchReader.callbacks.onPersonPassageCancel=()=>{cancelled++;};
+dutchReader.openPersonPassage({...mappedPassage,status:'loading',targets:[]});assert.match(dutchReader.q('#reader-content').innerHTML,/role="status"/);assert.doesNotMatch(dutchReader.q('#reader-content').innerHTML,/reader-verse/);
+dutchReader.qa('[data-reader-book]')[0].fire('click');assert.equal(cancelled,1,'Manual book navigation cancels the in-flight person lookup');assert.equal(dutchReader.personPassage,null);
 console.log('Catholic reader passed: Dutch/English 73-book editions, multilingual grouping, real added-book search, source-specific additions, edition callbacks, reference isolation and source-edition restoration.');

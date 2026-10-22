@@ -29,6 +29,7 @@
   <script src="sacred-reader.js" defer></script>
   <script src="people-traditions.js" defer></script>
   <script src="catholic-people-ui.js" defer></script>
+  <script src="person-passage-map.js" defer></script>
   <script src="cities-ui.js" defer></script>
   <script src="app.js" defer></script>
 </head>
@@ -110,7 +111,7 @@
         <button data-people-tradition="judaism" aria-pressed="false">Torah · Judaism<small>Genesis – Deuteronomy</small></button>
         <button data-people-tradition="islam" aria-pressed="false">Qur’an · Islam<small>114 surahs</small></button>
       </section>
-      <section class="index-view" id="index-view" hidden><div class="index-heading"><div><div class="eyebrow">THE PEOPLE BEHIND THE STORY</div><h2>People index</h2></div><label class="index-search"><svg><use href="#i-search"/></svg><input id="index-search" type="search" placeholder="Search names, stories, or references…" aria-label="Search people index"></label></div><p class="index-intro">Search distinct people, including namesakes, then open a life to explore their family.</p><aside class="catholic-context"><strong>People of the Catholic Bible</strong><p>The index now includes profiles from the deuterocanonical books and the additions to Esther and Daniel. Sources open in the complete English Douay–Rheims edition.</p><p id="catholic-index-status" aria-live="polite"></p></aside><div class="index-result-count" id="index-result-count" aria-live="polite"></div><div id="index-grid" class="index-grid"></div><div class="index-pagination" id="index-pagination"><button id="index-previous">← Previous</button><span id="index-page"></span><button id="index-next">Next →</button></div><div id="index-empty" class="index-empty" hidden>No matching people. Try a name such as Mary or Moses.</div></section>
+      <section class="index-view" id="index-view" hidden><div class="index-heading"><div><div class="eyebrow">THE PEOPLE BEHIND THE STORY</div><h2>People index</h2></div><label class="index-search"><svg><use href="#i-search"/></svg><input id="index-search" type="search" placeholder="Search names, stories, or references…" aria-label="Search people index"></label></div><p class="index-intro">Search distinct people, including namesakes, then open a life to explore their family.</p><aside class="catholic-context"><strong>People of the Catholic Bible</strong><p>The index includes the deuterocanonical books and additions to Esther and Daniel. Reading links open reviewed passages in the Dutch Catholic Bible; original sources remain available separately.</p><p id="catholic-index-status" aria-live="polite"></p></aside><div class="index-result-count" id="index-result-count" aria-live="polite"></div><div id="index-grid" class="index-grid"></div><div class="index-pagination" id="index-pagination"><button id="index-previous">← Previous</button><span id="index-page"></span><button id="index-next">Next →</button></div><div id="index-empty" class="index-empty" hidden>No matching people. Try a name such as Mary or Moses.</div></section>
       <section id="tradition-people-view" translate="no" hidden></section>
       <section id="comparison-view" translate="no" hidden></section>
       <section class="tradition-controls" id="tradition-controls" aria-label="Choose a tradition" hidden>
