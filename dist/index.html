@@ -13,10 +13,11 @@
   <link rel="stylesheet" href="sacred-reader.css?v=b91fc132aca0">
   <link rel="stylesheet" href="people-traditions.css?v=d31aef809b03">
   <link rel="stylesheet" href="festivals.css?v=f95161fc55b7">
+  <link rel="stylesheet" href="tradition-atlas.css?v=5dbdfec27732">
   <link rel="stylesheet" href="cities.css?v=12681cf3d2d7">
   <script src="i18n.js?v=428479504949" defer></script>
-  <script src="app-locales.js?v=ae315dc7c23b" defer></script>
-  <script src="info-locales.js?v=e5d898446400" defer></script>
+  <script src="app-locales.js?v=5e623e281459" defer></script>
+  <script src="info-locales.js?v=2de68e075f6c" defer></script>
   <script src="library-locales.js?v=de8d899768e4" defer></script>
   <script src="interfaith-locales.js?v=e5077495c4ef" defer></script>
   <script src="catholic-locales.js?v=5c5cbe530c68" defer></script>
@@ -34,7 +35,8 @@
   <script src="person-passage-map.js?v=dbcdb5026742" defer></script>
   <script src="cities-ui.js?v=03eaa70ce78f" defer></script>
   <script src="festivals.js?v=2abc491f792d" defer></script>
-  <script src="app.js?v=364a50dde379" defer></script>
+  <script src="tradition-atlas.js?v=79010ff2c949" defer></script>
+  <script src="app.js?v=d77b1ccdf09a" defer></script>
 </head>
 <body>
   <svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
@@ -73,6 +75,8 @@
           <button class="nav-item" data-view="reader" data-nav-tradition="judaism"><svg><use href="#i-book"/></svg>Holy books</button>
           <button class="nav-item" data-view="index" data-nav-tradition="judaism"><svg><use href="#i-people"/></svg>People index</button>
           <button class="nav-item" data-view="festivals" data-nav-tradition="judaism"><svg><use href="#i-rings"/></svg>Festivals & rituals</button>
+          <button class="nav-item" data-view="map" data-nav-tradition="judaism"><svg><use href="#i-map"/></svg>Relationship map</button>
+          <button class="nav-item" data-view="cities" data-nav-tradition="judaism"><svg><use href="#i-city"/></svg>Cities explorer</button>
         </div>
       </div>
       <div class="religion-group">
@@ -81,6 +85,8 @@
           <button class="nav-item" data-view="reader" data-nav-tradition="islam"><svg><use href="#i-book"/></svg>Holy books</button>
           <button class="nav-item" data-view="index" data-nav-tradition="islam"><svg><use href="#i-people"/></svg>People index</button>
           <button class="nav-item" data-view="festivals" data-nav-tradition="islam"><svg><use href="#i-rings"/></svg>Festivals & rituals</button>
+          <button class="nav-item" data-view="map" data-nav-tradition="islam"><svg><use href="#i-map"/></svg>Relationship map</button>
+          <button class="nav-item" data-view="cities" data-nav-tradition="islam"><svg><use href="#i-city"/></svg>Cities explorer</button>
         </div>
       </div>
       <div class="nav-label comparison-label">COMPARE</div>
@@ -108,6 +114,7 @@
       <div class="intro"><div><div class="eyebrow">DISCOVER THE LIVES BEHIND THE VERSES</div><h1>One story. Many connections.</h1><p>Explore the people of the Bible, one relationship at a time.</p></div><div class="intro-note"><span class="live-dot"></span>Old & New Testament<br><small>A living collection of biblical lives</small></div></div>
       <button class="reader-return-shortcut" id="return-to-library" hidden>← Back to reading</button>
       <button class="reader-return-shortcut" id="return-to-festivals" hidden>← Back to festivals & rituals</button>
+      <button class="reader-return-shortcut" id="return-to-atlas" hidden>← Back to the family map</button>
       <section class="path-finder" id="path-finder" aria-labelledby="path-finder-title">
         <div class="path-finder-heading"><div><div class="eyebrow">FOLLOW THE THREAD</div><h2 id="path-finder-title">How are they connected?</h2></div><p>Choose two lives. Trace the family links between them.</p></div>
         <form id="path-form" class="path-form">
@@ -142,6 +149,7 @@
       <section id="tradition-people-view" translate="no" hidden></section>
       <section id="comparison-view" translate="no" hidden></section>
       <section id="festivals-view" translate="no" hidden></section>
+      <section id="tradition-atlas-view" translate="no" hidden></section>
       <section class="tradition-controls legacy-tradition-controls" id="tradition-controls" aria-label="Choose a tradition" hidden>
         <div><span class="library-kicker">A reading path for each tradition</span><h2>Choose a tradition</h2></div>
         <div class="tradition-options" role="group" aria-label="Choose a tradition">

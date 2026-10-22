@@ -1,0 +1,3798 @@
+{
+  "meta": {
+    "tradition": "islam",
+    "familyScope": {
+      "nl": "Geselecteerde familieverbanden uit de Koran en herkenbaar gelabelde islamitische overleveringen. Geen volledige stamboom en geen harmonisatie met de Bijbel. Ouderschap, huwelijk, broer/zus, zorg en voormalige adoptie zijn verschillende relaties. Naamloze personen en onzekerheden blijven zichtbaar.",
+      "en": "Selected family connections from the Qur’an and explicitly labelled Islamic traditions. Not a complete genealogy or harmonisation with the Bible. Parenthood, marriage, siblings, care and former adoption are distinct relationships. Unnamed figures and uncertainties remain visible.",
+      "fr": "Liens familiaux sélectionnés dans le Coran et des traditions islamiques explicitement signalées. Ni généalogie complète ni harmonisation avec la Bible. Parenté, mariage, fratrie, prise en charge et ancienne adoption sont des liens distincts. Anonymat et incertitudes restent visibles."
+    },
+    "placesScope": {
+      "nl": "Een selectie van steden, landschappen en heilige plaatsen in Koranverhalen en islamitische herinnering. Bronnen onderscheiden tekst, overlevering en historisch onderzoek. Een gedeelde passage bewijst geen verblijf; religieuze identificatie en archeologisch bewijs worden niet gelijkgesteld.",
+      "en": "A selection of cities, landscapes and sacred places in Qur’anic narratives and Islamic remembrance. Sources distinguish scripture, tradition and historical research. A shared passage does not prove residence; religious identification and archaeological evidence are not equated.",
+      "fr": "Sélection de villes, paysages et lieux sacrés dans les récits coraniques et la mémoire islamique. Les sources distinguent texte sacré, tradition et recherche historique. Un passage commun ne prouve pas une résidence ; identification religieuse et preuve archéologique ne sont pas assimilées."
+    }
+  },
+  "families": [
+    {
+      "id": "islam:family-ibrahim",
+      "title": {
+        "nl": "Ibrahim en zijn nakomelingen",
+        "en": "Ibrahim and his descendants",
+        "fr": "Ibrâhîm et sa descendance"
+      },
+      "summary": {
+        "nl": "Koranverhalen en een afzonderlijk gelabelde hadithgenealogie. De naam van de zoon in het offerverhaal wordt niet ingevuld.",
+        "en": "Qur’anic narratives and a separately labelled hadith genealogy. The son in the sacrifice narrative is not assigned a name.",
+        "fr": "Récits coraniques et généalogie du hadith identifiée séparément. Aucun nom n’est attribué au fils du récit du sacrifice."
+      },
+      "personIds": [
+        "islam:abraham",
+        "islam:abraham-wife",
+        "islam:ishmael",
+        "islam:isaac",
+        "islam:jacob",
+        "islam:joseph",
+        "islam:joseph-brother"
+      ]
+    },
+    {
+      "id": "islam:family-musa",
+      "title": {
+        "nl": "Musa, Harun en het gezin",
+        "en": "Musa, Harun and family",
+        "fr": "Mûsâ, Hârûn et leur famille"
+      },
+      "summary": {
+        "nl": "Familie en huwelijk in het Korannarratief. Naamloze personen blijven naamloos; de vader in Madyan wordt niet als Shuayb ingevuld.",
+        "en": "Family and marriage in the Qur’anic narrative. Unnamed figures remain unnamed; the father in Madyan is not labelled Shuayb.",
+        "fr": "Famille et mariage dans le récit coranique. Les anonymes le restent ; le père à Madyan n’est pas nommé Chu‘ayb."
+      },
+      "personIds": [
+        "islam:moses",
+        "islam:aaron",
+        "islam:moses-mother",
+        "islam:moses-sister",
+        "islam:midian-elder",
+        "islam:moses-wife"
+      ]
+    },
+    {
+      "id": "islam:family-maryam",
+      "title": {
+        "nl": "Maryam, Isa en Zakariya",
+        "en": "Maryam, Isa and Zakariya",
+        "fr": "Maryam, Îsâ et Zakariyyâ"
+      },
+      "summary": {
+        "nl": "Ouderschap en zorg worden apart getoond. De aanspreking “zus van Harun” wordt niet opgevat als een directe zusterrelatie met Musa’s broer.",
+        "en": "Parenthood and care are shown separately. The address “sister of Harun” is not treated as a direct sibling relationship with Musa’s brother.",
+        "fr": "Parenté et prise en charge sont distinguées. L’appellation « sœur de Hârûn » n’est pas interprétée comme une relation directe de fratrie avec le frère de Mûsâ."
+      },
+      "personIds": [
+        "islam:imran",
+        "islam:mary-mother",
+        "islam:mary",
+        "islam:jesus",
+        "islam:zechariah",
+        "islam:zechariah-wife",
+        "islam:john-baptist"
+      ]
+    },
+    {
+      "id": "islam:family-nuh",
+      "title": {
+        "nl": "Nuh en zijn gezin",
+        "en": "Nuh and his household",
+        "fr": "Nûh et sa famille"
+      },
+      "summary": {
+        "nl": "De vloedvertelling maakt het verschil tussen verwantschap en geloof zichtbaar. De kaart noemt geen niet-overgeleverde namen.",
+        "en": "The flood narrative distinguishes kinship and faith. The map supplies no names absent from its sources.",
+        "fr": "Le récit du déluge distingue parenté et foi. La carte n’ajoute aucun nom absent de ses sources."
+      },
+      "personIds": [
+        "islam:noah",
+        "islam:noah-wife",
+        "islam:noah-son"
+      ]
+    },
+    {
+      "id": "islam:family-muhammad",
+      "title": {
+        "nl": "Een deel van Mohammeds gezin",
+        "en": "Part of Muhammad’s household",
+        "fr": "Une partie de la famille de Muhammad"
+      },
+      "summary": {
+        "nl": "Een selectie, geen volledige stamboom. Hadith en sjiitische biografische uitleg zijn herkenbaar gelabeld. De lijn naar Zayd is voormalige adoptie; er wordt geen afstammingsketen naar Ibrahim getekend.",
+        "en": "A selection, not a complete genealogy. Hadith and Shi‘i biographical interpretation are explicitly labelled. The Zayd link is former adoption; no chain of descent to Ibrahim is drawn.",
+        "fr": "Une sélection, non une généalogie complète. Hadith et interprétation biographique chiite sont explicitement signalés. Le lien à Zayd est une ancienne adoption ; aucune lignée jusqu’à Ibrâhîm n’est tracée."
+      },
+      "personIds": [
+        "islam:muhammad",
+        "islam:khadija",
+        "islam:fatima",
+        "islam:ali",
+        "islam:hasan",
+        "islam:husayn",
+        "islam:zayd"
+      ]
+    },
+    {
+      "id": "islam:family-dawud",
+      "title": {
+        "nl": "Dawud en Sulayman",
+        "en": "Dawud and Sulayman",
+        "fr": "Dâwûd et Sulaymân"
+      },
+      "summary": {
+        "nl": "Een vader-zoonverband in de islamitische lezing, zonder de uitgebreide Bijbelse koningsgenealogie over te nemen.",
+        "en": "A father–son connection in the Islamic reading, without importing the extended biblical royal genealogy.",
+        "fr": "Un lien père-fils dans la lecture islamique, sans importer la longue généalogie royale biblique."
+      },
+      "personIds": [
+        "islam:david",
+        "islam:solomon"
+      ]
+    }
+  ],
+  "people": [
+    {
+      "id": "islam:abraham",
+      "name": {
+        "nl": "Ibrahim",
+        "en": "Ibrahim",
+        "fr": "Ibrâhîm"
+      },
+      "aliases": [
+        "Abraham",
+        "إبراهيم"
+      ],
+      "summary": {
+        "nl": "Vader van Ismail en Ishaq; met Ismail verbonden aan het heilige Huis.",
+        "en": "Father of Ismail and Ishaq; associated with the Sacred House alongside Ismail.",
+        "fr": "Père d’Ismâïl et d’Ishâq ; associé à la Maison sacrée avec Ismâïl."
+      },
+      "refs": [
+        {
+          "id": "q-14-39-39",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 14:39",
+            "en": "Qur’an 14:39",
+            "fr": "Coran 14,39"
+          },
+          "url": "https://quran.com/14/39",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 14,
+            "verse": 39,
+            "endVerse": 39
+          }
+        },
+        {
+          "id": "q-2-125-127",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 2:125–127",
+            "en": "Qur’an 2:125–127",
+            "fr": "Coran 2,125–127"
+          },
+          "url": "https://quran.com/2/125-127",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 2,
+            "verse": 125,
+            "endVerse": 127
+          }
+        }
+      ],
+      "indexId": "quran:abraham"
+    },
+    {
+      "id": "islam:abraham-wife",
+      "name": {
+        "nl": "Ibrahims vrouw",
+        "en": "Ibrahim’s wife",
+        "fr": "L’épouse d’Ibrâhîm"
+      },
+      "aliases": [],
+      "summary": {
+        "nl": "Ontvangt de aankondiging van Ishaq en Yaqub. De Koran noemt haar hier niet bij naam.",
+        "en": "Receives the announcement of Ishaq and Yaqub. The Qur’an does not name her here.",
+        "fr": "Reçoit l’annonce d’Ishâq et de Ya‘qûb. Le Coran ne la nomme pas ici."
+      },
+      "refs": [
+        {
+          "id": "q-11-69-73",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 11:69–73",
+            "en": "Qur’an 11:69–73",
+            "fr": "Coran 11,69–73"
+          },
+          "url": "https://quran.com/11/69-73",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 11,
+            "verse": 69,
+            "endVerse": 73
+          }
+        }
+      ],
+      "indexId": "quran:abraham-wife"
+    },
+    {
+      "id": "islam:ishmael",
+      "name": {
+        "nl": "Ismail",
+        "en": "Ismail",
+        "fr": "Ismâïl"
+      },
+      "aliases": [
+        "Ismaël",
+        "Ishmael"
+      ],
+      "summary": {
+        "nl": "Zoon van Ibrahim; helpt volgens de Koran de fundamenten van het Huis oprichten.",
+        "en": "Son of Ibrahim; helps raise the foundations of the House in the Qur’an.",
+        "fr": "Fils d’Ibrâhîm ; participe à l’élévation des fondations de la Maison dans le Coran."
+      },
+      "refs": [
+        {
+          "id": "q-14-39-39",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 14:39",
+            "en": "Qur’an 14:39",
+            "fr": "Coran 14,39"
+          },
+          "url": "https://quran.com/14/39",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 14,
+            "verse": 39,
+            "endVerse": 39
+          }
+        },
+        {
+          "id": "q-2-127-127",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 2:127",
+            "en": "Qur’an 2:127",
+            "fr": "Coran 2,127"
+          },
+          "url": "https://quran.com/2/127",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 2,
+            "verse": 127,
+            "endVerse": 127
+          }
+        }
+      ],
+      "indexId": "quran:ishmael"
+    },
+    {
+      "id": "islam:isaac",
+      "name": {
+        "nl": "Ishaq",
+        "en": "Ishaq",
+        "fr": "Ishâq"
+      },
+      "aliases": [
+        "Isaak",
+        "Isaac"
+      ],
+      "summary": {
+        "nl": "Zoon die aan Ibrahim en zijn vrouw wordt aangekondigd; in de overlevering vader van Yaqub.",
+        "en": "The son announced to Ibrahim and his wife; father of Yaqub in the transmitted genealogy.",
+        "fr": "Fils annoncé à Ibrâhîm et à son épouse ; père de Ya‘qûb dans la généalogie transmise."
+      },
+      "refs": [
+        {
+          "id": "q-11-71-73",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 11:71–73",
+            "en": "Qur’an 11:71–73",
+            "fr": "Coran 11,71–73"
+          },
+          "url": "https://quran.com/11/71-73",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 11,
+            "verse": 71,
+            "endVerse": 73
+          }
+        },
+        {
+          "id": "bukhari-3382",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sahih al-Bukhari 3382",
+            "en": "Sahih al-Bukhari 3382",
+            "fr": "Sahih al-Bukhari 3382"
+          },
+          "url": "https://sunnah.com/bukhari:3382"
+        }
+      ],
+      "indexId": "quran:isaac"
+    },
+    {
+      "id": "islam:jacob",
+      "name": {
+        "nl": "Yaqub",
+        "en": "Yaqub",
+        "fr": "Ya‘qûb"
+      },
+      "aliases": [
+        "Jakob",
+        "Jacob"
+      ],
+      "summary": {
+        "nl": "Vader van Yusuf. De overlevering verbindt hem via Ishaq met Ibrahim.",
+        "en": "Father of Yusuf. The transmitted genealogy connects him to Ibrahim through Ishaq.",
+        "fr": "Père de Yûsuf. La généalogie transmise le relie à Ibrâhîm par Ishâq."
+      },
+      "refs": [
+        {
+          "id": "q-12-4-6",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 12:4–6",
+            "en": "Qur’an 12:4–6",
+            "fr": "Coran 12,4–6"
+          },
+          "url": "https://quran.com/12/4-6",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 12,
+            "verse": 4,
+            "endVerse": 6
+          }
+        },
+        {
+          "id": "bukhari-3382",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sahih al-Bukhari 3382",
+            "en": "Sahih al-Bukhari 3382",
+            "fr": "Sahih al-Bukhari 3382"
+          },
+          "url": "https://sunnah.com/bukhari:3382"
+        }
+      ],
+      "indexId": "quran:jacob"
+    },
+    {
+      "id": "islam:joseph",
+      "name": {
+        "nl": "Yusuf",
+        "en": "Yusuf",
+        "fr": "Yûsuf"
+      },
+      "aliases": [
+        "Jozef",
+        "Joseph"
+      ],
+      "summary": {
+        "nl": "Zijn verhaal gaat over familieconflict, scheiding en hereniging in Egypte.",
+        "en": "His story concerns family conflict, separation and reunion in Egypt.",
+        "fr": "Son récit porte sur le conflit familial, la séparation et les retrouvailles en Égypte."
+      },
+      "refs": [
+        {
+          "id": "q-12-4-6",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 12:4–6",
+            "en": "Qur’an 12:4–6",
+            "fr": "Coran 12,4–6"
+          },
+          "url": "https://quran.com/12/4-6",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 12,
+            "verse": 4,
+            "endVerse": 6
+          }
+        },
+        {
+          "id": "q-12-99-100",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 12:99–100",
+            "en": "Qur’an 12:99–100",
+            "fr": "Coran 12,99–100"
+          },
+          "url": "https://quran.com/12/99-100",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 12,
+            "verse": 99,
+            "endVerse": 100
+          }
+        }
+      ],
+      "indexId": "quran:joseph"
+    },
+    {
+      "id": "islam:joseph-brother",
+      "name": {
+        "nl": "Yusufs broer",
+        "en": "Yusuf’s brother",
+        "fr": "Le frère de Yûsuf"
+      },
+      "aliases": [
+        "Benjamin",
+        "Binyamin"
+      ],
+      "summary": {
+        "nl": "De broer die Yusuf afzonderlijk ontvangt, blijft in de Korantekst ongenoemd; de naam Benjamin komt uit de uitlegtraditie.",
+        "en": "The brother whom Yusuf receives privately remains unnamed in the Qur’anic text; Benjamin is an interpretive identification.",
+        "fr": "Le frère reçu à part par Yûsuf reste anonyme dans le texte coranique ; Benjamin est une identification exégétique."
+      },
+      "refs": [
+        {
+          "id": "q-12-69-69",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 12:69",
+            "en": "Qur’an 12:69",
+            "fr": "Coran 12,69"
+          },
+          "url": "https://quran.com/12/69",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 12,
+            "verse": 69,
+            "endVerse": 69
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:moses",
+      "name": {
+        "nl": "Musa",
+        "en": "Musa",
+        "fr": "Mûsâ"
+      },
+      "aliases": [
+        "Mozes",
+        "Moses",
+        "Moïse"
+      ],
+      "summary": {
+        "nl": "Broer van Harun; zijn moeder en zus spelen een rol in zijn redding als kind.",
+        "en": "Brother of Harun; his mother and sister take part in his rescue as a child.",
+        "fr": "Frère de Hârûn ; sa mère et sa sœur participent à son sauvetage enfant."
+      },
+      "refs": [
+        {
+          "id": "q-20-29-30",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 20:29–30",
+            "en": "Qur’an 20:29–30",
+            "fr": "Coran 20,29–30"
+          },
+          "url": "https://quran.com/20/29-30",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 20,
+            "verse": 29,
+            "endVerse": 30
+          }
+        },
+        {
+          "id": "q-28-7-13",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 28:7–13",
+            "en": "Qur’an 28:7–13",
+            "fr": "Coran 28,7–13"
+          },
+          "url": "https://quran.com/28/7-13",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 28,
+            "verse": 7,
+            "endVerse": 13
+          }
+        }
+      ],
+      "indexId": "quran:moses"
+    },
+    {
+      "id": "islam:aaron",
+      "name": {
+        "nl": "Harun",
+        "en": "Harun",
+        "fr": "Hârûn"
+      },
+      "aliases": [
+        "Aäron",
+        "Aaron"
+      ],
+      "summary": {
+        "nl": "Musa vraagt zijn broer Harun als helper. Harun spreekt Musa aan als zoon van zijn moeder.",
+        "en": "Musa asks for his brother Harun as a helper. Harun addresses Musa as his mother’s son.",
+        "fr": "Mûsâ demande son frère Hârûn comme assistant. Hârûn l’appelle fils de sa mère."
+      },
+      "refs": [
+        {
+          "id": "q-20-29-30",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 20:29–30",
+            "en": "Qur’an 20:29–30",
+            "fr": "Coran 20,29–30"
+          },
+          "url": "https://quran.com/20/29-30",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 20,
+            "verse": 29,
+            "endVerse": 30
+          }
+        },
+        {
+          "id": "q-20-94-94",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 20:94",
+            "en": "Qur’an 20:94",
+            "fr": "Coran 20,94"
+          },
+          "url": "https://quran.com/20/94",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 20,
+            "verse": 94,
+            "endVerse": 94
+          }
+        }
+      ],
+      "indexId": "quran:aaron"
+    },
+    {
+      "id": "islam:moses-mother",
+      "name": {
+        "nl": "Musa’s moeder",
+        "en": "Musa’s mother",
+        "fr": "La mère de Mûsâ"
+      },
+      "aliases": [],
+      "summary": {
+        "nl": "Haar persoonlijke naam wordt niet gegeven; het verhaal beschrijft haar angst, handelen en hereniging met haar kind.",
+        "en": "Her personal name is not given; the narrative describes her fear, action and reunion with her child.",
+        "fr": "Son nom personnel n’est pas donné ; le récit décrit sa peur, son action et les retrouvailles avec son enfant."
+      },
+      "refs": [
+        {
+          "id": "q-28-7-13",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 28:7–13",
+            "en": "Qur’an 28:7–13",
+            "fr": "Coran 28,7–13"
+          },
+          "url": "https://quran.com/28/7-13",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 28,
+            "verse": 7,
+            "endVerse": 13
+          }
+        }
+      ],
+      "indexId": "quran:moses-mother"
+    },
+    {
+      "id": "islam:moses-sister",
+      "name": {
+        "nl": "Musa’s zus",
+        "en": "Musa’s sister",
+        "fr": "La sœur de Mûsâ"
+      },
+      "aliases": [],
+      "summary": {
+        "nl": "Volgt het kind en stelt een verzorgend huishouden voor. Zij wordt niet met Maryam, de moeder van Isa, vereenzelvigd.",
+        "en": "Follows the child and suggests a nursing household. She is not identified with Maryam, mother of Isa.",
+        "fr": "Suit l’enfant et propose un foyer nourricier. Elle n’est pas identifiée à Maryam, mère d’Îsâ."
+      },
+      "refs": [
+        {
+          "id": "q-28-11-13",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 28:11–13",
+            "en": "Qur’an 28:11–13",
+            "fr": "Coran 28,11–13"
+          },
+          "url": "https://quran.com/28/11-13",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 28,
+            "verse": 11,
+            "endVerse": 13
+          }
+        },
+        {
+          "id": "muslim-2135",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sahih Muslim 2135",
+            "en": "Sahih Muslim 2135",
+            "fr": "Sahih Muslim 2135"
+          },
+          "url": "https://sunnah.com/muslim:2135"
+        }
+      ],
+      "indexId": "quran:moses-sister"
+    },
+    {
+      "id": "islam:midian-elder",
+      "name": {
+        "nl": "De vader in Madyan",
+        "en": "The father in Madyan",
+        "fr": "Le père à Madyan"
+      },
+      "aliases": [],
+      "summary": {
+        "nl": "Vader van twee vrouwen die Musa bij een waterplaats ontmoet. De Koran noemt hem niet Shuayb.",
+        "en": "Father of two women whom Musa meets at a watering place. The Qur’an does not name him Shuayb.",
+        "fr": "Père de deux femmes rencontrées par Mûsâ à un point d’eau. Le Coran ne le nomme pas Chu‘ayb."
+      },
+      "refs": [
+        {
+          "id": "q-28-23-28",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 28:23–28",
+            "en": "Qur’an 28:23–28",
+            "fr": "Coran 28,23–28"
+          },
+          "url": "https://quran.com/28/23-28",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 28,
+            "verse": 23,
+            "endVerse": 28
+          }
+        }
+      ],
+      "indexId": "quran:midian-elder"
+    },
+    {
+      "id": "islam:moses-wife",
+      "name": {
+        "nl": "Musa’s vrouw",
+        "en": "Musa’s wife",
+        "fr": "L’épouse de Mûsâ"
+      },
+      "aliases": [],
+      "summary": {
+        "nl": "Een van de twee dochters van de man in Madyan, met wie Musa een huwelijksafspraak sluit; haar naam ontbreekt in de tekst.",
+        "en": "One of the two daughters of the man in Madyan with whom Musa agrees a marriage arrangement; her name is absent from the text.",
+        "fr": "Une des deux filles de l’homme de Madyan avec lequel Mûsâ conclut un accord de mariage ; son nom est absent du texte."
+      },
+      "refs": [
+        {
+          "id": "q-28-27-29",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 28:27–29",
+            "en": "Qur’an 28:27–29",
+            "fr": "Coran 28,27–29"
+          },
+          "url": "https://quran.com/28/27-29",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 28,
+            "verse": 27,
+            "endVerse": 29
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:mary",
+      "name": {
+        "nl": "Maryam",
+        "en": "Maryam",
+        "fr": "Maryam"
+      },
+      "aliases": [
+        "Maria",
+        "Mary",
+        "Marie"
+      ],
+      "summary": {
+        "nl": "Dochter van Imran en moeder van Isa. De aanspreking “zus van Harun” levert hier geen genealogische lijn naar Musa’s broer op.",
+        "en": "Daughter of Imran and mother of Isa. The address “sister of Harun” is not turned into a genealogical line to Musa’s brother here.",
+        "fr": "Fille de ‘Imrân et mère d’Îsâ. L’appellation « sœur de Hârûn » n’est pas transformée ici en lien généalogique avec le frère de Mûsâ."
+      },
+      "refs": [
+        {
+          "id": "q-66-12-12",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 66:12",
+            "en": "Qur’an 66:12",
+            "fr": "Coran 66,12"
+          },
+          "url": "https://quran.com/66/12",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 66,
+            "verse": 12,
+            "endVerse": 12
+          }
+        },
+        {
+          "id": "q-19-27-34",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 19:27–34",
+            "en": "Qur’an 19:27–34",
+            "fr": "Coran 19,27–34"
+          },
+          "url": "https://quran.com/19/27-34",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 19,
+            "verse": 27,
+            "endVerse": 34
+          }
+        },
+        {
+          "id": "muslim-2135",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sahih Muslim 2135",
+            "en": "Sahih Muslim 2135",
+            "fr": "Sahih Muslim 2135"
+          },
+          "url": "https://sunnah.com/muslim:2135"
+        }
+      ],
+      "indexId": "quran:mary"
+    },
+    {
+      "id": "islam:imran",
+      "name": {
+        "nl": "Imran",
+        "en": "Imran",
+        "fr": "‘Imrân"
+      },
+      "aliases": [],
+      "summary": {
+        "nl": "Maryams vader in Koran 66:12. Deze figuur wordt niet automatisch gelijkgesteld met Bijbelse naamgenoten.",
+        "en": "Maryam’s father in Qur’an 66:12. This figure is not automatically equated with biblical namesakes.",
+        "fr": "Père de Maryam dans le Coran 66,12. Cette figure n’est pas automatiquement assimilée aux homonymes bibliques."
+      },
+      "refs": [
+        {
+          "id": "q-66-12-12",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 66:12",
+            "en": "Qur’an 66:12",
+            "fr": "Coran 66,12"
+          },
+          "url": "https://quran.com/66/12",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 66,
+            "verse": 12,
+            "endVerse": 12
+          }
+        }
+      ],
+      "indexId": "quran:imran"
+    },
+    {
+      "id": "islam:mary-mother",
+      "name": {
+        "nl": "Maryams moeder",
+        "en": "Maryam’s mother",
+        "fr": "La mère de Maryam"
+      },
+      "aliases": [],
+      "summary": {
+        "nl": "De vrouw van Imran draagt haar ongeboren kind op aan God en geeft haar dochter de naam Maryam.",
+        "en": "Imran’s wife dedicates her unborn child to God and names her daughter Maryam.",
+        "fr": "L’épouse de ‘Imrân consacre son enfant à naître à Dieu et nomme sa fille Maryam."
+      },
+      "refs": [
+        {
+          "id": "q-3-35-36",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 3:35–36",
+            "en": "Qur’an 3:35–36",
+            "fr": "Coran 3,35–36"
+          },
+          "url": "https://quran.com/3/35-36",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 3,
+            "verse": 35,
+            "endVerse": 36
+          }
+        }
+      ],
+      "indexId": "quran:mary-mother"
+    },
+    {
+      "id": "islam:jesus",
+      "name": {
+        "nl": "Isa",
+        "en": "Isa",
+        "fr": "Îsâ"
+      },
+      "aliases": [
+        "Jezus",
+        "Jesus",
+        "Jésus"
+      ],
+      "summary": {
+        "nl": "Zoon van Maryam. De Koran beschrijft zijn bijzondere geboorte zonder menselijke vader.",
+        "en": "Son of Maryam. The Qur’an describes his extraordinary birth without a human father.",
+        "fr": "Fils de Maryam. Le Coran décrit sa naissance extraordinaire sans père humain."
+      },
+      "refs": [
+        {
+          "id": "q-19-20-22",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 19:20–22",
+            "en": "Qur’an 19:20–22",
+            "fr": "Coran 19,20–22"
+          },
+          "url": "https://quran.com/19/20-22",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 19,
+            "verse": 20,
+            "endVerse": 22
+          }
+        },
+        {
+          "id": "q-19-34-34",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 19:34",
+            "en": "Qur’an 19:34",
+            "fr": "Coran 19,34"
+          },
+          "url": "https://quran.com/19/34",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 19,
+            "verse": 34,
+            "endVerse": 34
+          }
+        }
+      ],
+      "indexId": "quran:jesus"
+    },
+    {
+      "id": "islam:zechariah",
+      "name": {
+        "nl": "Zakariya",
+        "en": "Zakariya",
+        "fr": "Zakariyyâ"
+      },
+      "aliases": [
+        "Zacharias",
+        "Zechariah",
+        "Zacharie"
+      ],
+      "summary": {
+        "nl": "Zorgt voor Maryam en ontvangt de aankondiging van zijn zoon Yahya. Zorg is hier onderscheiden van ouderschap.",
+        "en": "Cares for Maryam and receives the announcement of his son Yahya. Care is distinguished from parenthood here.",
+        "fr": "Prend soin de Maryam et reçoit l’annonce de son fils Yahyâ. La prise en charge est distinguée ici de la parenté."
+      },
+      "refs": [
+        {
+          "id": "q-3-37-40",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 3:37–40",
+            "en": "Qur’an 3:37–40",
+            "fr": "Coran 3,37–40"
+          },
+          "url": "https://quran.com/3/37-40",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 3,
+            "verse": 37,
+            "endVerse": 40
+          }
+        }
+      ],
+      "indexId": "quran:zechariah"
+    },
+    {
+      "id": "islam:zechariah-wife",
+      "name": {
+        "nl": "Zakariya’s vrouw",
+        "en": "Zakariya’s wife",
+        "fr": "L’épouse de Zakariyyâ"
+      },
+      "aliases": [],
+      "summary": {
+        "nl": "De Koran vermeldt haar kinderloosheid en het herstel waardoor Yahya wordt geschonken; haar naam blijft ongenoemd.",
+        "en": "The Qur’an mentions her childlessness and restoration when Yahya is granted; her name is not given.",
+        "fr": "Le Coran évoque sa stérilité et sa guérison lorsque Yahyâ est accordé ; son nom n’est pas donné."
+      },
+      "refs": [
+        {
+          "id": "q-3-39-40",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 3:39–40",
+            "en": "Qur’an 3:39–40",
+            "fr": "Coran 3,39–40"
+          },
+          "url": "https://quran.com/3/39-40",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 3,
+            "verse": 39,
+            "endVerse": 40
+          }
+        },
+        {
+          "id": "q-21-89-90",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 21:89–90",
+            "en": "Qur’an 21:89–90",
+            "fr": "Coran 21,89–90"
+          },
+          "url": "https://quran.com/21/89-90",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 21,
+            "verse": 89,
+            "endVerse": 90
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:john-baptist",
+      "name": {
+        "nl": "Yahya",
+        "en": "Yahya",
+        "fr": "Yahyâ"
+      },
+      "aliases": [
+        "Johannes",
+        "John",
+        "Jean"
+      ],
+      "summary": {
+        "nl": "Zoon die Zakariya en zijn vrouw ondanks hun eerdere kinderloosheid ontvangen.",
+        "en": "The son granted to Zakariya and his wife despite their previous childlessness.",
+        "fr": "Fils accordé à Zakariyyâ et à son épouse malgré leur absence antérieure d’enfant."
+      },
+      "refs": [
+        {
+          "id": "q-3-39-40",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 3:39–40",
+            "en": "Qur’an 3:39–40",
+            "fr": "Coran 3,39–40"
+          },
+          "url": "https://quran.com/3/39-40",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 3,
+            "verse": 39,
+            "endVerse": 40
+          }
+        },
+        {
+          "id": "q-21-89-90",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 21:89–90",
+            "en": "Qur’an 21:89–90",
+            "fr": "Coran 21,89–90"
+          },
+          "url": "https://quran.com/21/89-90",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 21,
+            "verse": 89,
+            "endVerse": 90
+          }
+        }
+      ],
+      "indexId": "quran:john-baptist"
+    },
+    {
+      "id": "islam:noah",
+      "name": {
+        "nl": "Nuh",
+        "en": "Nuh",
+        "fr": "Nûh"
+      },
+      "aliases": [
+        "Noach",
+        "Noah",
+        "Noé"
+      ],
+      "summary": {
+        "nl": "Zijn gezin illustreert in de Koran dat verwantschap niet gelijkstaat aan geloof of redding.",
+        "en": "His household illustrates in the Qur’an that kinship does not by itself mean faith or salvation.",
+        "fr": "Sa famille illustre dans le Coran que la parenté n’équivaut pas à la foi ni au salut."
+      },
+      "refs": [
+        {
+          "id": "q-11-42-46",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 11:42–46",
+            "en": "Qur’an 11:42–46",
+            "fr": "Coran 11,42–46"
+          },
+          "url": "https://quran.com/11/42-46",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 11,
+            "verse": 42,
+            "endVerse": 46
+          }
+        },
+        {
+          "id": "q-66-10-10",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 66:10",
+            "en": "Qur’an 66:10",
+            "fr": "Coran 66,10"
+          },
+          "url": "https://quran.com/66/10",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 66,
+            "verse": 10,
+            "endVerse": 10
+          }
+        }
+      ],
+      "indexId": "quran:noah"
+    },
+    {
+      "id": "islam:noah-wife",
+      "name": {
+        "nl": "Nuhs vrouw",
+        "en": "Nuh’s wife",
+        "fr": "L’épouse de Nûh"
+      },
+      "aliases": [],
+      "summary": {
+        "nl": "Een ongenoemde echtgenote, aangehaald als voorbeeld van ongeloof ondanks haar huwelijk met een rechtschapen dienaar.",
+        "en": "An unnamed wife cited as an example of disbelief despite marriage to a righteous servant.",
+        "fr": "Épouse anonyme citée comme exemple d’incroyance malgré son mariage avec un serviteur juste."
+      },
+      "refs": [
+        {
+          "id": "q-66-10-10",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 66:10",
+            "en": "Qur’an 66:10",
+            "fr": "Coran 66,10"
+          },
+          "url": "https://quran.com/66/10",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 66,
+            "verse": 10,
+            "endVerse": 10
+          }
+        }
+      ],
+      "indexId": "quran:noah-wife"
+    },
+    {
+      "id": "islam:noah-son",
+      "name": {
+        "nl": "Nuhs zoon bij de vloed",
+        "en": "Nuh’s son in the flood",
+        "fr": "Le fils de Nûh au déluge"
+      },
+      "aliases": [],
+      "summary": {
+        "nl": "Weigert aan boord te gaan. Zijn naam staat niet in de Koran; 11:46 problematiseert zijn behoren tot het gezin in religieuze zin.",
+        "en": "Refuses to board. The Qur’an does not give his name; 11:46 challenges his membership of the household in a religious sense.",
+        "fr": "Refuse de monter à bord. Le Coran ne le nomme pas ; 11,46 met en cause son appartenance à la famille au sens religieux."
+      },
+      "refs": [
+        {
+          "id": "q-11-42-46",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 11:42–46",
+            "en": "Qur’an 11:42–46",
+            "fr": "Coran 11,42–46"
+          },
+          "url": "https://quran.com/11/42-46",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 11,
+            "verse": 42,
+            "endVerse": 46
+          }
+        }
+      ],
+      "indexId": "quran:noah-son"
+    },
+    {
+      "id": "islam:muhammad",
+      "name": {
+        "nl": "Mohammed",
+        "en": "Muhammad",
+        "fr": "Muhammad"
+      },
+      "aliases": [
+        "Muhammad",
+        "محمد"
+      ],
+      "summary": {
+        "nl": "De familiekaart combineert expliciet gelabelde Koranverwijzingen en overleveringen over een deel van zijn gezin.",
+        "en": "The family map combines explicitly labelled Qur’anic passages and traditions about part of his household.",
+        "fr": "La carte familiale réunit des passages coraniques et des traditions explicitement distingués concernant une partie de sa famille."
+      },
+      "refs": [
+        {
+          "id": "q-33-40-40",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 33:40",
+            "en": "Qur’an 33:40",
+            "fr": "Coran 33,40"
+          },
+          "url": "https://quran.com/33/40",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 33,
+            "verse": 40,
+            "endVerse": 40
+          }
+        },
+        {
+          "id": "bukhari-3715",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sahih al-Bukhari 3715",
+            "en": "Sahih al-Bukhari 3715",
+            "fr": "Sahih al-Bukhari 3715"
+          },
+          "url": "https://sunnah.com/bukhari:3715"
+        }
+      ],
+      "indexId": "quran:muhammad"
+    },
+    {
+      "id": "islam:khadija",
+      "name": {
+        "nl": "Khadija",
+        "en": "Khadija",
+        "fr": "Khadîja"
+      },
+      "aliases": [
+        "Khadijah"
+      ],
+      "summary": {
+        "nl": "Echtgenote van Mohammed, herinnerd in de hadithverzameling van al-Bukhari. Zij wordt niet bij naam in de Koran genoemd.",
+        "en": "Muhammad’s wife, remembered in al-Bukhari’s hadith collection. She is not named in the Qur’an.",
+        "fr": "Épouse de Muhammad, évoquée dans le recueil d’al-Bukhari. Elle n’est pas nommée dans le Coran."
+      },
+      "refs": [
+        {
+          "id": "bukhari-3821",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sahih al-Bukhari 3821",
+            "en": "Sahih al-Bukhari 3821",
+            "fr": "Sahih al-Bukhari 3821"
+          },
+          "url": "https://sunnah.com/bukhari:3821"
+        }
+      ]
+    },
+    {
+      "id": "islam:fatima",
+      "name": {
+        "nl": "Fatima",
+        "en": "Fatima",
+        "fr": "Fâtima"
+      },
+      "aliases": [
+        "Fatimah"
+      ],
+      "summary": {
+        "nl": "Dochter van Mohammed, echtgenote van Ali en moeder van Hasan en Husayn in de islamitische overlevering.",
+        "en": "Muhammad’s daughter, Ali’s wife and mother of Hasan and Husayn in Islamic tradition.",
+        "fr": "Fille de Muhammad, épouse de ‘Alî et mère de Hasan et Husayn dans la tradition islamique."
+      },
+      "refs": [
+        {
+          "id": "bukhari-3715",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sahih al-Bukhari 3715",
+            "en": "Sahih al-Bukhari 3715",
+            "fr": "Sahih al-Bukhari 3715"
+          },
+          "url": "https://sunnah.com/bukhari:3715"
+        },
+        {
+          "id": "bukhari-5361",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sahih al-Bukhari 5361",
+            "en": "Sahih al-Bukhari 5361",
+            "fr": "Sahih al-Bukhari 5361"
+          },
+          "url": "https://sunnah.com/bukhari:5361"
+        },
+        {
+          "id": "fatima-biography",
+          "kind": "tradition",
+          "label": {
+            "nl": "Al-Qurashi: Fatima en haar gezin · sjiitische biografie",
+            "en": "Al-Qurashi: Fatima and her family · Shi‘i biography",
+            "fr": "Al-Qurashi : Fatima et sa famille · biographie chiite"
+          },
+          "url": "https://al-islam.org/life-fatimah-az-zahra-principal-all-women-study-and-analysis-baqir-sharif-al-qurashi/fatimah-quran"
+        }
+      ]
+    },
+    {
+      "id": "islam:ali",
+      "name": {
+        "nl": "Ali",
+        "en": "Ali",
+        "fr": "‘Alî"
+      },
+      "aliases": [],
+      "summary": {
+        "nl": "Echtgenoot van Fatima en vader van Hasan en Husayn. Familiebanden en latere opvattingen over religieus gezag zijn afzonderlijke zaken.",
+        "en": "Fatima’s husband and father of Hasan and Husayn. Family connections and later views of religious authority are distinct matters.",
+        "fr": "Époux de Fâtima et père de Hasan et Husayn. Parenté et conceptions ultérieures de l’autorité religieuse sont des questions distinctes."
+      },
+      "refs": [
+        {
+          "id": "bukhari-5361",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sahih al-Bukhari 5361",
+            "en": "Sahih al-Bukhari 5361",
+            "fr": "Sahih al-Bukhari 5361"
+          },
+          "url": "https://sunnah.com/bukhari:5361"
+        },
+        {
+          "id": "muslim-2424",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sahih Muslim 2424",
+            "en": "Sahih Muslim 2424",
+            "fr": "Sahih Muslim 2424"
+          },
+          "url": "https://sunnah.com/muslim:2424"
+        },
+        {
+          "id": "fatima-biography",
+          "kind": "tradition",
+          "label": {
+            "nl": "Al-Qurashi: Fatima en haar gezin · sjiitische biografie",
+            "en": "Al-Qurashi: Fatima and her family · Shi‘i biography",
+            "fr": "Al-Qurashi : Fatima et sa famille · biographie chiite"
+          },
+          "url": "https://al-islam.org/life-fatimah-az-zahra-principal-all-women-study-and-analysis-baqir-sharif-al-qurashi/fatimah-quran"
+        }
+      ]
+    },
+    {
+      "id": "islam:hasan",
+      "name": {
+        "nl": "Hasan",
+        "en": "Hasan",
+        "fr": "Hasan"
+      },
+      "aliases": [
+        "Hassan"
+      ],
+      "summary": {
+        "nl": "Zoon van Ali en Fatima; opgenomen in de overlevering over de mantel en het huis van de profeet.",
+        "en": "Son of Ali and Fatima; included in the tradition of the cloak and the Prophet’s household.",
+        "fr": "Fils de ‘Alî et de Fâtima ; figure dans la tradition du manteau et de la famille du Prophète."
+      },
+      "refs": [
+        {
+          "id": "muslim-2424",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sahih Muslim 2424",
+            "en": "Sahih Muslim 2424",
+            "fr": "Sahih Muslim 2424"
+          },
+          "url": "https://sunnah.com/muslim:2424"
+        },
+        {
+          "id": "fatima-biography",
+          "kind": "tradition",
+          "label": {
+            "nl": "Al-Qurashi: Fatima en haar gezin · sjiitische biografie",
+            "en": "Al-Qurashi: Fatima and her family · Shi‘i biography",
+            "fr": "Al-Qurashi : Fatima et sa famille · biographie chiite"
+          },
+          "url": "https://al-islam.org/life-fatimah-az-zahra-principal-all-women-study-and-analysis-baqir-sharif-al-qurashi/fatimah-quran"
+        }
+      ]
+    },
+    {
+      "id": "islam:husayn",
+      "name": {
+        "nl": "Husayn",
+        "en": "Husayn",
+        "fr": "Husayn"
+      },
+      "aliases": [
+        "Hussein",
+        "Husain"
+      ],
+      "summary": {
+        "nl": "Zoon van Ali en Fatima, samen met Hasan aanwezig in de overlevering over de mantel.",
+        "en": "Son of Ali and Fatima, present alongside Hasan in the tradition of the cloak.",
+        "fr": "Fils de ‘Alî et de Fâtima, présent avec Hasan dans la tradition du manteau."
+      },
+      "refs": [
+        {
+          "id": "muslim-2424",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sahih Muslim 2424",
+            "en": "Sahih Muslim 2424",
+            "fr": "Sahih Muslim 2424"
+          },
+          "url": "https://sunnah.com/muslim:2424"
+        },
+        {
+          "id": "fatima-biography",
+          "kind": "tradition",
+          "label": {
+            "nl": "Al-Qurashi: Fatima en haar gezin · sjiitische biografie",
+            "en": "Al-Qurashi: Fatima and her family · Shi‘i biography",
+            "fr": "Al-Qurashi : Fatima et sa famille · biographie chiite"
+          },
+          "url": "https://al-islam.org/life-fatimah-az-zahra-principal-all-women-study-and-analysis-baqir-sharif-al-qurashi/fatimah-quran"
+        }
+      ]
+    },
+    {
+      "id": "islam:zayd",
+      "name": {
+        "nl": "Zayd",
+        "en": "Zayd",
+        "fr": "Zayd"
+      },
+      "aliases": [],
+      "summary": {
+        "nl": "Wordt in de Koran genoemd. De hadith beschrijft zijn vroegere naam Zayd ibn Muhammad; de adoptielijn is geen biologische afstamming.",
+        "en": "Named in the Qur’an. Hadith records his former name Zayd ibn Muhammad; the adoptive connection is not biological descent.",
+        "fr": "Nommé dans le Coran. Le hadith rapporte son ancien nom Zayd ibn Muhammad ; le lien adoptif n’est pas une filiation biologique."
+      },
+      "refs": [
+        {
+          "id": "q-33-4-5",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 33:4–5",
+            "en": "Qur’an 33:4–5",
+            "fr": "Coran 33,4–5"
+          },
+          "url": "https://quran.com/33/4-5",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 33,
+            "verse": 4,
+            "endVerse": 5
+          }
+        },
+        {
+          "id": "q-33-37-37",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 33:37",
+            "en": "Qur’an 33:37",
+            "fr": "Coran 33,37"
+          },
+          "url": "https://quran.com/33/37",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 33,
+            "verse": 37,
+            "endVerse": 37
+          }
+        },
+        {
+          "id": "bukhari-4782",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sahih al-Bukhari 4782",
+            "en": "Sahih al-Bukhari 4782",
+            "fr": "Sahih al-Bukhari 4782"
+          },
+          "url": "https://sunnah.com/bukhari:4782"
+        }
+      ],
+      "indexId": "quran:zayd"
+    },
+    {
+      "id": "islam:david",
+      "name": {
+        "nl": "Dawud",
+        "en": "Dawud",
+        "fr": "Dâwûd"
+      },
+      "aliases": [
+        "David"
+      ],
+      "summary": {
+        "nl": "Ontvangt volgens de Koran Sulayman als zoon; de verhaallijn verbindt kennis, oordeel en heerschappij.",
+        "en": "Receives Sulayman as a son in the Qur’anic account; the narrative connects knowledge, judgment and rule.",
+        "fr": "Reçoit Sulaymân comme fils dans le récit coranique ; celui-ci relie savoir, jugement et pouvoir."
+      },
+      "refs": [
+        {
+          "id": "q-38-30-30",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 38:30",
+            "en": "Qur’an 38:30",
+            "fr": "Coran 38,30"
+          },
+          "url": "https://quran.com/38/30",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 38,
+            "verse": 30,
+            "endVerse": 30
+          }
+        },
+        {
+          "id": "q-27-15-16",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 27:15–16",
+            "en": "Qur’an 27:15–16",
+            "fr": "Coran 27,15–16"
+          },
+          "url": "https://quran.com/27/15-16",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 27,
+            "verse": 15,
+            "endVerse": 16
+          }
+        }
+      ],
+      "indexId": "quran:david"
+    },
+    {
+      "id": "islam:solomon",
+      "name": {
+        "nl": "Sulayman",
+        "en": "Sulayman",
+        "fr": "Sulaymân"
+      },
+      "aliases": [
+        "Salomo",
+        "Solomon",
+        "Salomon"
+      ],
+      "summary": {
+        "nl": "Zoon en opvolger van Dawud; zijn verhaal omvat de ontmoeting met de koningin van Saba.",
+        "en": "Dawud’s son and successor; his narrative includes the encounter with the queen of Sheba.",
+        "fr": "Fils et successeur de Dâwûd ; son récit comprend la rencontre avec la reine de Saba."
+      },
+      "refs": [
+        {
+          "id": "q-38-30-30",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 38:30",
+            "en": "Qur’an 38:30",
+            "fr": "Coran 38,30"
+          },
+          "url": "https://quran.com/38/30",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 38,
+            "verse": 30,
+            "endVerse": 30
+          }
+        },
+        {
+          "id": "q-27-15-16",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 27:15–16",
+            "en": "Qur’an 27:15–16",
+            "fr": "Coran 27,15–16"
+          },
+          "url": "https://quran.com/27/15-16",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 27,
+            "verse": 15,
+            "endVerse": 16
+          }
+        },
+        {
+          "id": "q-27-22-44",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 27:22–44",
+            "en": "Qur’an 27:22–44",
+            "fr": "Coran 27,22–44"
+          },
+          "url": "https://quran.com/27/22-44",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 27,
+            "verse": 22,
+            "endVerse": 44
+          }
+        }
+      ],
+      "indexId": "quran:solomon"
+    },
+    {
+      "id": "islam:queen-sheba",
+      "name": {
+        "nl": "De koningin van Saba",
+        "en": "The queen of Sheba",
+        "fr": "La reine de Saba"
+      },
+      "aliases": [
+        "Bilqis",
+        "Bilqîs"
+      ],
+      "summary": {
+        "nl": "Een heerseres in Sulaymans verhaal; de naam Bilqis komt niet in de Korantekst voor.",
+        "en": "A ruler in Sulayman’s narrative; the name Bilqis does not occur in the Qur’anic text.",
+        "fr": "Souveraine dans le récit de Sulaymân ; le nom Bilqîs ne figure pas dans le texte coranique."
+      },
+      "refs": [
+        {
+          "id": "q-27-22-44",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 27:22–44",
+            "en": "Qur’an 27:22–44",
+            "fr": "Coran 27,22–44"
+          },
+          "url": "https://quran.com/27/22-44",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 27,
+            "verse": 22,
+            "endVerse": 44
+          }
+        }
+      ],
+      "indexId": "quran:queen-sheba"
+    },
+    {
+      "id": "islam:hud",
+      "name": {
+        "nl": "Hud",
+        "en": "Hud",
+        "fr": "Hûd"
+      },
+      "aliases": [],
+      "summary": {
+        "nl": "Boodschapper tot Ad, verbonden met het waarschuwingsverhaal van al-Ahqaf.",
+        "en": "Messenger to Ad, connected with the warning narrative of al-Ahqaf.",
+        "fr": "Messager envoyé aux ‘Âd, lié au récit d’avertissement d’al-Ahqâf."
+      },
+      "refs": [
+        {
+          "id": "q-7-65-65",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 7:65",
+            "en": "Qur’an 7:65",
+            "fr": "Coran 7,65"
+          },
+          "url": "https://quran.com/7/65",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 7,
+            "verse": 65,
+            "endVerse": 65
+          }
+        },
+        {
+          "id": "q-46-21-26",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 46:21–26",
+            "en": "Qur’an 46:21–26",
+            "fr": "Coran 46,21–26"
+          },
+          "url": "https://quran.com/46/21-26",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 46,
+            "verse": 21,
+            "endVerse": 26
+          }
+        }
+      ],
+      "indexId": "quran:hud"
+    },
+    {
+      "id": "islam:salih",
+      "name": {
+        "nl": "Salih",
+        "en": "Salih",
+        "fr": "Sâlih"
+      },
+      "aliases": [],
+      "summary": {
+        "nl": "Boodschapper tot Thamud; de islamitische overlevering verbindt dit volk met al-Hijr.",
+        "en": "Messenger to Thamud; Islamic tradition connects this people with al-Hijr.",
+        "fr": "Messager envoyé aux Thamûd ; la tradition islamique relie ce peuple à al-Hijr."
+      },
+      "refs": [
+        {
+          "id": "q-7-73-74",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 7:73–74",
+            "en": "Qur’an 7:73–74",
+            "fr": "Coran 7,73–74"
+          },
+          "url": "https://quran.com/7/73-74",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 7,
+            "verse": 73,
+            "endVerse": 74
+          }
+        },
+        {
+          "id": "bukhari-3378",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sahih al-Bukhari 3378",
+            "en": "Sahih al-Bukhari 3378",
+            "fr": "Sahih al-Bukhari 3378"
+          },
+          "url": "https://sunnah.com/bukhari:3378"
+        }
+      ],
+      "indexId": "quran:salih"
+    },
+    {
+      "id": "islam:shuayb",
+      "name": {
+        "nl": "Shuayb",
+        "en": "Shuayb",
+        "fr": "Chu‘ayb"
+      },
+      "aliases": [],
+      "summary": {
+        "nl": "Boodschapper tot Madyan die rechtvaardigheid in handel benadrukt. Niet gelijkgesteld aan Musa’s naamloze schoonvader.",
+        "en": "Messenger to Madyan who stresses fairness in trade. Not equated with Musa’s unnamed father-in-law.",
+        "fr": "Messager envoyé à Madyan qui insiste sur l’équité commerciale. Il n’est pas assimilé au beau-père anonyme de Mûsâ."
+      },
+      "refs": [
+        {
+          "id": "q-7-85-85",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 7:85",
+            "en": "Qur’an 7:85",
+            "fr": "Coran 7,85"
+          },
+          "url": "https://quran.com/7/85",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 7,
+            "verse": 85,
+            "endVerse": 85
+          }
+        },
+        {
+          "id": "q-28-23-28",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 28:23–28",
+            "en": "Qur’an 28:23–28",
+            "fr": "Coran 28,23–28"
+          },
+          "url": "https://quran.com/28/23-28",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 28,
+            "verse": 23,
+            "endVerse": 28
+          }
+        }
+      ],
+      "indexId": "quran:shuayb"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "islam:rel-abraham-abraham-wife-spouse",
+      "source": "islam:abraham",
+      "target": "islam:abraham-wife",
+      "type": "spouse",
+      "summary": {
+        "nl": "De aankondiging spreekt over Ibrahim en zijn vrouw.",
+        "en": "The announcement refers to Ibrahim and his wife.",
+        "fr": "L’annonce mentionne Ibrâhîm et son épouse."
+      },
+      "refs": [
+        {
+          "id": "q-11-69-73",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 11:69–73",
+            "en": "Qur’an 11:69–73",
+            "fr": "Coran 11,69–73"
+          },
+          "url": "https://quran.com/11/69-73",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 11,
+            "verse": 69,
+            "endVerse": 73
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-abraham-ishmael-parent",
+      "source": "islam:abraham",
+      "target": "islam:ishmael",
+      "type": "parent",
+      "summary": {
+        "nl": "Ibrahim noemt Ismail als aan hem geschonken zoon.",
+        "en": "Ibrahim names Ismail as a son granted to him.",
+        "fr": "Ibrâhîm nomme Ismâïl parmi les fils qui lui ont été accordés."
+      },
+      "refs": [
+        {
+          "id": "q-14-39-39",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 14:39",
+            "en": "Qur’an 14:39",
+            "fr": "Coran 14,39"
+          },
+          "url": "https://quran.com/14/39",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 14,
+            "verse": 39,
+            "endVerse": 39
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-abraham-isaac-parent",
+      "source": "islam:abraham",
+      "target": "islam:isaac",
+      "type": "parent",
+      "summary": {
+        "nl": "Ibrahim noemt Ishaq als aan hem geschonken zoon.",
+        "en": "Ibrahim names Ishaq as a son granted to him.",
+        "fr": "Ibrâhîm nomme Ishâq parmi les fils qui lui ont été accordés."
+      },
+      "refs": [
+        {
+          "id": "q-14-39-39",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 14:39",
+            "en": "Qur’an 14:39",
+            "fr": "Coran 14,39"
+          },
+          "url": "https://quran.com/14/39",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 14,
+            "verse": 39,
+            "endVerse": 39
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-abraham-wife-isaac-parent",
+      "source": "islam:abraham-wife",
+      "target": "islam:isaac",
+      "type": "parent",
+      "summary": {
+        "nl": "De vrouw ontvangt de aankondiging van Ishaq ondanks haar ouderdom.",
+        "en": "The wife receives the announcement of Ishaq despite her old age.",
+        "fr": "L’épouse reçoit l’annonce d’Ishâq malgré son âge avancé."
+      },
+      "refs": [
+        {
+          "id": "q-11-71-73",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 11:71–73",
+            "en": "Qur’an 11:71–73",
+            "fr": "Coran 11,71–73"
+          },
+          "url": "https://quran.com/11/71-73",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 11,
+            "verse": 71,
+            "endVerse": 73
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-isaac-jacob-parent",
+      "source": "islam:isaac",
+      "target": "islam:jacob",
+      "type": "parent",
+      "summary": {
+        "nl": "De hadith noemt Yaqub expliciet zoon van Ishaq; Koran 11:71 plaatst hem na Ishaq.",
+        "en": "Hadith explicitly names Yaqub as Ishaq’s son; Qur’an 11:71 places him after Ishaq.",
+        "fr": "Le hadith nomme explicitement Ya‘qûb fils d’Ishâq ; le Coran 11,71 le place après Ishâq."
+      },
+      "refs": [
+        {
+          "id": "bukhari-3382",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sahih al-Bukhari 3382",
+            "en": "Sahih al-Bukhari 3382",
+            "fr": "Sahih al-Bukhari 3382"
+          },
+          "url": "https://sunnah.com/bukhari:3382"
+        },
+        {
+          "id": "q-11-71-71",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 11:71",
+            "en": "Qur’an 11:71",
+            "fr": "Coran 11,71"
+          },
+          "url": "https://quran.com/11/71",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 11,
+            "verse": 71,
+            "endVerse": 71
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-jacob-joseph-parent",
+      "source": "islam:jacob",
+      "target": "islam:joseph",
+      "type": "parent",
+      "summary": {
+        "nl": "Yusuf spreekt tot zijn vader; de hadith noemt die vader Yaqub.",
+        "en": "Yusuf addresses his father; hadith identifies that father as Yaqub.",
+        "fr": "Yûsuf s’adresse à son père ; le hadith identifie ce père à Ya‘qûb."
+      },
+      "refs": [
+        {
+          "id": "q-12-4-6",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 12:4–6",
+            "en": "Qur’an 12:4–6",
+            "fr": "Coran 12,4–6"
+          },
+          "url": "https://quran.com/12/4-6",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 12,
+            "verse": 4,
+            "endVerse": 6
+          }
+        },
+        {
+          "id": "bukhari-3382",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sahih al-Bukhari 3382",
+            "en": "Sahih al-Bukhari 3382",
+            "fr": "Sahih al-Bukhari 3382"
+          },
+          "url": "https://sunnah.com/bukhari:3382"
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-joseph-joseph-brother-sibling",
+      "source": "islam:joseph",
+      "target": "islam:joseph-brother",
+      "type": "sibling",
+      "summary": {
+        "nl": "Yusuf maakt zich bekend aan zijn broer. De broer blijft hier zonder persoonlijke naam.",
+        "en": "Yusuf reveals himself to his brother. The brother remains unnamed here.",
+        "fr": "Yûsuf se fait reconnaître par son frère. Celui-ci reste anonyme ici."
+      },
+      "refs": [
+        {
+          "id": "q-12-69-69",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 12:69",
+            "en": "Qur’an 12:69",
+            "fr": "Coran 12,69"
+          },
+          "url": "https://quran.com/12/69",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 12,
+            "verse": 69,
+            "endVerse": 69
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-moses-mother-moses-parent",
+      "source": "islam:moses-mother",
+      "target": "islam:moses",
+      "type": "parent",
+      "summary": {
+        "nl": "Het verhaal noemt haar uitdrukkelijk Musa’s moeder.",
+        "en": "The narrative explicitly calls her Musa’s mother.",
+        "fr": "Le récit la désigne explicitement comme la mère de Mûsâ."
+      },
+      "refs": [
+        {
+          "id": "q-28-7-13",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 28:7–13",
+            "en": "Qur’an 28:7–13",
+            "fr": "Coran 28,7–13"
+          },
+          "url": "https://quran.com/28/7-13",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 28,
+            "verse": 7,
+            "endVerse": 13
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-moses-mother-aaron-parent",
+      "source": "islam:moses-mother",
+      "target": "islam:aaron",
+      "type": "parent",
+      "summary": {
+        "nl": "Haruns aanspreking “zoon van mijn moeder” wijst op hun gedeelde moeder.",
+        "en": "Harun’s address “son of my mother” indicates their shared mother.",
+        "fr": "L’appellation « fils de ma mère » employée par Hârûn indique leur mère commune."
+      },
+      "refs": [
+        {
+          "id": "q-20-94-94",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 20:94",
+            "en": "Qur’an 20:94",
+            "fr": "Coran 20,94"
+          },
+          "url": "https://quran.com/20/94",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 20,
+            "verse": 94,
+            "endVerse": 94
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-moses-aaron-sibling",
+      "source": "islam:moses",
+      "target": "islam:aaron",
+      "type": "sibling",
+      "summary": {
+        "nl": "Musa noemt Harun zijn broer.",
+        "en": "Musa names Harun as his brother.",
+        "fr": "Mûsâ nomme Hârûn comme son frère."
+      },
+      "refs": [
+        {
+          "id": "q-20-29-30",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 20:29–30",
+            "en": "Qur’an 20:29–30",
+            "fr": "Coran 20,29–30"
+          },
+          "url": "https://quran.com/20/29-30",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 20,
+            "verse": 29,
+            "endVerse": 30
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-moses-moses-sister-sibling",
+      "source": "islam:moses",
+      "target": "islam:moses-sister",
+      "type": "sibling",
+      "summary": {
+        "nl": "De verteller identificeert de vrouw die hem volgt als zijn zus.",
+        "en": "The narrator identifies the woman who follows him as his sister.",
+        "fr": "Le narrateur identifie la femme qui le suit comme sa sœur."
+      },
+      "refs": [
+        {
+          "id": "q-28-11-13",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 28:11–13",
+            "en": "Qur’an 28:11–13",
+            "fr": "Coran 28,11–13"
+          },
+          "url": "https://quran.com/28/11-13",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 28,
+            "verse": 11,
+            "endVerse": 13
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-midian-elder-moses-wife-parent",
+      "source": "islam:midian-elder",
+      "target": "islam:moses-wife",
+      "type": "parent",
+      "summary": {
+        "nl": "De vader biedt een van zijn twee dochters ten huwelijk aan. Haar eigen naam ontbreekt.",
+        "en": "The father offers one of his two daughters in marriage. Her personal name is absent.",
+        "fr": "Le père propose une de ses deux filles en mariage. Son nom personnel est absent."
+      },
+      "refs": [
+        {
+          "id": "q-28-27-28",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 28:27–28",
+            "en": "Qur’an 28:27–28",
+            "fr": "Coran 28,27–28"
+          },
+          "url": "https://quran.com/28/27-28",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 28,
+            "verse": 27,
+            "endVerse": 28
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-moses-moses-wife-spouse",
+      "source": "islam:moses",
+      "target": "islam:moses-wife",
+      "type": "spouse",
+      "summary": {
+        "nl": "De huwelijksovereenkomst wordt aanvaard; de volgende passage noemt Musa’s gezin.",
+        "en": "The marriage agreement is accepted; the next passage mentions Musa’s family.",
+        "fr": "L’accord de mariage est accepté ; le passage suivant évoque la famille de Mûsâ."
+      },
+      "refs": [
+        {
+          "id": "q-28-27-29",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 28:27–29",
+            "en": "Qur’an 28:27–29",
+            "fr": "Coran 28,27–29"
+          },
+          "url": "https://quran.com/28/27-29",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 28,
+            "verse": 27,
+            "endVerse": 29
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-imran-mary-mother-spouse",
+      "source": "islam:imran",
+      "target": "islam:mary-mother",
+      "type": "spouse",
+      "summary": {
+        "nl": "Maryams moeder wordt aangeduid als de vrouw van Imran.",
+        "en": "Maryam’s mother is identified as Imran’s wife.",
+        "fr": "La mère de Maryam est désignée comme l’épouse de ‘Imrân."
+      },
+      "refs": [
+        {
+          "id": "q-3-35-36",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 3:35–36",
+            "en": "Qur’an 3:35–36",
+            "fr": "Coran 3,35–36"
+          },
+          "url": "https://quran.com/3/35-36",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 3,
+            "verse": 35,
+            "endVerse": 36
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-imran-mary-parent",
+      "source": "islam:imran",
+      "target": "islam:mary",
+      "type": "parent",
+      "summary": {
+        "nl": "Maryam wordt dochter van Imran genoemd.",
+        "en": "Maryam is called the daughter of Imran.",
+        "fr": "Maryam est appelée fille de ‘Imrân."
+      },
+      "refs": [
+        {
+          "id": "q-66-12-12",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 66:12",
+            "en": "Qur’an 66:12",
+            "fr": "Coran 66,12"
+          },
+          "url": "https://quran.com/66/12",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 66,
+            "verse": 12,
+            "endVerse": 12
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-mary-mother-mary-parent",
+      "source": "islam:mary-mother",
+      "target": "islam:mary",
+      "type": "parent",
+      "summary": {
+        "nl": "De vrouw brengt Maryam ter wereld en noemt haar bij naam.",
+        "en": "The woman gives birth to Maryam and names her.",
+        "fr": "La femme met Maryam au monde et lui donne son nom."
+      },
+      "refs": [
+        {
+          "id": "q-3-35-36",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 3:35–36",
+            "en": "Qur’an 3:35–36",
+            "fr": "Coran 3,35–36"
+          },
+          "url": "https://quran.com/3/35-36",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 3,
+            "verse": 35,
+            "endVerse": 36
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-mary-jesus-parent",
+      "source": "islam:mary",
+      "target": "islam:jesus",
+      "type": "parent",
+      "summary": {
+        "nl": "Isa wordt zoon van Maryam genoemd; er wordt geen menselijke vader toegevoegd.",
+        "en": "Isa is called the son of Maryam; no human father is added.",
+        "fr": "Îsâ est appelé fils de Maryam ; aucun père humain n’est ajouté."
+      },
+      "refs": [
+        {
+          "id": "q-19-20-22",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 19:20–22",
+            "en": "Qur’an 19:20–22",
+            "fr": "Coran 19,20–22"
+          },
+          "url": "https://quran.com/19/20-22",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 19,
+            "verse": 20,
+            "endVerse": 22
+          }
+        },
+        {
+          "id": "q-19-34-34",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 19:34",
+            "en": "Qur’an 19:34",
+            "fr": "Coran 19,34"
+          },
+          "url": "https://quran.com/19/34",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 19,
+            "verse": 34,
+            "endVerse": 34
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-zechariah-mary-guardian",
+      "source": "islam:zechariah",
+      "target": "islam:mary",
+      "type": "guardian",
+      "summary": {
+        "nl": "Zakariya krijgt de zorg voor Maryam; dit is geen vader-dochterlijn.",
+        "en": "Zakariya is entrusted with Maryam’s care; this is not a father–daughter line.",
+        "fr": "Zakariyyâ reçoit la charge de Maryam ; ce n’est pas un lien père-fille."
+      },
+      "refs": [
+        {
+          "id": "q-3-37-37",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 3:37",
+            "en": "Qur’an 3:37",
+            "fr": "Coran 3,37"
+          },
+          "url": "https://quran.com/3/37",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 3,
+            "verse": 37,
+            "endVerse": 37
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-zechariah-zechariah-wife-spouse",
+      "source": "islam:zechariah",
+      "target": "islam:zechariah-wife",
+      "type": "spouse",
+      "summary": {
+        "nl": "Zakariya verwijst naar zijn vrouw bij de aankondiging van Yahya.",
+        "en": "Zakariya refers to his wife when Yahya is announced.",
+        "fr": "Zakariyyâ évoque son épouse lors de l’annonce de Yahyâ."
+      },
+      "refs": [
+        {
+          "id": "q-3-39-40",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 3:39–40",
+            "en": "Qur’an 3:39–40",
+            "fr": "Coran 3,39–40"
+          },
+          "url": "https://quran.com/3/39-40",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 3,
+            "verse": 39,
+            "endVerse": 40
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-zechariah-john-baptist-parent",
+      "source": "islam:zechariah",
+      "target": "islam:john-baptist",
+      "type": "parent",
+      "summary": {
+        "nl": "Yahya wordt aan Zakariya aangekondigd als zoon.",
+        "en": "Yahya is announced to Zakariya as a son.",
+        "fr": "Yahyâ est annoncé à Zakariyyâ comme fils."
+      },
+      "refs": [
+        {
+          "id": "q-3-39-40",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 3:39–40",
+            "en": "Qur’an 3:39–40",
+            "fr": "Coran 3,39–40"
+          },
+          "url": "https://quran.com/3/39-40",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 3,
+            "verse": 39,
+            "endVerse": 40
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-zechariah-wife-john-baptist-parent",
+      "source": "islam:zechariah-wife",
+      "target": "islam:john-baptist",
+      "type": "parent",
+      "summary": {
+        "nl": "De gave van Yahya wordt verbonden met het herstel van Zakariya’s vrouw.",
+        "en": "The gift of Yahya is linked to the restoration of Zakariya’s wife.",
+        "fr": "Le don de Yahyâ est lié à la guérison de l’épouse de Zakariyyâ."
+      },
+      "refs": [
+        {
+          "id": "q-21-89-90",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 21:89–90",
+            "en": "Qur’an 21:89–90",
+            "fr": "Coran 21,89–90"
+          },
+          "url": "https://quran.com/21/89-90",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 21,
+            "verse": 89,
+            "endVerse": 90
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-noah-noah-wife-spouse",
+      "source": "islam:noah",
+      "target": "islam:noah-wife",
+      "type": "spouse",
+      "summary": {
+        "nl": "Koran 66:10 noemt de vrouw van Nuh. Haar naam wordt niet ingevuld.",
+        "en": "Qur’an 66:10 mentions Nuh’s wife. Her name is not supplied.",
+        "fr": "Le Coran 66,10 mentionne l’épouse de Nûh. Son nom n’est pas ajouté."
+      },
+      "refs": [
+        {
+          "id": "q-66-10-10",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 66:10",
+            "en": "Qur’an 66:10",
+            "fr": "Coran 66,10"
+          },
+          "url": "https://quran.com/66/10",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 66,
+            "verse": 10,
+            "endVerse": 10
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-noah-noah-son-parent",
+      "source": "islam:noah",
+      "target": "islam:noah-son",
+      "type": "parent",
+      "summary": {
+        "nl": "11:42 noemt hem Nuhs zoon; 11:46 maakt religieus behoren tot het gezin tot een afzonderlijke kwestie.",
+        "en": "11:42 calls him Nuh’s son; 11:46 makes religious membership of the household a separate issue.",
+        "fr": "11,42 le nomme fils de Nûh ; 11,46 traite séparément de son appartenance religieuse à la famille."
+      },
+      "refs": [
+        {
+          "id": "q-11-42-46",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 11:42–46",
+            "en": "Qur’an 11:42–46",
+            "fr": "Coran 11,42–46"
+          },
+          "url": "https://quran.com/11/42-46",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 11,
+            "verse": 42,
+            "endVerse": 46
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-muhammad-khadija-spouse",
+      "source": "islam:muhammad",
+      "target": "islam:khadija",
+      "type": "spouse",
+      "summary": {
+        "nl": "Het huwelijksverband is ontleend aan de hadithtraditie, niet aan een naamvermelding in de Koran.",
+        "en": "The marriage comes from hadith tradition, not from a naming in the Qur’an.",
+        "fr": "Le mariage provient de la tradition du hadith, non d’une mention nominative dans le Coran."
+      },
+      "refs": [
+        {
+          "id": "bukhari-3821",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sahih al-Bukhari 3821",
+            "en": "Sahih al-Bukhari 3821",
+            "fr": "Sahih al-Bukhari 3821"
+          },
+          "url": "https://sunnah.com/bukhari:3821"
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-muhammad-fatima-parent",
+      "source": "islam:muhammad",
+      "target": "islam:fatima",
+      "type": "parent",
+      "summary": {
+        "nl": "Al-Bukhari noemt Fatima expliciet zijn dochter.",
+        "en": "Al-Bukhari explicitly calls Fatima his daughter.",
+        "fr": "Al-Bukhari désigne explicitement Fâtima comme sa fille."
+      },
+      "refs": [
+        {
+          "id": "bukhari-3715",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sahih al-Bukhari 3715",
+            "en": "Sahih al-Bukhari 3715",
+            "fr": "Sahih al-Bukhari 3715"
+          },
+          "url": "https://sunnah.com/bukhari:3715"
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-ali-fatima-spouse",
+      "source": "islam:ali",
+      "target": "islam:fatima",
+      "type": "spouse",
+      "summary": {
+        "nl": "De overlevering beschrijft hun gezamenlijke huishouden.",
+        "en": "The tradition describes their shared household.",
+        "fr": "La tradition décrit leur foyer commun."
+      },
+      "refs": [
+        {
+          "id": "bukhari-5361",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sahih al-Bukhari 5361",
+            "en": "Sahih al-Bukhari 5361",
+            "fr": "Sahih al-Bukhari 5361"
+          },
+          "url": "https://sunnah.com/bukhari:5361"
+        },
+        {
+          "id": "fatima-biography",
+          "kind": "tradition",
+          "label": {
+            "nl": "Al-Qurashi: Fatima en haar gezin · sjiitische biografie",
+            "en": "Al-Qurashi: Fatima and her family · Shi‘i biography",
+            "fr": "Al-Qurashi : Fatima et sa famille · biographie chiite"
+          },
+          "url": "https://al-islam.org/life-fatimah-az-zahra-principal-all-women-study-and-analysis-baqir-sharif-al-qurashi/fatimah-quran"
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-ali-hasan-parent",
+      "source": "islam:ali",
+      "target": "islam:hasan",
+      "type": "parent",
+      "summary": {
+        "nl": "Hasan is in de overlevering een zoon van Ali.",
+        "en": "Hasan is a son of Ali in the tradition.",
+        "fr": "Hasan est un fils de ‘Alî dans la tradition."
+      },
+      "refs": [
+        {
+          "id": "muslim-2424",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sahih Muslim 2424",
+            "en": "Sahih Muslim 2424",
+            "fr": "Sahih Muslim 2424"
+          },
+          "url": "https://sunnah.com/muslim:2424"
+        },
+        {
+          "id": "fatima-biography",
+          "kind": "tradition",
+          "label": {
+            "nl": "Al-Qurashi: Fatima en haar gezin · sjiitische biografie",
+            "en": "Al-Qurashi: Fatima and her family · Shi‘i biography",
+            "fr": "Al-Qurashi : Fatima et sa famille · biographie chiite"
+          },
+          "url": "https://al-islam.org/life-fatimah-az-zahra-principal-all-women-study-and-analysis-baqir-sharif-al-qurashi/fatimah-quran"
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-fatima-hasan-parent",
+      "source": "islam:fatima",
+      "target": "islam:hasan",
+      "type": "parent",
+      "summary": {
+        "nl": "Hasan is in de overlevering een zoon van Fatima.",
+        "en": "Hasan is a son of Fatima in the tradition.",
+        "fr": "Hasan est un fils de Fâtima dans la tradition."
+      },
+      "refs": [
+        {
+          "id": "fatima-biography",
+          "kind": "tradition",
+          "label": {
+            "nl": "Al-Qurashi: Fatima en haar gezin · sjiitische biografie",
+            "en": "Al-Qurashi: Fatima and her family · Shi‘i biography",
+            "fr": "Al-Qurashi : Fatima et sa famille · biographie chiite"
+          },
+          "url": "https://al-islam.org/life-fatimah-az-zahra-principal-all-women-study-and-analysis-baqir-sharif-al-qurashi/fatimah-quran"
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-ali-husayn-parent",
+      "source": "islam:ali",
+      "target": "islam:husayn",
+      "type": "parent",
+      "summary": {
+        "nl": "Husayn is in de overlevering een zoon van Ali.",
+        "en": "Husayn is a son of Ali in the tradition.",
+        "fr": "Husayn est un fils de ‘Alî dans la tradition."
+      },
+      "refs": [
+        {
+          "id": "muslim-2424",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sahih Muslim 2424",
+            "en": "Sahih Muslim 2424",
+            "fr": "Sahih Muslim 2424"
+          },
+          "url": "https://sunnah.com/muslim:2424"
+        },
+        {
+          "id": "fatima-biography",
+          "kind": "tradition",
+          "label": {
+            "nl": "Al-Qurashi: Fatima en haar gezin · sjiitische biografie",
+            "en": "Al-Qurashi: Fatima and her family · Shi‘i biography",
+            "fr": "Al-Qurashi : Fatima et sa famille · biographie chiite"
+          },
+          "url": "https://al-islam.org/life-fatimah-az-zahra-principal-all-women-study-and-analysis-baqir-sharif-al-qurashi/fatimah-quran"
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-fatima-husayn-parent",
+      "source": "islam:fatima",
+      "target": "islam:husayn",
+      "type": "parent",
+      "summary": {
+        "nl": "Husayn is in de overlevering een zoon van Fatima.",
+        "en": "Husayn is a son of Fatima in the tradition.",
+        "fr": "Husayn est un fils de Fâtima dans la tradition."
+      },
+      "refs": [
+        {
+          "id": "fatima-biography",
+          "kind": "tradition",
+          "label": {
+            "nl": "Al-Qurashi: Fatima en haar gezin · sjiitische biografie",
+            "en": "Al-Qurashi: Fatima and her family · Shi‘i biography",
+            "fr": "Al-Qurashi : Fatima et sa famille · biographie chiite"
+          },
+          "url": "https://al-islam.org/life-fatimah-az-zahra-principal-all-women-study-and-analysis-baqir-sharif-al-qurashi/fatimah-quran"
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-muhammad-zayd-adoptive",
+      "source": "islam:muhammad",
+      "target": "islam:zayd",
+      "type": "adoptive",
+      "summary": {
+        "nl": "Voormalige adoptierelatie volgens de hadith. Koran 33:4–5 onderscheidt adoptie van afstamming; dit is geen biologische ouderlijn.",
+        "en": "Former adoptive relationship according to hadith. Qur’an 33:4–5 distinguishes adoption from descent; this is not a biological parent line.",
+        "fr": "Ancien lien adoptif selon le hadith. Le Coran 33,4–5 distingue adoption et filiation ; ce n’est pas une parenté biologique."
+      },
+      "refs": [
+        {
+          "id": "bukhari-4782",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sahih al-Bukhari 4782",
+            "en": "Sahih al-Bukhari 4782",
+            "fr": "Sahih al-Bukhari 4782"
+          },
+          "url": "https://sunnah.com/bukhari:4782"
+        },
+        {
+          "id": "q-33-4-5",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 33:4–5",
+            "en": "Qur’an 33:4–5",
+            "fr": "Coran 33,4–5"
+          },
+          "url": "https://quran.com/33/4-5",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 33,
+            "verse": 4,
+            "endVerse": 5
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:rel-david-solomon-parent",
+      "source": "islam:david",
+      "target": "islam:solomon",
+      "type": "parent",
+      "summary": {
+        "nl": "Sulayman wordt aan Dawud geschonken en volgt hem op; de kaart gebruikt de gangbare islamitische vader-zoonlezing.",
+        "en": "Sulayman is granted to Dawud and succeeds him; the map uses the standard Islamic father–son reading.",
+        "fr": "Sulaymân est accordé à Dâwûd et lui succède ; la carte suit la lecture islamique habituelle de père et fils."
+      },
+      "refs": [
+        {
+          "id": "q-38-30-30",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 38:30",
+            "en": "Qur’an 38:30",
+            "fr": "Coran 38,30"
+          },
+          "url": "https://quran.com/38/30",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 38,
+            "verse": 30,
+            "endVerse": 30
+          }
+        },
+        {
+          "id": "q-27-16-16",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 27:16",
+            "en": "Qur’an 27:16",
+            "fr": "Coran 27,16"
+          },
+          "url": "https://quran.com/27/16",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 27,
+            "verse": 16,
+            "endVerse": 16
+          }
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "id": "islam:mecca",
+      "name": {
+        "nl": "Mekka",
+        "en": "Mecca",
+        "fr": "La Mecque"
+      },
+      "aliases": [
+        "Makkah",
+        "Bakka",
+        "Kaäba",
+        "Kaaba"
+      ],
+      "kind": "city",
+      "summary": {
+        "nl": "Centrum van de bedevaart en plaats van het heilige Huis. Ibrahim en Ismail worden met de bouw van het Huis verbonden.",
+        "en": "Centre of pilgrimage and site of the Sacred House. Ibrahim and Ismail are associated with raising the House.",
+        "fr": "Centre du pèlerinage et lieu de la Maison sacrée. Ibrâhîm et Ismâïl sont associés à son édification."
+      },
+      "historicalContext": {
+        "nl": "Koran 48 situeert het conflict rond toegang tot het heiligdom bij Mekka. De tekst verbindt heilige ruimte met de geschiedenis van Mohammeds gemeenschap.",
+        "en": "Qur’an 48 situates the conflict over access to the sanctuary at Mecca, linking sacred space with the history of Muhammad’s community.",
+        "fr": "Le Coran 48 situe à La Mecque le conflit concernant l’accès au sanctuaire, reliant l’espace sacré à l’histoire de la communauté de Muhammad."
+      },
+      "locationNote": {
+        "nl": "Een bekende stad; de religieuze oorsprongsvertelling is iets anders dan een archeologische datering van de Kaäba.",
+        "en": "An identifiable city; the religious origin narrative is distinct from an archaeological dating of the Kaaba.",
+        "fr": "Ville identifiable ; le récit religieux des origines se distingue d’une datation archéologique de la Kaaba."
+      },
+      "personIds": [
+        "islam:abraham",
+        "islam:ishmael",
+        "islam:muhammad"
+      ],
+      "refs": [
+        {
+          "id": "q-2-125-127",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 2:125–127",
+            "en": "Qur’an 2:125–127",
+            "fr": "Coran 2,125–127"
+          },
+          "url": "https://quran.com/2/125-127",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 2,
+            "verse": 125,
+            "endVerse": 127
+          }
+        },
+        {
+          "id": "q-48-24-25",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 48:24–25",
+            "en": "Qur’an 48:24–25",
+            "fr": "Coran 48,24–25"
+          },
+          "url": "https://quran.com/48/24-25",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 48,
+            "verse": 24,
+            "endVerse": 25
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:medina",
+      "name": {
+        "nl": "Medina · Yathrib",
+        "en": "Medina · Yathrib",
+        "fr": "Médine · Yathrib"
+      },
+      "aliases": [
+        "Madinah",
+        "al-Madina"
+      ],
+      "kind": "city",
+      "summary": {
+        "nl": "De stad van Mohammeds gemeenschap na de migratie uit Mekka. De Koran gebruikt zowel Yathrib als al-Madina.",
+        "en": "The city of Muhammad’s community after migration from Mecca. The Qur’an uses both Yathrib and al-Madina.",
+        "fr": "Ville de la communauté de Muhammad après la migration depuis La Mecque. Le Coran emploie Yathrib et al-Madîna."
+      },
+      "historicalContext": {
+        "nl": "De hadith vertelt over de emigratie en de vestiging van de gemeenschap. Koran 33:13 beschrijft een crisismoment bij Yathrib.",
+        "en": "Hadith recounts migration and the community’s settlement. Qur’an 33:13 describes a crisis at Yathrib.",
+        "fr": "Le hadith relate la migration et l’établissement de la communauté. Le Coran 33,13 décrit une crise à Yathrib."
+      },
+      "locationNote": {
+        "nl": "Yathrib en Medina verwijzen hier naar dezelfde stad; niet elk onbepaald “de stad” elders in de Koran betekent Medina.",
+        "en": "Yathrib and Medina refer here to the same city; not every unspecified “city” elsewhere in the Qur’an means Medina.",
+        "fr": "Yathrib et Médine désignent ici la même ville ; toute « ville » non précisée ailleurs dans le Coran ne signifie pas Médine."
+      },
+      "personIds": [
+        "islam:muhammad"
+      ],
+      "refs": [
+        {
+          "id": "q-33-13-13",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 33:13",
+            "en": "Qur’an 33:13",
+            "fr": "Coran 33,13"
+          },
+          "url": "https://quran.com/33/13",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 33,
+            "verse": 13,
+            "endVerse": 13
+          }
+        },
+        {
+          "id": "q-9-120-120",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 9:120",
+            "en": "Qur’an 9:120",
+            "fr": "Coran 9,120"
+          },
+          "url": "https://quran.com/9/120",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 9,
+            "verse": 120,
+            "endVerse": 120
+          }
+        },
+        {
+          "id": "bukhari-3905",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sahih al-Bukhari 3905",
+            "en": "Sahih al-Bukhari 3905",
+            "fr": "Sahih al-Bukhari 3905"
+          },
+          "url": "https://sunnah.com/bukhari:3905"
+        }
+      ]
+    },
+    {
+      "id": "islam:jerusalem",
+      "name": {
+        "nl": "Jeruzalem · al-Quds",
+        "en": "Jerusalem · al-Quds",
+        "fr": "Jérusalem · al-Quds"
+      },
+      "aliases": [
+        "Al-Quds",
+        "Bayt al-Maqdis",
+        "Al-Aqsa"
+      ],
+      "kind": "city",
+      "summary": {
+        "nl": "In de islamitische traditie verbonden met de nachtelijke reis naar al-Masjid al-Aqsa en de hemelreis van Mohammed.",
+        "en": "Connected in Islamic tradition with Muhammad’s night journey to al-Masjid al-Aqsa and ascent.",
+        "fr": "Associée dans la tradition islamique au voyage nocturne de Muhammad vers al-Masjid al-Aqsa et à son ascension."
+      },
+      "historicalContext": {
+        "nl": "De Rotskoepel bewaart de herinnering aan een heilige rots en de hemelreis. Het museum beschrijft de verschillende religieuze betekenissen van deze plek.",
+        "en": "The Dome of the Rock preserves remembrance of a sacred rock and the ascent. The museum describes the site’s different religious meanings.",
+        "fr": "Le Dôme du Rocher conserve la mémoire d’un rocher sacré et de l’ascension. Le musée décrit les différentes significations religieuses du lieu."
+      },
+      "locationNote": {
+        "nl": "Koran 17:1 noemt Jeruzalem niet bij naam. De identificatie van het “verste gebedshuis” met Jeruzalem behoort tot de islamitische uitlegtraditie.",
+        "en": "Qur’an 17:1 does not name Jerusalem. Identification of the “farthest mosque” with Jerusalem belongs to Islamic interpretive tradition.",
+        "fr": "Le Coran 17,1 ne nomme pas Jérusalem. L’identification du « lieu de prière le plus éloigné » à Jérusalem relève de la tradition interprétative islamique."
+      },
+      "personIds": [
+        "islam:muhammad"
+      ],
+      "refs": [
+        {
+          "id": "q-17-1-1",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 17:1",
+            "en": "Qur’an 17:1",
+            "fr": "Coran 17,1"
+          },
+          "url": "https://quran.com/17/1",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 17,
+            "verse": 1,
+            "endVerse": 1
+          }
+        },
+        {
+          "id": "met-jerusalem",
+          "kind": "historical",
+          "label": {
+            "nl": "Metropolitan Museum: Jeruzalem en de Rotskoepel",
+            "en": "Metropolitan Museum: Jerusalem and the Dome of the Rock",
+            "fr": "Metropolitan Museum : Jérusalem et le Dôme du Rocher"
+          },
+          "url": "https://www.metmuseum.org/exhibitions/listings/2016/jerusalem/exhibition-galleries"
+        }
+      ]
+    },
+    {
+      "id": "islam:badr",
+      "name": {
+        "nl": "Badr",
+        "en": "Badr",
+        "fr": "Badr"
+      },
+      "aliases": [],
+      "kind": "settlement",
+      "summary": {
+        "nl": "Badr wordt bij naam genoemd in de herinnering aan goddelijke hulp aan de vroege gemeenschap.",
+        "en": "Badr is named in the recollection of divine aid to the early community.",
+        "fr": "Badr est nommé dans le rappel de l’aide divine à la première communauté."
+      },
+      "historicalContext": {
+        "nl": "De Korantekst interpreteert de confrontatie in termen van kwetsbaarheid, geduld en hulp. Dit is een religieuze duiding van strijd.",
+        "en": "The Qur’anic text interprets the confrontation through vulnerability, patience and aid. This is a religious interpretation of battle.",
+        "fr": "Le texte coranique interprète l’affrontement en termes de vulnérabilité, de patience et d’aide. Il s’agit d’une lecture religieuse du combat."
+      },
+      "locationNote": {
+        "nl": "De plaatsnaam duidt de omgeving van de confrontatie aan; de passage geeft geen moderne terreingrenzen.",
+        "en": "The place name indicates the setting of the confrontation; the passage gives no modern site boundaries.",
+        "fr": "Le toponyme indique le cadre de l’affrontement ; le passage ne donne pas de limites modernes du site."
+      },
+      "personIds": [
+        "islam:muhammad"
+      ],
+      "refs": [
+        {
+          "id": "q-3-123-125",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 3:123–125",
+            "en": "Qur’an 3:123–125",
+            "fr": "Coran 3,123–125"
+          },
+          "url": "https://quran.com/3/123-125",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 3,
+            "verse": 123,
+            "endVerse": 125
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:hunayn",
+      "name": {
+        "nl": "Hunayn",
+        "en": "Hunayn",
+        "fr": "Hunayn"
+      },
+      "aliases": [],
+      "kind": "region",
+      "summary": {
+        "nl": "De dag van Hunayn wordt herinnerd als een moment waarop numeriek overwicht geen veiligheid bood.",
+        "en": "The day of Hunayn is remembered as a moment when numerical superiority offered no security.",
+        "fr": "Le jour de Hunayn est rappelé comme un moment où la supériorité numérique n’a pas assuré la sécurité."
+      },
+      "historicalContext": {
+        "nl": "De verzen verbinden terugtocht en daaropvolgende rust met Mohammed en zijn gemeenschap. Ze geven betekenis aan een militaire ervaring.",
+        "en": "The verses associate retreat and ensuing reassurance with Muhammad and his community, giving meaning to a military experience.",
+        "fr": "Les versets associent retraite et apaisement à Muhammad et à sa communauté, donnant sens à une expérience militaire."
+      },
+      "locationNote": {
+        "nl": "Een strijdgebied, geen afzonderlijk in deze tekst beschreven stad. Er wordt geen exact modern strijdtoneel vastgelegd.",
+        "en": "A battle area, not a separately described city in this text. No exact modern battlefield is fixed.",
+        "fr": "Une zone de combat, non une ville décrite séparément dans ce texte. Aucun champ de bataille moderne exact n’est fixé."
+      },
+      "personIds": [
+        "islam:muhammad"
+      ],
+      "refs": [
+        {
+          "id": "q-9-25-26",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 9:25–26",
+            "en": "Qur’an 9:25–26",
+            "fr": "Coran 9,25–26"
+          },
+          "url": "https://quran.com/9/25-26",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 9,
+            "verse": 25,
+            "endVerse": 26
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:safa-marwa",
+      "name": {
+        "nl": "Safa en Marwa",
+        "en": "Safa and Marwa",
+        "fr": "Safâ et Marwa"
+      },
+      "aliases": [
+        "As-Safa",
+        "Al-Marwah",
+        "sa’i"
+      ],
+      "kind": "sanctuary",
+      "summary": {
+        "nl": "Twee rituele plaatsen die in de Koran behoren tot de tekenen van God bij hadj en umra.",
+        "en": "Two ritual sites counted in the Qur’an among God’s signs in hajj and umra.",
+        "fr": "Deux lieux rituels comptés dans le Coran parmi les signes de Dieu lors du hajj et de la ‘umra."
+      },
+      "historicalContext": {
+        "nl": "De hadith over Mohammeds bedevaart beschrijft de gang tussen beide plaatsen. Zo is de korte Korantekst verbonden met een uitvoeriger rituele overlevering.",
+        "en": "The hadith of Muhammad’s pilgrimage describes movement between the sites, connecting the brief Qur’anic passage with a fuller ritual tradition.",
+        "fr": "Le hadith du pèlerinage de Muhammad décrit le parcours entre ces lieux, reliant le bref passage coranique à une tradition rituelle plus développée."
+      },
+      "locationNote": {
+        "nl": "Onderdeel van het Mekkaanse heiligdom. Dit item toont rituele topografie, geen aparte stad.",
+        "en": "Part of the Meccan sanctuary. This entry concerns ritual topography, not a separate city.",
+        "fr": "Partie du sanctuaire mecquois. Cette notice concerne une topographie rituelle, non une ville distincte."
+      },
+      "personIds": [
+        "islam:muhammad"
+      ],
+      "refs": [
+        {
+          "id": "q-2-158-158",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 2:158",
+            "en": "Qur’an 2:158",
+            "fr": "Coran 2,158"
+          },
+          "url": "https://quran.com/2/158",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 2,
+            "verse": 158,
+            "endVerse": 158
+          }
+        },
+        {
+          "id": "muslim-1218a",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sahih Muslim 1218a",
+            "en": "Sahih Muslim 1218a",
+            "fr": "Sahih Muslim 1218a"
+          },
+          "url": "https://sunnah.com/muslim:1218a"
+        }
+      ]
+    },
+    {
+      "id": "islam:arafat",
+      "name": {
+        "nl": "Arafat",
+        "en": "Arafat",
+        "fr": "‘Arafât"
+      },
+      "aliases": [],
+      "kind": "region",
+      "summary": {
+        "nl": "Een bedevaartsplaats die de Koran noemt bij het vertrek van de pelgrims en het gedenken van God.",
+        "en": "A pilgrimage site named by the Qur’an when describing pilgrims’ departure and remembrance of God.",
+        "fr": "Lieu de pèlerinage nommé par le Coran à propos du départ des pèlerins et du rappel de Dieu."
+      },
+      "historicalContext": {
+        "nl": "De hadith over Mohammeds bedevaart beschrijft het verblijf bij Arafat binnen een reeks rituele handelingen.",
+        "en": "The hadith of Muhammad’s pilgrimage describes the stay at Arafat within a sequence of rituals.",
+        "fr": "Le hadith du pèlerinage de Muhammad décrit le séjour à ‘Arafât dans une suite de rites."
+      },
+      "locationNote": {
+        "nl": "Een ritueel landschap bij Mekka; de tekst biedt geen kadastrale afbakening van het huidige gebied.",
+        "en": "A ritual landscape near Mecca; the text supplies no cadastral boundary for the present area.",
+        "fr": "Paysage rituel près de La Mecque ; le texte ne fournit pas de délimitation cadastrale de la zone actuelle."
+      },
+      "personIds": [
+        "islam:muhammad"
+      ],
+      "refs": [
+        {
+          "id": "q-2-198-199",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 2:198–199",
+            "en": "Qur’an 2:198–199",
+            "fr": "Coran 2,198–199"
+          },
+          "url": "https://quran.com/2/198-199",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 2,
+            "verse": 198,
+            "endVerse": 199
+          }
+        },
+        {
+          "id": "muslim-1218a",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sahih Muslim 1218a",
+            "en": "Sahih Muslim 1218a",
+            "fr": "Sahih Muslim 1218a"
+          },
+          "url": "https://sunnah.com/muslim:1218a"
+        }
+      ]
+    },
+    {
+      "id": "islam:sinai",
+      "name": {
+        "nl": "Sinai en de vallei Tuwa",
+        "en": "Sinai and the valley of Tuwa",
+        "fr": "Sinaï et vallée de Tuwâ"
+      },
+      "aliases": [
+        "Jebel Musa",
+        "Tur",
+        "Sinaï"
+      ],
+      "kind": "mountain",
+      "summary": {
+        "nl": "De roeping van Musa speelt zich af bij vuur en een heilige vallei; elders noemt de Koran de berg Sinai.",
+        "en": "Musa’s calling takes place beside fire and a sacred valley; elsewhere the Qur’an names Mount Sinai.",
+        "fr": "L’appel de Mûsâ se situe près d’un feu et d’une vallée sacrée ; ailleurs le Coran nomme le mont Sinaï."
+      },
+      "historicalContext": {
+        "nl": "UNESCO beschrijft Jebel Musa als een berg die door moslims wordt vereerd in het landschap van Sint-Catharina. Dit is gedeeld religieus erfgoed.",
+        "en": "UNESCO describes Jebel Musa as a mountain revered by Muslims in the Saint Catherine landscape: shared religious heritage.",
+        "fr": "L’UNESCO décrit le djebel Musa comme une montagne vénérée par les musulmans dans le paysage de Sainte-Catherine : un patrimoine religieux partagé."
+      },
+      "locationNote": {
+        "nl": "De latere identificatie met Jebel Musa bewijst geen exacte historische locatie van de Koranscène. Tuwa krijgt geen verzonnen coördinaten.",
+        "en": "The later identification with Jebel Musa does not prove the Qur’anic scene’s exact historical location. No coordinates are invented for Tuwa.",
+        "fr": "L’identification ultérieure au djebel Musa ne prouve pas la localisation historique exacte de la scène coranique. Aucune coordonnée n’est inventée pour Tuwâ."
+      },
+      "personIds": [
+        "islam:moses"
+      ],
+      "refs": [
+        {
+          "id": "q-20-9-14",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 20:9–14",
+            "en": "Qur’an 20:9–14",
+            "fr": "Coran 20,9–14"
+          },
+          "url": "https://quran.com/20/9-14",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 20,
+            "verse": 9,
+            "endVerse": 14
+          }
+        },
+        {
+          "id": "q-23-20-20",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 23:20",
+            "en": "Qur’an 23:20",
+            "fr": "Coran 23,20"
+          },
+          "url": "https://quran.com/23/20",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 23,
+            "verse": 20,
+            "endVerse": 20
+          }
+        },
+        {
+          "id": "unesco-sinai",
+          "kind": "historical",
+          "label": {
+            "nl": "UNESCO: gebied van Sint-Catharina",
+            "en": "UNESCO: Saint Catherine Area",
+            "fr": "UNESCO : Zone Sainte-Catherine"
+          },
+          "url": "https://whc.unesco.org/en/list/954/"
+        }
+      ]
+    },
+    {
+      "id": "islam:midian",
+      "name": {
+        "nl": "Madyan · Midjan",
+        "en": "Madyan · Midian",
+        "fr": "Madyan"
+      },
+      "aliases": [
+        "Midian",
+        "Midjan"
+      ],
+      "kind": "region",
+      "summary": {
+        "nl": "Musa bereikt een waterplaats in Madyan. In een afzonderlijke verhaallijn wordt Shuayb tot Madyan gezonden.",
+        "en": "Musa reaches a watering place in Madyan. In a separate narrative, Shuayb is sent to Madyan.",
+        "fr": "Mûsâ atteint un point d’eau à Madyan. Dans un récit distinct, Chu‘ayb est envoyé à Madyan."
+      },
+      "historicalContext": {
+        "nl": "De verhaallijnen leggen nadruk op gastvrijheid, arbeid en rechtvaardigheid in handel. De naamloze vader bij de bron is niet in de tekst geïdentificeerd als Shuayb.",
+        "en": "The narratives emphasise hospitality, work and fair trade. The unnamed father at the well is not identified as Shuayb in the text.",
+        "fr": "Les récits soulignent hospitalité, travail et équité commerciale. Le père anonyme près du puits n’est pas identifié à Chu‘ayb dans le texte."
+      },
+      "locationNote": {
+        "nl": "De Korantekst legt geen precieze moderne vindplaats vast. Een traditionele identificatie mag niet als bewezen opgravingslocatie worden gelezen.",
+        "en": "The Qur’anic text fixes no precise modern site. A traditional identification should not be treated as a proven excavation location.",
+        "fr": "Le texte coranique ne fixe aucun site moderne précis. Une identification traditionnelle ne vaut pas localisation archéologique démontrée."
+      },
+      "personIds": [
+        "islam:moses",
+        "islam:midian-elder",
+        "islam:moses-wife",
+        "islam:shuayb"
+      ],
+      "refs": [
+        {
+          "id": "q-28-22-28",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 28:22–28",
+            "en": "Qur’an 28:22–28",
+            "fr": "Coran 28,22–28"
+          },
+          "url": "https://quran.com/28/22-28",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 28,
+            "verse": 22,
+            "endVerse": 28
+          }
+        },
+        {
+          "id": "q-7-85-85",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 7:85",
+            "en": "Qur’an 7:85",
+            "fr": "Coran 7,85"
+          },
+          "url": "https://quran.com/7/85",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 7,
+            "verse": 85,
+            "endVerse": 85
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:egypt",
+      "name": {
+        "nl": "Egypte · Misr",
+        "en": "Egypt · Misr",
+        "fr": "Égypte · Misr"
+      },
+      "aliases": [
+        "Misr"
+      ],
+      "kind": "region",
+      "summary": {
+        "nl": "Egypte is het decor van Yusufs hereniging met zijn familie en van Musa’s conflict met Farao.",
+        "en": "Egypt is the setting of Yusuf’s reunion with his family and Musa’s conflict with Pharaoh.",
+        "fr": "L’Égypte est le cadre des retrouvailles de Yûsuf avec sa famille et du conflit de Mûsâ avec Pharaon."
+      },
+      "historicalContext": {
+        "nl": "De Koran noemt Egypte maar dateert deze verhalen niet volgens Egyptische dynastieën. Een verhaalde koning of farao krijgt daarom geen modern toegewezen historische identiteit.",
+        "en": "The Qur’an names Egypt but does not date these stories by Egyptian dynasties. A narrated king or pharaoh is therefore not assigned a modern historical identification.",
+        "fr": "Le Coran nomme l’Égypte sans dater ces récits par dynasties égyptiennes. Le roi ou pharaon du récit ne reçoit donc pas d’identification historique moderne."
+      },
+      "locationNote": {
+        "nl": "Een land en verhalende regio, geen afzonderlijke stad. Huidige landsgrenzen worden niet op de tekst geprojecteerd.",
+        "en": "A country and narrative region, not a separate city. Present national borders are not projected onto the text.",
+        "fr": "Un pays et une région narrative, non une ville distincte. Les frontières actuelles ne sont pas projetées sur le texte."
+      },
+      "personIds": [
+        "islam:joseph",
+        "islam:jacob",
+        "islam:moses"
+      ],
+      "refs": [
+        {
+          "id": "q-12-99-100",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 12:99–100",
+            "en": "Qur’an 12:99–100",
+            "fr": "Coran 12,99–100"
+          },
+          "url": "https://quran.com/12/99-100",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 12,
+            "verse": 99,
+            "endVerse": 100
+          }
+        },
+        {
+          "id": "q-10-87-87",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 10:87",
+            "en": "Qur’an 10:87",
+            "fr": "Coran 10,87"
+          },
+          "url": "https://quran.com/10/87",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 10,
+            "verse": 87,
+            "endVerse": 87
+          }
+        },
+        {
+          "id": "q-43-51-51",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 43:51",
+            "en": "Qur’an 43:51",
+            "fr": "Coran 43,51"
+          },
+          "url": "https://quran.com/43/51",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 43,
+            "verse": 51,
+            "endVerse": 51
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:babylon",
+      "name": {
+        "nl": "Babylon · Babil",
+        "en": "Babylon · Babil",
+        "fr": "Babylone · Bâbil"
+      },
+      "aliases": [
+        "Babel",
+        "Babil"
+      ],
+      "kind": "city",
+      "summary": {
+        "nl": "Babil wordt genoemd in het vers over Harut, Marut, magie en de ontkenning dat Sulayman ongelovig was.",
+        "en": "Babil is named in the verse about Harut, Marut, magic and the denial that Sulayman disbelieved.",
+        "fr": "Bâbil est nommé dans le verset sur Hârût, Mârût, la magie et la négation de l’incroyance de Sulaymân."
+      },
+      "historicalContext": {
+        "nl": "UNESCO beschrijft Babylon als hoofdstad van opeenvolgende rijken en als belangrijk Mesopotamisch erfgoed. Deze archeologische geschiedenis staat naast de religieuze betekenis.",
+        "en": "UNESCO describes Babylon as the seat of successive empires and major Mesopotamian heritage. This archaeological history stands alongside the religious meaning.",
+        "fr": "L’UNESCO décrit Babylone comme siège d’empires successifs et patrimoine majeur de Mésopotamie. Cette histoire archéologique accompagne la signification religieuse."
+      },
+      "locationNote": {
+        "nl": "De gedeelde passage betekent niet dat Sulayman in Babylon woonde. Het archeologische Babylon is geen bewijs voor elk element van het religieuze verhaal.",
+        "en": "Sharing this passage does not mean Sulayman lived in Babylon. Archaeological Babylon does not prove every element of the religious narrative.",
+        "fr": "Le passage commun ne signifie pas que Sulaymân habitait Babylone. Le site archéologique ne prouve pas chaque élément du récit religieux."
+      },
+      "personIds": [
+        "islam:solomon"
+      ],
+      "refs": [
+        {
+          "id": "q-2-102-102",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 2:102",
+            "en": "Qur’an 2:102",
+            "fr": "Coran 2,102"
+          },
+          "url": "https://quran.com/2/102",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 2,
+            "verse": 102,
+            "endVerse": 102
+          }
+        },
+        {
+          "id": "unesco-babylon",
+          "kind": "historical",
+          "label": {
+            "nl": "UNESCO: Babylon",
+            "en": "UNESCO: Babylon",
+            "fr": "UNESCO : Babylone"
+          },
+          "url": "https://whc.unesco.org/en/list/278/"
+        }
+      ]
+    },
+    {
+      "id": "islam:sheba",
+      "name": {
+        "nl": "Saba",
+        "en": "Sheba · Saba",
+        "fr": "Saba"
+      },
+      "aliases": [
+        "Sheba",
+        "Marib",
+        "Ma’rib"
+      ],
+      "kind": "region",
+      "summary": {
+        "nl": "Het rijk van de naamloze koningin die in Sulaymans verhaal verschijnt. Saba heeft ook een eigen Korantekst over tuinen en een overstroming.",
+        "en": "The realm of the unnamed queen in Sulayman’s narrative. Sheba also has a separate Qur’anic account of gardens and a flood.",
+        "fr": "Royaume de la reine anonyme du récit de Sulaymân. Saba apparaît aussi dans un récit coranique distinct de jardins et d’inondation."
+      },
+      "historicalContext": {
+        "nl": "UNESCO documenteert het oude koninkrijk Saba rond Marib met nederzettingen, tempels en irrigatie. Archeologie ondersteunt de geschiedenis van het rijk, niet automatisch de identiteit van de verhaalde koningin.",
+        "en": "UNESCO documents ancient Saba around Marib through settlements, temples and irrigation. Archaeology supports the kingdom’s history, not automatically the narrated queen’s identity.",
+        "fr": "L’UNESCO documente l’ancien Saba autour de Marib par ses établissements, temples et systèmes d’irrigation. L’archéologie éclaire le royaume, sans identifier automatiquement la reine du récit."
+      },
+      "locationNote": {
+        "nl": "Een koninkrijk en regio; Saba wordt niet eenvoudig gelijkgesteld aan één moderne stad.",
+        "en": "A kingdom and region; Sheba is not simply equated with one modern city.",
+        "fr": "Un royaume et une région ; Saba n’est pas simplement assimilé à une ville moderne."
+      },
+      "personIds": [
+        "islam:queen-sheba",
+        "islam:solomon"
+      ],
+      "refs": [
+        {
+          "id": "q-27-22-44",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 27:22–44",
+            "en": "Qur’an 27:22–44",
+            "fr": "Coran 27,22–44"
+          },
+          "url": "https://quran.com/27/22-44",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 27,
+            "verse": 22,
+            "endVerse": 44
+          }
+        },
+        {
+          "id": "q-34-15-17",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 34:15–17",
+            "en": "Qur’an 34:15–17",
+            "fr": "Coran 34,15–17"
+          },
+          "url": "https://quran.com/34/15-17",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 34,
+            "verse": 15,
+            "endVerse": 17
+          }
+        },
+        {
+          "id": "unesco-saba",
+          "kind": "historical",
+          "label": {
+            "nl": "UNESCO: monumenten van het oude Saba, Marib",
+            "en": "UNESCO: Landmarks of Ancient Saba, Marib",
+            "fr": "UNESCO : hauts lieux de l’ancien Saba, Marib"
+          },
+          "url": "https://whc.unesco.org/en/list/1700/"
+        }
+      ]
+    },
+    {
+      "id": "islam:hijr",
+      "name": {
+        "nl": "Al-Hijr · Hegra",
+        "en": "Al-Hijr · Hegra",
+        "fr": "Al-Hijr · Hégra"
+      },
+      "aliases": [
+        "Mada’in Salih",
+        "Hegra"
+      ],
+      "kind": "settlement",
+      "summary": {
+        "nl": "De Koran noemt de bewoners van al-Hijr en hun uit rotsen gehouwen huizen. Overleveringen verbinden het gebied met Thamud en Salih.",
+        "en": "The Qur’an names the people of al-Hijr and their rock-cut dwellings. Traditions connect the area with Thamud and Salih.",
+        "fr": "Le Coran nomme les habitants d’al-Hijr et leurs demeures taillées dans la roche. Des traditions relient la région à Thamûd et Sâlih."
+      },
+      "historicalContext": {
+        "nl": "De zichtbare monumentale graven van Hegra zijn volgens UNESCO vooral Nabatees, uit de eerste eeuw v.Chr. en de eerste eeuw n.Chr. Dat moet onderscheiden blijven van het Korannarratief.",
+        "en": "According to UNESCO, Hegra’s visible monumental tombs are principally Nabataean, from the first century BCE and first century CE. This must remain distinct from the Qur’anic narrative.",
+        "fr": "Selon l’UNESCO, les tombes monumentales visibles d’Hégra sont surtout nabatéennes, des premier siècle avant et premier siècle après notre ère. Cela reste distinct du récit coranique."
+      },
+      "locationNote": {
+        "nl": "De overgeleverde identificatie met het volk van Salih is geen archeologische toeschrijving van alle zichtbare graven aan dat volk.",
+        "en": "The traditional identification with Salih’s people is not an archaeological attribution of all visible tombs to that people.",
+        "fr": "L’identification traditionnelle au peuple de Sâlih n’attribue pas archéologiquement toutes les tombes visibles à ce peuple."
+      },
+      "personIds": [
+        "islam:salih",
+        "islam:muhammad"
+      ],
+      "refs": [
+        {
+          "id": "q-15-80-84",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 15:80–84",
+            "en": "Qur’an 15:80–84",
+            "fr": "Coran 15,80–84"
+          },
+          "url": "https://quran.com/15/80-84",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 15,
+            "verse": 80,
+            "endVerse": 84
+          }
+        },
+        {
+          "id": "q-7-73-74",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 7:73–74",
+            "en": "Qur’an 7:73–74",
+            "fr": "Coran 7,73–74"
+          },
+          "url": "https://quran.com/7/73-74",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 7,
+            "verse": 73,
+            "endVerse": 74
+          }
+        },
+        {
+          "id": "bukhari-3378",
+          "kind": "tradition",
+          "label": {
+            "nl": "Sahih al-Bukhari 3378",
+            "en": "Sahih al-Bukhari 3378",
+            "fr": "Sahih al-Bukhari 3378"
+          },
+          "url": "https://sunnah.com/bukhari:3378"
+        },
+        {
+          "id": "unesco-hegra",
+          "kind": "historical",
+          "label": {
+            "nl": "UNESCO: archeologisch Hegra",
+            "en": "UNESCO: Hegra Archaeological Site",
+            "fr": "UNESCO : site archéologique d’Hégra"
+          },
+          "url": "https://whc.unesco.org/en/list/1293/"
+        }
+      ]
+    },
+    {
+      "id": "islam:judi",
+      "name": {
+        "nl": "Al-Judi",
+        "en": "Al-Judi",
+        "fr": "Al-Jûdî"
+      },
+      "aliases": [
+        "Judi",
+        "Cudi"
+      ],
+      "kind": "mountain",
+      "summary": {
+        "nl": "De plaats waar de ark in het Koranverhaal tot rust komt nadat het water wegtrekt.",
+        "en": "The place where the Ark settles in the Qur’anic narrative after the water recedes.",
+        "fr": "Lieu où l’Arche se pose dans le récit coranique après le retrait des eaux."
+      },
+      "historicalContext": {
+        "nl": "Het vers maakt deel uit van Nuhs vloedverhaal. Het beschrijft een religieuze gebeurtenis, geen opgravingsverslag of routebeschrijving.",
+        "en": "The verse belongs to Nuh’s flood narrative. It describes a religious event, not an excavation report or itinerary.",
+        "fr": "Le verset appartient au récit du déluge de Nûh. Il décrit un événement religieux, non un rapport de fouilles ni un itinéraire."
+      },
+      "locationNote": {
+        "nl": "De tekst geeft de naam al-Judi, maar geen moderne coördinaten. De kaart kiest geen omstreden identificatie als vaststaand feit.",
+        "en": "The text gives the name al-Judi but no modern coordinates. The map does not present a disputed identification as established fact.",
+        "fr": "Le texte donne le nom al-Jûdî, sans coordonnées modernes. La carte ne présente pas une identification disputée comme un fait établi."
+      },
+      "personIds": [
+        "islam:noah"
+      ],
+      "refs": [
+        {
+          "id": "q-11-44-44",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 11:44",
+            "en": "Qur’an 11:44",
+            "fr": "Coran 11,44"
+          },
+          "url": "https://quran.com/11/44",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 11,
+            "verse": 44,
+            "endVerse": 44
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:ahqaf",
+      "name": {
+        "nl": "Al-Ahqaf",
+        "en": "Al-Ahqaf",
+        "fr": "Al-Ahqâf"
+      },
+      "aliases": [
+        "Ahqaf",
+        "Ad",
+        "duinen"
+      ],
+      "kind": "region",
+      "summary": {
+        "nl": "Het duinlandschap in het waarschuwingsverhaal over Ad. De boodschapper wordt elders Hud genoemd.",
+        "en": "The dune landscape in the warning narrative about Ad. Elsewhere the messenger is named Hud.",
+        "fr": "Paysage de dunes du récit d’avertissement adressé aux ‘Âd. Ailleurs, le messager est nommé Hûd."
+      },
+      "historicalContext": {
+        "nl": "De beschrijving van wind, dalen en verlaten woningen heeft een waarschuwende functie in het verhaal. Zij vormt op zichzelf geen identificatie van een opgegraven stad.",
+        "en": "The description of wind, valleys and deserted dwellings serves a warning purpose in the narrative. It does not by itself identify an excavated city.",
+        "fr": "La description du vent, des vallées et des demeures désertées remplit une fonction d’avertissement. Elle n’identifie pas à elle seule une ville fouillée."
+      },
+      "locationNote": {
+        "nl": "Een landschap, niet een bij naam genoemde stad. Geen exacte moderne ligging of gelijkstelling met Ubar wordt als bewezen gegeven.",
+        "en": "A landscape, not a city named as such. No exact modern location or equation with Ubar is presented as proven.",
+        "fr": "Un paysage, non une ville nommée comme telle. Aucune localisation moderne exacte ni assimilation à Ubar n’est présentée comme prouvée."
+      },
+      "personIds": [
+        "islam:hud"
+      ],
+      "refs": [
+        {
+          "id": "q-46-21-26",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 46:21–26",
+            "en": "Qur’an 46:21–26",
+            "fr": "Coran 46,21–26"
+          },
+          "url": "https://quran.com/46/21-26",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 46,
+            "verse": 21,
+            "endVerse": 26
+          }
+        },
+        {
+          "id": "q-7-65-65",
+          "kind": "scripture",
+          "label": {
+            "nl": "Koran 7:65",
+            "en": "Qur’an 7:65",
+            "fr": "Coran 7,65"
+          },
+          "url": "https://quran.com/7/65",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "surah": 7,
+            "verse": 65,
+            "endVerse": 65
+          }
+        }
+      ]
+    }
+  ]
+}

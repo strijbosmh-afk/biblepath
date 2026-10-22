@@ -34,6 +34,8 @@
   const peopleCache=new Map();
   let festivalView=null,festivalRequest=0,festivalPassageRequest=0,returnToFestivals=null;
   const festivalCache=new Map();
+  let traditionAtlas=null,atlasRequest=0,atlasPassageRequest=0,returnToAtlas=null;
+  const atlasCache=new Map();
   const state = {layout:'constellation', focus:'abraham', selected:'abraham', depth:'auto', discoveryDepth:1, localRoots:[], testament:'all', spouses:true, view:'reader', tradition:initialTradition, bibleEdition:initialBibleEdition, peopleTradition:initialTradition, indexPage:1};
   let zoomBase = null, zoomTimer, rendering = false, lastSelection;
   const MAX_MAP_PEOPLE = 180, INDEX_PAGE_SIZE = 60;
@@ -62,7 +64,7 @@
   function handleZoom(scale, event = {}) {
     $('#zoom-level').textContent = `${Math.round(scale * 100)}%`;
     if (!rendering && !event.userInitiated && ['fit','resize'].includes(event.reason) && state.depth === 'auto') zoomBase = scale*Math.pow(1.5,state.discoveryDepth-1);
-    if (rendering || activePath || !event.userInitiated || state.depth !== 'auto' || state.view !== 'map') return;
+    if (rendering || activePath || !event.userInitiated || state.depth !== 'auto' || state.view !== 'map' || state.tradition !== 'christianity') return;
     clearTimeout(zoomTimer);
     const desired = Math.max(state.discoveryDepth,window.BibleDiscovery.depthForZoom(scale,zoomBase || scale));
     const shown = new Set(lastSelection?.people.map(p=>p.id) || []);
@@ -160,6 +162,7 @@
   function explorePerson(id, depth) {
     const person = personById.get(id);
     if (!person) return;
+    useReligion('christianity');
     clearPath(false);
     state.focus = state.selected = id;
     if (state.testament !== 'all' && state.testament !== person.testament) setTestamentState('all');
@@ -181,6 +184,7 @@
     if(!Object.hasOwn(religionNames,tradition))return false;
     if(tradition!==state.tradition){
       festivalRequest++;festivalPassageRequest++;returnToFestivals=null;
+      atlasRequest++;atlasPassageRequest++;returnToAtlas=null;
       if(tradition!=='christianity')cancelPersonRequest();
       sacredRequest++;sacredReader?.destroy();sacredReader=null;sacredLoading=null;
       state.tradition=tradition;
@@ -191,34 +195,39 @@
   }
   function navigateReligion(tradition,view,{keepSidebar=false}={}){
     if(!useReligion(tradition))return;
-    setView(view||(['reader','index','festivals'].includes(state.view)?state.view:'reader'),{keepSidebar});
+    setView(view||(['reader','index','festivals','map','cities'].includes(state.view)?state.view:'reader'),{keepSidebar});
   }
   function setView(view,{keepSidebar=false}={}) {
     festivalPassageRequest++;
+    atlasRequest++;atlasPassageRequest++;
     if(!['reader','festivals'].includes(view))returnToFestivals=null;
-    // Bible-only destinations explicitly restore their religious context.
-    if(view==='map'||view==='cities')useReligion('christianity');
+    if(!['reader','index'].includes(view))returnToAtlas=null;
+    const bibleContext=state.tradition==='christianity';
+    const atlasContext=!bibleContext&&['map','cities'].includes(view);
     clearTimeout(zoomTimer);
     if(view!=='reader')cancelPersonRequest();
     state.view = view;
-    $('#map-view').hidden = view !== 'map'; $('#index-view').hidden = view !== 'index'||state.peopleTradition!=='christianity';
+    $('#map-view').hidden = view !== 'map'||!bibleContext; $('#index-view').hidden = view !== 'index'||state.peopleTradition!=='christianity';
     $('#people-collection-controls').hidden=true;
     $('#tradition-people-view').hidden=view!=='index'||state.peopleTradition==='christianity';
     $('#comparison-view').hidden=view!=='compare';
     $('#festivals-view').hidden=view!=='festivals';
+    $('#tradition-atlas-view').hidden=!atlasContext;
     $('#return-to-festivals').hidden=view!=='reader'||returnToFestivals?.tradition!==state.tradition;
     $('#return-to-festivals').textContent=I.t('← Back to festivals & rituals');
+    $('#return-to-atlas').hidden=!['reader','index'].includes(view)||returnToAtlas?.tradition!==state.tradition;
+    $('#return-to-atlas').textContent=I.t(returnToAtlas?.mode==='cities'?'← Back to the cities explorer':'← Back to the family map');
     $$('[data-people-tradition]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.peopleTradition===state.peopleTradition)));
-    $('.layout-picker').hidden = view !== 'map';
-    $('#path-finder').hidden = view !== 'map';
-    $('#reader-view').hidden = view !== 'reader'||state.tradition!=='christianity'; $('#cities-view').hidden = view !== 'cities';
+    $('.layout-picker').hidden = view !== 'map'||!bibleContext;
+    $('#path-finder').hidden = view !== 'map'||!bibleContext;
+    $('#reader-view').hidden = view !== 'reader'||!bibleContext; $('#cities-view').hidden = view !== 'cities'||!bibleContext;
     $('#sacred-reader-view').hidden=view!=='reader'||state.tradition==='christianity';
     $('#sacred-reader-view').setAttribute('aria-label',I.t(state.tradition==='islam'?'Qur’an':'Tanakh'));
     $('#tradition-controls').hidden=true;
-    $('.intro-note').hidden=['reader','index','compare','festivals'].includes(view);
+    $('.intro-note').hidden=!bibleContext||['reader','index','compare','festivals'].includes(view);
     $('.intro .eyebrow').textContent=I.t(view==='compare'?'Compare religions':religionNames[state.tradition]);
     $$('[data-tradition]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.tradition===state.tradition)));
-    $('#people-testament-filters').hidden = view!=='map'&&(view!=='index'||state.peopleTradition!=='christianity');
+    $('#people-testament-filters').hidden = !bibleContext||!['map','index'].includes(view);
     $('#return-to-library').hidden = state.tradition!=='christianity' || !returnToLibrary || !['map','index'].includes(view);
     const titles={map:['One story. Many connections.','Explore the people of the Bible, one relationship at a time.'],index:['Three collections. Distinct accounts.','Choose a collection to explore its people. Each tradition keeps its own profiles and sources.'],compare:['People across traditions.','Explore how people are portrayed in Roman Catholic Christianity, Judaism and Islam, with each account alongside its sources.'],reader:['Read each tradition in its own context.','Choose the Bible, Tanakh or Qur’an. Each edition keeps its own sources and reading position.'],cities:['Places that hold a story.','Explore biblical cities and the passages that bring them to life.']};
     if(view==='reader')titles.reader=['Holy books',{
@@ -228,6 +237,7 @@
     }[state.tradition]];
     if(view==='index')titles.index=[{christianity:'People in the Catholic Bible',judaism:'People in the Torah',islam:'People in the Qur’an'}[state.tradition],'Explore people and follow their passages within this religion.'];
     if(view==='festivals')titles.festivals=['Festivals & rituals','Celebrations and practices, with their sources, historical development and internal diversity.'];
+    if(atlasContext)titles[view]=view==='map'?['Relationship map','Family relationships in this tradition, with a source for every connection.']:['Cities explorer','Cities and places in this tradition, with textual sources and historical context.'];
     $('.intro h1').textContent=I.t(titles[view][0]);$('.intro p').textContent=I.t(titles[view][1]);
     $('#religion-crumb').textContent=I.t(view==='compare'?'Compare religions':religionNames[state.tradition]);
     $('.breadcrumb strong').textContent=I.t({map:'Relationship map',index:'People index',compare:'Across traditions',reader:'Holy books',cities:'Cities explorer',festivals:'Festivals & rituals'}[view]);
@@ -240,12 +250,45 @@
     if (view === 'compare') ensureComparisons();
     if (view === 'festivals') ensureFestivals();
     if (view === 'reader') ensureReader();
-    if (view === 'cities') ensureCities();
+    if (view === 'cities'&&bibleContext) ensureCities();
+    if (atlasContext) ensureTraditionAtlas();
     updateCounts();
     if(!keepSidebar)closeSidebar();
   }
 
   function loadJson(file) {return fetch(file).then(response=>{if(!response.ok)throw new Error(`Could not load ${file}`);return response.json();});}
+  function ensureTraditionAtlas(){
+    const tradition=state.tradition,mode=state.view,request=++atlasRequest,container=$('#tradition-atlas-view');
+    if(tradition==='christianity'||!['map','cities'].includes(mode))return Promise.resolve(null);
+    if(traditionAtlas?.tradition===tradition){traditionAtlas.setMode(mode);traditionAtlas.changeLanguage();return Promise.resolve(traditionAtlas);}
+    container.innerHTML=`<div class="library-loading" role="status">${escape(I.t('Opening this collection…'))}</div>`;
+    if(!atlasCache.has(tradition))atlasCache.set(tradition,loadJson(`tradition-atlas-${tradition}.json`).catch(error=>{atlasCache.delete(tradition);throw error;}));
+    return atlasCache.get(tradition).then(data=>{
+      if(request!==atlasRequest||tradition!==state.tradition||mode!==state.view)return null;
+      if(!traditionAtlas)traditionAtlas=new window.TraditionAtlasView(container,{
+        onPassage:openAtlasPassage,
+        onModeChange:mode=>setView(mode),
+        onPerson:id=>{returnToAtlas={tradition:state.tradition,mode:state.view};selectPeopleCollection(state.tradition,id);}
+      });
+      traditionAtlas.setCollection(data,mode);return traditionAtlas;
+    }).catch(()=>{atlasCache.delete(tradition);if(request===atlasRequest&&tradition===state.tradition&&mode===state.view)libraryError(container,ensureTraditionAtlas);return null;});
+  }
+  async function openAtlasPassage(passage){
+    const tradition=state.tradition;
+    if(passage.tradition!==tradition||!['judaism','islam'].includes(tradition))return;
+    const origin=returnToAtlas?.tradition===tradition?returnToAtlas:{tradition,mode:state.view};
+    if(!['map','cities'].includes(origin.mode))return;
+    returnToFestivals=null;returnToAtlas=origin;
+    selectTradition(tradition);
+    const request=++atlasPassageRequest,active=await ensureReader();
+    if(request!==atlasPassageRequest||state.view!=='reader'||state.tradition!==tradition)return;
+    if(!active){libraryError($('#sacred-reader-view'),()=>openAtlasPassage(passage));return;}
+    const edition=tradition==='judaism'?'he':'nl';
+    const label=tradition==='judaism'?`${passage.book} ${passage.chapter}:${passage.verse}-${passage.endVerse||passage.verse}`:`${passage.surah}:${passage.verse}-${passage.endVerse||passage.verse}`;
+    const target=active.model.reference(label,edition,I.language);
+    if(target){active.selectEdition(edition);active.open(target);}
+    else toast(I.t('This reference could not be located in the reader.'));
+  }
   function ensureFestivals(){
     const tradition=state.tradition,request=++festivalRequest,container=$('#festivals-view');
     if(festivalView?.tradition===tradition){festivalView.changeLanguage();return Promise.resolve(festivalView);}
@@ -260,7 +303,7 @@
   async function openFestivalPassage(passage,entryId){
     const tradition=passage.tradition;
     if(tradition!==state.tradition||!Object.hasOwn(religionNames,tradition))return;
-    returnToFestivals={tradition,entryId};
+    returnToAtlas=null;returnToFestivals={tradition,entryId};
     if(tradition==='christianity')selectBibleEdition('catholic-nl');
     selectTradition(tradition);
     const request=++festivalPassageRequest,active=await ensureReader();
@@ -447,7 +490,7 @@
     pendingPassage={...(typeof reference==='string'?{label:reference}:reference),personPassage:true,passageRequest:++personPassageRequest};
     selectBibleEdition('catholic-nl');selectTradition('christianity');
   }
-  function openCity(id) {pendingCity=id;setView('cities');}
+  function openCity(id) {pendingCity=id;useReligion('christianity');setView('cities');}
   function openLibraryPerson(id,origin) {if(catholicPeople?.byId.has(id)&&isCatholicEdition(state.bibleEdition)&&origin==='reader'){openCatholicProfile(id);return;}returnToLibrary=origin;$('#return-to-library').textContent=origin==='reader'?'← Back to the Bible reader':'← Back to the city';explorePerson(id);}
 
   function renderIndex() {
@@ -525,6 +568,7 @@
   }
 
   function findConnection() {
+    useReligion('christianity');
     clearTimeout(zoomTimer);
     const result = pathFinder.find(pathPicks.from,pathPicks.to,{scriptureOnly:$('#path-scripture-only').checked,spouses:true});
     clearPath(false);
@@ -611,7 +655,7 @@
     $('#info-content').innerHTML = mode === 'help' ? `
       <div class="eyebrow">A LITTLE CURIOSITY GOES A LONG WAY</div><h2>Every life opens a story.</h2>
       <p>Start with a familiar name, then follow the connections to see how biblical families fit together.</p>
-      <h3>Read Scripture and explore its cities</h3><p><strong>Bible reader</strong> contains both testaments in English (World English Bible), Dutch (Statenvertaling), and French (Louis Segond 1910). Choose the language in the top bar. Browse books and chapters or search words, phrases and references. Underlined names open a family map or city profile. Dotted names offer possible identities rather than choosing one for you. Your reading position is kept when you follow a link.</p><p><strong>Cities explorer</strong> provides an alphabetical, searchable collection of settlements. Filter by testament or book, read the indexed passages, and follow people indexed in those passages. Shared references do not by themselves establish that a person lived in that city.</p>
+      <h3>Families and places within each religion</h3><p>Judaism and Islam have separate family maps and place collections. Choose a family and select a person to inspect each sourced connection. Parentage, marriage, siblings, guardianship and adoption remain distinct. Search cities and places by name or source, filter by type, and read historical context and location uncertainties. Reading actions open the Hebrew Tanakh or Dutch Qur’an translation; the return button restores the selected map or place. These are curated selections, not exhaustive genealogies or geographic inventories.</p><h3>Read the Catholic Bible and explore its cities</h3><p><strong>Bible reader</strong> contains both testaments in English (World English Bible), Dutch (Statenvertaling), and French (Louis Segond 1910). Choose the language in the top bar. Browse books and chapters or search words, phrases and references. Underlined names open a family map or city profile. Dotted names offer possible identities rather than choosing one for you. Your reading position is kept when you follow a link.</p><p><strong>Cities explorer</strong> provides an alphabetical, searchable collection of settlements. Filter by testament or book, read the indexed passages, and follow people indexed in those passages. Shared references do not by themselves establish that a person lived in that city.</p>
       <h3>Connect two people</h3><p>Use <strong>How are they connected?</strong> to choose a start and destination, then select <strong>Find connection</strong>. The gold route remains highlighted while you zoom, pan, or switch layouts. The side panel lists every connection with its source; select a step to locate that person.</p><p>The finder prefers a parent-to-child route when one exists, then searches other family connections. Bible-cited connections are the default. Uncheck that option to include STEP Bible’s indexed links, which are clearly labeled. A missing route means the collection has no recorded path under those settings.</p>
       <h3>Three ways to see the same people</h3><ul><li><strong>Constellation</strong> spreads a family into an organic network.</li><li><strong>Family tree</strong> arranges parents above their children.</li><li><strong>Ancestry rings</strong> places your starting person at the center, with each ring one family connection farther away. Spouses and descendants can appear alongside ancestors.</li></ul>
       <h3>Zoom into the story</h3><p><strong>Adaptive zoom</strong> starts with immediate family. Zoom out to reveal more distant relatives, up to eight family steps away. Zoom in near a person to uncover their immediate relatives and read relationship labels. Revealed branches stay on the map until you reset or choose another family; people stay in place as branches appear unless the family tree needs extra rows to keep parents above children.</p>
@@ -665,6 +709,7 @@
   $('#path-clear').addEventListener('click',()=>clearPath());
   $('#return-to-library').addEventListener('click',()=>{if(returnToLibrary)setView(returnToLibrary);});
   $('#return-to-festivals').addEventListener('click',()=>{if(returnToFestivals?.tradition===state.tradition)setView('festivals');});
+  $('#return-to-atlas').addEventListener('click',()=>{if(returnToAtlas?.tradition===state.tradition)setView(returnToAtlas.mode);});
   $('#path-details').addEventListener('click',()=>{renderPathInspector();$('#inspector').scrollIntoView({block:'nearest',behavior:'smooth'});});
   $('#map-fullscreen').addEventListener('click',()=>{const expanded=$('#map-view').classList.toggle('expanded');$('#map-fullscreen').setAttribute('aria-label',expanded?'Exit expanded map':'Expand map');requestAnimationFrame(()=>graph.fit());});
   $('#empty-reset').addEventListener('click',()=>{setTestamentState('all');explorePerson('abraham','auto');});

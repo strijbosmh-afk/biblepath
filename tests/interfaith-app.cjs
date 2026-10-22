@@ -20,7 +20,7 @@ class Control extends Element {
 const controls=new Map(),control=selector=>{if(!controls.has(selector))controls.set(selector,new Control());return controls.get(selector);};
 const religions=['christianity','judaism','islam'].map(religion=>new Control({religion}));
 const religionMenus=['christianity','judaism','islam'].map(religionMenu=>new Control({religionMenu}));
-const nav=['christianity','judaism','islam'].flatMap(navTradition=>(navTradition==='christianity'?['reader','index','festivals','map','cities']:['reader','index','festivals']).map(view=>new Control({view,navTradition}))).concat(new Control({view:'compare'}));
+const nav=['christianity','judaism','islam'].flatMap(navTradition=>['reader','index','festivals','map','cities'].map(view=>new Control({view,navTradition}))).concat(new Control({view:'compare'}));
 const traditions=['christianity','judaism','islam'].map(tradition=>new Control({tradition}));
 const peopleTraditions=['christianity','judaism','islam'].map(peopleTradition=>new Control({peopleTradition}));
 const groups=new Map([
@@ -62,6 +62,13 @@ context.window.SacredReader=class {
   render(){this.el.rendered=`${this.model.tradition}:${I.language}`;this.el.innerHTML=`<article>${this.el.rendered}</article>`;}
   getState(){return structuredClone(this.state);}destroy(){this.destroyed=true;}changeLanguage(){this.render();}
   selectEdition(edition){this.state.edition=edition;this.render();}open(location){this.state.location=structuredClone(location);this.render();}
+};
+let atlasView;
+context.window.TraditionAtlasView=class {
+  constructor(el,callbacks){this.el=el;this.callbacks=callbacks;this.saved=new Map();atlasView=this;}
+  setCollection(data,mode){this.tradition=data.meta.tradition;this.setMode(mode);}
+  setMode(mode){this.mode=mode;this.changeLanguage();}
+  changeLanguage(){this.el.rendered=`atlas:${this.tradition}:${this.mode}:${I.language}`;}
 };
 let festivalView;
 context.window.FestivalView=class {
@@ -144,7 +151,7 @@ async function religionNavigationRegression(){
   assert.equal(control('#search-trigger').hidden,false);assert.equal(control('.journeys').hidden,false);assert.equal(control('.sidebar-bottom .edition').hidden,false);
   assert.equal(control('#religion-crumb').textContent,'Roman Catholic Christianity');
   assert.equal(activeNav().length,1);assert.equal(activeNav()[0].dataset.view,'map');
-  selectReligion('judaism');assert.equal(snapshot().view,'reader','Bible-only subviews fall back to holy books in another religion');
+  selectReligion('judaism');assert.equal(snapshot().view,'map','The family map stays selected in another religion');respond('tradition-atlas-judaism.json',{meta:{tradition:'judaism'}});
   await settle();selectView('reader','christianity');await settle();
   assert.deepEqual(bibleReaders.at(-1).state.location,{bookId:'JHN',chapter:3,verse:16},'Religion changes retain the Catholic reading position');
 }
@@ -359,7 +366,7 @@ async function main(){
   assert.equal(bibleReaders.at(-1).state.location.bookId,'GEN');assert.equal(bibleReaders.at(-1).state.location.verse,2);
   assert.equal(bibleReaders.at(-1).state.personPassage.originalReference.translation,abrahamRef.translation,'Source translation metadata reaches the resolver');
   assert.equal(requests.filter(request=>request.file==='person-passage-map.json').length,1,'Both person collections share a successful map download');
-  for(const scenario of ['--religion-navigation','--saved-religion','--festivals']){const check=spawnSync(process.execPath,[__filename,scenario],{encoding:'utf8'});assert.equal(check.status,0,check.stderr||check.stdout);}
+  for(const scenario of ['--religion-navigation','--saved-religion','--festivals','--tradition-atlas']){const check=spawnSync(process.execPath,[__filename,scenario],{encoding:'utf8'});assert.equal(check.status,0,check.stderr||check.stdout);}
   const pendingProfileCheck=spawnSync(process.execPath,[__filename,'--pending-profile-language'],{encoding:'utf8'});
   assert.equal(pendingProfileCheck.status,0,pendingProfileCheck.stderr||pendingProfileCheck.stdout);
   const dutchRetryCheck=spawnSync(process.execPath,[__filename,'--dutch-edition-retry'],{encoding:'utf8'});
@@ -450,4 +457,43 @@ async function festivalRegression(){
   console.log('Festival app regression passed: lazy separate collections, religion-first navigation, late responses, retry, language, edition-specific ranges and return routing.');
 }
 
-(process.argv.includes('--festivals')?festivalRegression():process.argv.includes('--religion-navigation')?religionNavigationRegression():process.argv.includes('--saved-religion')?savedReligionRegression():process.argv.includes('--pending-profile-language')?pendingProfileLanguageRegression():process.argv.includes('--pending-passage-race')?pendingPassageEditionRegression():process.argv.includes('--saved-catholic')?savedCatholicRegression():process.argv.includes('--dutch-edition-retry')?dutchEditionRetryRegression():process.argv.includes('--person-passage-retry')?personPassageRetryRegression():process.argv.includes('--person-passage-cancel')?personPassageCancelRegression():main()).catch(error=>{console.error(error);process.exitCode=1;});
+async function atlasRegression(){
+  initialCatholic();await settle();
+  assert(!requests.some(r=>r.file.startsWith('tradition-atlas-')),'Atlas data is lazy');
+  selectView('map','judaism');assert(pending('tradition-atlas-judaism.json'));
+  assert.equal(snapshot().tradition,'judaism');assert.equal(control('#map-view').hidden,true);
+  assert.equal(control('#path-finder').hidden,true);assert.equal(control('#people-testament-filters').hidden,true);
+  selectReligion('islam');assert.equal(snapshot().view,'map');
+  respond('tradition-atlas-islam.json',{meta:{tradition:'islam'}});await settle();
+  respond('tradition-atlas-judaism.json',null,{ok:false});await settle();
+  assert.equal(atlasView.tradition,'islam','A late failed download does not replace the active religion');
+  assert.equal(control('#tradition-atlas-view').hidden,false);
+  await control('#language-select').change('fr');assert.equal(control('#tradition-atlas-view').rendered,'atlas:islam:map:fr');
+  selectView('cities','islam');await settle();assert.equal(atlasView.mode,'cities');assert.equal(control('#cities-view').hidden,true);
+  assert.equal(requests.filter(r=>r.file==='tradition-atlas-islam.json').length,1,'Family maps and places share one downloaded collection');
+  const qref={tradition:'islam',surah:1,verse:1,endVerse:1,edition:'nl'};
+  const opening=atlasView.callbacks.onPassage(qref);respond('quran-data.json',quran);await opening;await settle();
+  assert.equal(snapshot().view,'reader');assert.equal(sacredReaders.at(-1).state.edition,'nl');assert.equal(sacredReaders.at(-1).state.location.unit,'1');
+  assert.equal(control('#return-to-atlas').hidden,false);assert.equal(control('#return-to-festivals').hidden,true);
+  control('#return-to-atlas').click();await settle();assert.equal(snapshot().view,'cities');assert.equal(atlasView.mode,'cities');
+  atlasView.callbacks.onModeChange('map');await settle();assert.equal(snapshot().view,'map');assert.equal(atlasView.mode,'map');
+  selectReligion('judaism');respond('tradition-atlas-judaism.json',null,{ok:false});await settle();
+  assert.match(control('#tradition-atlas-view').innerHTML,/library-retry/);
+  control('#tradition-atlas-view').querySelector('button').click();respond('tradition-atlas-judaism.json',{meta:{tradition:'judaism'}});await settle();
+  assert.equal(atlasView.tradition,'judaism');assert.equal(snapshot().view,'map');
+  const he=structuredClone(tanakh);he.editions.he=structuredClone(he.editions.en);he.editions.he.books[0].chapters[0].verses.push({number:2,text:'Hebrew fixture'});
+  const jref={tradition:'judaism',book:'GEN',chapter:1,verse:1,endVerse:2,edition:'he'};
+  const jopening=atlasView.callbacks.onPassage(jref);respond('tanakh-data.json',he);await jopening;await settle();
+  assert.equal(sacredReaders.at(-1).state.edition,'he');assert.equal(sacredReaders.at(-1).state.location.endVerse,2);
+  control('#return-to-atlas').click();await settle();assert.equal(snapshot().view,'map');
+  const prior=structuredClone(sacredReaders.at(-1).state.location),cancelled=atlasView.callbacks.onPassage({...jref,verse:2});selectView('cities','christianity');await cancelled;
+  assert.deepEqual(sacredReaders.at(-1).state.location,prior,'Leaving cancels a pending passage action');
+  assert.equal(snapshot().tradition,'christianity');assert.equal(control('#tradition-atlas-view').hidden,true);assert.equal(control('#cities-view').hidden,false);assert.equal(control('#return-to-atlas').hidden,true);
+  selectView('map','judaism');await settle();atlasView.callbacks.onPerson('torah:moses');respond('torah-people.json',torahPeople);await settle();
+  assert.equal(snapshot().view,'index');assert.equal(peopleIndexes.at(-1).selected,'torah:moses');assert.equal(control('#return-to-atlas').hidden,false);
+  control('#return-to-atlas').click();await settle();assert.equal(snapshot().view,'map');assert.equal(snapshot().tradition,'judaism');
+  selectView('cities','judaism');selectReligion('islam');await settle();assert.equal(snapshot().view,'cities');assert.equal(atlasView.tradition,'islam');
+  console.log('Tradition atlas navigation passed: separate views, lazy cache, stale downloads, retry, source ranges, index links, language and return paths.');
+}
+
+(process.argv.includes('--tradition-atlas')?atlasRegression():process.argv.includes('--festivals')?festivalRegression():process.argv.includes('--religion-navigation')?religionNavigationRegression():process.argv.includes('--saved-religion')?savedReligionRegression():process.argv.includes('--pending-profile-language')?pendingProfileLanguageRegression():process.argv.includes('--pending-passage-race')?pendingPassageEditionRegression():process.argv.includes('--saved-catholic')?savedCatholicRegression():process.argv.includes('--dutch-edition-retry')?dutchEditionRetryRegression():process.argv.includes('--person-passage-retry')?personPassageRetryRegression():process.argv.includes('--person-passage-cancel')?personPassageCancelRegression():main()).catch(error=>{console.error(error);process.exitCode=1;});

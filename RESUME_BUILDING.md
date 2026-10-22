@@ -220,3 +220,9 @@ These are proposals, not implemented features:
 3. **Geographic journeys map:** plot cities and routes such as the Exodus and Paul's travels, with geographic uncertainty clearly marked and source links for every route segment.
 
 Other known improvements include licensed modern Dutch/French Catholic translations, expanded reviewed Catholic person and place coverage, reviewed cross-edition verse alignment, wider proper-name alias coverage, further editorial verification of imported relationships, and offline asset caching. Preserve the current working app while adding them incrementally.
+
+## Jewish and Islamic family maps and places
+
+Both religions now have map/cities navigation alongside books, people and festivals. `dist/tradition-atlas.js` and `.css` render independent curated datasets `tradition-atlas-judaism.json` and `tradition-atlas-islam.json`. Preserve each collection’s own identities, sources and relation types. A missing relation is not proof of no kinship. Never infer Muhammad’s ancestry from Biblical records, or merge Maryam’s Quranic kinship language into Moses’s family. Place associations do not establish residence; keep historical and location caveats.
+
+The atlas component keeps per-religion family/person/query/zoom and city/filter state. `app.js` routes map/cities according to the selected religion; explicit Bible actions restore Christianity. Reader actions retain `he` Hebrew Tanakh or `nl` Dutch Quran coordinates and support return to the originating map/place. Validate every cited range against the real source editions and every optional index ID against its collection. Use the new data/UI tests plus interfaith app regression before publication. Do not add study questions.

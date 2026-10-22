@@ -1,6 +1,10 @@
 (function(){
 const I=window.BibleI18n;
 I.registerRows([
+['Family relationships in this tradition, with a source for every connection.','Familiebanden binnen deze traditie, met een bron bij elke verbinding.','Les liens familiaux dans cette tradition, avec une source pour chaque relation.'],
+['Cities and places in this tradition, with textual sources and historical context.','Steden en plaatsen binnen deze traditie, met tekstbronnen en historische context.','Villes et lieux de cette tradition, avec sources textuelles et contexte historique.'],
+['← Back to the family map','← Terug naar de familiekaart','← Revenir à la carte familiale'],
+['← Back to the cities explorer','← Terug naar de stedenverkenner','← Revenir aux villes et lieux'],
 ['Religions in text, history and practice.','Religies in tekst, geschiedenis en praktijk.','Religions : textes, histoire et pratiques.'],
 ['ReligieAtlas home','ReligieAtlas startpagina','Accueil ReligieAtlas'],
 ['Find a person','Zoek een persoon','Rechercher une personne'],
