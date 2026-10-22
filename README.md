@@ -1,8 +1,10 @@
-# BiblePath
+# ReligieAtlas
 
 A dependency-free web app for reading the Bible, Tanakh and Qur’an, and exploring biblical people and cities. Family maps offer three interactive SVG layouts: Constellation, Family tree, and Ancestry rings.
 
-Live app: https://biblepath-people-atlas.glossy-chord-2394.chatgpt.site/ · [Development handover](RESUME_BUILDING.md)
+Live app: https://www.religieatlas.com/ · [Development handover](RESUME_BUILDING.md)
+
+Vercel serves `dist/` through the existing `biblepath` project in `personalprojectsmichiel`. `vercel.json` disables installation/build commands and sets the static output directory. The GitHub production branch is `main`. The original private Sites publication remains available at https://biblepath-people-atlas.glossy-chord-2394.chatgpt.site/.
 
 Dutch is the first-visit interface language; an explicitly saved English, Dutch or French preference is preserved. The Bible reader defaults to a complete Dutch Catholic collection based on the Petrus Canisius translation (1939), with explicitly sourced historical Catholic supplements where the digital transcription lacks text. The complete English Douay-Rheims 1899 edition and the existing 66-book World English Bible, Dutch Statenvertaling and French Louis Segond 1910 editions remain available. Interface language and text edition are distinct; saved edition preferences and reading positions are preserved. The language selector preserves reading and explorer state. Navigation starts with a religion: Christianity (Roman Catholic), Judaism or Islam. Each religion contains Holy books and People; the biblical Relationship map and Cities explorer belong to Christianity. Comparing traditions remains a shared entry. The selected religion stays consistent between books and people, while reading positions, editions and collection searches retain their own state. Testament filters apply only to the Bible index and family map.
 
@@ -20,11 +22,11 @@ City references use the atlas's English verse numbering. When the selected editi
 
 ## Festivals and rituals
 
-Each religion has its own **Feestdagen & rituelen** submenu for higher education: seven Roman Catholic dossiers, eight Jewish dossiers and seven Islamic dossiers. The collection covers celebrations, seasons and recurrent rituals rather than an exhaustive calendar. Each dossier supplies a recurring calendar rule, meaning and texts, historical context, practice, internal diversity, three critical study questions and attributed references in Dutch, English and French. Sacred texts, tradition/interpretation and historical studies have distinct labels; numbered citations connect claims and questions to their sources.
+Each religion has its own **Feestdagen & rituelen** submenu as an information source: seven Roman Catholic dossiers, eight Jewish dossiers and seven Islamic dossiers. The collection covers celebrations, seasons and recurrent rituals rather than an exhaustive calendar. Each dossier supplies a recurring calendar rule, meaning and texts, historical context, practice, internal diversity, attributed references in Dutch, English and French. Sacred texts, tradition/interpretation and historical studies have distinct labels; numbered citations connect claims to their sources.
 
 The editorial assets are `dist/festivals-christianity.json`, `dist/festivals-judaism.json` and `dist/festivals-islam.json`. They load on demand and keep religion-specific search, filtering and selection state. Calendar rules are descriptive, not automatically calculated annual dates. Institutional religious sources represent their stated perspectives, not a consensus of all adherents; historical accounts and theological claims must remain distinguishable.
 
-Internal reading links carry reviewed edition-specific coordinates: Dutch Catholic `catholic-nl`, Hebrew Tanakh `he`, and Dutch Qur’an `nl`. The Jewish links deliberately use Hebrew numbering rather than assuming the Dutch Christian reading aid shares it. Original sources remain available beside the local reader action. A return control restores the selected study dossier. Tanakh and Qur’an references now retain and highlight full verse ranges. Scripture wording and imported source assets are unchanged.
+Internal reading links carry reviewed edition-specific coordinates: Dutch Catholic `catholic-nl`, Hebrew Tanakh `he`, and Dutch Qur’an `nl`. The Jewish links deliberately use Hebrew numbering rather than assuming the Dutch Christian reading aid shares it. Original sources remain available beside the local reader action. A return control restores the selected information dossier. Tanakh and Qur’an references now retain and highlight full verse ranges. Scripture wording and imported source assets are unchanged.
 
 Run `node tests/festivals-data.cjs` for source IDs, languages, distinct religious scope and every internal passage against the actual editions; `node tests/festivals-ui.cjs` for searches, filters, source actions and per-religion state; and `node tests/interfaith-app.cjs` for asynchronous navigation, retries, language changes and reader return paths. Source interpretation still requires editorial review, beyond automated schema and coordinate checks.
 

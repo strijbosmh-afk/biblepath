@@ -12,10 +12,9 @@ for(const [tradition,count] of Object.entries(expected)){
   for(const e of collection.entries){
     assert(!ids.has(e.id));ids.add(e.id);assert(Number.isInteger(e.order));
     localized(e.title,e.id+' title');localized(e.summary,e.id+' summary');localized(e.calendar.text,e.id+' calendar');
-    assert.deepEqual(e.sections.map(s=>s.id).sort(),['diversity','history','meaning','practice']);assert.equal(e.questions.length,3);
+    assert.deepEqual(e.sections.map(s=>s.id).sort(),['diversity','history','meaning','practice']);assert.equal(e.questions,undefined,'Information dossiers must not include study questions');
     for(const s of e.sections)localized(s.text,e.id+' '+s.id);
-    for(const q of e.questions)localized(q.question,e.id+' question');
-    for(const s of [e.calendar,...e.sections,...e.questions]){assert(s.sourceIds.length>0,`${e.id} has unsourced material`);assert.equal(new Set(s.sourceIds).size,s.sourceIds.length);}
+    for(const s of [e.calendar,...e.sections]){assert(s.sourceIds.length>0,`${e.id} has unsourced material`);assert.equal(new Set(s.sourceIds).size,s.sourceIds.length);}
     assert(e.references.some(r=>r.kind==='scripture'||r.kind==='tradition'),e.id+' must have textual sources');
     for(const r of e.references){
       references++;localized(r.label,e.id+' source label');localized(r.context,e.id+' source context');assert.equal(new URL(r.url).protocol,'https:');
@@ -39,4 +38,4 @@ const jewish=read('festivals-judaism'),islam=read('festivals-islam');
 const hanukkah=jewish.entries.find(e=>/hanukkah|chanuk/i.test(e.id));assert(hanukkah,'Hanukkah dossier');
 assert(hanukkah.references.some(r=>r.kind!=='scripture'),'Hanukkah needs sources beyond the Hebrew Bible');
 const maw = islam.entries.find(e=>e.id.includes('mawlid'));assert(maw,'Mawlid dossier');assert(maw.sections.find(s=>s.id==='diversity').sourceIds.length>=2,'Mawlid diversity needs differing sourced perspectives');
-console.log(`Festival data passed: ${ids.size} distinct dossiers, 66 trilingual critical questions, ${references} attributed sources, ${passages} edition-validated internal passages.`);
+console.log(`Festival data passed: ${ids.size} distinct dossiers, ${references} attributed sources, ${passages} edition-validated internal passages.`);

@@ -3,9 +3,9 @@
     "tradition": "judaism",
     "reviewedAt": "2026-10-22",
     "scope": {
-      "nl": "Acht inleidende dossiers voor het hoger onderwijs over joodse feestdagen en rituelen. Tenach, rabbijnse interpretatie en hedendaagse gebruiken worden onderscheiden; gemeenschappen en individuele praktijken verschillen. Datums volgen de Hebreeuwse kalender en beginnen op de voorafgaande avond. Bij tekstlinks wordt de eigen Hebreeuwse versnummering gebruikt.",
-      "en": "Eight introductory higher-education dossiers on Jewish festivals and rituals. Tanakh, rabbinic interpretation and contemporary customs are distinguished; communities and individual practices differ. Dates follow the Hebrew calendar and begin on the preceding evening. Scripture links use Hebrew verse numbering.",
-      "fr": "Huit dossiers introductifs pour l’enseignement supérieur sur les fêtes et rites juifs. Le Tanakh, l’interprétation rabbinique et les usages contemporains sont distingués ; communautés et pratiques individuelles diffèrent. Les dates suivent le calendrier hébraïque et commencent la veille au soir. Les liens bibliques suivent la numérotation hébraïque."
+      "nl": "Informatie over joodse feestdagen en rituelen. Tenach, rabbijnse interpretatie en hedendaagse gebruiken worden onderscheiden; gemeenschappen en individuele praktijken verschillen. Datums volgen de Hebreeuwse kalender en beginnen op de voorafgaande avond. Bij tekstlinks wordt de eigen Hebreeuwse versnummering gebruikt.",
+      "en": "Information on Jewish festivals and rituals. Tanakh, rabbinic interpretation and contemporary customs are distinguished; communities and individual practices differ. Dates follow the Hebrew calendar and begin on the preceding evening. Scripture links use Hebrew verse numbering.",
+      "fr": "Informations sur les fêtes et rites juifs. Le Tanakh, l’interprétation rabbinique et les usages contemporains sont distingués ; communautés et pratiques individuelles diffèrent. Les dates suivent le calendrier hébraïque et commencent la veille au soir. Les liens bibliques suivent la numérotation hébraïque."
     }
   },
   "entries": [
@@ -72,46 +72,13 @@
         {
           "id": "diversity",
           "text": {
-            "nl": "De beschrijving van Chabad vertegenwoordigt een orthodoxe benadering. Gebruik die niet als maatstaf voor de feitelijke naleving door alle joden; onderscheid een normatieve bron van onderzoek naar geleefde religie.",
-            "en": "Chabad's account represents an Orthodox approach. Do not use it as a measure of every Jew's actual observance; distinguish a normative source from research into lived religion.",
-            "fr": "Le texte de Chabad présente une approche orthodoxe. Il ne mesure pas l’observance réelle de chaque personne juive ; il faut distinguer une source normative d’une enquête sur la religion vécue."
+            "nl": "De beschrijving van Chabad vertegenwoordigt een orthodoxe benadering. Het is een normatieve bron, geen beschrijving van de feitelijke naleving door alle joden.",
+            "en": "Chabad’s account represents an Orthodox approach. It is a normative source, not a description of every Jew’s actual observance.",
+            "fr": "Le texte de Chabad présente une approche orthodoxe. C’est une source normative, non une description de l’observance réelle de chaque personne juive."
           },
           "sourceIds": [
             "shabbat-today",
             "shabbat-mishnah"
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "question": {
-            "nl": "Vergelijk de argumenten voor rust in Exodus en Deuteronomium. Welke sociale verhoudingen worden erkend, en welke worden begrensd?",
-            "en": "Compare the arguments for rest in Exodus and Deuteronomy. Which social relations are acknowledged, and which are constrained?",
-            "fr": "Comparez les arguments pour le repos dans l’Exode et le Deutéronome. Quels rapports sociaux sont reconnus et lesquels sont limités ?"
-          },
-          "sourceIds": [
-            "shabbat-exodus",
-            "shabbat-deuteronomy"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Hoe verandert de betekenis van ‘werk’ wanneer je de 39 categorieën naast hedendaagse arbeid legt? Onderbouw je antwoord met twee categorieën.",
-            "en": "How does the meaning of 'work' change when the 39 categories are compared with contemporary labour? Support your answer with two categories.",
-            "fr": "Comment le sens du « travail » change-t-il si l’on compare les 39 catégories au travail contemporain ? Appuyez votre réponse sur deux catégories."
-          },
-          "sourceIds": [
-            "shabbat-mishnah"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Welke gegevens zou een interview of observatie moeten toevoegen om van een religieus voorschrift naar een analyse van dagelijkse praktijk te gaan?",
-            "en": "What evidence would an interview or observation need to add to move from a religious prescription to an analysis of everyday practice?",
-            "fr": "Quelles données un entretien ou une observation devrait-il ajouter pour passer d’une prescription religieuse à l’analyse des pratiques quotidiennes ?"
-          },
-          "sourceIds": [
-            "shabbat-today"
           ]
         }
       ],
@@ -268,40 +235,6 @@
           ]
         }
       ],
-      "questions": [
-        {
-          "question": {
-            "nl": "Welke continuïteiten en veranderingen vind je tussen Exodus 12 en Misjna Pesachim 10? Maak onderscheid tussen tekstueel bewijs en historische gevolgtrekking.",
-            "en": "What continuities and changes appear between Exodus 12 and Mishnah Pesachim 10? Distinguish textual evidence from historical inference.",
-            "fr": "Quelles continuités et transformations voyez-vous entre Exode 12 et Mishnah Pessa’him 10 ? Distinguez preuve textuelle et inférence historique."
-          },
-          "sourceIds": [
-            "pesach-exodus",
-            "pesach-mishnah"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Hoe maken voedsel, vragen en de positie van arme deelnemers bevrijding tot een collectieve herinnering?",
-            "en": "How do food, questions and the place of poor participants make liberation a collective memory?",
-            "fr": "Comment les aliments, les questions et la place des participants pauvres font-ils de la libération une mémoire collective ?"
-          },
-          "sourceIds": [
-            "pesach-mishnah"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Welke aannames over gezag en gemeenschap liggen achter het bewaren of loslaten van een extra feestdag? Vergelijk beide gemeenschapsbronnen.",
-            "en": "What assumptions about authority and community underlie retaining or dropping an additional festival day? Compare both community sources.",
-            "fr": "Quelles conceptions de l’autorité et de la communauté sous-tendent le maintien ou l’abandon d’un jour supplémentaire ? Comparez les deux sources communautaires."
-          },
-          "sourceIds": [
-            "pesach-length",
-            "pesach-reform"
-          ]
-        }
-      ],
       "references": [
         {
           "id": "pesach-exodus",
@@ -447,41 +380,6 @@
           ]
         }
       ],
-      "questions": [
-        {
-          "question": {
-            "nl": "Welke argumentatiestappen zijn nodig om een oogstkalender met de Sinaïopenbaring te verbinden? Onderscheid expliciete tekst van latere interpretatie.",
-            "en": "What interpretive steps connect a harvest calendar with the revelation at Sinai? Distinguish explicit text from later interpretation.",
-            "fr": "Quelles étapes interprétatives relient un calendrier agricole à la révélation au Sinaï ? Distinguez texte explicite et interprétation ultérieure."
-          },
-          "sourceIds": [
-            "shavuot-leviticus",
-            "shavuot-talmud"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Wat leert het bewaarde meningsverschil over de datum over de aard van rabbijns gezag?",
-            "en": "What does the preserved disagreement about the date suggest about the nature of rabbinic authority?",
-            "fr": "Que révèle le désaccord conservé sur la date quant à la nature de l’autorité rabbinique ?"
-          },
-          "sourceIds": [
-            "shavuot-talmud"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Vergelijk oogstoffer, nachtelijke studie en bevestigingsviering als vormen van overdracht. Wie neemt deel en wat geldt als kennis?",
-            "en": "Compare harvest offering, overnight study and confirmation as modes of transmission. Who participates, and what counts as knowledge?",
-            "fr": "Comparez offrande agricole, étude nocturne et confirmation comme modes de transmission. Qui participe et qu’est-ce qui compte comme savoir ?"
-          },
-          "sourceIds": [
-            "shavuot-leviticus",
-            "shavuot-today",
-            "shavuot-history"
-          ]
-        }
-      ],
       "references": [
         {
           "id": "shavuot-leviticus",
@@ -516,9 +414,9 @@
           },
           "url": "https://www.sefaria.org/Shabbat.86b",
           "context": {
-            "nl": "Zoek de discussie over de zesde of zevende sivan.",
-            "en": "Locate the discussion of the sixth or seventh of Sivan.",
-            "fr": "Repérez la discussion sur le sixième ou le septième sivan."
+            "nl": "Discussie over de zesde of zevende sivan.",
+            "en": "Discussion of the sixth or seventh of Sivan.",
+            "fr": "Discussion sur le sixième ou le septième sivan."
           }
         },
         {
@@ -621,39 +519,6 @@
             "nl": "De keuze voor één of twee dagen verschilt zelfs binnen het liberale jodendom. Een verklaring kan teruggrijpen op de bijbelse tekst, maar ook op verbondenheid met andere joodse gemeenschappen.",
             "en": "The choice of one or two days varies even within Reform Judaism. An explanation may appeal to the biblical text, but also to solidarity with other Jewish communities.",
             "fr": "Le choix d’un ou deux jours varie même au sein du judaïsme libéral. Il peut se justifier par le texte biblique, mais aussi par la solidarité avec d’autres communautés juives."
-          },
-          "sourceIds": [
-            "rosh-calendar"
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "question": {
-            "nl": "Hoe kunnen vier verschillende nieuwjaarsdata naast elkaar bestaan? Wat leert dit over het verschil tussen religieuze, agrarische en bestuurlijke tijd?",
-            "en": "How can four different new years coexist? What does this reveal about religious, agricultural and administrative time?",
-            "fr": "Comment quatre débuts d’année peuvent-ils coexister ? Que révèle cela sur les temps religieux, agricole et administratif ?"
-          },
-          "sourceIds": [
-            "rosh-mishnah"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Welke elementen van de huidige betekenis vind je al in Leviticus, en welke pas in de rabbijnse bron?",
-            "en": "Which elements of the festival's present meaning occur in Leviticus, and which appear only in the rabbinic source?",
-            "fr": "Quels éléments de la signification actuelle se trouvent dans le Lévitique et lesquels apparaissent seulement dans la source rabbinique ?"
-          },
-          "sourceIds": [
-            "rosh-leviticus",
-            "rosh-mishnah"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Beoordeel de argumenten voor één of twee dagen. Wanneer heeft historische continuïteit een andere functie dan een praktische kalenderregel?",
-            "en": "Assess the arguments for one or two days. When does historical continuity serve a different function from a practical calendar rule?",
-            "fr": "Évaluez les arguments pour un ou deux jours. Quand la continuité historique remplit-elle une autre fonction qu’une règle pratique de calendrier ?"
           },
           "sourceIds": [
             "rosh-calendar"
@@ -797,42 +662,9 @@
         {
           "id": "diversity",
           "text": {
-            "nl": "De Misjna zelf bewaart meningsverschillen over uitzonderingen op onthouding. Bestudeer daarom zowel het ideaal als de afweging van lichamelijke omstandigheden; deelname kan niet uitsluitend aan vasten worden afgemeten.",
-            "en": "The Mishnah itself preserves disagreements about exceptions to abstention. Study both the ideal and the assessment of bodily circumstances; participation cannot be measured by fasting alone.",
-            "fr": "La Mishnah conserve elle-même des désaccords sur les exceptions à l’abstinence. Étudiez donc l’idéal et la prise en compte des conditions corporelles ; la participation ne se mesure pas au seul jeûne."
-          },
-          "sourceIds": [
-            "kippur-mishnah"
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "question": {
-            "nl": "Vergelijk rituele reiniging in Leviticus 16 met intermenselijke verzoening in Misjna Joma 8:9. Welke vormen van verantwoordelijkheid worden onderscheiden?",
-            "en": "Compare ritual purification in Leviticus 16 with interpersonal reconciliation in Mishnah Yoma 8:9. What forms of responsibility are distinguished?",
-            "fr": "Comparez purification rituelle en Lévitique 16 et réconciliation interpersonnelle en Mishnah Yoma 8,9. Quelles formes de responsabilité sont distinguées ?"
-          },
-          "sourceIds": [
-            "kippur-leviticus",
-            "kippur-mishnah"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Hoe bewaart een liturgie de herinnering aan een verdwenen tempelritueel, en hoe verandert daardoor de rol van deelnemers?",
-            "en": "How does liturgy preserve the memory of a vanished Temple rite, and how does this change participants' roles?",
-            "fr": "Comment la liturgie conserve-t-elle la mémoire d’un rite du Temple disparu, et comment le rôle des participants en est-il transformé ?"
-          },
-          "sourceIds": [
-            "kippur-history"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Analyseer in Misjna Joma 8 de verhouding tussen religieuze norm, lichamelijke kwetsbaarheid en deskundigheid. Welke spanning lost de tekst op?",
-            "en": "Analyse the relationship between religious norms, bodily vulnerability and expertise in Mishnah Yoma 8. What tension does the text resolve?",
-            "fr": "Analysez le rapport entre norme religieuse, vulnérabilité corporelle et expertise dans Mishnah Yoma 8. Quelle tension le texte résout-il ?"
+            "nl": "De Misjna zelf bewaart meningsverschillen over uitzonderingen op onthouding. Naast het ideaal spelen lichamelijke omstandigheden een rol; deelname kan niet uitsluitend aan vasten worden afgemeten.",
+            "en": "The Mishnah itself preserves disagreements about exceptions to abstention. Bodily circumstances play a role alongside the ideal; participation cannot be measured by fasting alone.",
+            "fr": "La Mishnah conserve elle-même des désaccords sur les exceptions à l’abstinence. Les conditions corporelles comptent aussi à côté de l’idéal ; la participation ne se mesure pas au seul jeûne."
           },
           "sourceIds": [
             "kippur-mishnah"
@@ -911,9 +743,9 @@
           },
           "url": "https://www.chabad.org/library/article_cdo/aid/177886/jewish/What-Is-Yom-Kippur.htm",
           "context": {
-            "nl": "Orthodoxe gemeenschapsbron; zie geschiedenis, gebedsdiensten en begintijden. Engelstalig.",
-            "en": "Orthodox community source; see history, prayer services and starting times. In English.",
-            "fr": "Source communautaire orthodoxe ; voir histoire, offices et horaires. En anglais."
+            "nl": "Orthodoxe gemeenschapsbron over geschiedenis, gebedsdiensten en begintijden; Engelstalig.",
+            "en": "Orthodox community source on history, prayer services and starting times; in English.",
+            "fr": "Source communautaire orthodoxe sur l’histoire, les offices et les horaires ; en anglais."
           }
         }
       ]
@@ -960,8 +792,8 @@
         {
           "id": "history",
           "text": {
-            "nl": "De Misjna vertaalt het wonen in hutten naar regels voor het dagelijks verblijf, inclusief regen. Simchat Tora, dat de jaarlijkse leescyclus afrondt, is een latere viering en mag niet als expliciet voorschrift uit Leviticus worden voorgesteld.",
-            "en": "The Mishnah translates dwelling in booths into rules for daily residence, including rain. Simchat Torah, completing the annual reading cycle, is a later celebration and should not be presented as an explicit prescription in Leviticus.",
+            "nl": "De Misjna vertaalt het wonen in hutten naar regels voor het dagelijks verblijf, inclusief regen. Simchat Tora, dat de jaarlijkse leescyclus afrondt, is een latere viering, geen expliciet voorschrift uit Leviticus.",
+            "en": "The Mishnah translates dwelling in booths into rules for daily residence, including rain. Simchat Torah, completing the annual reading cycle, is a later celebration, not an explicit prescription in Leviticus.",
             "fr": "La Mishnah traduit le séjour en cabane en règles de vie quotidienne, y compris sous la pluie. Sim’hat Torah, qui achève le cycle annuel de lecture, est une célébration ultérieure, non une prescription explicite du Lévitique."
           },
           "sourceIds": [
@@ -984,45 +816,11 @@
         {
           "id": "diversity",
           "text": {
-            "nl": "Het gebruik van de soeka op de aansluitende dag en de combinatie met Simchat Tora verschillen tussen gemeenschappen. Houd daarom het zevendaagse Soekot en de aansluitende feestdagen analytisch uit elkaar.",
-            "en": "Use of the sukkah on the following day and the combination with Simchat Torah vary between communities. Keep seven-day Sukkot analytically distinct from the festivals that follow it.",
-            "fr": "L’usage de la soukkah le jour suivant et l’association avec Sim’hat Torah varient selon les communautés. Distinguez donc les sept jours de Soukkot des fêtes qui lui succèdent."
+            "nl": "Het gebruik van de soeka op de aansluitende dag en de combinatie met Simchat Tora verschillen tussen gemeenschappen. Het zevendaagse Soekot en de aansluitende feestdagen zijn onderscheiden vieringen.",
+            "en": "Use of the sukkah on the following day and the combination with Simchat Torah vary between communities. Seven-day Sukkot and the festivals that follow it are distinct celebrations.",
+            "fr": "L’usage de la soukkah le jour suivant et l’association avec Sim’hat Torah varient selon les communautés. Les sept jours de Soukkot et les fêtes qui lui succèdent sont des célébrations distinctes."
           },
           "sourceIds": [
-            "sukkot-today",
-            "sukkot-reform"
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "question": {
-            "nl": "Hoe worden landbouwtijd en historische herinnering in één bijbelse passage verbonden? Welke betekenis ontstaat door die combinatie?",
-            "en": "How are agricultural time and historical memory connected in one biblical passage? What meaning emerges from their combination?",
-            "fr": "Comment temps agricole et mémoire historique sont-ils reliés dans un même passage biblique ? Quel sens naît de cette combinaison ?"
-          },
-          "sourceIds": [
-            "sukkot-leviticus"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Analyseer de omkering tussen huis en hut in de Misjna. Welke spanning tussen ideaal en lichamelijke leefbaarheid laat de regenregel zien?",
-            "en": "Analyse the reversal of house and booth in the Mishnah. What tension between ideal and bodily liveability does the rule about rain reveal?",
-            "fr": "Analysez l’inversion entre maison et cabane dans la Mishnah. Quelle tension entre idéal et habitabilité corporelle révèle la règle concernant la pluie ?"
-          },
-          "sourceIds": [
-            "sukkot-mishnah"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Waarom kan één algemeen kalenderlabel ‘Loofhuttenfeest’ de verschillende lagen van Soekot, Sjemini Atseret en Simchat Tora verbergen?",
-            "en": "Why might a single calendar label 'Festival of Booths' obscure the different layers of Sukkot, Shemini Atzeret and Simchat Torah?",
-            "fr": "Pourquoi une seule étiquette « fête des Cabanes » risque-t-elle de masquer les différentes couches de Soukkot, Chemini Atseret et Sim’hat Torah ?"
-          },
-          "sourceIds": [
-            "sukkot-leviticus",
             "sukkot-today",
             "sukkot-reform"
           ]
@@ -1092,9 +890,9 @@
           },
           "url": "https://reformjudaism.org/sukkot-history",
           "context": {
-            "nl": "Let op het onderscheid met Sjemini Atseret en de latere Simchat Tora; Engelstalig.",
-            "en": "Note the distinction from Shemini Atzeret and later Simchat Torah; in English.",
-            "fr": "Distinguez Chemini Atseret et la célébration ultérieure de Sim’hat Torah ; en anglais."
+            "nl": "Het onderscheid met Sjemini Atseret en de latere Simchat Tora; Engelstalig.",
+            "en": "The distinction from Shemini Atzeret and later Simchat Torah; in English.",
+            "fr": "Distinction avec Chemini Atseret et la célébration ultérieure de Sim’hat Torah ; en anglais."
           }
         }
       ]
@@ -1165,48 +963,14 @@
         {
           "id": "diversity",
           "text": {
-            "nl": "Geschenken en feestelijke gezinsvormen hebben een eigen geschiedenis en zijn geen rechtstreeks voorschrift uit het tempelverhaal. De verschillende accenten op overwinning, wonder en identiteit vragen om vergelijking van bronnen en contexten.",
-            "en": "Gifts and family celebrations have histories of their own and are not direct prescriptions from the Temple narrative. Different emphases on victory, miracle and identity call for comparison of sources and contexts.",
-            "fr": "Les cadeaux et les formes familiales de fête ont leur propre histoire ; ils ne sont pas directement prescrits par le récit du Temple. Les accents sur victoire, miracle et identité invitent à comparer sources et contextes."
+            "nl": "Geschenken en feestelijke gezinsvormen hebben een eigen geschiedenis en zijn geen rechtstreeks voorschrift uit het tempelverhaal. Bronnen en contexten leggen verschillende accenten op overwinning, wonder en identiteit.",
+            "en": "Gifts and family celebrations have histories of their own and are not direct prescriptions from the Temple narrative. Sources and contexts place different emphases on victory, miracle and identity.",
+            "fr": "Les cadeaux et les formes familiales de fête ont leur propre histoire ; ils ne sont pas directement prescrits par le récit du Temple. Les sources et les contextes mettent différemment l’accent sur la victoire, le miracle et l’identité."
           },
           "sourceIds": [
             "hanukkah-gifts",
             "hanukkah-maccabees",
             "hanukkah-talmud"
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "question": {
-            "nl": "Vergelijk de verklaring van acht dagen in 1 Makkabeeën met die in Sjabbat 21b. Wat verandert in de selectie van gebeurtenissen en de betekenis van herinnering?",
-            "en": "Compare the explanation of eight days in 1 Maccabees with Shabbat 21b. What changes in the selection of events and meaning of memory?",
-            "fr": "Comparez l’explication des huit jours dans 1 Maccabées et Shabbat 21b. Qu’est-ce qui change dans la sélection des événements et le sens de la mémoire ?"
-          },
-          "sourceIds": [
-            "hanukkah-maccabees",
-            "hanukkah-talmud"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Hoe kan een tekst buiten een religieuze canon toch een belangrijke historische bron voor een feest zijn? Onderscheid canoniek gezag van historische bruikbaarheid.",
-            "en": "How can a text outside a religious canon remain an important historical source for a festival? Distinguish canonical authority from historical usefulness.",
-            "fr": "Comment un texte extérieur à un canon religieux peut-il rester une source historique importante pour une fête ? Distinguez autorité canonique et utilité historique."
-          },
-          "sourceIds": [
-            "hanukkah-maccabees",
-            "hanukkah-history"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Welke criteria gebruik je om een later gebruik, zoals geschenken, als continuïteit, aanpassing of vernieuwing te beschrijven?",
-            "en": "What criteria would you use to describe a later custom, such as gift-giving, as continuity, adaptation or innovation?",
-            "fr": "Quels critères permettent de décrire un usage ultérieur, comme les cadeaux, comme continuité, adaptation ou innovation ?"
-          },
-          "sourceIds": [
-            "hanukkah-gifts"
           ]
         }
       ],
@@ -1342,40 +1106,6 @@
             "fr": "La Mishnah distingue villes et villages et examine les dates de lecture selon les jours de la semaine et les décisions calendaires. Un même récit d’origine peut ainsi porter des règles rituelles locales différentes."
           },
           "sourceIds": [
-            "purim-mishnah"
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "question": {
-            "nl": "Hoe maakt Ester 9 van een verhaal een terugkerende verplichting? Onderzoek de rol van brieven, autoriteit en overdracht tussen generaties.",
-            "en": "How does Esther 9 turn a story into a recurring obligation? Examine the role of letters, authority and transmission between generations.",
-            "fr": "Comment Esther 9 transforme-t-il un récit en obligation récurrente ? Examinez les lettres, l’autorité et la transmission entre générations."
-          },
-          "sourceIds": [
-            "purim-esther"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Welke aanvullende bewijzen zouden nodig zijn om een verhaalelement als historische gebeurtenis te beoordelen? Waarom is rituele betekenis een andere onderzoeksvraag?",
-            "en": "What additional evidence would be needed to assess a narrative element as a historical event? Why is ritual significance a different research question?",
-            "fr": "Quelles preuves supplémentaires faudrait-il pour évaluer un élément narratif comme événement historique ? Pourquoi le sens rituel constitue-t-il une autre question de recherche ?"
-          },
-          "sourceIds": [
-            "purim-history",
-            "purim-esther"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Vergelijk de aandacht voor armen in Ester 9 met de kalenderregels in de Misjna. Hoe regelen deze teksten respectievelijk sociale en geografische verbondenheid?",
-            "en": "Compare concern for the poor in Esther 9 with the Mishnah's calendar rules. How do these texts organise social and geographical belonging respectively?",
-            "fr": "Comparez l’attention aux pauvres dans Esther 9 aux règles calendaires de la Mishnah. Comment organisent-elles respectivement l’appartenance sociale et géographique ?"
-          },
-          "sourceIds": [
-            "purim-esther",
             "purim-mishnah"
           ]
         }

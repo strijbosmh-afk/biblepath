@@ -1,24 +1,22 @@
-/* Curated teaching dossiers: religion-specific sources, calendars and practices. */
+/* Curated information dossiers: religion-specific sources, calendars and practices. */
 (() => {
   'use strict';
   const rows = [
     ['Festivals & rituals','Feestdagen & rituelen','Fêtes et rites'],
     ['Texts, history and lived religion.','Teksten, geschiedenis en geleefde religie.','Textes, histoire et religion vécue.'],
-    ['Study celebrations and practices through their sources, historical development and internal diversity.','Onderzoek vieringen en gebruiken vanuit hun bronnen, historische ontwikkeling en interne diversiteit.','Étudiez les célébrations et pratiques à travers leurs sources, leur évolution historique et leur diversité interne.'],
-    ['A study collection for higher education','Een studiecollectie voor het hoger onderwijs','Une collection pour l’enseignement supérieur'],
+    ['Celebrations and practices, with their sources, historical development and internal diversity.','Vieringen en gebruiken, met hun bronnen, historische ontwikkeling en interne diversiteit.','Célébrations et pratiques, avec leurs sources, leur évolution historique et leur diversité interne.'],
+    ['Religious traditions in context','Religieuze tradities in context','Les traditions religieuses en contexte'],
     ['Search festivals and rituals','Zoek feestdagen en rituelen','Rechercher des fêtes et des rites'],
     ['Name, practice or source…','Naam, gebruik of bron…','Nom, pratique ou source…'],
     ['All topics','Alle onderwerpen','Tous les sujets'],['Festivals','Feestdagen','Fêtes'],['Seasons','Periodes','Périodes'],['Rituals','Rituelen','Rites'],
     ['Festival','Feestdag','Fête'],['Season','Periode','Période'],['Ritual','Ritueel','Rite'],
-    ['{count} study dossiers','{count} studiedossiers','{count} dossiers d’étude'],
-    ['1 study dossier','1 studiedossier','1 dossier d’étude'],
+    ['{count} topics','{count} onderwerpen','{count} sujets'],
+    ['1 topic','1 onderwerp','1 sujet'],
     ['Choose a topic','Kies een onderwerp','Choisir un sujet'],
     ['No matching topics. Try another search or filter.','Geen passende onderwerpen. Probeer een andere zoekterm of filter.','Aucun sujet correspondant. Essayez une autre recherche ou un autre filtre.'],
     ['Calendar & rhythm','Kalender & ritme','Calendrier et rythme'],
     ['Meaning & texts','Betekenis & teksten','Sens et textes'],['Historical context','Historische context','Contexte historique'],
     ['Ritual & practice','Ritueel & praktijk','Rite et pratique'],['Diversity & interpretation','Diversiteit & interpretatie','Diversité et interprétation'],
-    ['Critical study questions','Kritische studievragen','Questions d’étude critique'],
-    ['Support your answer with sources; distinguish textual evidence, interpretation and lived practice.','Onderbouw je antwoord met bronnen; onderscheid tekstuele gegevens, interpretatie en geleefde praktijk.','Appuyez votre réponse sur des sources ; distinguez les données textuelles, l’interprétation et la pratique vécue.'],
     ['Sources & reading','Bronnen & verder lezen','Sources et lectures'],
     ['Sacred text','Heilige tekst','Texte sacré'],['Tradition & interpretation','Traditie & interpretatie','Tradition et interprétation'],['Historical & contemporary sources','Historische & hedendaagse bronnen','Sources historiques et contemporaines'],
     ['Open original source','Open oorspronkelijke bron','Ouvrir la source originale'],
@@ -45,10 +43,10 @@
       if(!['christianity','judaism','islam'].includes(tradition)||!Array.isArray(data.entries)||!data.entries.length)throw new Error('Invalid festival collection');
       this.data=data;this.tradition=tradition;this.entries=[...data.entries].sort((a,b)=>a.order-b.order);this.byId=new Map();
       for(const e of this.entries){
-        if(!new RegExp(`^${tradition}:[a-z0-9-]+$`).test(e.id)||this.byId.has(e.id)||e.tradition!==tradition||!Object.hasOwn(kinds,e.kind)||!e.title?.nl||!e.calendar||!Array.isArray(e.sections)||!Array.isArray(e.questions)||!Array.isArray(e.references))throw new Error('Invalid study dossier');
+        if(!new RegExp(`^${tradition}:[a-z0-9-]+$`).test(e.id)||this.byId.has(e.id)||e.tradition!==tradition||!Object.hasOwn(kinds,e.kind)||!e.title?.nl||!e.calendar||!Array.isArray(e.sections)||!Array.isArray(e.references))throw new Error('Invalid information dossier');
         const ids=new Set(e.references.map(r=>r.id));
         if(ids.size!==e.references.length||e.references.some(r=>!safeUrl(r.url)||!Object.hasOwn(referenceKinds,r.kind)||!/^[-a-z0-9]+$/.test(r.id)))throw new Error('Invalid dossier sources');
-        if([e.calendar,...e.sections,...e.questions].some(s=>!Array.isArray(s.sourceIds)||s.sourceIds.some(id=>!ids.has(id))))throw new Error('Unknown dossier source');
+        if([e.calendar,...e.sections].some(s=>!Array.isArray(s.sourceIds)||s.sourceIds.some(id=>!ids.has(id))))throw new Error('Unknown dossier source');
         this.byId.set(e.id,e);
       }
     }
@@ -73,14 +71,14 @@
     changeLanguage(){if(this.model)this.render();}
     open(id){if(!this.model.byId.has(id))return false;this.state.selected=id;this.state.query='';this.state.kind='all';this.render();return true;}
     render(){
-      this.container.innerHTML=`<div class="festival-introduction"><span class="library-kicker">${esc(t('A study collection for higher education'))}</span><p>${esc(local(this.model.data.meta.scope))}</p></div><div class="festival-toolbar"><label for="festival-search">${esc(t('Search festivals and rituals'))}<input id="festival-search" type="search" value="${esc(this.state.query)}" placeholder="${esc(t('Name, practice or source…'))}"></label><div class="festival-filters" role="group" aria-label="${esc(t('Choose a topic'))}"></div></div><div class="festival-workspace"><section class="festival-list" aria-label="${esc(t('Choose a topic'))}"><p class="festival-count" role="status" aria-live="polite"></p><div class="festival-cards"></div></section><article class="festival-detail"></article></div>`;
+      this.container.innerHTML=`<div class="festival-introduction"><span class="library-kicker">${esc(t('Religious traditions in context'))}</span><p>${esc(local(this.model.data.meta.scope))}</p></div><div class="festival-toolbar"><label for="festival-search">${esc(t('Search festivals and rituals'))}<input id="festival-search" type="search" value="${esc(this.state.query)}" placeholder="${esc(t('Name, practice or source…'))}"></label><div class="festival-filters" role="group" aria-label="${esc(t('Choose a topic'))}"></div></div><div class="festival-workspace"><section class="festival-list" aria-label="${esc(t('Choose a topic'))}"><p class="festival-count" role="status" aria-live="polite"></p><div class="festival-cards"></div></section><article class="festival-detail"></article></div>`;
       this.renderFilters();this.renderList();
     }
     renderFilters(){this.container.querySelector('.festival-filters').innerHTML=[['all','All topics'],['feast','Festivals'],['season','Seasons'],['ritual','Rituals']].map(([key,label])=>`<button type="button" data-festival-kind="${key}" aria-pressed="${this.state.kind===key}">${esc(t(label))}</button>`).join('');}
     renderList(){
       const matches=this.model.search(this.state.query,this.state.kind);
       if(!matches.some(e=>e.id===this.state.selected))this.state.selected=matches[0]?.id||null;
-      this.container.querySelector('.festival-count').textContent=matches.length===1?t('1 study dossier'):t('{count} study dossiers',{count:matches.length});
+      this.container.querySelector('.festival-count').textContent=matches.length===1?t('1 topic'):t('{count} topics',{count:matches.length});
       this.container.querySelector('.festival-cards').innerHTML=matches.map(e=>`<button type="button" class="festival-card" data-festival="${esc(e.id)}" aria-pressed="${e.id===this.state.selected}"><span class="festival-kind">${esc(t(kinds[e.kind]))}</span><strong>${esc(local(e.title))}</strong><span class="festival-card-summary">${esc(local(e.summary))}</span><span class="festival-card-arrow" aria-hidden="true">↗</span></button>`).join('')||`<p class="festival-empty">${esc(t('No matching topics. Try another search or filter.'))}</p>`;
       this.renderDetail();
     }
@@ -90,7 +88,7 @@
       const sourceId=id=>`festival-source-${e.id}-${id}`;
       const cites=ids=>`<span class="festival-citations">${ids.map(id=>{const i=e.references.findIndex(r=>r.id===id);return `<a href="#${esc(sourceId(id))}" aria-label="${esc(local(e.references[i].label))}">[${i+1}]</a>`;}).join(' ')}</span>`;
       const readLabels={christianity:'Read passage · Dutch Catholic Bible',judaism:'Read passage · Hebrew Tanakh',islam:'Read passage · Dutch Qur’an translation'};
-      panel.innerHTML=`<header class="festival-detail-heading"><span class="festival-kind">${esc(t(kinds[e.kind]))}</span><h2 tabindex="-1">${esc(local(e.title))}</h2><p>${esc(local(e.summary))}</p></header><section class="festival-calendar"><h3>${esc(t('Calendar & rhythm'))}</h3><p>${esc(local(e.calendar.text))} ${cites(e.calendar.sourceIds)}</p><small>${esc(t('Calendar rules describe recurring observances; local dates and practices may differ.'))}</small></section><div class="festival-sections">${e.sections.map(s=>`<section><h3>${esc(t(sections[s.id]))}</h3><p>${esc(local(s.text))} ${cites(s.sourceIds)}</p></section>`).join('')}</div><section class="festival-questions"><span class="library-kicker">${esc(t('A study collection for higher education'))}</span><h3>${esc(t('Critical study questions'))}</h3><p>${esc(t('Support your answer with sources; distinguish textual evidence, interpretation and lived practice.'))}</p><ol>${e.questions.map(q=>`<li>${esc(local(q.question))} ${cites(q.sourceIds)}</li>`).join('')}</ol></section><section class="festival-references"><h3>${esc(t('Sources & reading'))}</h3>${e.references.map((r,i)=>`<div class="festival-reference" id="${esc(sourceId(r.id))}" tabindex="-1"><span class="festival-source-kind">${esc(t(referenceKinds[r.kind]))} · ${i+1}</span><h4>${esc(local(r.label))}</h4><p>${esc(local(r.context))}</p><div class="festival-source-actions">${r.passage?`<button type="button" data-festival-passage="${esc(r.id)}">${esc(t(readLabels[r.passage.tradition]))} →</button>`:''}<a href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener noreferrer">${esc(t('Open original source'))} ↗</a></div></div>`).join('')}</section>`;
+      panel.innerHTML=`<header class="festival-detail-heading"><span class="festival-kind">${esc(t(kinds[e.kind]))}</span><h2 tabindex="-1">${esc(local(e.title))}</h2><p>${esc(local(e.summary))}</p></header><section class="festival-calendar"><h3>${esc(t('Calendar & rhythm'))}</h3><p>${esc(local(e.calendar.text))} ${cites(e.calendar.sourceIds)}</p><small>${esc(t('Calendar rules describe recurring observances; local dates and practices may differ.'))}</small></section><div class="festival-sections">${e.sections.map(s=>`<section><h3>${esc(t(sections[s.id]))}</h3><p>${esc(local(s.text))} ${cites(s.sourceIds)}</p></section>`).join('')}</div><section class="festival-references"><h3>${esc(t('Sources & reading'))}</h3>${e.references.map((r,i)=>`<div class="festival-reference" id="${esc(sourceId(r.id))}" tabindex="-1"><span class="festival-source-kind">${esc(t(referenceKinds[r.kind]))} · ${i+1}</span><h4>${esc(local(r.label))}</h4><p>${esc(local(r.context))}</p><div class="festival-source-actions">${r.passage?`<button type="button" data-festival-passage="${esc(r.id)}">${esc(t(readLabels[r.passage.tradition]))} →</button>`:''}<a href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener noreferrer">${esc(t('Open original source'))} ↗</a></div></div>`).join('')}</section>`;
     }
   }
   root.FestivalCollection=FestivalCollection;root.FestivalView=FestivalView;

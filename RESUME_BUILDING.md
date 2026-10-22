@@ -1,13 +1,14 @@
-# Resume building BiblePath
+# Resume building ReligieAtlas
 
 Last updated: 22 October 2026.
 
 ## Start here
 
-BiblePath is a working static web app for reading the Bible, Tanakh and Qur’an, and exploring biblical people, genealogy and cities. Continue from the files in this repository; there is no framework migration or build step to perform.
+ReligieAtlas is a working static web app for reading the Bible, Tanakh and Qur’an, and exploring biblical people, genealogy and cities. Continue from the files in this repository; there is no framework migration or build step to perform.
 
 - Repository: https://github.com/strijbosmh-afk/biblepath
-- Published app: https://biblepath-people-atlas.glossy-chord-2394.chatgpt.site/
+- Primary published app: https://www.religieatlas.com/.
+- Existing private Sites publication: https://biblepath-people-atlas.glossy-chord-2394.chatgpt.site/.
 - Local preview: run `python -m http.server 5173 --bind 127.0.0.1 --directory dist`, then open http://127.0.0.1:5173/.
 - Runtime: vanilla JavaScript, HTML, CSS, SVG, and local JSON. Node.js and Python are needed only for import scripts and validation.
 - Changed shell asset URLs in `dist/index.html` carry a short SHA-256 query version so returning browsers load current navigation, styling and labels. Refresh the version when changing those assets.
@@ -194,17 +195,19 @@ Run any additional Catholic people/reader suites in `tests/` and the supplementa
 - French Jerusalem → Psalms 51:18 opens the English passage about Jerusalem, with a translated explanation and return to the prior LSG reading position.
 - Adaptive discoveries and the selected person survive all three layout changes; Reset returns to immediate family. Family tree keeps parents above children even when spouse chains cross generations.
 - Desktop and narrow mobile layouts, keyboard labels, no horizontal page overflow, and no console errors.
-- Feestdagen & rituelen under each religion: separate topic lists, search/filter/selection, all three languages, cited historical and interpretive context, and three study questions per dossier. Test internal passage actions for Catholic Dutch, Hebrew Tanakh and Dutch Qur’an, complete range highlights, return to the dossier, and original-source links. A late or failed download must not overwrite another religion or trap the user without retry.
+- Feestdagen & rituelen under each religion: separate topic lists, search/filter/selection, all three languages, cited historical and interpretive context, and no exercises or study questions. Test internal passage actions for Catholic Dutch, Hebrew Tanakh and Dutch Qur’an, complete range highlights, return to the dossier, and original-source links. A late or failed download must not overwrite another religion or trap the user without retry.
 
 Do not add a test that merely repeats implementation constants; assert user-visible behavior, identity correctness, preserved text, or meaningful geometric constraints.
 
 ## Festival dossier maintenance
 
-The three `dist/festivals-*.json` assets contain 22 higher-education dossiers and 66 critical questions in NL/EN/FR. Maintain distinct scripture, tradition/interpretation and historical/contemporary source labels. Each calendar, section and question cites local reference IDs. Internal passage coordinates are edition-specific (`catholic-nl`, Hebrew `he`, QuranEnc Dutch `nl`); validate them against the real corpora, rather than inferring equivalence. Calendars give recurring rules and diversity, not generated dates. Search/filter/selection stay scoped to the religion. `festivals.js` owns the model/view/locales; `app.js` lazy-loads it and routes reading actions with cancellation guards.
+The three `dist/festivals-*.json` assets contain 22 information dossiers in NL/EN/FR. Maintain distinct scripture, tradition/interpretation and historical/contemporary source labels. Each calendar and section cites local reference IDs. The app is strictly an information source; do not reintroduce study questions or exercises. Internal passage coordinates are edition-specific (`catholic-nl`, Hebrew `he`, QuranEnc Dutch `nl`); validate them against the real corpora, rather than inferring equivalence. Calendars give recurring rules and diversity, not generated dates. Search/filter/selection stay scoped to the religion. `festivals.js` owns the model/view/locales; `app.js` lazy-loads it and routes reading actions with cancellation guards.
 
 ## Publishing and Git
 
-The existing Sites project is recorded in `.openai/hosting.json`. Reuse that project ID; do not create a second Site. Preserve the current Site audience unless explicitly instructed otherwise. Use the installed Sites workflow to open source, validate, commit/push/package that exact state, and publish. A pushed GitHub commit by itself does not deploy the Sites app.
+The primary host is Vercel: team `personalprojectsmichiel`, existing project `biblepath` (`prj_uwFc2dLb1zKwjNTttXWYzboaAeQg`). `vercel.json` serves only `dist/`, with no install/build step. GitHub `main` is connected for production deployments. The primary domain is `www.religieatlas.com`; verify the matching commit is ready and the HTTPS page serves the current app after a push. Local `.vercel/` linking state and `.env*` are ignored; never publish them.
+
+The original Sites project is recorded in `.openai/hosting.json`. Reuse that project ID for updates; do not create a second Site. Preserve its private audience. Use the installed Sites workflow to open source, validate, commit/push/package that exact state, and publish. A pushed GitHub commit by itself does not deploy the Sites app.
 
 GitHub is a separate source destination. Push reviewed work to this repository without force-pushing or discarding remote changes. Never commit credentials, cache downloads, private account metadata, or deployment tokens. No secrets are required to run the static app.
 

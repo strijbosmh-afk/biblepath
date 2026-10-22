@@ -1,8 +1,8 @@
 (function(){
 const I=window.BibleI18n;
 I.registerRows([
-['EVERY LIFE, CONNECTED.','IEDER LEVEN VERBONDEN.','CHAQUE VIE EST LIÉE.'],
-['BiblePath home','BiblePath startpagina','Accueil BiblePath'],
+['Religions in text, history and practice.','Religies in tekst, geschiedenis en praktijk.','Religions : textes, histoire et pratiques.'],
+['ReligieAtlas home','ReligieAtlas startpagina','Accueil ReligieAtlas'],
 ['Find a person','Zoek een persoon','Rechercher une personne'],
 ['YOUR EXPLORER','ONTDEKKEN','EXPLORER'],
 ['Explorer views','Ontdekkersmenu','Menu des explorateurs'],
@@ -83,7 +83,7 @@ I.registerRows([
 ['← Previous','← Vorige','← Précédent'],['Next →','Volgende →','Suivant →'],
 ['No matching people. Try a name such as Mary or Moses.','Geen personen gevonden. Probeer Maria of Mozes.','Aucune personne trouvée. Essayez Marie ou Moïse.'],
 ['Biblical cities explorer','Verkenner van Bijbelse steden','Explorateur des villes bibliques'],
-['Many lives. One unfolding story.','Vele levens. Eén groeiend verhaal.','Tant de vies. Une histoire qui se dévoile.'],['Grounded in Scripture','Geworteld in de Bijbel','Ancré dans la Bible'],
+['Grounded in Scripture','Geworteld in de Bijbel','Ancré dans la Bible'],
 ['Whose story will you discover?','Wiens verhaal ontdek jij?','Quelle histoire allez-vous découvrir ?'],['Find a biblical person','Zoek een Bijbels persoon','Rechercher un personnage biblique'],['Close search','Sluit zoeken','Fermer la recherche'],['START WITH A FAMILIAR NAME','BEGIN MET EEN BEKENDE NAAM','COMMENCEZ PAR UN NOM FAMILIER'],
 ['Search names, aliases, descriptions, or biblical references.','Zoek namen, andere namen, beschrijvingen of Bijbelverwijzingen.','Recherchez des noms, variantes, descriptions ou références bibliques.'],['Close information','Sluit informatie','Fermer les informations'],
 ['← Back to the connecting path','← Terug naar het verbindingspad','← Revenir au chemin de parenté'],['A LIFE IN SCRIPTURE','EEN LEVEN IN DE BIJBEL','UNE VIE DANS LA BIBLE'],['IN SCRIPTURE','IN DE BIJBEL','DANS LA BIBLE'],['Indexed name reference','Naamverwijzing uit de index','Référence de nom dans l’index'],
@@ -108,7 +108,7 @@ I.registerRows([
 ['Select a different destination to find a connecting path.','Kies een ander eindpunt om een verbindingspad te vinden.','Choisissez une autre personne d’arrivée pour trouver un chemin.'],
 ['Select a step to locate that person. Select a circle for their profile. Gold arrows always point from parent to child, even when following the route in reverse.','Selecteer een stap om die persoon te vinden. Selecteer een cirkel voor het profiel. Gouden pijlen wijzen altijd van ouder naar kind, ook als je het pad andersom volgt.','Sélectionnez une étape pour situer la personne, ou un cercle pour son profil. Les flèches dorées vont toujours du parent vers l’enfant, même si le chemin est suivi à rebours.'],
 ['OTHER FAMILY GROUPS','ANDERE FAMILIEGROEPEN','AUTRES GROUPES FAMILIAUX'],['No mapped path to the center person','Geen vastgelegd pad naar de centrale persoon','Aucun chemin vers la personne centrale'],
-['Name reference:','Naamverwijzing:','Référence du nom :'],['Public domain','Publiek domein','Domaine public'],['Sources & attribution','Bronnen en naamsvermelding','Sources et attribution'],['Sources & data notes','Bronnen en datatoelichting','Sources et notes sur les données'],['← Back to BiblePath','← Terug naar BiblePath','← Revenir à BiblePath'],
+['Name reference:','Naamverwijzing:','Référence du nom :'],['Public domain','Publiek domein','Domaine public'],['Sources & attribution','Bronnen en naamsvermelding','Sources et attribution'],['Sources & data notes','Bronnen en datatoelichting','Sources et notes sur les données'],['← Back to ReligieAtlas','← Terug naar ReligieAtlas','← Revenir à ReligieAtlas'],
 ['Language changed.','Taal gewijzigd.','Langue modifiée.'],['Full data credits, scope, and editorial changes ↗','Alle bronvermeldingen, reikwijdte en redactionele wijzigingen ↗','Crédits complets, périmètre et modifications éditoriales ↗']
 ]);
 I.registerRows([

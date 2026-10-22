@@ -3,9 +3,9 @@
     "tradition": "islam",
     "reviewedAt": "2026-10-22",
     "scope": {
-      "nl": "Een selectie voor hoger onderwijs. Onderscheid korantekst, overlevering, rechtsopvatting en historische analyse; moslimgemeenschappen zijn intern divers. De maankalender verschuift ten opzichte van het zonnejaar. Concrete data volgen de gekozen lokale of institutionele kalender.",
-      "en": "A selection for higher education. Distinguish Quranic text, transmitted tradition, legal opinion and historical analysis; Muslim communities are internally diverse. The lunar calendar shifts against the solar year. Actual dates follow the chosen local or institutional calendar.",
-      "fr": "Une sélection pour l'enseignement supérieur. Distinguez texte coranique, tradition transmise, avis juridique et analyse historique ; les communautés musulmanes sont diverses. Le calendrier lunaire se décale par rapport à l'année solaire. Les dates suivent le calendrier local ou institutionnel retenu."
+      "nl": "Een overzicht van islamitische feestdagen en rituelen. Korantekst, overlevering, rechtsopvatting en historische analyse worden onderscheiden; moslimgemeenschappen zijn intern divers. De maankalender verschuift ten opzichte van het zonnejaar. Concrete data volgen de gekozen lokale of institutionele kalender.",
+      "en": "An overview of Islamic festivals and rituals. Quranic text, transmitted tradition, legal opinion and historical analysis are distinguished; Muslim communities are internally diverse. The lunar calendar shifts against the solar year. Actual dates follow the chosen local or institutional calendar.",
+      "fr": "Un aperçu des fêtes et rites islamiques. Le texte coranique, la tradition transmise, les avis juridiques et l’analyse historique sont distingués ; les communautés musulmanes sont diverses. Le calendrier lunaire se décale par rapport à l’année solaire. Les dates suivent le calendrier local ou institutionnel retenu."
     }
   },
   "entries": [
@@ -83,41 +83,6 @@
           ]
         }
       ],
-      "questions": [
-        {
-          "question": {
-            "nl": "Welke verschillende soorten gezag oefenen een koranvers, een hadith en een hedendaags rechtsboek uit? Onderbouw je vergelijking met deze bronnen.",
-            "en": "What different kinds of authority do a Quranic verse, a hadith and a contemporary legal manual exercise? Support your comparison with these sources.",
-            "fr": "Quels types d'autorité différents exercent un verset coranique, un hadith et un manuel juridique contemporain ? Appuyez votre comparaison sur ces sources."
-          },
-          "sourceIds": [
-            "salat-quran",
-            "salat-example",
-            "salat-sistani"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Hoe verandert een religieuze tijdsindeling de organisatie van studie of werk? Onderscheid tekstuele normen van je aannames over feitelijk gedrag.",
-            "en": "How might religious time structure study or work? Distinguish textual norms from your assumptions about actual behaviour.",
-            "fr": "Comment un rythme religieux peut-il structurer les études ou le travail ? Distinguez les normes textuelles de vos hypothèses sur les comportements réels."
-          },
-          "sourceIds": [
-            "salat-times"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Vergelijk de tijdvensters bij Muslim en Sistani. Welke extra informatie heb je nodig voordat je verschillen in geleefde praktijk kunt verklaren?",
-            "en": "Compare the time windows in Muslim and Sistani. What further evidence would you need before explaining differences in lived practice?",
-            "fr": "Comparez les plages horaires chez Muslim et Sistani. Quelles données supplémentaires faudrait-il pour expliquer les différences de pratique vécue ?"
-          },
-          "sourceIds": [
-            "salat-times",
-            "salat-sistani-times"
-          ]
-        }
-      ],
       "references": [
         {
           "id": "salat-quran",
@@ -129,9 +94,9 @@
           },
           "url": "https://quran.com/4/103",
           "context": {
-            "nl": "Lees ook de context van gevaar en veiligheid.",
-            "en": "Also consider the context of danger and security.",
-            "fr": "Considérez aussi le contexte de danger et de sécurité."
+            "nl": "Gebed in de context van gevaar en veiligheid.",
+            "en": "Prayer in the context of danger and security.",
+            "fr": "La prière dans un contexte de danger et de sécurité."
           },
           "passage": {
             "tradition": "islam",
@@ -266,44 +231,11 @@
         {
           "id": "diversity",
           "text": {
-            "nl": "Ook binnen het soennisme bestaat discussie over het aantal tarawih-eenheden. Dar al-Ifta verdedigt een bepaalde rechtsopvatting: lees deze fatwa als een positie in een debat, niet als een beschrijving van alle moslims.",
-            "en": "Even within Sunni Islam, the number of tarawih units is debated. Dar al-Ifta defends a particular legal position: read its fatwa as an intervention in a debate, not a description of all Muslims.",
+            "nl": "Ook binnen het soennisme bestaat discussie over het aantal tarawih-eenheden. Dar al-Ifta verdedigt een bepaalde rechtsopvatting: deze fatwa is een positie in een debat, geen beschrijving van alle moslims.",
+            "en": "Even within Sunni Islam, the number of tarawih units is debated. Dar al-Ifta defends a particular legal position: its fatwa is an intervention in a debate, not a description of all Muslims.",
             "fr": "Même dans le sunnisme, le nombre d'unités des tarawih est discuté. Dar al-Ifta défend une position juridique : sa fatwa intervient dans un débat et ne décrit pas tous les musulmans."
           },
           "sourceIds": [
-            "ramadan-tarawih"
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "question": {
-            "nl": "Hoe verhouden de doelstelling van het vasten en de uitzonderingen zich tot elkaar in 2:183–185? Onderbouw twee mogelijke interpretaties.",
-            "en": "How do the purpose of fasting and its exceptions relate in 2:183–185? Support two possible interpretations.",
-            "fr": "Comment l'objectif du jeûne et ses exceptions s'articulent-ils dans 2:183–185 ? Étayez deux interprétations possibles."
-          },
-          "sourceIds": [
-            "ramadan-quran"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Wat kan de Umar-overlevering aantonen over rituele organisatie, en wat vraagt aanvullend historisch onderzoek?",
-            "en": "What can the Umar report show about ritual organisation, and what requires further historical research?",
-            "fr": "Que peut montrer le récit d'Umar sur l'organisation rituelle, et quels points exigent des recherches historiques supplémentaires ?"
-          },
-          "sourceIds": [
-            "ramadan-umar"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Vergelijk meningsverschillen over maanwaarneming en tarawih. Hoe spelen interpretatie en institutioneel gezag in beide debatten een rol?",
-            "en": "Compare disagreements over moon sighting and tarawih. How do interpretation and institutional authority shape each debate?",
-            "fr": "Comparez les désaccords sur l'observation lunaire et les tarawih. Quel rôle jouent l'interprétation et l'autorité institutionnelle dans ces débats ?"
-          },
-          "sourceIds": [
-            "ramadan-moon",
             "ramadan-tarawih"
           ]
         }
@@ -473,40 +405,6 @@
           ]
         }
       ],
-      "questions": [
-        {
-          "question": {
-            "nl": "Wat verandert er wanneer je Koran 2:185 leest als context voor het feest in plaats van als expliciet instellingsverhaal?",
-            "en": "What changes when Quran 2:185 is read as context for the feast rather than an explicit institution narrative?",
-            "fr": "Que change une lecture du Coran 2:185 comme contexte de la fête plutôt que comme récit explicite de son institution ?"
-          },
-          "sourceIds": [
-            "fitr-quran",
-            "fitr-origin"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Hoe kan een voorgeschreven gift sociale verbondenheid vormgeven? Welke gegevens ontbreken om het feitelijke effect te beoordelen?",
-            "en": "How might a prescribed contribution shape social belonging? What evidence is missing to assess its actual effect?",
-            "fr": "Comment un don prescrit peut-il façonner l'appartenance sociale ? Quelles données manquent pour évaluer son effet réel ?"
-          },
-          "sourceIds": [
-            "fitr-giving"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Vergelijk de rol van religieuze autoriteiten en astronomische kennis bij de kalenderbepaling. Waarom volgt uit één religieuze norm niet altijd één datum?",
-            "en": "Compare religious authority and astronomical knowledge in calendar decisions. Why does one religious norm not always produce one date?",
-            "fr": "Comparez autorité religieuse et connaissances astronomiques dans le calendrier. Pourquoi une norme religieuse ne produit-elle pas toujours une date unique ?"
-          },
-          "sourceIds": [
-            "fitr-local",
-            "fitr-moon"
-          ]
-        }
-      ],
       "references": [
         {
           "id": "fitr-quran",
@@ -665,40 +563,6 @@
           ]
         }
       ],
-      "questions": [
-        {
-          "question": {
-            "nl": "Hoe maken ruimtelijke handelingen een verhaal over Ibrahim of Hajar tot beleefde herinnering? Onderscheid korantekst en latere duiding.",
-            "en": "How do spatial actions turn a story about Ibrahim or Hajar into lived memory? Distinguish Quranic text from later interpretation.",
-            "fr": "Comment les gestes dans l'espace transforment-ils un récit sur Ibrahim ou Hajar en mémoire vécue ? Distinguez texte coranique et interprétation ultérieure."
-          },
-          "sourceIds": [
-            "hajj-quran",
-            "hajj-nusuk"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Vergelijk het reisverslag bij Muslim met een hedendaagse officiële gids. Welke doelen, lezers en soorten gezag verschillen?",
-            "en": "Compare Muslim's pilgrimage account with a contemporary official guide. How do their purposes, audiences and forms of authority differ?",
-            "fr": "Comparez le récit chez Muslim à un guide officiel contemporain. En quoi leurs objectifs, publics et formes d'autorité diffèrent-ils ?"
-          },
-          "sourceIds": [
-            "hajj-jabir",
-            "hajj-nusuk"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Hoe zou je onderzoeken of het ideaal van gemeenschappelijke verbondenheid samengaat met ongelijke toegang tot de hajj? Benoem benodigde gegevens.",
-            "en": "How would you investigate whether communal belonging coexists with unequal access to hajj? Identify the evidence required.",
-            "fr": "Comment étudier la coexistence entre l'idéal de communauté et un accès inégal au hajj ? Précisez les données nécessaires."
-          },
-          "sourceIds": [
-            "hajj-nusuk"
-          ]
-        }
-      ],
       "references": [
         {
           "id": "hajj-quran",
@@ -732,9 +596,9 @@
           },
           "url": "https://sunnah.com/muslim:1218a",
           "context": {
-            "nl": "Uitvoerige hadith; onderscheid overlevering en rechtstreeks ooggetuigendocument.",
-            "en": "An extended hadith; distinguish transmission from a direct eyewitness document.",
-            "fr": "Un long hadith ; distinguez transmission et document directement contemporain."
+            "nl": "Uitvoerige hadith; overlevering en rechtstreeks ooggetuigendocument zijn onderscheiden brontypen.",
+            "en": "An extended hadith; transmission and a direct eyewitness document are distinct source types.",
+            "fr": "Un long hadith ; tradition transmise et document directement contemporain sont des types de sources distincts."
           }
         },
         {
@@ -812,9 +676,9 @@
         {
           "id": "history",
           "text": {
-            "nl": "De feestnaam komt uit de rituele overlevering, niet uit deze koranpassages. Houd het heilige verhaal, de hadith en latere juridische uitwerking als verschillende bronlagen uit elkaar.",
-            "en": "The festival name comes from ritual tradition, not these Quranic passages. Distinguish sacred narrative, hadith and later legal elaboration as different layers of evidence.",
-            "fr": "Le nom de la fête appartient à la tradition rituelle, non à ces passages coraniques. Distinguez récit sacré, hadith et élaboration juridique ultérieure."
+            "nl": "De feestnaam komt uit de rituele overlevering, niet uit deze koranpassages. Het heilige verhaal, de hadith en latere juridische uitwerking vormen verschillende bronlagen.",
+            "en": "The festival name comes from ritual tradition, not these Quranic passages. Sacred narrative, hadith and later legal elaboration form different layers of evidence.",
+            "fr": "Le nom de la fête appartient à la tradition rituelle, non à ces passages coraniques. Le récit sacré, les hadiths et l’élaboration juridique ultérieure constituent des couches de sources distinctes."
           },
           "sourceIds": [
             "adha-origin",
@@ -845,39 +709,6 @@
           "sourceIds": [
             "adha-differences",
             "adha-sistani"
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "question": {
-            "nl": "Welke aannames breng je mee over de identiteit van Ibrahims zoon? Markeer wat de korantekst zelf zegt en wat uit andere tradities komt.",
-            "en": "What assumptions do you bring about the identity of Ibrahim's son? Mark what the Quranic text says and what comes from other traditions.",
-            "fr": "Quels présupposés avez-vous sur l'identité du fils d'Ibrahim ? Distinguez ce que dit le texte coranique de ce qui vient d'autres traditions."
-          },
-          "sourceIds": [
-            "adha-story"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Hoe verbindt 22:36–37 materiële handelingen met intentie en sociale zorg? Onderbouw je lezing met beide verzen.",
-            "en": "How does 22:36–37 connect material actions with intention and social care? Support your reading with both verses.",
-            "fr": "Comment 22:36–37 relie-t-il gestes matériels, intention et solidarité ? Appuyez votre lecture sur les deux versets."
-          },
-          "sourceIds": [
-            "adha-ethics"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Hoe zou je een maatschappelijk debat over het Offerfeest analyseren zonder de juridische en praktische verscheidenheid te reduceren?",
-            "en": "How would you analyse a public debate about Eid al-Adha without reducing its legal and practical diversity?",
-            "fr": "Comment analyser un débat public sur l'Aïd al-Adha sans réduire sa diversité juridique et pratique ?"
-          },
-          "sourceIds": [
-            "adha-law",
-            "adha-differences"
           ]
         }
       ],
@@ -1029,9 +860,9 @@
         {
           "id": "history",
           "text": {
-            "nl": "Husayn, een kleinzoon van Mohammed, werd in 61 AH/680 bij Karbala gedood door het leger van het Omajjadische gezag. De latere herdenking moet worden onderscheiden van het koranverhaal over Musa: dat stelt Ashura niet in.",
-            "en": "Husayn, Muhammad's grandson, was killed at Karbala in 61 AH/680 by the Umayyad authorities' army. Later commemoration must be distinguished from the Quranic story of Musa, which does not establish Ashura.",
-            "fr": "Husayn, petit-fils de Muhammad, fut tué à Karbala en 61 AH/680 par l'armée du pouvoir omeyyade. La commémoration ultérieure se distingue du récit coranique de Moussa, qui n'institue pas l'Achoura."
+            "nl": "Husayn, een kleinzoon van Mohammed, werd in 61 AH/680 bij Karbala gedood door het leger van het Omajjadische gezag. De latere herdenking verschilt van het koranverhaal over Musa: dat stelt Ashura niet in.",
+            "en": "Husayn, Muhammad’s grandson, was killed at Karbala in 61 AH/680 by the Umayyad authorities’ army. Later commemoration differs from the Quranic story of Musa, which does not establish Ashura.",
+            "fr": "Husayn, petit-fils de Muhammad, fut tué à Karbala en 61 AH/680 par l’armée du pouvoir omeyyade. La commémoration ultérieure se distingue du récit coranique de Moussa, qui n’institue pas l’Achoura."
           },
           "sourceIds": [
             "ashura-karbala",
@@ -1056,40 +887,6 @@
             "nl": "De uitvoering verandert per plaats en periode. Open University beschrijft bijvoorbeeld bloeddonatie bij hedendaagse herdenkingen: religieuze herinnering kan nieuwe sociale vormen aannemen.",
             "en": "Observance changes across places and periods. Open University describes blood donation in contemporary commemorations: religious memory can take new social forms.",
             "fr": "Les pratiques évoluent selon les lieux et les époques. Open University décrit notamment le don de sang lors de commémorations contemporaines : la mémoire religieuse peut prendre de nouvelles formes sociales."
-          },
-          "sourceIds": [
-            "ashura-study"
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "question": {
-            "nl": "Hoe verschilt de verbinding met Musa in de hadith van de verbinding met Karbala in historische herinnering? Vergelijk bronsoort, tijd en functie.",
-            "en": "How does the hadith's connection with Musa differ from the connection with Karbala in historical memory? Compare source type, time and function.",
-            "fr": "Comment le lien avec Moussa dans le hadith diffère-t-il du lien avec Karbala dans la mémoire historique ? Comparez type de source, époque et fonction."
-          },
-          "sourceIds": [
-            "ashura-fasting",
-            "ashura-karbala"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Welke aanvullende bronnen heb je nodig om de overgang van de gebeurtenis in 680 naar hedendaagse rouwrituelen te reconstrueren?",
-            "en": "What additional sources would you need to reconstruct the transition from the event in 680 to contemporary mourning rituals?",
-            "fr": "Quelles sources supplémentaires permettraient de reconstruire le passage de l'événement de 680 aux rites de deuil contemporains ?"
-          },
-          "sourceIds": [
-            "ashura-karbala",
-            "ashura-study"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Hoe kan bloeddonatie continuïteit én verandering in een herdenking uitdrukken? Ontwerp een onderzoeksvraag die deelnemers zelf aan het woord laat.",
-            "en": "How can blood donation express both continuity and change in commemoration? Design a research question that includes participants' own voices.",
-            "fr": "Comment le don de sang peut-il exprimer continuité et changement dans une commémoration ? Formulez une question de recherche donnant la parole aux participants."
           },
           "sourceIds": [
             "ashura-study"
@@ -1177,9 +974,9 @@
         "fr": "Mawlid — commémoration de la naissance de Muhammad"
       },
       "summary": {
-        "nl": "Een casus over liefde voor de profeet, traditie en betwiste vernieuwing.",
-        "en": "A case study in love for the Prophet, tradition and contested innovation.",
-        "fr": "Une étude de l'amour du Prophète, de la tradition et de l'innovation contestée."
+        "nl": "Liefde voor de profeet, traditie en betwiste vernieuwing.",
+        "en": "Love for the Prophet, tradition and contested innovation.",
+        "fr": "L’amour du Prophète, la tradition et l’innovation contestée."
       },
       "calendar": {
         "text": {
@@ -1239,41 +1036,6 @@
           "sourceIds": [
             "mawlid-ifta",
             "mawlid-baz"
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "question": {
-            "nl": "Welke interpretatieve stappen zijn nodig om van 33:21 of maandagvasten tot een argument over een jaarlijks feest te komen?",
-            "en": "What interpretative steps are needed to move from 33:21 or Monday fasting to an argument about an annual festival?",
-            "fr": "Quelles étapes interprétatives permettent de passer de 33:21 ou du jeûne du lundi à un argument sur une fête annuelle ?"
-          },
-          "sourceIds": [
-            "mawlid-quran",
-            "mawlid-monday"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Vergelijk de argumenten van Dar al-Ifta en Ibn Baz. Hoe verschillen hun criteria voor traditie en vernieuwing zonder hun gedeelde uitgangspunten te negeren?",
-            "en": "Compare Dar al-Ifta's and Ibn Baz's arguments. How do their criteria for tradition and innovation differ despite shared premises?",
-            "fr": "Comparez les arguments de Dar al-Ifta et d'Ibn Baz. Comment leurs critères de tradition et d'innovation diffèrent-ils malgré des prémisses communes ?"
-          },
-          "sourceIds": [
-            "mawlid-ifta",
-            "mawlid-baz"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Wat kan historisch onderzoek naar deelname van vrouwen zichtbaar maken dat een fatwa niet onderzoekt? Formuleer een vraag en een geschikte bronsoort.",
-            "en": "What can historical research on women's participation reveal that a fatwa does not examine? Formulate a question and a suitable source type.",
-            "fr": "Que peut révéler l'étude historique de la participation des femmes qu'une fatwa n'examine pas ? Proposez une question et un type de source adapté."
-          },
-          "sourceIds": [
-            "mawlid-history",
-            "mawlid-ifta"
           ]
         }
       ],

@@ -3,9 +3,9 @@
     "tradition": "christianity",
     "reviewedAt": "2026-10-22",
     "scope": {
-      "nl": "Rooms-katholiek christendom, met de Romeinse ritus als uitgangspunt. Bestudeer teksten, kerkelijke interpretatie en geleefde praktijk als onderscheiden bronnen; gebruiken kunnen lokaal verschillen.",
-      "en": "Roman Catholic Christianity, taking the Roman Rite as the starting point. Study texts, Church interpretation and lived practice as distinct sources; customs can differ locally.",
-      "fr": "Christianisme catholique romain, avec le rite romain comme point de départ. Étudier les textes, l’interprétation ecclésiale et les pratiques vécues comme des sources distinctes ; les coutumes peuvent varier localement."
+      "nl": "Rooms-katholieke feestdagen en rituelen, met de Romeinse ritus als uitgangspunt. Teksten, kerkelijke interpretatie en geleefde praktijk worden als onderscheiden bronnen beschreven; gebruiken kunnen lokaal verschillen.",
+      "en": "Roman Catholic festivals and rituals, taking the Roman Rite as the starting point. Texts, Church interpretation and lived practice are described as distinct sources; customs can differ locally.",
+      "fr": "Fêtes et rites catholiques romains, avec le rite romain comme point de départ. Les textes, l’interprétation ecclésiale et les pratiques vécues sont présentés comme des sources distinctes ; les coutumes peuvent varier localement."
     }
   },
   "entries": [
@@ -72,47 +72,13 @@
         {
           "id": "diversity",
           "text": {
-            "nl": "Kerststallen kennen diverse materialen en figuren. Vergelijk deze volksdevotie met Lucas zonder elke toevoeging aan diens tekst toe te schrijven.",
-            "en": "Nativity scenes use diverse materials and figures. Compare this popular devotion with Luke without attributing every addition to his text.",
-            "fr": "Les crèches utilisent divers matériaux et personnages. Comparer cette piété populaire avec Luc sans attribuer chaque ajout à son texte."
+            "nl": "Kerststallen kennen diverse materialen en figuren. Niet elk element van deze volksdevotie komt uit het evangelie van Lucas.",
+            "en": "Nativity scenes use diverse materials and figures. Not every element of this popular devotion comes from the Gospel of Luke.",
+            "fr": "Les crèches utilisent divers matériaux et personnages. Tous les éléments de cette piété populaire ne proviennent pas de l’évangile de Luc."
           },
           "sourceIds": [
             "christmas-creche",
             "christmas-luke"
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "question": {
-            "nl": "Welke uitspraken in Lucas 2 zijn verhalend, welke theologisch, en welke aanvullende bronnen zou een historicus nodig hebben?",
-            "en": "Which claims in Luke 2 are narrative, which are theological, and what additional sources would a historian need?",
-            "fr": "Quelles affirmations de Luc 2 sont narratives ou théologiques, et de quelles sources supplémentaires un historien aurait-il besoin ?"
-          },
-          "sourceIds": [
-            "christmas-luke"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Hoe verandert de betekenis wanneer een evangelieverhaal een tastbare kerststal wordt? Analyseer ook wat wordt toegevoegd of weggelaten.",
-            "en": "How does meaning change when a Gospel narrative becomes a material nativity scene? Analyse what is added or omitted.",
-            "fr": "Comment le sens change-t-il lorsqu’un récit évangélique devient une crèche matérielle ? Analyser aussi les ajouts et les omissions."
-          },
-          "sourceIds": [
-            "christmas-luke",
-            "christmas-creche"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Hoe zou je in veldonderzoek onderscheid maken tussen kerkelijke liturgie, familiegebruiken en commerciële kerstcultuur?",
-            "en": "How would fieldwork distinguish Church liturgy, family customs and commercial Christmas culture?",
-            "fr": "Comment une enquête de terrain distinguerait-elle liturgie ecclésiale, coutumes familiales et culture commerciale de Noël ?"
-          },
-          "sourceIds": [
-            "christmas-calendar",
-            "christmas-creche"
           ]
         }
       ],
@@ -239,9 +205,9 @@
         {
           "id": "practice",
           "text": {
-            "nl": "Gebed, vasten en materiële steun aan anderen vormen samen het katholieke ideaal. Bestudeer daarom ook de maatschappelijke betekenis van plaatselijke vastenacties.",
-            "en": "Prayer, fasting and material support for others together form the Catholic ideal. Local Lenten initiatives can therefore also be studied for their social meaning.",
-            "fr": "Prière, jeûne et soutien matériel à autrui composent ensemble l’idéal catholique. Les initiatives locales de Carême peuvent donc aussi être étudiées dans leur dimension sociale."
+            "nl": "Gebed, vasten en materiële steun aan anderen vormen samen het katholieke ideaal. Plaatselijke vastenacties hebben daardoor ook een maatschappelijke dimensie.",
+            "en": "Prayer, fasting and material support for others together form the Catholic ideal. Local Lenten initiatives therefore also have a social dimension.",
+            "fr": "Prière, jeûne et soutien matériel à autrui composent ensemble l’idéal catholique. Les initiatives locales de Carême ont donc aussi une dimension sociale."
           },
           "sourceIds": [
             "lent-practice"
@@ -250,42 +216,9 @@
         {
           "id": "diversity",
           "text": {
-            "nl": "De gekoppelde USCCB-richtlijnen zijn Amerikaans. Vergelijk ze met lokale regels en individuele omstandigheden voordat je praktijken generaliseert.",
-            "en": "The linked USCCB guidelines are American. Compare them with local rules and individual circumstances before generalising about practice.",
-            "fr": "Les directives liées de l’USCCB sont américaines. Les comparer aux règles locales et aux situations individuelles avant de généraliser les pratiques."
-          },
-          "sourceIds": [
-            "lent-practice"
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "question": {
-            "nl": "Welke functie heeft het getal veertig in Matteüs 4, en wat verlies je wanneer je het alleen als kalenderberekening leest?",
-            "en": "What function does forty serve in Matthew 4, and what is lost when it is read only as a calendar calculation?",
-            "fr": "Quelle fonction le nombre quarante remplit-il en Matthieu 4, et que perd-on en le lisant seulement comme un calcul calendaire ?"
-          },
-          "sourceIds": [
-            "lent-matthew",
-            "lent-calendar"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Wat zegt de hervorming van 1963 over de verhouding tussen continuïteit, kerkelijk gezag en verandering van rituelen?",
-            "en": "What does the 1963 reform reveal about continuity, Church authority and ritual change?",
-            "fr": "Que révèle la réforme de 1963 sur la continuité, l’autorité ecclésiale et la transformation des rites ?"
-          },
-          "sourceIds": [
-            "lent-council"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Ontwerp een vergelijking van vastenpraktijken die zowel solidariteit als verschillen in gezondheid, middelen en sociale positie onderzoekt.",
-            "en": "Design a comparison of fasting practices that examines solidarity alongside differences in health, resources and social position.",
-            "fr": "Concevoir une comparaison des pratiques de jeûne examinant la solidarité ainsi que les différences de santé, de ressources et de position sociale."
+            "nl": "De gekoppelde USCCB-richtlijnen zijn Amerikaans. Lokale regels en individuele omstandigheden kunnen verschillen; deze richtlijnen beschrijven niet elke praktijk.",
+            "en": "The linked USCCB guidelines are American. Local rules and individual circumstances can differ; these guidelines do not describe every practice.",
+            "fr": "Les directives liées de l’USCCB sont américaines. Les règles locales et les situations individuelles peuvent varier ; ces directives ne décrivent pas toutes les pratiques."
           },
           "sourceIds": [
             "lent-practice"
@@ -326,9 +259,9 @@
           },
           "url": "https://www.usccb.org/resources/why-lent-40-days",
           "context": {
-            "nl": "Liturgische grenzen en symboliek van veertig; vergelijk de telwijzen.",
-            "en": "Liturgical boundaries and forty’s symbolism; compare the counting conventions.",
-            "fr": "Limites liturgiques et symbolisme de quarante ; comparer les décomptes."
+            "nl": "Liturgische grenzen, symboliek van veertig en verschillende telwijzen.",
+            "en": "Liturgical boundaries, forty’s symbolism and different counting conventions.",
+            "fr": "Limites liturgiques, symbolisme de quarante et différentes façons de compter."
           }
         },
         {
@@ -427,44 +360,11 @@
         {
           "id": "diversity",
           "text": {
-            "nl": "De paaswake bevat voorgeschreven onderdelen én toegelaten keuzes, bijvoorbeeld in het aantal oudtestamentische lezingen. Een waargenomen parochieviering moet daarom naast het missaal worden bestudeerd.",
-            "en": "The Easter Vigil combines prescribed elements with permitted choices, such as the number of Old Testament readings. An observed parish celebration should therefore be studied alongside the Missal.",
-            "fr": "La Vigile pascale combine des éléments prescrits et des choix autorisés, notamment le nombre de lectures de l’Ancien Testament. Une célébration paroissiale observée doit donc être étudiée avec le Missel."
+            "nl": "De paaswake bevat voorgeschreven onderdelen én toegelaten keuzes, bijvoorbeeld in het aantal oudtestamentische lezingen.",
+            "en": "The Easter Vigil combines prescribed elements with permitted choices, such as the number of Old Testament readings.",
+            "fr": "La Vigile pascale combine des éléments prescrits et des choix autorisés, notamment le nombre de lectures de l’Ancien Testament."
           },
           "sourceIds": [
-            "easter-vigil"
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "question": {
-            "nl": "Welke rol spelen zien, herkennen en getuigen in Johannes 20? Onderscheid literaire analyse van een oordeel over geloofswaarheid.",
-            "en": "What roles do seeing, recognition and testimony play in John 20? Distinguish literary analysis from a judgement about religious truth.",
-            "fr": "Quels rôles jouent la vision, la reconnaissance et le témoignage en Jean 20 ? Distinguer analyse littéraire et jugement sur la vérité religieuse."
-          },
-          "sourceIds": [
-            "easter-john"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Hoe maken licht, water en het verloop van de nacht betekenis zichtbaar? Onderbouw je analyse met de liturgische bron én observaties.",
-            "en": "How do light, water and the passage of the night make meaning visible? Support your analysis with both the liturgical source and observations.",
-            "fr": "Comment la lumière, l’eau et le déroulement de la nuit rendent-ils le sens visible ? Appuyer l’analyse sur la source liturgique et des observations."
-          },
-          "sourceIds": [
-            "easter-vigil"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Welke continuïteit en verandering kun je aantonen door het conciliedocument met de huidige paaswake te vergelijken? Welke conclusies blijven onzeker?",
-            "en": "What continuity and change can you demonstrate by comparing the conciliar document with the current Easter Vigil? Which conclusions remain uncertain?",
-            "fr": "Quelles continuités et transformations peut-on établir en comparant le document conciliaire à la Vigile actuelle ? Quelles conclusions restent incertaines ?"
-          },
-          "sourceIds": [
-            "easter-council",
             "easter-vigil"
           ]
         }
@@ -591,9 +491,9 @@
         {
           "id": "practice",
           "text": {
-            "nl": "Naast de dagmis kent het Romeinse missaal een uitgebreide vigilie met meerdere oudtestamentische lezingen. Deze opbouw laat studenten onderzoeken hoe liturgische selectie teksten met elkaar verbindt.",
-            "en": "Alongside the daytime Mass, the Roman Missal provides an extended vigil with several Old Testament readings. This structure invites study of how liturgical selection connects texts.",
-            "fr": "À côté de la messe du jour, le Missel romain prévoit une vigile développée avec plusieurs lectures de l’Ancien Testament. Cette structure permet d’étudier comment la sélection liturgique relie les textes."
+            "nl": "Naast de dagmis kent het Romeinse missaal een uitgebreide vigilie met meerdere oudtestamentische lezingen. Deze liturgische opbouw brengt verschillende teksten met elkaar in verband.",
+            "en": "Alongside the daytime Mass, the Roman Missal provides an extended vigil with several Old Testament readings. This liturgical structure connects different texts.",
+            "fr": "À côté de la messe du jour, le Missel romain prévoit une vigile développée avec plusieurs lectures de l’Ancien Testament. Cette structure liturgique met différents textes en relation."
           },
           "sourceIds": [
             "pentecost-calendar"
@@ -602,47 +502,14 @@
         {
           "id": "diversity",
           "text": {
-            "nl": "Johannes 20:19–23 situeert de gave van de Geest op de avond van Pasen; Handelingen kiest een ander vertelverloop. Bewaar die verschillen en behandel de christelijke interpretatie niet als volledige uitleg van het Joodse Sjavoeot.",
-            "en": "John 20:19–23 places the gift of the Spirit on Easter evening; Acts uses a different narrative sequence. Preserve these differences and do not treat the Christian interpretation as a complete account of Jewish Shavuot.",
-            "fr": "Jean 20,19–23 situe le don de l’Esprit au soir de Pâques ; les Actes suivent un autre déroulement narratif. Préserver ces différences et ne pas traiter l’interprétation chrétienne comme une explication complète du Chavouot juif."
+            "nl": "Johannes 20:19–23 situeert de gave van de Geest op de avond van Pasen; Handelingen kiest een ander vertelverloop. De christelijke interpretatie biedt geen volledige beschrijving van het Joodse Sjavoeot.",
+            "en": "John 20:19–23 places the gift of the Spirit on Easter evening; Acts uses a different narrative sequence. The Christian interpretation does not provide a complete account of Jewish Shavuot.",
+            "fr": "Jean 20,19–23 situe le don de l’Esprit au soir de Pâques ; les Actes suivent un autre déroulement narratif. L’interprétation chrétienne ne constitue pas une description complète du Chavouot juif."
           },
           "sourceIds": [
             "pentecost-john",
             "pentecost-acts",
             "pentecost-reception"
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "question": {
-            "nl": "Wat verandert wanneer je Handelingen 2 en Johannes 20 naast elkaar leest in plaats van ze tot één tijdlijn samen te voegen?",
-            "en": "What changes when Acts 2 and John 20 are read alongside one another rather than merged into one timeline?",
-            "fr": "Que change la lecture parallèle d’Actes 2 et de Jean 20, plutôt que leur fusion en une seule chronologie ?"
-          },
-          "sourceIds": [
-            "pentecost-acts",
-            "pentecost-john"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Hoe werkt de verwijzing naar Sinaï in de pauselijke interpretatie? Welke Joodse bronnen zijn nodig voor een wederkerige vergelijking?",
-            "en": "How does the reference to Sinai function in the papal interpretation? Which Jewish sources are needed for a reciprocal comparison?",
-            "fr": "Comment la référence au Sinaï fonctionne-t-elle dans l’interprétation pontificale ? Quelles sources juives faut-il pour une comparaison réciproque ?"
-          },
-          "sourceIds": [
-            "pentecost-reception"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Hoe zou je onderzoeken of de meertaligheid van Handelingen herkenbaar is in de taalkeuzes en machtsverhoudingen van een huidige gemeenschap?",
-            "en": "How would you investigate whether Acts’ multilingualism is reflected in a contemporary community’s language choices and power relations?",
-            "fr": "Comment étudier si le plurilinguisme des Actes se reflète dans les choix linguistiques et les rapports de pouvoir d’une communauté actuelle ?"
-          },
-          "sourceIds": [
-            "pentecost-acts"
           ]
         }
       ],
@@ -788,46 +655,13 @@
         {
           "id": "diversity",
           "text": {
-            "nl": "Kerkelijke betekenis en persoonlijke rouw hoeven niet samen te vallen. Onderzoek lokale herinneringspraktijken met aandacht voor familiegeschiedenis en voor deelnemers die zich anders tot de kerk verhouden.",
-            "en": "Church meanings and personal grief need not coincide. Investigate local remembrance practices with attention to family histories and participants with different relationships to the Church.",
-            "fr": "Le sens ecclésial et le deuil personnel ne coïncident pas nécessairement. Étudier les pratiques locales en tenant compte des histoires familiales et des différents rapports à l’Église."
+            "nl": "Kerkelijke betekenis en persoonlijke rouw hoeven niet samen te vallen. Familiegeschiedenis en de verhouding van deelnemers tot de kerk vormen verschillende contexten van lokale herinneringspraktijken.",
+            "en": "Church meanings and personal grief need not coincide. Family histories and participants’ relationships to the Church form different contexts for local remembrance practices.",
+            "fr": "Le sens ecclésial et le deuil personnel ne coïncident pas nécessairement. Les histoires familiales et les rapports des participants à l’Église forment différents contextes des pratiques locales de commémoration."
           },
           "sourceIds": [
             "saints-remembrance",
             "saints-calendar"
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "question": {
-            "nl": "Waarom is het analytisch onjuist om Allerheiligen en Allerzielen als één identiek feest te beschrijven? Gebruik de bronnen om het verschil uit te werken.",
-            "en": "Why is it analytically inaccurate to describe All Saints and All Souls as one identical feast? Use the sources to explain the distinction.",
-            "fr": "Pourquoi est-il analytiquement inexact de décrire la Toussaint et le 2 novembre comme une seule fête identique ? Expliquer la distinction à partir des sources."
-          },
-          "sourceIds": [
-            "saints-calendar"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Welke spanning bestaat tussen kerkelijk erkende heiligheid, volksdevotie en kerkelijke correctie? Wat kan Lumen gentium hierover wel en niet aantonen?",
-            "en": "What tensions exist between Church-recognised holiness, popular devotion and ecclesial correction? What can Lumen gentium establish, and what can it not?",
-            "fr": "Quelles tensions existent entre sainteté reconnue, piété populaire et correction ecclésiale ? Que peut établir Lumen gentium, et que ne peut-il pas établir ?"
-          },
-          "sourceIds": [
-            "saints-council"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Hoe kun je herinneringsrituelen onderzoeken zonder uit uiterlijk gedrag automatisch een geloofsovertuiging af te leiden?",
-            "en": "How can remembrance rituals be studied without automatically inferring beliefs from outward behaviour?",
-            "fr": "Comment étudier les rites du souvenir sans déduire automatiquement les croyances des comportements visibles ?"
-          },
-          "sourceIds": [
-            "saints-remembrance",
-            "saints-revelation"
           ]
         }
       ],
@@ -842,9 +676,9 @@
           },
           "url": "https://bible.usccb.org/bible/revelation/7",
           "context": {
-            "nl": "Visioen van een menigte bij God; lees het als apocalyptische beeldtaal.",
-            "en": "Vision of a multitude before God; read as apocalyptic imagery.",
-            "fr": "Vision d’une foule devant Dieu ; lire comme un langage apocalyptique."
+            "nl": "Visioen van een menigte bij God, in apocalyptische beeldtaal.",
+            "en": "Vision of a multitude before God, in apocalyptic imagery.",
+            "fr": "Vision d’une foule devant Dieu, dans un langage apocalyptique."
           },
           "passage": {
             "tradition": "christianity",
@@ -968,39 +802,6 @@
             "nl": "Oosterse katholieke riten verbinden bij kinderen doop, vormsel en eucharistie onmiddellijk. De Romeinse ritus spreidt deze doorgaans over de opvoeding.",
             "en": "Eastern Catholic rites immediately join children’s baptism, confirmation and Eucharist. The Roman Rite generally distributes these across their upbringing.",
             "fr": "Les rites catholiques orientaux associent immédiatement baptême, confirmation et eucharistie des enfants. Le rite romain les répartit généralement durant leur éducation."
-          },
-          "sourceIds": [
-            "baptism-development"
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "question": {
-            "nl": "Hoe geeft de beeldspraak van sterven en nieuw leven in Romeinen 6 betekenis aan water? Onderscheid materiële handeling en theologische duiding.",
-            "en": "How does the imagery of dying and new life in Romans 6 give meaning to water? Distinguish the material action from its theological interpretation.",
-            "fr": "Comment les images de mort et de vie nouvelle en Romains 6 donnent-elles sens à l’eau ? Distinguer l’acte matériel et son interprétation théologique."
-          },
-          "sourceIds": [
-            "baptism-romans"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Hoe veranderen vragen over instemming, geloofsoverdracht en gemeenschap wanneer je kinderdoop en volwassenendoop vergelijkt?",
-            "en": "How do questions of consent, transmission of faith and community change when infant and adult baptism are compared?",
-            "fr": "Comment les questions de consentement, de transmission et de communauté changent-elles lorsqu’on compare baptême des enfants et des adultes ?"
-          },
-          "sourceIds": [
-            "baptism-candidates",
-            "baptism-law"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Wat leert de variatie tussen katholieke riten over het onderscheid tussen een sacrament en zijn historisch gegroeide organisatie?",
-            "en": "What does variation among Catholic rites reveal about the distinction between a sacrament and its historically developed organisation?",
-            "fr": "Que révèle la diversité des rites catholiques sur la distinction entre un sacrement et son organisation historiquement constituée ?"
           },
           "sourceIds": [
             "baptism-development"
@@ -1150,39 +951,6 @@
           ]
         }
       ],
-      "questions": [
-        {
-          "question": {
-            "nl": "Waarom is Paulus’ kritiek op ongelijkheid in 1 Korintiërs 11 relevant voor de interpretatie van een rituele maaltijd?",
-            "en": "Why is Paul’s criticism of inequality in 1 Corinthians 11 relevant to interpreting a ritual meal?",
-            "fr": "Pourquoi la critique paulinienne des inégalités en 1 Corinthiens 11 est-elle pertinente pour interpréter un repas rituel ?"
-          },
-          "sourceIds": [
-            "eucharist-paul"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Welke overeenkomsten met een huidige mis ondersteunt Justinus’ getuigenis, en welke historische continuïteit kun je daaruit niet zonder meer afleiden?",
-            "en": "Which similarities with a present-day Mass does Justin’s account support, and what historical continuity cannot simply be inferred from it?",
-            "fr": "Quelles ressemblances avec une messe actuelle le témoignage de Justin étaye-t-il, et quelle continuité historique ne peut-on pas simplement en déduire ?"
-          },
-          "sourceIds": [
-            "eucharist-history"
-          ]
-        },
-        {
-          "question": {
-            "nl": "Hoe verhouden de aanspraak op gemeenschap en de toelatingsregels voor communie zich tot elkaar? Beschrijf eerst de katholieke redenering en formuleer daarna een kritische analyse.",
-            "en": "How do the claim to community and the admission rules for Communion relate? First describe the Catholic reasoning, then develop a critical analysis.",
-            "fr": "Comment l’affirmation de la communauté et les règles d’admission à la communion s’articulent-elles ? Décrire d’abord le raisonnement catholique, puis proposer une analyse critique."
-          },
-          "sourceIds": [
-            "eucharist-communion",
-            "eucharist-presence"
-          ]
-        }
-      ],
       "references": [
         {
           "id": "eucharist-paul",
@@ -1256,4 +1024,3 @@
     }
   ]
 }
-

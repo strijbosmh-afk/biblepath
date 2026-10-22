@@ -4,36 +4,37 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#344b3e">
-  <meta name="description" content="Lees de Bijbel, Tenach en Koran. Bestudeer personen, feestdagen en rituelen binnen het rooms-katholicisme, jodendom en de islam, met bronnen en kritische studievragen.">
-  <title>BiblePath — Bible & connections</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=a61943068172">
-  <link rel="stylesheet" href="reader.css">
-  <link rel="stylesheet" href="sacred-reader.css">
-  <link rel="stylesheet" href="people-traditions.css">
-  <link rel="stylesheet" href="festivals.css?v=593a24a19038">
-  <link rel="stylesheet" href="cities.css">
-  <script src="i18n.js" defer></script>
-  <script src="app-locales.js" defer></script>
-  <script src="info-locales.js" defer></script>
-  <script src="library-locales.js" defer></script>
+  <meta name="description" content="Informatie over het rooms-katholieke christendom, jodendom en de islam: heilige boeken, personen, feestdagen en rituelen met historische context en bronnen.">
+  <title>ReligieAtlas — Religies in context</title>
+  <link rel="canonical" href="https://www.religieatlas.com/">
+  <link rel="icon" href="favicon.svg?v=eb0cb757055f" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=7d50e4e6ce50">
+  <link rel="stylesheet" href="reader.css?v=f2567e685b47">
+  <link rel="stylesheet" href="sacred-reader.css?v=b91fc132aca0">
+  <link rel="stylesheet" href="people-traditions.css?v=d31aef809b03">
+  <link rel="stylesheet" href="festivals.css?v=f95161fc55b7">
+  <link rel="stylesheet" href="cities.css?v=12681cf3d2d7">
+  <script src="i18n.js?v=428479504949" defer></script>
+  <script src="app-locales.js?v=ae315dc7c23b" defer></script>
+  <script src="info-locales.js?v=e5d898446400" defer></script>
+  <script src="library-locales.js?v=de8d899768e4" defer></script>
   <script src="interfaith-locales.js?v=e5077495c4ef" defer></script>
-  <script src="catholic-locales.js" defer></script>
-  <script src="entity-locales.js" defer></script>
-  <script src="data.js" defer></script>
-  <script src="graph.js" defer></script>
-  <script src="discovery.js" defer></script>
-  <script src="paths.js" defer></script>
-  <script src="scripture.js" defer></script>
-  <script src="reader-ui.js" defer></script>
+  <script src="catholic-locales.js?v=5c5cbe530c68" defer></script>
+  <script src="entity-locales.js?v=1812bcb1f29d" defer></script>
+  <script src="data.js?v=bf7523354725" defer></script>
+  <script src="graph.js?v=9d640a1137b5" defer></script>
+  <script src="discovery.js?v=2491092bda3f" defer></script>
+  <script src="paths.js?v=e5a6f389056b" defer></script>
+  <script src="scripture.js?v=c4afb22f5d38" defer></script>
+  <script src="reader-ui.js?v=0ca569325664" defer></script>
   <script src="sacred-library.js?v=6703df386461" defer></script>
   <script src="sacred-reader.js?v=cc5795022fff" defer></script>
   <script src="people-traditions.js?v=8b150cf2fa91" defer></script>
-  <script src="catholic-people-ui.js" defer></script>
-  <script src="person-passage-map.js" defer></script>
-  <script src="cities-ui.js" defer></script>
-  <script src="festivals.js?v=ad07eefd4b13" defer></script>
-  <script src="app.js?v=29810f5b7572" defer></script>
+  <script src="catholic-people-ui.js?v=785f35720d78" defer></script>
+  <script src="person-passage-map.js?v=dbcdb5026742" defer></script>
+  <script src="cities-ui.js?v=03eaa70ce78f" defer></script>
+  <script src="festivals.js?v=2abc491f792d" defer></script>
+  <script src="app.js?v=364a50dde379" defer></script>
 </head>
 <body>
   <svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
@@ -52,7 +53,7 @@
     <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
   </defs></svg>
   <aside class="sidebar" id="sidebar">
-    <a href="./" class="brand" aria-label="BiblePath home"><span class="brand-mark"><svg><use href="#i-map"/></svg></span><span>Bible<span class="brand-light">Path</span><small>EVERY LIFE, CONNECTED.</small></span></a>
+    <a href="./" class="brand" aria-label="ReligieAtlas home"><span class="brand-mark"><svg aria-hidden="true"><use href="#i-book"/></svg></span><span class="brand-copy"><span class="brand-name" translate="no">ReligieAtlas</span><small>Religions in text, history and practice.</small></span></a>
     <button class="search-trigger" id="search-trigger"><svg><use href="#i-search"/></svg><span>Find a Bible person</span><kbd>/</kbd></button>
     <div class="nav-label">RELIGIONS</div>
     <nav class="main-nav religion-nav" aria-label="Religions and topics">
@@ -152,7 +153,7 @@
       <section class="reader-view" id="reader-view" aria-label="Bible reader" hidden></section>
       <section class="reader-view sacred-reader-view" id="sacred-reader-view" translate="no" aria-label="Holy books" hidden></section>
       <section class="cities-view" id="cities-view" aria-label="Biblical cities explorer" hidden></section>
-      <footer class="page-footer"><span>Many lives. One unfolding story.</span><button id="sources-button"><svg><use href="#i-book"/></svg>Sources and context</button></footer>
+      <footer class="page-footer"><span>Religions in text, history and practice.</span><button id="sources-button"><svg><use href="#i-book"/></svg>Sources and context</button></footer>
     </section>
   </main>
   <div class="person-tooltip" id="person-tooltip" role="tooltip" hidden></div>

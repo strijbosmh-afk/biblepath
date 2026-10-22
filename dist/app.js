@@ -227,7 +227,7 @@
       islam:'Read the Qur’an and explore its Islamic context.'
     }[state.tradition]];
     if(view==='index')titles.index=[{christianity:'People in the Catholic Bible',judaism:'People in the Torah',islam:'People in the Qur’an'}[state.tradition],'Explore people and follow their passages within this religion.'];
-    if(view==='festivals')titles.festivals=['Festivals & rituals','Study celebrations and practices through their sources, historical development and internal diversity.'];
+    if(view==='festivals')titles.festivals=['Festivals & rituals','Celebrations and practices, with their sources, historical development and internal diversity.'];
     $('.intro h1').textContent=I.t(titles[view][0]);$('.intro p').textContent=I.t(titles[view][1]);
     $('#religion-crumb').textContent=I.t(view==='compare'?'Compare religions':religionNames[state.tradition]);
     $('.breadcrumb strong').textContent=I.t({map:'Relationship map',index:'People index',compare:'Across traditions',reader:'Holy books',cities:'Cities explorer',festivals:'Festivals & rituals'}[view]);
@@ -619,7 +619,8 @@
       <p>Large branches show up to ${MAX_MAP_PEOPLE} people at a time. Select any person and explore their family to continue deeper. Every indexed person remains available through search, including separate family groups.</p>
       <p>Hover over a circle for a short biography and passage link. Select a person to open their profile; choose <strong>Explore their family</strong> to build a new map around them. On touchscreens, tap to open the profile.</p>
       <div class="info-fact">Solid arrows lead from parent to child. Dashed lines connect spouses. Hovering or selecting highlights that person’s links. Notes identify legal parenthood, uncertain identities, and indexed relationships that may reflect an editorial inference.</div>` : `
-      <div class="eyebrow">A DEEPER LOOK AT BIBLICAL LIVES</div><h2>A growing atlas of Scripture.</h2>
+      <div class="eyebrow">RELIGIONS IN CONTEXT</div><h2>ReligieAtlas</h2>
+      <p>ReligieAtlas is an information source about Roman Catholic Christianity, Judaism and Islam. It brings together holy books, people, festivals and rituals, with source references and historical context. Each religion retains its own accounts and interpretations.</p>
       <div class="info-fact">${people.length.toLocaleString(I.language)} people · ${relationships.length.toLocaleString(I.language)} family connections · Both testaments</div>
       <p>${escape(meta?.coverage || 'This is an initial curated collection, not yet an exhaustive index of every person in the Bible.')}</p>
       <p>The three layouts share one searchable collection. Person reading buttons open the reviewed Dutch Catholic correspondence. Separate source links retain the original KJV or ESV citations used by the atlas. Namesakes remain distinct people.</p>
@@ -707,12 +708,12 @@
     if(activePath){const from=personById.get(pathPicks.from),to=personById.get(pathPicks.to);$('#path-status').textContent=activePath.status==='same'?`${from.name} is the same person — no connecting steps are needed.`:`${from.name} → ${to.name} · ${activePath.steps.length} connections · ${activePath.verseCount} Bible-cited${activePath.indexedCount?` · ${activePath.indexedCount} indexed`:''}`;}
     renderPathPickers();renderGraph({preserveView:true});setView(state.view);
     if(returnToLibrary)$('#return-to-library').textContent=returnToLibrary==='reader'?'← Back to the Bible reader':'← Back to the city';
-    document.title=I.t('BiblePath — Bible & connections');
+    document.title=I.t('ReligieAtlas — Religions in context');
     I.translateDOM();select.disabled=false;
   }
   $('#language-select').value=I.language;
   $('#language-select').addEventListener('change',event=>changeLanguage(event.target.value));
   useReligion(state.tradition);setTestamentState('all');syncSidebarAccess();renderPathPickers();renderGraph();setView('reader');
   I.setLanguage(I.language);I.observe();
-  document.title=I.t('BiblePath — Bible & connections');
+  document.title=I.t('ReligieAtlas — Religions in context');
 })();

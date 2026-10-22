@@ -13,7 +13,7 @@ class Root{
 }
 const catholic=data('christianity'),jewish=data('judaism'),islam=data('islam'),host=new Root(),opened=[];
 const view=new FestivalView(host,{onPassage:(p,id)=>opened.push({p,id})});view.setCollection(catholic);
-assert.match(host.innerHTML,/hoger onderwijs/);assert.match(host.querySelector('.festival-detail').innerHTML,/Kritische studievragen/);
+assert.match(host.innerHTML,/Religieuze tradities in context/);assert.doesNotMatch(host.querySelector('.festival-detail').innerHTML,/festival-questions|Kritische studievragen/);
 const second=catholic.entries[1];host.click({festival:second.id});assert.equal(view.state.selected,second.id);
 host.input(second.title.nl);assert.equal(view.state.selected,second.id);assert.equal(new FestivalCollection(catholic).search(second.title.nl).length,1);
 view.setCollection(jewish);assert.equal(view.state.query,'');assert(!view.model.byId.has(second.id));assert(!view.open(second.id));
