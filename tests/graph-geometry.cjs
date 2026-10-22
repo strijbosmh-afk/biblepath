@@ -59,11 +59,66 @@ for(const layout of ['constellation','lineage','radial']){
       for(const [rank,radii] of rings)assert.ok(Math.max(...radii)-Math.min(...radii)<.1,`${layout}/${focus}: rank ${rank} must remain on its relationship-distance ring`);
     }
     for(const[id,point]of Object.entries(before.positions))if(after.positions[id])assert.deepEqual(after.positions[id],point,'Existing circles must not jump while zoom reveals relatives');
+    if(layout==='lineage')for(const edge of graph.relationships.filter(edge=>edge.type==='parent'))assert.ok(after.positions[edge.source].y<after.positions[edge.target].y,`${focus}: expanded parents stay above children`);
     assert.equal(JSON.stringify(after.transform),JSON.stringify(camera),'Semantic reveal must preserve camera');
   }
   const all=people.slice(0,180);graph.setData(all,relationships,{layout,focusId:'abraham'});validate(graph,`${layout}/large`);
   console.log(`${layout}: spacing, obstacle routing, target clearance and stable reveal passed (${all.length} people).`);
 }
+function assertParentRows(graph,label){
+  const positions=graph.getState().positions;
+  for(const edge of graph.relationships.filter(edge=>edge.type==='parent')){
+    assert.ok(positions[edge.source].rank<positions[edge.target].rank,`${label}: ${edge.source} must be a generation before ${edge.target}`);
+    assert.ok(positions[edge.source].y<positions[edge.target].y,`${label}: parents must appear above their children`);
+  }
+  assert.equal(graph.getState().routes.length,graph.relationships.length,`${label}: conflicting spouse alignment must not discard any relationship`);
+}
+// These actual families contain spouse chains that used to flatten parents and
+// children into one row, even though the source parent graph is acyclic.
+for(const focus of ['hezron','step-H4258H','rehoboam']){
+  graph.setData(neighborhood(focus,3),relationships,{layout:'lineage',focusId:focus});
+  validate(graph,`lineage/${focus}/generations`);
+  assertParentRows(graph,focus);
+}
+for(const focus of ['hezron','step-H4258H']){
+  graph.setData(neighborhood(focus,1),relationships,{layout:'lineage',focusId:focus});
+  for(const depth of [2,3]){
+    const before=graph.getState();
+    graph.setData(neighborhood(focus,depth),relationships,{layout:'lineage',focusId:focus,preserveView:true,anchorId:focus});
+    const after=validate(graph,`lineage/${focus}/adaptive-${depth}`);
+    for(const edge of graph.relationships.filter(edge=>edge.type==='parent'))assert.ok(after.positions[edge.source].y<after.positions[edge.target].y,`${focus}: adaptive additions must stay below their parents`);
+    for(const [id,position] of Object.entries(before.positions))assert.deepEqual(after.positions[id],position,'These expanded families can keep every previously visible circle fixed');
+    assert.equal(JSON.stringify(after.transform),JSON.stringify(before.transform),'Adaptive family placement preserves the camera');
+  }
+}
+// Contracting two otherwise unrelated spouse pairs can also create a cycle in
+// the quotient parent graph. Check each merge against the already merged groups.
+const family=['a','b','c','d','e','f','g'].map(id=>({id,name:id,gender:'male'}));
+const familyEdges=[
+  {source:'a',target:'b',type:'parent'},{source:'c',target:'d',type:'parent'},
+  {source:'a',target:'d',type:'spouse'},{source:'b',target:'c',type:'spouse'},
+  {source:'e',target:'f',type:'spouse'},
+  {source:'e',target:'g',type:'parent'},{source:'f',target:'g',type:'parent'}
+];
+for(const edges of [familyEdges,[...familyEdges].reverse()]){
+  graph.setData(family,edges,{layout:'lineage',focusId:'a'});
+  validate(graph,'lineage/spouse-cycle');
+  assertParentRows(graph,'spouse-cycle');
+  const positions=graph.getState().positions;
+  assert.equal(positions.e.rank,positions.f.rank,'Compatible spouses still share a generation');
+}
+const chainPeople=['e','f','h','i','g'].map(id=>({id,name:id}));
+const chain=[{source:'e',target:'g',type:'parent'},{source:'e',target:'f',type:'parent'},{source:'f',target:'h',type:'parent'},{source:'h',target:'i',type:'parent'},{source:'i',target:'g',type:'parent'}];
+graph.setData(chainPeople.filter(person=>['e','g'].includes(person.id)),chain,{layout:'lineage',focusId:'e'});
+const beforeChain=graph.getState();
+graph.setData(chainPeople,chain,{layout:'lineage',focusId:'e',preserveView:true,anchorId:'e'});
+const afterChain=validate(graph,'lineage/new-generation');
+assertParentRows(graph,'new-generation');
+assert.deepEqual(afterChain.positions.e,beforeChain.positions.e,'Necessary reflow keeps the family anchor fixed');
+assert.ok(afterChain.positions.g.y>beforeChain.positions.g.y,'A newly revealed intermediate generation gets a distinct row');
+assert.equal(JSON.stringify(afterChain.transform),JSON.stringify(beforeChain.transform),'Necessary row reflow preserves the camera');
+console.log('Family-tree generations passed: actual conflicting spouse chains, cycle-producing spouse pairs, and compatible spouse alignment.');
+graph.setData(neighborhood('abraham',1),relationships,{layout:'lineage',focusId:'abraham'});
 let zoomEvent;
 graph.callbacks.onZoom=(scale,metadata)=>zoomEvent={scale,...metadata};
 graph.zoomBy(2);assert.equal(zoomEvent.userInitiated,true);assert.equal(zoomEvent.direction,'in');

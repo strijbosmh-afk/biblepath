@@ -4,7 +4,7 @@ Last updated: 22 October 2026.
 
 ## Start here
 
-BiblePath is a working static web app for reading the Bible and exploring its people, genealogy, and cities. Continue from the files in this repository; there is no framework migration or build step to perform.
+BiblePath is a working static web app for reading the Bible, Tanakh and Qur’an, and exploring biblical people, genealogy and cities. Continue from the files in this repository; there is no framework migration or build step to perform.
 
 - Repository: https://github.com/strijbosmh-afk/biblepath
 - Published app: https://biblepath-people-atlas.glossy-chord-2394.chatgpt.site/
@@ -15,12 +15,13 @@ BiblePath is a working static web app for reading the Bible and exploring its pe
 ## What the user requested and what exists
 
 1. Circles for people, sourced biographies, parent/child and spouse links, extensive zooming, and three layouts: Constellation, Family tree, Ancestry rings.
-2. Wider circle spacing, lines routed around unrelated circles, and adaptive zoom that reveals more family branches. The map loads at most 180 people at once; all people remain searchable.
+2. Wider circle spacing, lines routed around unrelated circles, and adaptive zoom that reveals more family branches. Layout switches preserve discovered branches and selection. Family-tree expansion keeps existing positions when possible; if a new parental chain needs extra generation rows, it rearranges around the same anchor while retaining the camera. The map loads at most 180 people at once; all people remain searchable.
 3. A two-person connection finder. It prioritizes a parent-to-child path, then a reverse ancestral path, then a shortest family path. Gold highlights survive zoom, selection, and layout changes. Each connection has a source. Bible-cited links are the default; indexed links require opting in. Adam → Jesus has 63 steps and includes Joseph's legal parenthood.
 4. A full searchable Bible reader with links from identified names to people or cities, plus a searchable cities explorer.
-5. English, Dutch, and French language choices, localized profiles and controls, and a corresponding full Bible edition. Language persists in local storage; reader location and city state survive a language change.
-6. Navigation order: Bible reader, People index, Relationship map, Cities explorer. The reader is the landing view. The old ambiguous “Scripture” sidebar heading is now “People filter,” visible only in the people index and family map, with explicit scope text. The reader and cities have their own filters.
+5. English, Dutch, and French language choices, localized profiles and controls, and a corresponding full Bible edition. Dutch is the first-visit default; an explicitly saved supported language wins. Language persists in local storage; reader location and city state survive a language change.
+6. Navigation order: Scripture readers, People index, Relationship map, Cities explorer. The reader is the landing view. The old ambiguous “Scripture” sidebar heading is now “People filter,” visible only in the people index and family map, with explicit scope text. The reader and cities have their own filters.
 7. Publish the source here with this handover file.
+8. A Christianity / Judaism / Islam selector and full Tanakh and Qur’an readers. Tanakh follows Torah, Prophets and Writings, with 24 canonical books represented by 39 navigation components. Four independently numbered editions are available: Hebrew WLC, Jewish JPS 1917, Dutch Statenvertaling and French Segond. The latter two are prominently identified as Christian translation aids. The Qur’an has all 114 surahs and 6,236 numbered ayahs, Arabic original text and Dutch/English/French translations. Readers include search, references, navigation, edition credits and local notes. External Jewish commentary and tafsir links are separate from scripture.
 
 ## Important files
 
@@ -33,6 +34,8 @@ BiblePath is a working static web app for reading the Bible and exploring its pe
 | `dist/paths.js` | Source-aware graph path search |
 | `dist/scripture.js` | Bible model, references, search, person/place annotations |
 | `dist/reader-ui.js`, `dist/reader.css` | Reader UI and state snapshots |
+| `dist/sacred-library.js` | Tanakh/Qur’an model, edition-aware references, search and navigation |
+| `dist/sacred-reader.js`, `dist/sacred-reader.css` | Tradition reader UI, edition positions, local notes and external commentary links |
 | `dist/cities-ui.js`, `dist/cities.css` | City index, filters, profiles, shared-reference people |
 | `dist/i18n.js` | Locale state, dictionaries, reference/book localization, shell translation |
 | `dist/app-locales.js`, `dist/library-locales.js` | Shell and reader/city translations |
@@ -40,6 +43,8 @@ BiblePath is a working static web app for reading the Bible and exploring its pe
 | `dist/entity-locales.js` | Generated NL/FR per-identity profile patches |
 | `dist/data.js` | People and family relationships |
 | `dist/bible-data.json`, `dist/bible-data-nl.json`, `dist/bible-data-fr.json` | Complete edition text and source metadata |
+| `dist/tanakh-data.json`, `dist/quran-data.json` | Complete tradition-specific editions, native text, provenance and licenses |
+| `scripts/import-tanakh.py`, `scripts/import-quran.py` | Pinned imports and deterministic `--check` reproduction |
 | `dist/places-data.json` | Settlement identities and references |
 | `dist/data-notes.html` | Public source credits, editorial choices, and limits |
 
@@ -50,6 +55,8 @@ BiblePath is a working static web app for reading the Bible and exploring its pe
 - English: World English Bible, eBible.org Protestant/American edition; 66 books, 1,189 chapters, 31,103 numbered verses. Public domain. Preserve the trademark/source credit.
 - Dutch: Statenvertaling, 1888 text transcription from Isidore-Guild; 66 books, 1,189 chapters, 31,102 numbered verses. Public-domain text, CC0 transcription.
 - French: Louis Segond 1910 from eBible.org; 66 books, 1,189 chapters, 31,170 numbered verses. Public domain; numbered Psalm superscriptions are preserved.
+- Tanakh: 24 canonical books / 39 navigation components, each edition containing 929 chapters. Hebrew WLC has 23,213 numbered verses; JPS 1917 has 23,145; Dutch has 23,145; French has 23,211. Hebrew WLC and JPS 1917 come from checksum-pinned public-domain eBible USFX snapshots. Dutch/French reuse their existing edition text and attribution, with explicit Christian-translation-aid labels. Each source’s chapter/verse numbering is retained independently.
+- Qur’an: 114 surahs, 6,236 numbered ayahs. Arabic is Tanzil Uthmani 1.1 (CC BY 3.0 with verbatim-text terms); preserve the exact text, copyright block and Tanzil link. QuranEnc supplies Dutch Rowwad 2.0.10, English Rowwad 1.0.20 and French Rachid Maach 1.0.3 under its republication terms. Keep publisher/source/version/transcript information and translator notes; review `checkUpdatesUrl` before each release. Unnumbered opening formulas remain separate from numbered ayahs.
 - People source: STEP Bible TIPNR, CC BY 4.0, pinned at `ed476a8ee6e3f7b3a46fc48af6c7dabc02387b1d`.
 - Settlement classification: OpenBible.info geography, CC BY 4.0, pinned at `7eb18a5ee62f27b9b93bd6689ea272d76dd23b8f`.
 - Dutch text snapshot: Isidore-Guild/statenvertaling commit `d39d8ee01ca51f27e3e9c50291a96fc32f49b4d2`.
@@ -62,11 +69,15 @@ Exact source URLs, hashes, retrieval dates, processing decisions, and edition me
 node scripts/import-tipnr.cjs
 python scripts/import-bible.py
 python scripts/import-bible-locales.py
+python scripts/import-tanakh.py
+python scripts/import-quran.py
 node scripts/import-places.cjs
 node scripts/build-entity-locales.cjs
 ```
 
 Inspect importer arguments before running. Sources are pinned and cached; do not casually upgrade them and overwrite reviewed identity mappings. Entity translations are authored in `scripts/entity-locale-copy.cjs` and generated by `scripts/build-entity-locales.cjs`. Edit the source of generated data, then regenerate and validate.
+
+`python scripts/import-tanakh.py --check` and `python scripts/import-quran.py --check` compare deterministic rebuilds with the saved assets without modifying them. Tanakh translation aids depend on the existing Dutch/French Bible assets. Cached reproducibility is separate from checking upstream updates: follow Tanzil and QuranEnc update links, review changed text and source terms, then deliberately update pins and rerun validation. QuranEnc requires unchanged republication, retained attribution and transcript information, following updates, reporting translation issues to the source, and avoiding inappropriate advertising alongside the text.
 
 ## Rules that protect accuracy
 
@@ -75,18 +86,23 @@ Inspect importer arguments before running. Sources are pinned and cached; do not
 - A name index reference is not proof that a verse establishes a relationship. Imported family links cite the STEP relationship record, not an arbitrary verse mentioning the name.
 - Genealogical lists can omit generations. The Adam–Jesus route combines selected accounts and is not presented as a verbatim reproduction of Luke's genealogy.
 - Preserve original Bible text exactly, apart from documented whitespace normalization. Do not translate the WEB with an automatic translator. Load the selected published edition.
-- French versification differs from English in several books. The model conservatively marks name candidates as uncertain in affected books rather than asserting exact-verse identity. Full cross-edition verse alignment remains a future improvement.
+- Preserve the Tanakh edition boundary: JPS 1917 is a Jewish translation; Statenvertaling and Segond are Christian reading aids. Do not present the latter as Jewish translations. Canonical-book identities and navigation components are separate concepts.
+- Do not align Tanakh passages merely because chapter/verse numbers match. Hebrew Joel has four chapters and Malachi three, while the translation sources use three and four respectively. Keep reading positions per edition. Hebrew and Arabic search normalization must never modify the displayed or saved source text.
+- Keep Qur’an translation, original Arabic and translator notes distinguishable. No biblical people/genealogy links are inferred in either new reader. External Sefaria/Quran.com commentary may have different authors and editions and must remain separately attributed.
+- French versification differs from English in several books. The model conservatively marks name candidates as uncertain in affected books rather than asserting exact-verse identity. City citations in those books open a clearly labeled English WEB reader view, retaining the interface language and offering a return to the previous selected-edition reading state. Full cross-edition verse alignment remains a future improvement.
 - Collective names such as Israel and namesakes need a chooser. A name-only match must not silently resolve to one person. Place/person ambiguity also needs a chooser.
 - Shared city/person verse references do not establish residence or physical presence.
 - Localized proper names include conventional spellings and edition variants. Original aliases remain searchable. Obscure names may retain their source transliteration; an exhaustive multilingual scholarly onomasticon is not claimed.
 - External source links can remain in their original language. Distinguish source provenance from the selected reader edition.
-- The collection covers the 66-book Protestant canon, not every biblical canon or interpretation.
+- The biblical people/city atlas covers the 66-book Protestant canon. The separate Tanakh and Qur’an readers do not expand that atlas’s identity or relationship claims. Other canons and interpretations are not claimed to be exhaustive.
 
 ## Localization architecture
 
 `BibleI18n.t(source, params)` translates stable English source keys, using `{parameter}` interpolation. Library components translate explicitly. A reversible DOM translation layer handles static and dynamic shell text; it excludes Bible reading content so it cannot rewrite Scripture. `reference()` localizes book names for display while IDs and canonical source labels remain stable.
 
 Do not directly translate graph relationship notes in the stored data: legal-parent detection currently reads the original note. Translate presentation. Data identity patches preserve original aliases and reference labels. Recreate reader/city instances on a language switch using their `getState()`/`setState()` interfaces; account for in-flight initialization.
+
+The tradition readers translate their own UI inside a protected `translate="no"` root. `SacredReader.changeLanguage()` preserves an explicitly chosen Hebrew/Arabic edition; a translation following the prior UI language follows the new one. Separate edition positions persist under `biblepath-reader-judaism` / `biblepath-reader-islam`. Notes are keyed by tradition, edition and chapter/surah and stay in the current browser. They are not synchronized to an account. Tradition-specific JSON loads lazily; request guards prevent a late response replacing the currently selected tradition. Biblical city links explicitly select Christianity before opening their passage.
 
 ## Validate before publishing
 
@@ -99,23 +115,39 @@ node tests/discovery.cjs
 node tests/paths.cjs
 node tests/graph-highlights.cjs
 node tests/graph-geometry.cjs
+node tests/app-map-state.cjs
+node tests/reader-atlas.cjs
 node tests/scripture.cjs
 node tests/places.cjs
 node tests/entity-locales.cjs
 node tests/i18n.cjs
 node tests/scripture-locales.cjs
+node tests/interfaith-app.cjs
+node tests/sacred-library.cjs
+node tests/sacred-reader.cjs
+node tests/tanakh-data.cjs
+node tests/quran-data.cjs
 python tests/import-bible.py
 python tests/import-bible-locales.py
+python scripts/import-tanakh.py --check
+python scripts/import-quran.py --check
 ```
 
-Run additional locale tests in `tests/` when changing translations or edition importers. Syntax-check edited JavaScript with `node --check`. Browser verification should cover:
+These are 18 Node suites, two Python importer suites and two additional import reproducibility checks. Run additional locale tests in `tests/` when changing translations or edition importers. Syntax-check edited JavaScript with `node --check`. Browser verification should cover:
 
 - EN → NL → FR → EN, including a reload to verify stored language.
+- A fresh browser defaults to Dutch, while an existing explicit language preference is retained.
+- Christianity → Judaism → Islam → Christianity, preserving separate edition positions, including a reload. Verify failed-download retry and switching traditions during a pending download.
+- All three Tanakh groups, Hebrew RTL reading/search, authentic JPS text, clearly labeled Dutch/French aids and independent numbering (Hebrew Joel 4 versus translation Joel 3).
+- Qur’an Arabic alongside NL/EN/FR translations, diacritic-insensitive Arabic search, surah/ayah references, final surah navigation and source/translation notes.
+- Save and reopen local notes; external commentary/tafsir links stay separate from scripture and show the relevant source.
 - Canonical and localized references (John / Johannes / Jean 3:16), text search, chapter navigation, and the final chapter of Revelation.
 - A linked person in Matthew 1 and a linked city in Matthew 2; namesake chooser behavior.
 - Reader → family map → return, retaining the chapter and verse.
 - Adam → Jesus in all three map layouts and across a language switch, with 63 cited steps and legal-parent explanation.
 - City filters/detail/reference navigation and same-named settlements.
+- French Jerusalem → Psalms 51:18 opens the English passage about Jerusalem, with a translated explanation and return to the prior LSG reading position.
+- Adaptive discoveries and the selected person survive all three layout changes; Reset returns to immediate family. Family tree keeps parents above children even when spouse chains cross generations.
 - Desktop and narrow mobile layouts, keyboard labels, no horizontal page overflow, and no console errors.
 
 Do not add a test that merely repeats implementation constants; assert user-visible behavior, identity correctness, preserved text, or meaningful geometric constraints.
@@ -130,7 +162,7 @@ GitHub is a separate source destination. Push reviewed work to this repository w
 
 These are proposals, not implemented features:
 
-1. **Bookmarks and study notes:** save passages, people, cities, and connection paths in a personal study collection; start with local storage and export/import before introducing accounts.
+1. **Bookmarks and study collections:** extend the existing Tanakh/Qur’an local reading notes to saved passages, people, cities and connection paths; add export/import before introducing accounts.
 2. **Historical timeline:** show people and events by era alongside the family map, with explicitly approximate or disputed dates and sources.
 3. **Geographic journeys map:** plot cities and routes such as the Exodus and Paul's travels, with geographic uncertainty clearly marked and source links for every route segment.
 

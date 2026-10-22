@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -9,11 +9,13 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="reader.css">
+  <link rel="stylesheet" href="sacred-reader.css">
   <link rel="stylesheet" href="cities.css">
   <script src="i18n.js" defer></script>
   <script src="app-locales.js" defer></script>
   <script src="info-locales.js" defer></script>
   <script src="library-locales.js" defer></script>
+  <script src="interfaith-locales.js" defer></script>
   <script src="entity-locales.js" defer></script>
   <script src="data.js" defer></script>
   <script src="graph.js" defer></script>
@@ -21,6 +23,8 @@
   <script src="paths.js" defer></script>
   <script src="scripture.js" defer></script>
   <script src="reader-ui.js" defer></script>
+  <script src="sacred-library.js" defer></script>
+  <script src="sacred-reader.js" defer></script>
   <script src="cities-ui.js" defer></script>
   <script src="app.js" defer></script>
 </head>
@@ -45,7 +49,7 @@
     <button class="search-trigger" id="search-trigger"><svg><use href="#i-search"/></svg><span>Find a person</span><kbd>/</kbd></button>
     <div class="nav-label">YOUR EXPLORER</div>
     <nav class="main-nav" aria-label="Explorer views">
-      <button class="nav-item active" data-view="reader"><svg><use href="#i-book"/></svg>Bible reader<span class="nav-count">66</span></button>
+      <button class="nav-item active" data-view="reader"><svg><use href="#i-book"/></svg>Scripture readers<span class="nav-count">3</span></button>
       <button class="nav-item" data-view="index"><svg><use href="#i-people"/></svg>People index<span id="index-count" class="nav-count"></span></button>
       <button class="nav-item" data-view="map"><svg><use href="#i-map"/></svg>Relationship map</button>
       <button class="nav-item" data-view="cities"><svg><use href="#i-city"/></svg>Cities explorer</button>
@@ -67,7 +71,7 @@
   </aside>
   <div class="sidebar-shade" id="sidebar-shade"></div>
   <main>
-    <header class="topbar"><div class="breadcrumb"><button class="icon-button mobile-menu" id="mobile-menu" aria-label="Open navigation"><svg><use href="#i-menu"/></svg></button><svg><use href="#i-book"/></svg><span>The Scripture atlas</span><span class="crumb-slash">/</span><strong>People & connections</strong></div><div class="topbar-tools"><label class="language-picker"><span>Language</span><select id="language-select" aria-label="Choose language"><option value="en" lang="en">English</option><option value="nl" lang="nl">Nederlands</option><option value="fr" lang="fr">Français</option></select></label><button class="help-button" id="help-button"><svg><use href="#i-info"/></svg><span>How to explore</span></button></div></header>
+    <header class="topbar"><div class="breadcrumb"><button class="icon-button mobile-menu" id="mobile-menu" aria-label="Open navigation"><svg><use href="#i-menu"/></svg></button><svg><use href="#i-book"/></svg><span>The Scripture atlas</span><span class="crumb-slash">/</span><strong>People & connections</strong></div><div class="topbar-tools"><label class="language-picker"><span>Language</span><select id="language-select" aria-label="Choose language"><option value="en" lang="en">English</option><option value="nl" lang="nl" selected>Nederlands</option><option value="fr" lang="fr">Français</option></select></label><button class="help-button" id="help-button"><svg><use href="#i-info"/></svg><span>How to explore</span></button></div></header>
     <section class="page-content">
       <div class="intro"><div><div class="eyebrow">DISCOVER THE LIVES BEHIND THE VERSES</div><h1>One story. Many connections.</h1><p>Explore the people of the Bible, one relationship at a time.</p></div><div class="intro-note"><span class="live-dot"></span>Old & New Testament<br><small>A living collection of biblical lives</small></div></div>
       <button class="reader-return-shortcut" id="return-to-library" hidden>← Back to reading</button>
@@ -97,7 +101,16 @@
         <aside class="inspector" id="inspector" aria-label="Selected person"></aside>
       </section>
       <section class="index-view" id="index-view" hidden><div class="index-heading"><div><div class="eyebrow">THE PEOPLE BEHIND THE STORY</div><h2>People index</h2></div><label class="index-search"><svg><use href="#i-search"/></svg><input id="index-search" type="search" placeholder="Search names, stories, or references…" aria-label="Search people index"></label></div><p class="index-intro">Search distinct people, including namesakes, then open a life to explore their family.</p><div class="index-result-count" id="index-result-count" aria-live="polite"></div><div id="index-grid" class="index-grid"></div><div class="index-pagination" id="index-pagination"><button id="index-previous">← Previous</button><span id="index-page"></span><button id="index-next">Next →</button></div><div id="index-empty" class="index-empty" hidden>No matching people. Try a name such as Mary or Moses.</div></section>
+      <section class="tradition-controls" id="tradition-controls" aria-label="Choose a tradition" hidden>
+        <div><span class="library-kicker">A reading path for each tradition</span><h2>Choose a tradition</h2></div>
+        <div class="tradition-options" role="group" aria-label="Choose a tradition">
+          <button type="button" data-tradition="christianity" aria-pressed="true"><strong>Christianity</strong><span>Bible</span></button>
+          <button type="button" data-tradition="judaism" aria-pressed="false"><strong>Judaism</strong><span>Tanakh</span></button>
+          <button type="button" data-tradition="islam" aria-pressed="false"><strong>Islam</strong><span>Qur’an</span></button>
+        </div>
+      </section>
       <section class="reader-view" id="reader-view" aria-label="Bible reader" hidden></section>
+      <section class="reader-view sacred-reader-view" id="sacred-reader-view" translate="no" aria-label="Scripture readers" hidden></section>
       <section class="cities-view" id="cities-view" aria-label="Biblical cities explorer" hidden></section>
       <footer class="page-footer"><span>Many lives. One unfolding story.</span><button id="sources-button"><svg><use href="#i-book"/></svg>Grounded in Scripture</button></footer>
     </section>

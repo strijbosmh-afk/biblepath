@@ -61,6 +61,12 @@
       if (!book || chapter < 1 || verse < 1 || endVerse < verse || !this._verses.has(`${book.id}.${chapter}.${verse}`) || !this._verses.has(`${book.id}.${chapter}.${endVerse}`)) return null;
       return {bookId:book.id,chapter,verse,endVerse};
     }
+    // Atlas references use the English index's numbering. Equal numbers are
+    // not an alignment when the selected edition flags a book as uncertain.
+    atlasReference(label) {
+      const parsed = this.reference(label);
+      return parsed && !this._uncertainVerseBooks.has(parsed.bookId) ? parsed : null;
+    }
     verse(bookId,chapter,verse) {
       const book = this.book(bookId);
       return book ? this._verses.get(`${book.id}.${Number(chapter)}.${Number(verse)}`) || null : null;

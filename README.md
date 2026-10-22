@@ -1,10 +1,16 @@
 # BiblePath
 
-A dependency-free web app for reading Scripture and exploring its people and cities. Family maps offer three interactive SVG layouts: Constellation, Family tree, and Ancestry rings.
+A dependency-free web app for reading the Bible, Tanakh and Qur’an, and exploring biblical people and cities. Family maps offer three interactive SVG layouts: Constellation, Family tree, and Ancestry rings.
 
 Live app: https://biblepath-people-atlas.glossy-chord-2394.chatgpt.site/ · [Development handover](RESUME_BUILDING.md)
 
-English, Dutch, and French are available throughout the app. The reader uses the World English Bible, Statenvertaling, and Louis Segond 1910 respectively, with localized person/city profiles and source metadata. The language selector preserves reading and explorer state. Navigation starts with the Bible reader, followed by People index, Relationship map, and Cities explorer; the scoped People filter appears only in the two people views.
+Dutch is the first-visit language; an explicitly saved English, Dutch or French preference is preserved. The Bible reader uses the World English Bible, Statenvertaling and Louis Segond 1910 respectively, with localized person/city profiles and source metadata. The language selector preserves reading and explorer state. Navigation starts with Scripture readers, followed by People index, Relationship map and Cities explorer; the scoped People filter appears only in the two people views.
+
+The reader’s tradition selector opens Christianity, Judaism or Islam. The complete Tanakh follows Torah, Prophets and Writings: 24 canonical books represented by 39 navigation components, with Hebrew WLC and Jewish JPS 1917 editions. Dutch Statenvertaling and French Segond are explicitly labeled Christian translation aids. The complete Qur’an includes 114 surahs and 6,236 numbered ayahs, with Tanzil Arabic and named Dutch, English and French translations from QuranEnc. Hebrew and Arabic display right to left. Each edition retains its own numbering and saved reading position; equal verse numbers are not treated as alignment between Tanakh editions.
+
+Tanakh and Qur’an readers support text/reference search, chapter or surah navigation, source credits and notes saved in this browser. Commentary is kept separate through external Sefaria and Quran.com links.
+
+City references use the atlas's English verse numbering. When the selected edition has unaligned numbering for a book, the reader opens that citation in the English World English Bible with an explanation and a return control. The interface stays in the selected language; returning restores the previous reading position in that edition.
 
 ## Run locally
 
@@ -16,10 +22,11 @@ There is no build step. `dist/` contains the editable source and deployable app.
 
 - Choose two people and find their connecting path across the entire collection. Bible-cited links are the default; indexed links can be included explicitly. Directed ancestry takes priority, then shortest family paths. Gold path highlights persist across zoom, selection, and layouts. Every step retains its source and notes. Adam → Jesus has 63 connections and includes legal parenthood.
 - Read the complete public-domain World English Bible: 66 books, 1,189 chapters, 31,103 numbered verses. Navigate by book/chapter/reference, search all Scripture or a testament/book, and follow annotated names to family maps or cities. Exact-verse identities take priority; uncertain matches and namesakes use a chooser. Psalm headings and source footnotes are retained.
+- Switch traditions and text editions without losing their separate reading positions. Search the Tanakh or Qur’an, read original scripts and named translations, and save personal reflections by edition and reading. Notes remain local to the current browser; commentary links open the source website.
 - Browse 604 cities and towns with 4,125 verse references. Search/filter the index, open sourced place profiles, read their passages, and explore people indexed in the same verses. These shared passages do not imply residence or physical presence.
 - Switch among three layouts over the same data.
 - Adaptive zoom starts with immediate family. Zooming out reveals wider branches (up to eight family steps); zooming in near a visible person reveals their immediate relatives. Already revealed branches remain until reset or a new family is chosen.
-- Scene expansion preserves existing node positions and the camera. Circles have at least 126 world units between centers, and obstacle-aware routes avoid unrelated circles. Close zoom adds selective relationship labels.
+- Scene expansion preserves existing node positions and the camera. If a newly revealed family-tree chain cannot fit between existing generations, the tree rearranges around the same anchor to keep parents above children. Circles have at least 126 world units between centers, and obstacle-aware routes avoid unrelated circles. Close zoom adds selective relationship labels.
 - Pan, pinch, wheel zoom, keyboard pan/zoom, fit, and expanded map.
 - Hover or focus a person for a biography and source; select to inspect their family.
 - Search by names, aliases, summaries, and references; browse the people index.
@@ -28,7 +35,9 @@ There is no build step. `dist/` contains the editable source and deployable app.
 
 ## Extending the index
 
-The repeatable people import is `node scripts/import-tipnr.cjs`. It downloads a pinned source into ignored `.cache/`, applies explicit identity mappings, source corrections, and relationship exclusions, then regenerates `dist/data.js` and the import report. Source identity suffixes are case-sensitive. Do not lowercase them or merge namesakes by display name. `python scripts/import-bible.py` imports the official eBible.org WEB USFX snapshot, and `node scripts/import-places.cjs` creates the settlement index from pinned STEP and OpenBible data. Download checksums and attribution are stored with the datasets. The Bible and city JSON files load only when needed.
+The repeatable people import is `node scripts/import-tipnr.cjs`. It downloads a pinned source into ignored `.cache/`, applies explicit identity mappings, source corrections, and relationship exclusions, then regenerates `dist/data.js` and the import report. Source identity suffixes are case-sensitive. Do not lowercase them or merge namesakes by display name. `python scripts/import-bible.py` imports the official eBible.org WEB USFX snapshot, and `node scripts/import-places.cjs` creates the settlement index from pinned STEP and OpenBible data. Download checksums and attribution are stored with the datasets. Bible, Tanakh, Qur’an and city JSON files load only when needed.
+
+Run `python scripts/import-tanakh.py` and `python scripts/import-quran.py` to rebuild the additional readers. Tanakh’s Dutch/French aids reuse the existing Bible edition assets; regenerate those first if their sources change. Both new importers accept `--check` to reproduce and compare the saved asset without rewriting it. Preserve exact source wording and all attribution: Hebrew WLC and JPS 1917 are public domain; Tanzil requires verbatim Arabic text, its copyright notice and source link; QuranEnc translations retain publisher, version, transcript information and republication terms. Before publishing a new release, review each Qur’an edition’s `checkUpdatesUrl`, then review any changed source before updating checksum pins. A cached reproducibility check does not check for upstream updates.
 
 Every person has `name`, `gender`, `testament`, `era`, `description`, `refs`, and identity/source context. Relationships use `source`, `target`, `type` (`parent` or `spouse`), `ref`, `evidence`, and an optional `note`. Parent arrows point from parent to child. Do not silently merge different genealogical accounts or infer missing biological relatives.
 
@@ -36,6 +45,8 @@ Imported relationships cite the exact STEP index record rather than an arbitrary
 
 ## Validation
 
-Run `node validate-data.cjs`, `node scripts/validate-import.cjs`, `node tests/discovery.cjs`, `node tests/paths.cjs`, `node tests/graph-highlights.cjs`, `node tests/graph-geometry.cjs`, `node tests/scripture.cjs`, and `node tests/places.cjs`. Checks cover identity uniqueness, source provenance, genealogy exclusions, paths, persistent highlights, progressive discovery, circle/arrow clearance, scripture completeness, annotation boundaries, namesakes, search, and city references.
+The full validation list is in [the handover](RESUME_BUILDING.md#validate-before-publishing): 18 Node suites and two Python importer suites. The new reader checks are `node tests/interfaith-app.cjs`, `node tests/sacred-library.cjs`, `node tests/sacred-reader.cjs`, `node tests/tanakh-data.cjs` and `node tests/quran-data.cjs`. Also run `python scripts/import-tanakh.py --check` and `python scripts/import-quran.py --check` for reproducibility.
+
+Checks cover source provenance, complete scripture editions, native-script search, numbering boundaries, saved positions/notes, language and tradition switching, late or failed downloads, namesakes, paths, persistent highlights, progressive discovery, parent/child generation order, circle/arrow clearance and edition-safe city references. The place rebuild check requires the pinned `.cache/TIPNR.txt` and `.cache/OpenBible-ancient.jsonl` inputs used by `scripts/import-places.cjs`.
 
 Google Fonts provides typography with system fallbacks. The application needs no external runtime library or data service after its static assets load.

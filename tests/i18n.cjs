@@ -4,6 +4,19 @@ const vm=require('node:vm');
 const path=require('node:path');
 const root=path.resolve(__dirname,'..');
 
+// A new visit uses Dutch independently of browser locale. Only a supported
+// saved choice overrides it; unavailable storage must not break startup.
+const localeSource=fs.readFileSync(path.join(root,'dist/i18n.js'),'utf8');
+function startupLanguage(saved,{blocked=false,browserLanguage='en-US'}={}){
+  const startup={window:{},navigator:{language:browserLanguage,languages:[browserLanguage]},localStorage:{getItem(key){assert.equal(key,'biblepath-language');if(blocked)throw new Error('Storage unavailable');return saved;},setItem(){throw new Error('Startup must not overwrite a saved preference');}}};
+  vm.runInNewContext(localeSource,startup);
+  return startup.window.BibleI18n.language;
+}
+for(const browserLanguage of ['en-US','fr-BE','nl-BE'])assert.equal(startupLanguage(null,{browserLanguage}),'nl');
+for(const saved of ['en','nl','fr'])assert.equal(startupLanguage(saved),saved,'An explicit saved language must survive reload');
+for(const saved of [undefined,'','de','EN','null'])assert.equal(startupLanguage(saved),'nl');
+assert.equal(startupLanguage(null,{blocked:true}),'nl');
+
 // A small observable DOM exercises the translator's mutation contract without
 // a browser dependency. Setters queue records just as native DOM setters do.
 const observers=[];
@@ -44,6 +57,7 @@ vm.createContext(context);
 function load(file){vm.runInContext(fs.readFileSync(path.join(root,'dist',file),'utf8'),context);}
 load('i18n.js');load('library-locales.js');
 const I=context.window.BibleI18n;
+assert.equal(I.language,'nl','The app starts in Dutch before any language switch');
 I.register({nl:{'Relationship map':'Relatiekaart','Find a person':'Zoek een persoon','1 family step':'1 familiestap'},fr:{'Relationship map':'Carte des liens','Find a person':'Trouver une personne','1 family step':'1 lien familial'}});
 I.pattern(/^(\d+) family steps$/g,'$1 familiestappen','$1 liens familiaux');
 const nav=append('button','  Relationship map  ',{'aria-label':'Find a person'});
@@ -113,4 +127,4 @@ const model=new context.window.BibleScripture(french),readerPrototype=context.wi
 const readerStub={model,books:model.books(),location:{bookId:french.meta.verseIdentityUncertainBooks[0],chapter:1,verse:null},showLinks:true,mode:'read',el:{hidden:false},q(selector){if(!readerNodes.has(selector))readerNodes.set(selector,{innerHTML:'',addEventListener(){}});return readerNodes.get(selector);},qa(){return [];},groupFor:readerPrototype.groupFor,renderVerse:readerPrototype.renderVerse};
 I.setLanguage('fr');readerPrototype.renderContent.call(readerStub);assert(readerNodes.get('#reader-content').innerHTML.includes('reader-versification-note'),'Affected chapters must show a nearby numbering warning');
 readerStub.location.bookId='GEN';readerPrototype.renderContent.call(readerStub);assert(!readerNodes.get('#reader-content').innerHTML.includes('reader-versification-note'),'Unaffected chapters should not show a numbering warning');
-console.log(`Localization passed: reversible EN/NL/FR text/attributes, exclusions, dynamic updates, no observer feedback, canonical references; ${refs.length} unique indexed references in ${Math.round(elapsed)}ms.`);
+console.log(`Localization passed: Dutch startup and saved preferences, reversible EN/NL/FR text/attributes, exclusions, dynamic updates, no observer feedback, canonical references; ${refs.length} unique indexed references in ${Math.round(elapsed)}ms.`);

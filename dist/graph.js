@@ -226,8 +226,14 @@
           if (prior) retained.push({id:person.id, ...prior});
           else additions.push({id:person.id, ...point, x:point.x + dx, y:point.y + dy});
         });
-        this.placeAdditions(additions, retained);
-        this.positions = new Map([...retained,...additions].map(({id,...point})=>[id,point]));
+        if (this.layout === 'lineage' && !this.placeLineageAdditions(additions, retained)) {
+          // A newly revealed parental chain may need more rows than the retained
+          // scene has room for. Reflow around the same anchor instead of inverting it.
+          this.positions.forEach(point => { point.x += dx; point.y += dy; });
+        } else {
+          if (this.layout !== 'lineage') this.placeAdditions(additions, retained);
+          this.positions = new Map([...retained,...additions].map(({id,...point})=>[id,point]));
+        }
       }
       this.positions.forEach((point,id)=>this.positionCache.set(id,{...point}));
       this.buildObstacleIndex();
@@ -293,6 +299,47 @@
       return result;
     }
 
+    placeLineageAdditions(additions, retained) {
+      const points = new Map([...retained,...additions].map(point => [point.id, point]));
+      const children = new Map([...points.keys()].map(id => [id, []]));
+      const parents = new Map([...points.keys()].map(id => [id, []]));
+      this.relationships.filter(edge => edge.type === 'parent').forEach(edge => {
+        children.get(edge.source).push(edge.target); parents.get(edge.target).push(edge.source);
+      });
+      const indegree = new Map([...parents].map(([id, ids]) => [id, ids.length]));
+      const order = [...points.keys()].filter(id => !indegree.get(id));
+      for (let i = 0; i < order.length; i++) for (const child of children.get(order[i])) {
+        indegree.set(child, indegree.get(child) - 1);
+        if (!indegree.get(child)) order.push(child);
+      }
+      if (order.length !== points.size) return false;
+      const lower = new Map([...points.keys()].map(id => [id, -Infinity]));
+      const upper = new Map([...points.keys()].map(id => [id, Infinity]));
+      retained.forEach(point => { lower.set(point.id, point.y); upper.set(point.id, point.y); });
+      // New generations can fit between retained rows more tightly than the
+      // initial layout, while keeping vertically distinct rows of circles.
+      const rowGap = this.radius * 2;
+      // Bounds from every retained ancestor and descendant reserve space for
+      // complete new chains, not only the nearest newly placed relative.
+      for (const id of order) for (const child of children.get(id)) lower.set(child, Math.max(lower.get(child), lower.get(id) + rowGap));
+      for (const id of [...order].reverse()) for (const parent of parents.get(id)) upper.set(parent, Math.min(upper.get(parent), upper.get(id) - rowGap));
+      if (order.some(id => lower.get(id) > upper.get(id))) return false;
+      const newIds = new Set(additions.map(point => point.id)), placed = retained.slice();
+      for (const id of order) {
+        if (!newIds.has(id)) continue;
+        const point = points.get(id);
+        const minimum = Math.max(lower.get(id), ...parents.get(id).map(parent => points.get(parent).y + rowGap));
+        point.y = clamp(point.y, minimum, upper.get(id));
+        const originX = point.x;
+        const free = x => placed.every(other => Math.hypot(x - other.x, point.y - other.y) >= this.minimumSpacing - 0.01);
+        for (let step = 1; !free(point.x); step++) {
+          point.x = originX + Math.ceil(step / 2) * 150 * (step % 2 ? 1 : -1);
+        }
+        placed.push(point);
+      }
+      return true;
+    }
+
     placeAdditions(additions, retained) {
       const placed = retained.slice();
       for (const node of additions) {
@@ -315,13 +362,29 @@
     }
 
     lineagePositions() {
-      // Spouses share one generation; longest parental path sets the rows.
+      // Align spouses only when that cannot collapse or cycle a parental path.
+      // Conflicting spouse links remain visible across rows; parenthood sets rank.
       const union = new Map(this.people.map(person => [person.id, person.id]));
       const find = id => { while (union.get(id) !== id) id = union.get(id); return id; };
-      this.relationships.filter(relation => relation.type === 'spouse').forEach(relation => union.set(find(relation.target), find(relation.source)));
+      const parentEdges = this.relationships.filter(relation => relation.type === 'parent');
+      const reaches = (source, target) => {
+        const queue = [source], seen = new Set(queue);
+        for (let i = 0; i < queue.length; i++) {
+          for (const relation of parentEdges) {
+            if (find(relation.source) !== queue[i]) continue;
+            const next = find(relation.target);
+            if (next === target) return true;
+            if (!seen.has(next)) { seen.add(next); queue.push(next); }
+          }
+        }
+        return false;
+      };
+      this.relationships.filter(relation => relation.type === 'spouse').forEach(relation => {
+        const source = find(relation.source), target = find(relation.target);
+        if (source !== target && !reaches(source, target) && !reaches(target, source)) union.set(target, source);
+      });
       const groups = [...new Set(this.people.map(person => find(person.id)))];
       const ranks = new Map(groups.map(group => [group, 0]));
-      const parentEdges = this.relationships.filter(relation => relation.type === 'parent' && find(relation.source) !== find(relation.target));
       for (let pass = 0; pass < groups.length; pass++) {
         let changed = false;
         parentEdges.forEach(relation => {

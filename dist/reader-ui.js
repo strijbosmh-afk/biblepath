@@ -11,7 +11,7 @@
   const bookGroups=[['The Law',0,5],['History',5,17],['Poetry & wisdom',17,22],['Major prophets',22,27],['Minor prophets',27,39],['The Gospels',39,43],['Acts',43,44],['Letters',44,65],['Revelation',65,66]];
   class BibleReader {
     constructor(container,model,people,places,callbacks={}) {
-      this.el=container;this.model=model;this.callbacks=callbacks;
+      this.el=container;this.model=model;this.selectedModel=model;this.atlasContext=null;this.callbacks=callbacks;
       this.people=new Map(people.people.map(p=>[p.id,p]));this.places=new Map((places.places||[]).map(p=>[p.id,p]));
       this.books=model.books();this.location={bookId:this.books[0].id,chapter:1,verse:null};this.scope='all';this.query='';this.page=0;this.mode='read';this.showLinks=true;
       this.render();
@@ -21,9 +21,35 @@
       if(parsed){const chapter=this.model.chapter(parsed.bookId,parsed.chapter);if(chapter&&(!parsed.verse||chapter.verses.some(v=>v.number===parsed.verse))&&(!parsed.endVerse||chapter.verses.some(v=>v.number===parsed.endVerse))){this.location={bookId:parsed.bookId,chapter:parsed.chapter,verse:parsed.verse||null};this.mode='read';this.render();return true;}}
       return !reference;
     }
+    openAtlas(reference,sourceModel) {
+      const aligned=this.selectedModel.atlasReference(reference);
+      if(aligned){
+        if(this.atlasContext)this.restoreSelectedEdition();
+        return this.open(aligned);
+      }
+      const sourceReference=sourceModel?.reference(reference);
+      if(!sourceReference)return false;
+      const selectedState=this.atlasContext?.selectedState||this.getState();
+      this.atlasContext={reference:typeof reference==='string'?reference:reference.label,selectedState};
+      this.model=sourceModel;this.sourceModel=sourceModel;this.books=sourceModel.books();
+      this.query='';this.page=0;
+      return this.open(sourceReference);
+    }
+    restoreSelectedEdition() {
+      const state=this.atlasContext?.selectedState;
+      this.model=this.selectedModel;this.books=this.model.books();this.atlasContext=null;
+      if(state)this.setState(state);else this.render();
+    }
     groupFor(book){const index=this.books.findIndex(b=>b.id===book.id);return bookGroups.find(g=>index>=g[1]&&index<g[2])?.[0]||'';}
-    getState(){return {location:{...this.location},scope:this.scope,query:this.q('#reader-query')?.value??this.query,page:this.page,mode:this.mode,showLinks:this.showLinks};}
-    setState(state={}){
+    getState(){return {location:{...this.location},scope:this.scope,query:this.q('#reader-query')?.value??this.query,page:this.page,mode:this.mode,showLinks:this.showLinks,...(this.atlasContext?{atlasReference:this.atlasContext.reference,selectedEditionState:this.atlasContext.selectedState}:{})};}
+    setState(state={},sourceModel){
+      this.model=this.selectedModel;this.books=this.model.books();this.atlasContext=null;
+      const currentReference=state.location?`${state.location.bookId} ${state.location.chapter}:${state.location.verse||1}`:'';
+      if(state.atlasReference&&!this.selectedModel.atlasReference(currentReference)){
+        if(!sourceModel)return this.setState(state.selectedEditionState||{});
+        this.model=sourceModel;this.sourceModel=sourceModel;this.books=sourceModel.books();
+        this.atlasContext={reference:state.atlasReference,selectedState:state.selectedEditionState||{}};
+      }
       const book=this.books.find(item=>item.id===state.location?.bookId)||this.books[0];
       const chapter=Math.max(1,Math.min(book.chapterCount,Number(state.location?.chapter)||1));
       const verses=this.model.chapter(book.id,chapter)?.verses||[];
@@ -37,6 +63,7 @@
       const book=this.books.find(b=>b.id===this.location.bookId);
       const meta=this.model.meta||{},edition=meta.title||meta.abbreviation||t('Bible'),license=t(meta.license||'Public domain'),source=safeUrl(meta.sourcePage||meta.sourceUrl);
       this.el.innerHTML=`<div class="reader-topline"><div><span class="library-kicker">${tr('THE COMPLETE SCRIPTURES')}</span><h2>${tr('Read the story.')}</h2></div><div class="reader-edition">${esc(edition)}<small>${tr('{count} books · Old & New Testament · {license}',{count:number(this.books.length),license})}</small></div></div>
+        ${this.atlasContext?`<div class="reader-edition-notice" role="note"><p>${tr('This city reference uses atlas verse numbering. Reading the English World English Bible so the cited passage is accurate; numbering in your selected edition may differ.')}</p><button type="button" id="reader-selected-edition">${tr('Return to {edition}',{edition:this.selectedModel.meta.title})}</button></div>`:''}
         <form class="reader-search" id="reader-search-form"><label class="reader-query-label"><span class="sr-only">${tr('Search Scripture or enter a reference')}</span><input id="reader-query" type="search" placeholder="${tr('Search words, a phrase, or {reference}…',{reference:reference('John 3:16')})}" value="${esc(this.query)}" autocomplete="off"></label><select id="reader-scope" aria-label="${tr('Search scope')}"><option value="all">${tr('All Scripture')}</option><option value="OT">${tr('Old Testament')}</option><option value="NT">${tr('New Testament')}</option><option value="book">${tr('Current book')}</option></select><button type="submit">${tr('Search')}</button></form>
         <div class="reader-shell"><aside class="reader-books"><div class="reader-books-heading">${tr('THE LIBRARY')} <span>${this.books.length}</span></div><div class="reader-book-list">${bookGroups.map(([name,start,end])=>`<details ${this.books.slice(start,end).some(b=>b.id===book.id)?'open':''}><summary>${tr(name)}</summary>${this.books.slice(start,end).map(b=>`<button data-reader-book="${esc(b.id)}" class="${b.id===book.id?'active':''}" ${b.id===book.id?'aria-current="page"':''}>${esc(bookName(b))}<span>${b.chapterCount}</span></button>`).join('')}</details>`).join('')}</div></aside>
         <div class="reader-main"><div class="reader-navigation"><label><span>${tr('BOOK')}</span><select id="reader-book" aria-label="${tr('Bible book')}">${this.books.map(b=>`<option value="${esc(b.id)}" ${b.id===book.id?'selected':''}>${esc(bookName(b))}</option>`).join('')}</select></label><label><span>${tr('CHAPTER')}</span><select id="reader-chapter" aria-label="${tr('Bible chapter')}">${Array.from({length:book.chapterCount},(_,i)=>`<option value="${i+1}" ${i+1===this.location.chapter?'selected':''}>${i+1}</option>`).join('')}</select></label><div class="reader-chapter-arrows"><button id="reader-previous" aria-label="${tr('Previous chapter')}" ${book.id===this.books[0].id&&this.location.chapter===1?'disabled':''}>←</button><button id="reader-next" aria-label="${tr('Next chapter')}" ${book.id===this.books.at(-1).id&&this.location.chapter===book.chapterCount?'disabled':''}>→</button></div></div>
@@ -44,6 +71,7 @@
         <div class="reader-credit">${meta.credit?tr(meta.credit):tr('{edition}, {license}.',{edition,license})} ${source?`<a href="${esc(source)}" target="_blank" rel="noopener noreferrer">${tr('Text source')} ↗</a> · `:''}<a href="data-notes.html" target="_blank" rel="noopener noreferrer">${tr('Name-link methodology & credits')} ↗</a>${meta.versificationNote?`<br>${tr(meta.versificationNote)}`:''}</div>
         <dialog class="reader-entity-dialog" id="reader-entity-dialog" aria-labelledby="reader-entity-title"><button class="reader-dialog-close" aria-label="${tr('Close name choices')}">×</button><div id="reader-entity-content"></div></dialog>`;
       this.q('#reader-scope').value=this.scope;
+      this.q('#reader-selected-edition')?.addEventListener('click',()=>this.restoreSelectedEdition());
       this.q('#reader-search-form').addEventListener('submit',e=>{e.preventDefault();this.query=this.q('#reader-query').value.trim();this.scope=this.q('#reader-scope').value;this.page=0;const ref=this.model.reference(this.query);if(ref&&this.open(ref))return;this.mode=this.query?'search':'read';this.renderContent();});
       this.q('#reader-scope').addEventListener('change',()=>{this.scope=this.q('#reader-scope').value;if(this.mode==='search'){this.page=0;this.renderContent();}});
       this.q('#reader-book').addEventListener('change',e=>this.changeBook(e.target.value));

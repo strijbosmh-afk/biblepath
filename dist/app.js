@@ -22,7 +22,10 @@
   let returnToLibrary = null;
   let savedReaderState=null,savedCitiesState=null;
   const scriptureCache=new Map();
-  const state = {layout:'constellation', focus:'abraham', selected:'abraham', depth:'auto', discoveryDepth:1, localRoots:[], testament:'all', spouses:true, view:'reader', indexPage:1};
+  let initialTradition='christianity';try{const saved=localStorage.getItem('biblepath-tradition');if(['christianity','judaism','islam'].includes(saved))initialTradition=saved;}catch{}
+  let sacredReader=null,sacredLoading=null,sacredRequest=0;
+  const sacredCache=new Map();
+  const state = {layout:'constellation', focus:'abraham', selected:'abraham', depth:'auto', discoveryDepth:1, localRoots:[], testament:'all', spouses:true, view:'reader', tradition:initialTradition, indexPage:1};
   let zoomBase = null, zoomTimer, rendering = false, lastSelection;
   const MAX_MAP_PEOPLE = 180, INDEX_PAGE_SIZE = 60;
   const graph = new window.BibleGraph($('#graph'), {
@@ -32,7 +35,7 @@
     onZoom: handleZoom
   });
   // Exposed read-only snapshots help verify navigation and graph behavior.
-  window.biblePath = {getState:() => ({...state, path:activePath ? {kind:activePath.kind,personIds:[...activePath.personIds],steps:activePath.steps.length,indexedCount:activePath.indexedCount} : null, graph:graph.getState(), language:I.language,reader:reader?.getState?.()||null,cities:cities?.getState?.()||null,peopleCount:people.length, relationshipCount:relationships.length})};
+  window.biblePath = {getState:() => ({...state, path:activePath ? {kind:activePath.kind,personIds:[...activePath.personIds],steps:activePath.steps.length,indexedCount:activePath.indexedCount} : null, graph:graph.getState(), language:I.language,reader:reader?.getState?.()||null,sacredReader:sacredReader?.getState?.()||null,cities:cities?.getState?.()||null,peopleCount:people.length, relationshipCount:relationships.length})};
   let tooltipTimer, toastTimer, currentTooltipId;
   const normalize = text => text.toLocaleLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
   const searchable = new Map(people.map(p => [p.id, normalize([p.name,...(p.aliases || []),p.disambiguation || '',p.description,p.era,...(p.allReferences || p.refs.map(r=>r.label))].join(' '))]));
@@ -70,18 +73,19 @@
     },140);
   }
 
-  function renderGraph({preserveView=false} = {}) {
+  function renderGraph({preserveView=false, preserveDiscovery=preserveView} = {}) {
     if (activePath) {renderPathGraph();return;}
     hideTooltip();
-    if (!preserveView) {clearTimeout(zoomTimer);state.discoveryDepth = 1;state.localRoots=[];}
+    if (!preserveView) clearTimeout(zoomTimer);
+    if (!preserveDiscovery) {state.discoveryDepth = 1;state.localRoots=[];}
     const depth = state.depth === 'auto' ? state.discoveryDepth : state.depth === 'all' ? Infinity : state.depth;
     lastSelection = discovery.neighborhood({focusId:state.focus,depth,testament:state.testament,spouses:state.spouses,limit:MAX_MAP_PEOPLE,localRoots:state.localRoots});
     const visible = lastSelection.people, edges = lastSelection.relationships;
-    if (!preserveView || !visible.some(p=>p.id===state.selected)) state.selected = state.focus;
+    if (!preserveDiscovery || !visible.some(p=>p.id===state.selected)) state.selected = state.focus;
     rendering = true;
     graph.setData(visible, edges, {layout:state.layout,focusId:state.focus,selectedId:state.selected,preserveView,anchorId:state.focus});
     rendering = false;
-    if (!preserveView) zoomBase = graph.getState().transform.k;
+    if (!preserveView) zoomBase = graph.getState().transform.k*Math.pow(1.5,state.discoveryDepth-1);
     $('#map-empty').hidden = visible.length > 0;
     $('#visible-count').textContent = `${visible.length} people`;
     $('#map-title').textContent = `${personById.get(state.focus).name}’s connections`;
@@ -168,12 +172,18 @@
     $('#map-view').hidden = view !== 'map'; $('#index-view').hidden = view !== 'index';
     $('.layout-picker').hidden = view !== 'map';
     $('#path-finder').hidden = view !== 'map';
-    $('#reader-view').hidden = view !== 'reader'; $('#cities-view').hidden = view !== 'cities';
+    $('#reader-view').hidden = view !== 'reader'||state.tradition!=='christianity'; $('#cities-view').hidden = view !== 'cities';
+    $('#sacred-reader-view').hidden=view!=='reader'||state.tradition==='christianity';
+    $('#sacred-reader-view').setAttribute('aria-label',I.t(state.tradition==='islam'?'Qur’an':'Tanakh'));
+    $('#tradition-controls').hidden=view!=='reader';
+    $('.intro-note').hidden=view==='reader';
+    $('.intro .eyebrow').textContent=view==='reader'?'A reading path for each tradition':'DISCOVER THE LIVES BEHIND THE VERSES';
+    $$('[data-tradition]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.tradition===state.tradition)));
     $('#people-testament-filters').hidden = !['map','index'].includes(view);
     $('#return-to-library').hidden = !returnToLibrary || !['map','index'].includes(view);
-    const titles={map:['One story. Many connections.','Explore the people of the Bible, one relationship at a time.'],index:['Every life has a story.','Find a name, follow a family, and discover its place in Scripture.'],reader:['The words behind the story.','Read both testaments. Follow the people and cities within the verses.'],cities:['Places that hold a story.','Explore biblical cities and the passages that bring them to life.']};
+    const titles={map:['One story. Many connections.','Explore the people of the Bible, one relationship at a time.'],index:['Every life has a story.','Find a name, follow a family, and discover its place in Scripture.'],reader:['Read each tradition in its own context.','Choose the Bible, Tanakh or Qur’an. Each edition keeps its own sources and reading position.'],cities:['Places that hold a story.','Explore biblical cities and the passages that bring them to life.']};
     $('.intro h1').textContent=titles[view][0];$('.intro p').textContent=titles[view][1];
-    $('.breadcrumb strong').textContent={map:'People & connections',index:'People index',reader:'Bible reader',cities:'Cities explorer'}[view];
+    $('.breadcrumb strong').textContent={map:'People & connections',index:'People index',reader:'Scripture readers',cities:'Cities explorer'}[view];
     $$('.nav-item').forEach(button=>{const active = button.dataset.view === view;button.classList.toggle('active',active);button.setAttribute('aria-current',active ? 'page' : 'false');});
     if (view === 'index') renderIndex();
     if (view === 'reader') ensureReader();
@@ -183,20 +193,58 @@
 
   function loadJson(file) {return fetch(file).then(response=>{if(!response.ok)throw new Error(`Could not load ${file}`);return response.json();});}
   function loadPlaces() {if(!placesPromise)placesPromise=loadJson('places-data.json').catch(error=>{placesPromise=null;throw error;});return placesPromise.then(data=>I.localizePlaces(data));}
-  function loadScripture() {const locale=I.language;if(!scriptureCache.has(locale))scriptureCache.set(locale,loadJson(locale==='en'?'bible-data.json':`bible-data-${locale}.json`).catch(error=>{scriptureCache.delete(locale);throw error;}));return scriptureCache.get(locale);}
-  function libraryError(container,retry) {container.innerHTML='<div class="library-empty"><h2>This collection could not load.</h2><p>Check your connection, then try again.</p><button class="solid-button library-retry">Try again</button></div>';container.querySelector('button').addEventListener('click',retry);}
-  let readerLoading=null,citiesLoading=null;
-  function readPendingPassage() {if(reader&&pendingPassage){const ref=pendingPassage;pendingPassage=null;if(!reader.open(ref))toast('This reference could not be located in the reader.');}}
+  function loadScripture(locale=I.language) {if(!scriptureCache.has(locale))scriptureCache.set(locale,loadJson(locale==='en'?'bible-data.json':`bible-data-${locale}.json`).catch(error=>{scriptureCache.delete(locale);throw error;}));return scriptureCache.get(locale);}
+  function libraryError(container,retry) {container.innerHTML=`<div class="library-empty"><h2>${escape(I.t('This collection could not load.'))}</h2><p>${escape(I.t('Check your connection, then try again.'))}</p><button class="solid-button library-retry">${escape(I.t('Try again'))}</button></div>`;container.querySelector('button').addEventListener('click',retry);}
+  function selectTradition(tradition){
+    if(!['christianity','judaism','islam'].includes(tradition))return;
+    if(tradition!==state.tradition){sacredRequest++;sacredReader?.destroy();sacredReader=null;sacredLoading=null;state.tradition=tradition;}
+    try{localStorage.setItem('biblepath-tradition',tradition);}catch{}
+    setView('reader');
+  }
+  function ensureSacredReader(){
+    if(sacredReader){sacredReader.changeLanguage();return Promise.resolve(sacredReader);}
+    if(sacredLoading)return sacredLoading;
+    const tradition=state.tradition,request=++sacredRequest,container=$('#sacred-reader-view');
+    container.innerHTML=`<div class="library-loading" role="status">${escape(I.t('Opening this collection…'))}</div>`;
+    if(!sacredCache.has(tradition))sacredCache.set(tradition,loadJson(tradition==='judaism'?'tanakh-data.json':'quran-data.json').catch(error=>{sacredCache.delete(tradition);throw error;}));
+    sacredLoading=sacredCache.get(tradition).then(data=>{
+      if(request!==sacredRequest||tradition!==state.tradition)return null;
+      sacredReader=new window.SacredReader(container,new window.SacredLibrary(tradition,data));return sacredReader;
+    }).catch(()=>{if(request===sacredRequest&&tradition===state.tradition)libraryError(container,ensureSacredReader);return null;}).finally(()=>{if(request===sacredRequest)sacredLoading=null;});
+    return sacredLoading;
+  }
+  let readerLoading=null,citiesLoading=null,passageLoading=null;
+  function readPendingPassage() {
+    if(passageLoading)return passageLoading;
+    if(!reader||!pendingPassage)return Promise.resolve(reader);
+    passageLoading=(async()=>{
+      while(pendingPassage){
+        const ref=pendingPassage,activeReader=reader;pendingPassage=null;
+        try{
+          let sourceModel=activeReader.sourceModel;
+          if(!activeReader.selectedModel.atlasReference(ref)&&!sourceModel){
+            const [text,places]=await Promise.all([loadScripture('en'),loadPlaces()]);
+            sourceModel=new window.BibleScripture(text,window.BIBLE_DATA,places);
+          }
+          if(reader===activeReader&&!activeReader.openAtlas(ref,sourceModel))toast('This reference could not be located in the reader.');
+        }catch{toast(I.t('The cited passage could not load. Select the city reference again to retry.'));}
+      }
+      return reader;
+    })().finally(()=>{passageLoading=null;});
+    return passageLoading;
+  }
   function showPendingCity() {if(cities&&pendingCity){const id=pendingCity;pendingCity=null;cities.open(id);}}
   function ensureReader() {
-    if(reader){readPendingPassage();return Promise.resolve(reader);}
+    if(state.tradition!=='christianity')return ensureSacredReader();
+    if(reader)return readPendingPassage();
     if(readerLoading)return readerLoading;
     $('#reader-view').innerHTML='<div class="library-loading" role="status">Opening the Bible…</div>';
-    readerLoading=Promise.all([loadScripture(),loadPlaces()]).then(([text,places])=>{
+    readerLoading=Promise.all([loadScripture(),loadPlaces()]).then(async([text,places])=>{
       const model=new window.BibleScripture(text,window.BIBLE_DATA,places);
+      const sourceModel=savedReaderState?.atlasReference?new window.BibleScripture(await loadScripture('en'),window.BIBLE_DATA,places):null;
       reader=new window.BibleReader($('#reader-view'),model,window.BIBLE_DATA,places,{onPerson:id=>openLibraryPerson(id,'reader'),onPlace:openCity});
-      if(savedReaderState){reader.setState(savedReaderState);savedReaderState=null;}
-      readPendingPassage();
+      if(savedReaderState){reader.setState(savedReaderState,sourceModel);savedReaderState=null;}
+      await readPendingPassage();
       return reader;
     }).catch(()=>{libraryError($('#reader-view'),ensureReader);return null;}).finally(()=>{readerLoading=null;});
     return readerLoading;
@@ -208,7 +256,7 @@
     citiesLoading=loadPlaces().then(places=>{cities=new window.BibleCities($('#cities-view'),places,window.BIBLE_DATA,{onPerson:id=>openLibraryPerson(id,'cities'),onPassage:openPassage});if(savedCitiesState){cities.setState(savedCitiesState);savedCitiesState=null;}showPendingCity();return cities;}).catch(()=>{libraryError($('#cities-view'),ensureCities);return null;}).finally(()=>{citiesLoading=null;});
     return citiesLoading;
   }
-  function openPassage(reference) {pendingPassage=reference;setView('reader');}
+  function openPassage(reference) {pendingPassage=reference;selectTradition('christianity');}
   function openCity(id) {pendingCity=id;setView('cities');}
   function openLibraryPerson(id,origin) {returnToLibrary=origin;$('#return-to-library').textContent=origin==='reader'?'← Back to the Bible reader':'← Back to the city';explorePerson(id);}
 
@@ -373,7 +421,7 @@
       <h3>Read Scripture and explore its cities</h3><p><strong>Bible reader</strong> contains both testaments in English (World English Bible), Dutch (Statenvertaling), and French (Louis Segond 1910). Choose the language in the top bar. Browse books and chapters or search words, phrases and references. Underlined names open a family map or city profile. Dotted names offer possible identities rather than choosing one for you. Your reading position is kept when you follow a link.</p><p><strong>Cities explorer</strong> provides an alphabetical, searchable collection of settlements. Filter by testament or book, read the indexed passages, and follow people indexed in those passages. Shared references do not by themselves establish that a person lived in that city.</p>
       <h3>Connect two people</h3><p>Use <strong>How are they connected?</strong> to choose a start and destination, then select <strong>Find connection</strong>. The gold route remains highlighted while you zoom, pan, or switch layouts. The side panel lists every connection with its source; select a step to locate that person.</p><p>The finder prefers a parent-to-child route when one exists, then searches other family connections. Bible-cited connections are the default. Uncheck that option to include STEP Bible’s indexed links, which are clearly labeled. A missing route means the collection has no recorded path under those settings.</p>
       <h3>Three ways to see the same people</h3><ul><li><strong>Constellation</strong> spreads a family into an organic network.</li><li><strong>Family tree</strong> arranges parents above their children.</li><li><strong>Ancestry rings</strong> places your starting person at the center, with each ring one family connection farther away. Spouses and descendants can appear alongside ancestors.</li></ul>
-      <h3>Zoom into the story</h3><p><strong>Adaptive zoom</strong> starts with immediate family. Zoom out to reveal more distant relatives, up to eight family steps away. Zoom in near a person to uncover their immediate relatives and read relationship labels. Revealed branches stay on the map until you reset or choose another family; people stay in place as branches appear.</p>
+      <h3>Zoom into the story</h3><p><strong>Adaptive zoom</strong> starts with immediate family. Zoom out to reveal more distant relatives, up to eight family steps away. Zoom in near a person to uncover their immediate relatives and read relationship labels. Revealed branches stay on the map until you reset or choose another family; people stay in place as branches appear unless the family tree needs extra rows to keep parents above children.</p>
       <p>Drag to move. Scroll or pinch to zoom from 1% to 500%. The + and − buttons do the same. Fit shows everyone currently loaded; Reset view returns to your starting family. You can also choose a fixed number of family steps.</p>
       <p>Large branches show up to ${MAX_MAP_PEOPLE} people at a time. Select any person and explore their family to continue deeper. Every indexed person remains available through search, including separate family groups.</p>
       <p>Hover over a circle for a short biography and passage link. Select a person to open their profile; choose <strong>Explore their family</strong> to build a new map around them. On touchscreens, tap to open the profile.</p>
@@ -399,8 +447,9 @@
   }
   function closeSidebar() {$('#sidebar').classList.remove('open');$('#sidebar-shade').classList.remove('open');syncSidebarAccess();}
   function toast(message) {clearTimeout(toastTimer);$('#toast').textContent=message;$('#toast').hidden=false;toastTimer=setTimeout(()=>$('#toast').hidden=true,3000);}
-  $$('.layout-option').forEach(button=>button.addEventListener('click',()=>{state.layout=button.dataset.layout;renderGraph();}));
+  $$('.layout-option').forEach(button=>button.addEventListener('click',()=>{state.layout=button.dataset.layout;renderGraph({preserveDiscovery:true});}));
   $$('.nav-item').forEach(button=>button.addEventListener('click',()=>setView(button.dataset.view)));
+  $$('[data-tradition]').forEach(button=>button.addEventListener('click',()=>selectTradition(button.dataset.tradition)));
   $$('.testament').forEach(button=>button.addEventListener('click',()=>{
     clearPath(false);
     setTestamentState(button.dataset.testament);
@@ -447,7 +496,7 @@
     const select=$('#language-select');select.disabled=true;
     // Finish any in-flight initialization before taking state, so a previous
     // edition cannot overwrite the newly selected reader.
-    await Promise.allSettled([readerLoading,citiesLoading].filter(Boolean));
+    await Promise.allSettled([readerLoading,citiesLoading,passageLoading,sacredLoading].filter(Boolean));
     savedReaderState=reader?.getState?.()||savedReaderState;
     savedCitiesState=cities?.getState?.()||savedCitiesState;
     I.setLanguage(next);I.localizePeople(window.BIBLE_DATA,originalPeople);updateCounts();
