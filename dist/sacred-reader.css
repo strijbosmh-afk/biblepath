@@ -2,3 +2,40 @@
 @media(max-width:1100px){.tradition-controls{align-items:flex-start;flex-direction:column}.sacred-edition{max-width:58%}.sacred-reader-view .reader-shell{grid-template-columns:170px minmax(0,1fr)}}
 @media(max-width:850px){.sacred-reader-view .reader-shell{grid-template-columns:1fr}.sacred-edition{max-width:100%}.sacred-reader-view .reader-topline{align-items:flex-start;flex-direction:column}.sacred-navigation label>span{display:inline}.sacred-tabs{gap:15px;padding:0 18px}.sacred-verses{padding:10px 18px 25px}.sacred-edition-context{margin:0 19px 19px}.sacred-panel{padding:20px}.sacred-navigation select{max-width:190px}}
 @media(max-width:520px){.tradition-controls{padding:18px}.tradition-options{width:100%;gap:6px}.tradition-options button{min-width:0;flex:1;padding:12px 8px;font-size:12px}.tradition-options button span{font-size:11px}.sacred-tabs button{font-size:12px}.sacred-heading{font-size:31px}.sacred-navigation{gap:10px}.sacred-navigation label{gap:5px}.sacred-navigation select{max-width:160px}.sacred-original{font-size:25px!important}.sacred-verse .verse-text{font-size:16px}.sacred-reader-view .reader-credit{overflow-wrap:anywhere}}
+
+/* Keep reading aids as legible as the scripture navigation. */
+.tradition-controls .library-kicker,.sacred-reader-view .library-kicker{font-size:var(--ui-meta,12px);letter-spacing:1px}
+.tradition-options button{font-size:var(--ui-label,14px)}
+.tradition-options button span{font-size:var(--ui-small,13px)}
+.sacred-summary,.sacred-edition-context{font-size:var(--ui-small,13px);color:var(--ui-muted,#596650);line-height:1.75}
+.sacred-edition{font-size:var(--ui-label,14px);color:var(--ui-secondary,#495c43);min-width:0;max-width:100%;flex:1 1 280px}
+.sacred-edition select{font-size:var(--ui-label,14px);min-height:44px;width:100%;min-width:0}
+.sacred-reader-view .reader-book-list button,.sacred-reader-view .reader-book-list summary{font-size:var(--ui-label,14px)}
+.sacred-reader-view .reader-search input,.sacred-reader-view .reader-search select,.sacred-reader-view .reader-search>button{font-size:var(--ui-label,14px)}
+.sacred-navigation label{font-size:var(--ui-small,13px);letter-spacing:0;flex-wrap:wrap;min-width:0}
+.sacred-navigation select{font-size:var(--ui-label,14px);min-height:44px;min-width:0}
+.sacred-tabs{gap:10px 22px}
+.sacred-tabs button{font-size:var(--ui-label,14px);line-height:1.5;min-height:44px;padding:14px 0;color:var(--ui-secondary,#495c43);text-align:left}
+.sacred-original-control{font-size:var(--ui-label,14px);line-height:1.6;color:var(--ui-secondary,#495c43);min-height:44px}
+.sacred-original-control input{width:18px;height:18px;flex:none}
+.sacred-verse{grid-template-columns:30px minmax(0,1fr)}
+.sacred-verse .verse-number{font-size:var(--ui-meta,12px);color:var(--ui-muted,#596650)}
+.sacred-verse .verse-text{font-size:18px;line-height:1.85}
+.sacred-reader-view .verse-notes{font-size:var(--ui-small,13px);color:var(--ui-muted,#596650)}
+.sacred-bismillah small{font-size:var(--ui-small,13px);color:var(--ui-muted,#596650);line-height:1.6}
+.sacred-panel,.sacred-message{font-size:var(--ui-body,15px);line-height:1.8;color:var(--ui-secondary,#495c43)}
+.sacred-panel h4{font-size:16px}.sacred-panel small{font-size:var(--ui-small,13px);line-height:1.7}
+.sacred-panel .solid-button{font-size:var(--ui-label,14px);min-height:44px}
+.sacred-reader-view .reader-credit{font-size:var(--ui-small,13px);color:var(--ui-muted,#596650);line-height:1.75}
+.sacred-reader-view .reader-bottom-nav,.sacred-reader-view .reader-bottom-nav button{font-size:var(--ui-label,14px)}
+@media(max-width:850px){.sacred-edition{flex:auto;width:100%}}
+@media(max-width:760px){
+  .sacred-reader-view .reader-search input,.sacred-reader-view .reader-search select,.sacred-edition select,.sacred-navigation select,.sacred-panel textarea{font-size:16px}
+  .sacred-reader-view .reader-topline{flex-direction:column}
+  .sacred-navigation label{flex-direction:column;align-items:stretch;gap:6px;flex:0 1 100px}
+  .sacred-navigation label:first-child{flex:1 1 170px}.sacred-navigation label:first-child select{max-width:100%}
+  .sacred-navigation select{max-width:100%;width:100%}.sacred-navigation label>span{display:block}
+  .sacred-tabs{gap:8px 18px}.sacred-verses{padding-left:16px;padding-right:16px}
+  .sacred-verse{grid-template-columns:28px minmax(0,1fr);gap:8px}
+  .sacred-panel{padding:20px 18px}.sacred-edition-context{margin-left:19px;margin-right:19px}
+}

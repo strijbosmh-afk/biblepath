@@ -5,3 +5,47 @@
 @media(max-width:850px){.city-detail-layout{grid-template-columns:1fr}.city-people-panel{margin-top:5px}.city-people-list{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:23px}.city-detail-emblem{width:66px;height:77px}.city-detail-emblem svg{width:30px;height:30px}.city-detail-hero{gap:18px}.city-detail-stat{padding-left:8px}}
 @media(max-width:560px){.city-intro{align-items:flex-start;gap:12px;padding-top:2px}.city-intro h1{font-size:38px}.city-intro>div>p:last-child{font-size:11px;max-width:240px}.city-index-count{padding:4px 0 0;text-align:right}.city-index-count>span{font-size:29px}.city-index-count p{max-width:60px;font-size:8px!important;line-height:1.5!important}.city-index-count svg{display:none}.city-grid{gap:12px;grid-template-columns:1fr}.city-card{min-height:219px;padding:19px 20px}.city-card-description{-webkit-line-clamp:2;font-size:11px}.city-card h2{font-size:30px}.city-filter-bar{padding:11px}.city-search{min-width:0;padding:0 10px}.city-search input{font-size:11px}.city-testaments{width:100%;justify-content:space-between;gap:0}.city-testaments button{font-size:9px;padding:9px 8px;flex:1}.city-selects{gap:4px 12px;width:100%}.city-selects select{max-width:130px;padding-right:2px}.city-clear{margin-left:auto}.city-pagination{gap:3px}.city-pagination>div{gap:1px}.city-pagination button{width:28px;height:31px;font-size:10px}.city-pagination .city-page-direction{padding:0 5px}.city-page-direction span{display:none}.city-detail-hero{position:relative;align-items:flex-start;gap:14px;padding:26px 0 23px}.city-detail-emblem{height:61px;width:50px;margin-top:8px}.city-detail-emblem svg{width:25px;height:25px}.city-detail-title{font-size:40px;margin:7px 0 11px}.city-detail-heading .city-eyebrow{font-size:7px!important;letter-spacing:1.4px}.city-detail-heading .city-badge{font-size:8px}.city-detail-stat{display:none}.city-description-panel{padding:20px}.city-description-panel>p{font-size:12px}.city-source{align-items:flex-start;flex-direction:column;gap:7px}.city-people-list{grid-template-columns:1fr}.city-people-panel{padding:21px}.city-index-note{text-align:left;line-height:1.9}.city-back{font-size:9px!important}}
 @media(prefers-reduced-motion:reduce){.city-card{transition:none}}
+
+/* Larger supporting text and controls without adding visual weight. */
+.city-eyebrow,.city-detail-heading .city-eyebrow{font-size:var(--ui-meta,12px)!important;letter-spacing:.8px;color:var(--ui-muted,#596650)!important}
+.city-intro>div>p:last-child,.city-description-panel>p,.city-empty p{font-size:var(--ui-body,15px);line-height:1.8;color:var(--ui-secondary,#495c43)}
+.city-index-count p{font-size:var(--ui-meta,12px)!important;line-height:1.6!important;color:var(--ui-muted,#596650)}
+.city-search input,.city-testaments button,.city-selects select{font-size:var(--ui-label,14px);min-height:44px;line-height:1.5}
+.city-search input::placeholder{color:var(--ui-muted,#596650)}
+.city-testaments{flex-wrap:wrap}
+.city-testaments button{white-space:normal}
+.city-results-bar>p,.city-selects label{font-size:var(--ui-small,13px);line-height:1.6;color:var(--ui-muted,#596650)}
+.city-selects{flex-wrap:wrap}
+.city-selects label{min-width:0;flex-wrap:wrap;gap:3px 7px}
+.city-selects select{max-width:100%}
+.city-clear,.city-primary,.city-back,.city-verse,.city-more,.city-people-panel .city-more{font-size:var(--ui-label,14px)!important;line-height:1.6;min-height:40px}
+.city-clear,.city-back,.city-verse,.city-more,.city-people-panel .city-more{color:var(--ui-secondary,#495c43)}
+.city-card-count,.city-card-alias,.city-badge,.city-detail-heading .city-badge,.city-detail-stat span,.city-source>span,.city-reference-group h3,.city-people-count{font-size:var(--ui-meta,12px);line-height:1.6;color:var(--ui-muted,#596650)}
+.city-card-alias{white-space:normal;overflow-wrap:anywhere}
+.city-card-description{font-size:var(--ui-small,13px);line-height:1.75;color:var(--ui-muted,#596650);display:block;-webkit-line-clamp:unset;overflow:visible}
+.city-badge{white-space:normal}
+.city-pagination{flex-wrap:wrap;gap:10px}
+.city-pagination>div{flex-wrap:wrap;justify-content:center}
+.city-pagination button,.city-pagination .city-page-direction,.city-page-gap{font-size:var(--ui-label,14px);color:var(--ui-secondary,#495c43)}
+.city-pagination button{width:40px;height:40px}
+.city-index-note,.city-aliases,.city-source a,.city-source strong,.city-section-heading>span,.city-section-note,.city-people-panel .city-section-note,.city-person-copy small,.city-person-identity,.city-no-matches,.city-description-panel>.city-place-note{font-size:var(--ui-small,13px);line-height:1.75;color:var(--ui-muted,#596650)}
+.city-section-heading h2,.city-person-copy strong{font-size:var(--ui-label,14px);line-height:1.6;color:var(--ui-secondary,#495c43)}
+.city-section-heading{flex-wrap:wrap;gap:5px 14px}
+.city-more{flex-wrap:wrap;gap:8px 12px}
+.city-more span{font-size:var(--ui-meta,12px);line-height:1.5;white-space:normal;color:var(--ui-muted,#596650)}
+@media(max-width:760px){
+  .city-search input,.city-selects select{font-size:16px}
+  .city-filter-bar{padding:14px}
+  .city-testaments{width:100%;gap:4px}
+  .city-testaments button{flex:1 0 auto;min-height:44px;padding:10px 12px}
+  .city-selects{gap:8px 14px}
+  .city-selects label{flex:1 1 145px}
+  .city-selects select{width:100%;min-width:0}
+  .city-clear{margin-left:0}
+  .city-clear,.city-primary,.city-back,.city-verse,.city-more,.city-people-panel .city-more{min-height:44px}
+  .city-pagination{justify-content:center;gap:8px}
+  .city-pagination button{width:44px;height:44px}
+  .city-pagination>div{gap:4px}
+  .city-source a{min-height:44px;align-items:center}
+  .city-detail-hero{flex-wrap:wrap}
+}

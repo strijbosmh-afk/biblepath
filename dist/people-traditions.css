@@ -6,3 +6,54 @@
 .catholic-context{margin:0 0 22px;padding:15px 18px;border-left:3px solid #9b9769;background:#f5f4e9;border-radius:0 8px 8px 0;font-size:12px;line-height:1.65;color:var(--muted)}.catholic-context p{margin:0 0 8px}.catholic-context p:last-child{margin-bottom:0}.catholic-context strong,.catholic-context summary{color:var(--ink);font-weight:600}.catholic-context summary,.comparison-method summary{cursor:pointer}.catholic-context details[open] summary{margin-bottom:8px}.catholic-context a,.comparison-method details a{color:#435c48;text-underline-offset:3px}.comparison-method details a{display:block;margin-top:8px}.comparison-account .collection-sources+h4{margin-top:18px}
 
 .catholic-profile-dialog{width:720px;max-width:calc(100vw - 30px);max-height:calc(100dvh - 30px);overflow:auto;overflow-wrap:anywhere}.catholic-profile-dialog h2{font-family:var(--serif);font-size:34px;margin:12px 0}.catholic-profile-passages{display:grid;gap:10px;margin:18px 0}.catholic-profile-passages>div{display:flex;gap:15px;align-items:center;justify-content:space-between;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:9px}.catholic-profile-passages a{font-size:11px;color:var(--muted)}.catholic-profile-passages .collection-reader-link{margin:0;padding:6px 0}.catholic-profile-dialog .collection-source-note{margin-top:22px}
+
+/* Readable reference text, shared with the readers and atlas controls. */
+.people-collection-tabs{flex-wrap:wrap}
+.people-collection-tabs button{min-width:0;flex:1 1 180px;font-size:var(--ui-label);line-height:1.5;min-height:44px}
+.people-collection-tabs button small{font-size:var(--ui-small);line-height:1.6;color:var(--ui-muted)}
+.collection-heading>div,.collection-list,.collection-profile,.comparison-picker{min-width:0}
+.collection-heading p,.collection-summary,.comparison-person-heading p,.comparison-role,.comparison-summary,.catholic-context{font-size:var(--ui-body);line-height:1.75;color:var(--ui-secondary)}
+.collection-kicker,.comparison-tradition{font-size:var(--ui-meta);line-height:1.6;letter-spacing:.8px;color:var(--ui-muted)}
+.collection-search{font-size:var(--ui-label);line-height:1.5;color:var(--ui-secondary)}
+.collection-search input,.comparison-picker .collection-search input{font-size:var(--ui-body);min-height:44px}
+.collection-list h3{font-size:var(--ui-body);line-height:1.5}
+.collection-results,.collection-pagination,.comparison-count,.bible-index-label{font-size:var(--ui-small);line-height:1.6;color:var(--ui-muted)}
+.collection-card strong,.comparison-figures button strong{font-size:var(--ui-body);line-height:1.45}
+.collection-card small,.comparison-figures button small{font-size:var(--ui-small);line-height:1.6;color:var(--ui-muted)}
+.collection-pagination{flex-wrap:wrap}
+.collection-pagination button{font-size:var(--ui-label);min-height:44px;padding:10px 6px}
+.collection-profile h3,.comparison-person-heading h2{overflow-wrap:anywhere}
+.collection-role-tags span{font-size:var(--ui-small);line-height:1.5;color:var(--ui-secondary)}
+.collection-primary,.collection-more,.collection-reader-link,.collection-sources a,.catholic-profile-passages a{font-size:var(--ui-label);line-height:1.6;min-height:44px;overflow-wrap:anywhere}
+.collection-sources a{align-items:center;color:var(--ui-secondary);max-width:100%}
+.collection-profile h4,.comparison-account h4,.comparison-method h3{font-size:var(--ui-small);line-height:1.6;letter-spacing:.4px;color:var(--ui-secondary)}
+.collection-profile h4 small{font-size:var(--ui-meta);color:var(--ui-muted)}
+.collection-source-note,.collection-provenance,.comparison-status,.comparison-scope,.comparison-method p,.catholic-profile-dialog .collection-source-note{font-size:var(--ui-small);line-height:1.75;color:var(--ui-muted)}
+.collection-provenance summary,.comparison-method summary,.catholic-context summary{font-size:var(--ui-label);line-height:1.6;min-height:44px;padding:10px 0}
+.collection-provenance a,.comparison-method details a{min-height:44px;padding:10px 0;overflow-wrap:anywhere}
+.collection-empty{font-size:var(--ui-body);line-height:1.75;color:var(--ui-muted)}
+.comparison-status{min-height:0}
+.comparison-figures button{min-width:0;overflow-wrap:anywhere}
+.comparison-tradition>span{flex-shrink:0}
+.catholic-profile-passages>div{gap:10px}
+.catholic-profile-passages .collection-reader-link{padding:10px 0}
+@media(max-width:1000px){
+  .collection-heading{display:block}
+  .collection-heading .collection-search{margin-top:20px;min-width:0}
+  .collection-workspace,.comparison-layout{grid-template-columns:minmax(0,1fr)}
+  .collection-profile,.comparison-picker{position:static;max-height:none}
+  .comparison-figures{flex-direction:row;max-height:none;overflow-x:auto;padding-bottom:8px}
+  .comparison-figures button{flex:0 0 180px}
+}
+@media(max-width:760px){
+  .collection-search input,.comparison-picker .collection-search input{font-size:16px}
+  .collection-list,.collection-profile{padding:20px 16px}
+  .comparison-account{padding:23px 18px}
+  .collection-pagination{gap:8px 14px}
+  .collection-sources{gap:9px}
+  .catholic-context{padding:16px}
+}
+@media(max-width:480px){
+  .collection-cards{grid-template-columns:minmax(0,1fr)}
+  .collection-card{padding:14px 12px}
+}

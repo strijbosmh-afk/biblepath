@@ -17,3 +17,49 @@
 @media(max-width:1100px){.atlas-map-workspace{grid-template-columns:minmax(0,1fr) 250px}.atlas-person-detail{padding:22px 18px}.atlas-person-detail .atlas-relations{display:block}.atlas-drag-hint{display:none}.atlas-graph-bottom{justify-content:flex-end}.atlas-map-toolbar{align-items:flex-start;flex-direction:column;gap:7px}.atlas-scope-label{display:flex;align-items:center;gap:8px}.atlas-graph-wrap{min-height:460px}}
 @media(max-width:760px){.atlas-map-workspace{display:block;min-height:0}.atlas-toolbar{gap:11px}.atlas-layout-picker{gap:6px;margin-bottom:13px}.atlas-layout-picker button{padding:11px 9px;font-size:11px;text-align:center}.atlas-map-toolbar{padding:13px 15px;flex-direction:row;align-items:center;gap:12px;flex-wrap:wrap}.atlas-map-toolbar h2{font-size:12px}.atlas-scope-label{display:grid;gap:3px}.atlas-graph-wrap{height:430px;min-height:430px}.atlas-graph-bottom{bottom:13px;left:13px;right:13px}.atlas-zoom-controls button{min-width:34px;width:34px;min-height:32px}.atlas-map-guide,.atlas-family-people{padding:13px 16px}.atlas-person-detail{border-left:0;border-top:1px solid var(--line);max-height:none;padding:25px 22px}.atlas-profile-hero{margin-top:17px}.atlas-person-detail h2{font-size:31px}.atlas-person-detail .atlas-relations{display:block}.atlas-person-detail .atlas-source button{min-height:40px}.atlas-person-detail .atlas-linked-people button{min-height:38px}.atlas-relation>summary{min-height:34px;align-items:center;font-size:11px}.atlas-relation>summary .atlas-relation-kind{font-size:10px}}
 @media(max-width:760px){.atlas-layout-picker{flex-wrap:wrap}.atlas-layout-picker button{flex:1 0 auto;min-height:44px}}
+
+/* A consistent reading size for family evidence and place profiles. */
+.atlas-introduction p,.atlas-family-heading p,.atlas-detail>p,.atlas-person-detail>p,.atlas-relation>p,.atlas-location p,.atlas-place-detail .atlas-place-summary{font-size:var(--ui-body,15px);line-height:1.8;color:var(--ui-secondary,#495c43)}
+.atlas-toolbar label,.atlas-scope-label{font-size:var(--ui-label,14px);line-height:1.5;color:var(--ui-secondary,#495c43)}
+.atlas-toolbar input,.atlas-toolbar select,.atlas-scope-label select{font-size:var(--ui-label,14px);min-height:44px;line-height:1.5}
+.atlas-scope-label{flex-shrink:1;min-width:0}
+.atlas-scope-label select{max-width:100%;padding:6px 0}
+.atlas-layout-picker{flex-wrap:wrap}
+.atlas-layout-picker button{flex:1 0 auto;max-width:100%;font-size:var(--ui-label,14px);line-height:1.5;min-height:44px;color:var(--ui-secondary,#495c43)}
+.atlas-map-toolbar{height:auto;flex-wrap:wrap;gap:12px}
+.atlas-map-toolbar>div{min-width:0}
+.atlas-map-toolbar h2{font-size:var(--ui-label,14px);line-height:1.5}
+.atlas-map-count,.atlas-place-count,.atlas-person-results>p,.atlas-person-results>div>p{font-size:var(--ui-small,13px);line-height:1.6;color:var(--ui-muted,#596650)}
+.atlas-drag-hint{font-size:var(--ui-meta,12px);line-height:1.6;color:var(--ui-muted,#596650)}
+.atlas-zoom-controls{height:42px;flex-shrink:0}
+.atlas-zoom-controls button{width:40px;min-width:40px;height:40px;min-height:40px;color:var(--ui-secondary,#495c43)}
+.atlas-zoom-value{font-size:var(--ui-meta,12px);line-height:40px;min-width:43px;color:var(--ui-secondary,#495c43)}
+.atlas-map-guide,.atlas-family-people,.atlas-map-guide .atlas-legend,.atlas-map-guide .atlas-map-help{font-size:var(--ui-small,13px);line-height:1.75;color:var(--ui-muted,#596650)}
+.atlas-family-people button,.atlas-person-results button,.atlas-linked-people button,.atlas-person-detail .atlas-linked-people button,.atlas-focus-person,.atlas-person-detail .atlas-primary,.atlas-primary,.atlas-relation>button{font-size:var(--ui-label,14px);line-height:1.5;min-height:40px}
+.atlas-focus-person,.atlas-person-detail .atlas-primary,.atlas-relation>button,.atlas-person-detail .atlas-linked-people button{color:var(--ui-secondary,#495c43)}
+.atlas-person-detail .library-kicker,.atlas-source-kind,.atlas-relation .atlas-source-kind,.atlas-person-detail .atlas-source-kind,.atlas-place-card>span{font-size:var(--ui-meta,12px);line-height:1.5;letter-spacing:.6px;color:var(--ui-muted,#596650)}
+.atlas-detail .atlas-aliases,.atlas-person-detail .atlas-aliases,.atlas-detail .atlas-association-note{font-size:var(--ui-small,13px);line-height:1.75;color:var(--ui-muted,#596650)}
+.atlas-person-detail h3{font-size:var(--ui-meta,12px);line-height:1.6;letter-spacing:.5px;color:var(--ui-secondary,#495c43)}
+.atlas-relation>summary{font-size:var(--ui-label,14px);line-height:1.6;flex-wrap:wrap;gap:5px 10px;min-height:40px}
+.atlas-relation>summary .atlas-relation-kind{font-size:var(--ui-small,13px);line-height:1.6;max-width:none;color:var(--ui-muted,#596650)}
+.atlas-relation-title,.atlas-source strong,.atlas-relation .atlas-source strong,.atlas-person-detail .atlas-source strong{font-size:var(--ui-label,14px);line-height:1.65}
+.atlas-source button,.atlas-source a,.atlas-person-detail .atlas-source button,.atlas-person-detail .atlas-source a{font-size:var(--ui-small,13px);line-height:1.6;color:var(--ui-secondary,#495c43);max-width:100%;overflow-wrap:anywhere}
+.atlas-profile-sources>summary{font-size:var(--ui-small,13px);line-height:1.6;color:var(--ui-secondary,#495c43)}
+.atlas-profile-sources>summary>span{font-size:var(--ui-meta,12px);color:var(--ui-muted,#596650)}
+.atlas-place-card>small{font-family:var(--sans);font-size:var(--ui-small,13px);line-height:1.75;color:var(--ui-muted,#596650)}
+.atlas-empty{font-size:var(--ui-body,15px);line-height:1.75;color:var(--ui-muted,#596650)}
+@media(max-width:760px){
+  .atlas-toolbar input,.atlas-toolbar select,.atlas-scope-label select{font-size:16px}
+  .atlas-map-toolbar{align-items:flex-start}
+  .atlas-map-toolbar h2{font-size:var(--ui-label,14px)}
+  .atlas-map-toolbar .atlas-scope-label{width:100%;display:flex;align-items:center;flex-wrap:wrap;gap:5px 14px}
+  .atlas-scope-label select{flex:1;min-width:145px}
+  .atlas-family-people button,.atlas-person-results button,.atlas-linked-people button,.atlas-person-detail .atlas-linked-people button,.atlas-focus-person,.atlas-primary,.atlas-person-detail .atlas-primary,.atlas-relation>button,.atlas-source button,.atlas-person-detail .atlas-source button{min-height:44px}
+  .atlas-map-guide>summary,.atlas-family-people>summary,.atlas-profile-sources>summary,.atlas-relation>summary{min-height:44px;padding:10px 0}
+  .atlas-source a{display:inline-flex;align-items:center;min-height:44px}
+  .atlas-zoom-controls{height:46px}
+  .atlas-zoom-controls button{width:44px;min-width:44px;height:44px;min-height:44px}
+  .atlas-zoom-value{line-height:44px}
+  .atlas-place-card{flex-basis:min(280px,85vw)}
+  .atlas-place-card>small{display:block;-webkit-line-clamp:unset;overflow:visible}
+}

@@ -38,3 +38,57 @@
 /* ReligieAtlas identity: the full subtitle remains readable in the sidebar. */
 .brand{font-size:22px;letter-spacing:-.8px;gap:8px;margin-left:0;margin-right:0}.brand-copy{min-width:0}.brand-name{display:block;white-space:nowrap}.brand small{font-size:8px;line-height:1.55;letter-spacing:.1px;font-weight:450;max-width:148px;color:#62715f}.brand-mark{flex:none}
 @media(max-width:1000px){.brand{font-size:19px;gap:7px}.brand small{font-size:7px;max-width:117px}}
+
+/* Shared reading scale: secondary information remains quiet, but legible. */
+:root{--ui-body:15px;--ui-label:14px;--ui-small:13px;--ui-meta:12px;--ui-muted:#596650;--ui-secondary:#495c43;--muted:var(--ui-muted)}
+body{font-size:var(--ui-body);line-height:1.6}
+.sidebar{width:264px;padding:28px 18px 20px}main{margin-left:264px;min-width:0}
+.brand{font-size:23px}.brand small{font-size:var(--ui-meta);line-height:1.5;max-width:178px;color:var(--ui-muted)}
+.nav-label,.eyebrow,.profile-topline,.profile-section h3,.search-heading,.path-person-field>span,.path-endpoint>span{font-size:var(--ui-meta);letter-spacing:1px;color:var(--ui-muted);line-height:1.6}
+.search-trigger,.nav-item,.testament,.comparison-nav,.religion-submenu .nav-item,.journey,.religion-button strong{font-size:var(--ui-label);line-height:1.5;color:var(--ui-secondary)}
+.nav-item,.religion-submenu .nav-item,.religion-button,.search-trigger,.testament,.journey,.about-button{min-height:44px}
+.religion-submenu{margin-left:8px;padding-left:7px}.religion-submenu .nav-item{padding:10px 8px}
+.religion-button small,.journey small,.edition,.edition small,.about-button,.nav-count,.religion-submenu .nav-count,.filter-count,.filter-scope{font-size:var(--ui-meta);line-height:1.6;color:var(--ui-muted)}
+.topbar{gap:16px}.breadcrumb,.help-button,.language-picker,.language-picker select,.topbar .breadcrumb strong,.breadcrumb #religion-crumb{font-size:var(--ui-small);color:var(--ui-muted)}
+.breadcrumb strong,.language-picker select{color:var(--ink)}.language-picker select{min-height:40px;max-width:150px}.help-button{min-height:40px}
+.intro p,.profile-description,.person-tooltip p,.index-intro,.info-dialog p,.info-dialog li,.info-dialog .info-fact,.path-explanation,.map-empty p{font-size:var(--ui-body);line-height:1.75;color:var(--ui-secondary)}
+.intro-note,.intro-note small,.layout-copy small,.profile-hero .era,.profile-alias,.profile-note,.profile-identity,.profile-source,.reference-caveat,.reference-provenance,.relationship-sources,.relationship-sources small,.tooltip-hint,.filter-scope{font-size:var(--ui-small);line-height:1.65;color:var(--ui-muted)}
+.intro-note{white-space:normal;max-width:260px}.layout-copy strong{font-size:var(--ui-label);line-height:1.5}.layout-number{font-size:var(--ui-meta)}
+.layout-picker{flex-wrap:wrap}.layout-option{flex:1 1 200px}.layout-illustration{flex-shrink:0}
+.map-title{font-size:var(--ui-label);line-height:1.5;white-space:normal}.map-count,.depth-label,.map-actions .depth-label,.depth-label select{font-size:var(--ui-meta);color:var(--ui-muted)}
+.map-toolbar{height:auto;min-height:64px;flex-shrink:0;flex-wrap:wrap;padding:12px 16px;gap:10px}.map-actions{flex-wrap:wrap;gap:8px}.depth-label select{font-size:var(--ui-small);max-width:180px;min-height:40px}
+.map-caption,.map-caption small{font-size:var(--ui-meta);letter-spacing:.4px;color:var(--ui-muted)}
+.discovery-bar{flex-shrink:0;flex-wrap:wrap}.discovery-mode,.discovery-mode strong,.discovery-mode>span,.discovery-level{font-size:var(--ui-meta);line-height:1.6;color:var(--ui-muted)}
+.discovery-mode>span{max-width:none}.discovery-level{white-space:normal}
+.graph-legend{font-size:var(--ui-meta);line-height:1.6;color:var(--ui-muted);max-width:100%}.graph-legend input{width:16px;height:16px}.graph-bottom{flex-wrap:wrap-reverse;gap:10px}
+.zoom-controls{height:42px;margin-left:auto}.zoom-controls button{width:40px;height:40px}.zoom-controls output{font-size:var(--ui-meta);min-width:44px;color:var(--ui-secondary)}
+.map-footer{font-size:var(--ui-meta);line-height:1.6;padding:10px 14px;flex-shrink:0;flex-wrap:wrap;color:var(--ui-muted)}.map-footer>span,.map-footer button{font-size:var(--ui-meta);color:var(--ui-muted)}.map-footer button{white-space:normal;min-height:36px;text-align:left}
+.workbench{height:clamp(690px,80dvh,900px);min-height:690px}.graph-area{min-height:360px}.inspector{padding:24px 20px}
+.profile-tags span,.reference-count{font-size:var(--ui-meta);color:var(--ui-muted)}.profile-section h3{flex-wrap:wrap}
+.reference-link,.focus-button,.family-row,.family-names button,.more-references,.person-tooltip a,.solid-button,.profile-path-actions button{font-size:var(--ui-label);line-height:1.6}
+.family-label{font-size:var(--ui-small);color:var(--ui-muted);min-width:65px}.family-names button{padding:7px 9px;color:var(--ui-secondary)}
+.focus-button,.reference-link,.profile-path-actions button{min-height:44px}.profile-note{padding:13px}.reference-provenance{white-space:normal}
+.page-footer,.page-footer>span,.page-footer button{font-size:var(--ui-meta);line-height:1.6;color:var(--ui-muted)}.page-footer{flex-wrap:wrap;gap:12px;padding:20px 0}.page-footer button{min-height:44px}
+.index-search input,.dialog-searchbar input{font-size:var(--ui-body);min-height:44px}.index-result-count,.index-pagination,.index-pagination button{font-size:var(--ui-small);color:var(--ui-muted)}
+.index-pagination{flex-wrap:wrap;gap:12px}.index-pagination button{min-height:44px}.person-card strong,.search-result strong{font-size:var(--ui-body);line-height:1.5}.person-card small,.search-result small{font-size:var(--ui-small);line-height:1.65;color:var(--ui-muted)}
+.search-footer,.search-footer kbd,.search-empty,.index-empty,.toast{font-size:var(--ui-small);line-height:1.6}.info-dialog h3{font-size:17px}.person-tooltip{max-width:calc(100vw - 24px)}
+.path-finder-heading p,.path-person-copy small,.path-options,.path-options>span,.path-status,.path-result-actions button,.path-important,.path-source-explanation,.path-reading-hint,.path-step-note,.path-indexed-badge,.path-notes,.back-to-path{font-size:var(--ui-small);line-height:1.7;color:var(--ui-muted)}
+.path-person-copy strong,.path-find-button,.path-endpoint button,.path-step-person,.path-step-source{font-size:var(--ui-label);line-height:1.6}.path-person-copy small{white-space:normal;overflow:visible;text-overflow:clip}.path-summary-tags span,.path-step-number{font-size:var(--ui-meta)}
+.path-options input{width:18px;height:18px;flex-shrink:0}.path-options label{min-height:44px}.path-result-actions{flex-wrap:wrap;gap:10px 18px}.path-result-actions button,.path-step-person,.path-endpoint button{min-height:40px}
+@media(min-width:761px) and (max-width:1250px){.sidebar{width:240px}main{margin-left:240px}.brand{font-size:22px}.brand small{max-width:155px}.religion-submenu .nav-item{font-size:var(--ui-label)}.workbench{grid-template-columns:minmax(0,1fr) 260px}}
+@media(min-width:761px) and (max-width:1000px){.workbench{height:auto;display:block}.map-pane{height:700px}.inspector{max-height:none;border-left:0;border-top:1px solid var(--line)}}
+@media(max-width:760px){
+  :root{--ui-body:16px;--ui-small:14px}
+  .sidebar{width:min(300px,calc(100vw - 24px));padding:24px 18px}.brand{font-size:23px}.brand small{max-width:185px}main{margin-left:0}
+  .topbar{min-height:64px;height:auto;padding:8px 12px;gap:8px}.topbar-tools{gap:4px}.topbar .breadcrumb{max-width:none;flex:1;gap:6px}.breadcrumb #religion-crumb,.topbar .breadcrumb strong{font-size:var(--ui-meta)}.breadcrumb #religion-crumb{max-width:90px}
+  .language-picker select{font-size:16px;max-width:130px;min-height:44px}.help-button,.mobile-menu{width:44px;height:44px;min-width:44px;justify-content:center}
+  .intro p{max-width:none}.intro-note{display:none}.layout-option{flex-basis:145px;padding:15px 12px}.layout-copy strong{font-size:var(--ui-label)}.layout-copy small{font-size:var(--ui-small)}
+  .workbench{height:auto;min-height:0}.map-pane{height:730px}.graph-area{min-height:420px}.map-title{font-size:var(--ui-label)}.map-actions{gap:8px}.depth-label select{font-size:16px;min-height:44px;max-width:190px}
+  .icon-button,.zoom-controls button{min-width:44px;width:44px;height:44px}.zoom-controls{height:46px}.map-caption{display:none}.map-footer{font-size:var(--ui-meta)}.map-footer button{min-height:44px}
+  .graph-legend{font-size:var(--ui-meta)}.graph-legend label{min-height:28px}.graph-bottom{left:13px;right:13px}.discovery-mode>span{font-size:var(--ui-meta)}
+  .profile-description,.profile-identity,.index-intro{font-size:var(--ui-body)}.family-names button,.focus-button,.profile-path-actions button,.more-references{min-height:44px}.family-row{flex-wrap:wrap;gap:4px}.family-names{justify-content:flex-start}
+  .index-search input,.dialog-searchbar input{font-size:16px}.dialog-searchbar{gap:10px}.search-footer{flex-wrap:wrap}.info-dialog p,.info-dialog li{font-size:var(--ui-body)}
+  .path-form{grid-template-columns:minmax(0,1fr) 44px minmax(0,1fr)}.path-person-copy strong{font-size:var(--ui-label)}.path-person-copy small{font-size:var(--ui-small)}.path-person-picker{padding:10px}.path-swap{min-width:44px}.path-options>span{font-size:var(--ui-small)}
+  .path-explanation{font-size:var(--ui-body)}.path-step-person,.path-step-source{font-size:var(--ui-label)}.path-result-actions button,.path-step-person,.path-endpoint button,.back-to-path{min-height:44px}
+}
+@media(max-width:380px){.topbar{flex-wrap:wrap}.topbar .breadcrumb{flex-basis:100%}.topbar-tools{margin-left:auto}.path-form{grid-template-columns:1fr}.path-swap{height:44px}.path-find-button{grid-column:auto}.layout-option{flex-basis:100%;flex-direction:row;justify-content:flex-start;gap:14px}.layout-copy{text-align:left}}

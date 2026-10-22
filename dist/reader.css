@@ -10,3 +10,72 @@
 
 /* Person references retain their source alongside the Dutch reading action. */
 .person-reference-row{margin-top:8px}.person-reference-row .reference-link{width:100%;text-align:left;font-family:inherit;cursor:pointer}.person-reference-source{display:inline-block;margin:4px 2px;font-size:10px;color:var(--muted);text-underline-offset:3px}.person-passage-notice strong{display:block;margin-bottom:5px}.person-passage-notice a{color:inherit;overflow-wrap:anywhere}.person-passage-targets{display:flex;flex-wrap:wrap;gap:8px 15px}.person-passage-targets button[aria-current]{font-weight:700;text-decoration-thickness:2px}.person-passage-notice{overflow-wrap:anywhere}
+
+/* A readable information source, including small-screen controls and notes. */
+.library-kicker{font-size:var(--ui-meta,12px);letter-spacing:1px;color:var(--ui-muted,#596650);line-height:1.6}
+.reader-topline{align-items:flex-start;flex-wrap:wrap}
+.reader-edition{font-size:var(--ui-label,14px);color:var(--ui-secondary,#495c43);min-width:0}
+.reader-edition small{font-size:var(--ui-small,13px);color:var(--ui-muted,#596650);line-height:1.65;max-width:340px}
+.reader-edition-picker{font-size:var(--ui-label,14px);min-width:0}
+.reader-edition-picker select{font-size:var(--ui-label,14px);min-height:42px;width:100%;min-width:0}
+.reader-search{flex-wrap:wrap;align-items:stretch}
+.reader-query-label{flex:1 1 220px;min-width:0}
+.reader-search input,.reader-search select,.reader-search>button{font-size:var(--ui-label,14px);min-height:44px;height:auto;line-height:1.5}
+.reader-search input,.reader-search select{color:var(--ui-secondary,#495c43)}
+.reader-search input::placeholder{color:var(--ui-muted,#596650);opacity:1}
+.reader-books-heading{font-size:var(--ui-meta,12px);letter-spacing:.8px;color:var(--ui-muted,#596650);gap:8px;line-height:1.5}
+.reader-book-list summary,.reader-book-list button{font-size:var(--ui-label,14px);line-height:1.5;color:var(--ui-secondary,#495c43)}
+.reader-book-list button{gap:8px;min-height:40px;overflow-wrap:anywhere}
+.reader-book-list button span{font-size:var(--ui-meta,12px);color:var(--ui-muted,#596650);flex:none}
+.reader-navigation{flex-wrap:wrap;gap:12px}
+.reader-navigation label{font-size:var(--ui-meta,12px);letter-spacing:.5px;color:var(--ui-muted,#596650);min-width:0}
+.reader-navigation select{font-size:var(--ui-label,14px);color:var(--ui-secondary,#495c43);min-height:40px;min-width:0}
+.reader-chapter-arrows button{width:40px;height:40px;color:var(--ui-secondary,#495c43);font-size:18px}
+.reader-link-legend{font-size:var(--ui-small,13px);line-height:1.6;color:var(--ui-muted,#596650);gap:10px 16px}
+.reader-link-legend label{color:var(--ui-secondary,#495c43);min-height:36px;gap:8px}
+.reader-link-legend input{width:18px;height:18px;margin:0}
+.reader-name-hint{font-size:var(--ui-small,13px);line-height:1.75;color:var(--ui-muted,#596650);max-width:680px;padding-bottom:20px}
+.reader-verse{grid-template-columns:30px minmax(0,1fr);gap:8px}
+.verse-number{font-size:var(--ui-meta,12px);line-height:1.6;color:var(--ui-muted,#596650);padding-top:7px}
+.verse-text{font-size:18px;line-height:1.85}
+.reader-superscription{font-size:16px;color:var(--ui-muted,#596650)}
+.verse-notes,.reader-versification-note{font-size:var(--ui-small,13px);line-height:1.75;color:var(--ui-muted,#596650)}
+.verse-notes summary{color:#6a5a35;padding:6px 0}
+.reader-versification-note summary{padding:8px 0;color:var(--ui-secondary,#495c43)}
+.verse-variant-placeholder{font-size:16px;color:var(--ui-muted,#596650)}
+.reader-bottom-nav{flex-wrap:wrap;font-size:var(--ui-small,13px);color:var(--ui-muted,#596650)}
+.reader-bottom-nav button{font-size:var(--ui-label,14px);line-height:1.5;color:var(--ui-secondary,#495c43);min-height:40px;text-align:left}
+.reader-credit{font-size:var(--ui-small,13px);line-height:1.75;color:var(--ui-muted,#596650);overflow-wrap:anywhere}
+.reader-credit a{color:var(--ui-secondary,#495c43);text-underline-offset:3px}
+.reader-search-heading p{font-size:var(--ui-small,13px);color:var(--ui-muted,#596650)}
+.reader-search-heading>button{font-size:var(--ui-label,14px);color:var(--ui-secondary,#495c43);white-space:normal}
+.reader-search-result strong{font-size:var(--ui-label,14px);color:var(--ui-secondary,#495c43)}
+.reader-search-result>span{font-size:18px;color:#43513b}
+.reader-search-result small{font-size:var(--ui-small,13px);color:var(--ui-muted,#596650)}
+.reader-results-pagination{font-size:var(--ui-small,13px);color:var(--ui-muted,#596650);flex-wrap:wrap;gap:12px}
+.reader-results-pagination button{font-size:var(--ui-label,14px);color:var(--ui-secondary,#495c43);min-height:40px}
+.reader-entity-dialog p{font-size:var(--ui-body,15px);color:var(--ui-secondary,#495c43)}
+.reader-dialog-close{width:44px;height:44px;color:var(--ui-secondary,#495c43)}
+.entity-kind{font-size:var(--ui-meta,12px);letter-spacing:.8px;color:var(--ui-muted,#596650)}
+.reader-entity-choices strong{font-size:var(--ui-body,15px)}
+.reader-entity-choices small{font-size:var(--ui-small,13px);color:var(--ui-muted,#596650)}
+.library-empty,.library-loading{font-size:var(--ui-body,15px);color:var(--ui-muted,#596650)}
+.reader-return-shortcut{font-size:var(--ui-label,14px);color:var(--ui-secondary,#495c43);line-height:1.6;min-height:40px;align-items:center}
+.reader-edition-notice{font-size:var(--ui-small,13px)}
+.reader-catholic-links button{font-size:var(--ui-label,14px);min-height:40px;line-height:1.5;text-align:left}
+.person-reference-source{font-size:var(--ui-small,13px);color:var(--ui-muted,#596650);line-height:1.7}
+@media(max-width:760px){
+  .reader-topline{gap:18px}.reader-edition{width:100%;text-align:left}.reader-edition-picker,.reader-edition small{max-width:100%}
+  .reader-search input,.reader-search select,.reader-navigation select,.reader-edition-picker select{font-size:16px;min-height:44px}
+  .reader-query-label{flex-basis:100%}
+  .reader-search select{flex:1 1 140px;max-width:100%;min-width:0}
+  .reader-search>button{flex:1 1 auto}
+  .reader-navigation{gap:10px}.reader-navigation label:first-child{flex:1 1 145px}.reader-navigation label:first-child select{width:100%;max-width:100%}
+  .reader-chapter-arrows{gap:6px}.reader-chapter-arrows button{width:44px;height:44px}
+  .reader-link-legend label{min-height:44px}.reader-verses{padding-left:16px;padding-right:16px}
+  .reader-verse{grid-template-columns:28px minmax(0,1fr);gap:7px}
+  .reader-bottom-nav button,.reader-results-pagination button,.reader-catholic-links button,.reader-return-shortcut,.reader-search-heading>button{min-height:44px}
+  .reader-edition-notice button,.person-reference-source{display:inline-flex;align-items:center;min-height:44px}
+  .reader-versification-note summary,.verse-notes summary{min-height:44px;padding-top:10px;padding-bottom:10px}
+  .reader-name-hint{padding-left:19px;padding-right:19px}.reader-versification-note{width:calc(100% - 38px)}
+}

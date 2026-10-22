@@ -2,3 +2,33 @@
 @media(min-width:1450px){.festival-sections{grid-template-columns:1fr 1fr;gap:28px}.festival-detail{padding:38px}.festival-workspace{gap:36px}}
 @media(max-width:1100px){.festival-toolbar{align-items:start;flex-direction:column;gap:15px}.festival-toolbar label{width:100%;max-width:none}.festival-workspace{grid-template-columns:minmax(190px,240px) minmax(0,1fr);gap:18px}.festival-detail{padding:24px}.festival-card{padding:15px 25px 15px 14px}.festival-card strong{font-size:19px}}
 @media(max-width:760px){.festival-workspace{display:block}.festival-list{margin-bottom:20px}.festival-cards{display:flex;overflow-x:auto;padding:3px 3px 12px;scroll-snap-type:x proximity}.festival-card{flex:0 0 225px;scroll-snap-align:start}.festival-card-summary{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.festival-detail{padding:23px 18px}.festival-detail h2{font-size:32px}.festival-detail h3{font-size:21px}.festival-calendar{padding:18px}.festival-filters button{padding:10px 11px}.festival-introduction p{font-size:13px}.festival-reference:target{outline-offset:3px}}
+
+/* Larger type and comfortable controls retain the quiet reference layout. */
+.festival-introduction p,.festival-detail p,.festival-detail-heading>p,.festival-empty{font-size:var(--ui-body);line-height:1.8;color:var(--ui-secondary)}
+.festival-toolbar label{font-size:var(--ui-label);line-height:1.5;color:var(--ui-secondary);min-width:0}
+.festival-toolbar input{font-size:var(--ui-body);min-height:44px}
+.festival-filters button,.festival-source-actions button,.festival-source-actions a{font-size:var(--ui-label);line-height:1.5;min-height:44px}
+.festival-filters button{padding:10px 14px}
+.festival-kind,.festival-source-kind{font-size:var(--ui-meta);line-height:1.6;letter-spacing:.8px;color:var(--ui-muted)}
+.festival-count,.festival-card-summary,.festival-calendar small,.festival-reference p{font-size:var(--ui-small);line-height:1.7;color:var(--ui-muted)}
+.festival-list,.festival-card{min-width:0}
+.festival-card strong{line-height:1.35;overflow-wrap:anywhere}
+.festival-citations a{font-family:var(--sans);font-size:var(--ui-small);line-height:1.5;min-width:28px;padding:5px 4px}
+.festival-reference h4{font-size:var(--ui-body);line-height:1.6}
+.festival-source-actions{gap:10px 16px}
+.festival-source-actions button{font-family:var(--sans);max-width:100%;overflow-wrap:anywhere}
+.festival-source-actions a{display:inline-flex;align-items:center;max-width:100%;overflow-wrap:anywhere;color:var(--ui-secondary)}
+@media(max-width:1000px){
+  .festival-workspace{grid-template-columns:minmax(0,1fr)}
+  .festival-list{margin-bottom:10px}
+  .festival-cards{display:flex;overflow-x:auto;padding:3px 3px 12px;scroll-snap-type:x proximity}
+  .festival-card{flex:0 0 250px;max-width:100%;scroll-snap-align:start}
+}
+@media(max-width:760px){
+  .festival-toolbar input{font-size:16px}
+  .festival-filters button{flex:1 0 auto}
+  .festival-card-summary{display:block;-webkit-line-clamp:unset;overflow:visible}
+  .festival-citations a{min-width:36px;min-height:44px;padding:10px 5px;vertical-align:middle}
+  .festival-detail{padding:24px 18px}
+  .festival-calendar{padding:18px 15px}
+}
