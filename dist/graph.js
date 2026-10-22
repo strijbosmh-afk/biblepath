@@ -10,6 +10,7 @@
   };
   const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
   const hash = (value) => [...String(value)].reduce((result, char) => (result * 31 + char.charCodeAt(0)) >>> 0, 7);
+  const edgeKey = relation => relation.type === 'spouse' ? `spouse:${[relation.source,relation.target].sort().join(':')}` : `${relation.type}:${relation.source}:${relation.target}`;
   const segmentDistance = (point, a, b) => {
     const dx = b.x - a.x, dy = b.y - a.y;
     const t = clamp(((point.x - a.x) * dx + (point.y - a.y) * dy) / (dx * dx + dy * dy || 1), 0, 1);
@@ -48,6 +49,10 @@
       this.layout = 'constellation';
       this.focusId = null;
       this.selectedId = null;
+      this.highlightPath = null;
+      this.pathPersonIds = new Set();
+      this.pathEdgeKeys = new Set();
+      this.pathLayout = false;
       this.radius = 31;
       this.minimumSpacing = 126;
       this.positionCache = new Map();
@@ -59,7 +64,7 @@
       this.id = `bible-graph-${++nextGraphId}`;
       this.svg = el('svg', {class: 'bible-graph', role: 'group', 'aria-label': 'Interactive biblical family map. Drag to pan, scroll or pinch to zoom. Use arrow keys to pan and plus or minus to zoom.', tabindex: '0', width: '100%', height: '100%'});
       Object.assign(this.svg.style, {display: 'block', width: '100%', height: '100%', touchAction: 'none', userSelect: 'none', cursor: 'grab', overflow: 'hidden'});
-      this.svg.innerHTML = `<defs><marker id="${this.id}-arrow" markerWidth="7" markerHeight="7" refX="6.2" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L6 3.5 L1 6" fill="none" stroke="#99aa8c" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>`;
+      this.svg.innerHTML = `<defs><marker id="${this.id}-arrow" markerWidth="7" markerHeight="7" refX="6.2" refY="3.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L6 3.5 L1 6" fill="none" stroke="#99aa8c" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></marker><marker id="${this.id}-path-arrow" markerWidth="9" markerHeight="9" refX="7.2" refY="4.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1.5 1.5 L7 4.5 L1.5 7.5" fill="none" stroke="#a37622" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>`;
       this.viewport = el('g', {class: 'graph-viewport'});
       this.guides = el('g', {class: 'graph-guides', 'aria-hidden': 'true'});
       this.edgeLayer = el('g', {class: 'graph-edges', 'aria-hidden': 'true'});
@@ -182,7 +187,8 @@
       this.measure();
       const oldPositions = this.positions, oldLayout = this.layout;
       const oldTransform = {...this.transform};
-      const preserve = options.preserveView && oldLayout === (options.layout || oldLayout) && oldPositions.size > 0;
+      const samePath=(options.highlightPath?.personIds||[]).join('|')===(this.highlightPath?.personIds||[]).join('|');
+      const preserve = options.preserveView && oldLayout === (options.layout || oldLayout) && oldPositions.size > 0 && samePath;
       this.preserveLayout = preserve;
       if (!preserve) {this.positionCache.clear();this.routeCache.clear();}
       this.people = people.slice();
@@ -197,13 +203,15 @@
       this.layout = ['constellation', 'lineage', 'radial'].includes(options.layout) ? options.layout : this.layout;
       this.focusId = ids.has(options.focusId) ? options.focusId : ids.has(this.focusId) ? this.focusId : people[0]?.id;
       this.selectedId = ids.has(options.selectedId) ? options.selectedId : preserve && ids.has(this.selectedId) ? this.selectedId : this.focusId;
+      this.storeHighlightedPath(options.highlightPath);
       this.adjacency = new Map(people.map(person => [person.id, []]));
       this.relationships.forEach(relation => {
         this.adjacency.get(relation.source).push(relation.target);
         this.adjacency.get(relation.target).push(relation.source);
       });
       const base = this.lineagePositions();
-      this.positions = this.layout === 'radial' ? this.radialPositions(base) : this.layout === 'constellation' ? this.constellationPositions(base) : base;
+      this.pathLayout=this.layout==='constellation'&&this.pathPersonIds.size>0;
+      this.positions = this.pathLayout ? this.pathPositions() : this.layout === 'radial' ? this.radialPositions(base) : this.layout === 'constellation' ? this.constellationPositions(base) : base;
       if (preserve) {
         const anchorId = ids.has(options.anchorId) ? options.anchorId : this.focusId;
         const priorAnchor = oldPositions.get(anchorId) || this.positionCache.get(anchorId);
@@ -225,6 +233,63 @@
       this.draw();
       if (preserve) {this.transform = oldTransform;this.fittedScale = null;this.applyTransform({reason:'data'});}
       else this.fit('data');
+    }
+
+    storeHighlightedPath(path) {
+      const availableIds=new Set(this.people.map(person=>person.id));
+      const ordered=[...new Set(Array.isArray(path?.personIds)?path.personIds:[])].filter(id=>availableIds.has(id));
+      const orderedSet=new Set(ordered);
+      const suppliedEdges=new Set((Array.isArray(path?.relationships)?path.relationships:[]).map(edgeKey));
+      const edges=this.relationships.filter(relation=>suppliedEdges.has(edgeKey(relation))&&orderedSet.has(relation.source)&&orderedSet.has(relation.target));
+      this.highlightPath=ordered.length?{personIds:ordered,relationships:edges.map(relation=>({...relation})),startId:ordered[0],endId:ordered.at(-1)}:null;
+      this.pathPersonIds=orderedSet;
+      this.pathEdgeKeys=new Set(edges.map(edgeKey));
+    }
+
+    setHighlightedPath(path) {
+      this.storeHighlightedPath(path);
+      this.highlight(this.hoverId||null);
+    }
+
+    pathPositions() {
+      const pathIds=this.highlightPath.personIds,count=pathIds.length;
+      const width=this.isMeasurable?this.width:this.lastVisibleWidth||680;
+      const height=this.isMeasurable?this.height:this.lastVisibleHeight||420;
+      const aspect=clamp(width/Math.max(1,height),1,2.3);
+      const columns=Math.min(count,Math.max(2,Math.ceil(Math.sqrt(count*aspect))));
+      const rows=Math.ceil(count/columns),spacing=144;
+      const offsetX=(columns-1)*spacing/2,offsetY=(rows-1)*spacing/2;
+      const result=new Map();
+      pathIds.forEach((id,index)=>{
+        const row=Math.floor(index/columns),inRow=index%columns;
+        const column=row%2?columns-1-inRow:inRow;
+        result.set(id,{x:column*spacing-offsetX,y:row*spacing-offsetY,rank:index,pathIndex:index});
+      });
+      const context=this.people.filter(person=>!this.pathPersonIds.has(person.id));
+      const candidates=[];
+      // Context sits outside the route's lanes, so its circles cannot obscure the sequence.
+      for(let layer=1;candidates.length<context.length*3+8;layer++){
+        for(let column=-layer;column<columns+layer;column++){
+          candidates.push({x:column*spacing-offsetX,y:-layer*spacing-offsetY});
+          candidates.push({x:column*spacing-offsetX,y:(rows-1+layer)*spacing-offsetY});
+        }
+        for(let row=1-layer;row<rows-1+layer;row++){
+          candidates.push({x:-layer*spacing-offsetX,y:row*spacing-offsetY});
+          candidates.push({x:(columns-1+layer)*spacing-offsetX,y:row*spacing-offsetY});
+        }
+      }
+      context.sort((a,b)=>{
+        const connections=id=>(this.adjacency.get(id)||[]).filter(neighbor=>this.pathPersonIds.has(neighbor)).length;
+        return connections(b.id)-connections(a.id)||a.id.localeCompare(b.id);
+      });
+      context.forEach(person=>{
+        const neighbors=(this.adjacency.get(person.id)||[]).map(id=>result.get(id)).filter(Boolean);
+        const origin=neighbors.length?{x:neighbors.reduce((sum,p)=>sum+p.x,0)/neighbors.length,y:neighbors.reduce((sum,p)=>sum+p.y,0)/neighbors.length}:result.get(this.focusId)||{x:0,y:0};
+        let best=0,bestDistance=Infinity;
+        candidates.forEach((point,index)=>{const distance=Math.hypot(point.x-origin.x,point.y-origin.y);if(distance<bestDistance){best=index;bestDistance=distance;}});
+        result.set(person.id,{...candidates.splice(best,1)[0],rank:null,pathContext:true});
+      });
+      return result;
     }
 
     placeAdditions(additions, retained) {
@@ -569,7 +634,7 @@
         this.guides.append(title, note);
       }
       this.routes=this.relationships.map(relation=>this.routeRelationship(relation));
-      this.routes.forEach(relation => {
+      [...this.routes].sort((a,b)=>Number(this.pathEdgeKeys.has(edgeKey(a)))-Number(this.pathEdgeKeys.has(edgeKey(b)))).forEach(relation => {
         if(relation.failed||relation.points.length<2)return;
         const path=relation.points.map((point,index)=>`${index?'L':'M'} ${point.x.toFixed(2)} ${point.y.toFixed(2)}`).join(' ');
         const element = el('path', {d:path, class: `graph-edge ${relation.type}`, fill: 'none', stroke: '#ccd5c5', 'stroke-width': 1.2, 'stroke-linecap':'round','stroke-linejoin':'round', 'data-source': relation.source, 'data-target': relation.target});
@@ -607,7 +672,9 @@
           const span = el('tspan', {x: 0, y: (index - (lines.length - 1) / 2) * 12 + 3.5});
           span.textContent = text; label.append(span);
         });
-        group.append(outer, circle, label);
+        const endpointLabel=el('text',{class:'path-endpoint-label',x:0,y:this.radius+24,'text-anchor':'middle',fill:'#947027',stroke:'none','font-size':8,'font-family':'inherit','font-weight':650,'letter-spacing':1.2,visibility:'hidden','aria-hidden':'true','pointer-events':'none'});
+        endpointLabel.style.fontSize='8px';
+        group.append(outer, circle, label,endpointLabel);
         group.addEventListener('pointerenter', event => {
           if (this.pointerPositions.size) return;
           this.highlight(person.id);
@@ -630,22 +697,48 @@
       this.hoverId=hoverId;
       this.nodes.forEach((group, id) => {
         const selected = id === this.selectedId;
+        const onPath=this.pathPersonIds.has(id),start=onPath&&id===this.highlightPath?.startId,end=onPath&&id===this.highlightPath?.endId;
+        const endpoint=start||end;
         group.classList.toggle('is-selected', selected);
         group.classList.toggle('is-hovered', id === hoverId);
-        group.querySelector('.node-halo').setAttribute('opacity', selected || id === hoverId ? '0.7' : '0');
+        group.classList.toggle('is-on-path',onPath);
+        group.classList.toggle('is-path-start',start);
+        group.classList.toggle('is-path-end',end);
+        group.setAttribute('data-path-role',start&&end?'start-end':start?'start':end?'end':onPath?'intermediate':'none');
+        group.style.opacity=this.highlightPath&&!onPath&&!selected&&id!==hoverId?'0.62':'1';
+        const halo=group.querySelector('.node-halo');
+        halo.setAttribute('opacity',onPath?'1':selected||id===hoverId?'0.7':'0');
+        halo.setAttribute('r',onPath?this.radius+(endpoint?12:9):this.radius+7);
+        halo.setAttribute('stroke',onPath?'#b28a3a':'#88987c');
+        if(onPath)halo.style.setProperty?.('stroke','#b28a3a','important');
+        else halo.style.removeProperty?.('stroke');
+        halo.setAttribute('stroke-width',onPath?(endpoint?2.8:1.8):1);
+        halo.setAttribute('stroke-dasharray',end&&!start?'3 3':'none');
         const person = this.peopleById.get(id);
-        group.querySelector('.node-circle').setAttribute('fill', selected ? '#536d43' : person.gender === 'female' ? '#edd8c8' : '#dce5d0');
-        group.querySelector('.node-circle').setAttribute('stroke', selected ? '#455b38' : person.gender === 'female' ? '#cda88d' : '#b2c39e');
-        group.querySelector('.node-label').setAttribute('fill', selected ? '#fffdf5' : '#31422c');
+        const fill=onPath?(start?'#805719':end?'#665239':selected?'#8b6729':'#f3e4bb'):selected?'#536d43':person.gender==='female'?'#edd8c8':'#dce5d0';
+        group.querySelector('.node-circle').setAttribute('fill',fill);
+        group.querySelector('.node-circle').setAttribute('stroke',onPath?'#a77b2b':selected?'#455b38':person.gender==='female'?'#cda88d':'#b2c39e');
+        const labelColor=selected||endpoint?'#fffdf5':onPath?'#674b21':'#31422c';
+        group.querySelector('.node-label').setAttribute('fill',labelColor);
+        group.querySelector('.node-label').style.fill=labelColor;
+        const endpointLabel=group.querySelector('.path-endpoint-label');
+        endpointLabel.style.fill='#947027';
+        endpointLabel.setAttribute('visibility',endpoint?'visible':'hidden');
+        endpointLabel.textContent=start&&end?'START & END':start?'START':end?'END':'';
+        group.setAttribute('aria-label',`${person.name}. ${person.description||''}${start?' Start of highlighted path.':''}${end?' End of highlighted path.':''} Select to view family and Bible references.`);
         group.setAttribute('aria-pressed', String(selected));
       });
       [...this.edgeLayer.children].forEach(edge => {
         const activeId=hoverId||this.selectedId;
         const connected = activeId && (edge.dataset.source === activeId || edge.dataset.target === activeId);
+        const type=edge.classList.contains('spouse')?'spouse':'parent';
+        const onPath=this.pathEdgeKeys.has(edgeKey({source:edge.dataset.source,target:edge.dataset.target,type}));
         edge.classList.toggle('is-highlighted', !!connected);
-        edge.setAttribute('stroke', connected ? '#8c9f7b' : '#cbd6c2');
-        edge.setAttribute('stroke-width', connected ? '1.7' : '1.05');
-        edge.style.opacity=connected?'1':'0.55';
+        edge.classList.toggle('is-on-path',onPath);
+        edge.setAttribute('stroke',onPath?'#a37622':connected?'#8c9f7b':'#cbd6c2');
+        edge.setAttribute('stroke-width',onPath?'2.7':connected?'1.7':'1.05');
+        if(type==='parent')edge.setAttribute('marker-end',`url(#${this.id}-${onPath?'path-arrow':'arrow'})`);
+        edge.style.opacity=onPath?'1':this.highlightPath?(connected?'0.6':'0.22'):connected?'1':'0.55';
       });
       this.updateRelationshipLabels();
     }
@@ -654,9 +747,13 @@
       const activeId=this.hoverId||this.selectedId,rectangles=[];
       [...this.labelLayer.children].forEach(label=>{
         const connected=activeId&&(label.dataset.source===activeId||label.dataset.target===activeId);
+        const route=this.routes.find(item=>item.source===label.dataset.source&&item.target===label.dataset.target);
+        const onPath=route&&this.pathEdgeKeys.has(edgeKey(route));
+        label.children[0].setAttribute('fill',onPath?'#fff8e6':'#fafcf5');
+        label.children[0].setAttribute('stroke',onPath?'#ddc38a':'#e2e9d9');
+        label.children[1].setAttribute('fill',onPath?'#846123':'#627651');
         let visible=this.transform.k>=1.1&&connected&&rectangles.length<12;
         if(visible){
-          const route=this.routes.find(item=>item.source===label.dataset.source&&item.target===label.dataset.target);
           const point=this.routeMidpoint(route.points),width=this.relationshipLabel(route).length*5.6+14;
           const box={x:point.x-width/2-3,y:point.y-12,width:width+6,height:24};
           visible=!rectangles.some(other=>box.x<other.x+other.width&&box.x+box.width>other.x&&box.y<other.y+other.height&&box.y+box.height>other.y);
@@ -706,10 +803,11 @@
       this.applyTransform({reason});
     }
 
-    centerOn(id) {
+    centerOn(id,scale) {
       const point = this.positions.get(id);
       if (!point) return false;
       this.selectedId = id;
+      if(Number.isFinite(scale)&&scale>0)this.transform.k=clamp(scale,0.01,5);
       this.transform.x = this.width / 2 - point.x * this.transform.k;
       this.transform.y = this.height / 2 - point.y * this.transform.k;
       this.highlight(null);
@@ -740,7 +838,7 @@
     }
 
     getState() {
-      return {layout: this.layout, focusId: this.focusId, selectedId:this.selectedId,centerPersonId:this.nearestPersonToCenter(),transform: {...this.transform}, peopleCount: this.people.length, relationshipCount: this.relationships.length, width: this.width, height: this.height,radius:this.radius,minimumSpacing:this.minimumSpacing,positions: Object.fromEntries([...this.positions.entries()].map(([id, point]) => [id, {...point}])),routes:this.routes.map(route=>({source:route.source,target:route.target,type:route.type,failed:route.failed,points:route.points.map(point=>({...point}))}))};
+      return {layout: this.layout, focusId: this.focusId, selectedId:this.selectedId,centerPersonId:this.nearestPersonToCenter(),transform: {...this.transform}, peopleCount: this.people.length, relationshipCount: this.relationships.length, width: this.width, height: this.height,radius:this.radius,minimumSpacing:this.minimumSpacing,pathLayout:this.pathLayout,highlightPath:this.highlightPath?{personIds:[...this.highlightPath.personIds],relationships:this.highlightPath.relationships.map(relation=>({...relation})),startId:this.highlightPath.startId,endId:this.highlightPath.endId}:null,highlightedEdgeCount:this.pathEdgeKeys.size,positions: Object.fromEntries([...this.positions.entries()].map(([id, point]) => [id, {...point}])),routes:this.routes.map(route=>({source:route.source,target:route.target,type:route.type,highlighted:this.pathEdgeKeys.has(edgeKey(route)),failed:route.failed,points:route.points.map(point=>({...point}))}))};
     }
 
     destroy() { this.resizeObserver.disconnect(); this.cleanups.forEach(cleanup => cleanup()); this.svg.remove(); }

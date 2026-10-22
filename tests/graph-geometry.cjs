@@ -45,6 +45,7 @@ function validate(graph,label){
   }
   return state;
 }
+if(require.main===module){
 const graph=new context.window.BibleGraph(new Element('div'));
 for(const layout of ['constellation','lineage','radial']){
   for(const focus of ['abraham','jacob','jesus','david','levi','moses']){
@@ -69,5 +70,7 @@ graph.zoomBy(2);assert.equal(zoomEvent.userInitiated,true);assert.equal(zoomEven
 graph.fit();assert.equal(zoomEvent.userInitiated,false);assert.equal(zoomEvent.reason,'fit');
 graph.select('abraham');assert.equal(graph.getState().selectedId,'abraham');
 console.log('Zoom metadata and selection passed.');
+}
+module.exports={context,Element,people,relationships,validate,neighborhood};
 
 

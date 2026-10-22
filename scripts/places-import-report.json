@@ -1,0 +1,4362 @@
+{
+  "sourcePlaceRecords": 1007,
+  "included": 604,
+  "excluded": [
+    {
+      "record": "Abana@2Ki.5.12",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Abana",
+          "types": [
+            "river"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Abel@1Sa.6.18",
+      "reason": "No exact cross-source classification match"
+    },
+    {
+      "record": "Abilene@Luk.3.1",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Abilene",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Abronah@Num.33.34-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Abronah",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Achaia@Act.18.12-1Th",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Achaia",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Achor_Valley@Jos.7.24-Hos",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Adriatic_Sea@Act.27.27",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Adummim@Jos.15.7-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Adummim",
+          "types": [
+            "road"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Ahava@Ezr.8.15-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Ahava",
+          "types": [
+            "canal",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Akeldama@Mat.27.7-Act",
+      "reason": "No exact cross-source classification match"
+    },
+    {
+      "record": "Akrabbim@Num.34.4-Jdg",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Akrabbim",
+          "types": [
+            "mountain pass"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Allon@Jos.19.33",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Allon",
+          "types": [
+            "tree"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Allon-bacuth@Gen.35.8",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Allon-bacuth",
+          "types": [
+            "tree"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Alush@Num.33.13-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Alush",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Amalek@Gen.14.7-Psa",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Amalek",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Amana@Sng.4.8",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Amana",
+          "types": [
+            "mountain",
+            "mountain ridge"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Amaw@Num.22.5",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Amaw",
+          "types": [
+            "region",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Ammah@2Sa.2.24",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Ammah",
+          "types": [
+            "hill"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Ammon@Gen.19.38-Zep",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Ammon",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Angle@2Ch.26.9",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Angle",
+          "types": [
+            "structure"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Arabah@Deu.1.1-Zec",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Arabah",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Arabia@2Sa.23.35-Gal",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Arabia 1",
+          "types": [
+            "region"
+          ]
+        },
+        {
+          "name": "Arabia 2",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Aram-maacah@1Ch.19.6",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Maacah",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Aram-naharaim@Psa.60.0",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Aram-naharaim",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Aram-zobah@Psa.60.0",
+      "reason": "No exact cross-source classification match"
+    },
+    {
+      "record": "Ararat@Gen.8.4-Jer",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Ararat",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Areopagus@Act.17.19-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Areopagus",
+          "types": [
+            "hill"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Argob@Deu.3.4-1Ki",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Argob",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Arnon@Num.21.13-Jer",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Arnon",
+          "types": [
+            "river"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Ashkenaz@Jer.51.27",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Ashkenaz",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Asia@Act.2.9-Rev",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Asia",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Assyria@Gen.2.14-Zec",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Assyria",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Atharim@Num.21.1",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Atharim",
+          "types": [
+            "road",
+            "settlement",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Aven_Valley@Amo.1.5",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Azal@Zec.14.5",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Azal",
+          "types": [
+            "river",
+            "settlement",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Baalah_Mount@Jos.15.11",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Baalath@Jos.19.44",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Baalath 1",
+          "types": [
+            "hill",
+            "mountain",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Baal-hazor@2Sa.13.23",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Baal-hazor",
+          "types": [
+            "mountain",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Baal-zephon@Exo.14.2-Num",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Baal-zephon",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Bajith@Isa.15.2",
+      "reason": "No exact cross-source classification match"
+    },
+    {
+      "record": "Bamoth-baal@Num.21.28-Jos",
+      "reason": "No exact cross-source classification match"
+    },
+    {
+      "record": "Bashan@Num.21.33-Zec",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Bashan",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Bath-rabbim@Sng.7.4",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Bath-rabbim",
+          "types": [
+            "gate"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Beautiful_Gate@Act.3.2-",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Beer@Num.21.16",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Beer 1",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Beer-elim@Isa.15.8",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Beer-elim",
+          "types": [
+            "campsite",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Beer-lahai-roi@Gen.16.14-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Beer-lahai-roi",
+          "types": [
+            "well"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Benjamin_Gate@Jer.20.2-",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Benjamin_Gate@Zec.14.10",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Beracah_Valley@2Ch.20.26",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Bered@Gen.16.14",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Bered",
+          "types": [
+            "mountain",
+            "region",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Besor@1Sa.30.9-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Besor",
+          "types": [
+            "river"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Beth-Ashtoreth@1Sa.31.10",
+      "reason": "No exact cross-source classification match"
+    },
+    {
+      "record": "Beth-barah@Jdg.7.24-Jhn",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Bethany 2",
+          "types": [
+            "ford",
+            "region",
+            "settlement",
+            "special",
+            "wadi"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Beth-eden@Amo.1.5",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Beth-eden",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Bethel@Jos.19.4-1Ch",
+      "reason": "No exact cross-source classification match"
+    },
+    {
+      "record": "Bether_Mountain@Sng.2.17",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Bethesda@Jhn.5.2",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Bethesda",
+          "types": [
+            "pool"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Beth-merhak@2Sa.15.17",
+      "reason": "No exact cross-source classification match"
+    },
+    {
+      "record": "Beth-millo@Jdg.9.6-2Ki",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Beth-millo",
+          "types": [
+            "structure"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Beth-rehob@Num.13.21-2Sa",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Beth-rehob",
+          "types": [
+            "region",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Bithron@2Sa.2.29",
+      "reason": "No exact cross-source classification match"
+    },
+    {
+      "record": "Bithynia@Act.16.7-1Pe",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Bithynia",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Bozez@1Sa.14.4",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Bozez",
+          "types": [
+            "cliff"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Broad_Wall@Neh.3.8-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Broad Wall",
+          "types": [
+            "structure"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Brook_of_Egypt@Num.34.5-Ezk",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Brook of Egypt",
+          "types": [
+            "river",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Brook_of_the_Arabah@Amo.6.14",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Brook of the Arabah",
+          "types": [
+            "body of water",
+            "region",
+            "river",
+            "special",
+            "wadi"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Brook_of_the_Willows@Isa.15.7",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Brook of the Willows",
+          "types": [
+            "body of water",
+            "region",
+            "river",
+            "special",
+            "wadi"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Buz@Jer.25.23",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Buz",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Cabul@1Ki.9.13",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Cabul 2",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Canaan@Gen.10.18-Act",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Canaan",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Caphtor@Deu.2.23-Tit",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Crete",
+          "types": [
+            "island"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Cappadocia@Act.2.9-1Pe",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Cappadocia",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Carmel@Jos.12.22-Nam",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Carmel 1",
+          "types": [
+            "settlement"
+          ]
+        },
+        {
+          "name": "Mount Carmel",
+          "types": [
+            "mountain"
+          ]
+        },
+        {
+          "name": "Racal",
+          "types": [
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Carmel_Mount@1Ki.18.19-2Ki",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Cauda@Act.27.16",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Cauda",
+          "types": [
+            "island"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Chaldea@Gen.11.28-Act",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Chaldea",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Chebar@Ezk.1.1-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Chebar",
+          "types": [
+            "river"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Cherith@1Ki.17.3-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Cherith",
+          "types": [
+            "settlement",
+            "wadi"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Chilmad@Ezk.27.23",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Chilmad",
+          "types": [
+            "region",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Chinnereth@Num.34.11-Jhn",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Sea of Galilee",
+          "types": [
+            "body of water"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Chios@Act.20.15",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Chios",
+          "types": [
+            "island"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Cilicia@Act.6.9-Gal",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Cilicia",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Corban@Mat.27.6-Mrk",
+      "reason": "No exact cross-source classification match"
+    },
+    {
+      "record": "Corner_Gate@2Ki.14.13-Zec",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Cos@Act.21.1",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Cos",
+          "types": [
+            "island"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Cush@Gen.2.13-Act",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Cush 1",
+          "types": [
+            "region"
+          ]
+        },
+        {
+          "name": "Cush 2",
+          "types": [
+            "region"
+          ]
+        },
+        {
+          "name": "Ethiopia",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Cushan@Hab.3.7",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Cushan",
+          "types": [
+            "region",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Cyprus@Num.24.24-Act",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Cyprus",
+          "types": [
+            "island"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Dalmatia@2Ti.4.10",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Dalmatia",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Decapolis@Mat.4.25-Mrk",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Decapolis",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Diviners'_Oak@Jdg.9.37",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Diviners’ Oak",
+          "types": [
+            "tree"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Dragon_Spring@Neh.2.13",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Dragon Spring",
+          "types": [
+            "spring"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Dumah@Isa.21.11",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Dumah 2",
+          "types": [
+            "region",
+            "settlement",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Dung_Gate@Neh.2.13-",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Dura@Dan.3.1",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Dura",
+          "types": [
+            "district in settlement",
+            "natural area",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "East@Jdg.6.3-Ezk",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "East",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "East_Gate@Neh.3.29",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Ebal_Mount@Deu.11.29-Jer",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Ebenezer@1Sa.4.1-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Ebenezer 1",
+          "types": [
+            "settlement"
+          ]
+        },
+        {
+          "name": "Ebenezer 2",
+          "types": [
+            "rock"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Eden@2Ki.19.12-Ezk",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Eden 2",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Eden@Gen.2.8-Jol",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Eden 1",
+          "types": [
+            "garden",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Edom@Gen.32.3-Mal",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Edom",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Eglaim@Isa.15.8",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Eglaim",
+          "types": [
+            "settlement",
+            "special",
+            "spring"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Egypt@Gen.12.10-Rev",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Egypt",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Egypt_Sea@Isa.11.15",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Elah_Valley@1Sa.17.2-",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Elam@Gen.14.1-Act",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Elam",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Elath@Deu.2.8-2Ch",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Elath",
+          "types": [
+            "island",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Ellasar@Gen.14.1-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Ellasar",
+          "types": [
+            "region",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "El-paran@Gen.14.6",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "El-paran",
+          "types": [
+            "island",
+            "region",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Eneglaim@Ezk.47.10",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Eneglaim",
+          "types": [
+            "settlement",
+            "special",
+            "spring"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Engedi@Gen.14.7-Ezk",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Engedi",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "En-hakkore@Jdg.15.19",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "En-hakkore",
+          "types": [
+            "special",
+            "spring"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "En-rogel@Jos.15.7-1Ki",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "En-rogel",
+          "types": [
+            "spring"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "En-shemesh@Jos.15.7-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "En-shemesh",
+          "types": [
+            "spring"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Ephah@Isa.60.6",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Ephah",
+          "types": [
+            "people group"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Ephraim_Gate@2Ki.14.13-Neh",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Ephron_Mount@Jos.15.9-",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Esau_Mount@Oba.1.8-",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Esek@Gen.26.20",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Esek",
+          "types": [
+            "well"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Eshcol_Valley@Num.13.23-Deu",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Euphrates@Gen.2.14-Rev",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Euphrates",
+          "types": [
+            "river"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Ezel_Stone@1Sa.20.19",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Ezel",
+          "types": [
+            "special",
+            "stone heap"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Ezion-geber@Num.33.35-2Ch",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Ezion-geber",
+          "types": [
+            "island",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Fish_Gate@2Ch.33.14-Zep",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Forest_Ephraim@2Sa.18.6",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Foundation_Gate@2Ch.23.5",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Fountain_Gate@Neh.2.14-",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Gaash@Jos.24.30-1Ch",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Gaash",
+          "types": [
+            "mountain",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Gabbatha@Jhn.19.13",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Gabbatha",
+          "types": [
+            "structure"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Galatia@Act.16.6-1Pe",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Galatia",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Galilee@Jos.12.23-Act",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Galilee 1",
+          "types": [
+            "region"
+          ]
+        },
+        {
+          "name": "Galilee 2",
+          "types": [
+            "region",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Gareb@Jer.31.39",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Gareb",
+          "types": [
+            "hill"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Ge-harashim@1Ch.4.14-Neh",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Ge-harashim",
+          "types": [
+            "special",
+            "valley"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Gerasa@Mat.8.28-Luk",
+      "reason": "No exact cross-source classification match"
+    },
+    {
+      "record": "Gerizim_Mount@Deu.11.29-Jdg",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Geruth_Chimham@Jer.41.17",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Geruth Chimham",
+          "types": [
+            "natural area"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Geshur@Deu.3.14-1Ch",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Geshur",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Gethsemane@Mat.26.36-Mrk",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Gethsemane",
+          "types": [
+            "garden"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Giah@2Sa.2.24",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Giah",
+          "types": [
+            "natural area",
+            "special",
+            "valley"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Gidom@Jdg.20.45",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Gidom",
+          "types": [
+            "natural area",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Gihon@Gen.2.13-2Ch",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Gihon 2",
+          "types": [
+            "spring"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Gilboa@1Sa.28.4-2Sa",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Mount Gilboa",
+          "types": [
+            "mountain"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Gilboa_Mount@Jdg.7.3-1Ch",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Gilead@Gen.31.21-Zec",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Gilead 1",
+          "types": [
+            "region"
+          ]
+        },
+        {
+          "name": "Gilead 2",
+          "types": [
+            "region",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Goah@Jer.31.39",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Goah",
+          "types": [
+            "hill"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Gog@Ezk.38.2-Rev",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Gog",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Golgotha@Mat.27.33-Jhn",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Golgotha",
+          "types": [
+            "hill"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Goshen@Gen.45.10-Exo",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Goshen 1",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Goshen@Jos.10.41-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Goshen 2",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Great_Sea@Exo.23.31-Ezk",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Greece@Isa.66.19-Act",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Javan",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Guard_Gate@Neh.12.39",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Gur@2Ki.9.27",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Gur",
+          "types": [
+            "hill"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Habor@2Ki.17.6-1Ch",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Habor",
+          "types": [
+            "river"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Halah@2Ki.17.6-1Ch",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Halah",
+          "types": [
+            "region",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Halak_Mount@Jos.11.17-",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Hall_of_Judgment@1Ki.7.7",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Hall of Judgment",
+          "types": [
+            "hall"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Hall_of_Pillars@1Ki.7.6",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Hall of Pillars",
+          "types": [
+            "hall"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Hall_of_the_Throne@1Ki.7.7",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Hall of the Throne",
+          "types": [
+            "hall"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Ham@Gen.14.5",
+      "reason": "No exact cross-source classification match"
+    },
+    {
+      "record": "Hamath@Num.13.21-Zec",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Hamath-zobah",
+          "types": [
+            "region",
+            "settlement",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Hammath@Jos.19.28-1Ch",
+      "reason": "No exact cross-source classification match"
+    },
+    {
+      "record": "Hamon-gog_Valley@Ezk.39.11-",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Hara@1Ch.5.26",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Hara",
+          "types": [
+            "mountain range",
+            "region",
+            "settlement",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Haradah@Num.33.24-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Haradah",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Harmon@Amo.4.3",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Harmon",
+          "types": [
+            "mountain",
+            "mountain ridge",
+            "natural area",
+            "region",
+            "settlement",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Harod@Jdg.7.1-1Ch",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Harod 1",
+          "types": [
+            "spring"
+          ]
+        },
+        {
+          "name": "Harod 2",
+          "types": [
+            "settlement",
+            "spring"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Harosheth-hagoyim@Jdg.4.2-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Harosheth-hagoyim",
+          "types": [
+            "region",
+            "settlement",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Hashmonah@Num.33.29-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Hashmonah",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Hauran@Ezk.47.16-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Hauran",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Havilah@Gen.2.11",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Havilah 1",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Havilah@Gen.25.18-1Sa",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Havilah 2",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Havvoth-jair@Num.32.41-1Ch",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Havvoth-jair",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Hazerim@Deu.2.23",
+      "reason": "No exact cross-source classification match"
+    },
+    {
+      "record": "Hazor@Jer.49.28-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Hazor 5",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Hazor@Neh.11.33",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Hazor 4",
+          "types": [
+            "mountain",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Hebron_Valley@Gen.37.14",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Helech@Ezk.27.11",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Helech",
+          "types": [
+            "region",
+            "settlement",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Helkath-hazzurim@2Sa.2.16",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Helkath-hazzurim",
+          "types": [
+            "field"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Heres@Jdg.8.13",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Heres",
+          "types": [
+            "hill",
+            "natural area",
+            "settlement",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Hereth@1Sa.22.5",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Hereth",
+          "types": [
+            "forest",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Hermon_Mount@Num.34.7-Ezk",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Hobah@Gen.14.15",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Hobah",
+          "types": [
+            "region",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Holy_Place@Exo.26.33-Heb",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Holy Place 1",
+          "types": [
+            "room",
+            "special"
+          ]
+        },
+        {
+          "name": "Holy Place 2",
+          "types": [
+            "room"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Hor_Mount@Num.20.22-Deu",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Horesh@1Sa.23.15-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Horesh",
+          "types": [
+            "natural area",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Hor-haggidgad@Num.33.32-Deu",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Hor-haggidgad",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Horonaim@2Sa.13.34-Jer",
+      "reason": "No exact cross-source classification match"
+    },
+    {
+      "record": "Horse_Gate@Neh.3.28-Jer",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "House_of_the_Forest@1Ki.7.2-Isa",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Idumea@Mrk.3.8",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Idumea",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Illyricum@Rom.15.19",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Illyricum",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "India@Est.1.1-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "India",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Iphtahel_Valley@Jos.19.14-",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Ir-nahash@1Ch.4.12",
+      "reason": "No exact cross-source classification match"
+    },
+    {
+      "record": "Italy@Act.10.1-Heb",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Italy",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Ivvah@2Ki.17.24-Isa",
+      "reason": "No exact cross-source classification match"
+    },
+    {
+      "record": "Iye-abarim@Num.21.11-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Iye-abarim",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Iyim@Num.33.45",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Iye-abarim",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Jabbok@Gen.32.22-Jdg",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Jabbok",
+          "types": [
+            "river"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Jair@Jos.13.30",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Havvoth-jair",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Janen@Num.21.19",
+      "reason": "No exact cross-source classification match"
+    },
+    {
+      "record": "Jazer_Sea@Jer.48.32",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Jemnath@Jos.15.46",
+      "reason": "No exact cross-source classification match"
+    },
+    {
+      "record": "Jericho_Valley@Deu.34.3",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Jeruel@2Ch.20.16",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Jeruel",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Jeshimon@1Sa.23.19-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Jeshimon",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Jetur@1Ch.5.19-Luk",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Ituraea",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Jezreel_Valley@Jos.17.16-Hos",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Jordan@Gen.13.10-Jhn",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Jordan",
+          "types": [
+            "river"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Jotbathah@Num.33.33-Deu",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Jotbathah",
+          "types": [
+            "settlement",
+            "spring"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Judea@Ezr.9.9-1Th",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Judea 1",
+          "types": [
+            "region"
+          ]
+        },
+        {
+          "name": "Judea 2",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Kanah@Jos.16.8-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Kanah 1",
+          "types": [
+            "river"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Karkor@Jdg.8.10",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Karkor",
+          "types": [
+            "settlement",
+            "special",
+            "valley"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Kehelathah@Num.33.22-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Kehelathah",
+          "types": [
+            "campsite",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Kidron@2Sa.15.23-Jhn",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Kidron",
+          "types": [
+            "river"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "King's_Highway@Num.20.17-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "King’s Highway",
+          "types": [
+            "road"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "King's_Valley@Gen.14.17-2Sa",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Kir@2Ki.16.9-Amo",
+      "reason": "No exact cross-source classification match"
+    },
+    {
+      "record": "Kishon@Jdg.4.7-Psa",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Kishon",
+          "types": [
+            "river"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Koa@Ezk.23.23",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Koa",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Kue@1Ki.10.28-2Ch",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Kue",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Laban@Deu.1.1",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Laban",
+          "types": [
+            "campsite",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Lasha@Gen.10.19-Num",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Lasha",
+          "types": [
+            "region",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Lasharon@Jos.12.18",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Lasharon",
+          "types": [
+            "region",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Lebanon@Deu.1.7-Zec",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Lebanon",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Lebanon_Mount@Jdg.3.3",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Lebanon_Valley@Jos.11.17-",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Libnah@Num.33.20-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Libnah 2",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Libya@2Ch.12.3-Act",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Libya",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Lycaonia@Act.14.6-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Lycaonia",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Lycia@Act.27.5",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Lycia",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Maacah@Deu.3.14-1Ch",
+      "reason": "No exact cross-source classification match"
+    },
+    {
+      "record": "Maareh-geba@Jdg.20.33",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Maareh-geba",
+          "types": [
+            "natural area"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Macedonia@Act.16.9-Tit",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Macedonia",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Magog@Ezk.38.2-Rev",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Magog",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Mahaneh-dan@Jdg.13.25-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Mahaneh-dan 1",
+          "types": [
+            "campsite",
+            "special"
+          ]
+        },
+        {
+          "name": "Mahaneh-dan 2",
+          "types": [
+            "campsite",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Makheloth@Num.33.25-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Makheloth",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Malta@Act.28.1",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Malta",
+          "types": [
+            "island"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Marah@Exo.15.23-Num",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Marah",
+          "types": [
+            "body of water",
+            "spring"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Massah@Exo.17.7-Psa",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Massah",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Media@2Ki.17.6-Act",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Media",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Me-jarkon@Jos.19.46",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Me-jarkon",
+          "types": [
+            "river",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Meribah@Exo.17.7-Psa",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Meribah 2",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Meronothite@1Ch.27.30-Neh",
+      "reason": "No canonical named-place references (group-only forms are excluded)"
+    },
+    {
+      "record": "Mesha@Gen.10.30",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Mesha",
+          "types": [
+            "region",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Meshech@Psa.120.5-Ezk",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Meshech",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Meshech-Tubal@Ezk.32.26",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Meshech",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Mesopotamia@Gen.24.10-Act",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Mesopotamia",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Michmethath@Jos.16.6-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Michmethath",
+          "types": [
+            "mountain",
+            "river",
+            "settlement",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Midian@Gen.36.35-Act",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Midian",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Migron@1Sa.14.2-Isa",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Migron 1",
+          "types": [
+            "region",
+            "river",
+            "settlement",
+            "special"
+          ]
+        },
+        {
+          "name": "Migron 2",
+          "types": [
+            "river",
+            "settlement",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Millo@2Sa.5.9-Isa",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Millo",
+          "types": [
+            "fortification",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Minni@Jer.51.27",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Minni",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Misrephoth-maim@Jos.11.8-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Misrephoth-maim",
+          "types": [
+            "hill",
+            "river",
+            "settlement",
+            "spring"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Mithkah@Num.33.28-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Mithkah",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Mizar_Mount@Psa.42.6",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Mizpeh_Valley@Jos.11.3-",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Moab@Gen.19.37b-Zep",
+      "reason": "No exact cross-source classification match"
+    },
+    {
+      "record": "Moab_Plains@Num.22.1-Jos",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Moab 2",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Moreh@Gen.12.6-Deu",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Moreh 1",
+          "types": [
+            "tree"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Moreh@Jdg.7.1",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Moreh 2",
+          "types": [
+            "hill"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Moriah_Mount@Gen.22.2-2Ch",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Mortar@Zep.1.11",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Mortar",
+          "types": [
+            "district in settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Moserah@Deu.10.6",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Moseroth",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Moseroth@Num.33.30-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Moseroth",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Most_Holy_Place@1Ki.6.16-Heb",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Most Holy Place 2",
+          "types": [
+            "altar"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Muster_Gate@Neh.3.31",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Mysia@Act.16.7-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Mysia",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Naphath@Jos.17.11",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Naphoth-dor",
+          "types": [
+            "region",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Neah@Jos.19.13-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Neiel",
+          "types": [
+            "settlement",
+            "valley"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Nebo_Mount@Num.27.12-Jer",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Negeb@Gen.12.9-Zec",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Negeb",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Nephtoah@Jos.15.9-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Nephtoah",
+          "types": [
+            "spring"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "New_Gate@Jer.26.10-",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Nile@Gen.41.1-Zec",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Nile",
+          "types": [
+            "river"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Nimrim@Isa.15.6-Jer",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Nimrim",
+          "types": [
+            "wadi"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Nod@Gen.4.16",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Nod",
+          "types": [
+            "region",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Oboth@Num.21.10-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Oboth",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Olives_Mount@2Sa.15.30-Act",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Ophel@2Ch.27.3-Neh",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Ophel",
+          "types": [
+            "hill"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Ophir@1Ki.9.28-Isa",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Ophir",
+          "types": [
+            "island",
+            "mine",
+            "region",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Pacatiana@1Ti.6.21",
+      "reason": "No exact cross-source classification match"
+    },
+    {
+      "record": "Paddan@Gen.25.20-Hos",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Paddan-aram",
+          "types": [
+            "region",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Pamphylia@Act.2.10-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Pamphylia",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Paran@Gen.21.21-1Ki",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Paran",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Paran_Mount@Deu.33.2-Hab",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Parbar@1Ch.26.18",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Parbar",
+          "types": [
+            "structure"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Pathros@Isa.11.11-Ezk",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Pathros",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Patmos@Rev.1.9",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Patmos",
+          "types": [
+            "island"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "People's_Gate@Jer.17.19",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Peor@Num.23.28-Jos",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Peor",
+          "types": [
+            "mountain"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Perazim_Mount@Isa.28.21",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Perez-uzza@1Ch.13.11",
+      "reason": "No exact cross-source classification match"
+    },
+    {
+      "record": "Persia@2Ch.36.20-Dan",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Persia",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Pharpar@2Ki.5.12",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Pharpar",
+          "types": [
+            "river"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Philistia@Gen.21.32-Zec",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Philistia",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Phoenicia@Act.11.19-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Phoenicia",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Phrygia@Act.2.10-1Ti",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Phrygia",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Pi-hahiroth@Exo.14.2-Num",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Pi-hahiroth",
+          "types": [
+            "mountain",
+            "natural area",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Pisgah@Num.21.20-Jos",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Pisgah",
+          "types": [
+            "mountain",
+            "mountain range",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Pishon@Gen.2.11",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Pishon",
+          "types": [
+            "body of water",
+            "river",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Pisidia@Act.13.14-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Pisidia",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Pontus@Act.2.9-1Pe",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Pontus",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Potsherd_Gate@Jer.19.2",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Rakkon@Jos.19.46",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Rakkon",
+          "types": [
+            "river",
+            "settlement",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Red_Sea@Exo.10.19-Heb",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Rehoboth@Gen.26.22",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Rehoboth 1",
+          "types": [
+            "well"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Rephaim_Valley@Jos.15.8-Isa",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Rephidim@Exo.17.1-Num",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Rephidim",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Rhodes@Act.21.1",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Rhodes 1",
+          "types": [
+            "island",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Rimmon@Jdg.20.45-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Rimmon 1",
+          "types": [
+            "natural area"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Rimmon-perez@Num.33.19-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Rimmon-perez",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Rissah@Num.33.21-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Rissah",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Rithmah@Num.33.18-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Rithmah",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Rock_of_Escape@1Sa.23.28",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Rock of Escape",
+          "types": [
+            "natural area"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Salim@Jhn.3.23",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Salim",
+          "types": [
+            "settlement",
+            "wadi"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Salmone@Act.27.7",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Salmone",
+          "types": [
+            "promontory"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Salt_Sea@Gen.14.3-2Ki",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Salt_Valley@2Sa.8.13-Psa",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Samos@Act.20.15",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Samos",
+          "types": [
+            "island"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Samothrace@Act.16.11",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Samothrace",
+          "types": [
+            "island"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Seba@Psa.72.10-Isa",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Sheba 1",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Second_Quarter@2Ki.22.14-Zep",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Second Quarter",
+          "types": [
+            "district in settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Seir@Gen.14.6-Ezk",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Mount Seir 1",
+          "types": [
+            "mountain range"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Seir_Mount@Deu.1.2-Ezk",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Seir_Mount@Jos.15.10",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Seirah@Jdg.3.26",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Seirah",
+          "types": [
+            "natural area",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Seneh@1Sa.14.4",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Seneh",
+          "types": [
+            "cliff"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Shaalim@1Sa.9.4",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Shaalim",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Shalishah@1Sa.9.4",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Shalishah",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Shallecheth@1Ch.26.16",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Shallecheth",
+          "types": [
+            "gate"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Sharon@1Ch.27.29-Act",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Sharon 1",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Sharon@1Ch.5.16",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Sharon 2",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Shaveh@Gen.14.5-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Shaveh-kiriathaim",
+          "types": [
+            "natural area"
+          ]
+        },
+        {
+          "name": "Valley of Shaveh",
+          "types": [
+            "valley"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Sheba@1Ki.10.1-Luk",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Sheba 1",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Shebarim@Jos.7.5",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Shebarim",
+          "types": [
+            "natural area",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Sheep_Gate@Neh.3.1-Jhn",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Shelah@Neh.2.14-Jhn",
+      "reason": "No exact cross-source classification match"
+    },
+    {
+      "record": "Shephelah@Deu.1.7-Zec",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Shephelah",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Shepher_Mount@Num.33.23-",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Shihor-libnath@Jos.19.26",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Shihor-libnath",
+          "types": [
+            "natural area",
+            "region",
+            "river",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Shittim@Num.25.1-Mic",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Abel-shittim",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Shittim_Valley@Jol.3.18",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Shoa@Ezk.23.23",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Shoa",
+          "types": [
+            "people group"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Shual@1Sa.13.17",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Shual",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Shur@Gen.16.7-1Sa",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Shur",
+          "types": [
+            "region",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Siddim_Valley@Gen.14.3-",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Silla@2Ki.12.20",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Silla",
+          "types": [
+            "fortification",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Sin@Exo.16.1-Num",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Sin",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Sinai@Exo.3.1-Gal",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Mount Sinai",
+          "types": [
+            "mountain"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Sinai_Wilderness@Exo.19.1-Num",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Sirah@2Sa.3.26",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Sirah",
+          "types": [
+            "well"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Sitnah@Gen.26.21",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Sitnah",
+          "types": [
+            "well"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Solomon's_Portico@Act.3.11-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Solomon’s Portico",
+          "types": [
+            "structure"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Sorek_Valley@Jdg.16.4",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Spain@Rom.15.24-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Spain",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Straight@Act.9.11",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Straight Street",
+          "types": [
+            "road"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Suph@Deu.1.1",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Suph",
+          "types": [
+            "body of water",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Suphah@Num.21.14",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Suphah",
+          "types": [
+            "body of water",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Sur@2Ki.11.6",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Sur",
+          "types": [
+            "gate"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Syria@Jdg.10.6-Gal",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Aram",
+          "types": [
+            "region"
+          ]
+        },
+        {
+          "name": "Phoenicia",
+          "types": [
+            "region"
+          ]
+        },
+        {
+          "name": "Syria 1",
+          "types": [
+            "region"
+          ]
+        },
+        {
+          "name": "Syria 2",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Syrtis@Act.27.17",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Syrtis",
+          "types": [
+            "body of water"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Taberah@Num.11.3-Deu",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Taberah",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Tabor@1Sa.10.3",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Tabor 3",
+          "types": [
+            "tree"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Tabor_Mount@Jos.19.22-Hos",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Tahath@Num.33.26-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Tahath",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Tarshish@1Ki.10.22-Jon",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Tarshish 1",
+          "types": [
+            "island",
+            "region",
+            "settlement",
+            "special"
+          ]
+        },
+        {
+          "name": "Tarshish 2",
+          "types": [
+            "island",
+            "region",
+            "settlement",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Teman@Jer.49.7-Hab",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Teman",
+          "types": [
+            "region",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Terah@Num.33.27-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Terah",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Tigris@Gen.2.14-Dan",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Tigris",
+          "types": [
+            "river"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Topheth@Jos.15.8-Jer",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Valley of Hinnom",
+          "types": [
+            "valley"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Tower_of_Hananel@Neh.3.1-Zec",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Tower of Hananel",
+          "types": [
+            "structure"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Tower_of_the_Hundred@Neh.3.1-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Tower of the Hundred",
+          "types": [
+            "structure"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Tower_of_the_Ovens@Neh.3.11-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Tower of the Ovens",
+          "types": [
+            "structure"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Trachonitis@Luk.3.1",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Trachonitis",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Travelers_Valley@Ezk.39.11",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Trogyllium@Act.20.15",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Trogyllium",
+          "types": [
+            "promontory"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Tubal@Isa.66.19-Ezk",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Tubal",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Ulai@Dan.8.2-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Ulai",
+          "types": [
+            "river"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Uphaz@Jer.10.9-Dan",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Uphaz",
+          "types": [
+            "island",
+            "mine",
+            "region",
+            "settlement",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Ur@Gen.11.28-Neh",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Ur 1",
+          "types": [
+            "region",
+            "settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Uz@Job.1.1-Lam",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Uz",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Uzal@Ezk.27.19",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Uzal",
+          "types": [
+            "mountain",
+            "region",
+            "settlement",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Uzza@2Ki.21.18-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Uzza",
+          "types": [
+            "garden"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Valley_Gate@2Ch.26.9-Neh",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Waheb@Num.21.14",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Waheb",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Washer's_Field@2Ki.18.17-Isa",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Washer’s Field",
+          "types": [
+            "field"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Water_Gate@Neh.3.26-",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Way_of_Holiness@Isa.35.8",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Way of Holiness",
+          "types": [
+            "road"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Wildgoats_Rocks@1Sa.24.2",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Wildgoats’ Rocks",
+          "types": [
+            "natural area"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Yeshanah_Gate@Neh.3.6-",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Zalmonah@Num.33.41-",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Zalmonah",
+          "types": [
+            "campsite"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Zeboim_Valley@1Sa.13.18",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Zephathah_Valley@2Ch.14.10",
+      "reason": "Explicit non-settlement feature in STEP identity"
+    },
+    {
+      "record": "Zered@Num.21.12-Deu",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Zered",
+          "types": [
+            "river"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Zimri@Jer.25.25",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Zimri",
+          "types": [
+            "region",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Zin@Num.13.21-Jos",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Zin 1",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Ziz@2Ch.20.16",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Ziz",
+          "types": [
+            "region",
+            "wadi"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Zobah@1Sa.14.47-2Ch",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Zobah",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Zophim@Num.23.14",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Zophim",
+          "types": [
+            "natural area",
+            "special"
+          ]
+        }
+      ]
+    },
+    {
+      "record": "Zuph@1Sa.9.5",
+      "reason": "Non-settlement or mixed settlement/geographical feature classification",
+      "candidates": [
+        {
+          "name": "Zuph",
+          "types": [
+            "region"
+          ]
+        }
+      ]
+    }
+  ],
+  "splitRecords": [
+    "Kanah@Jos.19.28-Jhn"
+  ],
+  "overrides": {
+    "Babylon@Gen.10.10-Rev": [
+      "Babylon 1",
+      "Babel"
+    ],
+    "Samaria@1Ki.13.32-Act": [
+      "Samaria 1"
+    ],
+    "Aijalon@Jos.10.12-2Ch": [
+      "Aijalon 1",
+      "Aijalon 2"
+    ],
+    "Gebal@Jos.13.5-Ezk": [
+      "Gebal 1"
+    ],
+    "Kir@1Sa.22.3-Jer": [
+      "Kir 2",
+      "Kir-hareseth"
+    ],
+    "Ephraim@2Sa.13.23-Jhn": [
+      "Ephraim 2"
+    ],
+    "Nahalol@Jos.19.15-Jdg": [
+      "Nahalal"
+    ]
+  },
+  "sourceHashes": [
+    {
+      "file": "TIPNR.txt",
+      "sha256": "dc2fba41f24ed85ce0e29b426208e7ea06efc2b85ae8f2a14a06cda01648cd43"
+    },
+    {
+      "file": "OpenBible-ancient.jsonl",
+      "sha256": "b8187aa4737e8517ccc090f765d2be11da4c548cd2a59d3cdcb62e952cb8c0f2"
+    }
+  ]
+}

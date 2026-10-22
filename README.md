@@ -1,6 +1,6 @@
 # BiblePath
 
-A dependency-free web app for exploring biblical people in three interactive SVG layouts: Constellation, Family tree, and Ancestry rings.
+A dependency-free web app for reading Scripture and exploring its people and cities. Family maps offer three interactive SVG layouts: Constellation, Family tree, and Ancestry rings.
 
 ## Run locally
 
@@ -10,6 +10,9 @@ There is no build step. `dist/` contains the editable source and deployable app.
 
 ## Interactions
 
+- Choose two people and find their connecting path across the entire collection. Bible-cited links are the default; indexed links can be included explicitly. Directed ancestry takes priority, then shortest family paths. Gold path highlights persist across zoom, selection, and layouts. Every step retains its source and notes. Adam → Jesus has 63 connections and includes legal parenthood.
+- Read the complete public-domain World English Bible: 66 books, 1,189 chapters, 31,103 numbered verses. Navigate by book/chapter/reference, search all Scripture or a testament/book, and follow annotated names to family maps or cities. Exact-verse identities take priority; uncertain matches and namesakes use a chooser. Psalm headings and source footnotes are retained.
+- Browse 604 cities and towns with 4,125 verse references. Search/filter the index, open sourced place profiles, read their passages, and explore people indexed in the same verses. These shared passages do not imply residence or physical presence.
 - Switch among three layouts over the same data.
 - Adaptive zoom starts with immediate family. Zooming out reveals wider branches (up to eight family steps); zooming in near a visible person reveals their immediate relatives. Already revealed branches remain until reset or a new family is chosen.
 - Scene expansion preserves existing node positions and the camera. Circles have at least 126 world units between centers, and obstacle-aware routes avoid unrelated circles. Close zoom adds selective relationship labels.
@@ -21,7 +24,7 @@ There is no build step. `dist/` contains the editable source and deployable app.
 
 ## Extending the index
 
-The repeatable import is `node scripts/import-tipnr.cjs`. It downloads a pinned source into ignored `.cache/`, applies explicit identity mappings, source corrections, and relationship exclusions, then regenerates `dist/data.js` and the import report. Source identity suffixes are case-sensitive. Do not lowercase them or merge namesakes by display name.
+The repeatable people import is `node scripts/import-tipnr.cjs`. It downloads a pinned source into ignored `.cache/`, applies explicit identity mappings, source corrections, and relationship exclusions, then regenerates `dist/data.js` and the import report. Source identity suffixes are case-sensitive. Do not lowercase them or merge namesakes by display name. `python scripts/import-bible.py` imports the official eBible.org WEB USFX snapshot, and `node scripts/import-places.cjs` creates the settlement index from pinned STEP and OpenBible data. Download checksums and attribution are stored with the datasets. The Bible and city JSON files load only when needed.
 
 Every person has `name`, `gender`, `testament`, `era`, `description`, `refs`, and identity/source context. Relationships use `source`, `target`, `type` (`parent` or `spouse`), `ref`, `evidence`, and an optional `note`. Parent arrows point from parent to child. Do not silently merge different genealogical accounts or infer missing biological relatives.
 
@@ -29,6 +32,6 @@ Imported relationships cite the exact STEP index record rather than an arbitrary
 
 ## Validation
 
-Run `node validate-data.cjs`, `node scripts/validate-import.cjs`, `node tests/discovery.cjs`, and `node tests/graph-geometry.cjs`. Checks cover identity uniqueness, valid source provenance, genealogy exclusions, no ancestry cycles, progressive discovery, map limits, circle spacing, obstacle clearance, and stable camera/node positions during expansion.
+Run `node validate-data.cjs`, `node scripts/validate-import.cjs`, `node tests/discovery.cjs`, `node tests/paths.cjs`, `node tests/graph-highlights.cjs`, `node tests/graph-geometry.cjs`, `node tests/scripture.cjs`, and `node tests/places.cjs`. Checks cover identity uniqueness, source provenance, genealogy exclusions, paths, persistent highlights, progressive discovery, circle/arrow clearance, scripture completeness, annotation boundaries, namesakes, search, and city references.
 
 Google Fonts provides typography with system fallbacks. The application needs no external runtime library or data service after its static assets load.
