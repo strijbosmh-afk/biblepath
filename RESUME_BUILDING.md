@@ -19,11 +19,15 @@ BiblePath is a working static web app for reading the Bible, Tanakh and Qur’an
 3. A two-person connection finder. It prioritizes a parent-to-child path, then a reverse ancestral path, then a shortest family path. Gold highlights survive zoom, selection, and layout changes. Each connection has a source. Bible-cited links are the default; indexed links require opting in. Adam → Jesus has 63 steps and includes Joseph's legal parenthood.
 4. A full searchable Bible reader with links from identified names to people or cities, plus a searchable cities explorer.
 5. English, Dutch, and French language choices, localized profiles and controls, and a corresponding full Bible edition. Dutch is the first-visit default; an explicitly saved supported language wins. Language persists in local storage; reader location and city state survive a language change.
-6. Navigation order: Scripture readers, People index, Relationship map, Cities explorer. The reader is the landing view. The old ambiguous “Scripture” sidebar heading is now “People filter,” visible only in the people index and family map, with explicit scope text. The reader and cities have their own filters.
+6. Navigation order: Scripture readers, People index, Across traditions, Relationship map, Cities explorer. The reader is the landing view. “People filter” is visible only in the Bible index and family map; Torah and Qur’an indexes have separate searches. The reader and cities have their own filters.
 7. Publish the source here with this handover file.
 8. A Christianity / Judaism / Islam selector and full Tanakh and Qur’an readers. Tanakh follows Torah, Prophets and Writings, with 24 canonical books represented by 39 navigation components. Four independently numbered editions are available: Hebrew WLC, Jewish JPS 1917, Dutch Statenvertaling and French Segond. The latter two are prominently identified as Christian translation aids. The Qur’an has all 114 surahs and 6,236 numbered ayahs, Arabic original text and Dutch/English/French translations. Readers include search, references, navigation, edition credits and local notes. External Jewish commentary and tafsir links are separate from scripture.
 
 ## Important files
+
+The people expansion adds a separate Torah index (481 identities from 4,325 original index associations, 29 curated Torah profiles), a curated Qur’an index (60 people, 99 passage ranges), and 24 selected comparisons across Christianity, Judaism and Islam. IDs are namespaced; no imported family edges or biographies are shared across these collections. Index queries and selection remain independent from the reader tradition. Namesakes retain disambiguation; unnamed Qur’an figures retain descriptive labels. The comparison’s Jewish scope can include wider Tanakh figures outside the Torah index. Absence from a corpus is not treated as absence from a religion.
+
+`dist/people-traditions.js` and `.css` render the new indexes and comparison view. JSON data load lazily through `app.js`; failed loads are retryable and stale responses cannot switch the selected index. `dist/torah-people.json`, `dist/quran-people.json` and `dist/person-comparisons.json` contain localized records and source links. The first two have deterministic builders in `scripts/build-torah-people.cjs` and `scripts/build-quran-people.cjs`. Preserve their scope/reference notes: source-index numbering differs from some Hebrew edition coordinates, so profile citations open the actual source edition rather than assuming reader alignment.
 
 | File | Responsibility |
 | --- | --- |
@@ -127,16 +131,24 @@ node tests/sacred-library.cjs
 node tests/sacred-reader.cjs
 node tests/tanakh-data.cjs
 node tests/quran-data.cjs
+node tests/torah-people.cjs
+node tests/quran-people.cjs
+node tests/person-comparisons.cjs
+node tests/people-traditions.cjs
 python tests/import-bible.py
 python tests/import-bible-locales.py
 python scripts/import-tanakh.py --check
 python scripts/import-quran.py --check
+node scripts/build-torah-people.cjs --check
+node scripts/build-quran-people.cjs --check
 ```
 
-These are 18 Node suites, two Python importer suites and two additional import reproducibility checks. Run additional locale tests in `tests/` when changing translations or edition importers. Syntax-check edited JavaScript with `node --check`. Browser verification should cover:
+These are 22 Node suites, two Python importer suites and four additional reproducibility checks. Run additional locale tests in `tests/` when changing translations or edition importers. Syntax-check edited JavaScript with `node --check`. Browser verification should cover:
 
 - EN → NL → FR → EN, including a reload to verify stored language.
 - A fresh browser defaults to Dutch, while an existing explicit language preference is retained.
+- Bible → Torah → Qur’an people indexes preserve separate queries and profiles; Torah has no New Testament entries or copied Christian biographies. Arabic aliases work in the Qur’an index. Bible testament controls are hidden for the other collections.
+- Across traditions shows three separate accounts with sources; profile comparison buttons and return links route to the correct collection. Compare Moses, Jesus and Mary/Miriam, then switch languages without losing selection.
 - Christianity → Judaism → Islam → Christianity, preserving separate edition positions, including a reload. Verify failed-download retry and switching traditions during a pending download.
 - All three Tanakh groups, Hebrew RTL reading/search, authentic JPS text, clearly labeled Dutch/French aids and independent numbering (Hebrew Joel 4 versus translation Joel 3).
 - Qur’an Arabic alongside NL/EN/FR translations, diacritic-insensitive Arabic search, surah/ayah references, final surah navigation and source/translation notes.

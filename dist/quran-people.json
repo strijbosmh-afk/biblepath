@@ -1,0 +1,2901 @@
+{
+  "meta": {
+    "tradition": "islam",
+    "version": 1,
+    "reviewedOn": "2026-10-22",
+    "scope": {
+      "nl": "Een afzonderlijke, samengestelde Koranindex met de 25 traditioneel getelde profeten en andere genoemde of herkenbaar beschreven personen. Geen volledige index van iedere anonieme figuur; engelen, djinn en groepen vallen buiten deze selectie.",
+      "en": "A separate curated Qur’an index covering the 25 conventionally counted prophets and other named or recognisably described people. Not an exhaustive index of every anonymous figure; angels, jinn and groups are outside this selection.",
+      "fr": "Un index coranique distinct et sélectionné, comprenant les 25 prophètes traditionnellement dénombrés et d’autres personnes nommées ou reconnaissables dans le récit. Il ne recense pas chaque figure anonyme ; anges, djinns et groupes sont exclus."
+    },
+    "referenceNote": {
+      "nl": "Samenvattingen beschrijven de Koranpassages, geen samengevoegde levensgeschiedenis uit andere tradities. Beschrijvende namen zijn herkenningslabels. Gelijkende namen maken personen niet automatisch identiek; Dhu al-Kifl is traditioneel als profeet geteld, terwijl zijn verzen hem als geduldig en rechtvaardig omschrijven.",
+      "en": "Summaries describe Qur’anic passages, not merged biographies from other traditions. Descriptive names are identification labels. Similar names do not automatically establish identity; Dhu al-Kifl is conventionally counted as a prophet while his verses describe patience and righteousness.",
+      "fr": "Les résumés décrivent les passages coraniques, sans fusionner les biographies d’autres traditions. Les noms descriptifs servent de repères. Des noms voisins ne prouvent pas une identité ; Dhû al-Kifl est traditionnellement compté comme prophète, tandis que ses versets évoquent patience et droiture."
+    },
+    "sources": [
+      {
+        "id": "quran",
+        "label": "Qur’an — passage links at Quran.com",
+        "url": "https://quran.com/"
+      },
+      {
+        "id": "quranenc",
+        "label": "QuranEnc — text cross-check against the bundled editions",
+        "url": "https://quranenc.com/en/home"
+      }
+    ],
+    "editorialMethod": "Original NL/EN/FR paraphrases checked against the locally bundled QuranEnc editions and primary passage links. Commentary names are not silently substituted for unnamed Qur’anic figures. No cross-tradition family edges are inferred.",
+    "count": 60
+  },
+  "people": [
+    {
+      "id": "quran:adam",
+      "key": "adam",
+      "names": {
+        "nl": "Adam",
+        "en": "Adam",
+        "fr": "Adam"
+      },
+      "aliases": [
+        "آدم"
+      ],
+      "roles": {
+        "nl": [
+          "Profeet"
+        ],
+        "en": [
+          "Prophet"
+        ],
+        "fr": [
+          "Prophète"
+        ]
+      },
+      "summary": {
+        "nl": "God leert Adam de namen. Het verhaal beschrijft zijn verblijf met zijn vrouw in de tuin, hun overtreding en Gods aanvaarding van zijn berouw.",
+        "en": "God teaches Adam the names. His story describes life with his wife in the garden, their transgression and God accepting his repentance.",
+        "fr": "Dieu enseigne les noms à Adam. Son récit évoque le jardin avec son épouse, leur transgression et le repentir accepté par Dieu."
+      },
+      "refs": [
+        {
+          "label": "2:30–39",
+          "surah": 2,
+          "ayah": 30,
+          "endAyah": 39,
+          "url": "https://quran.com/2/30"
+        },
+        {
+          "label": "20:115–123",
+          "surah": 20,
+          "ayah": 115,
+          "endAyah": 123,
+          "url": "https://quran.com/20/115"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "comparisonKey": "adam"
+    },
+    {
+      "id": "quran:idris",
+      "key": "idris",
+      "names": {
+        "nl": "Idris",
+        "en": "Idris",
+        "fr": "Idrîs"
+      },
+      "aliases": [
+        "إدريس"
+      ],
+      "roles": {
+        "nl": [
+          "Profeet"
+        ],
+        "en": [
+          "Prophet"
+        ],
+        "fr": [
+          "Prophète"
+        ]
+      },
+      "summary": {
+        "nl": "Idris wordt als waarachtig en als profeet beschreven. God verheft hem tot een hoge plaats; de tekst geeft weinig biografische details.",
+        "en": "Idris is described as truthful and as a prophet. God raises him to a high station; the text gives few biographical details.",
+        "fr": "Idrîs est présenté comme véridique et prophète. Dieu l’élève à un rang élevé ; le texte donne peu de détails biographiques."
+      },
+      "refs": [
+        {
+          "label": "19:56–57",
+          "surah": 19,
+          "ayah": 56,
+          "endAyah": 57,
+          "url": "https://quran.com/19/56"
+        },
+        {
+          "label": "21:85–86",
+          "surah": 21,
+          "ayah": 85,
+          "endAyah": 86,
+          "url": "https://quran.com/21/85"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ]
+    },
+    {
+      "id": "quran:noah",
+      "key": "noah",
+      "names": {
+        "nl": "Nuh (Noach)",
+        "en": "Nuh (Noah)",
+        "fr": "Nûh (Noé)"
+      },
+      "aliases": [
+        "Nuh",
+        "Noah",
+        "Noach",
+        "Noé",
+        "نوح"
+      ],
+      "roles": {
+        "nl": [
+          "Profeet",
+          "Boodschapper"
+        ],
+        "en": [
+          "Prophet",
+          "Messenger"
+        ],
+        "fr": [
+          "Prophète",
+          "Messager"
+        ]
+      },
+      "summary": {
+        "nl": "Nuh roept zijn volk op God te dienen en bouwt de ark. De vloed, de redding van gelovigen en het lot van zijn zoon tonen dat familiebanden geen geloof vervangen.",
+        "en": "Nuh calls his people to worship God and builds the ark. The flood, the believers’ rescue and his son’s fate show that family ties do not replace faith.",
+        "fr": "Nûh appelle son peuple à adorer Dieu et construit l’arche. Le déluge, le salut des croyants et le sort de son fils distinguent foi et liens familiaux."
+      },
+      "refs": [
+        {
+          "label": "11:25–49",
+          "surah": 11,
+          "ayah": 25,
+          "endAyah": 49,
+          "url": "https://quran.com/11/25"
+        },
+        {
+          "label": "71:1–4",
+          "surah": 71,
+          "ayah": 1,
+          "endAyah": 4,
+          "url": "https://quran.com/71/1"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "comparisonKey": "noah"
+    },
+    {
+      "id": "quran:hud",
+      "key": "hud",
+      "names": {
+        "nl": "Hud",
+        "en": "Hud",
+        "fr": "Hûd"
+      },
+      "aliases": [
+        "هود"
+      ],
+      "roles": {
+        "nl": [
+          "Profeet",
+          "Boodschapper"
+        ],
+        "en": [
+          "Prophet",
+          "Messenger"
+        ],
+        "fr": [
+          "Prophète",
+          "Messager"
+        ]
+      },
+      "summary": {
+        "nl": "Hud waarschuwt het volk Ad en roept het op uitsluitend God te aanbidden. Hij en de gelovigen worden gered wanneer zijn tegenstanders zijn boodschap verwerpen.",
+        "en": "Hud warns the people of Ad and calls them to worship God alone. He and the believers are rescued when his opponents reject his message.",
+        "fr": "Hûd avertit le peuple de Ad et l’appelle à adorer Dieu seul. Lui et les croyants sont sauvés lorsque ses adversaires rejettent son message."
+      },
+      "refs": [
+        {
+          "label": "7:65–72",
+          "surah": 7,
+          "ayah": 65,
+          "endAyah": 72,
+          "url": "https://quran.com/7/65"
+        },
+        {
+          "label": "11:50–60",
+          "surah": 11,
+          "ayah": 50,
+          "endAyah": 60,
+          "url": "https://quran.com/11/50"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ]
+    },
+    {
+      "id": "quran:salih",
+      "key": "salih",
+      "names": {
+        "nl": "Salih",
+        "en": "Salih",
+        "fr": "Sâlih"
+      },
+      "aliases": [
+        "Saleh",
+        "صالح"
+      ],
+      "roles": {
+        "nl": [
+          "Profeet",
+          "Boodschapper"
+        ],
+        "en": [
+          "Prophet",
+          "Messenger"
+        ],
+        "fr": [
+          "Prophète",
+          "Messager"
+        ]
+      },
+      "summary": {
+        "nl": "Salih spreekt tot Thamoed. De kameelin vormt een teken en een beproeving; zijn waarschuwing wordt verworpen en het dier wordt gedood.",
+        "en": "Salih addresses Thamud. The she-camel is a sign and a test; his warning is rejected and the animal is killed.",
+        "fr": "Sâlih s’adresse aux Thamûd. La chamelle constitue un signe et une épreuve ; son avertissement est rejeté et l’animal est tué."
+      },
+      "refs": [
+        {
+          "label": "7:73–79",
+          "surah": 7,
+          "ayah": 73,
+          "endAyah": 79,
+          "url": "https://quran.com/7/73"
+        },
+        {
+          "label": "11:61–68",
+          "surah": 11,
+          "ayah": 61,
+          "endAyah": 68,
+          "url": "https://quran.com/11/61"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ]
+    },
+    {
+      "id": "quran:abraham",
+      "key": "abraham",
+      "names": {
+        "nl": "Ibrahim (Abraham)",
+        "en": "Ibrahim (Abraham)",
+        "fr": "Ibrâhîm (Abraham)"
+      },
+      "aliases": [
+        "Ibrahim",
+        "Abraham",
+        "إبراهيم"
+      ],
+      "roles": {
+        "nl": [
+          "Profeet"
+        ],
+        "en": [
+          "Prophet"
+        ],
+        "fr": [
+          "Prophète"
+        ]
+      },
+      "summary": {
+        "nl": "Ibrahim is een voorbeeld van toewijding aan één God. Hij wordt beproefd en bouwt samen met Ismail de fundamenten van het Huis; de Koran noemt hem Gods vriend.",
+        "en": "Ibrahim exemplifies devotion to one God. He is tested and raises the foundations of the House with Ismail; the Qur’an calls him God’s friend.",
+        "fr": "Ibrâhîm incarne la fidélité au Dieu unique. Il est éprouvé et élève avec Ismâïl les fondations de la Maison ; le Coran le présente comme ami de Dieu."
+      },
+      "refs": [
+        {
+          "label": "2:124–129",
+          "surah": 2,
+          "ayah": 124,
+          "endAyah": 129,
+          "url": "https://quran.com/2/124"
+        },
+        {
+          "label": "4:125",
+          "surah": 4,
+          "ayah": 125,
+          "url": "https://quran.com/4/125"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "comparisonKey": "abraham"
+    },
+    {
+      "id": "quran:lot",
+      "key": "lot",
+      "names": {
+        "nl": "Lut (Lot)",
+        "en": "Lut (Lot)",
+        "fr": "Lût (Loth)"
+      },
+      "aliases": [
+        "Lut",
+        "Lot",
+        "Loth",
+        "لوط"
+      ],
+      "roles": {
+        "nl": [
+          "Profeet",
+          "Boodschapper"
+        ],
+        "en": [
+          "Prophet",
+          "Messenger"
+        ],
+        "fr": [
+          "Prophète",
+          "Messager"
+        ]
+      },
+      "summary": {
+        "nl": "Lut waarschuwt zijn volk voor hun gedrag. Bezoekers kondigen het oordeel aan; hij en zijn gezin krijgen opdracht te vertrekken, met uitzondering van zijn vrouw.",
+        "en": "Lut warns his people about their conduct. Visitors announce judgment; he and his household are instructed to leave, with his wife excepted.",
+        "fr": "Lût avertit son peuple de sa conduite. Des visiteurs annoncent le jugement ; il doit partir avec les siens, à l’exception de son épouse."
+      },
+      "refs": [
+        {
+          "label": "11:77–83",
+          "surah": 11,
+          "ayah": 77,
+          "endAyah": 83,
+          "url": "https://quran.com/11/77"
+        },
+        {
+          "label": "26:160–175",
+          "surah": 26,
+          "ayah": 160,
+          "endAyah": 175,
+          "url": "https://quran.com/26/160"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "comparisonKey": "lot"
+    },
+    {
+      "id": "quran:ishmael",
+      "key": "ishmael",
+      "names": {
+        "nl": "Ismail (Ismaël)",
+        "en": "Ismail (Ishmael)",
+        "fr": "Ismâïl (Ismaël)"
+      },
+      "aliases": [
+        "Ismail",
+        "Ishmael",
+        "Ismaël",
+        "إسماعيل"
+      ],
+      "roles": {
+        "nl": [
+          "Profeet",
+          "Boodschapper"
+        ],
+        "en": [
+          "Prophet",
+          "Messenger"
+        ],
+        "fr": [
+          "Prophète",
+          "Messager"
+        ]
+      },
+      "summary": {
+        "nl": "Ismail helpt Ibrahim de fundamenten van het Huis op te richten. Hij wordt geprezen om zijn trouw aan beloften en zijn oproep tot gebed en aalmoezen.",
+        "en": "Ismail helps Ibrahim raise the foundations of the House. He is praised for keeping his promises and urging prayer and charitable giving.",
+        "fr": "Ismâïl aide Ibrâhîm à élever les fondations de la Maison. Il est loué pour sa fidélité aux promesses et son appel à la prière et à l’aumône."
+      },
+      "refs": [
+        {
+          "label": "2:127–129",
+          "surah": 2,
+          "ayah": 127,
+          "endAyah": 129,
+          "url": "https://quran.com/2/127"
+        },
+        {
+          "label": "19:54–55",
+          "surah": 19,
+          "ayah": 54,
+          "endAyah": 55,
+          "url": "https://quran.com/19/54"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "comparisonKey": "ishmael"
+    },
+    {
+      "id": "quran:isaac",
+      "key": "isaac",
+      "names": {
+        "nl": "Ishaq (Isaak)",
+        "en": "Ishaq (Isaac)",
+        "fr": "Ishâq (Isaac)"
+      },
+      "aliases": [
+        "Ishaq",
+        "Isaak",
+        "Isaac",
+        "إسحاق"
+      ],
+      "roles": {
+        "nl": [
+          "Profeet"
+        ],
+        "en": [
+          "Prophet"
+        ],
+        "fr": [
+          "Prophète"
+        ]
+      },
+      "summary": {
+        "nl": "Ishaq wordt aan Ibrahim en zijn vrouw aangekondigd. De Koran noemt hem een rechtvaardige profeet en verbindt hem met de belofte van Yaqub.",
+        "en": "Ishaq is announced to Ibrahim and his wife. The Qur’an describes him as a righteous prophet and connects his birth announcement with Yaqub.",
+        "fr": "Ishâq est annoncé à Ibrâhîm et à son épouse. Le Coran le décrit comme un prophète vertueux et associe cette annonce à Ya‘qûb."
+      },
+      "refs": [
+        {
+          "label": "11:71–73",
+          "surah": 11,
+          "ayah": 71,
+          "endAyah": 73,
+          "url": "https://quran.com/11/71"
+        },
+        {
+          "label": "37:112–113",
+          "surah": 37,
+          "ayah": 112,
+          "endAyah": 113,
+          "url": "https://quran.com/37/112"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "comparisonKey": "isaac"
+    },
+    {
+      "id": "quran:jacob",
+      "key": "jacob",
+      "names": {
+        "nl": "Yaqub (Jakob)",
+        "en": "Yaqub (Jacob)",
+        "fr": "Ya‘qûb (Jacob)"
+      },
+      "aliases": [
+        "Yaqub",
+        "Jakob",
+        "Jacob",
+        "Israïl",
+        "يعقوب"
+      ],
+      "roles": {
+        "nl": [
+          "Profeet",
+          "Ouder"
+        ],
+        "en": [
+          "Prophet",
+          "Parent"
+        ],
+        "fr": [
+          "Prophète",
+          "Parent"
+        ]
+      },
+      "summary": {
+        "nl": "Yaqub draagt zijn zonen op de ene God te dienen. In Yusufs verhaal treurt hij om zijn verdwenen zoon en houdt hij hoop op Gods barmhartigheid.",
+        "en": "Yaqub urges his sons to serve the one God. In Yusuf’s story he grieves for his missing son while retaining hope in God’s mercy.",
+        "fr": "Ya‘qûb demande à ses fils de servir le Dieu unique. Dans le récit de Yûsuf, il pleure son fils disparu tout en gardant espoir en la miséricorde divine."
+      },
+      "refs": [
+        {
+          "label": "2:132–133",
+          "surah": 2,
+          "ayah": 132,
+          "endAyah": 133,
+          "url": "https://quran.com/2/132"
+        },
+        {
+          "label": "12:83–87",
+          "surah": 12,
+          "ayah": 83,
+          "endAyah": 87,
+          "url": "https://quran.com/12/83"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "comparisonKey": "jacob"
+    },
+    {
+      "id": "quran:joseph",
+      "key": "joseph",
+      "names": {
+        "nl": "Yusuf (Jozef)",
+        "en": "Yusuf (Joseph)",
+        "fr": "Yûsuf (Joseph)"
+      },
+      "aliases": [
+        "Yusuf",
+        "Jozef",
+        "Joseph",
+        "يوسف"
+      ],
+      "roles": {
+        "nl": [
+          "Profeet"
+        ],
+        "en": [
+          "Prophet"
+        ],
+        "fr": [
+          "Prophète"
+        ]
+      },
+      "summary": {
+        "nl": "Yusuf wordt door zijn broers weggevoerd, komt in Egypte terecht en legt dromen uit. Na gevangenschap krijgt hij verantwoordelijkheid over de voorraden en wordt hij met zijn familie herenigd.",
+        "en": "Yusuf is taken away by his brothers, reaches Egypt and interprets dreams. After imprisonment he receives responsibility for the storehouses and is reunited with his family.",
+        "fr": "Yûsuf est éloigné par ses frères, arrive en Égypte et interprète les rêves. Après la prison, il reçoit la gestion des réserves et retrouve sa famille."
+      },
+      "refs": [
+        {
+          "label": "12:4–18",
+          "surah": 12,
+          "ayah": 4,
+          "endAyah": 18,
+          "url": "https://quran.com/12/4"
+        },
+        {
+          "label": "12:54–57",
+          "surah": 12,
+          "ayah": 54,
+          "endAyah": 57,
+          "url": "https://quran.com/12/54"
+        },
+        {
+          "label": "12:99–101",
+          "surah": 12,
+          "ayah": 99,
+          "endAyah": 101,
+          "url": "https://quran.com/12/99"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "comparisonKey": "joseph"
+    },
+    {
+      "id": "quran:shuayb",
+      "key": "shuayb",
+      "names": {
+        "nl": "Shuayb",
+        "en": "Shuayb",
+        "fr": "Chu‘ayb"
+      },
+      "aliases": [
+        "Shuaib",
+        "شعيب"
+      ],
+      "roles": {
+        "nl": [
+          "Profeet",
+          "Boodschapper"
+        ],
+        "en": [
+          "Prophet",
+          "Messenger"
+        ],
+        "fr": [
+          "Prophète",
+          "Messager"
+        ]
+      },
+      "summary": {
+        "nl": "Shuayb roept Midjan op God te dienen en eerlijk te handelen met maten en gewichten. Zijn boodschap verbindt geloof met rechtvaardigheid in het dagelijks verkeer.",
+        "en": "Shuayb calls Midian to worship God and use honest measures and weights. His message connects faith with justice in everyday dealings.",
+        "fr": "Chu‘ayb appelle Madyan à adorer Dieu et à respecter les poids et mesures. Son message relie la foi à la justice dans les échanges quotidiens."
+      },
+      "refs": [
+        {
+          "label": "7:85–93",
+          "surah": 7,
+          "ayah": 85,
+          "endAyah": 93,
+          "url": "https://quran.com/7/85"
+        },
+        {
+          "label": "11:84–95",
+          "surah": 11,
+          "ayah": 84,
+          "endAyah": 95,
+          "url": "https://quran.com/11/84"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ]
+    },
+    {
+      "id": "quran:job",
+      "key": "job",
+      "names": {
+        "nl": "Ayyub (Job)",
+        "en": "Ayyub (Job)",
+        "fr": "Ayyûb (Job)"
+      },
+      "aliases": [
+        "Ayyub",
+        "Job",
+        "أيوب"
+      ],
+      "roles": {
+        "nl": [
+          "Profeet"
+        ],
+        "en": [
+          "Prophet"
+        ],
+        "fr": [
+          "Prophète"
+        ]
+      },
+      "summary": {
+        "nl": "Ayyub roept God aan tijdens zijn lijden. Zijn beproeving, herstel en geduld vormen de kern van de korte passages over hem.",
+        "en": "Ayyub calls upon God in suffering. His trial, restoration and patience are central to the short passages about him.",
+        "fr": "Ayyûb invoque Dieu dans la souffrance. Son épreuve, son rétablissement et sa patience sont au cœur des courts passages qui le concernent."
+      },
+      "refs": [
+        {
+          "label": "21:83–84",
+          "surah": 21,
+          "ayah": 83,
+          "endAyah": 84,
+          "url": "https://quran.com/21/83"
+        },
+        {
+          "label": "38:41–44",
+          "surah": 38,
+          "ayah": 41,
+          "endAyah": 44,
+          "url": "https://quran.com/38/41"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "comparisonKey": "job"
+    },
+    {
+      "id": "quran:dhul-kifl",
+      "key": "dhul-kifl",
+      "names": {
+        "nl": "Dhu al-Kifl",
+        "en": "Dhu al-Kifl",
+        "fr": "Dhû al-Kifl"
+      },
+      "aliases": [
+        "Dhul-Kifl",
+        "ذو الكفل"
+      ],
+      "roles": {
+        "nl": [
+          "Gelovige"
+        ],
+        "en": [
+          "Believer"
+        ],
+        "fr": [
+          "Croyant"
+        ]
+      },
+      "summary": {
+        "nl": "Dhu al-Kifl wordt met Ismail en Idris geprezen om geduld en rechtschapenheid. Hij wordt traditioneel onder de 25 profeten gerekend, maar deze verzen noemen hem niet uitdrukkelijk profeet.",
+        "en": "Dhu al-Kifl is praised with Ismail and Idris for patience and righteousness. Conventionally counted among the 25 prophets, he is not explicitly called a prophet in these verses.",
+        "fr": "Dhû al-Kifl est loué avec Ismâïl et Idrîs pour sa patience et sa droiture. Traditionnellement compté parmi les 25 prophètes, il n’est pas explicitement qualifié de prophète dans ces versets."
+      },
+      "refs": [
+        {
+          "label": "21:85–86",
+          "surah": 21,
+          "ayah": 85,
+          "endAyah": 86,
+          "url": "https://quran.com/21/85"
+        },
+        {
+          "label": "38:48",
+          "surah": 38,
+          "ayah": 48,
+          "url": "https://quran.com/38/48"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "classification": "conventionally-counted-prophet"
+    },
+    {
+      "id": "quran:moses",
+      "key": "moses",
+      "names": {
+        "nl": "Musa (Mozes)",
+        "en": "Musa (Moses)",
+        "fr": "Mûsâ (Moïse)"
+      },
+      "aliases": [
+        "Musa",
+        "Mozes",
+        "Moses",
+        "Moïse",
+        "موسى"
+      ],
+      "roles": {
+        "nl": [
+          "Profeet",
+          "Boodschapper"
+        ],
+        "en": [
+          "Prophet",
+          "Messenger"
+        ],
+        "fr": [
+          "Prophète",
+          "Messager"
+        ]
+      },
+      "summary": {
+        "nl": "God spreekt Musa aan en zendt hem naar Farao, met Harun als helper. Zijn verhalen behandelen bevrijding, openbaring, leiding en de beproevingen van zijn volk.",
+        "en": "God addresses Musa and sends him to Pharaoh, with Harun as his helper. His narratives concern deliverance, revelation, leadership and the trials of his people.",
+        "fr": "Dieu s’adresse à Mûsâ et l’envoie auprès de Pharaon, avec Hârûn pour l’aider. Ses récits portent sur la délivrance, la révélation et les épreuves de son peuple."
+      },
+      "refs": [
+        {
+          "label": "20:9–36",
+          "surah": 20,
+          "ayah": 9,
+          "endAyah": 36,
+          "url": "https://quran.com/20/9"
+        },
+        {
+          "label": "7:103–137",
+          "surah": 7,
+          "ayah": 103,
+          "endAyah": 137,
+          "url": "https://quran.com/7/103"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "comparisonKey": "moses"
+    },
+    {
+      "id": "quran:aaron",
+      "key": "aaron",
+      "names": {
+        "nl": "Harun (Aäron)",
+        "en": "Harun (Aaron)",
+        "fr": "Hârûn (Aaron)"
+      },
+      "aliases": [
+        "Harun",
+        "Aäron",
+        "Aaron",
+        "هارون"
+      ],
+      "roles": {
+        "nl": [
+          "Profeet"
+        ],
+        "en": [
+          "Prophet"
+        ],
+        "fr": [
+          "Prophète"
+        ]
+      },
+      "summary": {
+        "nl": "Harun is Musa’s broer en helper. Tijdens de episode met het kalf waarschuwt hij het volk en roept het op hem te volgen.",
+        "en": "Harun is Musa’s brother and helper. During the calf episode he warns the people and calls them to follow him.",
+        "fr": "Hârûn est le frère et l’assistant de Mûsâ. Lors de l’épisode du veau, il avertit le peuple et l’appelle à le suivre."
+      },
+      "refs": [
+        {
+          "label": "19:53",
+          "surah": 19,
+          "ayah": 53,
+          "url": "https://quran.com/19/53"
+        },
+        {
+          "label": "20:29–36",
+          "surah": 20,
+          "ayah": 29,
+          "endAyah": 36,
+          "url": "https://quran.com/20/29"
+        },
+        {
+          "label": "20:90–94",
+          "surah": 20,
+          "ayah": 90,
+          "endAyah": 94,
+          "url": "https://quran.com/20/90"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "comparisonKey": "aaron"
+    },
+    {
+      "id": "quran:david",
+      "key": "david",
+      "names": {
+        "nl": "Dawud (David)",
+        "en": "Dawud (David)",
+        "fr": "Dâwûd (David)"
+      },
+      "aliases": [
+        "Dawud",
+        "David",
+        "داود"
+      ],
+      "roles": {
+        "nl": [
+          "Profeet",
+          "Heerser"
+        ],
+        "en": [
+          "Prophet",
+          "Ruler"
+        ],
+        "fr": [
+          "Prophète",
+          "Souverain"
+        ]
+      },
+      "summary": {
+        "nl": "Dawud verslaat Jalut en ontvangt koningschap en wijsheid. Hij ontvangt de Zabur; een andere passage benadrukt zijn verantwoordelijkheid om rechtvaardig te oordelen.",
+        "en": "Dawud defeats Jalut and receives kingship and wisdom. He receives the Zabur; another passage stresses his responsibility to judge justly.",
+        "fr": "Dâwûd vainc Jâlût et reçoit royauté et sagesse. Il reçoit le Zabûr ; un autre passage souligne sa responsabilité de juger avec justice."
+      },
+      "refs": [
+        {
+          "label": "2:251",
+          "surah": 2,
+          "ayah": 251,
+          "url": "https://quran.com/2/251"
+        },
+        {
+          "label": "4:163",
+          "surah": 4,
+          "ayah": 163,
+          "url": "https://quran.com/4/163"
+        },
+        {
+          "label": "38:17–26",
+          "surah": 38,
+          "ayah": 17,
+          "endAyah": 26,
+          "url": "https://quran.com/38/17"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "comparisonKey": "david"
+    },
+    {
+      "id": "quran:solomon",
+      "key": "solomon",
+      "names": {
+        "nl": "Sulayman (Salomo)",
+        "en": "Sulayman (Solomon)",
+        "fr": "Sulaymân (Salomon)"
+      },
+      "aliases": [
+        "Sulayman",
+        "Salomo",
+        "Solomon",
+        "Salomon",
+        "سليمان"
+      ],
+      "roles": {
+        "nl": [
+          "Profeet",
+          "Heerser"
+        ],
+        "en": [
+          "Prophet",
+          "Ruler"
+        ],
+        "fr": [
+          "Prophète",
+          "Souverain"
+        ]
+      },
+      "summary": {
+        "nl": "Sulayman erft van Dawud en dankt God voor zijn gaven. Zijn verhalen omvatten kennis van de vogels, zijn heerschappij en de ontmoeting met de koningin van Saba.",
+        "en": "Sulayman inherits from Dawud and thanks God for his gifts. His stories include knowledge of birds, his rule and the encounter with the queen of Sheba.",
+        "fr": "Sulaymân hérite de Dâwûd et remercie Dieu de ses dons. Ses récits évoquent le langage des oiseaux, son règne et sa rencontre avec la reine de Saba."
+      },
+      "refs": [
+        {
+          "label": "27:15–44",
+          "surah": 27,
+          "ayah": 15,
+          "endAyah": 44,
+          "url": "https://quran.com/27/15"
+        },
+        {
+          "label": "38:30–40",
+          "surah": 38,
+          "ayah": 30,
+          "endAyah": 40,
+          "url": "https://quran.com/38/30"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "comparisonKey": "solomon"
+    },
+    {
+      "id": "quran:elijah",
+      "key": "elijah",
+      "names": {
+        "nl": "Ilyas (Elia)",
+        "en": "Ilyas (Elijah)",
+        "fr": "Ilyâs (Élie)"
+      },
+      "aliases": [
+        "Ilyas",
+        "Elia",
+        "Elijah",
+        "Élie",
+        "إلياس"
+      ],
+      "roles": {
+        "nl": [
+          "Profeet",
+          "Boodschapper"
+        ],
+        "en": [
+          "Prophet",
+          "Messenger"
+        ],
+        "fr": [
+          "Prophète",
+          "Messager"
+        ]
+      },
+      "summary": {
+        "nl": "Ilyas roept zijn volk op God te dienen in plaats van Baäl. Hij wordt onder de rechtvaardigen en de boodschappers genoemd.",
+        "en": "Ilyas calls his people to worship God rather than Baal. He is named among the righteous and the messengers.",
+        "fr": "Ilyâs appelle son peuple à adorer Dieu plutôt que Baal. Il est cité parmi les vertueux et les messagers."
+      },
+      "refs": [
+        {
+          "label": "6:85",
+          "surah": 6,
+          "ayah": 85,
+          "url": "https://quran.com/6/85"
+        },
+        {
+          "label": "37:123–132",
+          "surah": 37,
+          "ayah": 123,
+          "endAyah": 132,
+          "url": "https://quran.com/37/123"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "comparisonKey": "elijah"
+    },
+    {
+      "id": "quran:elisha",
+      "key": "elisha",
+      "names": {
+        "nl": "Al-Yasa (Elisa)",
+        "en": "Al-Yasa (Elisha)",
+        "fr": "Al-Yasa‘ (Élisée)"
+      },
+      "aliases": [
+        "Al-Yasa",
+        "Elisa",
+        "Elisha",
+        "Élisée",
+        "اليسع"
+      ],
+      "roles": {
+        "nl": [
+          "Profeet"
+        ],
+        "en": [
+          "Prophet"
+        ],
+        "fr": [
+          "Prophète"
+        ]
+      },
+      "summary": {
+        "nl": "Al-Yasa wordt genoemd in lijsten van door God begunstigde en uitmuntende personen. De Koran vertelt geen afzonderlijke levensgeschiedenis over hem.",
+        "en": "Al-Yasa appears in lists of people favoured by God and counted among the outstanding. The Qur’an gives no separate life narrative for him.",
+        "fr": "Al-Yasa‘ figure parmi les personnes favorisées par Dieu et les meilleurs de Ses serviteurs. Le Coran ne présente pas de récit distinct de sa vie."
+      },
+      "refs": [
+        {
+          "label": "6:86–89",
+          "surah": 6,
+          "ayah": 86,
+          "endAyah": 89,
+          "url": "https://quran.com/6/86"
+        },
+        {
+          "label": "38:48",
+          "surah": 38,
+          "ayah": 48,
+          "url": "https://quran.com/38/48"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "comparisonKey": "elisha"
+    },
+    {
+      "id": "quran:jonah",
+      "key": "jonah",
+      "names": {
+        "nl": "Yunus (Jona)",
+        "en": "Yunus (Jonah)",
+        "fr": "Yûnus (Jonas)"
+      },
+      "aliases": [
+        "Yunus",
+        "Jona",
+        "Jonah",
+        "Jonas",
+        "يونس"
+      ],
+      "roles": {
+        "nl": [
+          "Profeet",
+          "Boodschapper"
+        ],
+        "en": [
+          "Prophet",
+          "Messenger"
+        ],
+        "fr": [
+          "Prophète",
+          "Messager"
+        ]
+      },
+      "summary": {
+        "nl": "Yunus verlaat zijn volk, wordt door een grote vis opgeslokt en roept God aan. Zijn redding en het geloof van zijn volk staan centraal.",
+        "en": "Yunus leaves his people, is swallowed by a great fish and calls upon God. His rescue and his people’s belief are central to his story.",
+        "fr": "Yûnus quitte son peuple, est avalé par un grand poisson et invoque Dieu. Son salut et la foi de son peuple sont au centre du récit."
+      },
+      "refs": [
+        {
+          "label": "21:87–88",
+          "surah": 21,
+          "ayah": 87,
+          "endAyah": 88,
+          "url": "https://quran.com/21/87"
+        },
+        {
+          "label": "37:139–148",
+          "surah": 37,
+          "ayah": 139,
+          "endAyah": 148,
+          "url": "https://quran.com/37/139"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "comparisonKey": "jonah"
+    },
+    {
+      "id": "quran:zechariah",
+      "key": "zechariah",
+      "names": {
+        "nl": "Zakariya (Zacharias)",
+        "en": "Zakariya (Zechariah)",
+        "fr": "Zakariyyâ (Zacharie)"
+      },
+      "aliases": [
+        "Zakariya",
+        "Zacharias",
+        "Zechariah",
+        "Zacharie",
+        "زكريا"
+      ],
+      "roles": {
+        "nl": [
+          "Profeet",
+          "Ouder"
+        ],
+        "en": [
+          "Prophet",
+          "Parent"
+        ],
+        "fr": [
+          "Prophète",
+          "Parent"
+        ]
+      },
+      "summary": {
+        "nl": "Zakariya draagt zorg voor Maryam en bidt op hoge leeftijd om een kind. De geboorte van Yahya wordt hem aangekondigd.",
+        "en": "Zakariya cares for Maryam and prays for a child in old age. The birth of Yahya is announced to him.",
+        "fr": "Zakariyyâ prend soin de Maryam et prie pour avoir un enfant malgré son âge avancé. La naissance de Yahyâ lui est annoncée."
+      },
+      "refs": [
+        {
+          "label": "3:37–41",
+          "surah": 3,
+          "ayah": 37,
+          "endAyah": 41,
+          "url": "https://quran.com/3/37"
+        },
+        {
+          "label": "19:2–11",
+          "surah": 19,
+          "ayah": 2,
+          "endAyah": 11,
+          "url": "https://quran.com/19/2"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "comparisonKey": "zechariah"
+    },
+    {
+      "id": "quran:john-baptist",
+      "key": "john-baptist",
+      "names": {
+        "nl": "Yahya (Johannes)",
+        "en": "Yahya (John)",
+        "fr": "Yahyâ (Jean)"
+      },
+      "aliases": [
+        "Yahya",
+        "Johannes",
+        "John",
+        "Jean",
+        "يحيى"
+      ],
+      "roles": {
+        "nl": [
+          "Profeet"
+        ],
+        "en": [
+          "Prophet"
+        ],
+        "fr": [
+          "Prophète"
+        ]
+      },
+      "summary": {
+        "nl": "Yahya wordt als zoon aan Zakariya aangekondigd. Hij ontvangt als kind wijsheid en wordt beschreven als zuiver, godvrezend en goed voor zijn ouders.",
+        "en": "Yahya is announced as Zakariya’s son. He receives wisdom in childhood and is described as pure, devout and kind to his parents.",
+        "fr": "Yahyâ est annoncé comme fils de Zakariyyâ. Il reçoit la sagesse dès l’enfance et est présenté comme pur, pieux et bon envers ses parents."
+      },
+      "refs": [
+        {
+          "label": "3:39",
+          "surah": 3,
+          "ayah": 39,
+          "url": "https://quran.com/3/39"
+        },
+        {
+          "label": "19:7–15",
+          "surah": 19,
+          "ayah": 7,
+          "endAyah": 15,
+          "url": "https://quran.com/19/7"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "comparisonKey": "john-baptist"
+    },
+    {
+      "id": "quran:jesus",
+      "key": "jesus",
+      "names": {
+        "nl": "Isa (Jezus)",
+        "en": "Isa (Jesus)",
+        "fr": "Îsâ (Jésus)"
+      },
+      "aliases": [
+        "Isa",
+        "Jezus",
+        "Jesus",
+        "Jésus",
+        "Messias",
+        "عيسى"
+      ],
+      "roles": {
+        "nl": [
+          "Profeet",
+          "Boodschapper"
+        ],
+        "en": [
+          "Prophet",
+          "Messenger"
+        ],
+        "fr": [
+          "Prophète",
+          "Messager"
+        ]
+      },
+      "summary": {
+        "nl": "Isa is de zoon van Maryam, de Messias en een boodschapper. Hij ontvangt de Injil en verricht tekenen met Gods toestemming; de Koran verwerpt zijn goddelijkheid.",
+        "en": "Isa is Maryam’s son, the Messiah and a messenger. He receives the Injil and performs signs by God’s permission; the Qur’an rejects his divinity.",
+        "fr": "Îsâ est le fils de Maryam, le Messie et un messager. Il reçoit l’Injîl et accomplit des signes avec la permission de Dieu ; le Coran rejette sa divinité."
+      },
+      "refs": [
+        {
+          "label": "3:45–51",
+          "surah": 3,
+          "ayah": 45,
+          "endAyah": 51,
+          "url": "https://quran.com/3/45"
+        },
+        {
+          "label": "5:72–75",
+          "surah": 5,
+          "ayah": 72,
+          "endAyah": 75,
+          "url": "https://quran.com/5/72"
+        },
+        {
+          "label": "5:110",
+          "surah": 5,
+          "ayah": 110,
+          "url": "https://quran.com/5/110"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "comparisonKey": "jesus"
+    },
+    {
+      "id": "quran:muhammad",
+      "key": "muhammad",
+      "names": {
+        "nl": "Mohammed",
+        "en": "Muhammad",
+        "fr": "Muhammad"
+      },
+      "aliases": [
+        "Muhammad",
+        "Mohammed",
+        "Ahmad",
+        "محمد"
+      ],
+      "roles": {
+        "nl": [
+          "Profeet",
+          "Boodschapper"
+        ],
+        "en": [
+          "Prophet",
+          "Messenger"
+        ],
+        "fr": [
+          "Prophète",
+          "Messager"
+        ]
+      },
+      "summary": {
+        "nl": "Mohammed wordt Gods boodschapper en het zegel van de profeten genoemd. De Koran presenteert hem als een voorbeeld voor gelovigen en als mens die openbaring ontvangt.",
+        "en": "Muhammad is called God’s messenger and the seal of the prophets. The Qur’an presents him as an example for believers and as a human receiving revelation.",
+        "fr": "Muhammad est appelé messager de Dieu et sceau des prophètes. Le Coran le présente comme un exemple pour les croyants et un être humain recevant la révélation."
+      },
+      "refs": [
+        {
+          "label": "33:21",
+          "surah": 33,
+          "ayah": 21,
+          "url": "https://quran.com/33/21"
+        },
+        {
+          "label": "33:40",
+          "surah": 33,
+          "ayah": 40,
+          "url": "https://quran.com/33/40"
+        },
+        {
+          "label": "18:110",
+          "surah": 18,
+          "ayah": 110,
+          "url": "https://quran.com/18/110"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "comparisonKey": "muhammad"
+    },
+    {
+      "id": "quran:mary",
+      "key": "mary",
+      "names": {
+        "nl": "Maryam (Maria)",
+        "en": "Maryam (Mary)",
+        "fr": "Maryam (Marie)"
+      },
+      "aliases": [
+        "Maryam",
+        "Maria",
+        "Mary",
+        "Marie",
+        "مريم"
+      ],
+      "roles": {
+        "nl": [
+          "Ouder",
+          "Gelovige"
+        ],
+        "en": [
+          "Parent",
+          "Believer"
+        ],
+        "fr": [
+          "Parent",
+          "Croyant"
+        ]
+      },
+      "summary": {
+        "nl": "Maryam wordt door God uitverkoren. Zij ontvangt de aankondiging van Isa, baart hem zonder menselijke vader en wordt als voorbeeld van toewijding genoemd.",
+        "en": "Maryam is chosen by God. She receives the announcement of Isa, gives birth without a human father and is presented as an example of devotion.",
+        "fr": "Maryam est choisie par Dieu. Elle reçoit l’annonce de Îsâ, enfante sans père humain et est présentée comme un exemple de dévotion."
+      },
+      "refs": [
+        {
+          "label": "3:42–47",
+          "surah": 3,
+          "ayah": 42,
+          "endAyah": 47,
+          "url": "https://quran.com/3/42"
+        },
+        {
+          "label": "19:16–36",
+          "surah": 19,
+          "ayah": 16,
+          "endAyah": 36,
+          "url": "https://quran.com/19/16"
+        },
+        {
+          "label": "66:12",
+          "surah": 66,
+          "ayah": 12,
+          "url": "https://quran.com/66/12"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "comparisonKey": "mary"
+    },
+    {
+      "id": "quran:imran",
+      "key": "imran",
+      "names": {
+        "nl": "Imran",
+        "en": "Imran",
+        "fr": "‘Imrân"
+      },
+      "aliases": [
+        "عمران"
+      ],
+      "roles": {
+        "nl": [
+          "Ouder"
+        ],
+        "en": [
+          "Parent"
+        ],
+        "fr": [
+          "Parent"
+        ]
+      },
+      "summary": {
+        "nl": "Imran wordt genoemd in de uitverkoren familie van Imran en als vader van Maryam. Deze vermelding wordt hier niet samengevoegd met een gelijknamige Bijbelse identiteit.",
+        "en": "Imran is named in the chosen family of Imran and as Maryam’s father. This entry is not merged with a similarly named biblical identity.",
+        "fr": "‘Imrân est mentionné dans la famille élue de ‘Imrân et comme père de Maryam. Cette entrée n’est pas fusionnée avec une identité biblique au nom voisin."
+      },
+      "refs": [
+        {
+          "label": "3:33–36",
+          "surah": 3,
+          "ayah": 33,
+          "endAyah": 36,
+          "url": "https://quran.com/3/33"
+        },
+        {
+          "label": "66:12",
+          "surah": 66,
+          "ayah": 12,
+          "url": "https://quran.com/66/12"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ]
+    },
+    {
+      "id": "quran:azar",
+      "key": "azar",
+      "names": {
+        "nl": "Azar",
+        "en": "Azar",
+        "fr": "Âzar"
+      },
+      "aliases": [
+        "آزر"
+      ],
+      "roles": {
+        "nl": [
+          "Ouder"
+        ],
+        "en": [
+          "Parent"
+        ],
+        "fr": [
+          "Parent"
+        ]
+      },
+      "summary": {
+        "nl": "Azar wordt in de Koran als Ibrahims vader aangesproken in een gesprek over afgodsbeelden. De index voegt hem niet automatisch samen met Terach uit Genesis.",
+        "en": "Azar is addressed in the Qur’an as Ibrahim’s father in a discussion about idols. The index does not automatically merge him with Terah in Genesis.",
+        "fr": "Âzar est désigné dans le Coran comme le père d’Ibrâhîm lors d’un échange sur les idoles. L’index ne le fusionne pas automatiquement avec Térah dans la Genèse."
+      },
+      "refs": [
+        {
+          "label": "6:74",
+          "surah": 6,
+          "ayah": 74,
+          "url": "https://quran.com/6/74"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ]
+    },
+    {
+      "id": "quran:luqman",
+      "key": "luqman",
+      "names": {
+        "nl": "Luqman",
+        "en": "Luqman",
+        "fr": "Luqmân"
+      },
+      "aliases": [
+        "لقمان"
+      ],
+      "roles": {
+        "nl": [
+          "Wijsheid",
+          "Ouder"
+        ],
+        "en": [
+          "Wisdom",
+          "Parent"
+        ],
+        "fr": [
+          "Sagesse",
+          "Parent"
+        ]
+      },
+      "summary": {
+        "nl": "Luqman ontvangt wijsheid en onderwijst zijn zoon. Zijn raad gaat over Gods eenheid, gebed, geduld en bescheiden gedrag; de passage noemt hem niet profeet.",
+        "en": "Luqman receives wisdom and teaches his son. His counsel concerns God’s oneness, prayer, patience and humility; the passage does not call him a prophet.",
+        "fr": "Luqmân reçoit la sagesse et instruit son fils. Ses conseils concernent l’unicité de Dieu, la prière, la patience et l’humilité ; le passage ne le qualifie pas de prophète."
+      },
+      "refs": [
+        {
+          "label": "31:12–19",
+          "surah": 31,
+          "ayah": 12,
+          "endAyah": 19,
+          "url": "https://quran.com/31/12"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ]
+    },
+    {
+      "id": "quran:uzayr",
+      "key": "uzayr",
+      "names": {
+        "nl": "Uzayr",
+        "en": "Uzayr",
+        "fr": "‘Uzayr"
+      },
+      "aliases": [
+        "Ezra",
+        "عزير"
+      ],
+      "roles": {
+        "nl": [
+          "Verhaalfiguur"
+        ],
+        "en": [
+          "Narrative figure"
+        ],
+        "fr": [
+          "Figure du récit"
+        ]
+      },
+      "summary": {
+        "nl": "Uzayr wordt genoemd in een passage die een uitspraak over goddelijk zoonschap weerlegt. De passage biedt geen levensbeschrijving; zij is geen beschrijving van wat alle joden geloven.",
+        "en": "Uzayr is named in a passage rejecting a claim of divine sonship. It offers no biography and should not be treated as a description of what all Jews believe.",
+        "fr": "‘Uzayr est nommé dans un passage réfutant une affirmation de filiation divine. Il ne donne pas de biographie et ne décrit pas la croyance de tous les juifs."
+      },
+      "refs": [
+        {
+          "label": "9:30",
+          "surah": 9,
+          "ayah": 30,
+          "url": "https://quran.com/9/30"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ]
+    },
+    {
+      "id": "quran:talut",
+      "key": "talut",
+      "names": {
+        "nl": "Talut",
+        "en": "Talut",
+        "fr": "Tâlût"
+      },
+      "aliases": [
+        "Saul",
+        "طالوت"
+      ],
+      "roles": {
+        "nl": [
+          "Heerser"
+        ],
+        "en": [
+          "Ruler"
+        ],
+        "fr": [
+          "Souverain"
+        ]
+      },
+      "summary": {
+        "nl": "Talut wordt als koning aangesteld en leidt zijn leger. De oversteek van een rivier beproeft zijn manschappen vóór de strijd tegen Jalut.",
+        "en": "Talut is appointed king and leads his army. A river crossing tests his troops before the battle against Jalut.",
+        "fr": "Tâlût est établi roi et conduit son armée. La traversée d’une rivière met ses hommes à l’épreuve avant le combat contre Jâlût."
+      },
+      "refs": [
+        {
+          "label": "2:247–251",
+          "surah": 2,
+          "ayah": 247,
+          "endAyah": 251,
+          "url": "https://quran.com/2/247"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ]
+    },
+    {
+      "id": "quran:jalut",
+      "key": "jalut",
+      "names": {
+        "nl": "Jalut",
+        "en": "Jalut",
+        "fr": "Jâlût"
+      },
+      "aliases": [
+        "Goliath",
+        "جالوت"
+      ],
+      "roles": {
+        "nl": [
+          "Tegenstander"
+        ],
+        "en": [
+          "Opponent"
+        ],
+        "fr": [
+          "Adversaire"
+        ]
+      },
+      "summary": {
+        "nl": "Jalut staat met zijn leger tegenover Talut en de gelovigen. Dawud doodt hem in de strijd.",
+        "en": "Jalut and his army confront Talut and the believers. Dawud kills him in battle.",
+        "fr": "Jâlût et son armée affrontent Tâlût et les croyants. Dâwûd le tue au combat."
+      },
+      "refs": [
+        {
+          "label": "2:249–251",
+          "surah": 2,
+          "ayah": 249,
+          "endAyah": 251,
+          "url": "https://quran.com/2/249"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ]
+    },
+    {
+      "id": "quran:qarun",
+      "key": "qarun",
+      "names": {
+        "nl": "Qarun",
+        "en": "Qarun",
+        "fr": "Qârûn"
+      },
+      "aliases": [
+        "Korah",
+        "Korach",
+        "قارون"
+      ],
+      "roles": {
+        "nl": [
+          "Verhaalfiguur"
+        ],
+        "en": [
+          "Narrative figure"
+        ],
+        "fr": [
+          "Figure du récit"
+        ]
+      },
+      "summary": {
+        "nl": "Qarun behoort tot Musa’s volk en bezit grote rijkdom. Zijn hoogmoed en het verdwijnen van hem en zijn huis in de aarde dienen als waarschuwing.",
+        "en": "Qarun belongs to Musa’s people and possesses great wealth. His arrogance and the earth swallowing him and his house serve as a warning.",
+        "fr": "Qârûn appartient au peuple de Mûsâ et possède de grandes richesses. Son orgueil et son engloutissement avec sa demeure servent d’avertissement."
+      },
+      "refs": [
+        {
+          "label": "28:76–82",
+          "surah": 28,
+          "ayah": 76,
+          "endAyah": 82,
+          "url": "https://quran.com/28/76"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ]
+    },
+    {
+      "id": "quran:haman",
+      "key": "haman",
+      "names": {
+        "nl": "Haman",
+        "en": "Haman",
+        "fr": "Hâmân"
+      },
+      "aliases": [
+        "هامان"
+      ],
+      "roles": {
+        "nl": [
+          "Tegenstander"
+        ],
+        "en": [
+          "Opponent"
+        ],
+        "fr": [
+          "Adversaire"
+        ]
+      },
+      "summary": {
+        "nl": "Haman staat aan Farao’s zijde. Farao draagt hem op een hoge constructie te bouwen; deze Koranfiguur blijft gescheiden van Haman in het boek Ester.",
+        "en": "Haman is associated with Pharaoh, who orders him to build a lofty structure. This Qur’anic figure remains separate from Haman in the book of Esther.",
+        "fr": "Hâmân est associé à Pharaon, qui lui ordonne de construire un édifice élevé. Cette figure coranique reste distincte de Haman dans le livre d’Esther."
+      },
+      "refs": [
+        {
+          "label": "28:38",
+          "surah": 28,
+          "ayah": 38,
+          "url": "https://quran.com/28/38"
+        },
+        {
+          "label": "40:36–37",
+          "surah": 40,
+          "ayah": 36,
+          "endAyah": 37,
+          "url": "https://quran.com/40/36"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ]
+    },
+    {
+      "id": "quran:pharaoh",
+      "key": "pharaoh",
+      "names": {
+        "nl": "Farao bij Musa",
+        "en": "Pharaoh in Musa’s story",
+        "fr": "Pharaon dans le récit de Mûsâ"
+      },
+      "aliases": [
+        "Farao",
+        "Pharaoh",
+        "Pharaon",
+        "Firawn",
+        "فرعون"
+      ],
+      "roles": {
+        "nl": [
+          "Heerser",
+          "Tegenstander"
+        ],
+        "en": [
+          "Ruler",
+          "Opponent"
+        ],
+        "fr": [
+          "Souverain",
+          "Adversaire"
+        ]
+      },
+      "summary": {
+        "nl": "Farao onderdrukt de Israëlieten en verzet zich tegen Musa. De titel wordt niet aan een bij naam genoemde historische farao gekoppeld.",
+        "en": "Pharaoh oppresses the Israelites and resists Musa. The title is not linked here to a named historical pharaoh.",
+        "fr": "Pharaon opprime les Israélites et s’oppose à Mûsâ. Le titre n’est pas associé ici à un pharaon historique nommé."
+      },
+      "refs": [
+        {
+          "label": "28:3–8",
+          "surah": 28,
+          "ayah": 3,
+          "endAyah": 8,
+          "url": "https://quran.com/28/3"
+        },
+        {
+          "label": "10:75–92",
+          "surah": 10,
+          "ayah": 75,
+          "endAyah": 92,
+          "url": "https://quran.com/10/75"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "naming": "title"
+    },
+    {
+      "id": "quran:samiri",
+      "key": "samiri",
+      "names": {
+        "nl": "As-Samiri",
+        "en": "As-Samiri",
+        "fr": "As-Sâmirî"
+      },
+      "aliases": [
+        "Samiri",
+        "السامري"
+      ],
+      "roles": {
+        "nl": [
+          "Tegenstander"
+        ],
+        "en": [
+          "Opponent"
+        ],
+        "fr": [
+          "Adversaire"
+        ]
+      },
+      "summary": {
+        "nl": "As-Samiri wordt verantwoordelijk gesteld voor het misleiden van het volk met het kalf tijdens Musa’s afwezigheid. Musa ondervraagt en verbant hem.",
+        "en": "As-Samiri is held responsible for misleading the people with the calf during Musa’s absence. Musa questions him and sends him away.",
+        "fr": "As-Sâmirî est tenu responsable d’avoir égaré le peuple avec le veau pendant l’absence de Mûsâ. Celui-ci l’interroge et le chasse."
+      },
+      "refs": [
+        {
+          "label": "20:85–97",
+          "surah": 20,
+          "ayah": 85,
+          "endAyah": 97,
+          "url": "https://quran.com/20/85"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ]
+    },
+    {
+      "id": "quran:dhul-qarnayn",
+      "key": "dhul-qarnayn",
+      "names": {
+        "nl": "Dhu al-Qarnayn",
+        "en": "Dhu al-Qarnayn",
+        "fr": "Dhû al-Qarnayn"
+      },
+      "aliases": [
+        "Dhul-Qarnayn",
+        "ذو القرنين"
+      ],
+      "roles": {
+        "nl": [
+          "Heerser"
+        ],
+        "en": [
+          "Ruler"
+        ],
+        "fr": [
+          "Souverain"
+        ]
+      },
+      "summary": {
+        "nl": "Dhu al-Qarnayn reist en bouwt een barrière tegen Gog en Magog. Het profiel volgt de Koran en kiest geen omstreden historische identificatie voor hem.",
+        "en": "Dhu al-Qarnayn travels and builds a barrier against Gog and Magog. This profile follows the Qur’an without selecting a disputed historical identification.",
+        "fr": "Dhû al-Qarnayn voyage et construit une barrière contre Gog et Magog. Ce profil suit le Coran sans retenir d’identification historique contestée."
+      },
+      "refs": [
+        {
+          "label": "18:83–98",
+          "surah": 18,
+          "ayah": 83,
+          "endAyah": 98,
+          "url": "https://quran.com/18/83"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "naming": "title"
+    },
+    {
+      "id": "quran:abu-lahab",
+      "key": "abu-lahab",
+      "names": {
+        "nl": "Abu Lahab",
+        "en": "Abu Lahab",
+        "fr": "Abû Lahab"
+      },
+      "aliases": [
+        "Aboe Lahab",
+        "أبو لهب"
+      ],
+      "roles": {
+        "nl": [
+          "Tegenstander"
+        ],
+        "en": [
+          "Opponent"
+        ],
+        "fr": [
+          "Adversaire"
+        ]
+      },
+      "summary": {
+        "nl": "Abu Lahab wordt met zijn vrouw veroordeeld in soera 111. Zijn rijkdom en verworven bezit kunnen hem volgens de passage niet redden.",
+        "en": "Abu Lahab is condemned together with his wife in surah 111. According to the passage, his wealth and gains cannot save him.",
+        "fr": "Abû Lahab est condamné avec son épouse dans la sourate 111. Selon le passage, ses richesses et ses acquis ne peuvent le sauver."
+      },
+      "refs": [
+        {
+          "label": "111:1–5",
+          "surah": 111,
+          "ayah": 1,
+          "endAyah": 5,
+          "url": "https://quran.com/111/1"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ]
+    },
+    {
+      "id": "quran:zayd",
+      "key": "zayd",
+      "names": {
+        "nl": "Zayd",
+        "en": "Zayd",
+        "fr": "Zayd"
+      },
+      "aliases": [
+        "Zaid",
+        "زيد"
+      ],
+      "roles": {
+        "nl": [
+          "Verhaalfiguur"
+        ],
+        "en": [
+          "Narrative figure"
+        ],
+        "fr": [
+          "Figure du récit"
+        ]
+      },
+      "summary": {
+        "nl": "Zayd wordt bij naam genoemd in de passage over zijn beëindigde huwelijk en het daaropvolgende huwelijk van de Profeet met zijn voormalige vrouw.",
+        "en": "Zayd is named in the passage about the end of his marriage and the Prophet’s subsequent marriage to his former wife.",
+        "fr": "Zayd est nommé dans le passage concernant la fin de son mariage et le mariage ultérieur du Prophète avec son ancienne épouse."
+      },
+      "refs": [
+        {
+          "label": "33:37",
+          "surah": 33,
+          "ayah": 37,
+          "url": "https://quran.com/33/37"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ]
+    },
+    {
+      "id": "quran:adam-wife",
+      "key": "adam-wife",
+      "names": {
+        "nl": "Adams vrouw",
+        "en": "Adam’s wife",
+        "fr": "L’épouse d’Adam"
+      },
+      "aliases": [],
+      "roles": {
+        "nl": [
+          "Familielid"
+        ],
+        "en": [
+          "Family member"
+        ],
+        "fr": [
+          "Membre de la famille"
+        ]
+      },
+      "summary": {
+        "nl": "Adams vrouw deelt met hem het verblijf in de tuin en de overtreding. De Koran geeft haar in dit verhaal geen eigennaam.",
+        "en": "Adam’s wife shares life in the garden and the transgression with him. The Qur’an does not give her a personal name in this account.",
+        "fr": "L’épouse d’Adam partage avec lui le jardin et la transgression. Le Coran ne lui donne pas de nom personnel dans ce récit."
+      },
+      "refs": [
+        {
+          "label": "2:35–36",
+          "surah": 2,
+          "ayah": 35,
+          "endAyah": 36,
+          "url": "https://quran.com/2/35"
+        },
+        {
+          "label": "7:19–23",
+          "surah": 7,
+          "ayah": 19,
+          "endAyah": 23,
+          "url": "https://quran.com/7/19"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "naming": "descriptive"
+    },
+    {
+      "id": "quran:abraham-wife",
+      "key": "abraham-wife",
+      "names": {
+        "nl": "Ibrahims vrouw bij de aankondiging",
+        "en": "Ibrahim’s wife at the announcement",
+        "fr": "L’épouse d’Ibrâhîm lors de l’annonce"
+      },
+      "aliases": [],
+      "roles": {
+        "nl": [
+          "Familielid",
+          "Ouder"
+        ],
+        "en": [
+          "Family member",
+          "Parent"
+        ],
+        "fr": [
+          "Membre de la famille",
+          "Parent"
+        ]
+      },
+      "summary": {
+        "nl": "Ibrahims vrouw hoort de aankondiging van Ishaq en Yaqub en reageert verbaasd wegens hun hoge leeftijd. Zij wordt in deze verzen niet bij naam genoemd.",
+        "en": "Ibrahim’s wife hears the announcement of Ishaq and Yaqub and expresses surprise because of their old age. These verses do not name her.",
+        "fr": "L’épouse d’Ibrâhîm reçoit l’annonce de Ishâq et Ya‘qûb et s’étonne de leur âge avancé. Ces versets ne la nomment pas."
+      },
+      "refs": [
+        {
+          "label": "11:71–73",
+          "surah": 11,
+          "ayah": 71,
+          "endAyah": 73,
+          "url": "https://quran.com/11/71"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "naming": "descriptive"
+    },
+    {
+      "id": "quran:queen-sheba",
+      "key": "queen-sheba",
+      "names": {
+        "nl": "De koningin van Saba",
+        "en": "The queen of Sheba",
+        "fr": "La reine de Saba"
+      },
+      "aliases": [],
+      "roles": {
+        "nl": [
+          "Heerser"
+        ],
+        "en": [
+          "Ruler"
+        ],
+        "fr": [
+          "Souverain"
+        ]
+      },
+      "summary": {
+        "nl": "De heerseres van Saba overlegt met haar raad en ontmoet Sulayman. Zij erkent uiteindelijk God; de Koran noemt haar niet Bilqis.",
+        "en": "The ruler of Sheba consults her council and meets Sulayman. She ultimately acknowledges God; the Qur’an does not name her Bilqis.",
+        "fr": "La souveraine de Saba consulte son conseil et rencontre Sulaymân. Elle reconnaît finalement Dieu ; le Coran ne la nomme pas Bilqîs."
+      },
+      "refs": [
+        {
+          "label": "27:23–44",
+          "surah": 27,
+          "ayah": 23,
+          "endAyah": 44,
+          "url": "https://quran.com/27/23"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "naming": "descriptive"
+    },
+    {
+      "id": "quran:pharaoh-wife",
+      "key": "pharaoh-wife",
+      "names": {
+        "nl": "Farao’s vrouw",
+        "en": "Pharaoh’s wife",
+        "fr": "L’épouse de Pharaon"
+      },
+      "aliases": [],
+      "roles": {
+        "nl": [
+          "Gelovige"
+        ],
+        "en": [
+          "Believer"
+        ],
+        "fr": [
+          "Croyant"
+        ]
+      },
+      "summary": {
+        "nl": "Farao’s vrouw vraagt het kind Musa te sparen. Elders bidt zij om redding van Farao en wordt zij als voorbeeld voor gelovigen genoemd; haar eigennaam ontbreekt.",
+        "en": "Pharaoh’s wife asks that the infant Musa be spared. Elsewhere she prays for rescue from Pharaoh and is an example for believers; no personal name is given.",
+        "fr": "L’épouse de Pharaon demande d’épargner le petit Mûsâ. Ailleurs, elle prie d’être sauvée de Pharaon et sert d’exemple aux croyants ; aucun nom personnel n’est donné."
+      },
+      "refs": [
+        {
+          "label": "28:9",
+          "surah": 28,
+          "ayah": 9,
+          "url": "https://quran.com/28/9"
+        },
+        {
+          "label": "66:11",
+          "surah": 66,
+          "ayah": 11,
+          "url": "https://quran.com/66/11"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "naming": "descriptive"
+    },
+    {
+      "id": "quran:moses-mother",
+      "key": "moses-mother",
+      "names": {
+        "nl": "Musa’s moeder",
+        "en": "Musa’s mother",
+        "fr": "La mère de Mûsâ"
+      },
+      "aliases": [],
+      "roles": {
+        "nl": [
+          "Ouder",
+          "Gelovige"
+        ],
+        "en": [
+          "Parent",
+          "Believer"
+        ],
+        "fr": [
+          "Parent",
+          "Croyant"
+        ]
+      },
+      "summary": {
+        "nl": "Musa’s moeder krijgt de opdracht haar kind aan het water toe te vertrouwen en ontvangt de belofte van zijn terugkeer. Later wordt hij aan haar teruggegeven om hem te voeden.",
+        "en": "Musa’s mother is told to entrust her child to the water and is promised his return. He is later restored to her so she can nurse him.",
+        "fr": "La mère de Mûsâ reçoit l’ordre de confier son enfant à l’eau et la promesse de son retour. Il lui est ensuite rendu pour qu’elle l’allaite."
+      },
+      "refs": [
+        {
+          "label": "28:7–13",
+          "surah": 28,
+          "ayah": 7,
+          "endAyah": 13,
+          "url": "https://quran.com/28/7"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "naming": "descriptive"
+    },
+    {
+      "id": "quran:moses-sister",
+      "key": "moses-sister",
+      "names": {
+        "nl": "Musa’s zus",
+        "en": "Musa’s sister",
+        "fr": "La sœur de Mûsâ"
+      },
+      "aliases": [],
+      "roles": {
+        "nl": [
+          "Familielid"
+        ],
+        "en": [
+          "Family member"
+        ],
+        "fr": [
+          "Membre de la famille"
+        ]
+      },
+      "summary": {
+        "nl": "Musa’s zus volgt het kind en stelt een gezin voor dat voor hem kan zorgen. De Koran noemt haar hier niet bij naam; zij is niet Maryam, de moeder van Isa.",
+        "en": "Musa’s sister follows the child and suggests a household that can care for him. The Qur’an does not name her here; she is not Maryam, Isa’s mother.",
+        "fr": "La sœur de Mûsâ suit l’enfant et propose une famille pour s’en occuper. Le Coran ne la nomme pas ici ; elle n’est pas Maryam, la mère de Îsâ."
+      },
+      "refs": [
+        {
+          "label": "28:11–13",
+          "surah": 28,
+          "ayah": 11,
+          "endAyah": 13,
+          "url": "https://quran.com/28/11"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "naming": "descriptive"
+    },
+    {
+      "id": "quran:mary-mother",
+      "key": "mary-mother",
+      "names": {
+        "nl": "Maryams moeder",
+        "en": "Maryam’s mother",
+        "fr": "La mère de Maryam"
+      },
+      "aliases": [],
+      "roles": {
+        "nl": [
+          "Ouder",
+          "Gelovige"
+        ],
+        "en": [
+          "Parent",
+          "Believer"
+        ],
+        "fr": [
+          "Parent",
+          "Croyant"
+        ]
+      },
+      "summary": {
+        "nl": "De vrouw van Imran wijdt haar ongeboren kind aan God. Na de geboorte noemt zij haar dochter Maryam en vraagt bescherming voor haar en haar nakomelingen.",
+        "en": "Imran’s wife dedicates her unborn child to God. After the birth she names her daughter Maryam and asks protection for her and her offspring.",
+        "fr": "L’épouse de ‘Imrân consacre son enfant à naître à Dieu. Après la naissance, elle appelle sa fille Maryam et demande protection pour elle et sa descendance."
+      },
+      "refs": [
+        {
+          "label": "3:35–36",
+          "surah": 3,
+          "ayah": 35,
+          "endAyah": 36,
+          "url": "https://quran.com/3/35"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "naming": "descriptive"
+    },
+    {
+      "id": "quran:lot-wife",
+      "key": "lot-wife",
+      "names": {
+        "nl": "Luts vrouw",
+        "en": "Lut’s wife",
+        "fr": "L’épouse de Lût"
+      },
+      "aliases": [],
+      "roles": {
+        "nl": [
+          "Familielid"
+        ],
+        "en": [
+          "Family member"
+        ],
+        "fr": [
+          "Membre de la famille"
+        ]
+      },
+      "summary": {
+        "nl": "Luts vrouw wordt uitgezonderd van de redding van zijn gezin. Samen met Nuhs vrouw dient zij als voorbeeld dat het huwelijk met een rechtvaardige geen redding garandeert.",
+        "en": "Lut’s wife is excepted from his household’s rescue. With Nuh’s wife she illustrates that marriage to a righteous person does not guarantee salvation.",
+        "fr": "L’épouse de Lût est exclue du salut de sa famille. Avec celle de Nûh, elle illustre que le mariage avec un juste ne garantit pas le salut."
+      },
+      "refs": [
+        {
+          "label": "11:81",
+          "surah": 11,
+          "ayah": 81,
+          "url": "https://quran.com/11/81"
+        },
+        {
+          "label": "66:10",
+          "surah": 66,
+          "ayah": 10,
+          "url": "https://quran.com/66/10"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "naming": "descriptive"
+    },
+    {
+      "id": "quran:noah-wife",
+      "key": "noah-wife",
+      "names": {
+        "nl": "Nuhs vrouw",
+        "en": "Nuh’s wife",
+        "fr": "L’épouse de Nûh"
+      },
+      "aliases": [],
+      "roles": {
+        "nl": [
+          "Familielid"
+        ],
+        "en": [
+          "Family member"
+        ],
+        "fr": [
+          "Membre de la famille"
+        ]
+      },
+      "summary": {
+        "nl": "Nuhs vrouw wordt samen met Luts vrouw als tegenvoorbeeld genoemd. De tekst geeft haar geen naam en stelt dat hun echtgenoten hen niet tegen het oordeel konden beschermen.",
+        "en": "Nuh’s wife is presented alongside Lut’s wife as a counterexample. She is unnamed, and the text says their husbands could not protect them from judgment.",
+        "fr": "L’épouse de Nûh est présentée avec celle de Lût comme un contre-exemple. Elle n’est pas nommée et leurs maris ne peuvent les protéger du jugement."
+      },
+      "refs": [
+        {
+          "label": "66:10",
+          "surah": 66,
+          "ayah": 10,
+          "url": "https://quran.com/66/10"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "naming": "descriptive"
+    },
+    {
+      "id": "quran:noah-son",
+      "key": "noah-son",
+      "names": {
+        "nl": "Nuhs zoon bij de vloed",
+        "en": "Nuh’s son in the flood",
+        "fr": "Le fils de Nûh lors du déluge"
+      },
+      "aliases": [],
+      "roles": {
+        "nl": [
+          "Familielid"
+        ],
+        "en": [
+          "Family member"
+        ],
+        "fr": [
+          "Membre de la famille"
+        ]
+      },
+      "summary": {
+        "nl": "Een zoon van Nuh weigert met hem aan boord te gaan en zoekt veiligheid op een berg. Hij verdrinkt; de passage maakt onderscheid tussen verwantschap en rechtschapen handelen.",
+        "en": "A son of Nuh refuses to board with him and seeks safety on a mountain. He drowns; the passage distinguishes kinship from righteous conduct.",
+        "fr": "Un fils de Nûh refuse d’embarquer et cherche refuge sur une montagne. Il se noie ; le passage distingue parenté et conduite juste."
+      },
+      "refs": [
+        {
+          "label": "11:42–46",
+          "surah": 11,
+          "ayah": 42,
+          "endAyah": 46,
+          "url": "https://quran.com/11/42"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "naming": "descriptive"
+    },
+    {
+      "id": "quran:adam-son-killed",
+      "key": "adam-son-killed",
+      "names": {
+        "nl": "Adams gedode zoon",
+        "en": "Adam’s slain son",
+        "fr": "Le fils d’Adam tué"
+      },
+      "aliases": [],
+      "roles": {
+        "nl": [
+          "Familielid",
+          "Verhaalfiguur"
+        ],
+        "en": [
+          "Family member",
+          "Narrative figure"
+        ],
+        "fr": [
+          "Membre de la famille",
+          "Figure du récit"
+        ]
+      },
+      "summary": {
+        "nl": "Een van Adams twee zonen brengt een aanvaard offer en wordt door zijn broer gedood. De Koran gebruikt hier niet de namen Abel en Kaïn.",
+        "en": "One of Adam’s two sons offers an accepted sacrifice and is killed by his brother. The Qur’an does not use the names Abel and Cain here.",
+        "fr": "L’un des deux fils d’Adam présente une offrande acceptée et est tué par son frère. Le Coran n’emploie pas ici les noms Abel et Caïn."
+      },
+      "refs": [
+        {
+          "label": "5:27–31",
+          "surah": 5,
+          "ayah": 27,
+          "endAyah": 31,
+          "url": "https://quran.com/5/27"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "naming": "descriptive"
+    },
+    {
+      "id": "quran:adam-son-killer",
+      "key": "adam-son-killer",
+      "names": {
+        "nl": "Adams zoon die zijn broer doodt",
+        "en": "Adam’s son who kills his brother",
+        "fr": "Le fils d’Adam qui tue son frère"
+      },
+      "aliases": [],
+      "roles": {
+        "nl": [
+          "Familielid",
+          "Verhaalfiguur"
+        ],
+        "en": [
+          "Family member",
+          "Narrative figure"
+        ],
+        "fr": [
+          "Membre de la famille",
+          "Figure du récit"
+        ]
+      },
+      "summary": {
+        "nl": "Nadat zijn offer niet is aanvaard, doodt deze zoon van Adam zijn broer. Een raaf laat hem zien hoe hij het lichaam kan bedekken; de tekst noemt hem niet bij naam.",
+        "en": "After his sacrifice is not accepted, this son of Adam kills his brother. A raven shows him how to cover the body; the text gives him no personal name.",
+        "fr": "Son offrande n’étant pas acceptée, ce fils d’Adam tue son frère. Un corbeau lui montre comment couvrir le corps ; le texte ne lui donne pas de nom."
+      },
+      "refs": [
+        {
+          "label": "5:27–31",
+          "surah": 5,
+          "ayah": 27,
+          "endAyah": 31,
+          "url": "https://quran.com/5/27"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "naming": "descriptive"
+    },
+    {
+      "id": "quran:moses-guide",
+      "key": "moses-guide",
+      "names": {
+        "nl": "De dienaar die Musa onderwijst",
+        "en": "The servant who teaches Musa",
+        "fr": "Le serviteur qui instruit Mûsâ"
+      },
+      "aliases": [],
+      "roles": {
+        "nl": [
+          "Wijsheid"
+        ],
+        "en": [
+          "Wisdom"
+        ],
+        "fr": [
+          "Sagesse"
+        ]
+      },
+      "summary": {
+        "nl": "Musa volgt een dienaar aan wie God kennis heeft gegeven. Drie gebeurtenissen beproeven zijn geduld; de gids verklaart zijn handelen. De naam al-Khidr staat niet in deze verzen.",
+        "en": "Musa follows a servant whom God has given knowledge. Three events test his patience before the guide explains his actions. The name al-Khidr is absent from these verses.",
+        "fr": "Mûsâ suit un serviteur auquel Dieu a donné un savoir. Trois événements éprouvent sa patience avant que le guide explique ses actes. Le nom al-Khidr est absent de ces versets."
+      },
+      "refs": [
+        {
+          "label": "18:65–82",
+          "surah": 18,
+          "ayah": 65,
+          "endAyah": 82,
+          "url": "https://quran.com/18/65"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "naming": "descriptive"
+    },
+    {
+      "id": "quran:joseph-master",
+      "key": "joseph-master",
+      "names": {
+        "nl": "De Egyptenaar die Yusuf koopt",
+        "en": "The Egyptian who buys Yusuf",
+        "fr": "L’Égyptien qui achète Yûsuf"
+      },
+      "aliases": [
+        "Al-Aziz"
+      ],
+      "roles": {
+        "nl": [
+          "Verhaalfiguur"
+        ],
+        "en": [
+          "Narrative figure"
+        ],
+        "fr": [
+          "Figure du récit"
+        ]
+      },
+      "summary": {
+        "nl": "De Egyptenaar die Yusuf koopt vraagt zijn vrouw goed voor hem te zorgen. De episode rond Yusuf en zijn vrouw speelt zich in zijn huishouden af; zijn eigennaam ontbreekt.",
+        "en": "The Egyptian who buys Yusuf asks his wife to care for him. The episode involving Yusuf and his wife takes place in his household; no personal name is given.",
+        "fr": "L’Égyptien qui achète Yûsuf demande à sa femme de bien le traiter. L’épisode concernant Yûsuf et son épouse se déroule chez lui ; aucun nom personnel n’est donné."
+      },
+      "refs": [
+        {
+          "label": "12:21–29",
+          "surah": 12,
+          "ayah": 21,
+          "endAyah": 29,
+          "url": "https://quran.com/12/21"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "naming": "descriptive"
+    },
+    {
+      "id": "quran:joseph-master-wife",
+      "key": "joseph-master-wife",
+      "names": {
+        "nl": "De vrouw van Yusufs meester",
+        "en": "The wife of Yusuf’s master",
+        "fr": "L’épouse du maître de Yûsuf"
+      },
+      "aliases": [],
+      "roles": {
+        "nl": [
+          "Verhaalfiguur"
+        ],
+        "en": [
+          "Narrative figure"
+        ],
+        "fr": [
+          "Figure du récit"
+        ]
+      },
+      "summary": {
+        "nl": "De vrouw in het huis waar Yusuf woont probeert hem te verleiden en beschuldigt hem. Later erkent zij zijn waarachtigheid. De Koran noemt haar niet Zulaikha.",
+        "en": "The woman in the house where Yusuf lives tries to seduce him and accuses him. Later she acknowledges his truthfulness. The Qur’an does not name her Zulaikha.",
+        "fr": "La femme de la maison où vit Yûsuf tente de le séduire et l’accuse. Elle reconnaît ensuite sa sincérité. Le Coran ne la nomme pas Zuleikha."
+      },
+      "refs": [
+        {
+          "label": "12:23–29",
+          "surah": 12,
+          "ayah": 23,
+          "endAyah": 29,
+          "url": "https://quran.com/12/23"
+        },
+        {
+          "label": "12:51",
+          "surah": 12,
+          "ayah": 51,
+          "url": "https://quran.com/12/51"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "naming": "descriptive"
+    },
+    {
+      "id": "quran:joseph-king",
+      "key": "joseph-king",
+      "names": {
+        "nl": "De koning in Yusufs verhaal",
+        "en": "The king in Yusuf’s story",
+        "fr": "Le roi dans le récit de Yûsuf"
+      },
+      "aliases": [],
+      "roles": {
+        "nl": [
+          "Heerser"
+        ],
+        "en": [
+          "Ruler"
+        ],
+        "fr": [
+          "Souverain"
+        ]
+      },
+      "summary": {
+        "nl": "De koning zoekt uitleg voor zijn droom over koeien en korenaren. Hij laat Yusuf komen en stelt vertrouwen in hem; de tekst noemt deze koning niet Farao.",
+        "en": "The king seeks an explanation of his dream about cattle and ears of grain. He summons Yusuf and places trust in him; the text does not call this king Pharaoh.",
+        "fr": "Le roi cherche l’explication de son rêve de vaches et d’épis. Il fait venir Yûsuf et lui accorde sa confiance ; le texte n’appelle pas ce roi Pharaon."
+      },
+      "refs": [
+        {
+          "label": "12:43–55",
+          "surah": 12,
+          "ayah": 43,
+          "endAyah": 55,
+          "url": "https://quran.com/12/43"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "naming": "descriptive"
+    },
+    {
+      "id": "quran:pharaoh-believer",
+      "key": "pharaoh-believer",
+      "names": {
+        "nl": "De gelovige uit Farao’s huis",
+        "en": "The believer from Pharaoh’s household",
+        "fr": "Le croyant de la famille de Pharaon"
+      },
+      "aliases": [],
+      "roles": {
+        "nl": [
+          "Gelovige"
+        ],
+        "en": [
+          "Believer"
+        ],
+        "fr": [
+          "Croyant"
+        ]
+      },
+      "summary": {
+        "nl": "Een man uit Farao’s huis houdt zijn geloof verborgen en verdedigt Musa. Hij waarschuwt zijn volk voor de gevolgen van het verwerpen van Gods boodschap.",
+        "en": "A man from Pharaoh’s household conceals his faith and speaks in Musa’s defence. He warns his people about rejecting God’s message.",
+        "fr": "Un homme de la famille de Pharaon cache sa foi et défend Mûsâ. Il avertit son peuple des conséquences du rejet du message divin."
+      },
+      "refs": [
+        {
+          "label": "40:28–45",
+          "surah": 40,
+          "ayah": 28,
+          "endAyah": 45,
+          "url": "https://quran.com/40/28"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "naming": "descriptive"
+    },
+    {
+      "id": "quran:city-believer",
+      "key": "city-believer",
+      "names": {
+        "nl": "De gelovige man in Ya-Sin",
+        "en": "The believing man in Ya-Sin",
+        "fr": "L’homme croyant dans Yâ-Sîn"
+      },
+      "aliases": [],
+      "roles": {
+        "nl": [
+          "Gelovige"
+        ],
+        "en": [
+          "Believer"
+        ],
+        "fr": [
+          "Croyant"
+        ]
+      },
+      "summary": {
+        "nl": "Een man komt uit de verste wijk van de stad en spoort zijn volk aan de boodschappers te volgen. De tekst noemt hem niet bij naam.",
+        "en": "A man comes from the farthest part of the city and urges his people to follow the messengers. The text gives him no personal name.",
+        "fr": "Un homme vient du quartier le plus éloigné de la ville et exhorte son peuple à suivre les messagers. Le texte ne lui donne pas de nom."
+      },
+      "refs": [
+        {
+          "label": "36:20–27",
+          "surah": 36,
+          "ayah": 20,
+          "endAyah": 27,
+          "url": "https://quran.com/36/20"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "naming": "descriptive"
+    },
+    {
+      "id": "quran:midian-elder",
+      "key": "midian-elder",
+      "names": {
+        "nl": "De vader van de vrouwen bij Midjan",
+        "en": "The father of the women at Midian",
+        "fr": "Le père des femmes de Madyan"
+      },
+      "aliases": [],
+      "roles": {
+        "nl": [
+          "Ouder"
+        ],
+        "en": [
+          "Parent"
+        ],
+        "fr": [
+          "Parent"
+        ]
+      },
+      "summary": {
+        "nl": "Deze oudere man ontvangt Musa nadat hij zijn dochters heeft geholpen. Hij biedt een huwelijk en een dienstverband aan. De passage noemt hem niet Shuayb.",
+        "en": "This elderly man welcomes Musa after he helps his daughters. He offers a marriage and a term of service. The passage does not name him Shuayb.",
+        "fr": "Cet homme âgé accueille Mûsâ après l’aide apportée à ses filles. Il propose un mariage et une durée de service. Le passage ne le nomme pas Chu‘ayb."
+      },
+      "refs": [
+        {
+          "label": "28:23–28",
+          "surah": 28,
+          "ayah": 23,
+          "endAyah": 28,
+          "url": "https://quran.com/28/23"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "naming": "descriptive"
+    },
+    {
+      "id": "quran:moses-companion",
+      "key": "moses-companion",
+      "names": {
+        "nl": "Musa’s jonge reisgenoot",
+        "en": "Musa’s young travelling companion",
+        "fr": "Le jeune compagnon de voyage de Mûsâ"
+      },
+      "aliases": [],
+      "roles": {
+        "nl": [
+          "Verhaalfiguur"
+        ],
+        "en": [
+          "Narrative figure"
+        ],
+        "fr": [
+          "Figure du récit"
+        ]
+      },
+      "summary": {
+        "nl": "Musa reist met een jonge metgezel naar de samenkomst van twee zeeën. De metgezel vertelt over de vis; de Koran noemt hem hier niet Jozua.",
+        "en": "Musa travels with a young companion towards the meeting of two seas. The companion reports what happened to the fish; the Qur’an does not name him Joshua here.",
+        "fr": "Mûsâ voyage avec un jeune compagnon vers le confluent de deux mers. Celui-ci raconte ce qui est arrivé au poisson ; le Coran ne le nomme pas Josué ici."
+      },
+      "refs": [
+        {
+          "label": "18:60–64",
+          "surah": 18,
+          "ayah": 60,
+          "endAyah": 64,
+          "url": "https://quran.com/18/60"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "naming": "descriptive"
+    },
+    {
+      "id": "quran:abu-lahab-wife",
+      "key": "abu-lahab-wife",
+      "names": {
+        "nl": "Abu Lahabs vrouw",
+        "en": "Abu Lahab’s wife",
+        "fr": "L’épouse d’Abû Lahab"
+      },
+      "aliases": [],
+      "roles": {
+        "nl": [
+          "Tegenstander"
+        ],
+        "en": [
+          "Opponent"
+        ],
+        "fr": [
+          "Adversaire"
+        ]
+      },
+      "summary": {
+        "nl": "Abu Lahabs vrouw verschijnt samen met hem in de veroordeling van soera 111. Zij wordt omschreven als draagster van brandhout; haar eigennaam wordt niet vermeld.",
+        "en": "Abu Lahab’s wife appears with him in the condemnation in surah 111. She is described as carrying firewood; no personal name is supplied.",
+        "fr": "L’épouse d’Abû Lahab apparaît avec lui dans la condamnation de la sourate 111. Elle est décrite comme portant du bois ; aucun nom personnel n’est donné."
+      },
+      "refs": [
+        {
+          "label": "111:4–5",
+          "surah": 111,
+          "ayah": 4,
+          "endAyah": 5,
+          "url": "https://quran.com/111/4"
+        }
+      ],
+      "sourceIds": [
+        "quran",
+        "quranenc"
+      ],
+      "naming": "descriptive"
+    }
+  ]
+}

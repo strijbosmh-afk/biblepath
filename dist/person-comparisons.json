@@ -1,0 +1,3903 @@
+{
+  "meta": {
+    "version": "1.0",
+    "reviewedAt": "2026-10-22",
+    "complete": false,
+    "scope": {
+      "nl": "24 geselecteerde personen en hun rollen in christelijke, Joodse en islamitische bronteksten. Dit is een thematische selectie, geen volledige inventaris van alle religieuze opvattingen.",
+      "en": "24 selected figures and their roles in Christian, Jewish and Islamic source texts. This is a thematic selection, not an exhaustive account of all religious interpretations.",
+      "fr": "24 figures choisies et leurs rôles dans les sources chrétiennes, juives et islamiques. Il s’agit d’une sélection thématique, non d’un inventaire exhaustif des interprétations religieuses."
+    },
+    "methodology": {
+      "nl": "Elke traditie behoudt een eigen naam, rol en bronverwijzingen. De Joodse panelen onderscheiden de vijf Torahboeken van de overige Tanakh. Een persoon buiten een tekstcorpus is niet noodzakelijk zonder betekenis in latere tradities. Naamloze figuren, naamgenoten en afwijkende verhalen worden niet tot één biografie samengevoegd. Hagar heeft een afzonderlijk gemarkeerde hadithbron; die is geen Qur’anvers.",
+      "en": "Each tradition retains its own name, role and source references. Jewish panels distinguish the five Torah books from the rest of the Tanakh. Being outside a text corpus does not imply having no significance in later traditions. Unnamed figures, namesakes and differing accounts are not merged into one biography. Hagar has a separately marked hadith source, which is not a Qur’anic verse.",
+      "fr": "Chaque tradition conserve son nom, son rôle et ses références propres. Les panneaux juifs distinguent les cinq livres de la Torah du reste du Tanakh. L’absence d’un corpus ne signifie pas une absence de rôle dans les traditions ultérieures. Figures anonymes, homonymes et récits divergents ne sont pas fusionnés en une biographie unique. Agar possède une source de hadith clairement signalée, qui n’est pas un verset coranique."
+    },
+    "sources": [
+      {
+        "id": "bible",
+        "label": "World English Bible · primary biblical passages",
+        "url": "https://ebible.org/eng-web/",
+        "license": "Public-domain scripture; summaries are original editorial prose."
+      },
+      {
+        "id": "tanakh",
+        "label": "Tanakh · Jewish textual context and Sefaria passage links",
+        "url": "https://www.sefaria.org/texts/Tanakh",
+        "note": "Passages checked against the bundled JPS 1917 Tanakh. Links preserve a Jewish reading context; later interpretations are not treated as uniform."
+      },
+      {
+        "id": "quran",
+        "label": "Qur’an · primary passages and Quran.com links",
+        "url": "https://quran.com/",
+        "note": "Claims checked against bundled Qur’an text and translations; individual edition credits remain in the reader."
+      },
+      {
+        "id": "hadith",
+        "label": "Sahih al-Bukhari 3364 · separately identified hadith",
+        "url": "https://sunnah.com/bukhari:3364",
+        "note": "Hadith narrative for Ishmael’s mother; not presented as Qur’anic scripture."
+      }
+    ]
+  },
+  "people": [
+    {
+      "key": "adam",
+      "names": {
+        "nl": "Adam",
+        "en": "Adam",
+        "fr": "Adam"
+      },
+      "aliases": [
+        "Ādam",
+        "אדם",
+        "آدم"
+      ],
+      "theme": {
+        "nl": "Mensheid en verantwoordelijkheid",
+        "en": "Humanity and responsibility",
+        "fr": "Humanité et responsabilité"
+      },
+      "traditions": {
+        "christianity": {
+          "name": {
+            "nl": "Adam",
+            "en": "Adam",
+            "fr": "Adam"
+          },
+          "role": {
+            "nl": "Eerste mens; vergeleken met Christus",
+            "en": "First human; contrasted with Christ",
+            "fr": "Premier homme ; mis en parallèle avec le Christ"
+          },
+          "summary": {
+            "nl": "Genesis vertelt over Adams leven in de tuin. Paulus vergelijkt zijn ongehoorzaamheid met Christus’ gehoorzaamheid en de gave van leven.",
+            "en": "Genesis tells of Adam’s life in the garden. Paul contrasts his disobedience with Christ’s obedience and the gift of life.",
+            "fr": "La Genèse raconte la vie d’Adam dans le jardin. Paul oppose sa désobéissance à l’obéissance du Christ et au don de la vie."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
+            "en": "Christian Bible · Old and New Testaments",
+            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+          },
+          "refs": [
+            {
+              "label": "Genesis 2:7–17",
+              "corpus": "bible",
+              "book": "GEN",
+              "chapter": 2,
+              "verse": 7,
+              "endVerse": 17,
+              "url": "https://www.biblegateway.com/passage/?search=Genesis%202%3A7-17&version=WEB"
+            },
+            {
+              "label": "Romans 5:12–19",
+              "corpus": "bible",
+              "book": "ROM",
+              "chapter": 5,
+              "verse": 12,
+              "endVerse": 19,
+              "url": "https://www.biblegateway.com/passage/?search=Romans%205%3A12-19&version=WEB"
+            }
+          ],
+          "indexId": "adam",
+          "sourceIds": [
+            "bible"
+          ]
+        },
+        "judaism": {
+          "name": {
+            "nl": "Adam",
+            "en": "Adam",
+            "fr": "Adam"
+          },
+          "role": {
+            "nl": "Mens in het scheppingsverhaal",
+            "en": "Human in the creation narrative",
+            "fr": "Humain du récit de la création"
+          },
+          "summary": {
+            "nl": "God vormt Adam uit de aarde en plaatst hem in de tuin om die te bewerken en te bewaren. Het verhaal beschrijft het gebod, de overtreding en het vertrek uit Eden.",
+            "en": "God forms Adam from the earth and places him in the garden to cultivate and keep it. The narrative describes the command, transgression and departure from Eden.",
+            "fr": "Dieu forme Adam de la terre et le place dans le jardin pour le cultiver et le garder. Le récit décrit le commandement, sa transgression et le départ d’Éden."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Torah · vijf boeken van Mozes",
+            "en": "Torah · five books of Moses",
+            "fr": "Torah · cinq livres de Moïse"
+          },
+          "refs": [
+            {
+              "label": "Genesis 2:7–17",
+              "corpus": "tanakh",
+              "book": "GEN",
+              "chapter": 2,
+              "verse": 7,
+              "endVerse": 17,
+              "url": "https://www.sefaria.org/Genesis.2.7"
+            },
+            {
+              "label": "Genesis 3:17–24",
+              "corpus": "tanakh",
+              "book": "GEN",
+              "chapter": 3,
+              "verse": 17,
+              "endVerse": 24,
+              "url": "https://www.sefaria.org/Genesis.3.17"
+            }
+          ],
+          "indexId": "torah:adam",
+          "sourceIds": [
+            "tanakh"
+          ]
+        },
+        "islam": {
+          "name": {
+            "nl": "Adam",
+            "en": "Adam",
+            "fr": "Adam"
+          },
+          "role": {
+            "nl": "Door God onderwezen; berouw aanvaard",
+            "en": "Taught by God; repentance accepted",
+            "fr": "Instruit par Dieu ; repentir accepté"
+          },
+          "summary": {
+            "nl": "God leert Adam de namen. Adam en zijn vrouw overtreden het verbod, waarna Adam woorden van zijn Heer ontvangt en zijn berouw wordt aanvaard.",
+            "en": "God teaches Adam the names. Adam and his wife transgress the prohibition; Adam then receives words from his Lord and his repentance is accepted.",
+            "fr": "Dieu enseigne les noms à Adam. Adam et son épouse transgressent l’interdit ; Adam reçoit ensuite des paroles de son Seigneur et son repentir est accepté."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Qur’an",
+            "en": "Qur’an",
+            "fr": "Coran"
+          },
+          "refs": [
+            {
+              "label": "Qur’an 2:30–39",
+              "corpus": "quran",
+              "surah": 2,
+              "ayah": 30,
+              "endAyah": 39,
+              "url": "https://quran.com/2/30"
+            }
+          ],
+          "indexId": "quran:adam",
+          "sourceIds": [
+            "quran"
+          ]
+        }
+      }
+    },
+    {
+      "key": "eve",
+      "names": {
+        "nl": "Eva",
+        "en": "Eve",
+        "fr": "Ève"
+      },
+      "aliases": [
+        "Hawwa",
+        "Ḥawwāʾ",
+        "חוה",
+        "حواء"
+      ],
+      "theme": {
+        "nl": "De eerste vrouw",
+        "en": "The first woman",
+        "fr": "La première femme"
+      },
+      "traditions": {
+        "christianity": {
+          "name": {
+            "nl": "Eva",
+            "en": "Eve",
+            "fr": "Ève"
+          },
+          "role": {
+            "nl": "Moederfiguur; voorbeeld in Paulus’ waarschuwing",
+            "en": "Mother figure; example in Paul’s warning",
+            "fr": "Figure maternelle ; exemple dans un avertissement de Paul"
+          },
+          "summary": {
+            "nl": "Genesis noemt Eva de moeder van alle levenden. In 2 Korintiërs gebruikt Paulus haar misleiding door de slang als waarschuwing voor zijn gemeente.",
+            "en": "Genesis calls Eve the mother of all living. In 2 Corinthians Paul uses her deception by the serpent as a warning to his community.",
+            "fr": "La Genèse présente Ève comme la mère de tous les vivants. Dans 2 Corinthiens, Paul évoque sa tromperie par le serpent pour avertir sa communauté."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
+            "en": "Christian Bible · Old and New Testaments",
+            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+          },
+          "refs": [
+            {
+              "label": "Genesis 3:20",
+              "corpus": "bible",
+              "book": "GEN",
+              "chapter": 3,
+              "verse": 20,
+              "endVerse": 20,
+              "url": "https://www.biblegateway.com/passage/?search=Genesis%203%3A20&version=WEB"
+            },
+            {
+              "label": "2 Corinthians 11:3",
+              "corpus": "bible",
+              "book": "2CO",
+              "chapter": 11,
+              "verse": 3,
+              "endVerse": 3,
+              "url": "https://www.biblegateway.com/passage/?search=2%20Corinthians%2011%3A3&version=WEB"
+            }
+          ],
+          "indexId": "eve",
+          "sourceIds": [
+            "bible"
+          ]
+        },
+        "judaism": {
+          "name": {
+            "nl": "Chavva / Eva",
+            "en": "Chavvah / Eve",
+            "fr": "Havvah / Ève"
+          },
+          "role": {
+            "nl": "Moeder van alle levenden",
+            "en": "Mother of all living",
+            "fr": "Mère de tous les vivants"
+          },
+          "summary": {
+            "nl": "De vrouw wordt als partner voor de mens beschreven en krijgt later de naam Chavva, Eva. Genesis vertelt ook over haar kinderen Kaïn, Abel en Set.",
+            "en": "The woman is described as a partner for the human and later named Chavvah, Eve. Genesis also tells of her children Cain, Abel and Seth.",
+            "fr": "La femme est décrite comme partenaire de l’humain et reçoit ensuite le nom Havvah, Ève. La Genèse raconte aussi l’histoire de ses enfants Caïn, Abel et Seth."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Torah · vijf boeken van Mozes",
+            "en": "Torah · five books of Moses",
+            "fr": "Torah · cinq livres de Moïse"
+          },
+          "refs": [
+            {
+              "label": "Genesis 2:18–24",
+              "corpus": "tanakh",
+              "book": "GEN",
+              "chapter": 2,
+              "verse": 18,
+              "endVerse": 24,
+              "url": "https://www.sefaria.org/Genesis.2.18"
+            },
+            {
+              "label": "Genesis 3:20",
+              "corpus": "tanakh",
+              "book": "GEN",
+              "chapter": 3,
+              "verse": 20,
+              "endVerse": 20,
+              "url": "https://www.sefaria.org/Genesis.3.20"
+            },
+            {
+              "label": "Genesis 4:1–2",
+              "corpus": "tanakh",
+              "book": "GEN",
+              "chapter": 4,
+              "verse": 1,
+              "endVerse": 2,
+              "url": "https://www.sefaria.org/Genesis.4.1"
+            },
+            {
+              "label": "Genesis 4:25",
+              "corpus": "tanakh",
+              "book": "GEN",
+              "chapter": 4,
+              "verse": 25,
+              "endVerse": 25,
+              "url": "https://www.sefaria.org/Genesis.4.25"
+            }
+          ],
+          "indexId": "torah:eve",
+          "sourceIds": [
+            "tanakh"
+          ]
+        },
+        "islam": {
+          "name": {
+            "nl": "Adams vrouw · naam niet gegeven",
+            "en": "Adam’s wife · unnamed",
+            "fr": "Épouse d’Adam · sans nom"
+          },
+          "role": {
+            "nl": "Samen met Adam aangesproken",
+            "en": "Addressed together with Adam",
+            "fr": "Interpellée avec Adam"
+          },
+          "summary": {
+            "nl": "De Qur’an noemt Adams vrouw zonder eigennaam. Zij en Adam worden samen gewaarschuwd en vragen samen om vergeving. De naam Hawwa staat niet in deze passages.",
+            "en": "The Qur’an mentions Adam’s wife without a personal name. She and Adam are warned together and ask forgiveness together. The name Hawwa does not occur in these passages.",
+            "fr": "Le Coran mentionne l’épouse d’Adam sans nom personnel. Tous deux sont avertis et demandent ensemble pardon. Le nom Hawwa ne figure pas dans ces passages."
+          },
+          "status": "not-named",
+          "scope": {
+            "nl": "Qur’an",
+            "en": "Qur’an",
+            "fr": "Coran"
+          },
+          "refs": [
+            {
+              "label": "Qur’an 2:35–36",
+              "corpus": "quran",
+              "surah": 2,
+              "ayah": 35,
+              "endAyah": 36,
+              "url": "https://quran.com/2/35"
+            },
+            {
+              "label": "Qur’an 7:19–23",
+              "corpus": "quran",
+              "surah": 7,
+              "ayah": 19,
+              "endAyah": 23,
+              "url": "https://quran.com/7/19"
+            }
+          ],
+          "indexId": "quran:adam-wife",
+          "sourceIds": [
+            "quran"
+          ]
+        }
+      }
+    },
+    {
+      "key": "noah",
+      "names": {
+        "nl": "Noach",
+        "en": "Noah",
+        "fr": "Noé"
+      },
+      "aliases": [
+        "Nuh",
+        "Nūḥ",
+        "נח",
+        "نوح"
+      ],
+      "theme": {
+        "nl": "Waarschuwing, redding en verbond",
+        "en": "Warning, rescue and covenant",
+        "fr": "Avertissement, salut et alliance"
+      },
+      "traditions": {
+        "christianity": {
+          "name": {
+            "nl": "Noach",
+            "en": "Noah",
+            "fr": "Noé"
+          },
+          "role": {
+            "nl": "Voorbeeld van geloof",
+            "en": "Example of faith",
+            "fr": "Exemple de foi"
+          },
+          "summary": {
+            "nl": "Het verhaal van de ark maakt deel uit van Genesis. Hebreeën noemt Noach een geloofsvoorbeeld: hij handelt op Gods waarschuwing en bouwt de ark.",
+            "en": "The ark narrative belongs to Genesis. Hebrews presents Noah as an example of faith: he acts on God’s warning and builds the ark.",
+            "fr": "Le récit de l’arche se trouve dans la Genèse. Hébreux présente Noé comme un exemple de foi : il suit l’avertissement de Dieu et construit l’arche."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
+            "en": "Christian Bible · Old and New Testaments",
+            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+          },
+          "refs": [
+            {
+              "label": "Genesis 6:9–22",
+              "corpus": "bible",
+              "book": "GEN",
+              "chapter": 6,
+              "verse": 9,
+              "endVerse": 22,
+              "url": "https://www.biblegateway.com/passage/?search=Genesis%206%3A9-22&version=WEB"
+            },
+            {
+              "label": "Hebrews 11:7",
+              "corpus": "bible",
+              "book": "HEB",
+              "chapter": 11,
+              "verse": 7,
+              "endVerse": 7,
+              "url": "https://www.biblegateway.com/passage/?search=Hebrews%2011%3A7&version=WEB"
+            }
+          ],
+          "indexId": "noah",
+          "sourceIds": [
+            "bible"
+          ]
+        },
+        "judaism": {
+          "name": {
+            "nl": "Noach",
+            "en": "Noah",
+            "fr": "Noé"
+          },
+          "role": {
+            "nl": "Rechtvaardige; ontvanger van het verbond",
+            "en": "Righteous person; recipient of the covenant",
+            "fr": "Juste ; destinataire de l’alliance"
+          },
+          "summary": {
+            "nl": "Noach bouwt de ark en overleeft de vloed met zijn gezin. Daarna sluit God een verbond met hem, zijn nakomelingen en alle levende wezens.",
+            "en": "Noah builds the ark and survives the flood with his family. Afterwards God establishes a covenant with him, his descendants and all living creatures.",
+            "fr": "Noé construit l’arche et survit au déluge avec sa famille. Dieu établit ensuite une alliance avec lui, ses descendants et tous les êtres vivants."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Torah · vijf boeken van Mozes",
+            "en": "Torah · five books of Moses",
+            "fr": "Torah · cinq livres de Moïse"
+          },
+          "refs": [
+            {
+              "label": "Genesis 6:9–22",
+              "corpus": "tanakh",
+              "book": "GEN",
+              "chapter": 6,
+              "verse": 9,
+              "endVerse": 22,
+              "url": "https://www.sefaria.org/Genesis.6.9"
+            },
+            {
+              "label": "Genesis 9:8–17",
+              "corpus": "tanakh",
+              "book": "GEN",
+              "chapter": 9,
+              "verse": 8,
+              "endVerse": 17,
+              "url": "https://www.sefaria.org/Genesis.9.8"
+            }
+          ],
+          "indexId": "torah:noah",
+          "sourceIds": [
+            "tanakh"
+          ]
+        },
+        "islam": {
+          "name": {
+            "nl": "Noeh / Nūḥ",
+            "en": "Nūḥ / Noah",
+            "fr": "Nūḥ / Noé"
+          },
+          "role": {
+            "nl": "Boodschapper die zijn volk waarschuwt",
+            "en": "Messenger warning his people",
+            "fr": "Messager avertissant son peuple"
+          },
+          "summary": {
+            "nl": "Noeh roept zijn volk op God te dienen en bouwt de ark. De Qur’an vertelt afzonderlijk over zijn zoon die weigert mee te gaan; dat detail wordt niet uit Genesis overgenomen.",
+            "en": "Noah calls his people to worship God and builds the ark. The Qur’an separately tells of a son who refuses to board; that detail is not imported from Genesis.",
+            "fr": "Noé appelle son peuple à adorer Dieu et construit l’arche. Le Coran raconte aussi qu’un fils refuse d’embarquer ; ce détail n’est pas repris de la Genèse."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Qur’an",
+            "en": "Qur’an",
+            "fr": "Coran"
+          },
+          "refs": [
+            {
+              "label": "Qur’an 11:25–26",
+              "corpus": "quran",
+              "surah": 11,
+              "ayah": 25,
+              "endAyah": 26,
+              "url": "https://quran.com/11/25"
+            },
+            {
+              "label": "Qur’an 11:36–46",
+              "corpus": "quran",
+              "surah": 11,
+              "ayah": 36,
+              "endAyah": 46,
+              "url": "https://quran.com/11/36"
+            }
+          ],
+          "indexId": "quran:noah",
+          "sourceIds": [
+            "quran"
+          ]
+        }
+      }
+    },
+    {
+      "key": "abraham",
+      "names": {
+        "nl": "Abraham",
+        "en": "Abraham",
+        "fr": "Abraham"
+      },
+      "aliases": [
+        "Avraham",
+        "Ibrahim",
+        "Ibrāhīm",
+        "אברהם",
+        "إبراهيم"
+      ],
+      "theme": {
+        "nl": "Verbond en vertrouwen",
+        "en": "Covenant and trust",
+        "fr": "Alliance et confiance"
+      },
+      "traditions": {
+        "christianity": {
+          "name": {
+            "nl": "Abraham",
+            "en": "Abraham",
+            "fr": "Abraham"
+          },
+          "role": {
+            "nl": "Voorbeeld van geloof; vader van gelovigen",
+            "en": "Example of faith; father of believers",
+            "fr": "Exemple de foi ; père des croyants"
+          },
+          "summary": {
+            "nl": "Paulus leest Abrahams vertrouwen als een voorbeeld voor mensen die geloven, ongeacht besnijdenis. Het verhaal van Gods belofte in Genesis blijft de achtergrond.",
+            "en": "Paul reads Abraham’s trust as an example for those who believe, irrespective of circumcision. God’s promise in Genesis remains the background.",
+            "fr": "Paul présente la confiance d’Abraham comme un exemple pour ceux qui croient, indépendamment de la circoncision. La promesse de Dieu dans la Genèse en est le contexte."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
+            "en": "Christian Bible · Old and New Testaments",
+            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+          },
+          "refs": [
+            {
+              "label": "Genesis 15:1–6",
+              "corpus": "bible",
+              "book": "GEN",
+              "chapter": 15,
+              "verse": 1,
+              "endVerse": 6,
+              "url": "https://www.biblegateway.com/passage/?search=Genesis%2015%3A1-6&version=WEB"
+            },
+            {
+              "label": "Romans 4:9–17",
+              "corpus": "bible",
+              "book": "ROM",
+              "chapter": 4,
+              "verse": 9,
+              "endVerse": 17,
+              "url": "https://www.biblegateway.com/passage/?search=Romans%204%3A9-17&version=WEB"
+            }
+          ],
+          "indexId": "abraham",
+          "sourceIds": [
+            "bible"
+          ]
+        },
+        "judaism": {
+          "name": {
+            "nl": "Avraham / Abraham",
+            "en": "Avraham / Abraham",
+            "fr": "Avraham / Abraham"
+          },
+          "role": {
+            "nl": "Aartsvader van het verbond",
+            "en": "Patriarch of the covenant",
+            "fr": "Patriarche de l’alliance"
+          },
+          "summary": {
+            "nl": "God roept Avraham weg uit zijn land en belooft hem nakomelingen en land. Genesis 17 verbindt het verbond met besnijdenis en noemt Isaak als verbondslijn.",
+            "en": "God calls Avraham from his country and promises descendants and land. Genesis 17 connects the covenant with circumcision and names Isaac as its continuing line.",
+            "fr": "Dieu appelle Avraham à quitter son pays et lui promet une descendance et une terre. Genèse 17 relie l’alliance à la circoncision et désigne Isaac pour sa continuité."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Torah · vijf boeken van Mozes",
+            "en": "Torah · five books of Moses",
+            "fr": "Torah · cinq livres de Moïse"
+          },
+          "refs": [
+            {
+              "label": "Genesis 12:1–3",
+              "corpus": "tanakh",
+              "book": "GEN",
+              "chapter": 12,
+              "verse": 1,
+              "endVerse": 3,
+              "url": "https://www.sefaria.org/Genesis.12.1"
+            },
+            {
+              "label": "Genesis 17:1–21",
+              "corpus": "tanakh",
+              "book": "GEN",
+              "chapter": 17,
+              "verse": 1,
+              "endVerse": 21,
+              "url": "https://www.sefaria.org/Genesis.17.1"
+            }
+          ],
+          "indexId": "torah:abraham",
+          "sourceIds": [
+            "tanakh"
+          ]
+        },
+        "islam": {
+          "name": {
+            "nl": "Ibrahim / Abraham",
+            "en": "Ibrāhīm / Abraham",
+            "fr": "Ibrāhīm / Abraham"
+          },
+          "role": {
+            "nl": "Profeet; voorbeeld van toewijding aan één God",
+            "en": "Prophet; example of devotion to one God",
+            "fr": "Prophète ; modèle de dévotion au Dieu unique"
+          },
+          "summary": {
+            "nl": "Ibrahim wordt een waarachtige profeet genoemd. Samen met Ismaïl richt hij de fundamenten van het Huis op. Qur’an 3:67 noemt hem geen jood of christen, maar toegewijd aan God.",
+            "en": "Ibrahim is called a truthful prophet. With Ishmael he raises the foundations of the House. Qur’an 3:67 calls him neither Jew nor Christian, but devoted to God.",
+            "fr": "Ibrahim est qualifié de prophète véridique. Avec Ismaël, il élève les fondations de la Maison. Coran 3:67 le décrit comme ni juif ni chrétien, mais dévoué à Dieu."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Qur’an",
+            "en": "Qur’an",
+            "fr": "Coran"
+          },
+          "refs": [
+            {
+              "label": "Qur’an 19:41",
+              "corpus": "quran",
+              "surah": 19,
+              "ayah": 41,
+              "endAyah": 41,
+              "url": "https://quran.com/19/41"
+            },
+            {
+              "label": "Qur’an 2:124–129",
+              "corpus": "quran",
+              "surah": 2,
+              "ayah": 124,
+              "endAyah": 129,
+              "url": "https://quran.com/2/124"
+            },
+            {
+              "label": "Qur’an 3:67",
+              "corpus": "quran",
+              "surah": 3,
+              "ayah": 67,
+              "endAyah": 67,
+              "url": "https://quran.com/3/67"
+            }
+          ],
+          "indexId": "quran:abraham",
+          "sourceIds": [
+            "quran"
+          ]
+        }
+      }
+    },
+    {
+      "key": "sarah",
+      "names": {
+        "nl": "Sara",
+        "en": "Sarah",
+        "fr": "Sarah"
+      },
+      "aliases": [
+        "Sarai",
+        "Sārah",
+        "שרה"
+      ],
+      "theme": {
+        "nl": "De belofte van een kind",
+        "en": "The promise of a child",
+        "fr": "La promesse d’un enfant"
+      },
+      "traditions": {
+        "christianity": {
+          "name": {
+            "nl": "Sara",
+            "en": "Sarah",
+            "fr": "Sarah"
+          },
+          "role": {
+            "nl": "Geloof en ontvangen belofte",
+            "en": "Faith and received promise",
+            "fr": "Foi et promesse reçue"
+          },
+          "summary": {
+            "nl": "Hebreeën noemt Sara bij de geloofsgetuigen en verbindt Isaaks geboorte met vertrouwen in Gods belofte. Genesis bewaart ook haar verwondering en lachen.",
+            "en": "Hebrews includes Sarah among witnesses of faith and links Isaac’s birth with trust in God’s promise. Genesis also preserves her surprise and laughter.",
+            "fr": "Hébreux compte Sarah parmi les témoins de la foi et relie la naissance d’Isaac à la confiance en la promesse divine. La Genèse rapporte aussi son étonnement et son rire."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
+            "en": "Christian Bible · Old and New Testaments",
+            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+          },
+          "refs": [
+            {
+              "label": "Genesis 18:9–15",
+              "corpus": "bible",
+              "book": "GEN",
+              "chapter": 18,
+              "verse": 9,
+              "endVerse": 15,
+              "url": "https://www.biblegateway.com/passage/?search=Genesis%2018%3A9-15&version=WEB"
+            },
+            {
+              "label": "Hebrews 11:11–12",
+              "corpus": "bible",
+              "book": "HEB",
+              "chapter": 11,
+              "verse": 11,
+              "endVerse": 12,
+              "url": "https://www.biblegateway.com/passage/?search=Hebrews%2011%3A11-12&version=WEB"
+            }
+          ],
+          "indexId": "sarah",
+          "sourceIds": [
+            "bible"
+          ]
+        },
+        "judaism": {
+          "name": {
+            "nl": "Sara",
+            "en": "Sarah",
+            "fr": "Sarah"
+          },
+          "role": {
+            "nl": "Aartsmoeder; moeder van Isaak",
+            "en": "Matriarch; mother of Isaac",
+            "fr": "Matriarche ; mère d’Isaac"
+          },
+          "summary": {
+            "nl": "God verandert Sarais naam in Sara en belooft dat zij Isaak zal baren. Zijn geboorte en haar reactie staan in Genesis 21.",
+            "en": "God changes Sarai’s name to Sarah and promises that she will bear Isaac. His birth and her response are narrated in Genesis 21.",
+            "fr": "Dieu change le nom de Saraï en Sarah et promet qu’elle donnera naissance à Isaac. Sa naissance et la réaction de Sarah sont racontées en Genèse 21."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Torah · vijf boeken van Mozes",
+            "en": "Torah · five books of Moses",
+            "fr": "Torah · cinq livres de Moïse"
+          },
+          "refs": [
+            {
+              "label": "Genesis 17:15–19",
+              "corpus": "tanakh",
+              "book": "GEN",
+              "chapter": 17,
+              "verse": 15,
+              "endVerse": 19,
+              "url": "https://www.sefaria.org/Genesis.17.15"
+            },
+            {
+              "label": "Genesis 21:1–7",
+              "corpus": "tanakh",
+              "book": "GEN",
+              "chapter": 21,
+              "verse": 1,
+              "endVerse": 7,
+              "url": "https://www.sefaria.org/Genesis.21.1"
+            }
+          ],
+          "indexId": "torah:sarah",
+          "sourceIds": [
+            "tanakh"
+          ]
+        },
+        "islam": {
+          "name": {
+            "nl": "Ibrahims vrouw · naam niet gegeven",
+            "en": "Ibrahim’s wife · unnamed",
+            "fr": "Épouse d’Ibrahim · sans nom"
+          },
+          "role": {
+            "nl": "Ontvanger van de aankondiging van Isaak",
+            "en": "Recipient of the announcement of Isaac",
+            "fr": "Destinataire de l’annonce d’Isaac"
+          },
+          "summary": {
+            "nl": "De engelen kondigen Isaak en daarna Jakob aan Ibrahims vrouw aan. Zij verbaast zich over haar ouderdom. De Qur’an noemt haar hier niet Sara; de vergelijking bewaart dat onderscheid.",
+            "en": "The angels announce Isaac and then Jacob to Ibrahim’s wife. She wonders at her old age. The Qur’an does not name her Sarah here; this comparison preserves that distinction.",
+            "fr": "Les anges annoncent Isaac puis Jacob à l’épouse d’Ibrahim. Elle s’étonne de son grand âge. Le Coran ne la nomme pas Sarah ici ; cette comparaison maintient cette distinction."
+          },
+          "status": "not-named",
+          "scope": {
+            "nl": "Qur’an",
+            "en": "Qur’an",
+            "fr": "Coran"
+          },
+          "refs": [
+            {
+              "label": "Qur’an 11:69–73",
+              "corpus": "quran",
+              "surah": 11,
+              "ayah": 69,
+              "endAyah": 73,
+              "url": "https://quran.com/11/69"
+            }
+          ],
+          "indexId": "quran:abraham-wife",
+          "sourceIds": [
+            "quran"
+          ]
+        }
+      }
+    },
+    {
+      "key": "hagar",
+      "names": {
+        "nl": "Hagar",
+        "en": "Hagar",
+        "fr": "Agar"
+      },
+      "aliases": [
+        "Hajar",
+        "Hājar",
+        "הגר",
+        "هاجر"
+      ],
+      "theme": {
+        "nl": "Woestijn en zorg",
+        "en": "Wilderness and care",
+        "fr": "Désert et protection"
+      },
+      "traditions": {
+        "christianity": {
+          "name": {
+            "nl": "Hagar",
+            "en": "Hagar",
+            "fr": "Agar"
+          },
+          "role": {
+            "nl": "Moeder van Ismaël; figuur in Paulus’ allegorie",
+            "en": "Ishmael’s mother; figure in Paul’s allegory",
+            "fr": "Mère d’Ismaël ; figure de l’allégorie de Paul"
+          },
+          "summary": {
+            "nl": "Genesis vertelt over Gods zorg voor Hagar en Ismaël. Galaten 4 gebruikt Hagar daarnaast in een allegorie over twee verbonden; dat is Paulus’ lezing, geen samenvatting van de Joodse traditie.",
+            "en": "Genesis tells of God’s care for Hagar and Ishmael. Galatians 4 also uses Hagar in an allegory of two covenants; this is Paul’s reading, not a summary of Jewish tradition.",
+            "fr": "La Genèse raconte la protection divine d’Agar et d’Ismaël. Galates 4 emploie aussi Agar dans une allégorie des deux alliances ; il s’agit de la lecture de Paul, non d’un résumé de la tradition juive."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
+            "en": "Christian Bible · Old and New Testaments",
+            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+          },
+          "refs": [
+            {
+              "label": "Genesis 21:14–21",
+              "corpus": "bible",
+              "book": "GEN",
+              "chapter": 21,
+              "verse": 14,
+              "endVerse": 21,
+              "url": "https://www.biblegateway.com/passage/?search=Genesis%2021%3A14-21&version=WEB"
+            },
+            {
+              "label": "Galatians 4:21–31",
+              "corpus": "bible",
+              "book": "GAL",
+              "chapter": 4,
+              "verse": 21,
+              "endVerse": 31,
+              "url": "https://www.biblegateway.com/passage/?search=Galatians%204%3A21-31&version=WEB"
+            }
+          ],
+          "indexId": "hagar",
+          "sourceIds": [
+            "bible"
+          ]
+        },
+        "judaism": {
+          "name": {
+            "nl": "Hagar",
+            "en": "Hagar",
+            "fr": "Agar"
+          },
+          "role": {
+            "nl": "Egyptische dienares; moeder van Ismaël",
+            "en": "Egyptian servant; mother of Ishmael",
+            "fr": "Servante égyptienne ; mère d’Ismaël"
+          },
+          "summary": {
+            "nl": "Hagar ontmoet een goddelijke boodschapper in de woestijn. Later hoort God de jongen Ismaël en wordt haar een waterbron getoond. De verhalen geven haar een eigen stem en ervaring.",
+            "en": "Hagar encounters a divine messenger in the wilderness. Later God hears the boy Ishmael and she is shown a well. The narratives give her a voice and experience of her own.",
+            "fr": "Agar rencontre un messager divin dans le désert. Plus tard, Dieu entend le jeune Ismaël et lui montre un puits. Ces récits donnent à Agar une voix et une expérience propres."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Torah · vijf boeken van Mozes",
+            "en": "Torah · five books of Moses",
+            "fr": "Torah · cinq livres de Moïse"
+          },
+          "refs": [
+            {
+              "label": "Genesis 16:7–16",
+              "corpus": "tanakh",
+              "book": "GEN",
+              "chapter": 16,
+              "verse": 7,
+              "endVerse": 16,
+              "url": "https://www.sefaria.org/Genesis.16.7"
+            },
+            {
+              "label": "Genesis 21:14–21",
+              "corpus": "tanakh",
+              "book": "GEN",
+              "chapter": 21,
+              "verse": 14,
+              "endVerse": 21,
+              "url": "https://www.sefaria.org/Genesis.21.14"
+            }
+          ],
+          "indexId": "torah:hagar",
+          "sourceIds": [
+            "tanakh"
+          ]
+        },
+        "islam": {
+          "name": {
+            "nl": "Hajar",
+            "en": "Hajar",
+            "fr": "Hajar"
+          },
+          "role": {
+            "nl": "Moeder van Ismaïl in de hadithoverlevering",
+            "en": "Ishmael’s mother in hadith tradition",
+            "fr": "Mère d’Ismaël dans la tradition du hadith"
+          },
+          "summary": {
+            "nl": "Hagar wordt niet bij naam genoemd in de Qur’an. Sahih al-Bukhari 3364 vertelt over Ismaïls moeder die water zoekt tussen Safa en Marwa. Dit is een hadithbron, geen Qur’anpassage.",
+            "en": "Hagar is not named in the Qur’an. Sahih al-Bukhari 3364 tells of Ishmael’s mother seeking water between Safa and Marwa. This is a hadith source, not a Qur’anic passage.",
+            "fr": "Agar n’est pas nommée dans le Coran. Sahih al-Bukhari 3364 raconte la recherche d’eau de la mère d’Ismaël entre Safa et Marwa. Il s’agit d’un hadith, non d’un passage coranique."
+          },
+          "status": "outside-corpus",
+          "scope": {
+            "nl": "Latere islamitische overlevering · hadith",
+            "en": "Later Islamic tradition · hadith",
+            "fr": "Tradition islamique ultérieure · hadith"
+          },
+          "refs": [
+            {
+              "label": "Sahih al-Bukhari 3364",
+              "corpus": "hadith",
+              "url": "https://sunnah.com/bukhari:3364"
+            }
+          ],
+          "sourceIds": [
+            "hadith"
+          ]
+        }
+      }
+    },
+    {
+      "key": "lot",
+      "names": {
+        "nl": "Lot",
+        "en": "Lot",
+        "fr": "Lot"
+      },
+      "aliases": [
+        "Lut",
+        "Lūṭ",
+        "לוט",
+        "لوط"
+      ],
+      "theme": {
+        "nl": "Waarschuwing en ontsnapping",
+        "en": "Warning and escape",
+        "fr": "Avertissement et fuite"
+      },
+      "traditions": {
+        "christianity": {
+          "name": {
+            "nl": "Lot",
+            "en": "Lot",
+            "fr": "Lot"
+          },
+          "role": {
+            "nl": "Voorbeeld bij redding en oordeel",
+            "en": "Example in rescue and judgment",
+            "fr": "Exemple de délivrance et de jugement"
+          },
+          "summary": {
+            "nl": "Genesis vertelt Lots ontsnapping uit Sodom. In 2 Petrus wordt Lot rechtvaardig genoemd en gebruikt als voorbeeld van bevrijding te midden van oordeel.",
+            "en": "Genesis tells of Lot’s escape from Sodom. In 2 Peter Lot is called righteous and used as an example of deliverance amid judgment.",
+            "fr": "La Genèse raconte la fuite de Lot hors de Sodome. Dans 2 Pierre, Lot est qualifié de juste et devient un exemple de délivrance au milieu du jugement."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
+            "en": "Christian Bible · Old and New Testaments",
+            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+          },
+          "refs": [
+            {
+              "label": "Genesis 19:15–29",
+              "corpus": "bible",
+              "book": "GEN",
+              "chapter": 19,
+              "verse": 15,
+              "endVerse": 29,
+              "url": "https://www.biblegateway.com/passage/?search=Genesis%2019%3A15-29&version=WEB"
+            },
+            {
+              "label": "2 Peter 2:6–9",
+              "corpus": "bible",
+              "book": "2PE",
+              "chapter": 2,
+              "verse": 6,
+              "endVerse": 9,
+              "url": "https://www.biblegateway.com/passage/?search=2%20Peter%202%3A6-9&version=WEB"
+            }
+          ],
+          "indexId": "lot",
+          "sourceIds": [
+            "bible"
+          ]
+        },
+        "judaism": {
+          "name": {
+            "nl": "Lot",
+            "en": "Lot",
+            "fr": "Lot"
+          },
+          "role": {
+            "nl": "Neef van Abraham; bewoner van Sodom",
+            "en": "Abraham’s nephew; resident of Sodom",
+            "fr": "Neveu d’Abraham ; habitant de Sodome"
+          },
+          "summary": {
+            "nl": "Lot is Harans zoon en trekt met Abraham mee. Genesis vertelt hoe boodschappers hem en zijn gezin uit Sodom leiden, in een verhaal over gastvrijheid, geweld en oordeel.",
+            "en": "Lot is Haran’s son and travels with Abraham. Genesis tells how messengers lead him and his family out of Sodom in a narrative of hospitality, violence and judgment.",
+            "fr": "Lot est le fils de Harân et voyage avec Abraham. La Genèse raconte comment des messagers le font sortir de Sodome avec sa famille, dans un récit d’hospitalité, de violence et de jugement."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Torah · vijf boeken van Mozes",
+            "en": "Torah · five books of Moses",
+            "fr": "Torah · cinq livres de Moïse"
+          },
+          "refs": [
+            {
+              "label": "Genesis 11:27–31",
+              "corpus": "tanakh",
+              "book": "GEN",
+              "chapter": 11,
+              "verse": 27,
+              "endVerse": 31,
+              "url": "https://www.sefaria.org/Genesis.11.27"
+            },
+            {
+              "label": "Genesis 19:1–29",
+              "corpus": "tanakh",
+              "book": "GEN",
+              "chapter": 19,
+              "verse": 1,
+              "endVerse": 29,
+              "url": "https://www.sefaria.org/Genesis.19.1"
+            }
+          ],
+          "indexId": "torah:lot",
+          "sourceIds": [
+            "tanakh"
+          ]
+        },
+        "islam": {
+          "name": {
+            "nl": "Loet / Lūṭ",
+            "en": "Lūṭ / Lot",
+            "fr": "Lūṭ / Lot"
+          },
+          "role": {
+            "nl": "Boodschapper die zijn volk aanspreekt",
+            "en": "Messenger addressing his people",
+            "fr": "Messager s’adressant à son peuple"
+          },
+          "summary": {
+            "nl": "Loet wordt bij de boodschappers gerekend. Hij waarschuwt zijn volk; zijn gezin wordt gered, behalve een oudere vrouw die achterblijft. De Qur’an presenteert dit als een eigen waarschuwingsverhaal.",
+            "en": "Lot is counted among the messengers. He warns his people; his household is rescued except for an older woman who remains. The Qur’an presents this as its own warning narrative.",
+            "fr": "Lot compte parmi les messagers. Il avertit son peuple ; sa famille est sauvée, sauf une femme âgée qui reste. Le Coran présente cela comme son propre récit d’avertissement."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Qur’an",
+            "en": "Qur’an",
+            "fr": "Coran"
+          },
+          "refs": [
+            {
+              "label": "Qur’an 26:160–175",
+              "corpus": "quran",
+              "surah": 26,
+              "ayah": 160,
+              "endAyah": 175,
+              "url": "https://quran.com/26/160"
+            },
+            {
+              "label": "Qur’an 37:133–138",
+              "corpus": "quran",
+              "surah": 37,
+              "ayah": 133,
+              "endAyah": 138,
+              "url": "https://quran.com/37/133"
+            }
+          ],
+          "indexId": "quran:lot",
+          "sourceIds": [
+            "quran"
+          ]
+        }
+      }
+    },
+    {
+      "key": "ishmael",
+      "names": {
+        "nl": "Ismaël",
+        "en": "Ishmael",
+        "fr": "Ismaël"
+      },
+      "aliases": [
+        "Ismail",
+        "Ismāʿīl",
+        "ישמעאל",
+        "إسماعيل"
+      ],
+      "theme": {
+        "nl": "Nakomelingen en gehoorzaamheid",
+        "en": "Descendants and obedience",
+        "fr": "Descendance et obéissance"
+      },
+      "traditions": {
+        "christianity": {
+          "name": {
+            "nl": "Ismaël",
+            "en": "Ishmael",
+            "fr": "Ismaël"
+          },
+          "role": {
+            "nl": "Zoon van Abraham en Hagar",
+            "en": "Son of Abraham and Hagar",
+            "fr": "Fils d’Abraham et d’Agar"
+          },
+          "summary": {
+            "nl": "Genesis verhaalt Gods belofte voor Ismaël. Galaten bespreekt Abrahams twee zonen in een allegorie waarin Isaak als kind van de belofte wordt aangeduid.",
+            "en": "Genesis records God’s promise for Ishmael. Galatians discusses Abraham’s two sons in an allegory in which Isaac is called a child of promise.",
+            "fr": "La Genèse rapporte la promesse de Dieu pour Ismaël. Galates évoque les deux fils d’Abraham dans une allégorie où Isaac est appelé enfant de la promesse."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
+            "en": "Christian Bible · Old and New Testaments",
+            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+          },
+          "refs": [
+            {
+              "label": "Genesis 17:18–21",
+              "corpus": "bible",
+              "book": "GEN",
+              "chapter": 17,
+              "verse": 18,
+              "endVerse": 21,
+              "url": "https://www.biblegateway.com/passage/?search=Genesis%2017%3A18-21&version=WEB"
+            },
+            {
+              "label": "Galatians 4:22–28",
+              "corpus": "bible",
+              "book": "GAL",
+              "chapter": 4,
+              "verse": 22,
+              "endVerse": 28,
+              "url": "https://www.biblegateway.com/passage/?search=Galatians%204%3A22-28&version=WEB"
+            }
+          ],
+          "indexId": "ishmael",
+          "sourceIds": [
+            "bible"
+          ]
+        },
+        "judaism": {
+          "name": {
+            "nl": "Jisjmaël / Ismaël",
+            "en": "Yishmael / Ishmael",
+            "fr": "Yishmaël / Ismaël"
+          },
+          "role": {
+            "nl": "Gezegende zoon van Abraham",
+            "en": "Blessed son of Abraham",
+            "fr": "Fils béni d’Abraham"
+          },
+          "summary": {
+            "nl": "God belooft Ismaël talrijke nakomelingen en twaalf vorsten. Genesis onderscheidt die zegen van het verbond dat met Isaak wordt voortgezet.",
+            "en": "God promises Ishmael many descendants and twelve princes. Genesis distinguishes that blessing from the covenant continued through Isaac.",
+            "fr": "Dieu promet à Ismaël une nombreuse descendance et douze princes. La Genèse distingue cette bénédiction de l’alliance poursuivie avec Isaac."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Torah · vijf boeken van Mozes",
+            "en": "Torah · five books of Moses",
+            "fr": "Torah · cinq livres de Moïse"
+          },
+          "refs": [
+            {
+              "label": "Genesis 17:18–21",
+              "corpus": "tanakh",
+              "book": "GEN",
+              "chapter": 17,
+              "verse": 18,
+              "endVerse": 21,
+              "url": "https://www.sefaria.org/Genesis.17.18"
+            },
+            {
+              "label": "Genesis 25:12–18",
+              "corpus": "tanakh",
+              "book": "GEN",
+              "chapter": 25,
+              "verse": 12,
+              "endVerse": 18,
+              "url": "https://www.sefaria.org/Genesis.25.12"
+            }
+          ],
+          "indexId": "torah:ishmael",
+          "sourceIds": [
+            "tanakh"
+          ]
+        },
+        "islam": {
+          "name": {
+            "nl": "Ismaïl",
+            "en": "Ismāʿīl",
+            "fr": "Ismāʿīl"
+          },
+          "role": {
+            "nl": "Boodschapper en profeet",
+            "en": "Messenger and prophet",
+            "fr": "Messager et prophète"
+          },
+          "summary": {
+            "nl": "Ismaïl wordt trouw aan zijn belofte en een profeet genoemd. Hij helpt Ibrahim de fundamenten van het Huis op te richten. De zoon in het offerverhaal van 37:102 wordt daar niet bij naam genoemd.",
+            "en": "Ishmael is called true to his promise and a prophet. He helps Ibrahim raise the foundations of the House. The son in the sacrifice narrative at 37:102 is not named there.",
+            "fr": "Ismaël est présenté comme fidèle à sa promesse et prophète. Il aide Ibrahim à élever les fondations de la Maison. Le fils du récit du sacrifice en 37:102 n’y est pas nommé."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Qur’an",
+            "en": "Qur’an",
+            "fr": "Coran"
+          },
+          "refs": [
+            {
+              "label": "Qur’an 19:54–55",
+              "corpus": "quran",
+              "surah": 19,
+              "ayah": 54,
+              "endAyah": 55,
+              "url": "https://quran.com/19/54"
+            },
+            {
+              "label": "Qur’an 2:127–129",
+              "corpus": "quran",
+              "surah": 2,
+              "ayah": 127,
+              "endAyah": 129,
+              "url": "https://quran.com/2/127"
+            },
+            {
+              "label": "Qur’an 37:101–107",
+              "corpus": "quran",
+              "surah": 37,
+              "ayah": 101,
+              "endAyah": 107,
+              "url": "https://quran.com/37/101"
+            }
+          ],
+          "indexId": "quran:ishmael",
+          "sourceIds": [
+            "quran"
+          ]
+        }
+      }
+    },
+    {
+      "key": "isaac",
+      "names": {
+        "nl": "Isaak",
+        "en": "Isaac",
+        "fr": "Isaac"
+      },
+      "aliases": [
+        "Yitzhak",
+        "Ishaq",
+        "Isḥāq",
+        "יצחק",
+        "إسحاق"
+      ],
+      "theme": {
+        "nl": "Belofte en zegen",
+        "en": "Promise and blessing",
+        "fr": "Promesse et bénédiction"
+      },
+      "traditions": {
+        "christianity": {
+          "name": {
+            "nl": "Isaak",
+            "en": "Isaac",
+            "fr": "Isaac"
+          },
+          "role": {
+            "nl": "Kind van de belofte",
+            "en": "Child of promise",
+            "fr": "Enfant de la promesse"
+          },
+          "summary": {
+            "nl": "Paulus noemt christelijke gelovigen kinderen van de belofte zoals Isaak. Hebreeën herinnert aan zijn zegen voor Jakob en Esau als daad van geloof.",
+            "en": "Paul calls Christian believers children of promise like Isaac. Hebrews recalls his blessing of Jacob and Esau as an act of faith.",
+            "fr": "Paul appelle les croyants chrétiens enfants de la promesse, comme Isaac. Hébreux rappelle sa bénédiction de Jacob et d’Ésaü comme un acte de foi."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Christelijke Bijbel · Nieuwe Testament",
+            "en": "Christian Bible · New Testament",
+            "fr": "Bible chrétienne · Nouveau Testament"
+          },
+          "refs": [
+            {
+              "label": "Galatians 4:28",
+              "corpus": "bible",
+              "book": "GAL",
+              "chapter": 4,
+              "verse": 28,
+              "endVerse": 28,
+              "url": "https://www.biblegateway.com/passage/?search=Galatians%204%3A28&version=WEB"
+            },
+            {
+              "label": "Hebrews 11:20",
+              "corpus": "bible",
+              "book": "HEB",
+              "chapter": 11,
+              "verse": 20,
+              "endVerse": 20,
+              "url": "https://www.biblegateway.com/passage/?search=Hebrews%2011%3A20&version=WEB"
+            }
+          ],
+          "indexId": "isaac",
+          "sourceIds": [
+            "bible"
+          ]
+        },
+        "judaism": {
+          "name": {
+            "nl": "Jitschak / Isaak",
+            "en": "Yitzchak / Isaac",
+            "fr": "Yitzhak / Isaac"
+          },
+          "role": {
+            "nl": "Aartsvader; zoon van Sara en Abraham",
+            "en": "Patriarch; son of Sarah and Abraham",
+            "fr": "Patriarche ; fils de Sarah et d’Abraham"
+          },
+          "summary": {
+            "nl": "Isaak is de zoon aan wie het verbond wordt doorgegeven. Genesis 22 noemt hem uitdrukkelijk in het verhaal van de binding; Genesis 26 hernieuwt de belofte aan hem.",
+            "en": "Isaac is the son through whom the covenant continues. Genesis 22 explicitly names him in the binding narrative; Genesis 26 renews the promise to him.",
+            "fr": "Isaac est le fils par qui se poursuit l’alliance. Genèse 22 le nomme explicitement dans le récit de la ligature ; Genèse 26 renouvelle la promesse qui lui est faite."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Torah · vijf boeken van Mozes",
+            "en": "Torah · five books of Moses",
+            "fr": "Torah · cinq livres de Moïse"
+          },
+          "refs": [
+            {
+              "label": "Genesis 22:1–14",
+              "corpus": "tanakh",
+              "book": "GEN",
+              "chapter": 22,
+              "verse": 1,
+              "endVerse": 14,
+              "url": "https://www.sefaria.org/Genesis.22.1"
+            },
+            {
+              "label": "Genesis 26:2–5",
+              "corpus": "tanakh",
+              "book": "GEN",
+              "chapter": 26,
+              "verse": 2,
+              "endVerse": 5,
+              "url": "https://www.sefaria.org/Genesis.26.2"
+            }
+          ],
+          "indexId": "torah:isaac",
+          "sourceIds": [
+            "tanakh"
+          ]
+        },
+        "islam": {
+          "name": {
+            "nl": "Ishaq / Isaak",
+            "en": "Isḥāq / Isaac",
+            "fr": "Isḥāq / Isaac"
+          },
+          "role": {
+            "nl": "Aangekondigde zoon en profeet",
+            "en": "Promised son and prophet",
+            "fr": "Fils annoncé et prophète"
+          },
+          "summary": {
+            "nl": "Isaak wordt als goed nieuws aan Ibrahim en zijn vrouw aangekondigd. De Qur’an noemt hem een profeet onder de rechtschapenen. De naam van de zoon in 37:102 blijft onuitgesproken.",
+            "en": "Isaac is announced as good news to Ibrahim and his wife. The Qur’an calls him a prophet among the righteous. The son’s name at 37:102 remains unstated.",
+            "fr": "Isaac est annoncé comme une bonne nouvelle à Ibrahim et à son épouse. Le Coran le présente comme un prophète parmi les justes. Le nom du fils en 37:102 reste non précisé."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Qur’an",
+            "en": "Qur’an",
+            "fr": "Coran"
+          },
+          "refs": [
+            {
+              "label": "Qur’an 11:71–73",
+              "corpus": "quran",
+              "surah": 11,
+              "ayah": 71,
+              "endAyah": 73,
+              "url": "https://quran.com/11/71"
+            },
+            {
+              "label": "Qur’an 37:102–112",
+              "corpus": "quran",
+              "surah": 37,
+              "ayah": 102,
+              "endAyah": 112,
+              "url": "https://quran.com/37/102"
+            }
+          ],
+          "indexId": "quran:isaac",
+          "sourceIds": [
+            "quran"
+          ]
+        }
+      }
+    },
+    {
+      "key": "jacob",
+      "names": {
+        "nl": "Jakob",
+        "en": "Jacob",
+        "fr": "Jacob"
+      },
+      "aliases": [
+        "Israel",
+        "Israël",
+        "Yaqub",
+        "Yaʿqūb",
+        "יעקב",
+        "يعقوب"
+      ],
+      "theme": {
+        "nl": "Familie, belofte en volharding",
+        "en": "Family, promise and perseverance",
+        "fr": "Famille, promesse et persévérance"
+      },
+      "traditions": {
+        "christianity": {
+          "name": {
+            "nl": "Jakob / Israël",
+            "en": "Jacob / Israel",
+            "fr": "Jacob / Israël"
+          },
+          "role": {
+            "nl": "Aartsvader en geloofsgetuige",
+            "en": "Patriarch and witness of faith",
+            "fr": "Patriarche et témoin de la foi"
+          },
+          "summary": {
+            "nl": "Jakob behoort tot de aartsvaders in de christelijke Bijbel. Hebreeën noemt zijn zegen voor Jozefs zonen en zijn aanbidding als uitingen van geloof.",
+            "en": "Jacob belongs to the patriarchs of the Christian Bible. Hebrews names his blessing of Joseph’s sons and his worship as expressions of faith.",
+            "fr": "Jacob fait partie des patriarches de la Bible chrétienne. Hébreux cite sa bénédiction des fils de Joseph et son adoration comme expressions de foi."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
+            "en": "Christian Bible · Old and New Testaments",
+            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+          },
+          "refs": [
+            {
+              "label": "Genesis 48:8–20",
+              "corpus": "bible",
+              "book": "GEN",
+              "chapter": 48,
+              "verse": 8,
+              "endVerse": 20,
+              "url": "https://www.biblegateway.com/passage/?search=Genesis%2048%3A8-20&version=WEB"
+            },
+            {
+              "label": "Hebrews 11:21",
+              "corpus": "bible",
+              "book": "HEB",
+              "chapter": 11,
+              "verse": 21,
+              "endVerse": 21,
+              "url": "https://www.biblegateway.com/passage/?search=Hebrews%2011%3A21&version=WEB"
+            }
+          ],
+          "indexId": "jacob",
+          "sourceIds": [
+            "bible"
+          ]
+        },
+        "judaism": {
+          "name": {
+            "nl": "Jaäkov / Israël",
+            "en": "Yaakov / Israel",
+            "fr": "Yaakov / Israël"
+          },
+          "role": {
+            "nl": "Aartsvader; drager van de naam Israël",
+            "en": "Patriarch; bearer of the name Israel",
+            "fr": "Patriarche ; porteur du nom Israël"
+          },
+          "summary": {
+            "nl": "Jakob ontvangt de naam Israël. Zijn familiegeschiedenis, zijn zonen en de zegeningen in Genesis 49 vormen een belangrijk deel van het verhaal over Israëls stammen.",
+            "en": "Jacob receives the name Israel. His family story, sons and the blessings in Genesis 49 form an important part of the narrative about Israel’s tribes.",
+            "fr": "Jacob reçoit le nom Israël. Son histoire familiale, ses fils et les bénédictions de Genèse 49 forment une part importante du récit des tribus d’Israël."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Torah · vijf boeken van Mozes",
+            "en": "Torah · five books of Moses",
+            "fr": "Torah · cinq livres de Moïse"
+          },
+          "refs": [
+            {
+              "label": "Genesis 35:9–12",
+              "corpus": "tanakh",
+              "book": "GEN",
+              "chapter": 35,
+              "verse": 9,
+              "endVerse": 12,
+              "url": "https://www.sefaria.org/Genesis.35.9"
+            },
+            {
+              "label": "Genesis 49:1–28",
+              "corpus": "tanakh",
+              "book": "GEN",
+              "chapter": 49,
+              "verse": 1,
+              "endVerse": 28,
+              "url": "https://www.sefaria.org/Genesis.49.1"
+            }
+          ],
+          "indexId": "torah:jacob",
+          "sourceIds": [
+            "tanakh"
+          ]
+        },
+        "islam": {
+          "name": {
+            "nl": "Jakoeb / Yaʿqūb",
+            "en": "Yaʿqūb / Jacob",
+            "fr": "Yaʿqūb / Jacob"
+          },
+          "role": {
+            "nl": "Profeet; vader die op God vertrouwt",
+            "en": "Prophet; father trusting God",
+            "fr": "Prophète ; père confiant en Dieu"
+          },
+          "summary": {
+            "nl": "Jakob wordt een profeet genoemd. In soera Joesoef rouwt hij om zijn zoon, maar spoort hij zijn andere zonen aan de hoop op Gods barmhartigheid niet te verliezen.",
+            "en": "Jacob is called a prophet. In Surah Yusuf he grieves for his son but urges his other sons not to lose hope in God’s mercy.",
+            "fr": "Jacob est appelé prophète. Dans la sourate Yusuf, il pleure son fils mais exhorte ses autres fils à ne pas perdre espoir en la miséricorde divine."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Qur’an",
+            "en": "Qur’an",
+            "fr": "Coran"
+          },
+          "refs": [
+            {
+              "label": "Qur’an 19:49",
+              "corpus": "quran",
+              "surah": 19,
+              "ayah": 49,
+              "endAyah": 49,
+              "url": "https://quran.com/19/49"
+            },
+            {
+              "label": "Qur’an 12:83–87",
+              "corpus": "quran",
+              "surah": 12,
+              "ayah": 83,
+              "endAyah": 87,
+              "url": "https://quran.com/12/83"
+            }
+          ],
+          "indexId": "quran:jacob",
+          "sourceIds": [
+            "quran"
+          ]
+        }
+      }
+    },
+    {
+      "key": "joseph",
+      "names": {
+        "nl": "Jozef · zoon van Jakob",
+        "en": "Joseph · son of Jacob",
+        "fr": "Joseph · fils de Jacob"
+      },
+      "aliases": [
+        "Yosef",
+        "Yusuf",
+        "Yūsuf",
+        "יוסף",
+        "يوسف"
+      ],
+      "theme": {
+        "nl": "Verraad, wijsheid en verzoening",
+        "en": "Betrayal, wisdom and reconciliation",
+        "fr": "Trahison, sagesse et réconciliation"
+      },
+      "traditions": {
+        "christianity": {
+          "name": {
+            "nl": "Jozef · zoon van Jakob",
+            "en": "Joseph · son of Jacob",
+            "fr": "Joseph · fils de Jacob"
+          },
+          "role": {
+            "nl": "Redder van zijn familie in Egypte",
+            "en": "Preserver of his family in Egypt",
+            "fr": "Protecteur de sa famille en Égypte"
+          },
+          "summary": {
+            "nl": "Stefanus hervertelt in Handelingen hoe God Jozef bijstaat ondanks het verraad van zijn broers. Deze Jozef is niet de echtgenoot van Maria.",
+            "en": "In Acts, Stephen retells how God supports Joseph despite his brothers’ betrayal. This Joseph is not Mary’s husband.",
+            "fr": "Dans les Actes, Étienne rappelle que Dieu soutient Joseph malgré la trahison de ses frères. Ce Joseph n’est pas l’époux de Marie."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
+            "en": "Christian Bible · Old and New Testaments",
+            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+          },
+          "refs": [
+            {
+              "label": "Genesis 45:4–8",
+              "corpus": "bible",
+              "book": "GEN",
+              "chapter": 45,
+              "verse": 4,
+              "endVerse": 8,
+              "url": "https://www.biblegateway.com/passage/?search=Genesis%2045%3A4-8&version=WEB"
+            },
+            {
+              "label": "Acts 7:9–14",
+              "corpus": "bible",
+              "book": "ACT",
+              "chapter": 7,
+              "verse": 9,
+              "endVerse": 14,
+              "url": "https://www.biblegateway.com/passage/?search=Acts%207%3A9-14&version=WEB"
+            }
+          ],
+          "indexId": "joseph",
+          "sourceIds": [
+            "bible"
+          ]
+        },
+        "judaism": {
+          "name": {
+            "nl": "Josef",
+            "en": "Yosef",
+            "fr": "Yosef"
+          },
+          "role": {
+            "nl": "Zoon van Jakob; bestuurder in Egypte",
+            "en": "Jacob’s son; administrator in Egypt",
+            "fr": "Fils de Jacob ; administrateur en Égypte"
+          },
+          "summary": {
+            "nl": "Jozef wordt door zijn broers verkocht, verklaart dromen en krijgt gezag in Egypte. Bij de hereniging plaatst hij hun daden binnen een verhaal van behoud tijdens de hongersnood.",
+            "en": "Joseph is sold by his brothers, interprets dreams and gains authority in Egypt. At their reunion he places their actions within a narrative of preservation during famine.",
+            "fr": "Joseph est vendu par ses frères, interprète les rêves et reçoit l’autorité en Égypte. Lors des retrouvailles, il inscrit leurs actes dans un récit de préservation pendant la famine."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Torah · vijf boeken van Mozes",
+            "en": "Torah · five books of Moses",
+            "fr": "Torah · cinq livres de Moïse"
+          },
+          "refs": [
+            {
+              "label": "Genesis 37:26–28",
+              "corpus": "tanakh",
+              "book": "GEN",
+              "chapter": 37,
+              "verse": 26,
+              "endVerse": 28,
+              "url": "https://www.sefaria.org/Genesis.37.26"
+            },
+            {
+              "label": "Genesis 41:39–41",
+              "corpus": "tanakh",
+              "book": "GEN",
+              "chapter": 41,
+              "verse": 39,
+              "endVerse": 41,
+              "url": "https://www.sefaria.org/Genesis.41.39"
+            },
+            {
+              "label": "Genesis 45:4–8",
+              "corpus": "tanakh",
+              "book": "GEN",
+              "chapter": 45,
+              "verse": 4,
+              "endVerse": 8,
+              "url": "https://www.sefaria.org/Genesis.45.4"
+            }
+          ],
+          "indexId": "torah:joseph",
+          "sourceIds": [
+            "tanakh"
+          ]
+        },
+        "islam": {
+          "name": {
+            "nl": "Joesoef / Yūsuf",
+            "en": "Yūsuf / Joseph",
+            "fr": "Yūsuf / Joseph"
+          },
+          "role": {
+            "nl": "Profeet; voorbeeld van geduld en vergeving",
+            "en": "Prophet; example of patience and forgiveness",
+            "fr": "Prophète ; exemple de patience et de pardon"
+          },
+          "summary": {
+            "nl": "Soera Joesoef vertelt zijn eigen doorlopende verhaal: de put, de beproeving, de gevangenis, de dromen en de hereniging. Joesoef vergeeft zijn broers en dankt God.",
+            "en": "Surah Yusuf presents its own sustained narrative: the well, trial, prison, dreams and reunion. Joseph forgives his brothers and thanks God.",
+            "fr": "La sourate Yusuf présente son propre récit suivi : le puits, l’épreuve, la prison, les rêves et les retrouvailles. Joseph pardonne à ses frères et remercie Dieu."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Qur’an",
+            "en": "Qur’an",
+            "fr": "Coran"
+          },
+          "refs": [
+            {
+              "label": "Qur’an 12:15",
+              "corpus": "quran",
+              "surah": 12,
+              "ayah": 15,
+              "endAyah": 15,
+              "url": "https://quran.com/12/15"
+            },
+            {
+              "label": "Qur’an 12:50–56",
+              "corpus": "quran",
+              "surah": 12,
+              "ayah": 50,
+              "endAyah": 56,
+              "url": "https://quran.com/12/50"
+            },
+            {
+              "label": "Qur’an 12:90–101",
+              "corpus": "quran",
+              "surah": 12,
+              "ayah": 90,
+              "endAyah": 101,
+              "url": "https://quran.com/12/90"
+            },
+            {
+              "label": "Qur’an 6:84–89",
+              "corpus": "quran",
+              "surah": 6,
+              "ayah": 84,
+              "endAyah": 89,
+              "url": "https://quran.com/6/84"
+            }
+          ],
+          "indexId": "quran:joseph",
+          "sourceIds": [
+            "quran"
+          ]
+        }
+      }
+    },
+    {
+      "key": "moses",
+      "names": {
+        "nl": "Mozes",
+        "en": "Moses",
+        "fr": "Moïse"
+      },
+      "aliases": [
+        "Moshe",
+        "Musa",
+        "Mūsā",
+        "משה",
+        "موسى"
+      ],
+      "theme": {
+        "nl": "Bevrijding, wet en openbaring",
+        "en": "Liberation, law and revelation",
+        "fr": "Libération, loi et révélation"
+      },
+      "traditions": {
+        "christianity": {
+          "name": {
+            "nl": "Mozes",
+            "en": "Moses",
+            "fr": "Moïse"
+          },
+          "role": {
+            "nl": "Leider en wetgever; vergeleken met Christus",
+            "en": "Leader and lawgiver; compared with Christ",
+            "fr": "Chef et législateur ; comparé au Christ"
+          },
+          "summary": {
+            "nl": "Mozes leidt de uittocht en ontvangt de wet. Hebreeën eert hem als trouwe dienaar en onderscheidt zijn rol van Christus als Zoon.",
+            "en": "Moses leads the exodus and receives the law. Hebrews honours him as a faithful servant and distinguishes his role from Christ as Son.",
+            "fr": "Moïse conduit l’exode et reçoit la loi. Hébreux l’honore comme serviteur fidèle et distingue son rôle de celui du Christ comme Fils."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
+            "en": "Christian Bible · Old and New Testaments",
+            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+          },
+          "refs": [
+            {
+              "label": "Exodus 3:7–12",
+              "corpus": "bible",
+              "book": "EXO",
+              "chapter": 3,
+              "verse": 7,
+              "endVerse": 12,
+              "url": "https://www.biblegateway.com/passage/?search=Exodus%203%3A7-12&version=WEB"
+            },
+            {
+              "label": "Hebrews 3:1–6",
+              "corpus": "bible",
+              "book": "HEB",
+              "chapter": 3,
+              "verse": 1,
+              "endVerse": 6,
+              "url": "https://www.biblegateway.com/passage/?search=Hebrews%203%3A1-6&version=WEB"
+            }
+          ],
+          "indexId": "moses",
+          "sourceIds": [
+            "bible"
+          ]
+        },
+        "judaism": {
+          "name": {
+            "nl": "Mosje / Mozes",
+            "en": "Moshe / Moses",
+            "fr": "Moshé / Moïse"
+          },
+          "role": {
+            "nl": "Profeet van de uittocht en de Torah",
+            "en": "Prophet of the exodus and the Torah",
+            "fr": "Prophète de l’exode et de la Torah"
+          },
+          "summary": {
+            "nl": "Mozes leidt Israël uit Egypte en bemiddelt bij het verbond op de Sinaï. Deuteronomium beschrijft zijn uitzonderlijke nabijheid tot God en noemt geen gelijke onder Israëls profeten.",
+            "en": "Moses leads Israel from Egypt and mediates the Sinai covenant. Deuteronomy describes his exceptional closeness to God and says no prophet like him had arisen in Israel.",
+            "fr": "Moïse conduit Israël hors d’Égypte et sert de médiateur de l’alliance du Sinaï. Le Deutéronome décrit sa proximité exceptionnelle avec Dieu et le dit sans égal parmi les prophètes d’Israël."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Torah · vijf boeken van Mozes",
+            "en": "Torah · five books of Moses",
+            "fr": "Torah · cinq livres de Moïse"
+          },
+          "refs": [
+            {
+              "label": "Exodus 19:3–8",
+              "corpus": "tanakh",
+              "book": "EXO",
+              "chapter": 19,
+              "verse": 3,
+              "endVerse": 8,
+              "url": "https://www.sefaria.org/Exodus.19.3"
+            },
+            {
+              "label": "Exodus 24:3–8",
+              "corpus": "tanakh",
+              "book": "EXO",
+              "chapter": 24,
+              "verse": 3,
+              "endVerse": 8,
+              "url": "https://www.sefaria.org/Exodus.24.3"
+            },
+            {
+              "label": "Deuteronomy 34:10–12",
+              "corpus": "tanakh",
+              "book": "DEU",
+              "chapter": 34,
+              "verse": 10,
+              "endVerse": 12,
+              "url": "https://www.sefaria.org/Deuteronomy.34.10"
+            }
+          ],
+          "indexId": "torah:moses",
+          "sourceIds": [
+            "tanakh"
+          ]
+        },
+        "islam": {
+          "name": {
+            "nl": "Moesa / Mūsā",
+            "en": "Mūsā / Moses",
+            "fr": "Mūsā / Moïse"
+          },
+          "role": {
+            "nl": "Boodschapper met wie God spreekt",
+            "en": "Messenger to whom God speaks",
+            "fr": "Messager auquel Dieu parle"
+          },
+          "summary": {
+            "nl": "Moesa wordt uitgekozen als boodschapper en profeet. God spreekt met hem en zendt hem met Haroen naar Farao. Deze rol wordt in de Qur’an zelf beschreven.",
+            "en": "Moses is chosen as a messenger and prophet. God speaks to him and sends him with Aaron to Pharaoh. This role is described within the Qur’an itself.",
+            "fr": "Moïse est choisi comme messager et prophète. Dieu lui parle et l’envoie avec Aaron auprès de Pharaon. Ce rôle est décrit dans le Coran lui-même."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Qur’an",
+            "en": "Qur’an",
+            "fr": "Coran"
+          },
+          "refs": [
+            {
+              "label": "Qur’an 19:51–53",
+              "corpus": "quran",
+              "surah": 19,
+              "ayah": 51,
+              "endAyah": 53,
+              "url": "https://quran.com/19/51"
+            },
+            {
+              "label": "Qur’an 20:42–48",
+              "corpus": "quran",
+              "surah": 20,
+              "ayah": 42,
+              "endAyah": 48,
+              "url": "https://quran.com/20/42"
+            },
+            {
+              "label": "Qur’an 4:164",
+              "corpus": "quran",
+              "surah": 4,
+              "ayah": 164,
+              "endAyah": 164,
+              "url": "https://quran.com/4/164"
+            }
+          ],
+          "indexId": "quran:moses",
+          "sourceIds": [
+            "quran"
+          ]
+        }
+      }
+    },
+    {
+      "key": "aaron",
+      "names": {
+        "nl": "Aäron",
+        "en": "Aaron",
+        "fr": "Aaron"
+      },
+      "aliases": [
+        "Aharon",
+        "Harun",
+        "Hārūn",
+        "אהרן",
+        "هارون"
+      ],
+      "theme": {
+        "nl": "Priesterschap en profetische steun",
+        "en": "Priesthood and prophetic support",
+        "fr": "Sacerdoce et soutien prophétique"
+      },
+      "traditions": {
+        "christianity": {
+          "name": {
+            "nl": "Aäron",
+            "en": "Aaron",
+            "fr": "Aaron"
+          },
+          "role": {
+            "nl": "Priester; voorbeeld van een goddelijke roeping",
+            "en": "Priest; example of divine calling",
+            "fr": "Prêtre ; exemple d’appel divin"
+          },
+          "summary": {
+            "nl": "Aärons priesterschap maakt deel uit van de christelijke Bijbel. Hebreeën noemt zijn roeping door God bij de uitleg van Christus’ hogepriesterschap.",
+            "en": "Aaron’s priesthood belongs to the Christian Bible. Hebrews names his calling by God when explaining Christ’s high priesthood.",
+            "fr": "Le sacerdoce d’Aaron fait partie de la Bible chrétienne. Hébreux évoque son appel par Dieu pour expliquer le grand sacerdoce du Christ."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
+            "en": "Christian Bible · Old and New Testaments",
+            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+          },
+          "refs": [
+            {
+              "label": "Exodus 28:1",
+              "corpus": "bible",
+              "book": "EXO",
+              "chapter": 28,
+              "verse": 1,
+              "endVerse": 1,
+              "url": "https://www.biblegateway.com/passage/?search=Exodus%2028%3A1&version=WEB"
+            },
+            {
+              "label": "Hebrews 5:1–5",
+              "corpus": "bible",
+              "book": "HEB",
+              "chapter": 5,
+              "verse": 1,
+              "endVerse": 5,
+              "url": "https://www.biblegateway.com/passage/?search=Hebrews%205%3A1-5&version=WEB"
+            }
+          ],
+          "indexId": "aaron",
+          "sourceIds": [
+            "bible"
+          ]
+        },
+        "judaism": {
+          "name": {
+            "nl": "Aharon / Aäron",
+            "en": "Aharon / Aaron",
+            "fr": "Aharon / Aaron"
+          },
+          "role": {
+            "nl": "Priester en broer van Mozes",
+            "en": "Priest and brother of Moses",
+            "fr": "Prêtre et frère de Moïse"
+          },
+          "summary": {
+            "nl": "Aäron spreekt namens Mozes en wordt met zijn zonen aangewezen voor de priesterdienst. De Torah vertelt zowel over die roeping als over zijn rol bij het gouden kalf.",
+            "en": "Aaron speaks for Moses and is appointed with his sons to priestly service. The Torah tells both of that calling and of his role in the golden calf episode.",
+            "fr": "Aaron parle pour Moïse et est désigné avec ses fils pour le service sacerdotal. La Torah raconte cet appel ainsi que son rôle dans l’épisode du veau d’or."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Torah · vijf boeken van Mozes",
+            "en": "Torah · five books of Moses",
+            "fr": "Torah · cinq livres de Moïse"
+          },
+          "refs": [
+            {
+              "label": "Exodus 4:14–16",
+              "corpus": "tanakh",
+              "book": "EXO",
+              "chapter": 4,
+              "verse": 14,
+              "endVerse": 16,
+              "url": "https://www.sefaria.org/Exodus.4.14"
+            },
+            {
+              "label": "Exodus 28:1",
+              "corpus": "tanakh",
+              "book": "EXO",
+              "chapter": 28,
+              "verse": 1,
+              "endVerse": 1,
+              "url": "https://www.sefaria.org/Exodus.28.1"
+            },
+            {
+              "label": "Exodus 32:1–6",
+              "corpus": "tanakh",
+              "book": "EXO",
+              "chapter": 32,
+              "verse": 1,
+              "endVerse": 6,
+              "url": "https://www.sefaria.org/Exodus.32.1"
+            }
+          ],
+          "indexId": "torah:aaron",
+          "sourceIds": [
+            "tanakh"
+          ]
+        },
+        "islam": {
+          "name": {
+            "nl": "Haroen / Hārūn",
+            "en": "Hārūn / Aaron",
+            "fr": "Hārūn / Aaron"
+          },
+          "role": {
+            "nl": "Profeet en helper van Moesa",
+            "en": "Prophet and helper of Moses",
+            "fr": "Prophète et soutien de Moïse"
+          },
+          "summary": {
+            "nl": "Haroen wordt aan Moesa gegeven als profeet en helper. In het verhaal van het kalf waarschuwt Haroen zijn volk tegen de verleiding; dit verschilt van zijn rol in Exodus.",
+            "en": "Aaron is given to Moses as a prophet and helper. In the calf narrative Aaron warns his people against the temptation; this differs from his role in Exodus.",
+            "fr": "Aaron est donné à Moïse comme prophète et soutien. Dans le récit du veau, Aaron avertit son peuple de la tentation ; son rôle diffère de celui de l’Exode."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Qur’an",
+            "en": "Qur’an",
+            "fr": "Coran"
+          },
+          "refs": [
+            {
+              "label": "Qur’an 19:53",
+              "corpus": "quran",
+              "surah": 19,
+              "ayah": 53,
+              "endAyah": 53,
+              "url": "https://quran.com/19/53"
+            },
+            {
+              "label": "Qur’an 20:29–32",
+              "corpus": "quran",
+              "surah": 20,
+              "ayah": 29,
+              "endAyah": 32,
+              "url": "https://quran.com/20/29"
+            },
+            {
+              "label": "Qur’an 20:90–94",
+              "corpus": "quran",
+              "surah": 20,
+              "ayah": 90,
+              "endAyah": 94,
+              "url": "https://quran.com/20/90"
+            }
+          ],
+          "indexId": "quran:aaron",
+          "sourceIds": [
+            "quran"
+          ]
+        }
+      }
+    },
+    {
+      "key": "miriam",
+      "names": {
+        "nl": "Mirjam · zus van Mozes",
+        "en": "Miriam · sister of Moses",
+        "fr": "Miryam · sœur de Moïse"
+      },
+      "aliases": [
+        "Miriam",
+        "מרים"
+      ],
+      "theme": {
+        "nl": "Zuster, bescherming en lied",
+        "en": "Sister, protection and song",
+        "fr": "Sœur, protection et chant"
+      },
+      "traditions": {
+        "christianity": {
+          "name": {
+            "nl": "Mirjam",
+            "en": "Miriam",
+            "fr": "Miryam"
+          },
+          "role": {
+            "nl": "Profetes in het uittochtverhaal",
+            "en": "Prophetess in the exodus narrative",
+            "fr": "Prophétesse du récit de l’exode"
+          },
+          "summary": {
+            "nl": "Het Oude Testament noemt Mirjam een profetes en vertelt hoe zij de vrouwen voorgaat in het lied na de oversteek van de zee. Zij is een andere persoon dan Maria, de moeder van Jezus.",
+            "en": "The Old Testament calls Miriam a prophetess and tells how she leads the women in song after crossing the sea. She is a different person from Mary, Jesus’ mother.",
+            "fr": "L’Ancien Testament appelle Miryam prophétesse et raconte qu’elle entraîne les femmes dans le chant après la traversée de la mer. Elle est distincte de Marie, mère de Jésus."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
+            "en": "Christian Bible · Old and New Testaments",
+            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+          },
+          "refs": [
+            {
+              "label": "Exodus 15:20–21",
+              "corpus": "bible",
+              "book": "EXO",
+              "chapter": 15,
+              "verse": 20,
+              "endVerse": 21,
+              "url": "https://www.biblegateway.com/passage/?search=Exodus%2015%3A20-21&version=WEB"
+            },
+            {
+              "label": "Numbers 26:59",
+              "corpus": "bible",
+              "book": "NUM",
+              "chapter": 26,
+              "verse": 59,
+              "endVerse": 59,
+              "url": "https://www.biblegateway.com/passage/?search=Numbers%2026%3A59&version=WEB"
+            }
+          ],
+          "indexId": "miriam",
+          "sourceIds": [
+            "bible"
+          ]
+        },
+        "judaism": {
+          "name": {
+            "nl": "Mirjam",
+            "en": "Miriam",
+            "fr": "Miryam"
+          },
+          "role": {
+            "nl": "Profetes; zus van Mozes en Aäron",
+            "en": "Prophetess; sister of Moses and Aaron",
+            "fr": "Prophétesse ; sœur de Moïse et d’Aaron"
+          },
+          "summary": {
+            "nl": "Mirjam leidt een danklied na de uittocht. Numeri noemt haar als zus van Aäron en Mozes en bewaart ook het conflict rond haar en Aärons kritiek op Mozes.",
+            "en": "Miriam leads a song of thanksgiving after the exodus. Numbers names her as Aaron and Moses’ sister and also preserves the conflict over her and Aaron’s criticism of Moses.",
+            "fr": "Miryam conduit un chant d’action de grâce après l’exode. Les Nombres la nomment sœur d’Aaron et de Moïse et relatent aussi le conflit lié à leurs critiques de Moïse."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Torah · vijf boeken van Mozes",
+            "en": "Torah · five books of Moses",
+            "fr": "Torah · cinq livres de Moïse"
+          },
+          "refs": [
+            {
+              "label": "Exodus 15:20–21",
+              "corpus": "tanakh",
+              "book": "EXO",
+              "chapter": 15,
+              "verse": 20,
+              "endVerse": 21,
+              "url": "https://www.sefaria.org/Exodus.15.20"
+            },
+            {
+              "label": "Numbers 12:1–15",
+              "corpus": "tanakh",
+              "book": "NUM",
+              "chapter": 12,
+              "verse": 1,
+              "endVerse": 15,
+              "url": "https://www.sefaria.org/Numbers.12.1"
+            },
+            {
+              "label": "Numbers 26:59",
+              "corpus": "tanakh",
+              "book": "NUM",
+              "chapter": 26,
+              "verse": 59,
+              "endVerse": 59,
+              "url": "https://www.sefaria.org/Numbers.26.59"
+            }
+          ],
+          "indexId": "torah:miriam",
+          "sourceIds": [
+            "tanakh"
+          ]
+        },
+        "islam": {
+          "name": {
+            "nl": "Moesa’s zus · naam niet gegeven",
+            "en": "Moses’ sister · unnamed",
+            "fr": "Sœur de Moïse · sans nom"
+          },
+          "role": {
+            "nl": "Bemiddelaar bij Moesa’s terugkeer naar zijn moeder",
+            "en": "Helper in Moses’ return to his mother",
+            "fr": "Intermédiaire du retour de Moïse à sa mère"
+          },
+          "summary": {
+            "nl": "Qur’an 28 vertelt hoe Moesa’s zus hem volgt en een voedster voorstelt. Haar naam staat er niet. Dit paneel vergelijkt de zusterrol, zonder haar te vereenzelvigen met Maryam, de moeder van Isa.",
+            "en": "Qur’an 28 tells how Moses’ sister follows him and suggests a nurse. Her name is not given. This panel compares the sister’s role without identifying her with Maryam, Jesus’ mother.",
+            "fr": "Coran 28 raconte que la sœur de Moïse le suit et propose une nourrice. Son nom n’est pas donné. Ce panneau compare le rôle de la sœur sans l’identifier à Maryam, mère de Jésus."
+          },
+          "status": "not-named",
+          "scope": {
+            "nl": "Qur’an",
+            "en": "Qur’an",
+            "fr": "Coran"
+          },
+          "refs": [
+            {
+              "label": "Qur’an 28:11–13",
+              "corpus": "quran",
+              "surah": 28,
+              "ayah": 11,
+              "endAyah": 13,
+              "url": "https://quran.com/28/11"
+            }
+          ],
+          "indexId": "quran:moses-sister",
+          "sourceIds": [
+            "quran"
+          ]
+        }
+      }
+    },
+    {
+      "key": "david",
+      "names": {
+        "nl": "David",
+        "en": "David",
+        "fr": "David"
+      },
+      "aliases": [
+        "Dawud",
+        "Dāwūd",
+        "דוד",
+        "داود"
+      ],
+      "theme": {
+        "nl": "Koningschap, rechtspraak en belofte",
+        "en": "Kingship, judgment and promise",
+        "fr": "Royauté, jugement et promesse"
+      },
+      "traditions": {
+        "christianity": {
+          "name": {
+            "nl": "David",
+            "en": "David",
+            "fr": "David"
+          },
+          "role": {
+            "nl": "Koning; voorvader in de messiaanse belofte",
+            "en": "King; ancestor in the messianic promise",
+            "fr": "Roi ; ancêtre dans la promesse messianique"
+          },
+          "summary": {
+            "nl": "David is koning in het Oude Testament. Lucas verbindt Jezus met de troon van David en presenteert zijn koningschap als de vervulling van een blijvende belofte.",
+            "en": "David is a king in the Old Testament. Luke connects Jesus with David’s throne and presents his kingship as the fulfilment of an enduring promise.",
+            "fr": "David est roi dans l’Ancien Testament. Luc relie Jésus au trône de David et présente sa royauté comme l’accomplissement d’une promesse durable."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
+            "en": "Christian Bible · Old and New Testaments",
+            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+          },
+          "refs": [
+            {
+              "label": "2 Samuel 7:12–16",
+              "corpus": "bible",
+              "book": "2SA",
+              "chapter": 7,
+              "verse": 12,
+              "endVerse": 16,
+              "url": "https://www.biblegateway.com/passage/?search=2%20Samuel%207%3A12-16&version=WEB"
+            },
+            {
+              "label": "Luke 1:31–33",
+              "corpus": "bible",
+              "book": "LUK",
+              "chapter": 1,
+              "verse": 31,
+              "endVerse": 33,
+              "url": "https://www.biblegateway.com/passage/?search=Luke%201%3A31-33&version=WEB"
+            }
+          ],
+          "indexId": "david",
+          "sourceIds": [
+            "bible"
+          ]
+        },
+        "judaism": {
+          "name": {
+            "nl": "David",
+            "en": "David",
+            "fr": "David"
+          },
+          "role": {
+            "nl": "Koning van Israël",
+            "en": "King of Israel",
+            "fr": "Roi d’Israël"
+          },
+          "summary": {
+            "nl": "De boeken Samuel vertellen Davids koningschap en de belofte aan zijn huis. Zij bewaren ook Nathans aanklacht na Davids handelen tegenover Uria. Dit behoort tot de Tanakh, buiten de vijf Torahboeken.",
+            "en": "The books of Samuel tell of David’s kingship and the promise to his house. They also preserve Nathan’s accusation after David’s actions against Uriah. This belongs to the Tanakh, outside the five Torah books.",
+            "fr": "Les livres de Samuel racontent la royauté de David et la promesse à sa maison. Ils rapportent aussi l’accusation de Nathan après ses actes envers Urie. Cela relève du Tanakh, hors des cinq livres de la Torah."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Tanakh · buiten de Torah",
+            "en": "Tanakh · outside the Torah",
+            "fr": "Tanakh · hors de la Torah"
+          },
+          "refs": [
+            {
+              "label": "2 Samuel 5:1–5",
+              "corpus": "tanakh",
+              "book": "2SA",
+              "chapter": 5,
+              "verse": 1,
+              "endVerse": 5,
+              "url": "https://www.sefaria.org/II_Samuel.5.1"
+            },
+            {
+              "label": "2 Samuel 7:12–16",
+              "corpus": "tanakh",
+              "book": "2SA",
+              "chapter": 7,
+              "verse": 12,
+              "endVerse": 16,
+              "url": "https://www.sefaria.org/II_Samuel.7.12"
+            },
+            {
+              "label": "2 Samuel 12:1–13",
+              "corpus": "tanakh",
+              "book": "2SA",
+              "chapter": 12,
+              "verse": 1,
+              "endVerse": 13,
+              "url": "https://www.sefaria.org/II_Samuel.12.1"
+            }
+          ],
+          "sourceIds": [
+            "tanakh"
+          ]
+        },
+        "islam": {
+          "name": {
+            "nl": "Dawoed / Dāwūd",
+            "en": "Dāwūd / David",
+            "fr": "Dāwūd / David"
+          },
+          "role": {
+            "nl": "Profeet, koning en ontvanger van de Zaboer",
+            "en": "Prophet, king and recipient of the Zabur",
+            "fr": "Prophète, roi et destinataire du Zabur"
+          },
+          "summary": {
+            "nl": "Dawoed ontvangt de Zaboer en wordt beschreven als een heerser met wijsheid en oordeel. Qur’an 38 roept hem op rechtvaardig te oordelen en vertelt over zijn berouw.",
+            "en": "David receives the Zabur and is described as a ruler with wisdom and judgment. Qur’an 38 calls him to judge justly and tells of his repentance.",
+            "fr": "David reçoit le Zabur et est décrit comme un souverain doté de sagesse et de discernement. Coran 38 l’appelle à juger équitablement et raconte son repentir."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Qur’an",
+            "en": "Qur’an",
+            "fr": "Coran"
+          },
+          "refs": [
+            {
+              "label": "Qur’an 4:163",
+              "corpus": "quran",
+              "surah": 4,
+              "ayah": 163,
+              "endAyah": 163,
+              "url": "https://quran.com/4/163"
+            },
+            {
+              "label": "Qur’an 38:17–26",
+              "corpus": "quran",
+              "surah": 38,
+              "ayah": 17,
+              "endAyah": 26,
+              "url": "https://quran.com/38/17"
+            }
+          ],
+          "indexId": "quran:david",
+          "sourceIds": [
+            "quran"
+          ]
+        }
+      }
+    },
+    {
+      "key": "solomon",
+      "names": {
+        "nl": "Salomo",
+        "en": "Solomon",
+        "fr": "Salomon"
+      },
+      "aliases": [
+        "Shlomo",
+        "Sulayman",
+        "Sulaymān",
+        "שלמה",
+        "سليمان"
+      ],
+      "theme": {
+        "nl": "Wijsheid en heerschappij",
+        "en": "Wisdom and rule",
+        "fr": "Sagesse et pouvoir"
+      },
+      "traditions": {
+        "christianity": {
+          "name": {
+            "nl": "Salomo",
+            "en": "Solomon",
+            "fr": "Salomon"
+          },
+          "role": {
+            "nl": "Wijze koning; vergelijkingspunt in Jezus’ onderwijs",
+            "en": "Wise king; comparison in Jesus’ teaching",
+            "fr": "Roi sage ; comparaison dans l’enseignement de Jésus"
+          },
+          "summary": {
+            "nl": "Salomo’s wijsheid en de komst van de koningin van het Zuiden worden door Jezus aangehaald. Matteüs presenteert Jezus daarbij als meer dan Salomo.",
+            "en": "Jesus recalls Solomon’s wisdom and the visit of the Queen of the South. Matthew presents Jesus in that comparison as greater than Solomon.",
+            "fr": "Jésus évoque la sagesse de Salomon et la visite de la reine du Midi. Dans cette comparaison, Matthieu présente Jésus comme plus grand que Salomon."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
+            "en": "Christian Bible · Old and New Testaments",
+            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+          },
+          "refs": [
+            {
+              "label": "1 Kings 10:1–9",
+              "corpus": "bible",
+              "book": "1KI",
+              "chapter": 10,
+              "verse": 1,
+              "endVerse": 9,
+              "url": "https://www.biblegateway.com/passage/?search=1%20Kings%2010%3A1-9&version=WEB"
+            },
+            {
+              "label": "Matthew 12:42",
+              "corpus": "bible",
+              "book": "MAT",
+              "chapter": 12,
+              "verse": 42,
+              "endVerse": 42,
+              "url": "https://www.biblegateway.com/passage/?search=Matthew%2012%3A42&version=WEB"
+            }
+          ],
+          "indexId": "solomon",
+          "sourceIds": [
+            "bible"
+          ]
+        },
+        "judaism": {
+          "name": {
+            "nl": "Sjlomo / Salomo",
+            "en": "Shlomo / Solomon",
+            "fr": "Shlomo / Salomon"
+          },
+          "role": {
+            "nl": "Wijze koning en tempelbouwer",
+            "en": "Wise king and Temple builder",
+            "fr": "Roi sage et bâtisseur du Temple"
+          },
+          "summary": {
+            "nl": "Salomo vraagt om inzicht om recht te spreken en bouwt de tempel. Koningen vertelt ook over zijn latere afwending door andere goden te volgen. Hij behoort tot de Tanakh, niet de Torah.",
+            "en": "Solomon asks for understanding to judge and builds the Temple. Kings also tells of his later turning to other gods. He belongs to the Tanakh, not the Torah.",
+            "fr": "Salomon demande le discernement pour juger et construit le Temple. Les Rois racontent aussi son détournement ultérieur vers d’autres dieux. Il appartient au Tanakh, non à la Torah."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Tanakh · buiten de Torah",
+            "en": "Tanakh · outside the Torah",
+            "fr": "Tanakh · hors de la Torah"
+          },
+          "refs": [
+            {
+              "label": "1 Kings 3:5–12",
+              "corpus": "tanakh",
+              "book": "1KI",
+              "chapter": 3,
+              "verse": 5,
+              "endVerse": 12,
+              "url": "https://www.sefaria.org/I_Kings.3.5"
+            },
+            {
+              "label": "1 Kings 6:1",
+              "corpus": "tanakh",
+              "book": "1KI",
+              "chapter": 6,
+              "verse": 1,
+              "endVerse": 1,
+              "url": "https://www.sefaria.org/I_Kings.6.1"
+            },
+            {
+              "label": "1 Kings 11:4–10",
+              "corpus": "tanakh",
+              "book": "1KI",
+              "chapter": 11,
+              "verse": 4,
+              "endVerse": 10,
+              "url": "https://www.sefaria.org/I_Kings.11.4"
+            }
+          ],
+          "sourceIds": [
+            "tanakh"
+          ]
+        },
+        "islam": {
+          "name": {
+            "nl": "Soelaiman / Sulaymān",
+            "en": "Sulaymān / Solomon",
+            "fr": "Sulaymān / Salomon"
+          },
+          "role": {
+            "nl": "Profeet en heerser met geschonken kennis",
+            "en": "Prophet and ruler given knowledge",
+            "fr": "Prophète et souverain doté de connaissance"
+          },
+          "summary": {
+            "nl": "Soelaiman krijgt kennis en een uitzonderlijk koningschap. Het verhaal van de koningin van Saba draait om erkenning van God. Qur’an 2:102 ontkent uitdrukkelijk dat Soelaiman ongelovig was.",
+            "en": "Solomon receives knowledge and an extraordinary kingdom. The Queen of Sheba narrative concerns recognition of God. Qur’an 2:102 explicitly denies that Solomon disbelieved.",
+            "fr": "Salomon reçoit connaissance et royauté exceptionnelles. Le récit de la reine de Saba porte sur la reconnaissance de Dieu. Coran 2:102 nie explicitement que Salomon ait mécru."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Qur’an",
+            "en": "Qur’an",
+            "fr": "Coran"
+          },
+          "refs": [
+            {
+              "label": "Qur’an 27:15–19",
+              "corpus": "quran",
+              "surah": 27,
+              "ayah": 15,
+              "endAyah": 19,
+              "url": "https://quran.com/27/15"
+            },
+            {
+              "label": "Qur’an 27:38–44",
+              "corpus": "quran",
+              "surah": 27,
+              "ayah": 38,
+              "endAyah": 44,
+              "url": "https://quran.com/27/38"
+            },
+            {
+              "label": "Qur’an 2:102",
+              "corpus": "quran",
+              "surah": 2,
+              "ayah": 102,
+              "endAyah": 102,
+              "url": "https://quran.com/2/102"
+            }
+          ],
+          "indexId": "quran:solomon",
+          "sourceIds": [
+            "quran"
+          ]
+        }
+      }
+    },
+    {
+      "key": "job",
+      "names": {
+        "nl": "Job",
+        "en": "Job",
+        "fr": "Job"
+      },
+      "aliases": [
+        "Iyov",
+        "Ayyub",
+        "Ayyūb",
+        "איוב",
+        "أيوب"
+      ],
+      "theme": {
+        "nl": "Lijden, vragen en volharding",
+        "en": "Suffering, questions and perseverance",
+        "fr": "Souffrance, questions et persévérance"
+      },
+      "traditions": {
+        "christianity": {
+          "name": {
+            "nl": "Job",
+            "en": "Job",
+            "fr": "Job"
+          },
+          "role": {
+            "nl": "Voorbeeld van volharding",
+            "en": "Example of perseverance",
+            "fr": "Exemple de persévérance"
+          },
+          "summary": {
+            "nl": "Het boek Job bewaart uitgebreide vragen over lijden. Jakobus verwijst naar Jobs volharding en naar de barmhartigheid van de Heer.",
+            "en": "The book of Job preserves extended questions about suffering. James refers to Job’s perseverance and the Lord’s compassion.",
+            "fr": "Le livre de Job développe de longues questions sur la souffrance. Jacques rappelle la persévérance de Job et la compassion du Seigneur."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
+            "en": "Christian Bible · Old and New Testaments",
+            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+          },
+          "refs": [
+            {
+              "label": "Job 1:1–22",
+              "corpus": "bible",
+              "book": "JOB",
+              "chapter": 1,
+              "verse": 1,
+              "endVerse": 22,
+              "url": "https://www.biblegateway.com/passage/?search=Job%201%3A1-22&version=WEB"
+            },
+            {
+              "label": "James 5:11",
+              "corpus": "bible",
+              "book": "JAS",
+              "chapter": 5,
+              "verse": 11,
+              "endVerse": 11,
+              "url": "https://www.biblegateway.com/passage/?search=James%205%3A11&version=WEB"
+            }
+          ],
+          "indexId": "step-H0347",
+          "sourceIds": [
+            "bible"
+          ]
+        },
+        "judaism": {
+          "name": {
+            "nl": "Ijov / Job",
+            "en": "Iyov / Job",
+            "fr": "Iyov / Job"
+          },
+          "role": {
+            "nl": "Rechtvaardige die over lijden spreekt",
+            "en": "Righteous sufferer who questions",
+            "fr": "Juste souffrant qui interroge"
+          },
+          "summary": {
+            "nl": "Job verliest bezit en kinderen en bespreekt zijn lijden met zijn vrienden. Het boek bevat klacht, debat en Gods antwoord; het staat in de Geschriften van de Tanakh, buiten de Torah.",
+            "en": "Job loses possessions and children and discusses his suffering with friends. The book contains lament, debate and God’s response; it belongs to the Writings of the Tanakh, outside the Torah.",
+            "fr": "Job perd ses biens et ses enfants et discute de sa souffrance avec ses amis. Le livre mêle plainte, débat et réponse divine ; il appartient aux Écrits du Tanakh, hors de la Torah."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Tanakh · buiten de Torah",
+            "en": "Tanakh · outside the Torah",
+            "fr": "Tanakh · hors de la Torah"
+          },
+          "refs": [
+            {
+              "label": "Job 1:1–22",
+              "corpus": "tanakh",
+              "book": "JOB",
+              "chapter": 1,
+              "verse": 1,
+              "endVerse": 22,
+              "url": "https://www.sefaria.org/Job.1.1"
+            },
+            {
+              "label": "Job 3:1–26",
+              "corpus": "tanakh",
+              "book": "JOB",
+              "chapter": 3,
+              "verse": 1,
+              "endVerse": 26,
+              "url": "https://www.sefaria.org/Job.3.1"
+            },
+            {
+              "label": "Job 38:1–7",
+              "corpus": "tanakh",
+              "book": "JOB",
+              "chapter": 38,
+              "verse": 1,
+              "endVerse": 7,
+              "url": "https://www.sefaria.org/Job.38.1"
+            }
+          ],
+          "sourceIds": [
+            "tanakh"
+          ]
+        },
+        "islam": {
+          "name": {
+            "nl": "Ajjoeb / Ayyūb",
+            "en": "Ayyūb / Job",
+            "fr": "Ayyūb / Job"
+          },
+          "role": {
+            "nl": "Profeet die God in nood aanroept",
+            "en": "Prophet calling on God in distress",
+            "fr": "Prophète invoquant Dieu dans la détresse"
+          },
+          "summary": {
+            "nl": "Ajjoeb roept God aan tijdens zijn beproeving. God neemt zijn leed weg en herstelt zijn gezin. Qur’an 38 beschrijft hem als geduldig en steeds terugkerend tot God.",
+            "en": "Job calls on God during his trial. God relieves his suffering and restores his family. Qur’an 38 describes him as patient and constantly turning to God.",
+            "fr": "Job invoque Dieu dans son épreuve. Dieu soulage sa souffrance et lui rend sa famille. Coran 38 le décrit comme patient et revenant constamment vers Dieu."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Qur’an",
+            "en": "Qur’an",
+            "fr": "Coran"
+          },
+          "refs": [
+            {
+              "label": "Qur’an 21:83–84",
+              "corpus": "quran",
+              "surah": 21,
+              "ayah": 83,
+              "endAyah": 84,
+              "url": "https://quran.com/21/83"
+            },
+            {
+              "label": "Qur’an 38:41–44",
+              "corpus": "quran",
+              "surah": 38,
+              "ayah": 41,
+              "endAyah": 44,
+              "url": "https://quran.com/38/41"
+            },
+            {
+              "label": "Qur’an 4:163",
+              "corpus": "quran",
+              "surah": 4,
+              "ayah": 163,
+              "endAyah": 163,
+              "url": "https://quran.com/4/163"
+            }
+          ],
+          "indexId": "quran:job",
+          "sourceIds": [
+            "quran"
+          ]
+        }
+      }
+    },
+    {
+      "key": "jonah",
+      "names": {
+        "nl": "Jona · profeet",
+        "en": "Jonah · prophet",
+        "fr": "Jonas · prophète"
+      },
+      "aliases": [
+        "Yonah",
+        "Yunus",
+        "Yūnus",
+        "יונה",
+        "يونس"
+      ],
+      "theme": {
+        "nl": "Roeping, berouw en barmhartigheid",
+        "en": "Calling, repentance and mercy",
+        "fr": "Appel, repentir et miséricorde"
+      },
+      "traditions": {
+        "christianity": {
+          "name": {
+            "nl": "Jona",
+            "en": "Jonah",
+            "fr": "Jonas"
+          },
+          "role": {
+            "nl": "Profeet; teken in Jezus’ onderwijs",
+            "en": "Prophet; sign in Jesus’ teaching",
+            "fr": "Prophète ; signe dans l’enseignement de Jésus"
+          },
+          "summary": {
+            "nl": "Jezus verwijst naar Jona’s tijd in de grote vis als teken voor zijn eigen lot. Ook de bekering van Nineve krijgt in Matteüs een plaats in zijn waarschuwing.",
+            "en": "Jesus refers to Jonah’s time in the great fish as a sign concerning his own fate. Nineveh’s repentance also appears in his warning in Matthew.",
+            "fr": "Jésus évoque le séjour de Jonas dans le grand poisson comme signe de son propre destin. La repentance de Ninive apparaît aussi dans son avertissement chez Matthieu."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Christelijke Bijbel · Nieuwe Testament",
+            "en": "Christian Bible · New Testament",
+            "fr": "Bible chrétienne · Nouveau Testament"
+          },
+          "refs": [
+            {
+              "label": "Matthew 12:39–41",
+              "corpus": "bible",
+              "book": "MAT",
+              "chapter": 12,
+              "verse": 39,
+              "endVerse": 41,
+              "url": "https://www.biblegateway.com/passage/?search=Matthew%2012%3A39-41&version=WEB"
+            }
+          ],
+          "indexId": "step-H3124",
+          "sourceIds": [
+            "bible"
+          ]
+        },
+        "judaism": {
+          "name": {
+            "nl": "Jona",
+            "en": "Yonah / Jonah",
+            "fr": "Yonah / Jonas"
+          },
+          "role": {
+            "nl": "Profeet gezonden naar Nineve",
+            "en": "Prophet sent to Nineveh",
+            "fr": "Prophète envoyé à Ninive"
+          },
+          "summary": {
+            "nl": "Jona vlucht voor zijn opdracht, bidt in de vis en spreekt uiteindelijk tot Nineve. Het slot stelt vragen over zijn woede en Gods zorg voor de stad. Dit is een profetenboek buiten de Torah.",
+            "en": "Jonah flees his calling, prays in the fish and eventually speaks to Nineveh. The ending questions his anger and God’s care for the city. This prophetic book is outside the Torah.",
+            "fr": "Jonas fuit sa mission, prie dans le poisson et s’adresse finalement à Ninive. La fin interroge sa colère et la sollicitude divine pour la ville. Ce livre prophétique est hors de la Torah."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Tanakh · buiten de Torah",
+            "en": "Tanakh · outside the Torah",
+            "fr": "Tanakh · hors de la Torah"
+          },
+          "refs": [
+            {
+              "label": "Jonah 1:1–3",
+              "corpus": "tanakh",
+              "book": "JON",
+              "chapter": 1,
+              "verse": 1,
+              "endVerse": 3,
+              "url": "https://www.sefaria.org/Jonah.1.1"
+            },
+            {
+              "label": "Jonah 3:1–10",
+              "corpus": "tanakh",
+              "book": "JON",
+              "chapter": 3,
+              "verse": 1,
+              "endVerse": 10,
+              "url": "https://www.sefaria.org/Jonah.3.1"
+            },
+            {
+              "label": "Jonah 4:1–11",
+              "corpus": "tanakh",
+              "book": "JON",
+              "chapter": 4,
+              "verse": 1,
+              "endVerse": 11,
+              "url": "https://www.sefaria.org/Jonah.4.1"
+            }
+          ],
+          "sourceIds": [
+            "tanakh"
+          ]
+        },
+        "islam": {
+          "name": {
+            "nl": "Joenoes / Yūnus",
+            "en": "Yūnus / Jonah",
+            "fr": "Yūnus / Jonas"
+          },
+          "role": {
+            "nl": "Boodschapper gered uit de duisternis",
+            "en": "Messenger rescued from darkness",
+            "fr": "Messager sauvé des ténèbres"
+          },
+          "summary": {
+            "nl": "Joenoes behoort tot de boodschappers. De Qur’an vertelt over de vis en zijn roep in de duisternis, gevolgd door redding. Het berouw van zijn volk wordt apart genoemd.",
+            "en": "Jonah belongs to the messengers. The Qur’an tells of the fish and his cry in darkness, followed by rescue. His people’s repentance is mentioned separately.",
+            "fr": "Jonas fait partie des messagers. Le Coran raconte le poisson, son appel dans les ténèbres puis son sauvetage. Le repentir de son peuple est évoqué séparément."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Qur’an",
+            "en": "Qur’an",
+            "fr": "Coran"
+          },
+          "refs": [
+            {
+              "label": "Qur’an 37:139–148",
+              "corpus": "quran",
+              "surah": 37,
+              "ayah": 139,
+              "endAyah": 148,
+              "url": "https://quran.com/37/139"
+            },
+            {
+              "label": "Qur’an 21:87–88",
+              "corpus": "quran",
+              "surah": 21,
+              "ayah": 87,
+              "endAyah": 88,
+              "url": "https://quran.com/21/87"
+            },
+            {
+              "label": "Qur’an 10:98",
+              "corpus": "quran",
+              "surah": 10,
+              "ayah": 98,
+              "endAyah": 98,
+              "url": "https://quran.com/10/98"
+            }
+          ],
+          "indexId": "quran:jonah",
+          "sourceIds": [
+            "quran"
+          ]
+        }
+      }
+    },
+    {
+      "key": "elijah",
+      "names": {
+        "nl": "Elia",
+        "en": "Elijah",
+        "fr": "Élie"
+      },
+      "aliases": [
+        "Eliyahu",
+        "Ilyas",
+        "Ilyās",
+        "אליהו",
+        "إلياس"
+      ],
+      "theme": {
+        "nl": "Profetie tegenover afgoderij",
+        "en": "Prophecy confronting idolatry",
+        "fr": "Prophétie face à l’idolâtrie"
+      },
+      "traditions": {
+        "christianity": {
+          "name": {
+            "nl": "Elia",
+            "en": "Elijah",
+            "fr": "Élie"
+          },
+          "role": {
+            "nl": "Profeet; getuige bij de verheerlijking",
+            "en": "Prophet; witness at the transfiguration",
+            "fr": "Prophète ; témoin de la transfiguration"
+          },
+          "summary": {
+            "nl": "Elia verschijnt met Mozes bij Jezus’ verheerlijking in Matteüs. Jakobus noemt hem ook als voorbeeld van een mens wiens gebed kracht heeft.",
+            "en": "Elijah appears with Moses at Jesus’ transfiguration in Matthew. James also presents him as a human example of effective prayer.",
+            "fr": "Élie apparaît avec Moïse lors de la transfiguration de Jésus chez Matthieu. Jacques le présente aussi comme un exemple humain de prière efficace."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Christelijke Bijbel · Nieuwe Testament",
+            "en": "Christian Bible · New Testament",
+            "fr": "Bible chrétienne · Nouveau Testament"
+          },
+          "refs": [
+            {
+              "label": "Matthew 17:1–5",
+              "corpus": "bible",
+              "book": "MAT",
+              "chapter": 17,
+              "verse": 1,
+              "endVerse": 5,
+              "url": "https://www.biblegateway.com/passage/?search=Matthew%2017%3A1-5&version=WEB"
+            },
+            {
+              "label": "James 5:17–18",
+              "corpus": "bible",
+              "book": "JAS",
+              "chapter": 5,
+              "verse": 17,
+              "endVerse": 18,
+              "url": "https://www.biblegateway.com/passage/?search=James%205%3A17-18&version=WEB"
+            }
+          ],
+          "indexId": "step-H0452G",
+          "sourceIds": [
+            "bible"
+          ]
+        },
+        "judaism": {
+          "name": {
+            "nl": "Elijahu / Elia",
+            "en": "Eliyahu / Elijah",
+            "fr": "Eliyahou / Élie"
+          },
+          "role": {
+            "nl": "Profeet die de Baälverering bestrijdt",
+            "en": "Prophet confronting Baal worship",
+            "fr": "Prophète combattant le culte de Baal"
+          },
+          "summary": {
+            "nl": "Koningen vertelt over Elia’s optreden tegenover Achab en de profeten van Baäl. Zijn opvolging door Elisa en zijn vertrek worden in 2 Koningen beschreven. Deze verhalen staan buiten de Torah.",
+            "en": "Kings tells of Elijah’s confrontation with Ahab and Baal’s prophets. His succession by Elisha and departure are described in 2 Kings. These narratives are outside the Torah.",
+            "fr": "Les Rois racontent la confrontation d’Élie avec Achab et les prophètes de Baal. Sa succession par Élisée et son départ sont décrits en 2 Rois. Ces récits sont hors de la Torah."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Tanakh · buiten de Torah",
+            "en": "Tanakh · outside the Torah",
+            "fr": "Tanakh · hors de la Torah"
+          },
+          "refs": [
+            {
+              "label": "1 Kings 18:20–39",
+              "corpus": "tanakh",
+              "book": "1KI",
+              "chapter": 18,
+              "verse": 20,
+              "endVerse": 39,
+              "url": "https://www.sefaria.org/I_Kings.18.20"
+            },
+            {
+              "label": "2 Kings 2:9–15",
+              "corpus": "tanakh",
+              "book": "2KI",
+              "chapter": 2,
+              "verse": 9,
+              "endVerse": 15,
+              "url": "https://www.sefaria.org/II_Kings.2.9"
+            }
+          ],
+          "sourceIds": [
+            "tanakh"
+          ]
+        },
+        "islam": {
+          "name": {
+            "nl": "Iljaas / Ilyās",
+            "en": "Ilyās / Elijah",
+            "fr": "Ilyās / Élie"
+          },
+          "role": {
+            "nl": "Boodschapper die oproept God te dienen",
+            "en": "Messenger calling people to worship God",
+            "fr": "Messager appelant à adorer Dieu"
+          },
+          "summary": {
+            "nl": "Iljaas wordt onder de boodschappers genoemd. Hij vraagt zijn volk waarom het Baäl aanroept en de beste Schepper verlaat. Het korte verhaal prijst zijn trouw.",
+            "en": "Elijah is named among the messengers. He asks why his people invoke Baal and forsake the best Creator. The brief narrative praises his faithfulness.",
+            "fr": "Élie est nommé parmi les messagers. Il demande pourquoi son peuple invoque Baal et délaisse le meilleur Créateur. Ce bref récit loue sa fidélité."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Qur’an",
+            "en": "Qur’an",
+            "fr": "Coran"
+          },
+          "refs": [
+            {
+              "label": "Qur’an 37:123–132",
+              "corpus": "quran",
+              "surah": 37,
+              "ayah": 123,
+              "endAyah": 132,
+              "url": "https://quran.com/37/123"
+            }
+          ],
+          "indexId": "quran:elijah",
+          "sourceIds": [
+            "quran"
+          ]
+        }
+      }
+    },
+    {
+      "key": "zechariah",
+      "names": {
+        "nl": "Zacharias · vader van Johannes",
+        "en": "Zechariah · father of John",
+        "fr": "Zacharie · père de Jean"
+      },
+      "aliases": [
+        "Zakariya",
+        "Zakariyyā",
+        "زكريا"
+      ],
+      "theme": {
+        "nl": "Gebed om een kind",
+        "en": "Prayer for a child",
+        "fr": "Prière pour un enfant"
+      },
+      "traditions": {
+        "christianity": {
+          "name": {
+            "nl": "Zacharias",
+            "en": "Zechariah",
+            "fr": "Zacharie"
+          },
+          "role": {
+            "nl": "Priester en vader van Johannes de Doper",
+            "en": "Priest and father of John the Baptist",
+            "fr": "Prêtre et père de Jean-Baptiste"
+          },
+          "summary": {
+            "nl": "Lucas stelt Zacharias voor als priester en echtgenoot van Elisabet. Hij ontvangt de aankondiging van Johannes’ geboorte en spreekt later een lofzang over redding en zijn zoons opdracht.",
+            "en": "Luke presents Zechariah as a priest and Elizabeth’s husband. He receives the announcement of John’s birth and later speaks a hymn about salvation and his son’s mission.",
+            "fr": "Luc présente Zacharie comme prêtre et époux d’Élisabeth. Il reçoit l’annonce de la naissance de Jean puis prononce un cantique sur le salut et la mission de son fils."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Christelijke Bijbel · Nieuwe Testament",
+            "en": "Christian Bible · New Testament",
+            "fr": "Bible chrétienne · Nouveau Testament"
+          },
+          "refs": [
+            {
+              "label": "Luke 1:5–20",
+              "corpus": "bible",
+              "book": "LUK",
+              "chapter": 1,
+              "verse": 5,
+              "endVerse": 20,
+              "url": "https://www.biblegateway.com/passage/?search=Luke%201%3A5-20&version=WEB"
+            },
+            {
+              "label": "Luke 1:67–79",
+              "corpus": "bible",
+              "book": "LUK",
+              "chapter": 1,
+              "verse": 67,
+              "endVerse": 79,
+              "url": "https://www.biblegateway.com/passage/?search=Luke%201%3A67-79&version=WEB"
+            }
+          ],
+          "indexId": "zechariah",
+          "sourceIds": [
+            "bible"
+          ]
+        },
+        "judaism": {
+          "name": {
+            "nl": "Zacharias · vader van Johannes",
+            "en": "Zechariah · father of John",
+            "fr": "Zacharie · père de Jean"
+          },
+          "role": {
+            "nl": "Geen persoon uit de Tanakh",
+            "en": "Not a Tanakh figure",
+            "fr": "Personnage absent du Tanakh"
+          },
+          "summary": {
+            "nl": "De vader van Johannes hoort bij het nieuwtestamentische verhaal, niet bij de personen uit de Tanakh. Hij wordt hier niet samengevoegd met de gelijknamige profeet Zacharia of andere naamgenoten.",
+            "en": "John’s father belongs to the New Testament narrative, not to the persons of the Tanakh. He is not merged here with the prophet Zechariah or other namesakes.",
+            "fr": "Le père de Jean appartient au récit du Nouveau Testament, non aux personnages du Tanakh. Il n’est pas fusionné ici avec le prophète Zacharie ni avec d’autres homonymes."
+          },
+          "status": "outside-corpus",
+          "scope": {
+            "nl": "Buiten de dekking van de Tanakh",
+            "en": "Outside the coverage of the Tanakh",
+            "fr": "Hors du périmètre du Tanakh"
+          },
+          "refs": [],
+          "sourceIds": []
+        },
+        "islam": {
+          "name": {
+            "nl": "Zakarijja / Zakariyyā",
+            "en": "Zakariyyā / Zechariah",
+            "fr": "Zakariyyā / Zacharie"
+          },
+          "role": {
+            "nl": "Profeet; ontvanger van het antwoord op zijn gebed",
+            "en": "Prophet; recipient of an answered prayer",
+            "fr": "Prophète ; destinataire d’une prière exaucée"
+          },
+          "summary": {
+            "nl": "Zakarijja draagt zorg voor Maryam en bidt om een nakomeling. God kondigt Jahja aan ondanks zijn ouderdom. Qur’an 6 noemt hem onder de rechtschapenen aan wie profetie is gegeven.",
+            "en": "Zechariah cares for Maryam and prays for offspring. God announces John despite his old age. Qur’an 6 includes him among the righteous to whom prophethood is given.",
+            "fr": "Zacharie prend soin de Maryam et prie pour une descendance. Dieu annonce Jean malgré son grand âge. Coran 6 le compte parmi les justes auxquels la prophétie est donnée."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Qur’an",
+            "en": "Qur’an",
+            "fr": "Coran"
+          },
+          "refs": [
+            {
+              "label": "Qur’an 3:37–41",
+              "corpus": "quran",
+              "surah": 3,
+              "ayah": 37,
+              "endAyah": 41,
+              "url": "https://quran.com/3/37"
+            },
+            {
+              "label": "Qur’an 19:2–11",
+              "corpus": "quran",
+              "surah": 19,
+              "ayah": 2,
+              "endAyah": 11,
+              "url": "https://quran.com/19/2"
+            },
+            {
+              "label": "Qur’an 6:85–89",
+              "corpus": "quran",
+              "surah": 6,
+              "ayah": 85,
+              "endAyah": 89,
+              "url": "https://quran.com/6/85"
+            }
+          ],
+          "indexId": "quran:zechariah",
+          "sourceIds": [
+            "quran"
+          ]
+        }
+      }
+    },
+    {
+      "key": "john-baptist",
+      "names": {
+        "nl": "Johannes de Doper",
+        "en": "John the Baptist",
+        "fr": "Jean-Baptiste"
+      },
+      "aliases": [
+        "Yahya",
+        "Yaḥyā",
+        "يحيى"
+      ],
+      "theme": {
+        "nl": "Voorbereiding en rechtschapenheid",
+        "en": "Preparation and righteousness",
+        "fr": "Préparation et droiture"
+      },
+      "traditions": {
+        "christianity": {
+          "name": {
+            "nl": "Johannes de Doper",
+            "en": "John the Baptist",
+            "fr": "Jean-Baptiste"
+          },
+          "role": {
+            "nl": "Doper en wegbereider",
+            "en": "Baptizer and forerunner",
+            "fr": "Baptiste et précurseur"
+          },
+          "summary": {
+            "nl": "Johannes roept op tot bekering en doopt Jezus. Lucas beschrijft zijn opdracht als het voorbereiden van de weg van de Heer. Hij is niet Johannes de apostel.",
+            "en": "John calls for repentance and baptizes Jesus. Luke describes his mission as preparing the Lord’s way. He is not John the apostle.",
+            "fr": "Jean appelle au repentir et baptise Jésus. Luc décrit sa mission comme la préparation du chemin du Seigneur. Il est distinct de Jean l’apôtre."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Christelijke Bijbel · Nieuwe Testament",
+            "en": "Christian Bible · New Testament",
+            "fr": "Bible chrétienne · Nouveau Testament"
+          },
+          "refs": [
+            {
+              "label": "Matthew 3:1–17",
+              "corpus": "bible",
+              "book": "MAT",
+              "chapter": 3,
+              "verse": 1,
+              "endVerse": 17,
+              "url": "https://www.biblegateway.com/passage/?search=Matthew%203%3A1-17&version=WEB"
+            },
+            {
+              "label": "Luke 1:76–79",
+              "corpus": "bible",
+              "book": "LUK",
+              "chapter": 1,
+              "verse": 76,
+              "endVerse": 79,
+              "url": "https://www.biblegateway.com/passage/?search=Luke%201%3A76-79&version=WEB"
+            }
+          ],
+          "indexId": "john-baptist",
+          "sourceIds": [
+            "bible"
+          ]
+        },
+        "judaism": {
+          "name": {
+            "nl": "Johannes de Doper",
+            "en": "John the Baptist",
+            "fr": "Jean-Baptiste"
+          },
+          "role": {
+            "nl": "Geen persoon uit de Tanakh",
+            "en": "Not a Tanakh figure",
+            "fr": "Personnage absent du Tanakh"
+          },
+          "summary": {
+            "nl": "Johannes de Doper is een figuur uit het Nieuwe Testament. Hij heeft geen eigen persoonsverhaal in de Tanakh; deze afbakening zegt niets over alle latere Joodse beschouwingen over hem.",
+            "en": "John the Baptist is a New Testament figure. He has no personal narrative in the Tanakh; this scope statement does not describe all later Jewish discussions of him.",
+            "fr": "Jean-Baptiste est un personnage du Nouveau Testament. Il n’a pas de récit personnel dans le Tanakh ; cette délimitation ne résume pas toutes les réflexions juives ultérieures à son sujet."
+          },
+          "status": "outside-corpus",
+          "scope": {
+            "nl": "Buiten de dekking van de Tanakh",
+            "en": "Outside the coverage of the Tanakh",
+            "fr": "Hors du périmètre du Tanakh"
+          },
+          "refs": [],
+          "sourceIds": []
+        },
+        "islam": {
+          "name": {
+            "nl": "Jahja / Yaḥyā",
+            "en": "Yaḥyā / John",
+            "fr": "Yaḥyā / Jean"
+          },
+          "role": {
+            "nl": "Rechtschapen profeet",
+            "en": "Righteous prophet",
+            "fr": "Prophète juste"
+          },
+          "summary": {
+            "nl": "Jahja wordt aan Zakarijja aangekondigd als een rechtschapen profeet. De Qur’an prijst zijn wijsheid, reinheid en goedheid voor zijn ouders; de passages noemen geen doop van Isa.",
+            "en": "John is announced to Zechariah as a righteous prophet. The Qur’an praises his wisdom, purity and kindness to his parents; these passages do not describe a baptism of Jesus.",
+            "fr": "Jean est annoncé à Zacharie comme un prophète juste. Le Coran loue sa sagesse, sa pureté et sa bonté envers ses parents ; ces passages ne décrivent pas de baptême de Jésus."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Qur’an",
+            "en": "Qur’an",
+            "fr": "Coran"
+          },
+          "refs": [
+            {
+              "label": "Qur’an 3:39",
+              "corpus": "quran",
+              "surah": 3,
+              "ayah": 39,
+              "endAyah": 39,
+              "url": "https://quran.com/3/39"
+            },
+            {
+              "label": "Qur’an 19:7–15",
+              "corpus": "quran",
+              "surah": 19,
+              "ayah": 7,
+              "endAyah": 15,
+              "url": "https://quran.com/19/7"
+            }
+          ],
+          "indexId": "quran:john-baptist",
+          "sourceIds": [
+            "quran"
+          ]
+        }
+      }
+    },
+    {
+      "key": "mary",
+      "names": {
+        "nl": "Maria · moeder van Jezus",
+        "en": "Mary · mother of Jesus",
+        "fr": "Marie · mère de Jésus"
+      },
+      "aliases": [
+        "Maryam",
+        "Mariam",
+        "מרים",
+        "مريم"
+      ],
+      "theme": {
+        "nl": "Moederschap en toewijding",
+        "en": "Motherhood and devotion",
+        "fr": "Maternité et dévotion"
+      },
+      "traditions": {
+        "christianity": {
+          "name": {
+            "nl": "Maria",
+            "en": "Mary",
+            "fr": "Marie"
+          },
+          "role": {
+            "nl": "Moeder van Jezus; ontvanger van de aankondiging",
+            "en": "Mother of Jesus; recipient of the annunciation",
+            "fr": "Mère de Jésus ; destinataire de l’Annonciation"
+          },
+          "summary": {
+            "nl": "Lucas vertelt Gabriëls aankondiging aan Maria, haar antwoord en haar lofzang. Zij wordt de moeder van Jezus genoemd. Verschillen in latere christelijke Mariaverering worden hier niet samengevat.",
+            "en": "Luke tells of Gabriel’s announcement to Mary, her response and her song of praise. She is named as Jesus’ mother. Differences in later Christian devotion to Mary are not summarized here.",
+            "fr": "Luc raconte l’annonce de Gabriel à Marie, sa réponse et son cantique. Elle est désignée comme mère de Jésus. Les différences dans les dévotions chrétiennes ultérieures ne sont pas résumées ici."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Christelijke Bijbel · Nieuwe Testament",
+            "en": "Christian Bible · New Testament",
+            "fr": "Bible chrétienne · Nouveau Testament"
+          },
+          "refs": [
+            {
+              "label": "Luke 1:26–38",
+              "corpus": "bible",
+              "book": "LUK",
+              "chapter": 1,
+              "verse": 26,
+              "endVerse": 38,
+              "url": "https://www.biblegateway.com/passage/?search=Luke%201%3A26-38&version=WEB"
+            },
+            {
+              "label": "Luke 1:46–55",
+              "corpus": "bible",
+              "book": "LUK",
+              "chapter": 1,
+              "verse": 46,
+              "endVerse": 55,
+              "url": "https://www.biblegateway.com/passage/?search=Luke%201%3A46-55&version=WEB"
+            }
+          ],
+          "indexId": "mary",
+          "sourceIds": [
+            "bible"
+          ]
+        },
+        "judaism": {
+          "name": {
+            "nl": "Maria · moeder van Jezus",
+            "en": "Mary · mother of Jesus",
+            "fr": "Marie · mère de Jésus"
+          },
+          "role": {
+            "nl": "Geen persoon uit de Tanakh",
+            "en": "Not a Tanakh figure",
+            "fr": "Personnage absent du Tanakh"
+          },
+          "summary": {
+            "nl": "Maria, de moeder van Jezus, behoort niet tot de personen uit de Tanakh. Mirjam, de zus van Mozes en Aäron, is een andere figuur en heeft een eigen vergelijking.",
+            "en": "Mary, Jesus’ mother, is not a person of the Tanakh. Miriam, the sister of Moses and Aaron, is a different figure and has her own comparison.",
+            "fr": "Marie, mère de Jésus, ne fait pas partie des personnages du Tanakh. Miryam, sœur de Moïse et d’Aaron, est une autre figure et possède sa propre comparaison."
+          },
+          "status": "outside-corpus",
+          "scope": {
+            "nl": "Buiten de dekking van de Tanakh",
+            "en": "Outside the coverage of the Tanakh",
+            "fr": "Hors du périmètre du Tanakh"
+          },
+          "refs": [],
+          "sourceIds": []
+        },
+        "islam": {
+          "name": {
+            "nl": "Maryam",
+            "en": "Maryam",
+            "fr": "Maryam"
+          },
+          "role": {
+            "nl": "Uitverkoren vrouw; moeder van Isa",
+            "en": "Chosen woman; mother of Jesus",
+            "fr": "Femme choisie ; mère de Jésus"
+          },
+          "summary": {
+            "nl": "Maryam wordt uitverkoren en gereinigd genoemd. De Qur’an vertelt de aankondiging en geboorte van Isa en noemt haar een voorbeeld van geloof. Zij wordt niet met Moesa’s naamloze zus samengevoegd.",
+            "en": "Maryam is described as chosen and purified. The Qur’an narrates the announcement and birth of Jesus and presents her as an example of faith. She is not merged with Moses’ unnamed sister.",
+            "fr": "Maryam est décrite comme choisie et purifiée. Le Coran raconte l’annonce et la naissance de Jésus et la présente comme exemple de foi. Elle n’est pas fusionnée avec la sœur anonyme de Moïse."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Qur’an",
+            "en": "Qur’an",
+            "fr": "Coran"
+          },
+          "refs": [
+            {
+              "label": "Qur’an 3:42–47",
+              "corpus": "quran",
+              "surah": 3,
+              "ayah": 42,
+              "endAyah": 47,
+              "url": "https://quran.com/3/42"
+            },
+            {
+              "label": "Qur’an 19:16–34",
+              "corpus": "quran",
+              "surah": 19,
+              "ayah": 16,
+              "endAyah": 34,
+              "url": "https://quran.com/19/16"
+            },
+            {
+              "label": "Qur’an 66:12",
+              "corpus": "quran",
+              "surah": 66,
+              "ayah": 12,
+              "endAyah": 12,
+              "url": "https://quran.com/66/12"
+            }
+          ],
+          "indexId": "quran:mary",
+          "sourceIds": [
+            "quran"
+          ]
+        }
+      }
+    },
+    {
+      "key": "jesus",
+      "names": {
+        "nl": "Jezus",
+        "en": "Jesus",
+        "fr": "Jésus"
+      },
+      "aliases": [
+        "Yeshua",
+        "Isa",
+        "ʿĪsā",
+        "ישוע",
+        "عيسى"
+      ],
+      "theme": {
+        "nl": "Messias, openbaring en verschil in geloof",
+        "en": "Messiah, revelation and difference in belief",
+        "fr": "Messie, révélation et différence de croyance"
+      },
+      "traditions": {
+        "christianity": {
+          "name": {
+            "nl": "Jezus Christus",
+            "en": "Jesus Christ",
+            "fr": "Jésus-Christ"
+          },
+          "role": {
+            "nl": "Messias en Zoon van God",
+            "en": "Messiah and Son of God",
+            "fr": "Messie et Fils de Dieu"
+          },
+          "summary": {
+            "nl": "Johannes presenteert Jezus als het mensgeworden Woord en Zoon van God. Paulus plaatst zijn dood en opstanding centraal in de verkondiging. Deze christelijke claims verschillen wezenlijk van de Qur’anische beschrijving.",
+            "en": "John presents Jesus as the Word made flesh and Son of God. Paul places his death and resurrection at the centre of proclamation. These Christian claims differ fundamentally from the Qur’anic portrayal.",
+            "fr": "Jean présente Jésus comme le Verbe fait chair et le Fils de Dieu. Paul place sa mort et sa résurrection au centre de la proclamation. Ces affirmations chrétiennes diffèrent fondamentalement du portrait coranique."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Christelijke Bijbel · Nieuwe Testament",
+            "en": "Christian Bible · New Testament",
+            "fr": "Bible chrétienne · Nouveau Testament"
+          },
+          "refs": [
+            {
+              "label": "John 1:1–18",
+              "corpus": "bible",
+              "book": "JHN",
+              "chapter": 1,
+              "verse": 1,
+              "endVerse": 18,
+              "url": "https://www.biblegateway.com/passage/?search=John%201%3A1-18&version=WEB"
+            },
+            {
+              "label": "John 20:28–31",
+              "corpus": "bible",
+              "book": "JHN",
+              "chapter": 20,
+              "verse": 28,
+              "endVerse": 31,
+              "url": "https://www.biblegateway.com/passage/?search=John%2020%3A28-31&version=WEB"
+            },
+            {
+              "label": "1 Corinthians 15:3–4",
+              "corpus": "bible",
+              "book": "1CO",
+              "chapter": 15,
+              "verse": 3,
+              "endVerse": 4,
+              "url": "https://www.biblegateway.com/passage/?search=1%20Corinthians%2015%3A3-4&version=WEB"
+            }
+          ],
+          "indexId": "jesus",
+          "sourceIds": [
+            "bible"
+          ]
+        },
+        "judaism": {
+          "name": {
+            "nl": "Jezus van Nazaret",
+            "en": "Jesus of Nazareth",
+            "fr": "Jésus de Nazareth"
+          },
+          "role": {
+            "nl": "Geen persoonsverhaal in de Tanakh",
+            "en": "No personal narrative in the Tanakh",
+            "fr": "Aucun récit personnel dans le Tanakh"
+          },
+          "summary": {
+            "nl": "Jezus van Nazaret komt niet als persoon voor in de Tanakh. De christelijke lezing van eerdere teksten als voorspellingen over Jezus wordt hier niet als een Joodse identificatie voorgesteld. Latere Joodse opvattingen vallen buiten dit paneel.",
+            "en": "Jesus of Nazareth does not appear as a person in the Tanakh. Christian readings of earlier texts as predictions about Jesus are not presented here as Jewish identifications. Later Jewish views are outside this panel’s scope.",
+            "fr": "Jésus de Nazareth n’apparaît pas comme personnage dans le Tanakh. Les lectures chrétiennes des textes antérieurs comme annonces de Jésus ne sont pas présentées ici comme des identifications juives. Les vues juives ultérieures dépassent ce panneau."
+          },
+          "status": "outside-corpus",
+          "scope": {
+            "nl": "Buiten de dekking van de Tanakh",
+            "en": "Outside the coverage of the Tanakh",
+            "fr": "Hors du périmètre du Tanakh"
+          },
+          "refs": [],
+          "sourceIds": []
+        },
+        "islam": {
+          "name": {
+            "nl": "Isa / ʿĪsā",
+            "en": "ʿĪsā / Jesus",
+            "fr": "ʿĪsā / Jésus"
+          },
+          "role": {
+            "nl": "Messias en boodschapper; niet Gods zoon",
+            "en": "Messiah and messenger; not God’s son",
+            "fr": "Messie et messager ; non fils de Dieu"
+          },
+          "summary": {
+            "nl": "Isa is de Messias, zoon van Maryam en boodschapper van God. De Qur’an verwerpt goddelijk zoonschap. Qur’an 4:157–158 ontkent dat zijn tegenstanders hem doodden of kruisigden en zegt dat God hem verhief.",
+            "en": "Jesus is the Messiah, son of Maryam and messenger of God. The Qur’an rejects divine sonship. Qur’an 4:157–158 denies that his opponents killed or crucified him and says God raised him.",
+            "fr": "Jésus est le Messie, fils de Maryam et messager de Dieu. Le Coran rejette la filiation divine. Coran 4:157–158 nie que ses adversaires l’aient tué ou crucifié et affirme que Dieu l’a élevé."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Qur’an",
+            "en": "Qur’an",
+            "fr": "Coran"
+          },
+          "refs": [
+            {
+              "label": "Qur’an 3:45",
+              "corpus": "quran",
+              "surah": 3,
+              "ayah": 45,
+              "endAyah": 45,
+              "url": "https://quran.com/3/45"
+            },
+            {
+              "label": "Qur’an 4:157–158",
+              "corpus": "quran",
+              "surah": 4,
+              "ayah": 157,
+              "endAyah": 158,
+              "url": "https://quran.com/4/157"
+            },
+            {
+              "label": "Qur’an 4:171",
+              "corpus": "quran",
+              "surah": 4,
+              "ayah": 171,
+              "endAyah": 171,
+              "url": "https://quran.com/4/171"
+            }
+          ],
+          "indexId": "quran:jesus",
+          "sourceIds": [
+            "quran"
+          ]
+        }
+      }
+    },
+    {
+      "key": "muhammad",
+      "names": {
+        "nl": "Mohammed",
+        "en": "Muhammad",
+        "fr": "Muhammad"
+      },
+      "aliases": [
+        "Muḥammad",
+        "Mohamed",
+        "محمد"
+      ],
+      "theme": {
+        "nl": "Boodschap en profetische afsluiting",
+        "en": "Message and prophetic culmination",
+        "fr": "Message et clôture prophétique"
+      },
+      "traditions": {
+        "christianity": {
+          "name": {
+            "nl": "Mohammed",
+            "en": "Muhammad",
+            "fr": "Muhammad"
+          },
+          "role": {
+            "nl": "Geen expliciet genoemde Bijbelse persoon",
+            "en": "Not an explicitly named biblical figure",
+            "fr": "Personnage non nommé explicitement dans la Bible"
+          },
+          "summary": {
+            "nl": "De christelijke Bijbel bevat geen persoonsverhaal dat Mohammed bij naam noemt. Latere religieuze interpretaties van mogelijke voorspellingen worden hier niet als gedeelde identificaties gepresenteerd.",
+            "en": "The Christian Bible contains no personal narrative naming Muhammad. Later religious interpretations of possible predictions are not presented here as shared identifications.",
+            "fr": "La Bible chrétienne ne contient pas de récit personnel nommant Muhammad. Les interprétations religieuses ultérieures de possibles annonces ne sont pas présentées ici comme des identifications communes."
+          },
+          "status": "outside-corpus",
+          "scope": {
+            "nl": "Buiten de dekking van de christelijke Bijbel",
+            "en": "Outside the coverage of the Christian Bible",
+            "fr": "Hors du périmètre de la Bible chrétienne"
+          },
+          "refs": [],
+          "sourceIds": []
+        },
+        "judaism": {
+          "name": {
+            "nl": "Mohammed",
+            "en": "Muhammad",
+            "fr": "Muhammad"
+          },
+          "role": {
+            "nl": "Geen expliciet genoemde persoon in de Tanakh",
+            "en": "Not an explicitly named Tanakh figure",
+            "fr": "Personnage non nommé explicitement dans le Tanakh"
+          },
+          "summary": {
+            "nl": "Mohammed heeft geen bij naam genoemd persoonsverhaal in de Tanakh. Dit paneel geeft de grens van het gekozen tekstcorpus aan en vat niet alle latere Joodse opvattingen over de islam samen.",
+            "en": "Muhammad has no named personal narrative in the Tanakh. This panel marks the boundary of the selected text corpus and does not summarize all later Jewish views of Islam.",
+            "fr": "Muhammad n’a pas de récit personnel le nommant dans le Tanakh. Ce panneau indique la limite du corpus choisi et ne résume pas toutes les vues juives ultérieures sur l’islam."
+          },
+          "status": "outside-corpus",
+          "scope": {
+            "nl": "Buiten de dekking van de Tanakh",
+            "en": "Outside the coverage of the Tanakh",
+            "fr": "Hors du périmètre du Tanakh"
+          },
+          "refs": [],
+          "sourceIds": []
+        },
+        "islam": {
+          "name": {
+            "nl": "Mohammed / Muḥammad",
+            "en": "Muḥammad",
+            "fr": "Muḥammad"
+          },
+          "role": {
+            "nl": "Boodschapper van God; zegel van de profeten",
+            "en": "Messenger of God; seal of the prophets",
+            "fr": "Messager de Dieu ; sceau des prophètes"
+          },
+          "summary": {
+            "nl": "De Qur’an noemt Mohammed de boodschapper van God en het zegel van de profeten. Gelovigen worden opgeroepen te geloven in wat aan hem is geopenbaard. Zijn profiel wordt afzonderlijk van Bijbelse personen bewaard.",
+            "en": "The Qur’an names Muhammad as God’s messenger and the seal of the prophets. Believers are called to believe what has been revealed to him. His profile remains separate from biblical persons.",
+            "fr": "Le Coran nomme Muhammad messager de Dieu et sceau des prophètes. Les croyants sont appelés à croire à ce qui lui a été révélé. Son profil reste distinct des personnages bibliques."
+          },
+          "status": "attested",
+          "scope": {
+            "nl": "Qur’an",
+            "en": "Qur’an",
+            "fr": "Coran"
+          },
+          "refs": [
+            {
+              "label": "Qur’an 33:40",
+              "corpus": "quran",
+              "surah": 33,
+              "ayah": 40,
+              "endAyah": 40,
+              "url": "https://quran.com/33/40"
+            },
+            {
+              "label": "Qur’an 47:2",
+              "corpus": "quran",
+              "surah": 47,
+              "ayah": 2,
+              "endAyah": 2,
+              "url": "https://quran.com/47/2"
+            },
+            {
+              "label": "Qur’an 48:29",
+              "corpus": "quran",
+              "surah": 48,
+              "ayah": 29,
+              "endAyah": 29,
+              "url": "https://quran.com/48/29"
+            }
+          ],
+          "indexId": "quran:muhammad",
+          "sourceIds": [
+            "quran"
+          ]
+        }
+      }
+    }
+  ]
+}

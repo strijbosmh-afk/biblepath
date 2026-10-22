@@ -25,7 +25,10 @@
   let initialTradition='christianity';try{const saved=localStorage.getItem('biblepath-tradition');if(['christianity','judaism','islam'].includes(saved))initialTradition=saved;}catch{}
   let sacredReader=null,sacredLoading=null,sacredRequest=0;
   const sacredCache=new Map();
-  const state = {layout:'constellation', focus:'abraham', selected:'abraham', depth:'auto', discoveryDepth:1, localRoots:[], testament:'all', spouses:true, view:'reader', tradition:initialTradition, indexPage:1};
+  let peopleIndex=null,comparisonView=null,peopleRequest=0,comparisonLoading=null,pendingPeopleProfile=null;
+  const peopleCache=new Map();
+  let initialPeopleTradition='christianity';try{const saved=localStorage.getItem('biblepath-people-tradition');if(['christianity','judaism','islam'].includes(saved))initialPeopleTradition=saved;}catch{}
+  const state = {layout:'constellation', focus:'abraham', selected:'abraham', depth:'auto', discoveryDepth:1, localRoots:[], testament:'all', spouses:true, view:'reader', tradition:initialTradition, peopleTradition:initialPeopleTradition, indexPage:1};
   let zoomBase = null, zoomTimer, rendering = false, lastSelection;
   const MAX_MAP_PEOPLE = 180, INDEX_PAGE_SIZE = 60;
   const graph = new window.BibleGraph($('#graph'), {
@@ -169,29 +172,77 @@
   function setView(view) {
     clearTimeout(zoomTimer);
     state.view = view;
-    $('#map-view').hidden = view !== 'map'; $('#index-view').hidden = view !== 'index';
+    $('#map-view').hidden = view !== 'map'; $('#index-view').hidden = view !== 'index'||state.peopleTradition!=='christianity';
+    $('#people-collection-controls').hidden=view!=='index';
+    $('#tradition-people-view').hidden=view!=='index'||state.peopleTradition==='christianity';
+    $('#comparison-view').hidden=view!=='compare';
+    $$('[data-people-tradition]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.peopleTradition===state.peopleTradition)));
     $('.layout-picker').hidden = view !== 'map';
     $('#path-finder').hidden = view !== 'map';
     $('#reader-view').hidden = view !== 'reader'||state.tradition!=='christianity'; $('#cities-view').hidden = view !== 'cities';
     $('#sacred-reader-view').hidden=view!=='reader'||state.tradition==='christianity';
     $('#sacred-reader-view').setAttribute('aria-label',I.t(state.tradition==='islam'?'Qur’an':'Tanakh'));
     $('#tradition-controls').hidden=view!=='reader';
-    $('.intro-note').hidden=view==='reader';
+    $('.intro-note').hidden=['reader','index','compare'].includes(view);
     $('.intro .eyebrow').textContent=view==='reader'?'A reading path for each tradition':'DISCOVER THE LIVES BEHIND THE VERSES';
     $$('[data-tradition]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.tradition===state.tradition)));
-    $('#people-testament-filters').hidden = !['map','index'].includes(view);
+    $('#people-testament-filters').hidden = view!=='map'&&(view!=='index'||state.peopleTradition!=='christianity');
     $('#return-to-library').hidden = !returnToLibrary || !['map','index'].includes(view);
-    const titles={map:['One story. Many connections.','Explore the people of the Bible, one relationship at a time.'],index:['Every life has a story.','Find a name, follow a family, and discover its place in Scripture.'],reader:['Read each tradition in its own context.','Choose the Bible, Tanakh or Qur’an. Each edition keeps its own sources and reading position.'],cities:['Places that hold a story.','Explore biblical cities and the passages that bring them to life.']};
+    const titles={map:['One story. Many connections.','Explore the people of the Bible, one relationship at a time.'],index:['Three collections. Distinct accounts.','Choose a collection to explore its people. Each tradition keeps its own profiles and sources.'],compare:['People across traditions.','Explore how people are portrayed in Christianity, Judaism and Islam, with each account alongside its sources.'],reader:['Read each tradition in its own context.','Choose the Bible, Tanakh or Qur’an. Each edition keeps its own sources and reading position.'],cities:['Places that hold a story.','Explore biblical cities and the passages that bring them to life.']};
     $('.intro h1').textContent=titles[view][0];$('.intro p').textContent=titles[view][1];
-    $('.breadcrumb strong').textContent={map:'People & connections',index:'People index',reader:'Scripture readers',cities:'Cities explorer'}[view];
+    $('.breadcrumb strong').textContent={map:'People & connections',index:'People index',compare:'Across traditions',reader:'Scripture readers',cities:'Cities explorer'}[view];
     $$('.nav-item').forEach(button=>{const active = button.dataset.view === view;button.classList.toggle('active',active);button.setAttribute('aria-current',active ? 'page' : 'false');});
-    if (view === 'index') renderIndex();
+    if (view === 'index') {if(state.peopleTradition==='christianity')renderIndex();else ensurePeopleIndex();}
+    if (view === 'compare') ensureComparisons();
     if (view === 'reader') ensureReader();
     if (view === 'cities') ensureCities();
     closeSidebar();
   }
 
   function loadJson(file) {return fetch(file).then(response=>{if(!response.ok)throw new Error(`Could not load ${file}`);return response.json();});}
+  function loadPeopleCollection(key){
+    const files={judaism:'torah-people.json',islam:'quran-people.json',compare:'person-comparisons.json'};
+    if(!peopleCache.has(key))peopleCache.set(key,loadJson(files[key]).catch(error=>{peopleCache.delete(key);throw error;}));
+    return peopleCache.get(key);
+  }
+  function selectPeopleCollection(tradition,personId=null){
+    if(!['christianity','judaism','islam'].includes(tradition))return;
+    pendingPeopleProfile=personId?{tradition,id:personId}:null;
+    peopleRequest++;state.peopleTradition=tradition;
+    try{localStorage.setItem('biblepath-people-tradition',tradition);}catch{}
+    setView('index');
+  }
+  function ensurePeopleIndex(){
+    if(state.peopleTradition==='christianity')return Promise.resolve(null);
+    const tradition=state.peopleTradition,request=++peopleRequest,container=$('#tradition-people-view');
+    const applyRequestedProfile=()=>{if(pendingPeopleProfile?.tradition===tradition){peopleIndex.open(pendingPeopleProfile.id);pendingPeopleProfile=null;}};
+    if(peopleIndex?.tradition===tradition){peopleIndex.changeLanguage();applyRequestedProfile();return Promise.resolve(peopleIndex);}
+    container.innerHTML=`<div class="library-loading" role="status">${escape(I.t('Opening this collection…'))}</div>`;
+    return loadPeopleCollection(tradition).then(data=>{
+      if(request!==peopleRequest||tradition!==state.peopleTradition)return null;
+      if(!peopleIndex)peopleIndex=new window.PeopleIndexView(container,{onCompare:openComparison,onRead:selectTradition});
+      peopleIndex.setCollection(data,tradition);
+      applyRequestedProfile();
+      // Comparison availability enhances a profile; it never blocks its collection.
+      loadPeopleCollection('compare').then(comparisons=>peopleIndex.setComparisonKeys(comparisons.people.map(p=>p.key))).catch(()=>{});
+      return peopleIndex;
+    }).catch(()=>{if(request===peopleRequest)libraryError(container,ensurePeopleIndex);return null;});
+  }
+  function ensureComparisons(){
+    if(comparisonView){comparisonView.changeLanguage();return Promise.resolve(comparisonView);}
+    if(comparisonLoading)return comparisonLoading;
+    const container=$('#comparison-view');
+    container.innerHTML=`<div class="library-loading" role="status">${escape(I.t('Opening this collection…'))}</div>`;
+    comparisonLoading=loadPeopleCollection('compare').then(data=>{
+      comparisonView=new window.PeopleComparisonView(container,data,{onPerson:openCollectionPerson});return comparisonView;
+    }).catch(()=>{libraryError(container,ensureComparisons);return null;}).finally(()=>{comparisonLoading=null;});
+    return comparisonLoading;
+  }
+  function openComparison(key){setView('compare');ensureComparisons().then(view=>{if(state.view==='compare')view?.open(key);});}
+  function openCollectionPerson(tradition,id){
+    if(tradition==='christianity'){explorePerson(id);return;}
+    selectPeopleCollection(tradition,id);
+  }
   function loadPlaces() {if(!placesPromise)placesPromise=loadJson('places-data.json').catch(error=>{placesPromise=null;throw error;});return placesPromise.then(data=>I.localizePlaces(data));}
   function loadScripture(locale=I.language) {if(!scriptureCache.has(locale))scriptureCache.set(locale,loadJson(locale==='en'?'bible-data.json':`bible-data-${locale}.json`).catch(error=>{scriptureCache.delete(locale);throw error;}));return scriptureCache.get(locale);}
   function libraryError(container,retry) {container.innerHTML=`<div class="library-empty"><h2>${escape(I.t('This collection could not load.'))}</h2><p>${escape(I.t('Check your connection, then try again.'))}</p><button class="solid-button library-retry">${escape(I.t('Try again'))}</button></div>`;container.querySelector('button').addEventListener('click',retry);}
@@ -450,6 +501,7 @@
   $$('.layout-option').forEach(button=>button.addEventListener('click',()=>{state.layout=button.dataset.layout;renderGraph({preserveDiscovery:true});}));
   $$('.nav-item').forEach(button=>button.addEventListener('click',()=>setView(button.dataset.view)));
   $$('[data-tradition]').forEach(button=>button.addEventListener('click',()=>selectTradition(button.dataset.tradition)));
+  $$('[data-people-tradition]').forEach(button=>button.addEventListener('click',()=>selectPeopleCollection(button.dataset.peopleTradition)));
   $$('.testament').forEach(button=>button.addEventListener('click',()=>{
     clearPath(false);
     setTestamentState(button.dataset.testament);
@@ -489,7 +541,7 @@
   window.addEventListener('resize',()=>{hideTooltip();syncSidebarAccess();});
   function updateCounts() {
   $('#count-all').textContent=people.length.toLocaleString(I.language);$('#count-ot').textContent=people.filter(p=>discovery.allows(p,'OT')).length.toLocaleString(I.language);$('#count-nt').textContent=people.filter(p=>discovery.allows(p,'NT')).length.toLocaleString(I.language);
-  $('#index-count').textContent=people.length.toLocaleString(I.language);$('#coverage-summary').textContent=`${people.length.toLocaleString(I.language)} people · Expanded edition`;
+  $('#index-count').textContent='3';$('#coverage-summary').textContent=`${people.length.toLocaleString(I.language)} people · Expanded edition`;
   }
   updateCounts();
   async function changeLanguage(next) {
