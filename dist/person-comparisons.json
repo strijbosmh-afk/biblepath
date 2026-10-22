@@ -1,24 +1,25 @@
 {
   "meta": {
-    "version": "1.0",
+    "version": "1.1",
     "reviewedAt": "2026-10-22",
     "complete": false,
     "scope": {
-      "nl": "24 geselecteerde personen en hun rollen in christelijke, Joodse en islamitische bronteksten. Dit is een thematische selectie, geen volledige inventaris van alle religieuze opvattingen.",
-      "en": "24 selected figures and their roles in Christian, Jewish and Islamic source texts. This is a thematic selection, not an exhaustive account of all religious interpretations.",
-      "fr": "24 figures choisies et leurs rôles dans les sources chrétiennes, juives et islamiques. Il s’agit d’une sélection thématique, non d’un inventaire exhaustif des interprétations religieuses."
+      "nl": "24 geselecteerde personen vanuit het rooms-katholieke christendom, het jodendom en de islam. De christelijke panelen volgen de katholieke Schriftlezing en leer; zij vertegenwoordigen niet alle christelijke kerken.",
+      "en": "24 selected figures viewed through Roman Catholic Christianity, Judaism and Islam. The Christian panels follow Catholic reading of Scripture and teaching; they do not represent every Christian church.",
+      "fr": "24 figures choisies selon les perspectives du christianisme catholique romain, du judaïsme et de l’islam. Les panneaux chrétiens suivent la lecture catholique de l’Écriture et la doctrine, sans représenter toutes les Églises chrétiennes."
     },
     "methodology": {
-      "nl": "Elke traditie behoudt een eigen naam, rol en bronverwijzingen. De Joodse panelen onderscheiden de vijf Torahboeken van de overige Tanakh. Een persoon buiten een tekstcorpus is niet noodzakelijk zonder betekenis in latere tradities. Naamloze figuren, naamgenoten en afwijkende verhalen worden niet tot één biografie samengevoegd. Hagar heeft een afzonderlijk gemarkeerde hadithbron; die is geen Qur’anvers.",
-      "en": "Each tradition retains its own name, role and source references. Jewish panels distinguish the five Torah books from the rest of the Tanakh. Being outside a text corpus does not imply having no significance in later traditions. Unnamed figures, namesakes and differing accounts are not merged into one biography. Hagar has a separately marked hadith source, which is not a Qur’anic verse.",
-      "fr": "Chaque tradition conserve son nom, son rôle et ses références propres. Les panneaux juifs distinguent les cinq livres de la Torah du reste du Tanakh. L’absence d’un corpus ne signifie pas une absence de rôle dans les traditions ultérieures. Figures anonymes, homonymes et récits divergents ne sont pas fusionnés en une biographie unique. Agar possède une source de hadith clairement signalée, qui n’est pas un verset coranique."
+      "nl": "De christelijke panelen onderscheiden Bijbelpassages van de katholieke Catechismus en concilieteksten. De aangehaalde WEB-tekst is een gedeelde Bijbelbron, geen katholieke vertaling. Elke traditie behoudt een eigen naam, rol en bronverwijzingen. De Joodse panelen onderscheiden de vijf Torahboeken van de overige Tanakh. Een persoon buiten een tekstcorpus is niet noodzakelijk zonder betekenis in latere tradities. Naamloze figuren, naamgenoten en afwijkende verhalen worden niet tot één biografie samengevoegd. Hagar heeft een afzonderlijk gemarkeerde hadithbron; die is geen Qur’anvers.",
+      "en": "The Christian panels distinguish Bible passages from the Catholic Catechism and council documents. The cited WEB text is shared biblical evidence, not a Catholic translation. Each tradition retains its own name, role and source references. Jewish panels distinguish the five Torah books from the rest of the Tanakh. Being outside a text corpus does not imply having no significance in later traditions. Unnamed figures, namesakes and differing accounts are not merged into one biography. Hagar has a separately marked hadith source, which is not a Qur’anic verse.",
+      "fr": "Les panneaux chrétiens distinguent les passages bibliques du Catéchisme catholique et des textes conciliaires. La WEB citée est une source biblique commune, non une traduction catholique. Chaque tradition conserve son nom, son rôle et ses références propres. Les panneaux juifs distinguent les cinq livres de la Torah du reste du Tanakh. L’absence d’un corpus ne signifie pas une absence de rôle dans les traditions ultérieures. Figures anonymes, homonymes et récits divergents ne sont pas fusionnés en une biographie unique. Agar possède une source de hadith clairement signalée, qui n’est pas un verset coranique."
     },
     "sources": [
       {
         "id": "bible",
-        "label": "World English Bible · primary biblical passages",
+        "label": "World English Bible · shared biblical text, not a Catholic edition",
         "url": "https://ebible.org/eng-web/",
-        "license": "Public-domain scripture; summaries are original editorial prose."
+        "license": "Public-domain scripture; summaries are original editorial prose.",
+        "note": "Biblical evidence is distinguished from Catholic interpretation and doctrine. The bundled reader contains 66 shared books and does not yet cover the complete Catholic canon."
       },
       {
         "id": "tanakh",
@@ -37,8 +38,21 @@
         "label": "Sahih al-Bukhari 3364 · separately identified hadith",
         "url": "https://sunnah.com/bukhari:3364",
         "note": "Hadith narrative for Ishmael’s mother; not presented as Qur’anic scripture."
+      },
+      {
+        "id": "catechism",
+        "label": "Catechism of the Catholic Church · Catholic doctrine, not Bible verses",
+        "url": "https://www.vatican.va/content/catechism/en.html",
+        "note": "Original summaries cite numbered paragraphs of the official Vatican Catechism. Doctrine and liturgical interpretation are identified separately from biblical passages."
+      },
+      {
+        "id": "magisterium",
+        "label": "Vatican II · Nostra aetate · council teaching, not Bible verses",
+        "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651028_nostra-aetate_en.html",
+        "note": "Paragraph 3 describes the Church’s regard for Muslims and its call for mutual understanding; it does not canonize a biography of Muhammad."
       }
-    ]
+    ],
+    "christianPerspective": "roman-catholic"
   },
   "people": [
     {
@@ -66,20 +80,20 @@
             "fr": "Adam"
           },
           "role": {
-            "nl": "Eerste mens; vergeleken met Christus",
-            "en": "First human; contrasted with Christ",
-            "fr": "Premier homme ; mis en parallèle avec le Christ"
+            "nl": "Eerste mens; erfzonde en de nieuwe Adam",
+            "en": "First human; original sin and the new Adam",
+            "fr": "Premier homme ; péché originel et nouvel Adam"
           },
           "summary": {
-            "nl": "Genesis vertelt over Adams leven in de tuin. Paulus vergelijkt zijn ongehoorzaamheid met Christus’ gehoorzaamheid en de gave van leven.",
-            "en": "Genesis tells of Adam’s life in the garden. Paul contrasts his disobedience with Christ’s obedience and the gift of life.",
-            "fr": "La Genèse raconte la vie d’Adam dans le jardin. Paul oppose sa désobéissance à l’obéissance du Christ et au don de la vie."
+            "nl": "De katholieke leer verbindt Adam met de erfzonde: een overgeërfde toestand, geen persoonlijke daad van zijn nakomelingen. Christus wordt als de nieuwe Adam gelezen, die door zijn gehoorzaamheid leven brengt.",
+            "en": "Catholic teaching connects Adam with original sin: an inherited condition, not a personal act by his descendants. Christ is read as the new Adam whose obedience brings life.",
+            "fr": "L’enseignement catholique relie Adam au péché originel : un état hérité, non un acte personnel de ses descendants. Le Christ est lu comme le nouvel Adam dont l’obéissance apporte la vie."
           },
           "status": "attested",
           "scope": {
-            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
-            "en": "Christian Bible · Old and New Testaments",
-            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+            "nl": "Rooms-katholieke lezing · Bijbelpassages en Catechismus afzonderlijk vermeld",
+            "en": "Roman Catholic reading · Bible passages and Catechism identified separately",
+            "fr": "Lecture catholique romaine · passages bibliques et Catéchisme distingués"
           },
           "refs": [
             {
@@ -99,11 +113,24 @@
               "verse": 12,
               "endVerse": 19,
               "url": "https://www.biblegateway.com/passage/?search=Romans%205%3A12-19&version=WEB"
+            },
+            {
+              "label": "Catechism §402–405",
+              "labelLocales": {
+                "nl": "Catechismus §402–405",
+                "en": "Catechism §402–405",
+                "fr": "Catéchisme §402–405"
+              },
+              "corpus": "catechism",
+              "paragraph": 402,
+              "endParagraph": 405,
+              "url": "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_7_the_fall.index.html"
             }
           ],
           "indexId": "adam",
           "sourceIds": [
-            "bible"
+            "bible",
+            "catechism"
           ]
         },
         "judaism": {
@@ -218,20 +245,20 @@
             "fr": "Ève"
           },
           "role": {
-            "nl": "Moederfiguur; voorbeeld in Paulus’ waarschuwing",
-            "en": "Mother figure; example in Paul’s warning",
-            "fr": "Figure maternelle ; exemple dans un avertissement de Paul"
+            "nl": "Moeder van alle levenden; Maria als nieuwe Eva",
+            "en": "Mother of all living; Mary as the new Eve",
+            "fr": "Mère des vivants ; Marie comme nouvelle Ève"
           },
           "summary": {
-            "nl": "Genesis noemt Eva de moeder van alle levenden. In 2 Korintiërs gebruikt Paulus haar misleiding door de slang als waarschuwing voor zijn gemeente.",
-            "en": "Genesis calls Eve the mother of all living. In 2 Corinthians Paul uses her deception by the serpent as a warning to his community.",
-            "fr": "La Genèse présente Ève comme la mère de tous les vivants. Dans 2 Corinthiens, Paul évoque sa tromperie par le serpent pour avertir sa communauté."
+            "nl": "Genesis noemt Eva de moeder van alle levenden. De katholieke traditie leest Maria als de nieuwe Eva, in het licht van Christus’ overwinning op de zonde. Het gaat om een geloofsduiding, niet om dezelfde persoon.",
+            "en": "Genesis calls Eve the mother of all living. Catholic tradition reads Mary as the new Eve in light of Christ’s victory over sin. This is a theological interpretation, not an identification of the two women.",
+            "fr": "La Genèse appelle Ève la mère de tous les vivants. La tradition catholique voit en Marie la nouvelle Ève à la lumière de la victoire du Christ sur le péché. Cette lecture théologique ne confond pas les deux femmes."
           },
           "status": "attested",
           "scope": {
-            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
-            "en": "Christian Bible · Old and New Testaments",
-            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+            "nl": "Rooms-katholieke lezing · Bijbelpassages en Catechismus afzonderlijk vermeld",
+            "en": "Roman Catholic reading · Bible passages and Catechism identified separately",
+            "fr": "Lecture catholique romaine · passages bibliques et Catéchisme distingués"
           },
           "refs": [
             {
@@ -251,11 +278,24 @@
               "verse": 3,
               "endVerse": 3,
               "url": "https://www.biblegateway.com/passage/?search=2%20Corinthians%2011%3A3&version=WEB"
+            },
+            {
+              "label": "Catechism §410–411",
+              "labelLocales": {
+                "nl": "Catechismus §410–411",
+                "en": "Catechism §410–411",
+                "fr": "Catéchisme §410–411"
+              },
+              "corpus": "catechism",
+              "paragraph": 410,
+              "endParagraph": 411,
+              "url": "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_7_the_fall.index.html"
             }
           ],
           "indexId": "eve",
           "sourceIds": [
-            "bible"
+            "bible",
+            "catechism"
           ]
         },
         "judaism": {
@@ -396,20 +436,20 @@
             "fr": "Noé"
           },
           "role": {
-            "nl": "Voorbeeld van geloof",
-            "en": "Example of faith",
-            "fr": "Exemple de foi"
+            "nl": "Geloofsgetuige; de ark als doopbeeld",
+            "en": "Witness of faith; the ark as a baptismal image",
+            "fr": "Témoin de foi ; l’arche comme figure du baptême"
           },
           "summary": {
-            "nl": "Het verhaal van de ark maakt deel uit van Genesis. Hebreeën noemt Noach een geloofsvoorbeeld: hij handelt op Gods waarschuwing en bouwt de ark.",
-            "en": "The ark narrative belongs to Genesis. Hebrews presents Noah as an example of faith: he acts on God’s warning and builds the ark.",
-            "fr": "Le récit de l’arche se trouve dans la Genèse. Hébreux présente Noé comme un exemple de foi : il suit l’avertissement de Dieu et construit l’arche."
+            "nl": "Noach handelt op Gods waarschuwing en bouwt de ark. De katholieke doopleer ziet de redding door het water als een voorafbeelding van het doopsel; Hebreeën herinnert aan zijn geloof.",
+            "en": "Noah acts on God’s warning and builds the ark. Catholic teaching sees salvation through the water as prefiguring Baptism; Hebrews recalls his faith.",
+            "fr": "Noé suit l’avertissement de Dieu et construit l’arche. L’enseignement catholique voit dans le salut à travers les eaux une préfiguration du baptême ; Hébreux rappelle sa foi."
           },
           "status": "attested",
           "scope": {
-            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
-            "en": "Christian Bible · Old and New Testaments",
-            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+            "nl": "Rooms-katholieke lezing · Bijbelpassages en Catechismus afzonderlijk vermeld",
+            "en": "Roman Catholic reading · Bible passages and Catechism identified separately",
+            "fr": "Lecture catholique romaine · passages bibliques et Catéchisme distingués"
           },
           "refs": [
             {
@@ -429,11 +469,24 @@
               "verse": 7,
               "endVerse": 7,
               "url": "https://www.biblegateway.com/passage/?search=Hebrews%2011%3A7&version=WEB"
+            },
+            {
+              "label": "Catechism §1219",
+              "labelLocales": {
+                "nl": "Catechismus §1219",
+                "en": "Catechism §1219",
+                "fr": "Catéchisme §1219"
+              },
+              "corpus": "catechism",
+              "paragraph": 1219,
+              "endParagraph": 1219,
+              "url": "https://www.vatican.va/content/catechism/en/part_two/section_two/chapter_one/article_1/ii_baptism_in_the_economy_of_salvation.index.html"
             }
           ],
           "indexId": "noah",
           "sourceIds": [
-            "bible"
+            "bible",
+            "catechism"
           ]
         },
         "judaism": {
@@ -562,15 +615,15 @@
             "fr": "Exemple de foi ; père des croyants"
           },
           "summary": {
-            "nl": "Paulus leest Abrahams vertrouwen als een voorbeeld voor mensen die geloven, ongeacht besnijdenis. Het verhaal van Gods belofte in Genesis blijft de achtergrond.",
-            "en": "Paul reads Abraham’s trust as an example for those who believe, irrespective of circumcision. God’s promise in Genesis remains the background.",
-            "fr": "Paul présente la confiance d’Abraham comme un exemple pour ceux qui croient, indépendamment de la circoncision. La promesse de Dieu dans la Genèse en est le contexte."
+            "nl": "De Catechismus noemt Abraham een voorbeeld van gehoorzaam geloof: hij vertrouwt Gods belofte en gaat op weg. Paulus verbindt dit vertrouwen met het vaderschap over allen die geloven.",
+            "en": "The Catechism presents Abraham as a model of obedient faith: he trusts God’s promise and sets out. Paul links this trust with fatherhood of all who believe.",
+            "fr": "Le Catéchisme présente Abraham comme un modèle d’obéissance dans la foi : il se fie à la promesse divine et part. Paul relie cette confiance à sa paternité envers tous les croyants."
           },
           "status": "attested",
           "scope": {
-            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
-            "en": "Christian Bible · Old and New Testaments",
-            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+            "nl": "Rooms-katholieke lezing · Bijbelpassages en Catechismus afzonderlijk vermeld",
+            "en": "Roman Catholic reading · Bible passages and Catechism identified separately",
+            "fr": "Lecture catholique romaine · passages bibliques et Catéchisme distingués"
           },
           "refs": [
             {
@@ -590,11 +643,24 @@
               "verse": 9,
               "endVerse": 17,
               "url": "https://www.biblegateway.com/passage/?search=Romans%204%3A9-17&version=WEB"
+            },
+            {
+              "label": "Catechism §144–147",
+              "labelLocales": {
+                "nl": "Catechismus §144–147",
+                "en": "Catechism §144–147",
+                "fr": "Catéchisme §144–147"
+              },
+              "corpus": "catechism",
+              "paragraph": 144,
+              "endParagraph": 147,
+              "url": "https://www.vatican.va/content/catechism/en/part_one/section_one/chapter_three/article_1/i_believe.index.html"
             }
           ],
           "indexId": "abraham",
           "sourceIds": [
-            "bible"
+            "bible",
+            "catechism"
           ]
         },
         "judaism": {
@@ -729,15 +795,15 @@
             "fr": "Foi et promesse reçue"
           },
           "summary": {
-            "nl": "Hebreeën noemt Sara bij de geloofsgetuigen en verbindt Isaaks geboorte met vertrouwen in Gods belofte. Genesis bewaart ook haar verwondering en lachen.",
-            "en": "Hebrews includes Sarah among witnesses of faith and links Isaac’s birth with trust in God’s promise. Genesis also preserves her surprise and laughter.",
-            "fr": "Hébreux compte Sarah parmi les témoins de la foi et relie la naissance d’Isaac à la confiance en la promesse divine. La Genèse rapporte aussi son étonnement et son rire."
+            "nl": "Sara ontvangt de belofte van een zoon ondanks haar ouderdom. De Catechismus noemt haar bij de vrouwen van het Oude Verbond die de weg naar Maria voorbereiden; Hebreeën herinnert aan haar geloof.",
+            "en": "Sarah receives the promise of a son despite her old age. The Catechism places her among the women of the Old Covenant who prepare the way for Mary; Hebrews recalls her faith.",
+            "fr": "Sarah reçoit la promesse d’un fils malgré son grand âge. Le Catéchisme la situe parmi les femmes de l’Ancienne Alliance qui préparent la mission de Marie ; Hébreux rappelle sa foi."
           },
           "status": "attested",
           "scope": {
-            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
-            "en": "Christian Bible · Old and New Testaments",
-            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+            "nl": "Rooms-katholieke lezing · Bijbelpassages en Catechismus afzonderlijk vermeld",
+            "en": "Roman Catholic reading · Bible passages and Catechism identified separately",
+            "fr": "Lecture catholique romaine · passages bibliques et Catéchisme distingués"
           },
           "refs": [
             {
@@ -757,11 +823,24 @@
               "verse": 11,
               "endVerse": 12,
               "url": "https://www.biblegateway.com/passage/?search=Hebrews%2011%3A11-12&version=WEB"
+            },
+            {
+              "label": "Catechism §489",
+              "labelLocales": {
+                "nl": "Catechismus §489",
+                "en": "Catechism §489",
+                "fr": "Catéchisme §489"
+              },
+              "corpus": "catechism",
+              "paragraph": 489,
+              "endParagraph": 489,
+              "url": "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_two/artcile_3/paragraph_2_conceived_by_the_power_of_the_holy_spirit_and_born_of_the_virgin_mary.index.html"
             }
           ],
           "indexId": "sarah",
           "sourceIds": [
-            "bible"
+            "bible",
+            "catechism"
           ]
         },
         "judaism": {
@@ -881,15 +960,15 @@
             "fr": "Mère d’Ismaël ; figure de l’allégorie de Paul"
           },
           "summary": {
-            "nl": "Genesis vertelt over Gods zorg voor Hagar en Ismaël. Galaten 4 gebruikt Hagar daarnaast in een allegorie over twee verbonden; dat is Paulus’ lezing, geen samenvatting van de Joodse traditie.",
-            "en": "Genesis tells of God’s care for Hagar and Ishmael. Galatians 4 also uses Hagar in an allegory of two covenants; this is Paul’s reading, not a summary of Jewish tradition.",
-            "fr": "La Genèse raconte la protection divine d’Agar et d’Ismaël. Galates 4 emploie aussi Agar dans une allégorie des deux alliances ; il s’agit de la lecture de Paul, non d’un résumé de la tradition juive."
+            "nl": "In de katholieke Bijbellezing blijft Gods zorg voor Hagar en Ismaël in Genesis het uitgangspunt. Paulus gebruikt Hagar ook in een allegorie over verbonden. Die lezing beschrijft niet hoe het jodendom zichzelf verstaat.",
+            "en": "In a Catholic reading, God’s care for Hagar and Ishmael in Genesis remains the starting point. Paul also uses Hagar in an allegory of covenants. This reading does not describe Judaism’s own understanding of itself.",
+            "fr": "Dans une lecture catholique, la sollicitude de Dieu pour Agar et Ismaël dans la Genèse reste le point de départ. Paul utilise aussi Agar dans une allégorie des alliances. Cette lecture ne décrit pas la compréhension juive du judaïsme."
           },
           "status": "attested",
           "scope": {
-            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
-            "en": "Christian Bible · Old and New Testaments",
-            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+            "nl": "Rooms-katholieke lezing · Bijbelpassages en Catechismus afzonderlijk vermeld",
+            "en": "Roman Catholic reading · Bible passages and Catechism identified separately",
+            "fr": "Lecture catholique romaine · passages bibliques et Catéchisme distingués"
           },
           "refs": [
             {
@@ -909,11 +988,24 @@
               "verse": 21,
               "endVerse": 31,
               "url": "https://www.biblegateway.com/passage/?search=Galatians%204%3A21-31&version=WEB"
+            },
+            {
+              "label": "Catechism §121–123",
+              "labelLocales": {
+                "nl": "Catechismus §121–123",
+                "en": "Catechism §121–123",
+                "fr": "Catéchisme §121–123"
+              },
+              "corpus": "catechism",
+              "paragraph": 121,
+              "endParagraph": 123,
+              "url": "https://www.vatican.va/content/catechism/en/part_one/section_one/chapter_two/article_3/iv_the_canon_of_scripture.index.html"
             }
           ],
           "indexId": "hagar",
           "sourceIds": [
-            "bible"
+            "bible",
+            "catechism"
           ]
         },
         "judaism": {
@@ -1029,15 +1121,15 @@
             "fr": "Exemple de délivrance et de jugement"
           },
           "summary": {
-            "nl": "Genesis vertelt Lots ontsnapping uit Sodom. In 2 Petrus wordt Lot rechtvaardig genoemd en gebruikt als voorbeeld van bevrijding te midden van oordeel.",
-            "en": "Genesis tells of Lot’s escape from Sodom. In 2 Peter Lot is called righteous and used as an example of deliverance amid judgment.",
-            "fr": "La Genèse raconte la fuite de Lot hors de Sodome. Dans 2 Pierre, Lot est qualifié de juste et devient un exemple de délivrance au milieu du jugement."
+            "nl": "Binnen de katholieke Schriftlezing toont Lots redding in Genesis Gods zorg te midden van oordeel. De tweede brief van Petrus noemt hem rechtvaardig. Deze aanduiding maakt niet elke handeling uit zijn levensverhaal voorbeeldig.",
+            "en": "Within Catholic reading of Scripture, Lot’s rescue in Genesis shows divine care amid judgment. Second Peter calls him righteous. That description does not make every action in his story exemplary.",
+            "fr": "Dans la lecture catholique de l’Écriture, le salut de Lot dans la Genèse manifeste la sollicitude divine au milieu du jugement. La deuxième lettre de Pierre le dit juste. Cette qualification ne rend pas exemplaire chacun de ses actes."
           },
           "status": "attested",
           "scope": {
-            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
-            "en": "Christian Bible · Old and New Testaments",
-            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+            "nl": "Rooms-katholieke lezing · Bijbelpassages en Catechismus afzonderlijk vermeld",
+            "en": "Roman Catholic reading · Bible passages and Catechism identified separately",
+            "fr": "Lecture catholique romaine · passages bibliques et Catéchisme distingués"
           },
           "refs": [
             {
@@ -1057,11 +1149,24 @@
               "verse": 6,
               "endVerse": 9,
               "url": "https://www.biblegateway.com/passage/?search=2%20Peter%202%3A6-9&version=WEB"
+            },
+            {
+              "label": "Catechism §121–123",
+              "labelLocales": {
+                "nl": "Catechismus §121–123",
+                "en": "Catechism §121–123",
+                "fr": "Catéchisme §121–123"
+              },
+              "corpus": "catechism",
+              "paragraph": 121,
+              "endParagraph": 123,
+              "url": "https://www.vatican.va/content/catechism/en/part_one/section_one/chapter_two/article_3/iv_the_canon_of_scripture.index.html"
             }
           ],
           "indexId": "lot",
           "sourceIds": [
-            "bible"
+            "bible",
+            "catechism"
           ]
         },
         "judaism": {
@@ -1189,15 +1294,15 @@
             "fr": "Fils d’Abraham et d’Agar"
           },
           "summary": {
-            "nl": "Genesis verhaalt Gods belofte voor Ismaël. Galaten bespreekt Abrahams twee zonen in een allegorie waarin Isaak als kind van de belofte wordt aangeduid.",
-            "en": "Genesis records God’s promise for Ishmael. Galatians discusses Abraham’s two sons in an allegory in which Isaac is called a child of promise.",
-            "fr": "La Genèse rapporte la promesse de Dieu pour Ismaël. Galates évoque les deux fils d’Abraham dans une allégorie où Isaac est appelé enfant de la promesse."
+            "nl": "De katholieke Bijbel bewaart Gods belofte voor Ismaël, de zoon van Abraham en Hagar. Paulus bespreekt de twee zonen van Abraham in een allegorie waarin Isaak kind van de belofte wordt genoemd.",
+            "en": "The Catholic Bible preserves God’s promise for Ishmael, the son of Abraham and Hagar. Paul discusses Abraham’s two sons in an allegory that calls Isaac a child of promise.",
+            "fr": "La Bible catholique conserve la promesse de Dieu pour Ismaël, fils d’Abraham et d’Agar. Paul évoque les deux fils d’Abraham dans une allégorie qui appelle Isaac enfant de la promesse."
           },
           "status": "attested",
           "scope": {
-            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
-            "en": "Christian Bible · Old and New Testaments",
-            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+            "nl": "Rooms-katholieke lezing · Bijbelpassages en Catechismus afzonderlijk vermeld",
+            "en": "Roman Catholic reading · Bible passages and Catechism identified separately",
+            "fr": "Lecture catholique romaine · passages bibliques et Catéchisme distingués"
           },
           "refs": [
             {
@@ -1217,11 +1322,24 @@
               "verse": 22,
               "endVerse": 28,
               "url": "https://www.biblegateway.com/passage/?search=Galatians%204%3A22-28&version=WEB"
+            },
+            {
+              "label": "Catechism §121–123",
+              "labelLocales": {
+                "nl": "Catechismus §121–123",
+                "en": "Catechism §121–123",
+                "fr": "Catéchisme §121–123"
+              },
+              "corpus": "catechism",
+              "paragraph": 121,
+              "endParagraph": 123,
+              "url": "https://www.vatican.va/content/catechism/en/part_one/section_one/chapter_two/article_3/iv_the_canon_of_scripture.index.html"
             }
           ],
           "indexId": "ishmael",
           "sourceIds": [
-            "bible"
+            "bible",
+            "catechism"
           ]
         },
         "judaism": {
@@ -1358,15 +1476,15 @@
             "fr": "Enfant de la promesse"
           },
           "summary": {
-            "nl": "Paulus noemt christelijke gelovigen kinderen van de belofte zoals Isaak. Hebreeën herinnert aan zijn zegen voor Jakob en Esau als daad van geloof.",
-            "en": "Paul calls Christian believers children of promise like Isaac. Hebrews recalls his blessing of Jacob and Esau as an act of faith.",
-            "fr": "Paul appelle les croyants chrétiens enfants de la promesse, comme Isaac. Hébreux rappelle sa bénédiction de Jacob et d’Ésaü comme un acte de foi."
+            "nl": "Isaak is het kind van de belofte. Hebreeën noemt zijn zegen voor Jakob en Esau een geloofsdaad. De katholieke traditie eert de aartsvaders als heiligen binnen de geschiedenis van Gods verbond.",
+            "en": "Isaac is the child of promise. Hebrews presents his blessing of Jacob and Esau as an act of faith. Catholic tradition honours the patriarchs as saints within the history of God’s covenant.",
+            "fr": "Isaac est l’enfant de la promesse. Hébreux présente sa bénédiction de Jacob et d’Ésaü comme un acte de foi. La tradition catholique honore les patriarches comme saints dans l’histoire de l’alliance divine."
           },
           "status": "attested",
           "scope": {
-            "nl": "Christelijke Bijbel · Nieuwe Testament",
-            "en": "Christian Bible · New Testament",
-            "fr": "Bible chrétienne · Nouveau Testament"
+            "nl": "Rooms-katholieke lezing · Bijbelpassages en Catechismus afzonderlijk vermeld",
+            "en": "Roman Catholic reading · Bible passages and Catechism identified separately",
+            "fr": "Lecture catholique romaine · passages bibliques et Catéchisme distingués"
           },
           "refs": [
             {
@@ -1386,11 +1504,24 @@
               "verse": 20,
               "endVerse": 20,
               "url": "https://www.biblegateway.com/passage/?search=Hebrews%2011%3A20&version=WEB"
+            },
+            {
+              "label": "Catechism §61",
+              "labelLocales": {
+                "nl": "Catechismus §61",
+                "en": "Catechism §61",
+                "fr": "Catéchisme §61"
+              },
+              "corpus": "catechism",
+              "paragraph": 61,
+              "endParagraph": 61,
+              "url": "https://www.vatican.va/content/catechism/en/part_one/section_one/chapter_two/article_1/ii_the_stages_of_revelation.index.html"
             }
           ],
           "indexId": "isaac",
           "sourceIds": [
-            "bible"
+            "bible",
+            "catechism"
           ]
         },
         "judaism": {
@@ -1520,15 +1651,15 @@
             "fr": "Patriarche et témoin de la foi"
           },
           "summary": {
-            "nl": "Jakob behoort tot de aartsvaders in de christelijke Bijbel. Hebreeën noemt zijn zegen voor Jozefs zonen en zijn aanbidding als uitingen van geloof.",
-            "en": "Jacob belongs to the patriarchs of the Christian Bible. Hebrews names his blessing of Joseph’s sons and his worship as expressions of faith.",
-            "fr": "Jacob fait partie des patriarches de la Bible chrétienne. Hébreux cite sa bénédiction des fils de Joseph et son adoration comme expressions de foi."
+            "nl": "Jakob ontvangt de verbondsbelofte en zegent Jozefs zonen. De Catechismus leest zijn nachtelijke worsteling als beeld van volhardend gebed.",
+            "en": "Jacob receives the covenant promise and blesses Joseph’s sons. The Catechism reads his night-long struggle as an image of persevering prayer.",
+            "fr": "Jacob reçoit la promesse de l’alliance et bénit les fils de Joseph. Le Catéchisme lit sa lutte nocturne comme une image de la prière persévérante."
           },
           "status": "attested",
           "scope": {
-            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
-            "en": "Christian Bible · Old and New Testaments",
-            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+            "nl": "Rooms-katholieke lezing · Bijbelpassages en Catechismus afzonderlijk vermeld",
+            "en": "Roman Catholic reading · Bible passages and Catechism identified separately",
+            "fr": "Lecture catholique romaine · passages bibliques et Catéchisme distingués"
           },
           "refs": [
             {
@@ -1548,11 +1679,24 @@
               "verse": 21,
               "endVerse": 21,
               "url": "https://www.biblegateway.com/passage/?search=Hebrews%2011%3A21&version=WEB"
+            },
+            {
+              "label": "Catechism §2573",
+              "labelLocales": {
+                "nl": "Catechismus §2573",
+                "en": "Catechism §2573",
+                "fr": "Catéchisme §2573"
+              },
+              "corpus": "catechism",
+              "paragraph": 2573,
+              "endParagraph": 2573,
+              "url": "https://www.vatican.va/content/catechism/en/part_four/section_one/chapter_one/article_1.index.html"
             }
           ],
           "indexId": "jacob",
           "sourceIds": [
-            "bible"
+            "bible",
+            "catechism"
           ]
         },
         "judaism": {
@@ -1681,15 +1825,15 @@
             "fr": "Protecteur de sa famille en Égypte"
           },
           "summary": {
-            "nl": "Stefanus hervertelt in Handelingen hoe God Jozef bijstaat ondanks het verraad van zijn broers. Deze Jozef is niet de echtgenoot van Maria.",
-            "en": "In Acts, Stephen retells how God supports Joseph despite his brothers’ betrayal. This Joseph is not Mary’s husband.",
-            "fr": "Dans les Actes, Étienne rappelle que Dieu soutient Joseph malgré la trahison de ses frères. Ce Joseph n’est pas l’époux de Marie."
+            "nl": "De Catechismus gebruikt Jozefs verhaal om Gods voorzienigheid te duiden: uit het kwaad van zijn broers kan redding voortkomen, zonder dat het kwaad goed wordt. Deze Jozef is de zoon van Jakob, niet Maria’s echtgenoot.",
+            "en": "The Catechism uses Joseph’s story to explain providence: rescue can emerge from his brothers’ wrongdoing without making evil good. This Joseph is Jacob’s son, not Mary’s husband.",
+            "fr": "Le Catéchisme évoque Joseph pour expliquer la providence : le salut peut naître du mal commis par ses frères, sans que le mal devienne bien. Ce Joseph est le fils de Jacob, non l’époux de Marie."
           },
           "status": "attested",
           "scope": {
-            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
-            "en": "Christian Bible · Old and New Testaments",
-            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+            "nl": "Rooms-katholieke lezing · Bijbelpassages en Catechismus afzonderlijk vermeld",
+            "en": "Roman Catholic reading · Bible passages and Catechism identified separately",
+            "fr": "Lecture catholique romaine · passages bibliques et Catéchisme distingués"
           },
           "refs": [
             {
@@ -1709,11 +1853,24 @@
               "verse": 9,
               "endVerse": 14,
               "url": "https://www.biblegateway.com/passage/?search=Acts%207%3A9-14&version=WEB"
+            },
+            {
+              "label": "Catechism §312",
+              "labelLocales": {
+                "nl": "Catechismus §312",
+                "en": "Catechism §312",
+                "fr": "Catéchisme §312"
+              },
+              "corpus": "catechism",
+              "paragraph": 312,
+              "endParagraph": 312,
+              "url": "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_4_the_creator.index.html"
             }
           ],
           "indexId": "joseph",
           "sourceIds": [
-            "bible"
+            "bible",
+            "catechism"
           ]
         },
         "judaism": {
@@ -1867,15 +2024,15 @@
             "fr": "Chef et législateur ; comparé au Christ"
           },
           "summary": {
-            "nl": "Mozes leidt de uittocht en ontvangt de wet. Hebreeën eert hem als trouwe dienaar en onderscheidt zijn rol van Christus als Zoon.",
-            "en": "Moses leads the exodus and receives the law. Hebrews honours him as a faithful servant and distinguishes his role from Christ as Son.",
-            "fr": "Moïse conduit l’exode et reçoit la loi. Hébreux l’honore comme serviteur fidèle et distingue son rôle de celui du Christ comme Fils."
+            "nl": "Mozes leidt de uittocht en ontvangt de wet. In de katholieke gebedsleer is hij een voorbeeld van voorspraak, die haar vervulling vindt in Christus.",
+            "en": "Moses leads the exodus and receives the law. In Catholic teaching on prayer, he models intercession, fulfilled in Christ.",
+            "fr": "Moïse conduit l’exode et reçoit la loi. Dans l’enseignement catholique sur la prière, il est un modèle d’intercession, accomplie dans le Christ."
           },
           "status": "attested",
           "scope": {
-            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
-            "en": "Christian Bible · Old and New Testaments",
-            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+            "nl": "Rooms-katholieke lezing · Bijbelpassages en Catechismus afzonderlijk vermeld",
+            "en": "Roman Catholic reading · Bible passages and Catechism identified separately",
+            "fr": "Lecture catholique romaine · passages bibliques et Catéchisme distingués"
           },
           "refs": [
             {
@@ -1895,11 +2052,24 @@
               "verse": 1,
               "endVerse": 6,
               "url": "https://www.biblegateway.com/passage/?search=Hebrews%203%3A1-6&version=WEB"
+            },
+            {
+              "label": "Catechism §2574–2577",
+              "labelLocales": {
+                "nl": "Catechismus §2574–2577",
+                "en": "Catechism §2574–2577",
+                "fr": "Catéchisme §2574–2577"
+              },
+              "corpus": "catechism",
+              "paragraph": 2574,
+              "endParagraph": 2577,
+              "url": "https://www.vatican.va/content/catechism/en/part_four/section_one/chapter_one/article_1.index.html"
             }
           ],
           "indexId": "moses",
           "sourceIds": [
-            "bible"
+            "bible",
+            "catechism"
           ]
         },
         "judaism": {
@@ -2040,20 +2210,20 @@
             "fr": "Aaron"
           },
           "role": {
-            "nl": "Priester; voorbeeld van een goddelijke roeping",
-            "en": "Priest; example of divine calling",
-            "fr": "Prêtre ; exemple d’appel divin"
+            "nl": "Priester; voorafbeelding in de wijdingsliturgie",
+            "en": "Priest; prefiguration in ordination liturgy",
+            "fr": "Prêtre ; préfiguration dans la liturgie d’ordination"
           },
           "summary": {
-            "nl": "Aärons priesterschap maakt deel uit van de christelijke Bijbel. Hebreeën noemt zijn roeping door God bij de uitleg van Christus’ hogepriesterschap.",
-            "en": "Aaron’s priesthood belongs to the Christian Bible. Hebrews names his calling by God when explaining Christ’s high priesthood.",
-            "fr": "Le sacerdoce d’Aaron fait partie de la Bible chrétienne. Hébreux évoque son appel par Dieu pour expliquer le grand sacerdoce du Christ."
+            "nl": "Aäron wordt tot priester geroepen. De katholieke wijdingsliturgie ziet zijn priesterschap als een voorafbeelding van het gewijde ambt; Christus blijft de unieke hogepriester. Dit is een katholieke duiding van het Bijbelse verhaal.",
+            "en": "Aaron is called to priesthood. Catholic ordination liturgy sees his priesthood as prefiguring ordained ministry; Christ remains the unique high priest. This is a Catholic interpretation of the biblical account.",
+            "fr": "Aaron est appelé au sacerdoce. La liturgie catholique de l’ordination y voit une préfiguration du ministère ordonné ; le Christ reste l’unique grand prêtre. Il s’agit d’une interprétation catholique du récit biblique."
           },
           "status": "attested",
           "scope": {
-            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
-            "en": "Christian Bible · Old and New Testaments",
-            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+            "nl": "Rooms-katholieke lezing · Bijbelpassages en Catechismus afzonderlijk vermeld",
+            "en": "Roman Catholic reading · Bible passages and Catechism identified separately",
+            "fr": "Lecture catholique romaine · passages bibliques et Catéchisme distingués"
           },
           "refs": [
             {
@@ -2073,11 +2243,24 @@
               "verse": 1,
               "endVerse": 5,
               "url": "https://www.biblegateway.com/passage/?search=Hebrews%205%3A1-5&version=WEB"
+            },
+            {
+              "label": "Catechism §1541–1545",
+              "labelLocales": {
+                "nl": "Catechismus §1541–1545",
+                "en": "Catechism §1541–1545",
+                "fr": "Catéchisme §1541–1545"
+              },
+              "corpus": "catechism",
+              "paragraph": 1541,
+              "endParagraph": 1545,
+              "url": "https://www.vatican.va/content/catechism/en/part_two/section_two/chapter_three/article_6/ii_the_sacrament_of_holy_orders_in_the_economy_of_salvation.index.html"
             }
           ],
           "indexId": "aaron",
           "sourceIds": [
-            "bible"
+            "bible",
+            "catechism"
           ]
         },
         "judaism": {
@@ -2220,15 +2403,15 @@
             "fr": "Prophétesse du récit de l’exode"
           },
           "summary": {
-            "nl": "Het Oude Testament noemt Mirjam een profetes en vertelt hoe zij de vrouwen voorgaat in het lied na de oversteek van de zee. Zij is een andere persoon dan Maria, de moeder van Jezus.",
-            "en": "The Old Testament calls Miriam a prophetess and tells how she leads the women in song after crossing the sea. She is a different person from Mary, Jesus’ mother.",
-            "fr": "L’Ancien Testament appelle Miryam prophétesse et raconte qu’elle entraîne les femmes dans le chant après la traversée de la mer. Elle est distincte de Marie, mère de Jésus."
+            "nl": "Mirjam is de profetes die na de oversteek van de zee het lied inzet. De Catechismus noemt haar bij de vrouwen die Israëls hoop op redding levend houden. Zij is niet Maria, de moeder van Jezus.",
+            "en": "Miriam is the prophetess who leads the song after crossing the sea. The Catechism names her among the women who sustain Israel’s hope of salvation. She is not Mary, Jesus’ mother.",
+            "fr": "Miryam est la prophétesse qui conduit le chant après la traversée de la mer. Le Catéchisme la compte parmi les femmes qui gardent vivante l’espérance du salut en Israël. Elle n’est pas Marie, mère de Jésus."
           },
           "status": "attested",
           "scope": {
-            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
-            "en": "Christian Bible · Old and New Testaments",
-            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+            "nl": "Rooms-katholieke lezing · Bijbelpassages en Catechismus afzonderlijk vermeld",
+            "en": "Roman Catholic reading · Bible passages and Catechism identified separately",
+            "fr": "Lecture catholique romaine · passages bibliques et Catéchisme distingués"
           },
           "refs": [
             {
@@ -2248,11 +2431,24 @@
               "verse": 59,
               "endVerse": 59,
               "url": "https://www.biblegateway.com/passage/?search=Numbers%2026%3A59&version=WEB"
+            },
+            {
+              "label": "Catechism §64",
+              "labelLocales": {
+                "nl": "Catechismus §64",
+                "en": "Catechism §64",
+                "fr": "Catéchisme §64"
+              },
+              "corpus": "catechism",
+              "paragraph": 64,
+              "endParagraph": 64,
+              "url": "https://www.vatican.va/content/catechism/en/part_one/section_one/chapter_two/article_1/ii_the_stages_of_revelation.index.html"
             }
           ],
           "indexId": "miriam",
           "sourceIds": [
-            "bible"
+            "bible",
+            "catechism"
           ]
         },
         "judaism": {
@@ -2381,15 +2577,15 @@
             "fr": "Roi ; ancêtre dans la promesse messianique"
           },
           "summary": {
-            "nl": "David is koning in het Oude Testament. Lucas verbindt Jezus met de troon van David en presenteert zijn koningschap als de vervulling van een blijvende belofte.",
-            "en": "David is a king in the Old Testament. Luke connects Jesus with David’s throne and presents his kingship as the fulfilment of an enduring promise.",
-            "fr": "David est roi dans l’Ancien Testament. Luc relie Jésus au trône de David et présente sa royauté comme l’accomplissement d’une promesse durable."
+            "nl": "David is koning en voorvader van Jezus. De Catechismus belicht zijn lof en berouw als voorbeeld voor het gebed van Gods volk.",
+            "en": "David is a king and an ancestor of Jesus. The Catechism highlights his praise and repentance as a model for the prayer of God’s people.",
+            "fr": "David est roi et ancêtre de Jésus. Le Catéchisme souligne sa louange et son repentir comme modèle de prière pour le peuple de Dieu."
           },
           "status": "attested",
           "scope": {
-            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
-            "en": "Christian Bible · Old and New Testaments",
-            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+            "nl": "Rooms-katholieke lezing · Bijbelpassages en Catechismus afzonderlijk vermeld",
+            "en": "Roman Catholic reading · Bible passages and Catechism identified separately",
+            "fr": "Lecture catholique romaine · passages bibliques et Catéchisme distingués"
           },
           "refs": [
             {
@@ -2409,11 +2605,24 @@
               "verse": 31,
               "endVerse": 33,
               "url": "https://www.biblegateway.com/passage/?search=Luke%201%3A31-33&version=WEB"
+            },
+            {
+              "label": "Catechism §2579",
+              "labelLocales": {
+                "nl": "Catechismus §2579",
+                "en": "Catechism §2579",
+                "fr": "Catéchisme §2579"
+              },
+              "corpus": "catechism",
+              "paragraph": 2579,
+              "endParagraph": 2579,
+              "url": "https://www.vatican.va/content/catechism/en/part_four/section_one/chapter_one/article_1.index.html"
             }
           ],
           "indexId": "david",
           "sourceIds": [
-            "bible"
+            "bible",
+            "catechism"
           ]
         },
         "judaism": {
@@ -2550,15 +2759,15 @@
             "fr": "Roi sage ; comparaison dans l’enseignement de Jésus"
           },
           "summary": {
-            "nl": "Salomo’s wijsheid en de komst van de koningin van het Zuiden worden door Jezus aangehaald. Matteüs presenteert Jezus daarbij als meer dan Salomo.",
-            "en": "Jesus recalls Solomon’s wisdom and the visit of the Queen of the South. Matthew presents Jesus in that comparison as greater than Solomon.",
-            "fr": "Jésus évoque la sagesse de Salomon et la visite de la reine du Midi. Dans cette comparaison, Matthieu présente Jésus comme plus grand que Salomon."
+            "nl": "Salomo is koning en bouwer van de tempel. De Catechismus bespreekt zijn gebed bij de tempelwijding; Matteüs presenteert Jezus als meer dan Salomo.",
+            "en": "Solomon is king and builder of the Temple. The Catechism discusses his prayer at its dedication; Matthew presents Jesus as greater than Solomon.",
+            "fr": "Salomon est roi et bâtisseur du Temple. Le Catéchisme évoque sa prière de dédicace ; Matthieu présente Jésus comme plus grand que Salomon."
           },
           "status": "attested",
           "scope": {
-            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
-            "en": "Christian Bible · Old and New Testaments",
-            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+            "nl": "Rooms-katholieke lezing · Bijbelpassages en Catechismus afzonderlijk vermeld",
+            "en": "Roman Catholic reading · Bible passages and Catechism identified separately",
+            "fr": "Lecture catholique romaine · passages bibliques et Catéchisme distingués"
           },
           "refs": [
             {
@@ -2578,11 +2787,24 @@
               "verse": 42,
               "endVerse": 42,
               "url": "https://www.biblegateway.com/passage/?search=Matthew%2012%3A42&version=WEB"
+            },
+            {
+              "label": "Catechism §2580",
+              "labelLocales": {
+                "nl": "Catechismus §2580",
+                "en": "Catechism §2580",
+                "fr": "Catéchisme §2580"
+              },
+              "corpus": "catechism",
+              "paragraph": 2580,
+              "endParagraph": 2580,
+              "url": "https://www.vatican.va/content/catechism/en/part_four/section_one/chapter_one/article_1.index.html"
             }
           ],
           "indexId": "solomon",
           "sourceIds": [
-            "bible"
+            "bible",
+            "catechism"
           ]
         },
         "judaism": {
@@ -2727,15 +2949,15 @@
             "fr": "Exemple de persévérance"
           },
           "summary": {
-            "nl": "Het boek Job bewaart uitgebreide vragen over lijden. Jakobus verwijst naar Jobs volharding en naar de barmhartigheid van de Heer.",
-            "en": "The book of Job preserves extended questions about suffering. James refers to Job’s perseverance and the Lord’s compassion.",
-            "fr": "Le livre de Job développe de longues questions sur la souffrance. Jacques rappelle la persévérance de Job et la compassion du Seigneur."
+            "nl": "Job heeft in de katholieke Schrift een plaats als lijdende mens die God bevraagt. Jakobus noemt zijn volharding en Gods barmhartigheid. Zijn verhaal laat vragen en klacht toe en reduceert lijden niet tot persoonlijke schuld.",
+            "en": "In Catholic Scripture, Job appears as a suffering person who questions God. James recalls his perseverance and God’s compassion. His story makes room for questions and lament rather than reducing suffering to personal guilt.",
+            "fr": "Dans l’Écriture catholique, Job est un homme souffrant qui interroge Dieu. Jacques rappelle sa persévérance et la compassion divine. Son récit accueille la plainte et les questions sans réduire la souffrance à une faute personnelle."
           },
           "status": "attested",
           "scope": {
-            "nl": "Christelijke Bijbel · Oude en Nieuwe Testament",
-            "en": "Christian Bible · Old and New Testaments",
-            "fr": "Bible chrétienne · Ancien et Nouveau Testaments"
+            "nl": "Rooms-katholieke lezing · Bijbelpassages en Catechismus afzonderlijk vermeld",
+            "en": "Roman Catholic reading · Bible passages and Catechism identified separately",
+            "fr": "Lecture catholique romaine · passages bibliques et Catéchisme distingués"
           },
           "refs": [
             {
@@ -2755,11 +2977,24 @@
               "verse": 11,
               "endVerse": 11,
               "url": "https://www.biblegateway.com/passage/?search=James%205%3A11&version=WEB"
+            },
+            {
+              "label": "Catechism §121–123",
+              "labelLocales": {
+                "nl": "Catechismus §121–123",
+                "en": "Catechism §121–123",
+                "fr": "Catéchisme §121–123"
+              },
+              "corpus": "catechism",
+              "paragraph": 121,
+              "endParagraph": 123,
+              "url": "https://www.vatican.va/content/catechism/en/part_one/section_one/chapter_two/article_3/iv_the_canon_of_scripture.index.html"
             }
           ],
           "indexId": "step-H0347",
           "sourceIds": [
-            "bible"
+            "bible",
+            "catechism"
           ]
         },
         "judaism": {
@@ -2904,15 +3139,15 @@
             "fr": "Prophète ; signe dans l’enseignement de Jésus"
           },
           "summary": {
-            "nl": "Jezus verwijst naar Jona’s tijd in de grote vis als teken voor zijn eigen lot. Ook de bekering van Nineve krijgt in Matteüs een plaats in zijn waarschuwing.",
-            "en": "Jesus refers to Jonah’s time in the great fish as a sign concerning his own fate. Nineveh’s repentance also appears in his warning in Matthew.",
-            "fr": "Jésus évoque le séjour de Jonas dans le grand poisson comme signe de son propre destin. La repentance de Ninive apparaît aussi dans son avertissement chez Matthieu."
+            "nl": "In de katholieke lezing verwijst het teken van Jona naar Jezus’ dood en opstanding. Matteüs verbindt Jona daarnaast met Nineves bekering. Jona blijft een afzonderlijke profeet, geen andere naam voor Jezus.",
+            "en": "In Catholic interpretation, the sign of Jonah points to Jesus’ death and resurrection. Matthew also connects Jonah with Nineveh’s repentance. Jonah remains a distinct prophet, not another name for Jesus.",
+            "fr": "Dans la lecture catholique, le signe de Jonas renvoie à la mort et à la résurrection de Jésus. Matthieu évoque aussi la conversion de Ninive. Jonas reste un prophète distinct, non un autre nom de Jésus."
           },
           "status": "attested",
           "scope": {
-            "nl": "Christelijke Bijbel · Nieuwe Testament",
-            "en": "Christian Bible · New Testament",
-            "fr": "Bible chrétienne · Nouveau Testament"
+            "nl": "Rooms-katholieke lezing · Bijbelpassages en Catechismus afzonderlijk vermeld",
+            "en": "Roman Catholic reading · Bible passages and Catechism identified separately",
+            "fr": "Lecture catholique romaine · passages bibliques et Catéchisme distingués"
           },
           "refs": [
             {
@@ -2923,11 +3158,24 @@
               "verse": 39,
               "endVerse": 41,
               "url": "https://www.biblegateway.com/passage/?search=Matthew%2012%3A39-41&version=WEB"
+            },
+            {
+              "label": "Catechism §627",
+              "labelLocales": {
+                "nl": "Catechismus §627",
+                "en": "Catechism §627",
+                "fr": "Catéchisme §627"
+              },
+              "corpus": "catechism",
+              "paragraph": 627,
+              "endParagraph": 627,
+              "url": "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_two/article_4/paragraph_3_jesus_christ_was_buried.index.html"
             }
           ],
           "indexId": "step-H3124",
           "sourceIds": [
-            "bible"
+            "bible",
+            "catechism"
           ]
         },
         "judaism": {
@@ -3072,15 +3320,15 @@
             "fr": "Prophète ; témoin de la transfiguration"
           },
           "summary": {
-            "nl": "Elia verschijnt met Mozes bij Jezus’ verheerlijking in Matteüs. Jakobus noemt hem ook als voorbeeld van een mens wiens gebed kracht heeft.",
-            "en": "Elijah appears with Moses at Jesus’ transfiguration in Matthew. James also presents him as a human example of effective prayer.",
-            "fr": "Élie apparaît avec Moïse lors de la transfiguration de Jésus chez Matthieu. Jacques le présente aussi comme un exemple humain de prière efficace."
+            "nl": "Elia verschijnt met Mozes bij Jezus’ verheerlijking. De katholieke gebedsleer herinnert aan zijn vurige gebed en zijn ontmoeting met God.",
+            "en": "Elijah appears with Moses at Jesus’ transfiguration. Catholic teaching on prayer recalls his fervent prayer and his encounter with God.",
+            "fr": "Élie apparaît avec Moïse lors de la transfiguration de Jésus. L’enseignement catholique sur la prière rappelle sa prière ardente et sa rencontre avec Dieu."
           },
           "status": "attested",
           "scope": {
-            "nl": "Christelijke Bijbel · Nieuwe Testament",
-            "en": "Christian Bible · New Testament",
-            "fr": "Bible chrétienne · Nouveau Testament"
+            "nl": "Rooms-katholieke lezing · Bijbelpassages en Catechismus afzonderlijk vermeld",
+            "en": "Roman Catholic reading · Bible passages and Catechism identified separately",
+            "fr": "Lecture catholique romaine · passages bibliques et Catéchisme distingués"
           },
           "refs": [
             {
@@ -3100,11 +3348,24 @@
               "verse": 17,
               "endVerse": 18,
               "url": "https://www.biblegateway.com/passage/?search=James%205%3A17-18&version=WEB"
+            },
+            {
+              "label": "Catechism §2582–2583",
+              "labelLocales": {
+                "nl": "Catechismus §2582–2583",
+                "en": "Catechism §2582–2583",
+                "fr": "Catéchisme §2582–2583"
+              },
+              "corpus": "catechism",
+              "paragraph": 2582,
+              "endParagraph": 2583,
+              "url": "https://www.vatican.va/content/catechism/en/part_four/section_one/chapter_one/article_1.index.html"
             }
           ],
           "indexId": "step-H0452G",
           "sourceIds": [
-            "bible"
+            "bible",
+            "catechism"
           ]
         },
         "judaism": {
@@ -3222,15 +3483,15 @@
             "fr": "Prêtre et père de Jean-Baptiste"
           },
           "summary": {
-            "nl": "Lucas stelt Zacharias voor als priester en echtgenoot van Elisabet. Hij ontvangt de aankondiging van Johannes’ geboorte en spreekt later een lofzang over redding en zijn zoons opdracht.",
-            "en": "Luke presents Zechariah as a priest and Elizabeth’s husband. He receives the announcement of John’s birth and later speaks a hymn about salvation and his son’s mission.",
-            "fr": "Luc présente Zacharie comme prêtre et époux d’Élisabeth. Il reçoit l’annonce de la naissance de Jean puis prononce un cantique sur le salut et la mission de son fils."
+            "nl": "De katholieke lezing van Lucas volgt Zacharias als priester, echtgenoot van Elisabet en vader van Johannes de Doper. Zijn lofzang, het Benedictus, verkondigt Gods redding en de opdracht van zijn zoon als wegbereider.",
+            "en": "The Catholic reading of Luke follows Zechariah as priest, Elizabeth’s husband and John the Baptist’s father. His canticle, the Benedictus, proclaims God’s salvation and his son’s mission as forerunner.",
+            "fr": "La lecture catholique de Luc présente Zacharie comme prêtre, époux d’Élisabeth et père de Jean-Baptiste. Son cantique, le Benedictus, proclame le salut de Dieu et la mission de précurseur de son fils."
           },
           "status": "attested",
           "scope": {
-            "nl": "Christelijke Bijbel · Nieuwe Testament",
-            "en": "Christian Bible · New Testament",
-            "fr": "Bible chrétienne · Nouveau Testament"
+            "nl": "Rooms-katholieke lezing · Bijbelpassages en Catechismus afzonderlijk vermeld",
+            "en": "Roman Catholic reading · Bible passages and Catechism identified separately",
+            "fr": "Lecture catholique romaine · passages bibliques et Catéchisme distingués"
           },
           "refs": [
             {
@@ -3250,11 +3511,24 @@
               "verse": 67,
               "endVerse": 79,
               "url": "https://www.biblegateway.com/passage/?search=Luke%201%3A67-79&version=WEB"
+            },
+            {
+              "label": "Catechism §124–125",
+              "labelLocales": {
+                "nl": "Catechismus §124–125",
+                "en": "Catechism §124–125",
+                "fr": "Catéchisme §124–125"
+              },
+              "corpus": "catechism",
+              "paragraph": 124,
+              "endParagraph": 125,
+              "url": "https://www.vatican.va/content/catechism/en/part_one/section_one/chapter_two/article_3/iv_the_canon_of_scripture.index.html"
             }
           ],
           "indexId": "zechariah",
           "sourceIds": [
-            "bible"
+            "bible",
+            "catechism"
           ]
         },
         "judaism": {
@@ -3367,15 +3641,15 @@
             "fr": "Baptiste et précurseur"
           },
           "summary": {
-            "nl": "Johannes roept op tot bekering en doopt Jezus. Lucas beschrijft zijn opdracht als het voorbereiden van de weg van de Heer. Hij is niet Johannes de apostel.",
-            "en": "John calls for repentance and baptizes Jesus. Luke describes his mission as preparing the Lord’s way. He is not John the apostle.",
-            "fr": "Jean appelle au repentir et baptise Jésus. Luc décrit sa mission comme la préparation du chemin du Seigneur. Il est distinct de Jean l’apôtre."
+            "nl": "De katholieke traditie eert Johannes als voorloper van Christus. Hij roept op tot bekering en doopt Jezus. De Catechismus onderscheidt zijn doop van bekering van het christelijke doopsel in water en Geest. Hij is niet Johannes de apostel.",
+            "en": "Catholic tradition honours John as Christ’s forerunner. He calls for repentance and baptizes Jesus. The Catechism distinguishes his baptism of repentance from Christian Baptism in water and the Spirit. He is not John the apostle.",
+            "fr": "La tradition catholique honore Jean comme précurseur du Christ. Il appelle à la conversion et baptise Jésus. Le Catéchisme distingue son baptême de repentir du baptême chrétien dans l’eau et l’Esprit. Il n’est pas Jean l’apôtre."
           },
           "status": "attested",
           "scope": {
-            "nl": "Christelijke Bijbel · Nieuwe Testament",
-            "en": "Christian Bible · New Testament",
-            "fr": "Bible chrétienne · Nouveau Testament"
+            "nl": "Rooms-katholieke lezing · Bijbelpassages en Catechismus afzonderlijk vermeld",
+            "en": "Roman Catholic reading · Bible passages and Catechism identified separately",
+            "fr": "Lecture catholique romaine · passages bibliques et Catéchisme distingués"
           },
           "refs": [
             {
@@ -3395,11 +3669,24 @@
               "verse": 76,
               "endVerse": 79,
               "url": "https://www.biblegateway.com/passage/?search=Luke%201%3A76-79&version=WEB"
+            },
+            {
+              "label": "Catechism §717–720",
+              "labelLocales": {
+                "nl": "Catechismus §717–720",
+                "en": "Catechism §717–720",
+                "fr": "Catéchisme §717–720"
+              },
+              "corpus": "catechism",
+              "paragraph": 717,
+              "endParagraph": 720,
+              "url": "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_three/article_8/iv_the_spirit_of_christ_in_the_fullness_of_time.index.html"
             }
           ],
           "indexId": "john-baptist",
           "sourceIds": [
-            "bible"
+            "bible",
+            "catechism"
           ]
         },
         "judaism": {
@@ -3500,20 +3787,20 @@
             "fr": "Marie"
           },
           "role": {
-            "nl": "Moeder van Jezus; ontvanger van de aankondiging",
-            "en": "Mother of Jesus; recipient of the annunciation",
-            "fr": "Mère de Jésus ; destinataire de l’Annonciation"
+            "nl": "Moeder van God; altijd maagd",
+            "en": "Mother of God; ever-virgin",
+            "fr": "Mère de Dieu ; toujours vierge"
           },
           "summary": {
-            "nl": "Lucas vertelt Gabriëls aankondiging aan Maria, haar antwoord en haar lofzang. Zij wordt de moeder van Jezus genoemd. Verschillen in latere christelijke Mariaverering worden hier niet samengevat.",
-            "en": "Luke tells of Gabriel’s announcement to Mary, her response and her song of praise. She is named as Jesus’ mother. Differences in later Christian devotion to Mary are not summarized here.",
-            "fr": "Luc raconte l’annonce de Gabriel à Marie, sa réponse et son cantique. Elle est désignée comme mère de Jésus. Les différences dans les dévotions chrétiennes ultérieures ne sont pas résumées ici."
+            "nl": "Katholieken vereren Maria als Moeder van God en altijd maagd. Haar onbevlekte ontvangenis betekent dat zij vanaf haar eigen ontvangenis door Christus’ genade van de erfzonde bewaard bleef. Haar tenhemelopneming betreft lichaam en ziel. Deze verering verschilt van de aanbidding die alleen God toekomt.",
+            "en": "Catholics venerate Mary as Mother of God and ever-virgin. Her Immaculate Conception means preservation from original sin from her own conception through Christ’s grace. Her Assumption concerns body and soul. This veneration differs from the adoration owed to God alone.",
+            "fr": "Les catholiques vénèrent Marie comme Mère de Dieu et toujours vierge. Son Immaculée Conception signifie sa préservation du péché originel dès sa propre conception par la grâce du Christ. Son Assomption concerne le corps et l’âme. Cette vénération se distingue de l’adoration réservée à Dieu."
           },
           "status": "attested",
           "scope": {
-            "nl": "Christelijke Bijbel · Nieuwe Testament",
-            "en": "Christian Bible · New Testament",
-            "fr": "Bible chrétienne · Nouveau Testament"
+            "nl": "Rooms-katholieke lezing · Bijbelpassages en Catechismus afzonderlijk vermeld",
+            "en": "Roman Catholic reading · Bible passages and Catechism identified separately",
+            "fr": "Lecture catholique romaine · passages bibliques et Catéchisme distingués"
           },
           "refs": [
             {
@@ -3533,11 +3820,60 @@
               "verse": 46,
               "endVerse": 55,
               "url": "https://www.biblegateway.com/passage/?search=Luke%201%3A46-55&version=WEB"
+            },
+            {
+              "label": "Catechism §491–495",
+              "labelLocales": {
+                "nl": "Catechismus §491–495",
+                "en": "Catechism §491–495",
+                "fr": "Catéchisme §491–495"
+              },
+              "corpus": "catechism",
+              "paragraph": 491,
+              "endParagraph": 495,
+              "url": "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_two/artcile_3/paragraph_2_conceived_by_the_power_of_the_holy_spirit_and_born_of_the_virgin_mary.index.html"
+            },
+            {
+              "label": "Catechism §499–501",
+              "labelLocales": {
+                "nl": "Catechismus §499–501",
+                "en": "Catechism §499–501",
+                "fr": "Catéchisme §499–501"
+              },
+              "corpus": "catechism",
+              "paragraph": 499,
+              "endParagraph": 501,
+              "url": "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_two/artcile_3/paragraph_2_conceived_by_the_power_of_the_holy_spirit_and_born_of_the_virgin_mary.index.html"
+            },
+            {
+              "label": "Catechism §966",
+              "labelLocales": {
+                "nl": "Catechismus §966",
+                "en": "Catechism §966",
+                "fr": "Catéchisme §966"
+              },
+              "corpus": "catechism",
+              "paragraph": 966,
+              "endParagraph": 966,
+              "url": "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_three/article_9/paragraph_6_mary_-_mother_of_christ,_mother_of_the_church.html"
+            },
+            {
+              "label": "Catechism §971",
+              "labelLocales": {
+                "nl": "Catechismus §971",
+                "en": "Catechism §971",
+                "fr": "Catéchisme §971"
+              },
+              "corpus": "catechism",
+              "paragraph": 971,
+              "endParagraph": 971,
+              "url": "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_three/article_9/paragraph_6_mary_-_mother_of_christ,_mother_of_the_church.html"
             }
           ],
           "indexId": "mary",
           "sourceIds": [
-            "bible"
+            "bible",
+            "catechism"
           ]
         },
         "judaism": {
@@ -3647,20 +3983,20 @@
             "fr": "Jésus-Christ"
           },
           "role": {
-            "nl": "Messias en Zoon van God",
-            "en": "Messiah and Son of God",
-            "fr": "Messie et Fils de Dieu"
+            "nl": "Zoon van God; Verlosser, werkelijk God en mens",
+            "en": "Son of God; Saviour, truly God and human",
+            "fr": "Fils de Dieu ; Sauveur, vrai Dieu et vrai homme"
           },
           "summary": {
-            "nl": "Johannes presenteert Jezus als het mensgeworden Woord en Zoon van God. Paulus plaatst zijn dood en opstanding centraal in de verkondiging. Deze christelijke claims verschillen wezenlijk van de Qur’anische beschrijving.",
-            "en": "John presents Jesus as the Word made flesh and Son of God. Paul places his death and resurrection at the centre of proclamation. These Christian claims differ fundamentally from the Qur’anic portrayal.",
-            "fr": "Jean présente Jésus comme le Verbe fait chair et le Fils de Dieu. Paul place sa mort et sa résurrection au centre de la proclamation. Ces affirmations chrétiennes diffèrent fondamentalement du portrait coranique."
+            "nl": "De katholieke Kerk belijdt Jezus Christus als de eeuwige Zoon van God, werkelijk God en werkelijk mens in één persoon. Zijn menswording, kruisdood en verrijzenis staan centraal in de verlossing. De eucharistie stelt zijn unieke offer sacramenteel tegenwoordig.",
+            "en": "The Catholic Church confesses Jesus Christ as God’s eternal Son, truly God and truly human in one person. His incarnation, crucifixion and resurrection are central to salvation. The Eucharist makes his unique sacrifice sacramentally present.",
+            "fr": "L’Église catholique confesse Jésus-Christ comme le Fils éternel de Dieu, vrai Dieu et vrai homme en une personne. Son incarnation, sa crucifixion et sa résurrection sont au cœur du salut. L’Eucharistie rend sacramentellement présent son sacrifice unique."
           },
           "status": "attested",
           "scope": {
-            "nl": "Christelijke Bijbel · Nieuwe Testament",
-            "en": "Christian Bible · New Testament",
-            "fr": "Bible chrétienne · Nouveau Testament"
+            "nl": "Rooms-katholieke lezing · Bijbelpassages en Catechismus afzonderlijk vermeld",
+            "en": "Roman Catholic reading · Bible passages and Catechism identified separately",
+            "fr": "Lecture catholique romaine · passages bibliques et Catéchisme distingués"
           },
           "refs": [
             {
@@ -3689,11 +4025,36 @@
               "verse": 3,
               "endVerse": 4,
               "url": "https://www.biblegateway.com/passage/?search=1%20Corinthians%2015%3A3-4&version=WEB"
+            },
+            {
+              "label": "Catechism §464–469",
+              "labelLocales": {
+                "nl": "Catechismus §464–469",
+                "en": "Catechism §464–469",
+                "fr": "Catéchisme §464–469"
+              },
+              "corpus": "catechism",
+              "paragraph": 464,
+              "endParagraph": 469,
+              "url": "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_two/artcile_3/he_was_conceived_by_the_power_of_the_holy_spirit,_and_was_born_of_the_virgin_mary.index.html"
+            },
+            {
+              "label": "Catechism §1545",
+              "labelLocales": {
+                "nl": "Catechismus §1545",
+                "en": "Catechism §1545",
+                "fr": "Catéchisme §1545"
+              },
+              "corpus": "catechism",
+              "paragraph": 1545,
+              "endParagraph": 1545,
+              "url": "https://www.vatican.va/content/catechism/en/part_two/section_two/chapter_three/article_6/ii_the_sacrament_of_holy_orders_in_the_economy_of_salvation.index.html"
             }
           ],
           "indexId": "jesus",
           "sourceIds": [
-            "bible"
+            "bible",
+            "catechism"
           ]
         },
         "judaism": {
@@ -3801,23 +4162,38 @@
             "fr": "Muhammad"
           },
           "role": {
-            "nl": "Geen expliciet genoemde Bijbelse persoon",
-            "en": "Not an explicitly named biblical figure",
-            "fr": "Personnage non nommé explicitement dans la Bible"
+            "nl": "Buiten de Bijbel; katholieke betrekkingen met moslims",
+            "en": "Outside the Bible; Catholic relations with Muslims",
+            "fr": "Hors de la Bible ; relations catholiques avec les musulmans"
           },
           "summary": {
-            "nl": "De christelijke Bijbel bevat geen persoonsverhaal dat Mohammed bij naam noemt. Latere religieuze interpretaties van mogelijke voorspellingen worden hier niet als gedeelde identificaties gepresenteerd.",
-            "en": "The Christian Bible contains no personal narrative naming Muhammad. Later religious interpretations of possible predictions are not presented here as shared identifications.",
-            "fr": "La Bible chrétienne ne contient pas de récit personnel nommant Muhammad. Les interprétations religieuses ultérieures de possibles annonces ne sont pas présentées ici comme des identifications communes."
+            "nl": "Mohammed wordt niet bij naam genoemd in de Bijbel. Nostra aetate 3 spreekt over katholieke waardering voor moslims en roept op tot wederzijds begrip. Die concilietekst gaat over moslims; hij kent Mohammed geen Bijbelse identiteit of profetenambt in de katholieke leer toe.",
+            "en": "Muhammad is not named in the Bible. Nostra aetate 3 expresses Catholic esteem for Muslims and calls for mutual understanding. That council text concerns Muslims; it does not assign Muhammad a biblical identity or prophetic office in Catholic teaching.",
+            "fr": "Muhammad n’est pas nommé dans la Bible. Nostra aetate 3 exprime l’estime catholique envers les musulmans et appelle à la compréhension mutuelle. Ce texte conciliaire concerne les musulmans ; il n’attribue à Muhammad ni identité biblique ni fonction prophétique dans la doctrine catholique."
           },
           "status": "outside-corpus",
           "scope": {
-            "nl": "Buiten de dekking van de christelijke Bijbel",
-            "en": "Outside the coverage of the Christian Bible",
-            "fr": "Hors du périmètre de la Bible chrétienne"
+            "nl": "Rooms-katholiek perspectief · niet genoemd in de Bijbel; conciliaire duiding afzonderlijk",
+            "en": "Roman Catholic perspective · not named in the Bible; council teaching distinguished",
+            "fr": "Perspective catholique romaine · non nommé dans la Bible ; enseignement conciliaire distinct"
           },
-          "refs": [],
-          "sourceIds": []
+          "refs": [
+            {
+              "label": "Nostra aetate §3 · Vatican II",
+              "labelLocales": {
+                "nl": "Nostra aetate §3 · Tweede Vaticaans Concilie",
+                "en": "Nostra aetate §3 · Vatican II",
+                "fr": "Nostra aetate §3 · Vatican II"
+              },
+              "corpus": "magisterium",
+              "document": "Nostra aetate",
+              "paragraph": 3,
+              "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651028_nostra-aetate_en.html"
+            }
+          ],
+          "sourceIds": [
+            "magisterium"
+          ]
         },
         "judaism": {
           "name": {

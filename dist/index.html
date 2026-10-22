@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#344b3e">
-  <meta name="description" content="Read the Bible, Tanakh and Qur’an. Explore separate people indexes and compare roles across Christianity, Judaism and Islam with sources.">
+  <meta name="description" content="Lees de Bijbel, Tenach en Koran. Verken aparte personenindexen en vergelijk rooms-katholieke, Joodse en islamitische perspectieven met bronverwijzingen.">
   <title>BiblePath — Bible & connections</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
@@ -104,17 +104,17 @@
         <aside class="inspector" id="inspector" aria-label="Selected person"></aside>
       </section>
       <section id="people-collection-controls" class="people-collection-tabs" role="group" aria-label="Choose a people collection" hidden>
-        <button data-people-tradition="christianity" aria-pressed="true">Bible · Christianity<small>Indexed Bible collection</small></button>
+        <button data-people-tradition="christianity" aria-pressed="true">Bible · Roman Catholic<small>Indexed Bible collection</small></button>
         <button data-people-tradition="judaism" aria-pressed="false">Torah · Judaism<small>Genesis – Deuteronomy</small></button>
         <button data-people-tradition="islam" aria-pressed="false">Qur’an · Islam<small>114 surahs</small></button>
       </section>
-      <section class="index-view" id="index-view" hidden><div class="index-heading"><div><div class="eyebrow">THE PEOPLE BEHIND THE STORY</div><h2>People index</h2></div><label class="index-search"><svg><use href="#i-search"/></svg><input id="index-search" type="search" placeholder="Search names, stories, or references…" aria-label="Search people index"></label></div><p class="index-intro">Search distinct people, including namesakes, then open a life to explore their family.</p><div class="index-result-count" id="index-result-count" aria-live="polite"></div><div id="index-grid" class="index-grid"></div><div class="index-pagination" id="index-pagination"><button id="index-previous">← Previous</button><span id="index-page"></span><button id="index-next">Next →</button></div><div id="index-empty" class="index-empty" hidden>No matching people. Try a name such as Mary or Moses.</div></section>
+      <section class="index-view" id="index-view" hidden><div class="index-heading"><div><div class="eyebrow">THE PEOPLE BEHIND THE STORY</div><h2>People index</h2></div><label class="index-search"><svg><use href="#i-search"/></svg><input id="index-search" type="search" placeholder="Search names, stories, or references…" aria-label="Search people index"></label></div><p class="index-intro">Search distinct people, including namesakes, then open a life to explore their family.</p><aside class="catholic-context"><strong>Roman Catholic perspective</strong><p>This index covers the 66 shared books. Explore Roman Catholic interpretations, with Catechism references, in Across traditions.</p><details><summary>Text edition and Catholic canon</summary><p>The seven deuterocanonical books and the Greek additions to Esther and Daniel are not yet included. The World English Bible, Statenvertaling and Louis Segond are the available text editions; they are not Catholic editions.</p><a href="https://www.vatican.va/content/catechism/en/part_one/section_one/chapter_two/article_3/iv_the_canon_of_scripture.html" target="_blank" rel="noopener noreferrer"><span>Catholic canon · Catechism §120</span> ↗</a></details></aside><div class="index-result-count" id="index-result-count" aria-live="polite"></div><div id="index-grid" class="index-grid"></div><div class="index-pagination" id="index-pagination"><button id="index-previous">← Previous</button><span id="index-page"></span><button id="index-next">Next →</button></div><div id="index-empty" class="index-empty" hidden>No matching people. Try a name such as Mary or Moses.</div></section>
       <section id="tradition-people-view" translate="no" hidden></section>
       <section id="comparison-view" translate="no" hidden></section>
       <section class="tradition-controls" id="tradition-controls" aria-label="Choose a tradition" hidden>
         <div><span class="library-kicker">A reading path for each tradition</span><h2>Choose a tradition</h2></div>
         <div class="tradition-options" role="group" aria-label="Choose a tradition">
-          <button type="button" data-tradition="christianity" aria-pressed="true"><strong>Christianity</strong><span>Bible</span></button>
+          <button type="button" data-tradition="christianity" aria-pressed="true"><strong>Roman Catholic</strong><span>Bible</span></button>
           <button type="button" data-tradition="judaism" aria-pressed="false"><strong>Judaism</strong><span>Tanakh</span></button>
           <button type="button" data-tradition="islam" aria-pressed="false"><strong>Islam</strong><span>Qur’an</span></button>
         </div>

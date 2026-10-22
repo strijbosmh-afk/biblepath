@@ -29,6 +29,7 @@ function localized(value, label) {
 assert.equal(data.people.length, 24, 'The curated comparison set has 24 distinct figures');
 assert.equal(byKey.size, data.people.length, 'Comparison keys are unique');
 assert.equal(data.meta.complete, false, 'Coverage is explicitly selected, not exhaustive');
+assert.equal(data.meta.christianPerspective, 'roman-catholic');
 localized(data.meta.scope, 'meta.scope');
 localized(data.meta.methodology, 'meta.methodology');
 let references = 0;
@@ -56,8 +57,9 @@ for (const person of data.people) {
       references++;
       const url = new URL(ref.url);
       assert.equal(url.protocol, 'https:');
-      assert.ok(['www.biblegateway.com', 'www.sefaria.org', 'quran.com', 'sunnah.com'].includes(url.hostname));
+      assert.ok(['www.biblegateway.com', 'www.sefaria.org', 'quran.com', 'sunnah.com', 'www.vatican.va'].includes(url.hostname));
       assert.ok(ref.label.length > 2);
+      if (ref.labelLocales) localized(ref.labelLocales, `${label}.reference label`);
       if (ref.corpus === 'bible' || ref.corpus === 'tanakh') {
         const collection = ref.corpus === 'bible' ? bible : tanakh;
         const book = collection.books.find(book => book.id === ref.book);
@@ -76,6 +78,21 @@ for (const person of data.people) {
         assert.equal(url.hostname, 'quran.com');
         assert.equal(url.pathname, `/${ref.surah}/${ref.ayah}`, 'Link to the verified first ayah endpoint; retain the range in the label');
         assert.equal(tradition, 'islam');
+      } else if (ref.corpus === 'catechism') {
+        assert.equal(tradition, 'christianity', 'Catholic doctrine remains in its own panel');
+        assert.equal(url.hostname, 'www.vatican.va');
+        assert.ok(url.pathname.startsWith('/content/catechism/en/'));
+        assert.ok(Number.isInteger(ref.paragraph) && ref.paragraph >= 1 && ref.paragraph <= 2865);
+        assert.ok(Number.isInteger(ref.endParagraph) && ref.endParagraph >= ref.paragraph && ref.endParagraph <= 2865);
+        localized(ref.labelLocales, `${label}.catechism label`);
+        assert.equal(ref.book, undefined, 'Catechism paragraphs must not be encoded as Bible verses');
+      } else if (ref.corpus === 'magisterium') {
+        assert.equal(tradition, 'christianity');
+        assert.equal(person.key, 'muhammad');
+        assert.equal(ref.document, 'Nostra aetate');
+        assert.equal(ref.paragraph, 3);
+        assert.equal(url.href, 'https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651028_nostra-aetate_en.html');
+        assert.equal(ref.book, undefined, 'Council texts must not be encoded as Bible verses');
       } else {
         assert.equal(ref.corpus, 'hadith');
         assert.equal(person.key, 'hagar');
@@ -88,12 +105,23 @@ for (const person of data.people) {
 
 // Prevent theological harmonization and accidental namesake linking.
 const jesus = byKey.get('jesus').traditions;
+assert.match(jesus.christianity.summary.en, /truly God and truly human/);
+assert.match(jesus.christianity.summary.en, /one person/);
+assert.match(jesus.christianity.summary.en, /Eucharist/);
 assert.ok(jesus.christianity.refs.some(r => r.book === 'JHN' && r.chapter === 1));
 assert.ok(jesus.islam.refs.some(r => r.surah === 4 && r.ayah === 171));
 assert.equal(jesus.judaism.status, 'outside-corpus');
 assert.match(jesus.islam.summary.en, /rejects divine sonship/);
 const miriam = byKey.get('miriam').traditions;
 const mary = byKey.get('mary').traditions;
+assert.match(mary.christianity.summary.en, /Mother of God and ever-virgin/);
+assert.match(mary.christianity.summary.en, /Immaculate Conception/);
+assert.match(mary.christianity.summary.en, /her own conception through Christ’s grace/);
+assert.match(mary.christianity.summary.en, /Assumption concerns body and soul/);
+assert.match(mary.christianity.summary.en, /veneration differs from the adoration/);
+for (const paragraph of [491, 495, 499, 966, 971]) {
+  assert.ok(mary.christianity.refs.some(r => r.corpus === 'catechism' && r.paragraph <= paragraph && r.endParagraph >= paragraph), `Mary needs a doctrinal source for §${paragraph}`);
+}
 assert.equal(miriam.judaism.indexId, 'torah:miriam');
 assert.equal(miriam.islam.indexId, 'quran:moses-sister');
 assert.equal(miriam.islam.status, 'not-named');
@@ -115,4 +143,12 @@ for (const key of ['ishmael', 'isaac']) assert.match(byKey.get(key).traditions.i
 assert.equal(byKey.get('muhammad').traditions.christianity.indexId, undefined);
 assert.equal(byKey.get('muhammad').traditions.judaism.indexId, undefined);
 assert.equal(byKey.get('muhammad').traditions.islam.indexId, 'quran:muhammad');
+assert.match(byKey.get('muhammad').traditions.christianity.summary.en, /esteem for Muslims/);
+assert.match(byKey.get('muhammad').traditions.christianity.summary.en, /does not assign Muhammad/);
+for (const person of data.people) {
+  assert.match(person.traditions.christianity.scope.en, /Roman Catholic/);
+  assert.ok(person.traditions.christianity.refs.some(ref => ['catechism','magisterium'].includes(ref.corpus)), `${person.key} needs a Catholic source or context`);
+  for (const tradition of ['judaism','islam']) assert.ok(person.traditions[tradition].refs.every(ref => !['catechism','magisterium'].includes(ref.corpus)));
+}
+assert.match(data.meta.sources.find(source => source.id === 'bible').label, /not a Catholic edition/);
 console.log(`Person comparisons passed: ${data.people.length} figures, 72 localized panels, ${references} validated source references, separate identities and scoped claims.`);

@@ -40,7 +40,7 @@ view.destroy();assert.equal(host.handlers.size,0);
 const comparisonHost=new Root(),links=[];I.language='nl';
 const comparisonView=new PeopleComparisonView(comparisonHost,comparisons,{onPerson:(tradition,id)=>links.push([tradition,id])});
 assert(comparisonView.open('moses'));let detail=comparisonHost.querySelector('.comparison-detail').innerHTML;
-assert.match(detail,/Christendom/);assert.match(detail,/Jodendom/);assert.match(detail,/Islam/);
+assert.match(detail,/Rooms-katholiek/);assert.match(detail,/Jodendom/);assert.match(detail,/Islam/);
 assert.equal((detail.match(/class="comparison-account /g)||[]).length,3);
 comparisonHost.click({collectionTradition:'judaism',collectionPerson:'torah:moses'});assert.deepEqual(links,[['judaism','torah:moses']]);
 comparisonHost.input('comparison-search','Jesus');assert.match(comparisonHost.querySelector('.comparison-figures').innerHTML,/data-figure="jesus"/);
@@ -48,8 +48,21 @@ comparisonHost.input('comparison-search','4:171');
 assert.match(comparisonHost.querySelector('.comparison-figures').innerHTML,/data-figure="jesus"/,'A cited Qur’an passage must find its comparison figure');
 assert.doesNotMatch(comparisonHost.querySelector('.comparison-figures').innerHTML,/data-figure="moses"/,'Reference lookup must not return unrelated figures');
 comparisonHost.click({figure:'jesus'});assert.equal(comparisonView.getState().selected,'jesus');
-I.language='fr';comparisonView.changeLanguage();assert.match(comparisonHost.querySelector('.comparison-detail').innerHTML,/Christianisme/);assert.equal(comparisonView.getState().selected,'jesus');
+I.language='fr';comparisonView.changeLanguage();assert.match(comparisonHost.querySelector('.comparison-detail').innerHTML,/Catholique romain/);assert.equal(comparisonView.getState().selected,'jesus');
 assert.equal(comparisonView.open('missing'),false);
+// Doctrinal sources must be visibly distinguished from scripture and localizable.
+assert(comparisonView.open('mary'));
+for(const [locale,scripture,teaching,catechism] of [['nl','Schriftpassages','Katholieke leer','Catechismus'],['en','Scriptural passages','Catholic teaching','Catechism'],['fr','Passages des Écritures','Enseignement catholique','Catéchisme']]){
+  I.language=locale;comparisonView.changeLanguage();
+  const html=comparisonHost.querySelector('.comparison-detail').innerHTML;
+  const catholic=html.split('class="comparison-account christianity"')[1].split('</article>')[0];
+  assert.ok(catholic.includes(scripture)&&catholic.includes(teaching),'Bible and Catholic teaching need separate source groups');
+  assert.ok(catholic.includes(catechism),'Catechism source labels follow the interface language');
+  assert.match(catholic,/href="https:\/\/www\.vatican\.va\//,'Doctrinal claims link to official primary sources');
+  assert.equal(comparisonView.getState().selected,'mary');
+  comparisonHost.input('comparison-search',catechism);
+  assert.match(comparisonHost.querySelector('.comparison-figures').innerHTML,/data-figure="mary"/,'Localized source names are searchable');
+}
 comparisonHost.input('comparison-search','no-such-person-999');assert.match(comparisonHost.querySelector('.comparison-figures').innerHTML,/Aucune personne/);
 comparisonView.destroy();assert.equal(comparisonHost.handlers.size,0);
 console.log('People views passed: collection isolation, search, Arabic normalization, profiles, namespaced navigation, pagination, localization, comparison selection and listener cleanup.');
