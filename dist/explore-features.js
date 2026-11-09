@@ -17,6 +17,25 @@
  const date=y=>y<0?`${Math.abs(y)} v.Chr.`:`${y} n.Chr.`;
  const safeUrl=s=>{try{const u=new URL(s);return u.protocol==='https:'&&!u.username&&!u.password?u.href:''}catch{return ''}};
  const fold=s=>String(s??'').normalize('NFD').replace(/\p{M}/gu,'').toLowerCase();
+ const TimelineShare={
+  parse(hash){
+   if(typeof hash!=='string'||!hash.startsWith('#vergelijking='))return null;
+   const invalid={invalid:true};if(hash.length>2000)return invalid;
+   const p=new URLSearchParams(hash.slice(1)),keys=['vergelijking','van','tot','rel','type','soort','lijnen','verband','moment','zoek'];
+   if(p.get('vergelijking')!=='1'||keys.some(k=>p.getAll(k).length>1))return invalid;
+   const numeric=v=>v!==null&&/^-?\d+(?:\.\d{1,6})?$/.test(v)&&Math.abs(Number(v))<=100000;
+   if(!numeric(p.get('van'))||!numeric(p.get('tot')))return invalid;
+   const start=Number(p.get('van')),end=Number(p.get('tot')),religions=p.has('rel')?p.get('rel').split(',').filter(Boolean):Object.keys(names),linkType=p.get('type')||'all',kind=p.get('soort')||'all',connection=p.get('verband')||null,selected=p.get('moment')||null,filter=p.get('zoek')||'';
+   if(end-start<.001||religions.some(r=>!Object.hasOwn(names,r))||new Set(religions).size!==religions.length||!['all','influence','shared-context'].includes(linkType)||!['all','history','tradition','text'].includes(kind)||!['0','1'].includes(p.get('lijnen')||'1')||filter.length>160||connection&&!/^[a-z0-9-]{1,80}$/.test(connection)||selected&&!/^[a-z][a-z0-9:-]{0,79}$/.test(selected))return invalid;
+   return {start,end,linkReligions:religions,linkType,kind,connection,selected,filter,showConnections:p.get('lijnen')!=='0'};
+  },
+  encode(state,base){
+   const url=new URL(base);if(!['http:','https:'].includes(url.protocol))throw Error('Geen webadres');
+   const p=new URLSearchParams({vergelijking:'1',van:String(Number(state.start.toFixed(6))),tot:String(Number(state.end.toFixed(6))),rel:Object.keys(names).filter(r=>state.linkReligions.includes(r)).join(','),type:state.linkType||'all',soort:state.kind||'all',lijnen:state.showConnections===false?'0':'1'});
+   if(state.connection)p.set('verband',state.connection);if(state.selected)p.set('moment',state.selected);if(state.filter)p.set('zoek',state.filter.slice(0,160));
+   url.hash=p.toString();url.search='';url.username='';url.password='';return url.href;
+  }
+ };
  const cache=new Map();
  function load(file){
   if(!cache.has(file))cache.set(file,fetch(file).then(r=>{if(!r.ok)throw Error(file);return r.json()}).catch(e=>{cache.delete(file);throw e}));
@@ -87,6 +106,7 @@
    if(!this.states.has(key))this.states.set(key,{zoom:1,scroll:0,selected:null,filter:'',kind:'all',pillar:'all',topic:'all',challenge:0,seen:[],linkType:'all',linkReligions:Object.keys(names)});
    return this.states.get(key);
   }
+  setSharedComparison(shared){this.timelineComparison=true;this.sharedComparison=shared;this.loaded=false;}
   async open(view,tradition){
    const language=I()?.language||'nl';
    const same=this.view===view&&this.tradition===tradition&&this.language===language;
@@ -129,9 +149,22 @@
    const comparison=!!this.timelineComparison;
    const entries=comparison?Object.entries(this.data.traditions).flatMap(([tradition,events])=>events.map(e=>({...e,tradition}))):this.data.traditions[this.tradition]||[];
    this.model=new TimelineModel(entries);
+   let sharedPeriod=null,sharedNotice='';
+   if(comparison&&this.sharedComparison){
+    const shared=this.sharedComparison;this.sharedComparison=null;
+    this.state.sharedRange=null;
+    if(shared.invalid){Object.assign(this.state,{zoom:1,scroll:0,width:null,filter:'',kind:'all',linkType:'all',linkReligions:Object.keys(names),connection:null,selected:null,showConnections:true});sharedNotice='Deze deellink is ongeldig of gebruikt een onbekende versie. Je ziet de volledige vergelijking.';}
+    else {
+     const s=this.state;Object.assign(s,{linkType:shared.linkType,linkReligions:[...shared.linkReligions],kind:shared.kind,showConnections:shared.showConnections,filter:shared.filter,selected:entries.some(e=>e.id===shared.selected)?shared.selected:null,connection:shared.connection});
+     const min=this.model.min,max=this.model.max,span=Math.min(max-min,Math.max((max-min)/1000,shared.end-shared.start)),start=Math.max(min,Math.min(max-span,shared.start));
+     sharedPeriod={start,end:start+span};s.zoom=(max-min)/span;s.scroll=0;s.width=null;sharedNotice='Gedeelde vergelijking geopend: het tijdvak en de filters zijn overgenomen.';
+     if(s.connection&&!this.filteredConnections().some(c=>c.link.id===s.connection)){s.connection=null;sharedNotice='Het gedeelde verband is niet beschikbaar bij deze filters. Het tijdvak en de filters zijn wel geopend.';}
+    }
+   }
    this.state.selected||=entries.find(e=>e.start>=0)?.id||entries[0]?.id;
    this.el.innerHTML=`${this.note()}
-    <div class="timeline-view-switch" role="group" aria-label="Tijdslijnweergave"><button class="explore-btn" data-timeline-mode="single" aria-pressed="${!comparison}">Eén religie</button><button class="explore-btn" data-timeline-mode="comparison" aria-pressed="${comparison}">Vergelijk de drie religies</button></div>
+    <div class="timeline-view-switch" role="group" aria-label="Tijdslijnweergave"><button class="explore-btn" data-timeline-mode="single" aria-pressed="${!comparison}">Eén religie</button><button class="explore-btn" data-timeline-mode="comparison" aria-pressed="${comparison}">Vergelijk de drie religies</button>${comparison?'<button class="explore-btn" data-action="share-timeline">Vergelijking delen →</button>':''}</div>
+    ${comparison?`<section class="explore-panel timeline-share" id="timeline-share" aria-label="Vergelijking delen" hidden><label>Deellink<input id="timeline-share-url" type="text" readonly></label><button class="explore-btn" data-action="copy-timeline-link">Link kopiëren</button><p>Deze link bewaart het zichtbare tijdvak, de lijnfilters en het geselecteerde verband. Latere wijzigingen veranderen deze link niet; maak dan een nieuwe.</p><p id="timeline-share-status" role="status"></p></section><p class="explore-note" role="status">${esc(sharedNotice)}</p>`:''}
     ${comparison?'<p class="explore-note">Drie parallelle banen, één tijdschaal in jaren. Zoomen en schuiven bewegen alle religies tegelijk. Gelijke horizontale posities duiden hetzelfde tijdvak aan; gelijktijdigheid bewijst geen onderlinge invloed.</p><button class="explore-btn timeline-connections-jump" data-action="show-connections">Verken contact en onderlinge invloeden →</button>':''}
     <div class="explore-panel ${comparison?'timeline-comparison':''}">
      <div class="explore-toolbar">
@@ -159,7 +192,9 @@
    this.timelineMarkup=null;this.connectionMarkup=null;this.connectionListMarkup=null;
    scroll.scrollLeft=this.state.scroll;this.bindTimelineGestures(scroll);
    this.paintTimeline();scroll.scrollLeft=this.state.scroll;this.renderTimelineDetail();
+   if(sharedPeriod){scroll.scrollLeft=(sharedPeriod.start-this.model.min)/(this.model.max-this.model.min)*(scroll.clientWidth||800)*this.state.zoom;this.state.scroll=scroll.scrollLeft;this.paintTimeline();this.state.sharedRange={...sharedPeriod,zoom:this.state.zoom,scroll:scroll.scrollLeft,width:scroll.clientWidth||800};}
    if(comparison){this.el.querySelector('#timeline-link-type').value=this.state.linkType||'all';this.renderTimelineConnection();this.renderConnectionCatalog();}
+   if(sharedPeriod)scroll.scrollIntoView?.({block:'center',behavior:'auto'});
    this.resizeObserver?.observe(this.el);
    const undated=comparison?Object.entries(this.data.undated||{}).flatMap(([tradition,events])=>events.map(e=>({...e,tradition}))):this.data.undated?.[this.tradition]||[];
    this.el.querySelector('#timeline-undated').innerHTML=undated.map(e=>`<article>${e.tradition?`<p class="explore-tag">${esc(names[e.tradition])}</p>`:''}<h3>${esc(e.title)}</h3><p>${esc(e.what||e.context||e.summary)}</p>${this.stakeholders(e)}<h3>Betekenis voor geloof en praktijk</h3><p>${esc(e.faithImpact||e.context)}</p>${e.nuance?`<p class="explore-note">${esc(e.nuance)}</p>`:''}${this.sources(e.sources)}${this.passageButton(e.passage)}</article>`).join('')||'<p>Gedateerde gebeurtenissen staan hierboven. De afwezigheid van een datum zegt niets over de religieuze betekenis van een verhaal.</p>';
@@ -316,6 +351,21 @@
    this.focusTimelineEvents(entry.events,{padding:1,minSpan:4});this.renderTimelineConnection();
    const scroll=this.el.querySelector('.atlas-timeline-scroll');scroll.scrollIntoView({block:'center',behavior:'auto'});scroll.focus({preventScroll:true});
   }
+  sharedTimelineState(){
+   const scroll=this.el.querySelector('.atlas-timeline-scroll'),s=this.state,width=scroll.clientWidth||800,scale=width*s.zoom/(this.model.max-this.model.min),exact=s.sharedRange&&s.sharedRange.zoom===s.zoom&&s.sharedRange.width===width&&s.sharedRange.scroll===scroll.scrollLeft?s.sharedRange:null,start=exact?exact.start:this.model.min+scroll.scrollLeft/scale;
+   return {start,end:exact?exact.end:Math.min(this.model.max,start+(this.model.max-this.model.min)/s.zoom),linkType:s.linkType||'all',linkReligions:[...(s.linkReligions||Object.keys(names))],kind:s.kind,showConnections:s.showConnections!==false,connection:s.connection||null,selected:s.selected||null,filter:s.filter};
+  }
+  shareTimeline(){
+   const panel=this.el.querySelector('#timeline-share'),input=this.el.querySelector('#timeline-share-url');
+   input.value=TimelineShare.encode(this.sharedTimelineState(),root.location.href);panel.hidden=false;
+   this.el.querySelector('#timeline-share-status').textContent='De link is klaar. Kies Link kopiëren of kopieer de geselecteerde link.';
+   panel.scrollIntoView({block:'start',behavior:'auto'});input.focus({preventScroll:true});input.select();
+  }
+  async copyTimelineLink(){
+   const input=this.el.querySelector('#timeline-share-url'),status=this.el.querySelector('#timeline-share-status'),value=input.value;
+   try{if(!root.navigator?.clipboard?.writeText)throw Error('clipboard');await root.navigator.clipboard.writeText(value);if(this.el.contains(status))status.textContent='Link gekopieerd. Je kunt deze vergelijking nu delen.';}
+   catch{if(this.el.contains(status)){input.focus({preventScroll:true});input.select();status.textContent='Automatisch kopiëren lukt hier niet. De link is geselecteerd; kopieer hem handmatig.';}}
+  }
   zoomTimeline(factor,anchor){
    const scroll=this.el.querySelector('.atlas-timeline-scroll');if(!scroll)return;
    const s=this.state,w=scroll.clientWidth||800,a=anchor??w/2,pos=(scroll.scrollLeft+a)/s.zoom;
@@ -463,6 +513,8 @@
    }
    if(d.pillar){this.state.pillar=d.pillar;this.state.topic='all';this.renderChallenge();this.el.querySelector(`[data-pillar="${d.pillar}"]`)?.focus();return}
    switch(d.action){
+    case'share-timeline':this.shareTimeline();break;
+    case'copy-timeline-link':this.copyTimelineLink();break;
     case'reset-link-filters':{this.state.linkType='all';this.state.linkReligions=Object.keys(names);this.el.querySelector('#timeline-link-type').value='all';this.el.querySelectorAll('[data-link-religion]').forEach(e=>{e.checked=true});this.applyConnectionFilters();break;}
     case'close-connection':{this.state.connection=null;this.renderTimelineConnection();this.paintTimeline();const scroll=this.el.querySelector('.atlas-timeline-scroll');scroll.scrollIntoView({block:'center',behavior:'auto'});scroll.focus({preventScroll:true});break;}
     case'show-connections':{const panel=this.el.querySelector('.timeline-connections');panel.open=true;panel.scrollIntoView({block:'start',behavior:'auto'});panel.querySelector('summary').focus({preventScroll:true});break;}
@@ -525,6 +577,6 @@
    if(this.raf)cancelAnimationFrame(this.raf);
   }
  }
- const api={AtlasExplore,TimelineModel,date};Object.assign(root,api);
+ const api={AtlasExplore,TimelineModel,TimelineShare,date};Object.assign(root,api);
  if(typeof module!=='undefined'&&module.exports)module.exports=api;
 })(typeof window!=='undefined'?window:globalThis);

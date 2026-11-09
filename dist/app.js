@@ -35,6 +35,7 @@
   let festivalView=null,festivalRequest=0,festivalPassageRequest=0,returnToFestivals=null;
   const festivalCache=new Map();
   let exploreView=null,explorePassageRequest=0,returnToExplore=null;
+  let pendingTimelineShare=window.TimelineShare?.parse(window.location?.hash||'');
   let traditionAtlas=null,atlasRequest=0,atlasPassageRequest=0,returnToAtlas=null;
   const atlasCache=new Map();
   let placesMap=null,geographyLoading=null,geographyRequest=0,geographyFilter=initialTradition,geographyFilterPending=true,returnToGeography=null,pendingAtlasPlace=null;
@@ -281,6 +282,7 @@
   function loadJson(file) {return fetch(file).then(response=>{if(!response.ok)throw new Error(`Could not load ${file}`);return response.json();});}
   function ensureExplore(){
     if(!exploreView)exploreView=new window.AtlasExplore($('#explore-features-view'),{onPassage:openExplorePassage});
+    if(state.view==='timeline'&&pendingTimelineShare){exploreView.setSharedComparison(pendingTimelineShare);pendingTimelineShare=null;}
     return exploreView.open(state.view,state.tradition);
   }
   async function openExplorePassage(passage,origin){
@@ -802,6 +804,7 @@
     if(event.key==='Escape'){hideTooltip();closeSidebar();if($('#map-view').classList.contains('expanded')){$('#map-view').classList.remove('expanded');$('#map-fullscreen').setAttribute('aria-label','Expand map');requestAnimationFrame(()=>graph.fit());}}
   });
   window.addEventListener('resize',()=>{hideTooltip();syncSidebarAccess();});
+  window.addEventListener('hashchange',()=>{const shared=window.TimelineShare?.parse(window.location?.hash||'');if(shared){pendingTimelineShare=shared;returnToExplore=null;setView('timeline');}});
   function updateCounts() {
   const indexed=state.view==='index'&&state.peopleTradition==='christianity'&&catholicPeople?catholicPeople.entries(I.language):people;
   $('#count-all').textContent=indexed.length.toLocaleString(I.language);$('#count-ot').textContent=indexed.filter(p=>discovery.allows(p,'OT')).length.toLocaleString(I.language);$('#count-nt').textContent=indexed.filter(p=>discovery.allows(p,'NT')).length.toLocaleString(I.language);
@@ -831,7 +834,7 @@
   }
   $('#language-select').value=I.language;
   $('#language-select').addEventListener('change',event=>changeLanguage(event.target.value));
-  useReligion(state.tradition);setTestamentState('all');syncSidebarAccess();renderPathPickers();renderGraph();setView('reader');
+  useReligion(state.tradition);setTestamentState('all');syncSidebarAccess();renderPathPickers();renderGraph();setView(pendingTimelineShare?'timeline':'reader');
   I.setLanguage(I.language);I.observe();
   document.title=I.t('ReligieAtlas — Religions in context');
 })();

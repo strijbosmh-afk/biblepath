@@ -31,7 +31,7 @@ const groups=new Map([
 ]);
 context.document.querySelector=control;context.document.querySelectorAll=selector=>groups.get(selector)||[];
 context.document.addEventListener=()=>{};context.document.documentElement={lang:'nl'};
-context.window.matchMedia=()=>({matches:false});context.window.addEventListener=()=>{};
+const windowHandlers=new Map();context.window.matchMedia=()=>({matches:false});context.window.addEventListener=(name,callback)=>windowHandlers.set(name,callback);
 const I=context.window.BibleI18n={language:'nl',reference:text=>text,t:(text,params={})=>text.replace(/\{(\w+)\}/g,(_,key)=>params[key]??`{${key}}`),localizePeople(){},localizePlaces:data=>data,setLanguage(next){this.language=next;},translateDOM(){},observe(){}};
 context.structuredClone=structuredClone;context.URL=URL;
 context.requestAnimationFrame=callback=>callback();
@@ -39,6 +39,11 @@ const storage=new Map();context.localStorage={getItem:key=>storage.get(key),setI
 if(process.argv.includes('--pending-passage-race'))storage.set('biblepath-bible-edition','locale');
 if(process.argv.includes('--saved-catholic'))storage.set('biblepath-bible-edition','catholic');
 if(process.argv.includes('--saved-religion')){storage.set('biblepath-tradition','islam');storage.set('biblepath-people-tradition','judaism');}
+if(process.argv.includes('--shared-timeline')){
+ context.window.TimelineShare=require('../dist/explore-features.js').TimelineShare;
+ context.window.location={hash:'#vergelijking=1&van=1452&tot=1552&rel=judaism,islam&type=shared-context&soort=all&lijnen=1&verband=iberia-1492'};
+ storage.set('biblepath-tradition','islam');
+}
 const timers=new Map();let nextTimer=0;
 context.setTimeout=callback=>{timers.set(++nextTimer,callback);return nextTimer;};context.clearTimeout=id=>timers.delete(id);
 const requests=[];
@@ -84,6 +89,7 @@ let festivalView;
 let exploration;
 context.window.AtlasExplore=class {
   constructor(el,callbacks){this.el=el;this.callbacks=callbacks;this.opens=[];exploration=this;}
+  setSharedComparison(shared){this.shared=shared;}
   open(view,tradition){this.view=view;this.tradition=tradition;this.opens.push({view,tradition});return Promise.resolve(this);}
   leave(){this.left=true;}
 };
@@ -383,6 +389,7 @@ async function main(){
   assert.equal(bibleReaders.at(-1).state.personPassage.originalReference.translation,abrahamRef.translation,'Source translation metadata reaches the resolver');
   assert.equal(requests.filter(request=>request.file==='person-passage-map.json').length,1,'Both person collections share a successful map download');
   for(const scenario of ['--religion-navigation','--saved-religion','--festivals','--tradition-atlas','--geography','--exploration']){const check=spawnSync(process.execPath,[__filename,scenario],{encoding:'utf8'});assert.equal(check.status,0,check.stderr||check.stdout);}
+  const sharedCheck=spawnSync(process.execPath,[__filename,'--exploration','--shared-timeline'],{encoding:'utf8'});assert.equal(sharedCheck.status,0,sharedCheck.stderr||sharedCheck.stdout);
   const pendingProfileCheck=spawnSync(process.execPath,[__filename,'--pending-profile-language'],{encoding:'utf8'});
   assert.equal(pendingProfileCheck.status,0,pendingProfileCheck.stderr||pendingProfileCheck.stdout);
   const dutchRetryCheck=spawnSync(process.execPath,[__filename,'--dutch-edition-retry'],{encoding:'utf8'});
@@ -542,6 +549,14 @@ async function geographyRegression(){
 }
 
 async function explorationRegression(){
+  if(process.argv.includes('--shared-timeline')){
+   assert.equal(snapshot().view,'timeline');assert.equal(snapshot().tradition,'islam');assert.equal(exploration.shared.connection,'iberia-1492');assert.equal(exploration.shared.start,1452);assert(!requests.some(r=>r.file==='catholic-bible-data-nl.json'),'A shared comparison must not initialize the Bible reader');
+   context.window.location.hash='#vergelijking=1&van=-600&tot=-500&rel=christianity,judaism&type=influence';windowHandlers.get('hashchange')();
+   assert.equal(exploration.shared.start,-600);assert.deepEqual(exploration.shared.linkReligions,['christianity','judaism']);
+   context.window.location.hash='#vergelijking=wrong';windowHandlers.get('hashchange')();assert(exploration.shared.invalid);
+   selectView('challenge','judaism');const count=exploration.opens.length;context.window.location.hash='#andere-sectie';windowHandlers.get('hashchange')();assert.equal(snapshot().view,'challenge');assert.equal(exploration.opens.length,count);
+   console.log('Shared timeline app routing passed: direct startup, saved religion independence, no reader download, same-tab hash changes, malformed links and unrelated fragment isolation.');return;
+  }
   initialCatholic();await settle();
   selectView('timeline','islam');assert.equal(snapshot().view,'timeline');assert.equal(exploration.tradition,'islam');assert.equal(control('#explore-features-view').hidden,false);assert.equal(control('#reader-view').hidden,true);
   selectReligion('judaism');assert.equal(snapshot().view,'timeline');assert.equal(exploration.tradition,'judaism');
