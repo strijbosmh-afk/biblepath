@@ -1,0 +1,787 @@
+{
+  "meta": {
+    "tradition": "islam",
+    "reviewedAt": "2026-11-09",
+    "scope": "Islam. Redactionele informatie voor hoger onderwijs; geen gebedshandleiding, studieopdracht of uitspraak namens alle gelovigen. Heilige teksten, religieuze uitleg, praktijkbronnen en historische documenten worden onderscheiden.",
+    "sections": {
+      "prayer": {
+        "intro": "Salat, du’a en dhikr laten verschillende vormen van bidden en gedenken zien, met hun teksten, ritmes en uitlegtradities.",
+        "note": "De Koran, soennitische hadith en specifieke religieuze adviezen worden afzonderlijk benoemd. Een sjiitische bron maakt verschil in gebedspraktijk zichtbaar."
+      },
+      "dignity": {
+        "intro": "Geven, respect voor ouderen en ontvangst van mensen op de vlucht. Verken Koranpassages en concrete religieuze of humanitaire uitleg.",
+        "note": "Zakat en sadaqa hebben een eigen begrippenkader. Een organisatie of fatwa spreekt niet namens alle moslims. Sant’Egidio’s drie P’s worden niet als islamitisch raamwerk opgelegd."
+      },
+      "peace": {
+        "intro": "Herstel, rechtvaardigheid en interreligieuze samenwerking. Koranteksten staan naast twee moderne verklaringen, met auteurs en historische context.",
+        "note": "Een gezamenlijke verklaring maakt samenwerking zichtbaar; zij garandeert geen maatschappelijke uitvoering en vervangt geen verschillen tussen islamitische richtingen."
+      }
+    }
+  },
+  "entries": [
+    {
+      "id": "islam:life:salat",
+      "tradition": "islam",
+      "section": "prayer",
+      "order": 1,
+      "title": "Salat: gebed door de dag",
+      "summary": "De verplichte gebeden geven de dag een religieus ritme, met aandacht voor tijd, lichaam en recitatie.",
+      "tags": [
+        "Ritme",
+        "Gemeenschap"
+      ],
+      "blocks": [
+        {
+          "title": "Vastgestelde tijden",
+          "text": "Koran 4:103 spreekt over het gebed op vastgestelde tijden. De passage staat in een context van onveiligheid en herinnert ook aan het gedenken van God. De tekst is een aanknopingspunt voor het dagritme, geen volledige handleiding.",
+          "sourceIds": [
+            "text"
+          ]
+        },
+        {
+          "title": "Vijf gebeden en overlevering",
+          "text": "Een overlevering in Sahih al-Bukhari 46 noemt vijf dagelijkse gebeden. Hadith en rechtsgeleerde uitleg werken details uit die niet als volledig ritueel in één Korantekst staan. Deze hadithverzameling heeft een bijzondere plaats binnen soennitische tradities.",
+          "sourceIds": [
+            "hadith"
+          ]
+        },
+        {
+          "title": "Verschil in uitvoering",
+          "text": "De ja’faritische sjiitische rechtstraditie staat het combineren van bepaalde gebeden toe. Dat betekent niet dat het aantal gebeden wordt verminderd. De gelinkte sjiitische uitleg laat zien waarom een eenvoudig rooster van vijf gescheiden bijeenkomsten niet alle praktijken beschrijft.",
+          "sourceIds": [
+            "shia"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "De dag herkennen",
+        "items": [
+          "De vijf gebeden heten fajr, zuhr, asr, maghrib en isha.",
+          "Tijden volgen de dag- en nachtcyclus; plaats en seizoen beïnvloeden de kloktijden.",
+          "Rechtstradities verschillen in voorwaarden en in het combineren van sommige gebeden."
+        ],
+        "sourceIds": [
+          "hadith",
+          "shia"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "Koran 4:103",
+          "url": "https://quran.com/4/103-103",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "verse": 103,
+            "endVerse": 103,
+            "surah": 4
+          }
+        },
+        {
+          "id": "hadith",
+          "kind": "tradition",
+          "label": "Sahih al-Bukhari 46",
+          "url": "https://sunnah.com/bukhari:46",
+          "context": "Soennitische hadith over de vijf dagelijkse gebeden; tekst en Engelse vertaling."
+        },
+        {
+          "id": "shia",
+          "kind": "tradition",
+          "label": "Al-Islam.org · Why do the Shi’ah combine prayers?",
+          "url": "https://al-islam.org/articles/laws-practices-why-do-shiah-combine-prayers",
+          "context": "Uitleg vanuit een ja’faritisch sjiitisch perspectief; geen beschrijving namens alle moslims."
+        }
+      ]
+    },
+    {
+      "id": "islam:life:dua",
+      "tradition": "islam",
+      "section": "prayer",
+      "order": 2,
+      "title": "Du’a: een persoonlijke aanroeping",
+      "summary": "Een persoonlijke vraag of dankbetuiging staat naast het vaste rituele gebed.",
+      "tags": [
+        "Aanroeping",
+        "Dagelijks leven"
+      ],
+      "blocks": [
+        {
+          "title": "Nabijheid en antwoord",
+          "text": "Koran 2:186 spreekt over Gods nabijheid en het aanroepen van God. De aya staat tussen passages over vasten. De tekst wordt in het dossier in haar context getoond, zonder een gegarandeerde uitkomst van een gebed te beloven.",
+          "sourceIds": [
+            "text"
+          ]
+        },
+        {
+          "title": "Een voorbeeld uit de Koran",
+          "text": "Koran 20:25–28 vertelt hoe Musa vraagt om ruimte in zijn borst, verlichting van zijn taak en het losmaken van zijn tong. Dat is een verhalend voorbeeld van aanroepen bij een moeilijke opdracht.",
+          "sourceIds": [
+            "musa"
+          ]
+        },
+        {
+          "title": "Naast de salat",
+          "text": "De term du’a helpt persoonlijke aanroeping onderscheiden van de vaste vorm van de salat. De hier gekozen Koranteksten laten nabijheid en een concrete bede zien; zij beschrijven niet alle gebedsformules of gebruiken van moslimgemeenschappen.",
+          "sourceIds": [
+            "text",
+            "musa"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "Vormen in de tekst",
+        "items": [
+          "Aanroepen: een mens richt zich met een concrete behoefte tot God.",
+          "Vertrouwen: de tekst over nabijheid plaatst die behoefte in een geloofsrelatie.",
+          "Context: een verhaal over Musa en een passage bij het vasten geven verschillende literaire situaties."
+        ],
+        "sourceIds": [
+          "text",
+          "musa"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "Koran 2:186",
+          "url": "https://quran.com/2/186-186",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "verse": 186,
+            "endVerse": 186,
+            "surah": 2
+          }
+        },
+        {
+          "id": "musa",
+          "kind": "scripture",
+          "label": "Koran 20:25–28",
+          "url": "https://quran.com/20/25-28",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "verse": 25,
+            "endVerse": 28,
+            "surah": 20
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:life:dhikr",
+      "tradition": "islam",
+      "section": "prayer",
+      "order": 3,
+      "title": "Dhikr: God gedenken",
+      "summary": "Herinnering aan God krijgt vorm in woorden, aandacht en uiteenlopende persoonlijke of gezamenlijke praktijken.",
+      "tags": [
+        "Gedenken",
+        "Gemeenschap"
+      ],
+      "blocks": [
+        {
+          "title": "Een terugkerende herinnering",
+          "text": "Koran 33:41–42 roept gelovigen op God veel te gedenken en Hem in de ochtend en avond te verheerlijken. De tekst verbindt herhaling met gerichtheid op God. Hij geeft geen uitputtende beschrijving van latere gebedskringen.",
+          "sourceIds": [
+            "text"
+          ]
+        },
+        {
+          "title": "Een religieuze uitleg",
+          "text": "De Egyptische Dar al-Ifta verdedigt in een fatwa de toelaatbaarheid van gezamenlijke dhikr en verwijst daarbij naar overleveringen. De uitleg laat zien hoe een bepaalde soennitische instelling groepspraktijken religieus onderbouwt.",
+          "sourceIds": [
+            "fatwa"
+          ]
+        },
+        {
+          "title": "Bron en reikwijdte",
+          "text": "Een fatwa is een religieus advies vanuit een specifieke uitlegtraditie. De beschreven positie mag daarom niet automatisch als consensus van alle moslims gelden. Persoonlijk gedenken en gezamenlijk bijeenkomen blijven verschillende vormen van praktijk.",
+          "sourceIds": [
+            "fatwa"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "Van woord naar ritme",
+        "items": [
+          "Herhaling maakt het gedenken tot een terugkerende handeling.",
+          "Ochtend en avond zijn in de gekozen Korantekst herkenbare momenten.",
+          "Een gezamenlijke vorm vraagt aanvullende uitleg uit de traditie; de fatwa biedt daarvan één voorbeeld."
+        ],
+        "sourceIds": [
+          "text",
+          "fatwa"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "Koran 33:41–42",
+          "url": "https://quran.com/33/41-42",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "verse": 41,
+            "endVerse": 42,
+            "surah": 33
+          }
+        },
+        {
+          "id": "fatwa",
+          "kind": "tradition",
+          "label": "Dar al-Ifta · What is the ruling on circles of dhikr?",
+          "url": "https://www.dar-alifta.org/en/fatwa/details/7784/what-is-the-ruling-on-circles-of-dhikr",
+          "context": "Egyptisch soennitisch religieus advies ter ondersteuning van gezamenlijke dhikr; geen uitspraak namens alle richtingen."
+        }
+      ]
+    },
+    {
+      "id": "islam:life:zakat",
+      "tradition": "islam",
+      "section": "dignity",
+      "order": 1,
+      "title": "Zakat en sadaqa: delen met waardigheid",
+      "summary": "Verplichte en vrijwillige vormen van geven hebben een eigen plaats in islamitische teksten en uitleg.",
+      "tags": [
+        "Armoede",
+        "Waardigheid"
+      ],
+      "blocks": [
+        {
+          "title": "Ontvangers worden genoemd",
+          "text": "Koran 9:60 noemt categorieën voor de verdeling van liefdadigheidsmiddelen. De aya is een belangrijk tekstueel vertrekpunt voor zakat. De toepassing wordt verder uitgewerkt in rechtstradities en in de werkwijze van concrete organisaties.",
+          "sourceIds": [
+            "text"
+          ]
+        },
+        {
+          "title": "Verplichting en vrijwilligheid",
+          "text": "Dar al-Ifta onderscheidt zakat als verplichte vorm van geven onder voorwaarden van sadaqa in de betekenis van vrijwillige liefdadigheid. In de Koran kunnen verwante termen afhankelijk van hun context worden gebruikt.",
+          "sourceIds": [
+            "giving"
+          ]
+        },
+        {
+          "title": "De manier van geven",
+          "text": "Koran 2:262–264 waarschuwt tegen het tenietdoen van een gift door verwijten of kwetsend gedrag. Daardoor komt ook de verhouding tussen gever en ontvanger in beeld. Financiële hulp en menselijke waardigheid kunnen niet los van elkaar worden besproken.",
+          "sourceIds": [
+            "dignity"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "Drie onderscheiden aspecten",
+        "items": [
+          "Verplichting en intentie: zakat en vrijwillige sadaqa hebben verschillende uitgangspunten.",
+          "Verdeling: de aangehaalde tekst en uitleg benoemen ontvangers en voorwaarden.",
+          "Waardigheid: de manier van geven mag de ontvanger niet vernederen."
+        ],
+        "sourceIds": [
+          "text",
+          "giving",
+          "dignity"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "Koran 9:60",
+          "url": "https://quran.com/9/60-60",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "verse": 60,
+            "endVerse": 60,
+            "surah": 9
+          }
+        },
+        {
+          "id": "giving",
+          "kind": "tradition",
+          "label": "Dar al-Ifta · Difference between sadaqah and zakat",
+          "url": "https://www.dar-alifta.org/en/fatwa/details/7741/what-is-the-difference-between-sadaqah-and-zakat",
+          "context": "Soennitische uitleg van verplicht en vrijwillig geven; voorwaarden verschillen per vraag en rechtsgeleerde traditie."
+        },
+        {
+          "id": "dignity",
+          "kind": "scripture",
+          "label": "Koran 2:262–264",
+          "url": "https://quran.com/2/262-264",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "verse": 262,
+            "endVerse": 264,
+            "surah": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:life:parents",
+      "tradition": "islam",
+      "section": "dignity",
+      "order": 2,
+      "title": "Ouders en ouderdom: respect in het gewone leven",
+      "summary": "De Koran verbindt zorg voor ouders met taal, herinnering en het erkennen van afhankelijkheid.",
+      "tags": [
+        "Ouderen",
+        "Nabijheid"
+      ],
+      "blocks": [
+        {
+          "title": "Spreken zonder vernedering",
+          "text": "Koran 17:23–24 noemt ouders die op hoge leeftijd bij iemand zijn. De passage verbindt eerbied met hoe iemand spreekt, met nederigheid en met een bede om barmhartigheid. Ouderdom wordt zo in het dagelijkse samenleven geplaatst.",
+          "sourceIds": [
+            "text"
+          ]
+        },
+        {
+          "title": "Herinnering aan ontvangen zorg",
+          "text": "Koran 31:14 roept op tot dankbaarheid en herinnert aan de inspanning van de moeder. Die herinnering geeft een religieus kader aan zorgrelaties tussen generaties. Het is geen beschrijving van een modern zorgstelsel.",
+          "sourceIds": [
+            "gratitude"
+          ]
+        },
+        {
+          "title": "Tekst en concrete situatie",
+          "text": "De passages benoemen een religieuze verantwoordelijkheid. Hoe families die verantwoordelijkheid organiseren hangt samen met mogelijkheden, relaties en maatschappelijke voorzieningen. De tekstuele opdracht en de feitelijke praktijk zijn afzonderlijke onderwerpen van onderzoek.",
+          "sourceIds": [
+            "text",
+            "gratitude"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "Wat in beeld komt",
+        "items": [
+          "Taal: respect wordt verbonden met de manier waarop ouders worden aangesproken.",
+          "Herinnering: ontvangen zorg wordt betrokken op de houding tegenover een oudere generatie.",
+          "Samenleven: religieuze verantwoordelijkheid krijgt in verschillende families een verschillende praktische vorm."
+        ],
+        "sourceIds": [
+          "text",
+          "gratitude"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "Koran 17:23–24",
+          "url": "https://quran.com/17/23-24",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "verse": 23,
+            "endVerse": 24,
+            "surah": 17
+          }
+        },
+        {
+          "id": "gratitude",
+          "kind": "scripture",
+          "label": "Koran 31:14–15",
+          "url": "https://quran.com/31/14-15",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "verse": 14,
+            "endVerse": 15,
+            "surah": 31
+          }
+        }
+      ]
+    },
+    {
+      "id": "islam:life:refuge",
+      "tradition": "islam",
+      "section": "dignity",
+      "order": 3,
+      "title": "Ontvangst en bescherming van mensen op de vlucht",
+      "summary": "Koranteksten en een hedendaagse humanitaire organisatie geven verschillende perspectieven op bescherming en gastvrijheid.",
+      "tags": [
+        "Vluchtelingen",
+        "Waardigheid"
+      ],
+      "blocks": [
+        {
+          "title": "De ontvangen ander",
+          "text": "Koran 59:9 prijst mensen die degenen die naar hen toe kwamen liefhebben en hun ruimte gunnen. De passage is verbonden met de vroege gemeenschap en moet in die historische en literaire context worden gelezen.",
+          "sourceIds": [
+            "text"
+          ]
+        },
+        {
+          "title": "Een hedendaagse organisatie",
+          "text": "Islamic Relief beschrijft opvang en bescherming van ontheemde mensen als onderdeel van haar humanitaire opdracht. De organisatie bepleit toegang tot bescherming, diensten en bestaansmogelijkheden. Dit is een eigen institutionele visie, geen standpunt namens alle moslims.",
+          "sourceIds": [
+            "relief"
+          ]
+        },
+        {
+          "title": "Motivatie en uitvoering",
+          "text": "Een religieuze bron kan motivatie geven voor hulp. De uitvoering vraagt daarnaast afspraken met ontvangende gemeenschappen en publieke instanties. Een Korantekst, een beleidsvisie van een organisatie en een individuele ervaring zijn verschillende soorten informatie.",
+          "sourceIds": [
+            "text",
+            "relief"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "Een praktijkvoorbeeld lezen",
+        "items": [
+          "De Korantekst belicht liefde en ruimte voor de ontvangen ander.",
+          "De organisatie beschrijft bescherming en ondersteuning in humanitaire termen.",
+          "Bronvermelding maakt zichtbaar vanuit welk perspectief een praktijk wordt verteld."
+        ],
+        "sourceIds": [
+          "text",
+          "relief"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "Koran 59:9",
+          "url": "https://quran.com/59/9-9",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "verse": 9,
+            "endVerse": 9,
+            "surah": 59
+          }
+        },
+        {
+          "id": "relief",
+          "kind": "practice",
+          "label": "Islamic Relief · Refugees and forced displacement",
+          "url": "https://islamic-relief.org/refugees-and-forced-displacement/",
+          "context": "Eigen visie van een islamitisch geïnspireerde humanitaire organisatie; geen onafhankelijke evaluatie van projecten."
+        }
+      ]
+    },
+    {
+      "id": "islam:life:sulh",
+      "tradition": "islam",
+      "section": "peace",
+      "order": 1,
+      "title": "Islah en sulh: herstel en verzoening",
+      "summary": "Koranteksten verbinden het herstellen van relaties met rechtvaardigheid en het begrenzen van vijandigheid.",
+      "tags": [
+        "Herstel",
+        "Vredestichten"
+      ],
+      "blocks": [
+        {
+          "title": "Verzoenen met rechtvaardigheid",
+          "text": "Koran 49:9–10 roept bij strijd tussen groepen gelovigen op tot bemiddeling en verzoening met rechtvaardigheid. De passage bevat ook een opdracht tegen onrechtmatig optreden. Vrede wordt hier niet gelijkgesteld aan het negeren van geweld.",
+          "sourceIds": [
+            "text"
+          ]
+        },
+        {
+          "title": "Ook tussen personen",
+          "text": "Koran 4:128 spreekt in een huwelijkscontext over een vergelijk of verzoening. Hetzelfde woordveld kan dus in verschillende sociale situaties optreden. Het vers is geen algemene procesbeschrijving voor ieder internationaal conflict.",
+          "sourceIds": [
+            "agreement"
+          ]
+        },
+        {
+          "title": "Begrip en toepassing",
+          "text": "Islah verwijst naar herstellen of in orde brengen; sulh naar een vergelijk of verzoening. De gekozen teksten bieden een religieus begrippenkader. Concrete bemiddeling vraagt daarnaast kennis van partijen, belangen, recht en de bescherming van betrokken mensen.",
+          "sourceIds": [
+            "text",
+            "agreement"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "De niveaus onderscheiden",
+        "items": [
+          "Persoonlijke verhoudingen en conflicten tussen groepen hebben verschillende contexten.",
+          "Rechtvaardigheid is in Koran 49 onderdeel van de opdracht tot verzoenen.",
+          "Een religieus begrip is een vertrekpunt voor uitleg, geen garantie op een veilig of duurzaam akkoord."
+        ],
+        "sourceIds": [
+          "text",
+          "agreement"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "Koran 49:9–10",
+          "url": "https://quran.com/49/9-10",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "verse": 9,
+            "endVerse": 10,
+            "surah": 49
+          }
+        },
+        {
+          "id": "agreement",
+          "kind": "scripture",
+          "label": "Koran 4:128",
+          "url": "https://quran.com/4/128-128",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "verse": 128,
+            "endVerse": 128,
+            "surah": 4
+          }
+        }
+      ],
+      "actors": [
+        {
+          "name": "Partijen in een conflict",
+          "role": "Hebben eigen verantwoordelijkheden en worden in de teksten aangesproken."
+        },
+        {
+          "name": "Bemiddelende gemeenschap",
+          "role": "Wordt opgeroepen tot herstel en rechtvaardig handelen."
+        }
+      ],
+      "process": [
+        {
+          "date": "Koran 49",
+          "title": "Tussen groepen",
+          "text": "De passage bespreekt bemiddeling bij strijd tussen gelovigen.",
+          "sourceIds": [
+            "text"
+          ]
+        },
+        {
+          "date": "Koran 4",
+          "title": "Binnen een relatie",
+          "text": "Een afzonderlijke passage bespreekt een vergelijk in een huwelijkscontext.",
+          "sourceIds": [
+            "agreement"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "islam:life:marrakesh",
+      "tradition": "islam",
+      "section": "peace",
+      "order": 2,
+      "title": "Marrakesh: bescherming van religieuze minderheden",
+      "summary": "Een verklaring uit 2016 verbindt islamitische argumentatie met de bescherming van religieuze minderheden.",
+      "tags": [
+        "Dialoog",
+        "Geschiedenis"
+      ],
+      "blocks": [
+        {
+          "title": "Aanleiding en bijeenkomst",
+          "text": "De verklaring van Marrakesh kwam tot stand tijdens een bijeenkomst van 25–27 januari 2016. Zij reageert op geweld tegen religieuze minderheden en op het inzetten van religie om dat geweld te rechtvaardigen.",
+          "sourceIds": [
+            "declaration"
+          ]
+        },
+        {
+          "title": "Burgerschap en bescherming",
+          "text": "De verklaring gebruikt de herinnering aan de Constitutie van Medina om bescherming en samenwerking te bepleiten. Zij richt zich tot geleerden, bestuurders en andere maatschappelijke actoren. Het is een normatieve verklaring, geen wet die overal automatisch geldt.",
+          "sourceIds": [
+            "declaration"
+          ]
+        },
+        {
+          "title": "Betekenis en grenzen",
+          "text": "De tekst maakt een moderne islamitische argumentatie voor minderhedenbescherming zichtbaar. Aanvaarding en uitvoering vragen afzonderlijk onderzoek. Koran 60:8 biedt daarnaast een heilige tekst over goed en rechtvaardig handelen tegenover mensen die niet tegen gelovigen strijden.",
+          "sourceIds": [
+            "text",
+            "declaration"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "Van verklaring naar uitvoering",
+        "items": [
+          "Een religieus argument onderbouwt een normatieve oproep.",
+          "Bestuur, onderwijs en maatschappelijke praktijk worden als terreinen van verandering aangesproken.",
+          "Het publiceren van een verklaring en het aantoonbaar beschermen van rechten zijn verschillende zaken."
+        ],
+        "sourceIds": [
+          "declaration"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "Koran 60:8",
+          "url": "https://quran.com/60/8-8",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "verse": 8,
+            "endVerse": 8,
+            "surah": 60
+          }
+        },
+        {
+          "id": "declaration",
+          "kind": "historical",
+          "label": "Verklaring van Marrakesh · publicatie Mezquita de Sevilla",
+          "url": "https://mezquitadesevilla.com/la-declaracion-de-marrakech/",
+          "context": "De religieuze stichting publiceert de verklaring en context van januari 2016; de tekst is een oproep van de deelnemers."
+        }
+      ],
+      "actors": [
+        {
+          "name": "Deelnemende geleerden en religieuze leiders",
+          "role": "Formuleren argumenten voor bescherming van minderheden."
+        },
+        {
+          "name": "Bestuurders en maatschappelijke organisaties",
+          "role": "Worden aangesproken op concrete vertaling van de verklaring."
+        }
+      ],
+      "process": [
+        {
+          "date": "25–27 januari 2016",
+          "title": "Bijeenkomst in Marrakesh",
+          "text": "De bijeenkomst richt zich op religieuze minderheden in landen met een moslimmeerderheid.",
+          "sourceIds": [
+            "declaration"
+          ]
+        },
+        {
+          "date": "27 januari 2016",
+          "title": "Verklaring",
+          "text": "De deelnemers formuleren een gezamenlijke oproep tot bescherming en samenwerking.",
+          "sourceIds": [
+            "declaration"
+          ]
+        }
+      ],
+      "location": {
+        "name": "Marrakesh",
+        "lat": 31.63,
+        "lng": -7.98
+      },
+      "eventId": "islam:marrakesh-declaration"
+    },
+    {
+      "id": "islam:life:human-fraternity",
+      "tradition": "islam",
+      "section": "peace",
+      "order": 3,
+      "title": "Abu Dhabi: menselijke broederlijkheid",
+      "summary": "Een gezamenlijke verklaring van de grootimam van Al-Azhar en paus Franciscus geeft een concreet voorbeeld van interreligieuze samenwerking.",
+      "tags": [
+        "Dialoog",
+        "Samenleving"
+      ],
+      "blocks": [
+        {
+          "title": "Een gezamenlijk document",
+          "text": "Op 4 februari 2019 ondertekenden Ahmad al-Tayyib en paus Franciscus in Abu Dhabi het document over menselijke broederlijkheid. Het roept op tot vrede, burgerschap en afwijzing van geweld dat religie als rechtvaardiging gebruikt.",
+          "sourceIds": [
+            "document"
+          ]
+        },
+        {
+          "title": "Een specifieke islamitische stem",
+          "text": "Ahmad al-Tayyib tekende als grootimam van Al-Azhar. Zijn betrokkenheid maakt een gezaghebbend soennitisch perspectief zichtbaar, maar vervangt niet alle islamitische richtingen. De gezamenlijke tekst heft theologische verschillen met het christendom niet op.",
+          "sourceIds": [
+            "document"
+          ]
+        },
+        {
+          "title": "Samenwerking en rechtvaardigheid",
+          "text": "Koran 5:8 verbindt rechtvaardigheid met het weerstaan van de invloed van vijandschap. Deze aya is hier een afzonderlijke religieuze leesroute, niet een bewering dat de verklaring rechtstreeks uit dit ene vers volgt.",
+          "sourceIds": [
+            "text"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "Een ontmoeting documenteren",
+        "items": [
+          "Benoem wie ondertekent en vanuit welke instelling of traditie.",
+          "Lees de gedeelde oproepen naast de blijvende verschillen tussen de deelnemers.",
+          "Maak onderscheid tussen een publieke verklaring en de gevolgen ervan in concrete samenlevingen."
+        ],
+        "sourceIds": [
+          "document"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "Koran 5:8",
+          "url": "https://quran.com/5/8-8",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "islam",
+            "edition": "nl",
+            "verse": 8,
+            "endVerse": 8,
+            "surah": 5
+          }
+        },
+        {
+          "id": "document",
+          "kind": "historical",
+          "label": "Al-Tayyib en Franciscus · Document on Human Fraternity",
+          "url": "https://www.vatican.va/content/francesco/en/travels/2019/outside/documents/papa-francesco_20190204_documento-fratellanza-umana.html",
+          "context": "Gezamenlijk document van 4 februari 2019, gepubliceerd door het Vaticaan; beide ondertekenaars blijven herkenbaar."
+        }
+      ],
+      "actors": [
+        {
+          "name": "Ahmad al-Tayyib",
+          "role": "Grootimam van Al-Azhar en islamitische medeondertekenaar."
+        },
+        {
+          "name": "Paus Franciscus",
+          "role": "Katholieke medeondertekenaar."
+        }
+      ],
+      "process": [
+        {
+          "date": "4 februari 2019",
+          "title": "Ondertekening in Abu Dhabi",
+          "text": "Beide leiders ondertekenen een gezamenlijke verklaring over menselijke broederlijkheid.",
+          "sourceIds": [
+            "document"
+          ]
+        }
+      ],
+      "location": {
+        "name": "Abu Dhabi",
+        "lat": 24.45,
+        "lng": 54.38
+      },
+      "eventId": "islam:fraternity"
+    }
+  ]
+}

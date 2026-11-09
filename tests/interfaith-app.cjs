@@ -20,7 +20,7 @@ class Control extends Element {
 const controls=new Map(),control=selector=>{if(!controls.has(selector))controls.set(selector,new Control());return controls.get(selector);};
 const religions=['christianity','judaism','islam'].map(religion=>new Control({religion}));
 const religionMenus=['christianity','judaism','islam'].map(religionMenu=>new Control({religionMenu}));
-const nav=['christianity','judaism','islam'].flatMap(navTradition=>['reader','index','festivals','map','cities','timeline','challenge'].map(view=>new Control({view,navTradition}))).concat(new Control({view:'compare'}),new Control({view:'topics'}));
+const nav=['christianity','judaism','islam'].flatMap(navTradition=>['reader','index','festivals','map','cities','timeline','challenge','prayer','dignity','peace'].map(view=>new Control({view,navTradition}))).concat(new Control({view:'compare'}),new Control({view:'topics'}));
 const traditions=['christianity','judaism','islam'].map(tradition=>new Control({tradition}));
 const peopleTraditions=['christianity','judaism','islam'].map(peopleTradition=>new Control({peopleTradition}));
 const groups=new Map([
@@ -88,6 +88,16 @@ context.window.PlacesMapView=class {
   setTradition(tradition){this.state.filter=tradition;this.filterCalls.push(tradition);}
   changeLanguage(){this.el.rendered=`geography:${I.language}`;}
   resize(){this.resized=true;}getState(){return structuredClone(this.state);}destroy(){this.destroyed=true;}
+};
+let lifeView;
+context.window.LifeSections=require('../dist/lived-religion.js').sections;
+context.window.LifeView=class {
+ constructor(el,callbacks){this.el=el;this.callbacks=callbacks;this.states=new Map();lifeView=this;}
+ get state(){return this.states.get(this.tradition+':'+this.section);}
+ setCollection(data,section){this.tradition=data.meta.tradition;this.section=section;const key=this.tradition+':'+section;if(!this.states.has(key))this.states.set(key,{query:'',tag:'all',selected:data.entries?.find(e=>e.section===section)?.id});this.el.rendered=`life:${this.tradition}:${section}:${I.language}`;}
+ getState(){return {tradition:this.tradition,section:this.section,...this.state};}
+ setState(saved){Object.assign(this.state,saved);}
+ open(id){this.state.selected=id;}
 };
 let festivalView;
 let exploration;
@@ -392,7 +402,7 @@ async function main(){
   assert.equal(bibleReaders.at(-1).state.location.bookId,'GEN');assert.equal(bibleReaders.at(-1).state.location.verse,2);
   assert.equal(bibleReaders.at(-1).state.personPassage.originalReference.translation,abrahamRef.translation,'Source translation metadata reaches the resolver');
   assert.equal(requests.filter(request=>request.file==='person-passage-map.json').length,1,'Both person collections share a successful map download');
-  for(const scenario of ['--map-modal','--festival-explore','--navigation','--religion-navigation','--saved-religion','--festivals','--tradition-atlas','--geography','--exploration']){const check=spawnSync(process.execPath,[__filename,scenario],{encoding:'utf8'});assert.equal(check.status,0,check.stderr||check.stdout);}
+  for(const scenario of ['--life','--map-modal','--festival-explore','--navigation','--religion-navigation','--saved-religion','--festivals','--tradition-atlas','--geography','--exploration']){const check=spawnSync(process.execPath,[__filename,scenario],{encoding:'utf8'});assert.equal(check.status,0,check.stderr||check.stdout);}
   const sharedCheck=spawnSync(process.execPath,[__filename,'--exploration','--shared-timeline'],{encoding:'utf8'});assert.equal(sharedCheck.status,0,sharedCheck.stderr||sharedCheck.stdout);
   const pendingProfileCheck=spawnSync(process.execPath,[__filename,'--pending-profile-language'],{encoding:'utf8'});
   assert.equal(pendingProfileCheck.status,0,pendingProfileCheck.stderr||pendingProfileCheck.stdout);
@@ -628,4 +638,23 @@ async function mapModalRegression(){
  console.log('Modal map app regression passed: desktop/mobile resize preserves background inertness and closing or navigation restores access.');
 }
 
-(process.argv.includes('--map-modal')?mapModalRegression():process.argv.includes('--festival-explore')?festivalExploreRegression():process.argv.includes('--navigation')?navigationRegression():process.argv.includes('--exploration')?explorationRegression():process.argv.includes('--geography')?geographyRegression():process.argv.includes('--tradition-atlas')?atlasRegression():process.argv.includes('--festivals')?festivalRegression():process.argv.includes('--religion-navigation')?religionNavigationRegression():process.argv.includes('--saved-religion')?savedReligionRegression():process.argv.includes('--pending-profile-language')?pendingProfileLanguageRegression():process.argv.includes('--pending-passage-race')?pendingPassageEditionRegression():process.argv.includes('--saved-catholic')?savedCatholicRegression():process.argv.includes('--dutch-edition-retry')?dutchEditionRetryRegression():process.argv.includes('--person-passage-retry')?personPassageRetryRegression():process.argv.includes('--person-passage-cancel')?personPassageCancelRegression():main()).catch(error=>{console.error(error);process.exitCode=1;});
+(process.argv.includes('--life')?lifeRegression():process.argv.includes('--map-modal')?mapModalRegression():process.argv.includes('--festival-explore')?festivalExploreRegression():process.argv.includes('--navigation')?navigationRegression():process.argv.includes('--exploration')?explorationRegression():process.argv.includes('--geography')?geographyRegression():process.argv.includes('--tradition-atlas')?atlasRegression():process.argv.includes('--festivals')?festivalRegression():process.argv.includes('--religion-navigation')?religionNavigationRegression():process.argv.includes('--saved-religion')?savedReligionRegression():process.argv.includes('--pending-profile-language')?pendingProfileLanguageRegression():process.argv.includes('--pending-passage-race')?pendingPassageEditionRegression():process.argv.includes('--saved-catholic')?savedCatholicRegression():process.argv.includes('--dutch-edition-retry')?dutchEditionRetryRegression():process.argv.includes('--person-passage-retry')?personPassageRetryRegression():process.argv.includes('--person-passage-cancel')?personPassageCancelRegression():main()).catch(error=>{console.error(error);process.exitCode=1;});
+
+async function lifeRegression(){
+ initialCatholic();await settle();assert(!requests.some(r=>r.file.startsWith('lived-')));
+ selectView('prayer');assert(pending('lived-christianity.json'));selectReligion('judaism');assert.equal(snapshot().view,'prayer');selectReligion('islam');
+ const data=t=>JSON.parse(fs.readFileSync(path.join(root,'dist/lived-'+t+'.json'),'utf8'));
+ respond('lived-islam.json',data('islam'));await settle();assert.equal(lifeView.tradition,'islam');assert.equal(control('#lived-religion-view').hidden,false);
+ respond('lived-christianity.json',null,{ok:false});respond('lived-judaism.json',data('judaism'));await settle();assert.equal(lifeView.tradition,'islam','Late data cannot replace the active religion');
+ lifeView.state.query='salat';lifeView.state.selected='islam:life:salat';const saved=lifeView.getState();context.window.scrollY=620;
+ const p={tradition:'islam',edition:'nl',surah:1,verse:1,endVerse:1};const opening=lifeView.callbacks.onPassage(p,'prayer');respond('quran-data.json',quran);await opening;await settle();assert.equal(snapshot().view,'reader');assert.equal(sacredReaders.at(-1).state.edition,'nl');
+ await control('#exploration-back').click();await settle();assert.equal(snapshot().view,'prayer');assert.equal(lifeView.state.query,saved.query);assert.equal(lifeView.state.selected,saved.selected);
+ selectView('peace','islam');await settle();assert.equal(lifeView.section,'peace');await lifeView.callbacks.onTimeline('islam','islam:fraternity');await settle();assert.equal(snapshot().view,'timeline');assert.equal(exploration.eventId,'islam:fraternity');
+ await exploration.callbacks.onDossier('islam','islam:life:human-fraternity','peace');await settle();assert.equal(snapshot().view,'peace');assert.equal(lifeView.state.selected,'islam:life:human-fraternity');
+ await control('#language-select').change('fr');await settle();assert.equal(control('#lived-religion-view').rendered,'life:islam:peace:fr');
+ selectView('dignity','christianity');respond('lived-christianity.json',null,{ok:false});await settle();assert.match(control('#lived-religion-view').innerHTML,/library-retry/);control('#lived-religion-view').querySelector('button').click();respond('lived-christianity.json',data('christianity'));await settle();assert.equal(lifeView.tradition,'christianity');
+ await lifeView.callbacks.onPassage({tradition:'christianity',edition:'catholic-nl',book:'MAT',chapter:25,verse:35,endVerse:40},'dignity');await settle();assert.equal(snapshot().bibleEdition,'catholic-nl');assert.equal(bibleReaders.at(-1).state.location.endVerse,40);
+ selectView('prayer','judaism');await settle();const he=structuredClone(tanakh);he.editions.he=structuredClone(he.editions.en);const jewish=lifeView.callbacks.onPassage({tradition:'judaism',edition:'he',book:'GEN',chapter:1,verse:1,endVerse:1},'prayer');respond('tanakh-data.json',he);await jewish;assert.equal(sacredReaders.at(-1).state.edition,'he');
+ selectView('reader');await settle();assert.equal(control('#lived-religion-view').hidden,true);
+ console.log('Lived religion app passed: nine religion-first routes, lazy cache, failed-load retry, late-response isolation, reader editions, saved dossier/search return, timeline/dossier round-trip and interface-language changes.');
+}

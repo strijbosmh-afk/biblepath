@@ -35,6 +35,7 @@ for(const [locale,edition] of Object.entries(data.editions)){
         assert.ok(verse.text||verse.notes?.length,`${locale} ${book.id} ${chapter.number}:${verse.number}`);
         assert.doesNotMatch(verse.text,/<\/?(?:w|v|p|c|book)\b/i,'Scripture contains no unrendered source XML');
         if(locale==='he')assert.match(verse.text,/\p{Script=Hebrew}/u);
+        if(locale==='he')assert.doesNotMatch(verse.text,/'(?:l s=|seg(?: type=)?|\/l)'?/,'Hebrew typography wrappers must not appear as scripture');
         rows.push(`${book.id}.${chapter.number}.${verse.number}\t${verse.text}`);
       }
       for(const heading of chapter.headings||[]){assert.ok(heading.text);assert.ok(numbers.includes(heading.beforeVerse));}
@@ -52,6 +53,7 @@ assert.match(data.editions.en.meta.title,/JPS.*1917/);
 assert.equal(verse('en','GEN',1,1),'IN THE beginning God created the heaven and the earth.');
 assert.match(verse('en','GEN',1,2),/unformed and void/,'JPS source must not be substituted with the existing Christian translation');
 assert.equal(verse('he','GEN',1,1),'בְּרֵאשִׁ֖ית בָּרָ֣א אֱלֹהִ֑ים אֵ֥ת הַשָּׁמַ֖יִם וְאֵ֥ת הָאָֽרֶץ׃');
+assert.equal(verse('he','DEU',6,4),'שְׁמַ֖ע יִשְׂרָאֵ֑ל יְהוָ֥ה אֱלֹהֵ֖ינוּ יְהוָ֥ה ׀ אֶחָֽד׃','The Shema retains its source letters and accents without encoded formatting wrappers');
 assert.equal(book('he','JOL').chapters.length,4);assert.equal(book('nl','JOL').chapters.length,3);
 assert.equal(book('he','MAL').chapters.length,3);assert.equal(book('en','MAL').chapters.length,4);
 assert.match(verse('en','PSA',51,18),/^\(51-20\).*Jerusalem/);

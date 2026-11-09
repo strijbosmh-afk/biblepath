@@ -37,6 +37,8 @@
   const workspaceIndexed=new WeakMap();
   let festivalView=null,festivalRequest=0,festivalPassageRequest=0,returnToFestivals=null;
   const festivalCache=new Map();
+  let lifeView=null,lifeRequest=0;
+  const lifeViews=['prayer','dignity','peace'];
   let exploreView=null,explorePassageRequest=0,returnToExplore=null;
   let pendingTimelineShare=window.TimelineShare?.parse(window.location?.hash||'');
   let traditionAtlas=null,atlasRequest=0,atlasPassageRequest=0,returnToAtlas=null;
@@ -62,7 +64,7 @@
   function updateExplorationBack(){const button=$('#exploration-back');if(!button)return;button.hidden=!explorationTrail?.peek();button.disabled=Boolean(explorationTrail?.restoring);button.textContent=backLabel();$('main').classList.toggle('has-exploration-trail',Boolean(explorationTrail?.peek()));}
   function captureExploration(){
     const view=state.view,profile=$('#unified-profile-dialog').open&&unifiedProfile?{id:unifiedProfile.profile.id,tradition:unifiedProfile.model.tradition,tab:unifiedProfile.tab,limit:unifiedProfile.limit,top:$('#unified-profile-dialog').scrollTop,name:unifiedProfile.profile.name}:null;
-    const titles={search:'Search results',reader:'Reading',map:'Relationship map',index:'People index',cities:'Places',geography:'Places',festivals:'Festivals & rituals',timeline:'Timeline',challenge:'Reflection challenge',topics:'Search by topic',compare:'Across traditions'};
+    const titles={search:'Search results',reader:'Reading',map:'Relationship map',index:'People index',cities:'Places',geography:'Places',festivals:'Festivals & rituals',timeline:'Timeline',challenge:'Reflection challenge',topics:'Search by topic',compare:'Across traditions',...Object.fromEntries(Object.entries(window.LifeSections||{}).map(([key,value])=>[key,value[0]]))};
     const active=document.activeElement,focus=active?.id?'#'+active.id:active?.dataset?.searchResult!==undefined?`[data-search-result="${active.dataset.searchResult}"]`:active?.dataset?.profile?`[data-profile="${active.dataset.profile}"]`:null;
     const saved={view,tradition:state.tradition,title:view==='timeline'&&exploreView?.timelineComparison?'Compare timelines':titles[view],profile,focus,scroll:{x:window.scrollX||0,y:window.scrollY||0},state:{...state},indexQuery:$('#index-search').value,inspectorTop:$('#inspector').scrollTop||0,pathPicks:{...pathPicks},camera:{...graph.transform},returns:{library:returnToLibrary,profile:returnToProfile,explore:returnToExplore,festival:returnToFestivals,atlas:returnToAtlas,geography:returnToGeography},options:[...document.querySelectorAll('.compact-options')].map(node=>({key:node.dataset.compactKey,open:node.open}))};
     if(['map','geography'].includes(view))saved.mapWorkspace=mapWorkspace?.getState();
@@ -74,6 +76,7 @@
     if(view==='compare')saved.comparison=comparisonView?.getState();
     if(view==='search')saved.search=workspaceSearch?.state;
     if(view==='festivals')saved.festival=festivalView?.state;
+    if(lifeViews.includes(view))saved.life=lifeView?.getState();
     if(['timeline','challenge','topics'].includes(view))saved.explore=exploreView?.getNavigationState?.();
     const snapshot=structuredClone(saved);snapshot.activePath=activePath;return snapshot;
   }
@@ -92,6 +95,7 @@
     if(saved.people){component=await ensurePeopleIndex();if(!isCurrent())return;Object.assign(component.state,structuredClone(saved.people));component.render?.();}
     if(saved.comparison){component=await ensureComparisons();if(!isCurrent())return;component.query=saved.comparison.query;component.selected=saved.comparison.selected;component.render?.();}
     if(saved.festival){component=await ensureFestivals();if(!isCurrent())return;Object.assign(component.state,structuredClone(saved.festival));component.render?.();}
+    if(saved.life){component=await ensureLife();if(!isCurrent())return;component?.setState(saved.life);}
     if(saved.explore){await ensureExplore();if(!isCurrent())return;await exploreView.restoreNavigationState?.(saved.explore,isCurrent);syncTimelineNavigation();}
     if(saved.search){await ensureWorkspaceSearch();if(!isCurrent())return;}
     if(saved.view==='map'&&saved.tradition==='christianity'){renderPathPickers();renderGraph({preserveDiscovery:true});Object.assign(graph.transform,saved.camera);graph.applyTransform?.({reason:'restore'});$('#inspector').scrollTop=saved.inspectorTop;}
@@ -265,12 +269,12 @@
     returnToExplore=null;
     if(!useReligion(tradition))return;
     returnToGeography=null;pendingAtlasPlace=null;geographyFilter=tradition;geographyFilterPending=true;
-    setView(view==='cities'?'geography':view||(['reader','index','festivals','map','cities','geography','timeline','challenge'].includes(state.view)?state.view:'reader'),{keepSidebar});
+    setView(view==='cities'?'geography':view||(['reader','index','festivals','map','cities','geography','timeline','challenge',...lifeViews].includes(state.view)?state.view:'reader'),{keepSidebar});
   }
   function setView(view,{keepSidebar=false}={}) {
     mapWorkspace?.leave();
     if(view!=='search')workspaceSearch?.leave();
-    profileRequest++;
+    profileRequest++;lifeRequest++;
     pendingUnifiedProfile=null;
     if(view!=='reader')returnToProfile=null;
     $('#atlas-search-view').hidden=view!=='search';
@@ -293,6 +297,7 @@
     $('#tradition-people-view').hidden=view!=='index'||state.peopleTradition==='christianity';
     $('#comparison-view').hidden=view!=='compare';
     $('#festivals-view').hidden=view!=='festivals';
+    $('#lived-religion-view').hidden=!lifeViews.includes(view);
     $('#explore-features-view').hidden=!['timeline','challenge','topics'].includes(view);
     $('#return-to-explore').hidden=view!=='reader'||!returnToExplore;
     $('#return-to-explore').textContent=I.t(returnToExplore?.view==='search'?'← Back to search results':'← Back to exploration');
@@ -314,7 +319,7 @@
     $('#sacred-reader-view').hidden=view!=='reader'||state.tradition==='christianity';
     $('#sacred-reader-view').setAttribute('aria-label',I.t(state.tradition==='islam'?'Qur’an':'Tanakh'));
     $('#tradition-controls').hidden=true;
-    $('.intro-note').hidden=!bibleContext||['reader','index','compare','festivals','geography','timeline','challenge','topics','search'].includes(view);
+    $('.intro-note').hidden=!bibleContext||['reader','index','compare','festivals','geography','timeline','challenge','topics','search',...lifeViews].includes(view);
     $('.intro .eyebrow').textContent=I.t(view==='compare'?'Compare religions':view==='search'?'All religions':religionNames[state.tradition]);
     $$('[data-tradition]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.tradition===state.tradition)));
     $('#people-testament-filters').hidden = !bibleContext||!['map','index'].includes(view);
@@ -331,11 +336,12 @@
     titles.timeline=['Timeline','Explore major moments, with sources and historical context.'];
     titles.challenge=['Reflection challenge','Read, pause and reflect in the context of each tradition.'];
     titles.topics=['Search by topic','Find themes and passages in one or more religions.'];
+    for(const [key,value] of Object.entries(window.LifeSections||{}))titles[key]=[value[0],'Texts, interpretation and lived practice.'];
     titles.search=['Search ReligieAtlas','Find people, places, topics and scripture passages.'];
     if(atlasContext)titles[view]=view==='map'?['Relationship map','Family relationships in this tradition, with a source for every connection.']:['Places','Cities and places in this tradition, with textual sources and historical context.'];
     $('.intro h1').textContent=I.t(titles[view][0]);$('.intro p').textContent=I.t(titles[view][1]);
     $('#religion-crumb').textContent=I.t(view==='compare'?'Compare religions':religionNames[state.tradition]);
-    $('.breadcrumb strong').textContent=I.t({map:'Relationship map',index:'People index',compare:'Across traditions',reader:'Holy books',cities:'Cities explorer',geography:'Places map',festivals:'Festivals & rituals',timeline:'Timeline',challenge:'Reflection challenge',topics:'Search by topic',search:'Search ReligieAtlas'}[view]);
+    $('.breadcrumb strong').textContent=I.t({map:'Relationship map',index:'People index',compare:'Across traditions',reader:'Holy books',cities:'Cities explorer',geography:'Places map',festivals:'Festivals & rituals',timeline:'Timeline',challenge:'Reflection challenge',topics:'Search by topic',search:'Search ReligieAtlas',...Object.fromEntries(Object.entries(window.LifeSections||{}).map(([key,value])=>[key,value[0]]))}[view]);
     const sharedSection=['compare','topics','search'].includes(view);
     $$('[data-religion]').forEach(button=>{const active=!sharedSection&&button.dataset.religion===state.tradition;button.classList.toggle('active',active);button.setAttribute('aria-expanded',String(active));button.setAttribute('aria-pressed',String(active));});
     $$('[data-religion-menu]').forEach(menu=>{menu.hidden=sharedSection||menu.dataset.religionMenu!==state.tradition;});
@@ -346,6 +352,7 @@
     if (view === 'index') {if(state.peopleTradition==='christianity'){renderIndex();ensureCatholicPeople().then(()=>{if(state.view==='index'&&state.peopleTradition==='christianity')renderIndex();}).catch(()=>{libraryError($('#catholic-index-status'),()=>setView('index'));});}else ensurePeopleIndex();}
     if (view === 'compare') ensureComparisons();
     if (view === 'festivals') ensureFestivals();
+    if (lifeViews.includes(view)) ensureLife();
     if (['timeline','challenge','topics'].includes(view)) ensureExplore();
     if (view === 'reader') ensureReader();
     if (view === 'cities'&&bibleContext) ensureCities();
@@ -356,7 +363,7 @@
     if(!keepSidebar)closeSidebar();
   }
 
-  function loadJson(file) {return fetch(file).then(response=>{if(!response.ok)throw new Error(`Could not load ${file}`);return response.json();});}
+  function loadJson(file) {return fetch(file,{cache:'no-cache'}).then(response=>{if(!response.ok)throw new Error(`Could not load ${file}`);return response.json();});}
   function workspaceAsset(file){if(!workspaceAssets.has(file))workspaceAssets.set(file,loadJson(file).catch(error=>{workspaceAssets.delete(file);throw error;}));return workspaceAssets.get(file);}
   async function unifiedModel(tradition){
     const comparisons=await loadPeopleCollection('compare').catch(()=>null);
@@ -401,7 +408,7 @@
   async function indexWorkspaceCollection(tradition,index){
     if(!workspaceIndexed.has(index))workspaceIndexed.set(index,new Set());
     const indexed=workspaceIndexed.get(index),key=tradition+':'+I.language;if(indexed.has(key))return;
-    const [model,timeline,topics,festivals]=await Promise.all([unifiedModel(tradition),workspaceAsset('timeline-events.json'),workspaceAsset('scripture-topics.json'),workspaceAsset(`festivals-${tradition}.json`)]);
+    const [model,timeline,topics,festivals,life]=await Promise.all([unifiedModel(tradition),workspaceAsset('timeline-events.json'),workspaceAsset('scripture-topics.json'),workspaceAsset(`festivals-${tradition}.json`),workspaceAsset(`lived-${tradition}.json`)]);
     const peopleRows=tradition==='christianity'?catholicPeople.entries(I.language):model.collection.people;
     const ids=new Set(peopleRows.map(p=>model.canonical(p.id)));for(const p of model.atlas?.people||[])ids.add(model.canonical(p.id));
     let processed=0;
@@ -410,6 +417,7 @@
     for(const p of places)index.add(tradition,'places',p.id,p.name,p.description||p.summary,[p.aliases,p.disambiguation,p.refs.map(r=>r.label)]);
     for(const event of timeline.traditions[tradition])index.add(tradition,'events',event.id,event.title,event.summary,[event.category,event.dateLabel,event.what,event.stakeholders,event.context],{eventId:event.id});
     for(const e of festivals.entries)index.add(tradition,'festivals',e.id,e.title,e.summary,[e.calendar,e.sections]);
+    for(const e of life.entries)index.add(tradition,'life',e.id,e.title,e.summary,[e.tags,e.blocks,e.practice,e.actors,e.process],{section:e.section});
     for(const topic of topics.topics)if(topic.passages.some(p=>p.tradition===tradition))index.add(tradition,'topics',topic.id,topic.label,'Bekijk de bijbehorende tekstpassages.',topic.synonyms,{topicId:topic.id});
     indexed.add(key);
   }
@@ -420,17 +428,18 @@
     if(type==='topics'){workspaceSearch.state.query=typeof result.title==='string'?result.title:result.title.nl;workspaceSearch.state.type='texts';workspaceSearch.state.page=0;workspaceSearch.open();return;}
     useReligion(tradition);
     if(type==='festivals'){setView('festivals');const view=await ensureFestivals();if(view&&state.view==='festivals'&&state.tradition===tradition)view.open(id);}
+    if(type==='life'){const section=result.action?.section;if(!lifeViews.includes(section))return;setView(section);const view=await ensureLife();if(view&&state.view===section&&state.tradition===tradition)view.open(id);}
     if(type==='events'){setView('timeline');await ensureExplore();if(state.view==='timeline'&&state.tradition===tradition)exploreView.openEvent(id);}
   }
   function ensureExplore(){
-    if(!exploreView)exploreView=new window.AtlasExplore($('#explore-features-view'),{onPassage:openExplorePassage,onTimelineMode:syncTimelineNavigation});
+    if(!exploreView)exploreView=new window.AtlasExplore($('#explore-features-view'),{onPassage:openExplorePassage,onTimelineMode:syncTimelineNavigation,onDossier:openLifeDossier});
     if(timelineComparisonRequested!==null){exploreView.setTimelineComparison?.(timelineComparisonRequested);timelineComparisonRequested=null;}
     if(state.view==='timeline'&&pendingTimelineShare){exploreView.setSharedComparison(pendingTimelineShare);pendingTimelineShare=null;}
     return exploreView.open(state.view,state.tradition).then(()=>{syncTimelineNavigation();return exploreView;});
   }
   async function openExplorePassage(passage,origin){
     recordExploration();
-    if(!Object.hasOwn(religionNames,passage.tradition)||!['timeline','challenge','topics','search'].includes(origin))return;
+    if(!Object.hasOwn(religionNames,passage.tradition)||!['timeline','challenge','topics','search',...lifeViews].includes(origin))return;
     const sourceTradition=state.view==='reader'&&returnToExplore?.view===origin?returnToExplore.tradition:state.tradition,tradition=passage.tradition;
     returnToFestivals=null;returnToAtlas=null;returnToGeography=null;
     useReligion(tradition);
@@ -504,6 +513,26 @@
     const target=active.model.reference(label,edition,I.language);
     if(target){active.selectEdition(edition);active.open(target);}
     else toast(I.t('This reference could not be located in the reader.'));
+  }
+  async function openLifeTimeline(tradition,id){
+    if(tradition!==state.tradition||!lifeViews.includes(state.view))return;
+    recordExploration();timelineComparisonRequested=false;setView('timeline');await ensureExplore();
+    if(state.view==='timeline'&&state.tradition===tradition)exploreView.openEvent(id);
+  }
+  async function openLifeDossier(tradition,id,section='peace'){
+    if(!Object.hasOwn(religionNames,tradition)||!lifeViews.includes(section))return;
+    recordExploration();useReligion(tradition);setView(section);const view=await ensureLife();
+    if(view&&state.view===section&&state.tradition===tradition)view.open(id);
+  }
+  function ensureLife(){
+    const tradition=state.tradition,section=state.view,request=++lifeRequest,container=$('#lived-religion-view');
+    if(!lifeViews.includes(section))return Promise.resolve(null);
+    container.innerHTML=`<div class="library-loading" role="status">${escape(I.t('Opening this collection…'))}</div>`;
+    return workspaceAsset(`lived-${tradition}.json`).then(data=>{
+      if(request!==lifeRequest||tradition!==state.tradition||section!==state.view)return null;
+      if(!lifeView)lifeView=new window.LifeView(container,{onPassage:openExplorePassage,onTimeline:openLifeTimeline});
+      lifeView.setCollection(data,section);return lifeView;
+    }).catch(()=>{if(request===lifeRequest&&section===state.view)libraryError(container,ensureLife);return null;});
   }
   function ensureFestivals(){
     const tradition=state.tradition,request=++festivalRequest,container=$('#festivals-view');

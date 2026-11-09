@@ -1,0 +1,796 @@
+{
+  "meta": {
+    "tradition": "christianity",
+    "reviewedAt": "2026-11-09",
+    "scope": "Rooms-katholiek christendom. Redactionele informatie voor hoger onderwijs; geen gebedshandleiding, studieopdracht of uitspraak namens alle gelovigen. Heilige teksten, religieuze uitleg, praktijkbronnen en historische documenten worden onderscheiden.",
+    "sections": {
+      "prayer": {
+        "intro": "Luisteren, bidden en de dag onderbreken. Verken drie katholieke praktijken, met Sant’Egidio als één herkenbaar perspectief.",
+        "note": "Het katholieke uitgangspunt betekent niet dat ieder praktijkvoorbeeld alle katholieken vertegenwoordigt. De drie P’s van Sant’Egidio verbinden gebed, vriendschap met armen en vrede."
+      },
+      "dignity": {
+        "intro": "Vriendschap begint bij concrete mensen. Ontdek hoe katholieke teksten en drie praktijken van Sant’Egidio menselijke waardigheid in beeld brengen.",
+        "note": "De dossiers onderscheiden Bijbeltekst, interpretatie en de eigen beschrijving van organisaties. Er worden geen individuele getuigenissen verzonnen en geen effecten zonder onderzoek vastgesteld."
+      },
+      "peace": {
+        "intro": "Vredestichten krijgt vorm in ontmoeting, onderhandelingen en sociale vriendschap. Drie casussen tonen betrokkenen, verloop en grenzen.",
+        "note": "Sant’Egidio is een katholieke lekenbeweging en één actor in een breder veld. Religieuze motivatie, politieke afspraken en aantoonbare resultaten worden onderscheiden."
+      }
+    }
+  },
+  "entries": [
+    {
+      "id": "christianity:life:listening",
+      "tradition": "christianity",
+      "section": "prayer",
+      "order": 1,
+      "title": "Luisteren naar het Evangelie",
+      "summary": "Schriftlezing, stilte en gezamenlijk gebed verbinden het dagelijkse leven met aandacht voor anderen.",
+      "tags": [
+        "Luisteren",
+        "Gemeenschap"
+      ],
+      "blocks": [
+        {
+          "title": "Een tekst ontvangen",
+          "text": "Lucas beschrijft Maria die naar Jezus luistert en Marta die door het bedienen in beslag wordt genomen. De scène stelt aandacht en onrust ter sprake. Het verhaal geeft geen compleet dagrooster en maakt gastvrijheid niet waardeloos.",
+          "sourceIds": [
+            "text"
+          ]
+        },
+        {
+          "title": "Gebed bij Sant’Egidio",
+          "text": "Sant’Egidio beschrijft gezamenlijk luisteren naar het Evangelie als bron van haar gemeenschapsleven. Voorbeden brengen ook de zorgen van zieken, eenzame mensen en slachtoffers van oorlog binnen. Dit is de eigen beschrijving van een katholieke lekenbeweging.",
+          "sourceIds": [
+            "community"
+          ]
+        },
+        {
+          "title": "Verschillende vormen",
+          "text": "De Catechismus verbindt gesproken gebed met innerlijke aandacht. Woorden en betrokkenheid van het hart horen bij elkaar. Een plaatselijk avondgebed van Sant’Egidio vertegenwoordigt niet alle katholieke spiritualiteiten.",
+          "sourceIds": [
+            "teaching",
+            "community"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "Een herkenbaar ritme",
+        "items": [
+          "Schriftlezing: een evangeliepassage wordt in de gemeenschap beluisterd en uitgelegd.",
+          "Stilte en voorbede: persoonlijke aandacht krijgt verbinding met het leven van anderen.",
+          "Ontmoeting: de gemeenschap verbindt haar gebed met blijvende vriendschappen en inzet voor vrede."
+        ],
+        "sourceIds": [
+          "community"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "Lucas 10:38–42",
+          "url": "https://bible.usccb.org/bible/luke/10",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "christianity",
+            "edition": "catholic-nl",
+            "verse": 38,
+            "endVerse": 42,
+            "book": "LUK",
+            "chapter": 10
+          }
+        },
+        {
+          "id": "community",
+          "kind": "practice",
+          "label": "Sant’Egidio België · Bidden met Sant’Egidio",
+          "url": "https://www.santegidio.be/gebed/",
+          "context": "Eigen beschrijving van gezamenlijk gebed en voorbeden; plaatselijke tijden zijn op de bronpagina te vinden."
+        },
+        {
+          "id": "teaching",
+          "kind": "tradition",
+          "label": "Catechismus §§2700–2704 · vormen van gebed",
+          "url": "https://www.vatican.va/content/catechism/en/part_four/section_one/chapter_three/article_1.html",
+          "context": "Officiële katholieke uitleg; de gelinkte pagina is Engelstalig."
+        }
+      ]
+    },
+    {
+      "id": "christianity:life:hours",
+      "tradition": "christianity",
+      "section": "prayer",
+      "order": 2,
+      "title": "Getijdengebed: de dag onderbreken",
+      "summary": "Psalmen en lezingen geven ochtend, avond en andere momenten van de dag een liturgisch ritme.",
+      "tags": [
+        "Ritme",
+        "Gemeenschap"
+      ],
+      "blocks": [
+        {
+          "title": "Bidden met de psalmen",
+          "text": "Psalm 4 verbindt nood, vertrouwen en het neerliggen in vrede. Binnen het getijdengebed krijgen psalmen een plaats in een groter geheel van zang, lezingen en gebeden. Het bijbelboek is ouder dan deze christelijke liturgische ordening.",
+          "sourceIds": [
+            "text"
+          ]
+        },
+        {
+          "title": "Liturgie in de tijd",
+          "text": "De Catechismus beschrijft het getijdengebed als de heiliging van de loop van dag en nacht. Het is het gebed van de Kerk en is niet beperkt tot een privédevotie. Het vormt een aanvulling op de eucharistie.",
+          "sourceIds": [
+            "hours"
+          ]
+        },
+        {
+          "title": "Wie en hoe",
+          "text": "Clerici, religieuzen en leken nemen op verschillende manieren deel. De katholieke uitnodiging tot deelname betekent niet dat iedere gelovige alle uren dagelijks bidt. Gemeenschappelijk zingen en persoonlijk lezen zijn verschillende vormen van dezelfde liturgische traditie.",
+          "sourceIds": [
+            "hours"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "Momenten in de dag",
+        "items": [
+          "Ochtend: lauden openen de dag met lofprijzing en gebed.",
+          "Avond: vespers verbinden de terugblik op de dag met dank en voorbede.",
+          "Voor de nacht: completen sluiten de dag af; concrete teksten volgen het kerkelijk gebedenboek."
+        ],
+        "sourceIds": [
+          "hours",
+          "council"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "Psalm 4:1–8 · Nederlandse katholieke leeseditie",
+          "url": "https://bible.usccb.org/bible/psalms/4",
+          "context": "Nummering van de Canisiusleeseditie. De volledige psalm heeft in edities die de titel meetellen de verwijzing Psalm 4:2–9. De externe bron toont die andere nummering.",
+          "passage": {
+            "tradition": "christianity",
+            "edition": "catholic-nl",
+            "verse": 1,
+            "endVerse": 8,
+            "book": "PSA",
+            "chapter": 4
+          }
+        },
+        {
+          "id": "hours",
+          "kind": "tradition",
+          "label": "Catechismus §§1174–1178 · getijdengebed",
+          "url": "https://www.vatican.va/content/catechism/en/part_two/section_one/chapter_two/article_1/iii_when_is_the_liturgy_celebrated.html",
+          "context": "Officiële uitleg van het dagritme, de psalmen en deelname aan het getijdengebed."
+        },
+        {
+          "id": "council",
+          "kind": "tradition",
+          "label": "Tweede Vaticaans Concilie · Sacrosanctum Concilium §89",
+          "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19631204_sacrosanctum-concilium_en.html",
+          "context": "Conciliaire richtlijnen over lauden, vespers en completen; onderscheidt de uren in het dagritme."
+        }
+      ]
+    },
+    {
+      "id": "christianity:life:our-father",
+      "tradition": "christianity",
+      "section": "prayer",
+      "order": 3,
+      "title": "Het Onzevader in het dagelijks leven",
+      "summary": "Een gemeenschappelijk gebed brengt Gods naam, dagelijks brood, vergeving en bevrijding samen.",
+      "tags": [
+        "Ritme",
+        "Luisteren"
+      ],
+      "blocks": [
+        {
+          "title": "Binnen de Bergrede",
+          "text": "In Matteüs 6 volgt het Onzevader op Jezus’ onderwijs over bidden. De verzoeken verbinden de verhouding tot God met brood, schulden en vergeving. De gebedswoorden worden hier gelezen binnen hun literaire context.",
+          "sourceIds": [
+            "text"
+          ]
+        },
+        {
+          "title": "Een ontvangen gebed",
+          "text": "De Catechismus noemt het Onzevader een samenvatting van het Evangelie. Die uitspraak beschrijft de katholieke waardering van de tekst. De historische bijbelvertaling in de app en de hedendaagse liturgische formulering hoeven niet woordelijk gelijk te zijn.",
+          "sourceIds": [
+            "father"
+          ]
+        },
+        {
+          "title": "Persoonlijk en gezamenlijk",
+          "text": "Het meervoud houdt ook anderen in beeld wanneer iemand alleen bidt. In de katholieke liturgie wordt het gebed gezamenlijk gebruikt. De tekst wordt daarnaast thuis, in kleine groepen en in verschillende talen gebeden.",
+          "sourceIds": [
+            "father",
+            "text"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "Drie samenhangende accenten",
+        "items": [
+          "Gods naam en koninkrijk: het gebed begint met gerichtheid op God.",
+          "Brood en vergeving: dagelijkse afhankelijkheid en menselijke verhoudingen worden uitgesproken.",
+          "Bevrijding: kwetsbaarheid wordt niet ontkend, maar in gebed ter sprake gebracht."
+        ],
+        "sourceIds": [
+          "text",
+          "father"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "Matteüs 6:9–13",
+          "url": "https://bible.usccb.org/bible/matthew/6",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "christianity",
+            "edition": "catholic-nl",
+            "verse": 9,
+            "endVerse": 13,
+            "book": "MAT",
+            "chapter": 6
+          }
+        },
+        {
+          "id": "father",
+          "kind": "tradition",
+          "label": "Catechismus §2761 · het Onzevader",
+          "url": "https://www.vatican.va/content/catechism/en/part_four/section_two/article_1.html",
+          "context": "Officiële katholieke waardering van het gebed als samenvatting van het Evangelie."
+        }
+      ]
+    },
+    {
+      "id": "christianity:life:table",
+      "tradition": "christianity",
+      "section": "dignity",
+      "order": 1,
+      "title": "Aan tafel: gastvrijheid en vriendschap",
+      "summary": "Een maaltijd kan een plaats zijn waar iemand als gast en gesprekspartner wordt ontvangen.",
+      "tags": [
+        "Armoede",
+        "Ontmoeting"
+      ],
+      "blocks": [
+        {
+          "title": "Meer dan een categorie",
+          "text": "In Matteüs 25 worden honger, dorst, vreemdelingschap, ziekte en gevangenschap verbonden met de ontmoeting met Christus. De passage richt de aandacht op concrete personen en handelingen. Zij beschrijft geen hedendaags hulpverleningsmodel.",
+          "sourceIds": [
+            "text"
+          ]
+        },
+        {
+          "title": "Praktijkvoorbeeld: Kamiano",
+          "text": "Sant’Egidio beschrijft Kamiano als een restaurant voor dak- en thuisloze mensen waar gasten aan tafel worden bediend. Maaltijden gaan samen met nabijheid en ondersteuning. De bron verwoordt hoe de organisatie haar eigen werking begrijpt.",
+          "sourceIds": [
+            "kamiano"
+          ]
+        },
+        {
+          "title": "Wederkerigheid en grenzen",
+          "text": "Bij deze benadering hoort aandacht voor namen, verhalen en duurzame relaties. Gasten blijven mensen met eigen wensen en keuzes. De eigen beschrijving van een initiatief is geen onafhankelijke evaluatie van alle ervaringen van bezoekers.",
+          "sourceIds": [
+            "kamiano"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "Wat de praktijk zichtbaar maakt",
+        "items": [
+          "Ontvangst: een gast krijgt een plaats aan tafel en wordt persoonlijk aangesproken.",
+          "Continuïteit: terugkerende ontmoetingen maken kennismaking mogelijk naast onmiddellijke hulp.",
+          "Ondersteuning: praktische hulp en professionele deskundigheid kunnen samengaan met vrijwillige inzet."
+        ],
+        "sourceIds": [
+          "kamiano"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "Matteüs 25:35–40",
+          "url": "https://bible.usccb.org/bible/matthew/25",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "christianity",
+            "edition": "catholic-nl",
+            "verse": 35,
+            "endVerse": 40,
+            "book": "MAT",
+            "chapter": 25
+          }
+        },
+        {
+          "id": "kamiano",
+          "kind": "practice",
+          "label": "Sant’Egidio · Kamiano",
+          "url": "https://www.santegidio.be/fr/associations/kamiano-vrijwillger-helpen-armen-daklozen/",
+          "context": "Franstalige eigen beschrijving van maaltijden, ontvangst en ondersteuning; geen onafhankelijk effectonderzoek."
+        }
+      ]
+    },
+    {
+      "id": "christianity:life:older-neighbours",
+      "tradition": "christianity",
+      "section": "dignity",
+      "order": 2,
+      "title": "Ouderen als buren en vrienden",
+      "summary": "Leve de Ouderen! verbindt regelmatig contact met het tegengaan van sociaal isolement.",
+      "tags": [
+        "Ouderen",
+        "Ontmoeting"
+      ],
+      "blocks": [
+        {
+          "title": "Waardigheid blijft",
+          "text": "Leviticus 19 verbindt eerbied voor ouderen met de heiligheid van het gemeenschapsleven. Deze tekst is geen moderne zorgstandaard, maar biedt een religieus aanknopingspunt om ouderdom niet alleen als afhankelijkheid te beschouwen.",
+          "sourceIds": [
+            "text"
+          ]
+        },
+        {
+          "title": "Een netwerk rond de persoon",
+          "text": "Het programma Leve de Ouderen! ontstond in Rome in 2004 na de hittegolf van 2003. Sant’Egidio beschrijft telefonische contacten, huisbezoeken en netwerken naast bestaande zorg als antwoord op isolement.",
+          "sourceIds": [
+            "older"
+          ]
+        },
+        {
+          "title": "Lokale uitwerking",
+          "text": "De Belgische werking richt zich op thuiswonende ouderen en hun omgeving. Ouderen kunnen ook zelf iets voor leeftijdsgenoten betekenen. Doelgroep, dienstverlening en plaatselijke organisatie verschillen; de bronpagina’s beschrijven specifieke programma’s.",
+          "sourceIds": [
+            "belgium"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "Bouwstenen van nabijheid",
+        "items": [
+          "Terugkerend contact maakt het mogelijk dat mensen elkaar leren kennen.",
+          "Familie, buren, vrijwilligers en professionals vormen verschillende delen van een netwerk.",
+          "Wederkerigheid betekent dat een oudere persoon ook kennis, steun en vriendschap kan geven."
+        ],
+        "sourceIds": [
+          "older",
+          "belgium"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "Leviticus 19:32–34",
+          "url": "https://bible.usccb.org/bible/leviticus/19",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "christianity",
+            "edition": "catholic-nl",
+            "verse": 32,
+            "endVerse": 34,
+            "book": "LEV",
+            "chapter": 19
+          }
+        },
+        {
+          "id": "older",
+          "kind": "practice",
+          "label": "Sant’Egidio · Leve de Ouderen!",
+          "url": "https://www.santegidio.org/pageID/30092/langID/nl/LEVE-DE-OUDEREN.html",
+          "context": "Eigen beschrijving van de oorsprong in 2004 en het netwerkmodel."
+        },
+        {
+          "id": "belgium",
+          "kind": "practice",
+          "label": "Leve de Ouderen! België · over de werking",
+          "url": "https://www.levedeouderen.be/contacteer-ons/",
+          "context": "Plaatselijke doelgroep en wederkerige inzet; actuele contactgegevens staan op de bronpagina."
+        }
+      ]
+    },
+    {
+      "id": "christianity:life:corridors",
+      "tradition": "christianity",
+      "section": "dignity",
+      "order": 3,
+      "title": "Vluchtelingen ontvangen: humanitaire corridors",
+      "summary": "Een praktijkvoorbeeld waarin bescherming, lokale opvang en interreligieuze samenwerking samenkomen.",
+      "tags": [
+        "Vluchtelingen",
+        "Ontmoeting"
+      ],
+      "blocks": [
+        {
+          "title": "De vreemdeling nabij",
+          "text": "In Lucas 10 wordt de vraag naar de naaste beantwoord met het verhaal van een Samaritaan die handelt. Nabijheid krijgt vorm door aandacht, verzorging en het inschakelen van anderen. Het verhaal is geen beschrijving van een asielprocedure.",
+          "sourceIds": [
+            "text"
+          ]
+        },
+        {
+          "title": "Een concrete toegangsweg",
+          "text": "Sant’Egidio beschrijft humanitaire corridors als een legale reisroute voor kwetsbare vluchtelingen, in samenwerking met overheden en maatschappelijke partners. Lokale groepen ondersteunen de ontvangst en het opbouwen van een nieuw bestaan.",
+          "sourceIds": [
+            "corridors"
+          ]
+        },
+        {
+          "title": "Verschillende verantwoordelijkheden",
+          "text": "Overheden beslissen over toegang en bescherming; maatschappelijke organisaties organiseren begeleiding. De religieuze motivatie vervangt die publieke verantwoordelijkheid niet. De bron meldt samenwerking over kerkelijke en religieuze grenzen heen.",
+          "sourceIds": [
+            "corridors"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "Van aankomst naar meedoen",
+        "items": [
+          "Voorbereiding en reis verlopen in samenwerking met bevoegde instanties.",
+          "Plaatselijke groepen ondersteunen wonen, kennismaking en het dagelijkse leven.",
+          "De ontvangen persoon behoudt een eigen levensverhaal, overtuiging en toekomstperspectief."
+        ],
+        "sourceIds": [
+          "corridors"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "Lucas 10:30–37",
+          "url": "https://bible.usccb.org/bible/luke/10",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "christianity",
+            "edition": "catholic-nl",
+            "verse": 30,
+            "endVerse": 37,
+            "book": "LUK",
+            "chapter": 10
+          }
+        },
+        {
+          "id": "corridors",
+          "kind": "practice",
+          "label": "Sant’Egidio België · Humanitaire Corridors",
+          "url": "https://www.santegidio.be/organisaties/humcor/",
+          "context": "Eigen beschrijving van toelating, begeleiding en interreligieuze samenwerking; aantallen zijn hier bewust niet als actuele stand overgenomen."
+        }
+      ]
+    },
+    {
+      "id": "christianity:life:mozambique",
+      "tradition": "christianity",
+      "section": "peace",
+      "order": 1,
+      "title": "Mozambique: onderhandelen naar een akkoord",
+      "summary": "Het vredesakkoord van 1992 laat zien hoe religieuze bemiddelaars, politieke partijen en internationale actoren samenwerkten.",
+      "tags": [
+        "Bemiddeling",
+        "Geschiedenis"
+      ],
+      "blocks": [
+        {
+          "title": "Van oorlog naar overleg",
+          "text": "De regering van Mozambique en RENAMO onderhandelden in Rome na een langdurige burgeroorlog. Op 4 oktober 1992 ondertekenden Joaquim Chissano en Afonso Dhlakama het algemene vredesakkoord.",
+          "sourceIds": [
+            "agreement"
+          ]
+        },
+        {
+          "title": "De rol van Sant’Egidio",
+          "text": "Sant’Egidio beschrijft hoe langdurige contacten en vertrouwen ruimte voor gesprekken schiepen. Haar vertegenwoordigers maakten deel uit van een bredere bemiddeling. Het akkoord zelf documenteert politieke, militaire en humanitaire afspraken.",
+          "sourceIds": [
+            "community",
+            "agreement"
+          ]
+        },
+        {
+          "title": "Betekenis en grenzen",
+          "text": "Vredestichten kan voor katholieken een concrete vorm van geloofspraktijk zijn. Matteüs 5:9 is een religieus aanknopingspunt, geen bewijs dat één organisatie vrede heeft veroorzaakt. Een ondertekend akkoord vraagt uitvoering, toezicht en blijvend politiek draagvlak.",
+          "sourceIds": [
+            "text",
+            "agreement"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "Bemiddeling als proces",
+        "items": [
+          "Contact onderhouden en partijen de mogelijkheid bieden elkaar te ontmoeten.",
+          "Belangen en garanties vertalen in concrete, controleerbare afspraken.",
+          "Onderscheid houden tussen een ondertekend akkoord en duurzame vrede in de samenleving."
+        ],
+        "sourceIds": [
+          "agreement",
+          "community"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "Matteüs 5:9",
+          "url": "https://bible.usccb.org/bible/matthew/5",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "christianity",
+            "edition": "catholic-nl",
+            "verse": 9,
+            "endVerse": 9,
+            "book": "MAT",
+            "chapter": 5
+          }
+        },
+        {
+          "id": "agreement",
+          "kind": "historical",
+          "label": "VN Peacemaker · General Peace Agreement for Mozambique",
+          "url": "https://peacemaker.un.org/en/node/9546",
+          "context": "Primair vredesakkoord met politieke, militaire en humanitaire protocollen."
+        },
+        {
+          "id": "community",
+          "kind": "practice",
+          "label": "Sant’Egidio · dossier Mozambique",
+          "url": "https://www.santegidio.org/pageID/34180/langID/en/Dossier-Mozambique-and-the-Community-of-Sant-Egidio.html",
+          "context": "Eigen terugblik van een betrokken bemiddelaar; lezen naast het akkoord."
+        }
+      ],
+      "actors": [
+        {
+          "name": "Regering / FRELIMO",
+          "role": "Onderhandelingspartij; president Joaquim Chissano tekende het akkoord."
+        },
+        {
+          "name": "RENAMO",
+          "role": "Onderhandelingspartij; leider Afonso Dhlakama tekende het akkoord."
+        },
+        {
+          "name": "Bemiddelaars en internationale partners",
+          "role": "Ondersteunden gesprekken, afspraken en de uitvoering; Sant’Egidio was een van de betrokken actoren."
+        }
+      ],
+      "process": [
+        {
+          "date": "1990",
+          "title": "Gesprekken in Rome",
+          "text": "Een onderhandelingsproces brengt vertegenwoordigers van de regering en RENAMO bijeen.",
+          "sourceIds": [
+            "community"
+          ]
+        },
+        {
+          "date": "4 oktober 1992",
+          "title": "Algemeen vredesakkoord",
+          "text": "De partijen tekenen een samenhangend pakket afspraken.",
+          "sourceIds": [
+            "agreement"
+          ]
+        },
+        {
+          "date": "Na ondertekening",
+          "title": "Uitvoering blijft noodzakelijk",
+          "text": "Politieke en militaire afspraken vragen garanties en toezicht. Het akkoord beschrijft ook die uitvoering.",
+          "sourceIds": [
+            "agreement"
+          ]
+        }
+      ],
+      "location": {
+        "name": "Rome",
+        "lat": 41.9,
+        "lng": 12.5
+      },
+      "eventId": "christianity:mozambique-peace"
+    },
+    {
+      "id": "christianity:life:assisi",
+      "tradition": "christianity",
+      "section": "peace",
+      "order": 2,
+      "title": "Assisi: ontmoeten met behoud van verschil",
+      "summary": "De gebedsdag van 1986 verbond inzet voor vrede met verschillende religieuze overtuigingen.",
+      "tags": [
+        "Dialoog",
+        "Geschiedenis"
+      ],
+      "blocks": [
+        {
+          "title": "Een katholiek initiatief",
+          "text": "Johannes Paulus II nodigde vertegenwoordigers van kerken en religies uit voor de gebedsdag in Assisi op 27 oktober 1986. Zijn slottoespraak verbindt de ontmoeting met verantwoordelijkheid voor vrede en eerbied voor het menselijk leven.",
+          "sourceIds": [
+            "assisi"
+          ]
+        },
+        {
+          "title": "Geen samengevoegde religie",
+          "text": "De paus benadrukte dat vorm en inhoud van de gebeden verschilden. De ontmoeting betekende geen herleiding tot één gemeenschappelijk geloof. Deze bron laat zien hoe hij vanuit zijn katholieke overtuiging ruimte voor samenwerking verwoordde.",
+          "sourceIds": [
+            "assisi"
+          ]
+        },
+        {
+          "title": "Gebed en verantwoordelijkheid",
+          "text": "Romeinen 12 verbindt vrede met het afzien van wraak en noemt ook de grens van wat van mensen afhangt. De tekst kan de ethische inzet helpen duiden. Zij verklaart niet op zichzelf de diplomatieke gevolgen van een ontmoeting.",
+          "sourceIds": [
+            "text"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "Wat ontmoeting vraagt",
+        "items": [
+          "Deelnemers spreken vanuit hun eigen overtuiging en luisteren naar die van anderen.",
+          "Een gedeelde inzet voor vrede hoeft geen overeenstemming over alle geloofsvragen te veronderstellen.",
+          "Een symbolische ontmoeting moet worden onderscheiden van onderhandelingen of een juridisch akkoord."
+        ],
+        "sourceIds": [
+          "assisi"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "Romeinen 12:17–21",
+          "url": "https://bible.usccb.org/bible/romans/12",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "christianity",
+            "edition": "catholic-nl",
+            "verse": 17,
+            "endVerse": 21,
+            "book": "ROM",
+            "chapter": 12
+          }
+        },
+        {
+          "id": "assisi",
+          "kind": "historical",
+          "label": "Johannes Paulus II · slottoespraak Assisi, 27 oktober 1986",
+          "url": "https://www.vatican.va/content/john-paul-ii/en/speeches/1986/october/documents/hf_jp-ii_spe_19861027_prayer-peace-assisi-final.html",
+          "context": "Primair document van de katholieke initiatiefnemer; vertegenwoordigt niet automatisch de uitleg van alle deelnemers."
+        }
+      ],
+      "actors": [
+        {
+          "name": "Johannes Paulus II",
+          "role": "Katholieke initiatiefnemer en gastheer."
+        },
+        {
+          "name": "Vertegenwoordigers van kerken en religies",
+          "role": "Namen deel vanuit onderscheiden overtuigingen."
+        }
+      ],
+      "process": [
+        {
+          "date": "27 oktober 1986",
+          "title": "Gebedsdag in Assisi",
+          "text": "Gebed, ontmoeting en gezamenlijk aanwezig zijn staan in het teken van vrede.",
+          "sourceIds": [
+            "assisi"
+          ]
+        },
+        {
+          "date": "Slottoespraak",
+          "title": "Verschil wordt uitgesproken",
+          "text": "De paus benoemt zowel gemeenschappelijke verantwoordelijkheid als verschillende gebedsvormen.",
+          "sourceIds": [
+            "assisi"
+          ]
+        }
+      ],
+      "location": {
+        "name": "Assisi",
+        "lat": 43.07,
+        "lng": 12.62
+      },
+      "eventId": "christianity:assisi"
+    },
+    {
+      "id": "christianity:life:social-friendship",
+      "tradition": "christianity",
+      "section": "peace",
+      "order": 3,
+      "title": "Fratelli tutti: sociale vriendschap",
+      "summary": "Een katholieke sociale encycliek verbindt de naaste met dialoog, maatschappelijke structuren en vredeswerk.",
+      "tags": [
+        "Dialoog",
+        "Samenleving"
+      ],
+      "blocks": [
+        {
+          "title": "De naaste als vertrekpunt",
+          "text": "Het verhaal van de barmhartige Samaritaan speelt een centrale rol in Fratelli tutti. De encycliek leest de ontmoeting met de gewonde mens als uitnodiging om onverschilligheid te doorbreken.",
+          "sourceIds": [
+            "text",
+            "encyclical"
+          ]
+        },
+        {
+          "title": "Van ontmoeting naar samenleving",
+          "text": "De encycliek uit 2020 bespreekt broederlijkheid en sociale vriendschap ook op maatschappelijk en politiek niveau. Dialoog vraagt aandacht voor de ander; vrede wordt verbonden met rechtvaardigheid en het verwerken van onrecht.",
+          "sourceIds": [
+            "encyclical"
+          ]
+        },
+        {
+          "title": "Verzoening is geen vergeten",
+          "text": "In de bespreking van vrede onderscheidt Franciscus vergeving van het uitwissen van herinnering en onrecht. Dit is katholiek sociaal onderricht, geen neutrale beoordeling van ieder concreet conflict. De toepasbaarheid vraagt steeds kennis van de plaatselijke geschiedenis.",
+          "sourceIds": [
+            "encyclical"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "Drie schaalniveaus",
+        "items": [
+          "Persoonlijk: de kwetsbare ander opmerken en nabij worden.",
+          "Maatschappelijk: instituties en verhoudingen beoordelen vanuit menselijke waardigheid.",
+          "Politiek: dialoog, herinnering en rechtvaardigheid verbinden in vredesprocessen."
+        ],
+        "sourceIds": [
+          "encyclical"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "Lucas 10:33–37",
+          "url": "https://bible.usccb.org/bible/luke/10",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "christianity",
+            "edition": "catholic-nl",
+            "verse": 33,
+            "endVerse": 37,
+            "book": "LUK",
+            "chapter": 10
+          }
+        },
+        {
+          "id": "encyclical",
+          "kind": "tradition",
+          "label": "Franciscus · Fratelli tutti, hoofdstukken 2, 6 en 7",
+          "url": "https://www.vatican.va/content/francesco/en/encyclicals/documents/papa-francesco_20201003_enciclica-fratelli-tutti.html",
+          "context": "Encycliek van 3 oktober 2020; vooral de Samaritaan, dialoog en de wegen van vrede. Via de bronpagina is ook de Nederlandse vertaling beschikbaar."
+        }
+      ],
+      "actors": [
+        {
+          "name": "Paus Franciscus",
+          "role": "Auteur van de encycliek."
+        },
+        {
+          "name": "Burgers, gemeenschappen en bestuurders",
+          "role": "Worden aangesproken op sociale vriendschap en verantwoordelijkheid voor het gemeenschappelijke leven."
+        }
+      ],
+      "process": [
+        {
+          "date": "3 oktober 2020",
+          "title": "Encycliek ondertekend",
+          "text": "Franciscus ondertekent de encycliek in Assisi, bij het graf van Franciscus.",
+          "sourceIds": [
+            "encyclical"
+          ]
+        }
+      ],
+      "location": {
+        "name": "Assisi",
+        "lat": 43.07,
+        "lng": 12.62
+      },
+      "eventId": "christianity:fratelli"
+    }
+  ]
+}

@@ -13,6 +13,7 @@ import importlib.util
 import io
 import json
 import pathlib
+import re
 import urllib.request
 import xml.etree.ElementTree as ET
 import zipfile
@@ -76,7 +77,15 @@ def import_usfx(locale, names):
         node = document.find(f"book[@id='{book_id}']")
         if node is None:
             raise ValueError(f"Missing source book: {locale}/{book_id}")
-        books.append(BIBLE.parse_book(node, book_id, names[book_id], "OT"))
+        book = BIBLE.parse_book(node, book_id, names[book_id], "OT")
+        if locale == "he":
+            # Ten pinned WLC verses encode typography/lemma wrappers as literal
+            # apostrophe-delimited text. Drop those exact wrappers, keeping all
+            # Hebrew letters, accents, spacing and verse numbers untouched.
+            for chapter in book["chapters"]:
+                for verse in chapter["verses"]:
+                    verse["text"] = re.sub(r"'(?:l s=\"H\d+\"|/l|seg(?: type=\"x-(?:large|small|suspended)\")?)'", "", verse["text"])
+        books.append(book)
     original = locale == "he"
     publication = "hboWLC" if original else "engjps"
     meta = {
@@ -96,6 +105,8 @@ def import_usfx(locale, names):
             "fr": "Texte source hébreu massorétique. La numérotation des chapitres et des versets propre à cette édition est conservée." if original else "Traduction juive anglaise de la Jewish Publication Society (1917). La numérotation propre à cette édition est conservée."
         }
     }
+    if original:
+        meta["processing"] += " Literal apostrophe-delimited l/seg typography and lemma wrappers removed; enclosed Hebrew text retained verbatim."
     return edition(meta, books)
 
 

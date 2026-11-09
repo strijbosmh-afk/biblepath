@@ -1081,7 +1081,10 @@
           }
         ],
         "faithImpact": "Assisi wordt een belangrijk katholiek voorbeeld van interreligieuze ontmoeting zonder alle geloofsinhouden samen te voegen. Het versterkt de gedachte dat religieuze overtuiging een verantwoordelijkheid voor vrede kan voeden en samenwerking met anderen mogelijk maakt.",
-        "nuance": "Een symbolische ontmoeting is geen vervanging van politieke onderhandelingen of gerechtigheid voor slachtoffers. Gezamenlijke aanwezigheid betekent evenmin dat alle aanwezigen dezelfde theologie of gebedspraktijk delen."
+        "nuance": "Een symbolische ontmoeting is geen vervanging van politieke onderhandelingen of gerechtigheid voor slachtoffers. Gezamenlijke aanwezigheid betekent evenmin dat alle aanwezigen dezelfde theologie of gebedspraktijk delen.",
+        "lifeEntry": {
+          "id": "christianity:life:assisi"
+        }
       },
       {
         "id": "christianity:catechism",
@@ -1115,6 +1118,46 @@
         ],
         "faithImpact": "De Catechismus wordt een gemeenschappelijk referentiepunt voor katholieke geloofstaal in uiteenlopende landen. Hij ondersteunt lokale catechese, terwijl uitleg en toepassing rekening moeten houden met de vragen en culturele omstandigheden van de lezers.",
         "nuance": "De Catechismus is geen nieuwe Bijbel en geen vervanging van alle andere bronnen. De verschillende uitspraken staan in verband met hun bronnen en hebben niet zonder meer allemaal dezelfde leerstellige rang."
+      },
+      {
+        "id": "christianity:mozambique-peace",
+        "title": "Mozambique: onderhandelen naar een akkoord",
+        "start": 1992,
+        "dateLabel": "4 oktober 1992",
+        "kind": "history",
+        "category": "Vrede en dialoog",
+        "summary": "Het vredesakkoord van 1992 laat zien hoe religieuze bemiddelaars, politieke partijen en internationale actoren samenwerkten.",
+        "context": "Deze gebeurtenis is verbonden met het dossier Vrede & verzoening. Daar staan de primaire bronnen naast het perspectief van betrokken personen en organisaties.",
+        "what": "De regering van Mozambique en RENAMO onderhandelden in Rome na een langdurige burgeroorlog. Op 4 oktober 1992 ondertekenden Joaquim Chissano en Afonso Dhlakama het algemene vredesakkoord.",
+        "stakeholders": [
+          {
+            "name": "Regering / FRELIMO",
+            "role": "Onderhandelingspartij; president Joaquim Chissano tekende het akkoord."
+          },
+          {
+            "name": "RENAMO",
+            "role": "Onderhandelingspartij; leider Afonso Dhlakama tekende het akkoord."
+          },
+          {
+            "name": "Bemiddelaars en internationale partners",
+            "role": "Ondersteunden gesprekken, afspraken en de uitvoering; Sant’Egidio was een van de betrokken actoren."
+          }
+        ],
+        "faithImpact": "Het dossier onderzoekt hoe religieuze overtuigingen bijdragen aan een publieke inzet voor vrede en dialoog. Het maakt ook zichtbaar wie spreekt en welke verschillen blijven bestaan.",
+        "nuance": "Een akkoord of verklaring is een historisch document en geen bewijs dat alle betrokken mensen dezelfde overtuiging delen. Uitvoering en maatschappelijke ontvangst vragen afzonderlijk onderzoek.",
+        "sources": [
+          {
+            "title": "VN Peacemaker · General Peace Agreement for Mozambique",
+            "url": "https://peacemaker.un.org/en/node/9546"
+          },
+          {
+            "title": "Sant’Egidio · dossier Mozambique",
+            "url": "https://www.santegidio.org/pageID/34180/langID/en/Dossier-Mozambique-and-the-Community-of-Sant-Egidio.html"
+          }
+        ],
+        "lifeEntry": {
+          "id": "christianity:life:mozambique"
+        }
       },
       {
         "id": "christianity:ecumenism",
@@ -1254,7 +1297,10 @@
           }
         ],
         "faithImpact": "De encycliek verbindt naastenliefde met sociale en politieke verantwoordelijkheid over bestaande groepsgrenzen heen. Voor katholieke geloofspraktijk betekent dit dat de vraag wie als naaste wordt behandeld ook betrekking heeft op instituties en publieke keuzes.",
-        "nuance": "De tekst is een morele en spirituele bijdrage aan maatschappelijk debat, geen uitgewerkt beleidsprogramma voor ieder land. Haar oproep tot ontmoeting maakt werkelijke conflicten over rechtvaardigheid en macht niet onbelangrijk."
+        "nuance": "De tekst is een morele en spirituele bijdrage aan maatschappelijk debat, geen uitgewerkt beleidsprogramma voor ieder land. Haar oproep tot ontmoeting maakt werkelijke conflicten over rechtvaardigheid en macht niet onbelangrijk.",
+        "lifeEntry": {
+          "id": "christianity:life:social-friendship"
+        }
       },
       {
         "id": "christianity:doctrine-discovery",
@@ -2455,6 +2501,38 @@
         "nuance": "Regina Jonas was al in 1935 in Duitsland gewijd. De gebeurtenis verandert het beleid van andere Joodse stromingen niet automatisch."
       },
       {
+        "id": "judaism:dabru-emet",
+        "title": "Dabru Emet: joods-christelijk gesprek",
+        "start": 2000,
+        "dateLabel": "10 september 2000",
+        "kind": "text",
+        "category": "Vrede en dialoog",
+        "summary": "Een verklaring van joodse geleerden uit 2000 onderzoekt samenwerking en blijvende geloofsverschillen.",
+        "context": "Deze gebeurtenis is verbonden met het dossier Vrede & verzoening. Daar staan de primaire bronnen naast het perspectief van betrokken personen en organisaties.",
+        "what": "Dabru Emet verscheen op 10 september 2000 na gesprekken van joodse geleerden in de Verenigde Staten. De tekst bespreekt hoe joden over christendom en christenen kunnen spreken na veranderingen in christelijke houdingen tegenover het jodendom.",
+        "stakeholders": [
+          {
+            "name": "Vier joodse geleerden",
+            "role": "Stelden de tekst op vanuit verschillende achtergronden."
+          },
+          {
+            "name": "Ondertekenaars en gesprekspartners",
+            "role": "Ontvingen en bespraken de uitnodiging tot joods-christelijk gesprek."
+          }
+        ],
+        "faithImpact": "Het dossier onderzoekt hoe religieuze overtuigingen bijdragen aan een publieke inzet voor vrede en dialoog. Het maakt ook zichtbaar wie spreekt en welke verschillen blijven bestaan.",
+        "nuance": "Een akkoord of verklaring is een historisch document en geen bewijs dat alle betrokken mensen dezelfde overtuiging delen. Uitvoering en maatschappelijke ontvangst vragen afzonderlijk onderzoek.",
+        "sources": [
+          {
+            "title": "ICJS · Dabru Emet, 10 september 2000",
+            "url": "https://icjs.org/dabru-emet-text/"
+          }
+        ],
+        "lifeEntry": {
+          "id": "judaism:life:dabru-emet"
+        }
+      },
+      {
         "id": "judaism:digital-study",
         "title": "Start van Sefaria",
         "start": 2013,
@@ -3573,6 +3651,38 @@
         "nuance": "Een datering van perkament is geen automatische datering van de inkt of het schrijven. De bladen vertegenwoordigen slechts een deel van de Koran en beslissen niet op zichzelf elke vraag over de tekstgeschiedenis."
       },
       {
+        "id": "islam:marrakesh-declaration",
+        "title": "Marrakesh: bescherming van religieuze minderheden",
+        "start": 2016,
+        "dateLabel": "27 januari 2016",
+        "kind": "text",
+        "category": "Vrede en dialoog",
+        "summary": "Een verklaring uit 2016 verbindt islamitische argumentatie met de bescherming van religieuze minderheden.",
+        "context": "Deze gebeurtenis is verbonden met het dossier Vrede & verzoening. Daar staan de primaire bronnen naast het perspectief van betrokken personen en organisaties.",
+        "what": "De verklaring van Marrakesh kwam tot stand tijdens een bijeenkomst van 25–27 januari 2016. Zij reageert op geweld tegen religieuze minderheden en op het inzetten van religie om dat geweld te rechtvaardigen.",
+        "stakeholders": [
+          {
+            "name": "Deelnemende geleerden en religieuze leiders",
+            "role": "Formuleren argumenten voor bescherming van minderheden."
+          },
+          {
+            "name": "Bestuurders en maatschappelijke organisaties",
+            "role": "Worden aangesproken op concrete vertaling van de verklaring."
+          }
+        ],
+        "faithImpact": "Het dossier onderzoekt hoe religieuze overtuigingen bijdragen aan een publieke inzet voor vrede en dialoog. Het maakt ook zichtbaar wie spreekt en welke verschillen blijven bestaan.",
+        "nuance": "Een akkoord of verklaring is een historisch document en geen bewijs dat alle betrokken mensen dezelfde overtuiging delen. Uitvoering en maatschappelijke ontvangst vragen afzonderlijk onderzoek.",
+        "sources": [
+          {
+            "title": "Verklaring van Marrakesh · publicatie Mezquita de Sevilla",
+            "url": "https://mezquitadesevilla.com/la-declaracion-de-marrakech/"
+          }
+        ],
+        "lifeEntry": {
+          "id": "islam:life:marrakesh"
+        }
+      },
+      {
         "id": "islam:fraternity",
         "title": "Document over menselijke broederlijkheid",
         "start": 2019,
@@ -3603,7 +3713,10 @@
           }
         ],
         "faithImpact": "Het document biedt een zichtbaar voorbeeld van samenwerking vanuit verschillende religieuze overtuigingen. Het stimuleert reflectie op de relatie tussen geloof, geweldloos samenleven en verantwoordelijkheid voor anderen.",
-        "nuance": "Het document maakt de islam en het katholicisme niet tot één religie. De ondertekenaars spreken vanuit hun instellingen en vertegenwoordigen niet elke opvatting binnen beide tradities."
+        "nuance": "Het document maakt de islam en het katholicisme niet tot één religie. De ondertekenaars spreken vanuit hun instellingen en vertegenwoordigen niet elke opvatting binnen beide tradities.",
+        "lifeEntry": {
+          "id": "islam:life:human-fraternity"
+        }
       }
     ]
   },

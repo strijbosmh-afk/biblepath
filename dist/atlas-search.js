@@ -5,7 +5,7 @@
  const local=v=>typeof v==='string'?v:v?.[root.BibleI18n?.language||'nl']??v?.en??'';
  const flatten=v=>typeof v==='string'?v:Array.isArray(v)?v.map(flatten).join(' '):v&&typeof v==='object'?Object.values(v).map(flatten).join(' '):'';
  const names={christianity:'Christendom · rooms-katholiek',judaism:'Jodendom',islam:'Islam'};
- const kinds={people:'Personen',places:'Plaatsen',topics:'Onderwerpen',events:'Tijdslijn',festivals:'Feestdagen & rituelen',texts:'Tekstpassages'};
+ const kinds={people:'Personen',places:'Plaatsen',topics:'Onderwerpen',events:'Tijdslijn',festivals:'Feestdagen & rituelen',life:'Leven & samenleving',texts:'Tekstpassages'};
  root.BibleI18n?.registerRows([['Search ReligieAtlas','Doorzoek ReligieAtlas','Rechercher dans ReligieAtlas'],['Find people, places, topics and scripture passages.','Vind personen, plaatsen, onderwerpen en tekstpassages.','Trouvez des personnes, lieux, thèmes et passages.'],['All religions','Alle religies','Toutes les religions'],['← Back to search results','← Terug naar zoekresultaten','← Retour aux résultats'],['This profile is not available.','Dit profiel is niet beschikbaar.','Ce profil est indisponible.'],['The profile could not load. Try again.','Het profiel kon niet worden geladen. Probeer opnieuw.','Le profil n’a pas pu être chargé. Réessayez.']]);
  class AtlasSearchModel{
   constructor(){this.records=new Map();}

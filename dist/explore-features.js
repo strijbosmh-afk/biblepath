@@ -95,8 +95,8 @@
   }
  }
  class AtlasExplore{
-  constructor(container,{onPassage=()=>{},onTimelineMode=()=>{}}={}){
-   this.el=container;this.onPassage=onPassage;this.onTimelineMode=onTimelineMode;this.states=new Map();this.request=0;
+  constructor(container,{onPassage=()=>{},onTimelineMode=()=>{},onDossier=()=>{}}={}){
+   this.el=container;this.onPassage=onPassage;this.onTimelineMode=onTimelineMode;this.onDossier=onDossier;this.states=new Map();this.request=0;
    this.worker=null;this.searchId=0;this.searchState={query:'',traditions:['christianity'],page:0,mode:'all',topicId:''};
    this.view='';this.tradition='christianity';this.passages=[];
    this.onClick=e=>this.click(e);this.onInput=e=>this.input(e);this.onChange=e=>this.change(e);
@@ -419,7 +419,7 @@
    const e=this.model.events.find(e=>e.id===this.state.selected)||this.model.events[0];if(!e)return;
    this.state.selected=e.id;
    // Keep previously issued undated-story buttons valid while selecting other events.
-   this.el.querySelector('#timeline-detail').innerHTML=`<div><button class="explore-btn timeline-back" data-action="back-timeline">← Terug naar de tijdslijn</button><span class="library-kicker">GESELECTEERD MOMENT · ${esc({history:'GESCHIEDENIS',tradition:'OVERLEVERING',text:'TEKSTGESCHIEDENIS'}[e.kind]||e.kind)}</span><h2 tabindex="-1">${esc(e.title)}</h2>${e.tradition?`<p class="explore-tag">${esc(names[e.tradition])}</p> `:''}<p class="explore-tag">${esc(e.dateLabel||date(e.start))}</p><h3>Wat gebeurde er?</h3><p>${esc(e.what||e.summary)}</p>${this.stakeholders(e)}</div><div><h3>Betekenis voor geloof en praktijk</h3><p>${esc(e.faithImpact||e.context)}</p><h3>Historische context en nuance</h3><p>${esc(e.nuance||e.context)}</p>${this.passageButton(e.passage)}${this.sources(e.sources)}${this.timelineComparison?this.comparisonContext(e):''}</div>`;
+   this.el.querySelector('#timeline-detail').innerHTML=`<div><button class="explore-btn timeline-back" data-action="back-timeline">← Terug naar de tijdslijn</button><span class="library-kicker">GESELECTEERD MOMENT · ${esc({history:'GESCHIEDENIS',tradition:'OVERLEVERING',text:'TEKSTGESCHIEDENIS'}[e.kind]||e.kind)}</span><h2 tabindex="-1">${esc(e.title)}</h2>${e.tradition?`<p class="explore-tag">${esc(names[e.tradition])}</p> `:''}<p class="explore-tag">${esc(e.dateLabel||date(e.start))}</p><h3>Wat gebeurde er?</h3><p>${esc(e.what||e.summary)}</p>${this.stakeholders(e)}</div><div><h3>Betekenis voor geloof en praktijk</h3><p>${esc(e.faithImpact||e.context)}</p><h3>Historische context en nuance</h3><p>${esc(e.nuance||e.context)}</p>${this.passageButton(e.passage)}${e.lifeEntry?`<button class="explore-btn" data-life-dossier="${esc(e.lifeEntry.id)}">Lees het dossier Vrede &amp; verzoening →</button>`:''}${this.sources(e.sources)}${this.timelineComparison?this.comparisonContext(e):''}</div>`;
   }
   contemporaries(event){
    return this.model.events.filter(e=>e.tradition!==event.tradition&&e.start<=(event.end||event.start)+25&&(e.end||e.start)>=event.start-25).sort((a,b)=>Math.abs(a.start-event.start)-Math.abs(b.start-event.start)).slice(0,8);
@@ -530,6 +530,7 @@
   click(event){
    const b=event.target.closest('button,[data-timeline-link]');if(!b||!this.el.contains(b))return;
    const d=b.dataset;
+   if(d.lifeDossier){const event=this.model?.events.find(e=>e.id===this.state.selected);if(event?.lifeEntry?.id===d.lifeDossier)this.onDossier?.(event.tradition||this.tradition,event.lifeEntry.id,'peace');return;}
    if(d.timelineLink){this.openTimelineConnection(d.timelineLink);return;}
    if(d.fitConnection){this.fitTimelineConnection(d.fitConnection);return;}
    if(d.timelineMode){this.timelineComparison=d.timelineMode==='comparison';this.renderTimeline();this.onTimelineMode?.(this.timelineComparison);this.el.querySelector(`[data-timeline-mode="${d.timelineMode}"]`)?.focus({preventScroll:true});return}

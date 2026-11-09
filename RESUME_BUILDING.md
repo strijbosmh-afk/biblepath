@@ -1,6 +1,6 @@
 # Resume building ReligieAtlas
 
-Last updated: 22 October 2026.
+Last updated: 9 November 2026.
 
 ## Start here
 
@@ -374,3 +374,16 @@ experience.css adds emergency wrapping for compounds, long names and source labe
 Timeline cards show complete date/title/category labels without ellipses or line clamps, using235x230px cards and250px horizontal spacing. TimelineLayout in explore-features.js supplies card grouping, clamping, lane placement, SVG anchors and badge exclusion bounds; matching CSS uses280px comparison lanes and892px track/SVG height. The single-religion axis/pins/two rows are also repositioned to fit complete cards. If editing geometry, update both the layout constants and corresponding CSS. Model tests verify non-overlap at clamped edges, bounds and line endpoints at card edges. Virtualization, date coordinates, shared camera, filters, links/QR and source routing remain.
 
 All52 test files passed (48 CJS,4 Python;106.3s). Affected workspace/navigation/comparison/connection tests were repeated after the final small CSS corrections. Local browser QA covers every seven-view religion menu at320/390/1280px, all22 festival dossiers at320px, NL/EN/FR global comparison/topic/timeline pages at320/1280px, long Catholic and Islamic profiles, all four profile tabs, central search results, sources/help, QR sharing, long timeline names/dates, zoom/pan and pointer navigation out of a map. Read-only DOM overflow checks and timeline child bounds are in ../verification/layout-audit/local-layout-checks.json. Desktop pm-heading is intentionally hidden at1px; its screen-reader text and the decorative profile-initial glyph are expected scanner exceptions. Save public-domain live evidence in the same directory. The owned preview server is5194; stop it at final teardown.
+
+
+## Prayer, dignity and peace collections (9 November 2026)
+
+- Three new subviews under each religion: Gebed & dagelijks leven, Vriendschap & menselijke waardigheid, Vrede & verzoening. Each has three substantial Dutch dossiers (27 total), religiously distinct sources, contextual paragraphs, practice descriptions and documented source links. These are information collections without study questions or invented testimonies.
+- `dist/lived-{christianity,judaism,islam}.json` contains the content; `lived-religion.js` renders independent search/tag/selection state per religion and section. Catholic content uses Sant’Egidio’s prayer, friendship with people in poverty and peace as its perspective. Jewish and Islamic collections use their own scripture and interpretive sources.
+- 60 source references include 31 internal reader links validated against the selected edition. Catholic links open Dutch Catholic, Jewish links open the Hebrew Tanakh and Islamic links open the Dutch Qur’an. Psalm 4 is verses 1–8 in this Dutch Catholic edition, distinct from USCCB 2–9; the dossier explains this.
+- Peace cases have named participants, dated process context and optional lazy-loaded Leaflet maps. Coordinates identify approximate city centres, not exact venues. Six historical dossiers link reciprocally to timeline events. Fratelli tutti was signed at Assisi, not Rome.
+- Central atlas search indexes every dossier under Leven & samenleving. Reader/timeline exploration retains religion, selected dossier and local filters; source returns also preserve an open map and camera.
+- New tests: `node tests/lived-religion-data.cjs`, `node tests/lived-religion-ui.cjs`; `node tests/interfaith-app.cjs --life` covers lazy loading/races/retry, source editions, language and navigation. `tests/explore-interaction.cjs` exercises actual dossier callbacks from both single-religion and comparing timelines.
+- Responsive checks exercised all 27 dossiers at 320px, plus desktop and 390px map/navigation paths. Run all CJS/Python tests before publishing. Browser viewport testing is not native-device or actual browser text-zoom testing.
+
+Hebrew reader correction: the pinned WLC source encodes literal apostrophe-delimited lemma/typography wrappers in ten verses, including Deuteronomy 6:4. The importer now removes only these exact wrappers, retaining enclosed Hebrew letters and accents. All other verse texts and numbering are unchanged; the output text hash is regenerated and the importer check reproduces it.

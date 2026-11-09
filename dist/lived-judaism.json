@@ -1,0 +1,750 @@
+{
+  "meta": {
+    "tradition": "judaism",
+    "reviewedAt": "2026-11-09",
+    "scope": "Jodendom. Redactionele informatie voor hoger onderwijs; geen gebedshandleiding, studieopdracht of uitspraak namens alle gelovigen. Heilige teksten, religieuze uitleg, praktijkbronnen en historische documenten worden onderscheiden.",
+    "sections": {
+      "prayer": {
+        "intro": "Sjema, Amida en zegeningen verbinden teksten met het ritme van het dagelijkse leven. Lees Tora en rabbijnse uitleg naast elkaar.",
+        "note": "De dossiers vertrekken vanuit rabbijnse bronnen. Richtingen, gemeenschappen en individuele praktijken verschillen; normteksten zijn geen statistische beschrijving van het dagelijks leven."
+      },
+      "dignity": {
+        "intro": "Tsedaka, daden van nabijheid en ontvangst van de vreemdeling geven eigen joodse taal aan menselijke waardigheid.",
+        "note": "Tora, Talmoed, halachische literatuur en een hedendaagse organisatie blijven herkenbaar als verschillende bronnen. Sant’Egidio’s drie P’s worden niet als joods raamwerk opgelegd."
+      },
+      "peace": {
+        "intro": "Vrede nastreven, onrecht herstellen en met andere religies spreken. Verken joodse teksten en een moderne dialoogverklaring.",
+        "note": "De gekozen bronnen vertegenwoordigen specifieke stemmen. Een rabbijnse uitspraak, een moderne verklaring en politieke werkelijkheid mogen niet met elkaar worden vereenzelvigd."
+      }
+    }
+  },
+  "entries": [
+    {
+      "id": "judaism:life:shema",
+      "tradition": "judaism",
+      "section": "prayer",
+      "order": 1,
+      "title": "Sjema: luisteren bij avond en morgen",
+      "summary": "Een Tora-passage wordt in de rabbijnse traditie onderdeel van een terugkerend gebedsritme.",
+      "tags": [
+        "Luisteren",
+        "Ritme"
+      ],
+      "blocks": [
+        {
+          "title": "Woorden die meegaan",
+          "text": "Deuteronomium 6:4–9 verbindt de belijdenis van Gods eenheid met liefde, onderricht en het dagelijkse gaan, liggen en opstaan. De tekst wordt hier geopend in de Hebreeuwse Tenach; vertalingen zijn afzonderlijke hulpmiddelen.",
+          "sourceIds": [
+            "text"
+          ]
+        },
+        {
+          "title": "Van tekst naar gebedspraktijk",
+          "text": "Misjna Berakhot begint met de vraag wanneer het Sjema in de avond gereciteerd wordt. De passage bewaart verschillende rabbijnse antwoorden. Zij laat zien dat een dagelijkse praktijk ook het resultaat is van uitleg en discussie.",
+          "sourceIds": [
+            "mishnah"
+          ]
+        },
+        {
+          "title": "Continuïteit en verschil",
+          "text": "De rabbijnse uitleg verbindt bijbelse woorden met vaste momenten. De Misjna is een latere bron dan Deuteronomium. De discussie in Berakhot kan niet worden gebruikt als beschrijving van wat iedere jood vandaag persoonlijk doet.",
+          "sourceIds": [
+            "text",
+            "mishnah"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "Het ritme herkennen",
+        "items": [
+          "Avond en morgen vormen terugkerende oriëntatiepunten voor het Sjema.",
+          "Recitatie verbindt aandacht voor de tekst met herinnering en het doorgeven aan volgende generaties.",
+          "Tijdsbepaling en precieze gebruiken worden uitgewerkt binnen rabbijnse tradities."
+        ],
+        "sourceIds": [
+          "text",
+          "mishnah"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "Deuteronomium 6:4–9",
+          "url": "https://www.sefaria.org/Deuteronomy.6.4-9",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "judaism",
+            "edition": "he",
+            "verse": 4,
+            "endVerse": 9,
+            "book": "DEU",
+            "chapter": 6
+          }
+        },
+        {
+          "id": "mishnah",
+          "kind": "tradition",
+          "label": "Misjna Berakhot 1:1",
+          "url": "https://www.sefaria.org/Mishnah_Berakhot.1.1",
+          "context": "Rabbijnse discussie over de tijd van het avond-Sjema; Sefaria toont tekst en beschikbare vertalingen."
+        }
+      ]
+    },
+    {
+      "id": "judaism:life:amidah",
+      "tradition": "judaism",
+      "section": "prayer",
+      "order": 2,
+      "title": "Amida: staan in gebed",
+      "summary": "De rabbijnse gebedstraditie verbindt woorden, aandacht en de mogelijkheid om met eigen zorgen voor God te staan.",
+      "tags": [
+        "Gemeenschap",
+        "Ritme"
+      ],
+      "blocks": [
+        {
+          "title": "Hanna als bijbels aanknopingspunt",
+          "text": "1 Samuel 1 vertelt over Hanna die in verdriet bidt en verkeerd wordt begrepen door Eli. De passage benadrukt haar persoonlijke nood. Het verhaal is geen volledige beschrijving van het latere synagogale gebed.",
+          "sourceIds": [
+            "text"
+          ]
+        },
+        {
+          "title": "Een geordend gebed",
+          "text": "Misjna Berakhot 4:3 bespreekt het dagelijkse gebed van achttien zegeningen en de mogelijkheid van een verkorte vorm. Verschillende leraren leggen andere accenten. Deze tekst documenteert vorming en uitleg van de rabbijnse gebedspraktijk.",
+          "sourceIds": [
+            "amidah"
+          ]
+        },
+        {
+          "title": "Woorden en aandacht",
+          "text": "De discussie houdt rekening met de vertrouwdheid van de bidder met de gebedstekst. Vaste woorden en persoonlijke aandacht hoeven elkaar niet uit te sluiten. Gebedenboeken en hedendaagse gemeenschappen kunnen in formulering en gebruik verschillen.",
+          "sourceIds": [
+            "amidah"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "Twee bronnen naast elkaar",
+        "items": [
+          "Het verhaal van Hanna geeft een verhalend perspectief op persoonlijk bidden.",
+          "De Misjna bespreekt de vorm en dagelijkse recitatie van een geordend gebed.",
+          "Een hedendaags gebedenboek laat zien hoe een specifieke gemeenschap deze traditie gebruikt."
+        ],
+        "sourceIds": [
+          "text",
+          "amidah"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "1 Samuel 1:9–18",
+          "url": "https://www.sefaria.org/1_Samuel.1.9-18",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "judaism",
+            "edition": "he",
+            "verse": 9,
+            "endVerse": 18,
+            "book": "1SA",
+            "chapter": 1
+          }
+        },
+        {
+          "id": "amidah",
+          "kind": "tradition",
+          "label": "Misjna Berakhot 4:3",
+          "url": "https://www.sefaria.org/Mishnah_Berakhot.4.3",
+          "context": "Primaire rabbijnse discussie over de volledige en verkorte vorm; geen universeel hedendaags gebedsrooster."
+        }
+      ]
+    },
+    {
+      "id": "judaism:life:blessings",
+      "tradition": "judaism",
+      "section": "prayer",
+      "order": 3,
+      "title": "Berakhot: aandacht rond eten",
+      "summary": "Zegeningen verbinden alledaagse handelingen met dankbaarheid en het herkennen van ontvangen voedsel.",
+      "tags": [
+        "Dagelijks leven",
+        "Ritme"
+      ],
+      "blocks": [
+        {
+          "title": "Eten en dankbaarheid",
+          "text": "Deuteronomium 8:10 verbindt eten en verzadiging met het zegenen van God. De context herinnert aan het ontvangen land en waarschuwt tegen zelfgenoegzaamheid. Dankbaarheid staat zo naast herinnering en verantwoordelijkheid.",
+          "sourceIds": [
+            "text"
+          ]
+        },
+        {
+          "title": "Onderscheid in de Misjna",
+          "text": "Misjna Berakhot 6:1 bespreekt verschillende zegeningen voor vruchten, wijn, brood en ander voedsel. Het onderscheid toont hoe een algemene religieuze houding in nauwkeurige dagelijkse vormen wordt uitgewerkt.",
+          "sourceIds": [
+            "blessings"
+          ]
+        },
+        {
+          "title": "Geen uniforme tafel",
+          "text": "Plaatselijke gebruiken, huishoudens en religieuze richtingen geven de praktijk verschillend vorm. Een normatieve tekst schrijft voor en interpreteert; zij meet niet hoe vaak mensen een zegen daadwerkelijk uitspreken.",
+          "sourceIds": [
+            "blessings"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "Een dagelijkse handeling bekijken",
+        "items": [
+          "Voor het eten: rabbijnse teksten onderscheiden zegeningen naar het soort voedsel.",
+          "Na het eten: de Tora verbindt verzadiging met dank aan God.",
+          "Aan tafel: het gebed maakt de relatie tussen ontvangen, genieten en herinneren zichtbaar."
+        ],
+        "sourceIds": [
+          "text",
+          "blessings"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "Deuteronomium 8:10–14",
+          "url": "https://www.sefaria.org/Deuteronomy.8.10-14",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "judaism",
+            "edition": "he",
+            "verse": 10,
+            "endVerse": 14,
+            "book": "DEU",
+            "chapter": 8
+          }
+        },
+        {
+          "id": "blessings",
+          "kind": "tradition",
+          "label": "Misjna Berakhot 6:1",
+          "url": "https://www.sefaria.org/Mishnah_Berakhot.6.1",
+          "context": "Rabbijnse ordening van zegeningen over verschillende soorten voedsel."
+        }
+      ]
+    },
+    {
+      "id": "judaism:life:tzedakah",
+      "tradition": "judaism",
+      "section": "dignity",
+      "order": 1,
+      "title": "Tsedaka: steun die iemand versterkt",
+      "summary": "Tsedaka verbindt hulp aan mensen in armoede met verplichting, waardigheid en het voorkomen van afhankelijkheid.",
+      "tags": [
+        "Armoede",
+        "Waardigheid"
+      ],
+      "blocks": [
+        {
+          "title": "Een open hand",
+          "text": "Deuteronomium 15 verwerpt het afsluiten van hart en hand voor een behoeftige naaste. Het gebod staat in een context van schuld, kwijtschelding en onderlinge verantwoordelijkheid. Het gaat om meer dan een toevallige gift.",
+          "sourceIds": [
+            "text"
+          ]
+        },
+        {
+          "title": "Maimonides over ondersteunen",
+          "text": "Maimonides beschrijft in zijn twaalfde-eeuwse wetboek verschillende niveaus van tsedaka. Het hoogste niveau versterkt iemands bestaansmogelijkheid, bijvoorbeeld door een lening, partnerschap of werk. Dat verschilt van uitsluitend geven nadat nood al is ontstaan.",
+          "sourceIds": [
+            "maimonides"
+          ]
+        },
+        {
+          "title": "De persoon behouden",
+          "text": "Deze ordening biedt een religieus perspectief op waardigheid en op de verhouding tussen gever en ontvanger. Zij is een normatieve rabbijnse bron, geen complete beschrijving van joodse sociale organisaties of moderne sociale zekerheid.",
+          "sourceIds": [
+            "maimonides"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "Vormen van ondersteuning",
+        "items": [
+          "Een onmiddellijke gift kan acute nood verlichten.",
+          "Ondersteuning kan ook gericht zijn op het behouden of herstellen van zelfstandigheid.",
+          "De manier van geven beïnvloedt hoe zichtbaar en afhankelijk de ontvanger wordt."
+        ],
+        "sourceIds": [
+          "maimonides"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "Deuteronomium 15:7–11",
+          "url": "https://www.sefaria.org/Deuteronomy.15.7-11",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "judaism",
+            "edition": "he",
+            "verse": 7,
+            "endVerse": 11,
+            "book": "DEU",
+            "chapter": 15
+          }
+        },
+        {
+          "id": "maimonides",
+          "kind": "tradition",
+          "label": "Maimonides · Misjnee Tora, Gaven aan de armen 10:7–14",
+          "url": "https://www.sefaria.org/Mishneh_Torah%2C_Gifts_to_the_Poor.10.7-14",
+          "context": "Twaalfde-eeuwse halachische ordening van tsedaka; lezen als religieuze normtekst."
+        }
+      ]
+    },
+    {
+      "id": "judaism:life:visiting",
+      "tradition": "judaism",
+      "section": "dignity",
+      "order": 2,
+      "title": "Zieken bezoeken en rouwenden nabij zijn",
+      "summary": "Gemiloet chasadim krijgt vorm in persoonlijke handelingen van zorg en nabijheid.",
+      "tags": [
+        "Nabijheid",
+        "Waardigheid"
+      ],
+      "blocks": [
+        {
+          "title": "Het verhaal van Abraham",
+          "text": "Genesis 18 vertelt over een verschijning aan Abraham en de ontvangst van bezoekers bij zijn tent. De verhalende tekst beschrijft gastvrijheid. De interpretatie als ziekenbezoek behoort tot de latere rabbijnse bespreking.",
+          "sourceIds": [
+            "text"
+          ]
+        },
+        {
+          "title": "Gods handelen navolgen",
+          "text": "De Babylonische Talmoed, Sotah 14a, verbindt navolging van God met het kleden van mensen, het bezoeken van zieken, het troosten van rouwenden en het begraven van doden. Genesis 18 wordt daarin als voorbeeld van Gods ziekenbezoek gelezen.",
+          "sourceIds": [
+            "talmud"
+          ]
+        },
+        {
+          "title": "Nabijheid heeft verschillende vormen",
+          "text": "Een bezoek, praktische hulp of het delen van stilte zijn verschillende manieren waarop gemeenschappen nabijheid kunnen vormgeven. Het rabbijnse kader maakt aandacht voor de kwetsbare ander religieus betekenisvol. De precieze vorm hangt van personen en omstandigheden af.",
+          "sourceIds": [
+            "talmud"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "Van uitleg naar dagelijks leven",
+        "items": [
+          "De tekst benoemt concrete handelingen in plaats van alleen een algemeen gevoel van medeleven.",
+          "Gemeenschappen verbinden bezoek, troost en ondersteuning met onderlinge verantwoordelijkheid.",
+          "De bijbelse scène en de latere rabbijnse duiding blijven als afzonderlijke bronnen herkenbaar."
+        ],
+        "sourceIds": [
+          "talmud",
+          "text"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "Genesis 18:1–8",
+          "url": "https://www.sefaria.org/Genesis.18.1-8",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "judaism",
+            "edition": "he",
+            "verse": 1,
+            "endVerse": 8,
+            "book": "GEN",
+            "chapter": 18
+          }
+        },
+        {
+          "id": "talmud",
+          "kind": "tradition",
+          "label": "Babylonische Talmoed · Sotah 14a",
+          "url": "https://www.sefaria.org/Sotah.14a",
+          "context": "Rabbijnse uitleg over het navolgen van Gods eigenschappen en concrete daden van zorg."
+        }
+      ]
+    },
+    {
+      "id": "judaism:life:hias",
+      "tradition": "judaism",
+      "section": "dignity",
+      "order": 3,
+      "title": "De vreemdeling ontvangen: HIAS",
+      "summary": "Een joods geïnspireerde organisatie verbindt herinnering aan migratie met bescherming van mensen op de vlucht.",
+      "tags": [
+        "Vluchtelingen",
+        "Waardigheid"
+      ],
+      "blocks": [
+        {
+          "title": "Herinnering als motief",
+          "text": "Deuteronomium 10:17–19 verbindt Gods rechtvaardigheid met zorg voor wees, weduwe en vreemdeling. Het gebod om de vreemdeling lief te hebben verwijst naar de eigen herinnering aan vreemdelingschap in Egypte.",
+          "sourceIds": [
+            "text"
+          ]
+        },
+        {
+          "title": "Een hedendaags voorbeeld",
+          "text": "HIAS beschrijft haar opdracht vanuit joodse waarden en geschiedenis. De organisatie ondersteunt vluchtelingen, asielzoekers en andere ontheemde mensen en werkt daarbij met plaatselijke gemeenschappen. De doelgroep is niet beperkt tot joodse vluchtelingen.",
+          "sourceIds": [
+            "hias"
+          ]
+        },
+        {
+          "title": "Perspectief en vertegenwoordiging",
+          "text": "Deze missie laat zien hoe één organisatie religieuze motivatie in humanitair werk vertaalt. HIAS spreekt vanuit een eigen institutioneel perspectief en vertegenwoordigt niet alle joodse opvattingen over migratie of overheidsbeleid.",
+          "sourceIds": [
+            "hias"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "Drie verbindingen",
+        "items": [
+          "Herinnering: de ervaring van vreemdelingschap krijgt betekenis in het spreken over ontvangst.",
+          "Rechten: hulp wordt verbonden met bescherming en het kunnen opbouwen van een bestaan.",
+          "Gemeenschap: samenwerking met ontvangende gemeenschappen maakt deel uit van de eigen opdracht."
+        ],
+        "sourceIds": [
+          "text",
+          "hias"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "Deuteronomium 10:17–19",
+          "url": "https://www.sefaria.org/Deuteronomy.10.17-19",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "judaism",
+            "edition": "he",
+            "verse": 17,
+            "endVerse": 19,
+            "book": "DEU",
+            "chapter": 10
+          }
+        },
+        {
+          "id": "hias",
+          "kind": "practice",
+          "label": "HIAS · Mission & Values",
+          "url": "https://hias.org/who/",
+          "context": "Eigen missie en waarden van een joods geïnspireerde humanitaire organisatie; geen standpunt namens alle joden."
+        }
+      ]
+    },
+    {
+      "id": "judaism:life:pursue-peace",
+      "tradition": "judaism",
+      "section": "peace",
+      "order": 1,
+      "title": "Vrede nastreven: Hillel en Aäron",
+      "summary": "Een rabbijnse uitspraak beschrijft vrede als een actieve houding tegenover mensen en de Tora.",
+      "tags": [
+        "Vredestichten",
+        "Traditie"
+      ],
+      "blocks": [
+        {
+          "title": "Een bijbels beeld van zegen",
+          "text": "Numeri 6:24–26 eindigt de priesterlijke zegen met vrede. In deze passage is vrede verbonden met Gods aangezicht en bescherming. Het begrip kan daardoor niet worden gereduceerd tot alleen de afwezigheid van oorlog.",
+          "sourceIds": [
+            "text"
+          ]
+        },
+        {
+          "title": "Hillels oproep",
+          "text": "Pirkei Avot 1:12 schrijft aan Hillel de oproep toe leerling van Aäron te zijn: vrede liefhebben en nastreven, mensen liefhebben en hen bij de Tora brengen. Het werk bewaart rabbijnse ethische uitspraken.",
+          "sourceIds": [
+            "avot"
+          ]
+        },
+        {
+          "title": "Van uitspraak naar houding",
+          "text": "Het nastreven van vrede veronderstelt actief handelen. De uitspraak is geen uitgewerkt protocol voor internationale onderhandelingen. Een interpretatie voor hedendaagse conflicten vraagt ook kennis van recht, machtsverhoudingen en veiligheid.",
+          "sourceIds": [
+            "avot"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "Een vredesethiek herkennen",
+        "items": [
+          "Vrede is iets om te zoeken en te onderhouden.",
+          "De omgang met mensen staat naast de verbinding met de Tora.",
+          "Een ethisch beginsel en een concrete politieke oplossing zijn verschillende niveaus."
+        ],
+        "sourceIds": [
+          "avot"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "Numeri 6:24–26",
+          "url": "https://www.sefaria.org/Numbers.6.24-26",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "judaism",
+            "edition": "he",
+            "verse": 24,
+            "endVerse": 26,
+            "book": "NUM",
+            "chapter": 6
+          }
+        },
+        {
+          "id": "avot",
+          "kind": "tradition",
+          "label": "Pirkei Avot 1:12 · Hillel over vrede",
+          "url": "https://www.sefaria.org/Pirkei_Avot.1.12",
+          "context": "Rabbijnse ethische uitspraak; de verwijzing naar Aäron is een religieus voorbeeld, geen onafhankelijk historisch portret."
+        }
+      ],
+      "actors": [
+        {
+          "name": "Hillel",
+          "role": "Leraar aan wie de uitspraak in Pirkei Avot wordt toegeschreven."
+        },
+        {
+          "name": "Aäron",
+          "role": "Voorbeeldfiguur in de rabbijnse oproep tot vredestichten."
+        }
+      ],
+      "process": [
+        {
+          "date": "Bijbelse tekst",
+          "title": "Zegen en vrede",
+          "text": "Numeri verbindt vrede met de priesterlijke zegen.",
+          "sourceIds": [
+            "text"
+          ]
+        },
+        {
+          "date": "Rabbijnse overlevering",
+          "title": "Vrede nastreven",
+          "text": "Pirkei Avot formuleert een actieve ethische opdracht.",
+          "sourceIds": [
+            "avot"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "judaism:life:repair",
+      "tradition": "judaism",
+      "section": "peace",
+      "order": 2,
+      "title": "Tesjoeva: herstel tussen mensen",
+      "summary": "Inkeer en verzoening betreffen ook het onrecht dat iemand een ander heeft aangedaan.",
+      "tags": [
+        "Herstel",
+        "Traditie"
+      ],
+      "blocks": [
+        {
+          "title": "Onrecht uitspreken",
+          "text": "Leviticus 19:17–18 zet terechtwijzing, het loslaten van wrok en liefde voor de naaste naast elkaar. De tekst maakt de verhouding tussen mensen tot een religieuze verantwoordelijkheid. Zij vraagt om meer dan het verbergen van een conflict.",
+          "sourceIds": [
+            "text"
+          ]
+        },
+        {
+          "title": "De grens van rituele verzoening",
+          "text": "Misjna Joma 8:9 onderscheidt overtredingen tegenover God van overtredingen tegenover een medemens. Jom Kipoer neemt die laatste niet weg zonder dat de verhouding met de ander wordt aangepakt. De tekst keert zich ook tegen gepland kwaad met uitgestelde inkeer.",
+          "sourceIds": [
+            "yoma"
+          ]
+        },
+        {
+          "title": "Herstel is een proces",
+          "text": "Deze bron maakt duidelijk dat religieuze verzoening niet losstaat van wat er tussen mensen is gebeurd. Zij beschrijft een norm; zij garandeert niet dat iedere benadeelde meteen vertrouwen of verzoening kan ervaren.",
+          "sourceIds": [
+            "yoma"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "Verantwoordelijkheid krijgt vorm",
+        "items": [
+          "Erkennen dat een concrete ander is benadeeld.",
+          "De verhouding met die persoon aanpakken, naast rituele of persoonlijke inkeer.",
+          "Onderscheid houden tussen een religieuze norm en het feitelijke verloop van herstel."
+        ],
+        "sourceIds": [
+          "yoma"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "Leviticus 19:17–18",
+          "url": "https://www.sefaria.org/Leviticus.19.17-18",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "judaism",
+            "edition": "he",
+            "verse": 17,
+            "endVerse": 18,
+            "book": "LEV",
+            "chapter": 19
+          }
+        },
+        {
+          "id": "yoma",
+          "kind": "tradition",
+          "label": "Misjna Joma 8:9",
+          "url": "https://www.sefaria.org/Mishnah_Yoma.8.9",
+          "context": "Rabbijnse tekst over inkeer, Jom Kipoer en verantwoordelijkheid tegenover een medemens."
+        }
+      ],
+      "actors": [
+        {
+          "name": "Degene die onrecht deed",
+          "role": "Wordt aangesproken op inkeer en herstel van de verhouding."
+        },
+        {
+          "name": "De benadeelde ander",
+          "role": "Blijft een concrete gesprekspartner; diens ervaring wordt niet door een ritueel vervangen."
+        }
+      ],
+      "process": [
+        {
+          "date": "Bijbelse tekst",
+          "title": "Naaste en verantwoordelijkheid",
+          "text": "Leviticus bespreekt terechtwijzing, wrok en naastenliefde.",
+          "sourceIds": [
+            "text"
+          ]
+        },
+        {
+          "date": "Misjna",
+          "title": "Ritueel en menselijk herstel",
+          "text": "Joma onderscheidt de verhoudingen tegenover God en tegenover mensen.",
+          "sourceIds": [
+            "yoma"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "judaism:life:dabru-emet",
+      "tradition": "judaism",
+      "section": "peace",
+      "order": 3,
+      "title": "Dabru Emet: joods-christelijk gesprek",
+      "summary": "Een verklaring van joodse geleerden uit 2000 onderzoekt samenwerking en blijvende geloofsverschillen.",
+      "tags": [
+        "Dialoog",
+        "Geschiedenis"
+      ],
+      "blocks": [
+        {
+          "title": "Een verklaring met auteurs",
+          "text": "Dabru Emet verscheen op 10 september 2000 na gesprekken van joodse geleerden in de Verenigde Staten. De tekst bespreekt hoe joden over christendom en christenen kunnen spreken na veranderingen in christelijke houdingen tegenover het jodendom.",
+          "sourceIds": [
+            "statement"
+          ]
+        },
+        {
+          "title": "Samenwerken met verschil",
+          "text": "De verklaring benoemt gedeelde aanknopingspunten en fundamentele verschillen. Zij stelt gezamenlijke inzet voor rechtvaardigheid en vrede voor zonder opheffing van joodse identiteit. Het is een uitnodiging tot gesprek, geen verklaring namens alle joodse gemeenschappen.",
+          "sourceIds": [
+            "statement"
+          ]
+        },
+        {
+          "title": "Betekenis en grenzen",
+          "text": "Een interreligieuze verklaring maakt een bepaalde theologische positie zichtbaar. Zij is geen vervanging voor onderzoek naar antisemitisme, politieke conflicten of verschillen binnen het jodendom. Het bijbelse vredesvisioen in Jesaja biedt een afzonderlijke religieuze tekst naast dit moderne document.",
+          "sourceIds": [
+            "text",
+            "statement"
+          ]
+        }
+      ],
+      "practice": {
+        "title": "Een verklaring lezen",
+        "items": [
+          "Auteurs en ondertekenaars maken zichtbaar wie het woord neemt.",
+          "Gedeelde inzet en geloofsverschillen worden naast elkaar benoemd.",
+          "De tekst kan dialoog ondersteunen; hij toont niet hoe alle betrokken gemeenschappen hem ontvangen."
+        ],
+        "sourceIds": [
+          "statement"
+        ]
+      },
+      "sources": [
+        {
+          "id": "text",
+          "kind": "scripture",
+          "label": "Jesaja 2:2–4",
+          "url": "https://www.sefaria.org/Isaiah.2.2-4",
+          "context": "De interne lezer opent de vermelde teksteditie. Deze passage is een bron voor de bespreking, geen verslag van de hedendaagse praktijk.",
+          "passage": {
+            "tradition": "judaism",
+            "edition": "he",
+            "verse": 2,
+            "endVerse": 4,
+            "book": "ISA",
+            "chapter": 2
+          }
+        },
+        {
+          "id": "statement",
+          "kind": "historical",
+          "label": "ICJS · Dabru Emet, 10 september 2000",
+          "url": "https://icjs.org/dabru-emet-text/",
+          "context": "Primaire verklaring van joodse geleerden, met context over publicatie en auteurschap."
+        }
+      ],
+      "actors": [
+        {
+          "name": "Vier joodse geleerden",
+          "role": "Stelden de tekst op vanuit verschillende achtergronden."
+        },
+        {
+          "name": "Ondertekenaars en gesprekspartners",
+          "role": "Ontvingen en bespraken de uitnodiging tot joods-christelijk gesprek."
+        }
+      ],
+      "process": [
+        {
+          "date": "Jaren 1990",
+          "title": "Gesprekken in Baltimore",
+          "text": "Het Jewish Scholars Project bespreekt joods-christelijke verhoudingen.",
+          "sourceIds": [
+            "statement"
+          ]
+        },
+        {
+          "date": "10 september 2000",
+          "title": "Publicatie",
+          "text": "Dabru Emet verschijnt als verklaring van de betrokken geleerden.",
+          "sourceIds": [
+            "statement"
+          ]
+        }
+      ],
+      "location": {
+        "name": "Baltimore",
+        "lat": 39.29,
+        "lng": -76.61
+      },
+      "eventId": "judaism:dabru-emet"
+    }
+  ]
+}

@@ -36,6 +36,13 @@ const contextView=Object.create(AtlasExplore.prototype);contextView.states=new M
 for(const label of ['Wat gebeurde er?','Wie waren betrokken?','Betekenis voor geloof en praktijk','Terug naar de tijdslijn'])assert(detail.innerHTML.includes(label));assert(detail.innerHTML.includes(selected.stakeholders[0].name));assert(contextView.stakeholders({stakeholders:[{name:'<img>',role:'<script>'}]}).includes('&lt;img&gt;'));
 console.log(`Timeline interaction passed: card dragging, tap protection, vertical page travel, two-axis pinch, wheel modes/edges, keyboard, anchored zoom, resize, stable DOM and ${checked} complete contexts.`);
 // Leaving a cold/partial search invalidates its response; returning must resume it.
+for(const comparison of [false,true]){
+ const event=data.traditions.islam.find(e=>e.lifeEntry),dossierView=Object.create(AtlasExplore.prototype),opened=[];
+ Object.assign(dossierView,{states:new Map(),view:'timeline',tradition:comparison?'christianity':'islam',timelineComparison:comparison,el:{contains:()=>true},onDossier:(...args)=>opened.push(args)});
+ dossierView.state.selected=event.id;dossierView.model=new TimelineModel([{...event,...(comparison?{tradition:'islam'}:{})}]);
+ dossierView.click({target:{closest:()=>({dataset:{lifeDossier:event.lifeEntry.id}})}});
+ assert.deepEqual(opened,[['islam',event.lifeEntry.id,'peace']],'Single and comparing timelines open the dossier in its own religion');
+}
 (async()=>{
  const pendingView=Object.create(AtlasExplore.prototype);Object.assign(pendingView,{view:'topics',tradition:'christianity',language:'nl',request:0,searchId:4,searchPending:true,loaded:true,el:{hidden:false,childElementCount:1}});
  const resumed=[];pendingView.runSearch=options=>resumed.push(options);pendingView.leave();await pendingView.open('topics','christianity');assert.deepEqual(resumed,[{keepResults:true}],'Returning to a pending query must resume the latest request while retaining its visible theme cards');
