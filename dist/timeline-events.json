@@ -5,7 +5,8 @@
     "scope": "Redactionele selectie van belangrijke momenten; geen uitputtende of religieus neutrale canon van gebeurtenissen.",
     "yearNumbering": "Historische signed years: -586 betekent 586 v.Chr.; er is geen jaar 0. start/end zijn navigatiecoördinaten, dateLabel bewaart onzekerheid en broncontext.",
     "datingNote": "Geschiedenis, tekstgeschiedenis en religieuze overlevering worden onderscheiden. Ongedateerde verhalen staan buiten de numerieke lijn.",
-    "reviewedOn": "2026-11-09"
+    "reviewedOn": "2026-11-09",
+    "contextNote": "Elk moment beschrijft de gebeurtenis, betrokkenen en hun rollen, en betekenis voor geloof en praktijk. Historische duiding is redactioneel en houdt rekening met interne diversiteit en onzekerheid."
   },
   "traditions": {
     "christianity": [
@@ -32,7 +33,24 @@
           "chapter": 2,
           "verse": 1,
           "endVerse": 6
-        }
+        },
+        "what": "Mattheüs vertelt over Jezus’ geboorte in de tijd van koning Herodes, het bezoek van wijzen en de onrust die hun vraag naar een nieuwe koning oproept. Het verhaal verbindt de geboorte met Israëls geschriften en met de kwetsbaarheid van het kind en zijn gezin.",
+        "stakeholders": [
+          {
+            "name": "Jezus, Maria en Jozef",
+            "role": "Het kind en zijn gezin staan centraal in het evangelieverhaal."
+          },
+          {
+            "name": "Herodes en de wijzen",
+            "role": "Herodes vertegenwoordigt bedreigde koningsmacht; de wijzen zoeken en erkennen het kind."
+          },
+          {
+            "name": "De evangelist Mattheüs en zijn lezers",
+            "role": "Zij geven de geboorte betekenis vanuit de Schrift en het geloof in Jezus als Messias."
+          }
+        ],
+        "faithImpact": "In de katholieke traditie draagt het geboorteverhaal bij aan het geloof dat God in Jezus werkelijk mens wordt. Kerstliturgie en voorstellingen van het kind geven dit geloof een plaats in gebed, kunst en gemeenschapsleven.",
+        "nuance": "De jaartallen zijn een historische benadering. De evangelieverhalen verschillen van opbouw en zijn geen moderne geboorteregistraties; 25 december stelt geen onafhankelijk bewezen geboortedatum vast."
       },
       {
         "id": "christianity:ministry",
@@ -57,7 +75,28 @@
           "chapter": 3,
           "verse": 1,
           "endVerse": 6
-        }
+        },
+        "what": "De evangeliën beschrijven hoe Jezus in een Joodse omgeving Gods koninkrijk verkondigt, mensen geneest, leerlingen verzamelt en discussies voert over de uitleg van de Tora. Lucas plaatst het begin van dit optreden in de politieke wereld van Tiberius, Pontius Pilatus en de Herodiaanse bestuurders.",
+        "stakeholders": [
+          {
+            "name": "Jezus en zijn leerlingen",
+            "role": "Jezus verkondigt en handelt; leerlingen worden gevormd tot getuigen en deelnemers aan zijn zending."
+          },
+          {
+            "name": "Johannes de Doper",
+            "role": "Zijn doop en oproep tot omkeer vormen in de evangeliën het directe vertrekpunt."
+          },
+          {
+            "name": "Joodse toehoorders en religieuze gesprekspartners",
+            "role": "Zij reageren uiteenlopend op Jezus’ woorden, praktijken en aanspraken."
+          },
+          {
+            "name": "Romeinse en lokale machthebbers",
+            "role": "Hun bestuur vormt de politieke context van het optreden."
+          }
+        ],
+        "faithImpact": "Jezus’ onderwijs en handelen vormen voor katholieken een maatstaf voor navolging, zorg voor kwetsbaren en de verkondiging van het Evangelie. Zijn Joodse context helpt de teksten te lezen zonder Jezus los te maken van Israël of al zijn gesprekspartners als één tegenpartij voor te stellen.",
+        "nuance": "De precieze duur en volgorde van het optreden zijn niet in alle evangeliën gelijk. De datering op de lijn geeft een gebruikelijke benadering, geen volledig reconstrueerbaar dagschema."
       },
       {
         "id": "christianity:paschal",
@@ -72,6 +111,10 @@
           {
             "title": "USCCB · Marcus 15–16",
             "url": "https://bible.usccb.org/bible/mark/15"
+          },
+          {
+            "title": "Vaticaan · Nostra aetate §4: geen collectieve schuld",
+            "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651028_nostra-aetate_en.html"
           }
         ],
         "end": 33,
@@ -82,7 +125,28 @@
           "chapter": 15,
           "verse": 33,
           "endVerse": 39
-        }
+        },
+        "what": "Jezus wordt onder het Romeinse gezag van Pontius Pilatus gekruisigd. De evangeliën beschrijven zijn dood en begraving; de paasgetuigenissen vertellen vervolgens dat zijn leerlingen Hem als de verrezen Heer ontmoeten en verkondigen.",
+        "stakeholders": [
+          {
+            "name": "Jezus",
+            "role": "Hij is degene die wordt veroordeeld en gekruisigd en op wie het paasgeloof betrekking heeft."
+          },
+          {
+            "name": "Pontius Pilatus en Romeinse soldaten",
+            "role": "Zij vertegenwoordigen het gezag dat de kruisiging oplegt en uitvoert."
+          },
+          {
+            "name": "Vrouwen en andere leerlingen van Jezus",
+            "role": "Zij verschijnen in de verhalen als getuigen van dood, graf en paasboodschap."
+          },
+          {
+            "name": "Plaatselijke religieuze gezagsdragers",
+            "role": "De evangelieverhalen beschrijven hun rol in het conflict; hun handelen mag niet aan alle Joden worden toegeschreven."
+          }
+        ],
+        "faithImpact": "Dood en verrijzenis vormen het hart van het katholieke paasgeloof en van de viering van de eucharistie. De liturgie van Goede Vrijdag en Pasen verbindt lijden, verzoening en hoop op nieuw leven met deze getuigenissen.",
+        "nuance": "Kruisiging is een historisch te onderzoeken executie; verrijzenis wordt hier als christelijk geloofsgetuigenis beschreven. Collectieve schuldtoeschrijving aan Joden miskent zowel de historische situatie als de huidige katholieke leer."
       },
       {
         "id": "christianity:pentecost",
@@ -107,7 +171,24 @@
           "chapter": 2,
           "verse": 1,
           "endVerse": 13
-        }
+        },
+        "what": "Handelingen vertelt hoe Jezus’ leerlingen tijdens het Joodse Pinksterfeest de heilige Geest ontvangen en in verschillende talen spreken. Een menigte hoort de verkondiging en Petrus duidt wat er gebeurt vanuit de geschriften van Israël.",
+        "stakeholders": [
+          {
+            "name": "De verzamelde leerlingen",
+            "role": "Zij ontvangen in het verhaal de Geest en beginnen publiek te verkondigen."
+          },
+          {
+            "name": "Petrus",
+            "role": "Hij legt de gebeurtenis uit en roept zijn toehoorders op tot omkeer."
+          },
+          {
+            "name": "Joodse bezoekers uit verschillende streken",
+            "role": "Zij vormen het meertalige gehoor dat de boodschap hoort en erop reageert."
+          }
+        ],
+        "faithImpact": "Katholieken vieren Pinksteren als gave van de Geest en als openbaar begin van de missionaire gemeenschap. Het verhaal voedt geloof in een Kerk die verschillende talen en culturen kan omvatten en waarin getuigenis en gemeenschapsvorming samengaan.",
+        "nuance": "De plaatsing volgt de verhalende volgorde van Handelingen. Zij is geen afzonderlijk bewezen kalenderdatum of verslag van het ontstaan van alle latere kerkelijke structuren."
       },
       {
         "id": "christianity:jerusalem",
@@ -132,7 +213,28 @@
           "chapter": 15,
           "verse": 1,
           "endVerse": 11
-        }
+        },
+        "what": "De eerste gemeenschap bespreekt of niet-Joodse gelovigen besneden moeten worden en de wet van Mozes volledig moeten naleven. Handelingen 15 verhaalt een overleg in Jeruzalem waarin getuigenissen, Schriftuitleg en praktische afspraken worden samengebracht.",
+        "stakeholders": [
+          {
+            "name": "Paulus en Barnabas",
+            "role": "Zij brengen ervaringen uit de zending onder niet-Joden in het gesprek."
+          },
+          {
+            "name": "Petrus en Jakobus",
+            "role": "Zij nemen in Handelingen een belangrijke plaats in bij de afweging en besluitvorming."
+          },
+          {
+            "name": "Apostelen, oudsten en de gemeenschap",
+            "role": "Zij dragen het overleg en de brief aan andere gelovigen."
+          },
+          {
+            "name": "Joodse en niet-Joodse Christusgelovigen",
+            "role": "Voor hen staan identiteit, tafelgemeenschap en voorwaarden voor toetreding op het spel."
+          }
+        ],
+        "faithImpact": "Het overleg wordt in de katholieke traditie een belangrijk voorbeeld van gemeenschappelijke onderscheiding bij een conflict over geloof en praktijk. Het maakt zichtbaar dat de vroege zending naar niet-Joden nieuwe vragen opriep zonder de Joodse oorsprong van het geloof uit te wissen.",
+        "nuance": "Handelingen 15 en Galaten 2 geven verschillende accenten. Hun precieze historische samenhang en chronologie zijn onderwerp van onderzoek; het overleg is niet zonder meer identiek aan een later oecumenisch concilie."
       },
       {
         "id": "christianity:paul",
@@ -157,7 +259,24 @@
           "chapter": 1,
           "verse": 1,
           "endVerse": 5
-        }
+        },
+        "what": "Paulus schrijft samen met medewerkers brieven aan gemeenschappen die met geloofsvragen en praktische conflicten worstelen. Eerste Tessalonicenzen behandelt onder meer hun geloof, hun onderlinge leven en de hoop bij de wederkomst van Christus.",
+        "stakeholders": [
+          {
+            "name": "Paulus, Silvanus en Timoteüs",
+            "role": "Zij worden aan het begin van Eerste Tessalonicenzen genoemd als afzenders en medewerkers in de zending."
+          },
+          {
+            "name": "De geadresseerde gemeenschappen",
+            "role": "Hun concrete vragen, spanningen en levenssituaties bepalen mede de inhoud van de brieven."
+          },
+          {
+            "name": "Latere lezers en samenstellers van het Nieuwe Testament",
+            "role": "Zij bewaren de brieven en lezen ze als gezaghebbende getuigenissen van het apostolische geloof."
+          }
+        ],
+        "faithImpact": "De brieven worden een blijvende bron voor katholieke opvattingen over genade, geloof, Kerk en christelijk handelen. Hun lezing in de liturgie verbindt de huidige gemeenschap met de vragen van de eerste generaties gelovigen.",
+        "nuance": "Een brief reageert op een bepaalde situatie en is geen losstaand systematisch handboek. Het auteurschap van niet alle aan Paulus toegeschreven brieven wordt in het onderzoek op dezelfde manier beoordeeld."
       },
       {
         "id": "christianity:gospels",
@@ -178,7 +297,24 @@
             "url": "https://bible.usccb.org/bible/john/0"
           }
         ],
-        "end": 100
+        "end": 100,
+        "what": "Mondeling overgeleverde herinneringen en verkondiging over Jezus worden verwerkt tot de evangeliën die later als Mattheüs, Marcus, Lucas en Johannes in de canon worden opgenomen. De auteurs ordenen hun materiaal verschillend en leggen eigen theologische accenten.",
+        "stakeholders": [
+          {
+            "name": "De evangelisten",
+            "role": "Zij selecteren en ordenen tradities over Jezus voor hun lezers."
+          },
+          {
+            "name": "Eerdere getuigen en gemeenschappen",
+            "role": "Hun herinnering, verkondiging en gebruiken vormen de context waarin de teksten ontstaan."
+          },
+          {
+            "name": "Latere kerkgemeenschappen",
+            "role": "Zij kopiëren, lezen en ontvangen de vier evangeliën als een centrale schriftelijke getuigenis."
+          }
+        ],
+        "faithImpact": "De vier evangeliën worden binnen de katholieke Bijbel de voornaamste liturgische en catechetische teksten over Jezus’ leven en zending. Hun veelstemmigheid maakt duidelijk dat één geloof niet betekent dat alle verhalen precies dezelfde volgorde of formulering hebben.",
+        "nuance": "De dateringen zijn benaderend en de canonvorming verloopt over langere tijd. De ontstaansperiode van een tekst valt niet automatisch samen met de datum van de gebeurtenis die hij vertelt."
       },
       {
         "id": "christianity:milan",
@@ -194,7 +330,24 @@
             "title": "Fourth Century Christianity · Edict van Milaan",
             "url": "https://www.fourthcentury.com/edict-of-milan-a-d-313/"
           }
-        ]
+        ],
+        "what": "Constantijn en Licinius spreken godsdienstvrijheid en herstel van eerder ontnomen kerkelijk bezit af. De overgeleverde tekst noemt naast christenen ook anderen die hun eigen religie willen beoefenen.",
+        "stakeholders": [
+          {
+            "name": "Constantijn en Licinius",
+            "role": "Als keizers bepalen zij het beleid tegenover religieuze gemeenschappen."
+          },
+          {
+            "name": "Christelijke gemeenschappen",
+            "role": "Zij krijgen bescherming voor de eredienst en aanspraken op teruggave van bezit."
+          },
+          {
+            "name": "Andere religieuze groepen en lokale bestuurders",
+            "role": "Ook zij vallen onder de vrijheidstaal en de uitvoering van het beleid."
+          }
+        ],
+        "faithImpact": "De kerkelijke gemeenschap krijgt meer ruimte om eredienst, bezit en openbare organisatie te ontwikkelen. Tegelijk wordt de verhouding tot politieke macht een blijvende geloofsvraag: bescherming kan nieuwe afhankelijkheden en belangen met zich meebrengen.",
+        "nuance": "De regeling maakt het christendom nog niet tot exclusieve staatsgodsdienst. Zij beëindigt evenmin op één moment alle vormen van dwang of religieuze ongelijkheid in het rijk."
       },
       {
         "id": "christianity:nicaea",
@@ -209,8 +362,29 @@
           {
             "title": "Corpus Christianorum · kritische concilieteksten",
             "url": "https://www.corpuschristianorum.org/cccogd"
+          },
+          {
+            "title": "Catechismus §242: Nicea en de Zoon",
+            "url": "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_2_the_father.html"
           }
-        ]
+        ],
+        "what": "Een vergadering van bisschoppen formuleert een geloofsbelijdenis over de verhouding tussen de Vader en de Zoon. De uitspraak dat de Zoon van hetzelfde goddelijke wezen is als de Vader wordt een kernformule in het antwoord op het conflict rond Arius.",
+        "stakeholders": [
+          {
+            "name": "De conciliebisschoppen",
+            "role": "Zij bespreken en bekrachtigen de geloofsformulering."
+          },
+          {
+            "name": "Arius en zijn tegenstanders",
+            "role": "Hun verschillende uitleg van de verhouding tussen God en Christus vormt een centrale inzet van het conflict."
+          },
+          {
+            "name": "Keizer Constantijn",
+            "role": "Hij roept het concilie samen en hecht ook politiek belang aan kerkelijke eenheid."
+          }
+        ],
+        "faithImpact": "Voor de katholieke leer bevestigt Nicea dat Christus niet als een geschapen tussenwezen wordt beleden, maar tot de ene goddelijke werkelijkheid behoort. De belijdenis blijft doorwerken in dooponderricht en liturgie, ook al is het debat met het concilie nog niet beëindigd.",
+        "nuance": "Leerstellige argumenten, persoonlijke netwerken en keizerlijke belangen lopen door elkaar. Een conciliebesluit vertelt daarom nog niet hoe snel alle plaatselijke kerken het aanvaardden."
       },
       {
         "id": "christianity:constantinople",
@@ -225,8 +399,29 @@
           {
             "title": "Corpus Christianorum · kritische concilieteksten",
             "url": "https://www.corpuschristianorum.org/cccogd"
+          },
+          {
+            "title": "Catechismus §§243–248: heilige Geest en belijdenis",
+            "url": "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_2_the_father.html"
           }
-        ]
+        ],
+        "what": "Bisschoppen behandelen de uitleg van het trinitarische geloof en de plaats van de heilige Geest. De belijdenis die met Nicea en Constantinopel wordt verbonden benoemt de Geest als Heer en levendmaker, vereerd met Vader en Zoon.",
+        "stakeholders": [
+          {
+            "name": "De conciliebisschoppen",
+            "role": "Zij zoeken een gemeenschappelijke geloofstaal voor de Kerk."
+          },
+          {
+            "name": "Voor- en tegenstanders van de goddelijkheid van de Geest",
+            "role": "Hun meningsverschillen maken de verhouding tussen Vader, Zoon en Geest tot inzet van het debat."
+          },
+          {
+            "name": "De kerken die de belijdenis later ontvangen",
+            "role": "Zij geven de formulering een plaats in onderwijs en eredienst."
+          }
+        ],
+        "faithImpact": "Het concilie draagt bij aan de katholieke belijdenis van Vader, Zoon en Geest als één God. De ermee verbonden geloofsbelijdenis krijgt een blijvende plaats in de eucharistieviering en verbindt katholieke gelovigen met andere christelijke tradities.",
+        "nuance": "De overlevering en receptie van de tekst hebben een eigen geschiedenis. De latere Latijnse toevoeging filioque stond niet in de belijdenis van 381 en blijft een afzonderlijk oecumenisch vraagstuk."
       },
       {
         "id": "christianity:ephesus",
@@ -241,8 +436,29 @@
           {
             "title": "Corpus Christianorum · kritische concilieteksten",
             "url": "https://www.corpuschristianorum.org/cccogd"
+          },
+          {
+            "title": "Benedictus XVI · Cyrillus en het concilie van Efeze",
+            "url": "https://www.vatican.va/content/benedict-xvi/en/audiences/2007/documents/hf_ben-xvi_aud_20071003.html"
           }
-        ]
+        ],
+        "what": "In Efeze staat ter discussie hoe over de eenheid van de goddelijke en menselijke werkelijkheid van Christus moet worden gesproken. Het concilie bevestigt de titel Theotokos voor Maria om te onderstrepen dat degene die uit haar geboren wordt dezelfde persoon is als het goddelijke Woord.",
+        "stakeholders": [
+          {
+            "name": "Cyrillus van Alexandrië",
+            "role": "Hij verdedigt nadrukkelijk de persoonlijke eenheid van Christus."
+          },
+          {
+            "name": "Nestorius van Constantinopel",
+            "role": "Zijn formuleringen en bezwaren vormen een centrale inzet van het concilieconflict."
+          },
+          {
+            "name": "De aanwezige bisschoppen en keizer Theodosius II",
+            "role": "Zij vertegenwoordigen kerkelijke besluitvorming en de politieke context van het beraad."
+          }
+        ],
+        "faithImpact": "De titel Moeder van God krijgt in de katholieke traditie betekenis vanuit de christologie en werkt door in Mariaverering en liturgie. De conflicten over taal en gezag hebben ook langdurige gevolgen voor relaties tussen christelijke kerken.",
+        "nuance": "De stelling zegt niet dat Maria oorsprong van de godheid is. Historische tegenstanders kunnen niet zonder meer tot één eenvoudige of tijdloze ‘ketterse’ opvatting worden teruggebracht."
       },
       {
         "id": "christianity:chalcedon",
@@ -257,8 +473,29 @@
           {
             "title": "Corpus Christianorum · kritische concilieteksten",
             "url": "https://www.corpuschristianorum.org/cccogd"
+          },
+          {
+            "title": "Catechismus §§464–469: Christus waarachtig God en mens",
+            "url": "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_two/artcile_3/he_was_conceived_by_the_power_of_the_holy_spirit%2C_and_was_born_of_the_virgin_mary.html"
           }
-        ]
+        ],
+        "what": "De concilievaders formuleren dat Christus één en dezelfde persoon is, werkelijk goddelijk en werkelijk menselijk. Zij proberen daarmee zowel scheiding als vermenging van zijn godheid en mensheid uit te sluiten.",
+        "stakeholders": [
+          {
+            "name": "De concilievaders",
+            "role": "Zij stellen de geloofsdefinitie vast en reageren op eerdere geschillen."
+          },
+          {
+            "name": "Paus Leo I en zijn vertegenwoordigers",
+            "role": "Zijn christologische uitleg is een belangrijke stem in de conciliegeschiedenis."
+          },
+          {
+            "name": "Christelijke gemeenschappen die de definitie wel of niet ontvangen",
+            "role": "Hun verschillende tradities en reacties bepalen mede de latere kerkelijke verhoudingen."
+          }
+        ],
+        "faithImpact": "Chalcedon wordt een basis voor de katholieke belijdenis dat Jezus volledig mens is en tegelijk waarachtig God. De niet-aanvaarding van de formulering door verschillende oosterse gemeenschappen draagt bij aan blijvende kerkelijke scheidingen en latere pogingen tot dialoog.",
+        "nuance": "Verschillende christologische woordenschatten betekenen niet automatisch dat gemeenschappen over alle geloofsinhoud hetzelfde menen of elkaar werkelijk goed begrepen. De katholieke aanvaarding is een traditiegebonden perspectief binnen deze geschiedenis."
       },
       {
         "id": "christianity:benedict",
@@ -273,9 +510,30 @@
           {
             "title": "Vaticaanstad · Benedictus van Nursia",
             "url": "https://www.vaticanstate.va/en/component/content/article/july-11-saint-benedict-of-nursia-patron-of-europe.html?Itemid=216&catid=51"
+          },
+          {
+            "title": "Benedictus XVI · Benedictus van Nursia en de Regel",
+            "url": "https://www.vatican.va/content/benedict-xvi/en/audiences/2008/documents/hf_ben-xvi_aud_20080409.html"
           }
         ],
-        "end": 540
+        "end": 540,
+        "what": "Benedictus ontwikkelt een gemeenschappelijke kloosterlijke levensvorm en vestigt zich volgens de overlevering rond 529 op Monte Cassino. Zijn Regel ordent het dagelijkse leven rond gebed, luisteren, gehoorzaamheid, onderlinge zorg en praktische taken.",
+        "stakeholders": [
+          {
+            "name": "Benedictus van Nursia",
+            "role": "Hij staat aan de oorsprong van de levensvorm en de aan hem verbonden kloosterregel."
+          },
+          {
+            "name": "Abten en monnikengemeenschappen",
+            "role": "Zij moeten de regel concreet toepassen in gezag, gebed en gemeenschapsleven."
+          },
+          {
+            "name": "Gregorius de Grote",
+            "role": "Zijn latere levensbeschrijving geeft een religieus geïnterpreteerd beeld van Benedictus."
+          }
+        ],
+        "faithImpact": "De Regel wordt een belangrijke bron voor westerse kloosterspiritualiteit en het getijdengebed. Zij biedt een vorm van geloofsleven waarin aandacht voor God en verantwoordelijkheid voor het gewone dagelijkse werk met elkaar verbonden worden.",
+        "nuance": "De levensbeschrijving wil ook een heiligenvoorbeeld bieden en is geen moderne biografie. Het vaak gebruikte motto ora et labora vat een latere traditie samen en mag niet als letterlijk citaat uit de Regel worden gepresenteerd."
       },
       {
         "id": "christianity:schism",
@@ -291,7 +549,24 @@
             "title": "Vaticaan · Ut unum sint",
             "url": "https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_25051995_ut-unum-sint.html"
           }
-        ]
+        ],
+        "what": "Vertegenwoordigers van Rome en de patriarch van Constantinopel raken verwikkeld in een conflict dat in wederzijdse excommunicaties uitmondt. Het jaar 1054 wordt later een herkenningspunt voor de gegroeide afstand tussen de Latijnse en Byzantijnse kerkwerelden.",
+        "stakeholders": [
+          {
+            "name": "Pauselijke gezanten en het patriarchaat van Constantinopel",
+            "role": "Zij zijn rechtstreeks betrokken bij het conflict en de uitspraken van uitsluiting."
+          },
+          {
+            "name": "Latijnse en Byzantijnse christelijke gemeenschappen",
+            "role": "Zij leven met verschillen in liturgie, kerkelijke organisatie en theologische formuleringen."
+          },
+          {
+            "name": "Latere katholieke en orthodoxe kerkleiders",
+            "role": "Zij dragen verantwoordelijkheid voor de herinnering aan de breuk en voor herstel van relaties."
+          }
+        ],
+        "faithImpact": "Verschillen over eenheid, primaatschap en geloofstaal krijgen een blijvende institutionele vorm. Voor het katholicisme wordt herstel van gemeenschap met orthodoxe kerken een belangrijk oecumenisch streven, zonder dat de historische en theologische vragen daarmee verdwijnen.",
+        "nuance": "De scheiding is een lang proces met eerdere en latere conflicten. Niet elke plaatselijke gemeenschap beleefde 1054 als een onmiddellijke en definitieve breuk."
       },
       {
         "id": "christianity:francis",
@@ -308,7 +583,24 @@
             "url": "https://www.vaticannews.va/en/saints/10/04/st--francis-of-assisi--founder-of-the-franciscan--order--patron-.html"
           }
         ],
-        "end": 1223
+        "end": 1223,
+        "what": "Franciscus en zijn eerste broeders zoeken kerkelijke erkenning voor een leven volgens het Evangelie, gekenmerkt door armoede en verkondiging. Na de eerste goedkeuring groeit de beweging; de bevestigde regel van 1223 geeft haar een duurzamere institutionele vorm.",
+        "stakeholders": [
+          {
+            "name": "Franciscus en zijn broeders",
+            "role": "Zij ontwikkelen en verspreiden de evangelische levensvorm."
+          },
+          {
+            "name": "Innocentius III en Honorius III",
+            "role": "De pausen spelen een rol bij de erkenning en bevestiging van de beweging."
+          },
+          {
+            "name": "Clara en haar gemeenschap, en betrokken leken",
+            "role": "Zij geven verwante idealen een eigen vorm in verschillende levenssituaties."
+          }
+        ],
+        "faithImpact": "De franciscaanse traditie houdt armoede, nabijheid aan kwetsbaren en navolging van Christus zichtbaar binnen de katholieke Kerk. Het spanningsveld tussen evangelisch ideaal en georganiseerde orde wordt een blijvende vraag in de beweging zelf.",
+        "nuance": "De beweging is geen eenvormig project dat met één goedkeuring voltooid is. Verschillende takken, vrouwen en leken ontwikkelen eigen regels, verantwoordelijkheden en historische ervaringen."
       },
       {
         "id": "christianity:lateran",
@@ -323,8 +615,29 @@
           {
             "title": "Corpus Christianorum · kritische concilieteksten",
             "url": "https://www.corpuschristianorum.org/cccogd"
+          },
+          {
+            "title": "Vierde Lateraans Concilie · constituties 21 en 67–70",
+            "url": "https://www.papalencyclicals.net/councils/ecum12-2.htm"
           }
-        ]
+        ],
+        "what": "Onder Innocentius III neemt het Vierde Lateraans Concilie besluiten over geloof, sacramenten, opleiding en kerkelijke discipline. Het regelt onder meer jaarlijkse biecht en paascommunie, maar bevat ook uitsluitende en discriminerende voorschriften tegenover Joden.",
+        "stakeholders": [
+          {
+            "name": "Innocentius III en de concilievaders",
+            "role": "Zij formuleren de kerkelijke hervormings- en leerbesluiten."
+          },
+          {
+            "name": "Priesters en katholieke gelovigen",
+            "role": "Zij krijgen concrete voorschriften voor sacramenteel en parochieel leven."
+          },
+          {
+            "name": "Joodse gemeenschappen",
+            "role": "Zij worden getroffen door voorschriften die hen onderscheiden en hun maatschappelijke positie beperken."
+          }
+        ],
+        "faithImpact": "Het concilie versterkt de organisatie van sacramenteel en parochieel geloofsleven en preciseert katholieke eucharistische taal. Tegelijk laat het zien hoe kerkelijke hervorming kon samengaan met religieuze uitsluiting; die geschiedenis vraagt kritische verwerking naast aandacht voor leerstellige continuïteit.",
+        "nuance": "De liturgische en disciplinaire betekenis van een concilie maakt zijn maatschappelijke maatregelen niet vanzelf moreel aanvaardbaar. De gevolgen van de discriminerende voorschriften mogen niet worden weggelaten uit het verhaal."
       },
       {
         "id": "christianity:reformation",
@@ -340,7 +653,24 @@
             "title": "Library of Congress · Luther als ketter",
             "url": "https://guides.loc.gov/martin-luther-priest-heretic-outlaw/luther-the-heretic"
           }
-        ]
+        ],
+        "what": "Paus Leo X excommuniceert Maarten Luther na een groeiend conflict over kerkelijke hervorming, gezag en geloofsleer. Het conflict krijgt een bredere maatschappelijke en politieke betekenis en wordt onderdeel van verschillende reformatorische bewegingen.",
+        "stakeholders": [
+          {
+            "name": "Maarten Luther",
+            "role": "Hij verwoordt kritiek op kerkelijke praktijken en opvattingen over geloof en gezag."
+          },
+          {
+            "name": "Paus Leo X en kerkelijke autoriteiten",
+            "role": "Zij beoordelen en veroordelen Luthers leer en handelen."
+          },
+          {
+            "name": "Vorsten, steden en lokale geloofsgemeenschappen",
+            "role": "Hun keuzes en belangen beïnvloeden hoe het conflict zich verspreidt en institutionele gevolgen krijgt."
+          }
+        ],
+        "faithImpact": "De breuk draagt bij aan het ontstaan van verschillende protestantse kerken en aan verdere katholieke hervorming en afbakening. Vragen over Schrift, Traditie, rechtvaardiging en kerkelijk gezag blijven centraal in de verhouding tussen de tradities.",
+        "nuance": "De Reformatie begint niet uitsluitend met de excommunicatie en is geen beweging met één leider of één gevolg. Katholieke en protestantse geschiedenissen delen bronnen, terwijl zij de conflicten verschillend hebben herinnerd."
       },
       {
         "id": "christianity:jesuits",
@@ -356,7 +686,24 @@
             "title": "Jezuïeten · Pauselijke goedkeuring in 1540",
             "url": "https://www.jesuits.global/2021/09/26/on-27-september-1540-the-society-of-jesus-received-papal-approval/"
           }
-        ]
+        ],
+        "what": "Paulus III erkent in 1540 de Sociëteit van Jezus, voortgekomen uit de groep rond Ignatius van Loyola. De orde ontwikkelt een beweeglijke inzet voor verkondiging, onderwijs en geestelijke begeleiding in verschillende delen van de wereld.",
+        "stakeholders": [
+          {
+            "name": "Ignatius van Loyola en zijn gezellen",
+            "role": "Zij vormen de eerste groep en werken de religieuze levensvorm uit."
+          },
+          {
+            "name": "Paulus III",
+            "role": "Hij geeft de nieuwe orde pauselijke erkenning."
+          },
+          {
+            "name": "Leerlingen, lokale gemeenschappen en missionarissen",
+            "role": "Zij ontmoeten de orde in onderwijs, geestelijke begeleiding en missiecontexten."
+          }
+        ],
+        "faithImpact": "Jezuïtische spiritualiteit legt nadruk op onderscheiding en op de verbinding tussen gebed en handelen. Onderwijs en missies dragen bij aan de wereldwijde vorming van het katholicisme, maar roepen ook vragen op over aanpassing aan plaatselijke culturen en de verwevenheid met politieke macht.",
+        "nuance": "Wereldwijde missie kan niet alleen vanuit Europese initiatiefnemers worden beschreven. Plaatselijke mensen reageren, vertalen, onderhandelen en bieden ook weerstand; koloniale verhoudingen vormen daarbij een wezenlijke context."
       },
       {
         "id": "christianity:trent",
@@ -373,7 +720,24 @@
             "url": "https://spazicomuni.comune.trento.it/Aree-tematiche/Cultura-e-turismo/Conoscere/Il-concilio"
           }
         ],
-        "end": 1563
+        "end": 1563,
+        "what": "Het Concilie van Trente vergadert met onderbrekingen tussen 1545 en 1563 tegen de achtergrond van de Reformatie. Het formuleert katholieke leer over onder meer Schrift en Traditie, rechtvaardiging en sacramenten en neemt hervormingsmaatregelen voor het kerkelijk leven.",
+        "stakeholders": [
+          {
+            "name": "De concilievaders en betrokken pausen",
+            "role": "Zij dragen de leerstellige besluitvorming en de voortgang van het concilie."
+          },
+          {
+            "name": "Bisschoppen en geestelijken",
+            "role": "Zij moeten de hervormingen in bestuur, prediking en opleiding uitvoeren."
+          },
+          {
+            "name": "Katholieke gelovigen en protestantse gesprekspartners",
+            "role": "De besluiten beïnvloeden geloofspraktijk en de grenzen tussen de zich vormende confessies."
+          }
+        ],
+        "faithImpact": "Trente geeft langdurig richting aan de katholieke identiteit, priesteropleiding en sacramentele praktijk. De nadruk op hervorming en leerstellige afbakening werkt door in catechese, liturgie en de verhouding tot protestantse kerken.",
+        "nuance": "De uitvoering verloopt per streek en periode verschillend. Niet alles wat later ‘tridentijns’ wordt genoemd, is in zijn concrete vorm rechtstreeks door het concilie voorgeschreven."
       },
       {
         "id": "christianity:vatican1",
@@ -394,7 +758,24 @@
             "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19641121_lumen-gentium_en.html"
           }
         ],
-        "end": 1870
+        "end": 1870,
+        "what": "Het Eerste Vaticaans Concilie bespreekt de verhouding tussen geloof en rede en definieert het pauselijke primaatschap en de onfeilbaarheid onder bepaalde voorwaarden. Het beraad vindt plaats terwijl het politieke en maatschappelijke bestel rond Rome sterk verandert.",
+        "stakeholders": [
+          {
+            "name": "Pius IX en de concilievaders",
+            "role": "Zij leiden en voeren het conciliaire beraad en stellen de besluiten vast."
+          },
+          {
+            "name": "Bisschoppen met verschillende standpunten",
+            "role": "Hun meningsverschillen betreffen onder meer de formulering en geschiktheid van de definitie."
+          },
+          {
+            "name": "Katholieke gelovigen en kerken die de definitie niet ontvangen",
+            "role": "Zij ondervinden de gevolgen voor gezagsverhoudingen en kerkelijke gemeenschap."
+          }
+        ],
+        "faithImpact": "De besluiten geven het pauselijk leergezag een scherp omschreven plaats in de katholieke geloofsleer. De precieze verhouding tussen dat gezag, het bisschoppencollege en het geloof van de hele Kerk blijft belangrijk en wordt in Vaticanum II verder besproken.",
+        "nuance": "Onfeilbaarheid is niet hetzelfde als morele foutloosheid of alwetendheid. Zij geldt volgens de katholieke leer niet automatisch voor iedere uitspraak of bestuurlijke beslissing van een paus."
       },
       {
         "id": "christianity:rerum",
@@ -410,7 +791,24 @@
             "title": "Vaticaan · Rerum novarum",
             "url": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_15051891_rerum-novarum.html"
           }
-        ]
+        ],
+        "what": "Leo XIII publiceert Rerum novarum over de maatschappelijke positie van arbeiders in de geïndustrialiseerde samenleving. Hij bespreekt loon, eigendom, arbeidsverhoudingen, samenwerking en de verantwoordelijkheid van overheid en verenigingen.",
+        "stakeholders": [
+          {
+            "name": "Paus Leo XIII",
+            "role": "Hij formuleert een katholieke beoordeling van de sociale kwestie."
+          },
+          {
+            "name": "Arbeiders en werkgevers",
+            "role": "Hun rechten, plichten en ongelijke posities staan centraal."
+          },
+          {
+            "name": "Overheden en arbeidersverenigingen",
+            "role": "Zij worden aangesproken op bescherming, rechtvaardige ordening en samenwerking."
+          }
+        ],
+        "faithImpact": "De encycliek wordt een belangrijk beginpunt voor de moderne katholieke sociale leer en de ontwikkeling van katholieke sociale organisaties. Zij maakt duidelijk dat geloof ook vragen oproept over economische structuren, naast persoonlijke liefdadigheid.",
+        "nuance": "De tekst spreekt vanuit de maatschappelijke verhoudingen en begrippen van de negentiende eeuw. Latere sociale encyclieken nemen zijn vragen over, maar brengen ook nieuwe ervaringen en accenten in."
       },
       {
         "id": "christianity:vatican2",
@@ -425,9 +823,30 @@
           {
             "title": "Vaticaan · Sluitingsdecreet",
             "url": "https://www.vatican.va/content/paul-vi/en/apost_letters/documents/hf_p-vi_apl_19651208_in-spiritu-sancto.html"
+          },
+          {
+            "title": "Vaticaan · Lumen gentium: Kerk en volk van God",
+            "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19641121_lumen-gentium_en.html"
           }
         ],
-        "end": 1965
+        "end": 1965,
+        "what": "Bisschoppen uit de wereldkerk komen tussen 1962 en 1965 bijeen in het Tweede Vaticaans Concilie. De zestien documenten behandelen onder meer de Kerk, liturgie, openbaring, oecumene en de verhouding tot de hedendaagse wereld.",
+        "stakeholders": [
+          {
+            "name": "Johannes XXIII en Paulus VI",
+            "role": "Johannes XXIII roept het concilie samen; Paulus VI zet het voort en sluit het."
+          },
+          {
+            "name": "Bisschoppen, theologische adviseurs en waarnemers",
+            "role": "Zij dragen op verschillende manieren bij aan beraad, expertise en oecumenisch contact."
+          },
+          {
+            "name": "Plaatselijke katholieke gemeenschappen",
+            "role": "Zij geven de documenten nadien vorm in liturgie, catechese en gemeenschapsleven."
+          }
+        ],
+        "faithImpact": "Het concilie geeft richting aan hernieuwde Bijbelstudie, liturgische deelname, oecumene en interreligieuze ontmoeting. De nadruk op de Kerk als volk van God en op de roeping van alle gedoopten beïnvloedt de manier waarop katholieken hun plaats in Kerk en samenleving verstaan.",
+        "nuance": "Het concilie is geen enkel hervormingsbesluit en ook geen afschaffing van de voorafgaande traditie. Over de interpretatie en concrete uitvoering van de documenten bestaan binnen de katholieke Kerk verschillende accenten."
       },
       {
         "id": "christianity:liturgy",
@@ -443,7 +862,24 @@
             "title": "Vaticaan · Sacrosanctum concilium",
             "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19631204_sacrosanctum-concilium_en.html"
           }
-        ]
+        ],
+        "what": "Het concilie neemt de constitutie Sacrosanctum concilium aan als kader voor de vernieuwing van de liturgie. Het document verbindt bewaring van de traditie met aandacht voor de begrijpelijke, bewuste en actieve deelname van de gelovigen.",
+        "stakeholders": [
+          {
+            "name": "Concilievaders en Paulus VI",
+            "role": "Zij stellen het normatieve kader vast en kondigen het af."
+          },
+          {
+            "name": "Bisschoppen en liturgische deskundigen",
+            "role": "Zij werken de hervormingen verder uit en begeleiden de toepassing."
+          },
+          {
+            "name": "Voorgangers en vierende gemeenschappen",
+            "role": "Zij ervaren de veranderingen in taal, ritueel en deelname aan de viering."
+          }
+        ],
+        "faithImpact": "De constitutie vormt de basis voor ingrijpende veranderingen in de katholieke eredienst, waaronder een ruimere plaats voor plaatselijke talen en Schriftlezingen. Zij benadrukt dat liturgie een handeling van de kerkelijke gemeenschap is en niet uitsluitend een privéhandeling van de voorganger.",
+        "nuance": "Het document en de concrete hervormingen in de jaren daarna zijn te onderscheiden. De tekst schaft het Latijn niet eenvoudig af en maakt evenmin elke plaatselijke liturgische vernieuwing automatisch verantwoord."
       },
       {
         "id": "christianity:pacem",
@@ -459,7 +895,24 @@
             "title": "Vaticaan · Pacem in terris",
             "url": "https://www.vatican.va/content/john-xxiii/en/encyclicals/documents/hf_j-xxiii_enc_11041963_pacem.html"
           }
-        ]
+        ],
+        "what": "Johannes XXIII publiceert Pacem in terris in een wereld waarin oorlogsdreiging en internationale tegenstellingen sterk voelbaar zijn. De encycliek verbindt vrede met menselijke waardigheid, rechten, plichten en samenwerking op nationaal en internationaal niveau.",
+        "stakeholders": [
+          {
+            "name": "Johannes XXIII",
+            "role": "Hij richt een morele oproep aan kerkelijke en maatschappelijke gesprekspartners."
+          },
+          {
+            "name": "Mensen van goede wil",
+            "role": "De aanspreking reikt uitdrukkelijk verder dan de eigen katholieke gemeenschap."
+          },
+          {
+            "name": "Staten, publieke gezagsdragers en internationale instellingen",
+            "role": "Zij worden aangesproken op het rechtvaardig ordenen van macht en het bevorderen van vrede."
+          }
+        ],
+        "faithImpact": "Vrede wordt in de katholieke sociale leer zichtbaar als een positieve opdracht tot rechtvaardige verhoudingen, niet enkel als afwezigheid van gevechten. De open aanspreking ondersteunt katholieke samenwerking met mensen die een andere of geen religieuze overtuiging hebben.",
+        "nuance": "De encycliek is een moreel en sociaal leerstuk, geen direct uitvoerbaar vredesverdrag. Haar beginselen vragen telkens concrete beoordeling van machtsverhoudingen en historische omstandigheden."
       },
       {
         "id": "christianity:nostra",
@@ -475,7 +928,24 @@
             "title": "Vaticaan · Nostra aetate",
             "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651028_nostra-aetate_en.html"
           }
-        ]
+        ],
+        "what": "Het concilie neemt Nostra aetate aan over de verhouding van de katholieke Kerk tot niet-christelijke godsdiensten. De verklaring besteedt bijzondere aandacht aan de band met het Joodse volk en verwerpt antisemitisme en collectieve schuldtoeschrijving voor Jezus’ dood.",
+        "stakeholders": [
+          {
+            "name": "De concilievaders en Paulus VI",
+            "role": "Zij geven de verklaring kerkelijk gezag."
+          },
+          {
+            "name": "Joodse gemeenschappen",
+            "role": "De wijze waarop de Kerk haar Joodse wortels en de geschiedenis van vijandschap beschrijft, raakt hen rechtstreeks."
+          },
+          {
+            "name": "Katholieke gelovigen en partners uit andere religies",
+            "role": "Zij worden betrokken bij een nieuwe inzet voor kennis, ontmoeting en samenwerking."
+          }
+        ],
+        "faithImpact": "De verklaring wordt een belangrijk vertrekpunt voor katholiek-Joodse dialoog en voor interreligieuze ontmoeting. Zij werkt door in onderwijs, prediking en de manier waarop katholieke teksten over Joden en andere religies kritisch worden herlezen.",
+        "nuance": "De verklaring betekent niet dat alle religieuze verschillen worden opgeheven. Haar doorwerking vraagt blijvend werk aan kennis, relaties en de verwerking van katholiek antijudaïsme en antisemitisme."
       },
       {
         "id": "christianity:religious-freedom",
@@ -491,7 +961,24 @@
             "title": "Vaticaan · Dignitatis humanae",
             "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651207_dignitatis-humanae_en.html"
           }
-        ]
+        ],
+        "what": "Dignitatis humanae verwoordt een recht op godsdienstvrijheid dat is geworteld in de waardigheid van de persoon. Het concilie verdedigt vrijheid van dwang in religieuze zaken, zowel voor personen als voor gemeenschappen binnen een rechtvaardige publieke orde.",
+        "stakeholders": [
+          {
+            "name": "Concilievaders en Paulus VI",
+            "role": "Zij formuleren en bekrachtigen de katholieke verklaring."
+          },
+          {
+            "name": "Gelovigen, niet-gelovigen en religieuze minderheden",
+            "role": "Hun burgerlijke vrijheid mag niet afhankelijk worden gemaakt van het behoren tot de meerderheid."
+          },
+          {
+            "name": "Overheden en religieuze instellingen",
+            "role": "Zij worden aangesproken op de grenzen van dwang en op de bescherming van vrijheid."
+          }
+        ],
+        "faithImpact": "De verklaring geeft een belangrijk kader voor de katholieke verhouding tot de rechtsstaat, gewetensvrijheid en religieuze minderheden. Geloof vraagt volgens deze visie een vrije menselijke instemming en kan daarom niet door politieke of kerkelijke dwang worden vervangen.",
+        "nuance": "Burgerlijke vrijheid en de vraag wat religieus waar is, zijn niet hetzelfde. De tekst verklaart niet dat alle overtuigingen inhoudelijk gelijk zijn of dat vrijheid iedere publieke begrenzing uitsluit."
       },
       {
         "id": "christianity:revelation",
@@ -507,7 +994,24 @@
             "title": "Vaticaan · Dei verbum",
             "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_en.html"
           }
-        ]
+        ],
+        "what": "Dei verbum beschrijft hoe de katholieke Kerk openbaring, Schrift en Traditie met elkaar verbindt. Het document bespreekt ook de uitleg van Bijbelteksten en roept op tot een ruimere toegang tot de Schrift.",
+        "stakeholders": [
+          {
+            "name": "Concilievaders en Paulus VI",
+            "role": "Zij formuleren en kondigen de dogmatische constitutie af."
+          },
+          {
+            "name": "Bijbelwetenschappers en kerkelijke uitleggers",
+            "role": "Zij worden aangesproken op zorgvuldig onderzoek van taal, tekstsoort en historische omstandigheden."
+          },
+          {
+            "name": "Voorgangers en alle gelovigen",
+            "role": "Zij krijgen een opdracht tot verkondiging, studie en persoonlijke lezing van de Schrift."
+          }
+        ],
+        "faithImpact": "De constitutie ondersteunt de hernieuwde plaats van Bijbellezing in liturgie, catechese en persoonlijke spiritualiteit. Zij helpt historisch en literair onderzoek te verbinden met het lezen van de Schrift binnen de geloofsgemeenschap.",
+        "nuance": "Aandacht voor historische context betekent niet dat de tekst voor katholieken louter een historisch document wordt. Omgekeerd maakt de geloofsbetekenis zorgvuldig onderzoek naar genres, auteurs en ontstaanssituaties niet overbodig."
       },
       {
         "id": "christianity:santegidio",
@@ -522,8 +1026,29 @@
           {
             "title": "Vaticaan · Gemeenschap van Sant’Egidio",
             "url": "https://www.laityfamilylife.va/content/laityfamilylife/en/associazioni-e-movimenti/repertorio/comunita-di-santegidio.html"
+          },
+          {
+            "title": "Franciscus · Sant’Egidio en de drie P’s, 11 maart 2018",
+            "url": "https://www.vatican.va/content/francesco/en/speeches/2018/march/documents/papa-francesco_20180311_visita-sant-egidio.html"
           }
-        ]
+        ],
+        "what": "Rond Andrea Riccardi ontstaat in Rome een groep jongeren die gezamenlijk het Evangelie leest en zich verbindt met mensen in kwetsbare omstandigheden. Vanuit deze plaatselijke oorsprong groeit een lekenbeweging met gemeenschappen in verschillende landen.",
+        "stakeholders": [
+          {
+            "name": "Andrea Riccardi en de eerste jongeren",
+            "role": "Zij nemen het initiatief tot de gemeenschap."
+          },
+          {
+            "name": "Mensen in armoede en de leden van de gemeenschap",
+            "role": "Hun persoonlijke vriendschappen vormen een kern van het gemeenschapsleven."
+          },
+          {
+            "name": "Plaatselijke kerken en partners in vredeswerk",
+            "role": "Zij ontmoeten de gemeenschap in gebed, sociale inzet en dialoog."
+          }
+        ],
+        "faithImpact": "Sant’Egidio laat een katholieke levensvorm zien waarin gezamenlijk gebed, vriendschap met armen en inzet voor vrede bij elkaar horen. De drie P’s — preghiera, poveri en pace — verwoorden deze oriëntatie en geven de katholieke uitdagingen in ReligieAtlas hun inspiratie.",
+        "nuance": "De gemeenschap is één katholieke beweging en vertegenwoordigt niet alle vormen van katholieke spiritualiteit. Vriendschap met armen vraagt aandacht voor hun eigen stem en mag niet tot een verhaal over hulpverleners alleen worden beperkt."
       },
       {
         "id": "christianity:assisi",
@@ -539,7 +1064,24 @@
             "title": "Vaticaan · Assisi, slottoespraak",
             "url": "https://www.vatican.va/content/john-paul-ii/en/speeches/1986/october/documents/hf_jp-ii_spe_19861027_prayer-peace-assisi-final.html"
           }
-        ]
+        ],
+        "what": "Johannes Paulus II nodigt in Assisi vertegenwoordigers van verschillende religies uit voor een dag van gebed en inzet voor vrede. De bijeenkomst geeft ruimte aan onderscheiden gebedstradities en brengt de deelnemers daarna samen rond hun verantwoordelijkheid voor vrede.",
+        "stakeholders": [
+          {
+            "name": "Johannes Paulus II",
+            "role": "Hij neemt als paus het initiatief en duidt de katholieke bedoeling van de ontmoeting."
+          },
+          {
+            "name": "Vertegenwoordigers van verschillende religies",
+            "role": "Zij nemen vanuit hun eigen tradities deel aan gebed en publieke ontmoeting."
+          },
+          {
+            "name": "Gemeenschappen die onder oorlog en geweld lijden",
+            "role": "Hun situatie vormt de menselijke urgentie waarop de vredesoproep betrekking heeft."
+          }
+        ],
+        "faithImpact": "Assisi wordt een belangrijk katholiek voorbeeld van interreligieuze ontmoeting zonder alle geloofsinhouden samen te voegen. Het versterkt de gedachte dat religieuze overtuiging een verantwoordelijkheid voor vrede kan voeden en samenwerking met anderen mogelijk maakt.",
+        "nuance": "Een symbolische ontmoeting is geen vervanging van politieke onderhandelingen of gerechtigheid voor slachtoffers. Gezamenlijke aanwezigheid betekent evenmin dat alle aanwezigen dezelfde theologie of gebedspraktijk delen."
       },
       {
         "id": "christianity:catechism",
@@ -555,7 +1097,24 @@
             "title": "Vaticaan · Fidei depositum",
             "url": "https://www.vatican.va/content/john-paul-ii/en/apost_constitutions/documents/hf_jp-ii_apc_19921011_fidei-depositum.html"
           }
-        ]
+        ],
+        "what": "Johannes Paulus II laat de Catechismus van de Katholieke Kerk publiceren als een samenhangende uiteenzetting van de katholieke geloofsleer. De tekst ordent de inhoud rond de geloofsbelijdenis, sacramenten, moreel leven en gebed.",
+        "stakeholders": [
+          {
+            "name": "Johannes Paulus II",
+            "role": "Hij geeft opdracht tot en bekrachtigt de publicatie."
+          },
+          {
+            "name": "De redactiecommissie, bisschoppen en deskundigen",
+            "role": "Zij dragen bij aan de samenstelling en beoordeling van de tekst."
+          },
+          {
+            "name": "Catecheten, voorgangers en gelovigen",
+            "role": "Zij gebruiken de Catechismus als referentie voor geloofsonderricht en studie."
+          }
+        ],
+        "faithImpact": "De Catechismus wordt een gemeenschappelijk referentiepunt voor katholieke geloofstaal in uiteenlopende landen. Hij ondersteunt lokale catechese, terwijl uitleg en toepassing rekening moeten houden met de vragen en culturele omstandigheden van de lezers.",
+        "nuance": "De Catechismus is geen nieuwe Bijbel en geen vervanging van alle andere bronnen. De verschillende uitspraken staan in verband met hun bronnen en hebben niet zonder meer allemaal dezelfde leerstellige rang."
       },
       {
         "id": "christianity:ecumenism",
@@ -571,7 +1130,24 @@
             "title": "Vaticaan · Ut unum sint",
             "url": "https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_25051995_ut-unum-sint.html"
           }
-        ]
+        ],
+        "what": "In Ut unum sint bevestigt Johannes Paulus II dat inzet voor christelijke eenheid tot de katholieke roeping behoort. Hij bespreekt dialoog, gemeenschappelijk getuigenis en de wijze waarop het pauselijk ambt een dienst aan de eenheid kan zijn.",
+        "stakeholders": [
+          {
+            "name": "Johannes Paulus II",
+            "role": "Hij spreekt namens het katholieke leergezag en nodigt uit tot gesprek."
+          },
+          {
+            "name": "Leiders, theologen en gelovigen van andere christelijke kerken",
+            "role": "Zij zijn gesprekspartners bij het zoeken naar herstel van gemeenschap."
+          },
+          {
+            "name": "Katholieke gemeenschappen",
+            "role": "Zij krijgen de opdracht de oecumenische inzet in gebed, ontmoeting en samenwerking vorm te geven."
+          }
+        ],
+        "faithImpact": "De encycliek plaatst oecumene in het hart van het katholieke kerkbegrip en niet uitsluitend bij een specialistisch diplomatiek werkveld. Zij opent ook ruimte om gezamenlijk na te denken over de concrete uitoefening van het primaatschap.",
+        "nuance": "De uitnodiging neemt bestaande verschillen over ambt, sacramenten en kerkelijke gemeenschap niet weg. Dialoog veronderstelt dat gesprekspartners hun eigen overtuiging kunnen verwoorden zonder de ander tot een tekortschietende versie van zichzelf te reduceren."
       },
       {
         "id": "christianity:laudato",
@@ -587,7 +1163,24 @@
             "title": "Vaticaan · Laudato si’",
             "url": "https://www.vatican.va/content/francesco/en/encyclicals/documents/papa-francesco_20150524_enciclica-laudato-si.html"
           }
-        ]
+        ],
+        "what": "Franciscus publiceert Laudato si’ over de zorg voor het gemeenschappelijke huis. Hij brengt ecologische aantasting, armoede, economie, technologie en menselijke levenswijzen met elkaar in verband onder het begrip integrale ecologie.",
+        "stakeholders": [
+          {
+            "name": "Paus Franciscus",
+            "role": "Hij formuleert de encycliek vanuit katholieke sociale en scheppingstheologische bronnen."
+          },
+          {
+            "name": "Mensen in armoede en toekomstige generaties",
+            "role": "Hun kwetsbaarheid en belangen krijgen nadrukkelijk aandacht in de beoordeling van ecologische schade."
+          },
+          {
+            "name": "Burgers, politici, economische actoren en geloofsgemeenschappen",
+            "role": "Zij worden aangesproken op beslissingen, structuren en dagelijkse praktijken."
+          }
+        ],
+        "faithImpact": "De encycliek verbindt scheppingsgeloof met sociale rechtvaardigheid, levensstijl en publieke verantwoordelijkheid. Zij moedigt katholieke gemeenschappen aan om ecologische zorg als onderdeel van hun geloofspraktijk te behandelen in plaats van als een losstaand extra thema.",
+        "nuance": "De tekst maakt onderscheid tussen geloofsmatige en ethische uitgangspunten en concrete technische of politieke keuzes. De praktische uitwerking vraagt daarom kennis, debat en aandacht voor de ongelijke verdeling van kosten en gevolgen."
       },
       {
         "id": "christianity:fraternity",
@@ -603,7 +1196,24 @@
             "title": "Vaticaan · Human Fraternity",
             "url": "https://www.vatican.va/content/francesco/en/travels/2019/outside/documents/papa-francesco_20190204_documento-fratellanza-umana.html"
           }
-        ]
+        ],
+        "what": "Paus Franciscus en grootimam Ahmad al-Tayyeb ondertekenen in Abu Dhabi een document over menselijke broederlijkheid. Het verwerpt religieuze rechtvaardiging van geweld en pleit voor waardigheid, vrede, vrijheid en gelijkwaardig burgerschap.",
+        "stakeholders": [
+          {
+            "name": "Paus Franciscus",
+            "role": "Hij neemt als katholieke gesprekspartner deel aan de gezamenlijke verklaring."
+          },
+          {
+            "name": "Grootimam Ahmad al-Tayyeb van al-Azhar",
+            "role": "Hij is de islamitische medeondertekenaar en gesprekspartner."
+          },
+          {
+            "name": "Religieuze leiders, opvoeders en publieke gezagsdragers",
+            "role": "De verklaring roept hen op om de beginselen in onderwijs, relaties en samenleving gestalte te geven."
+          }
+        ],
+        "faithImpact": "Het document biedt een zichtbaar voorbeeld van katholiek-islamitische samenwerking rond gedeelde maatschappelijke verantwoordelijkheden. Het kan katholieke reflectie over interreligieuze ontmoeting voeden zonder de eigen geloofsbelijdenis van de partners op te heffen.",
+        "nuance": "De ondertekenaars spreken vanuit hun concrete functies en vertegenwoordigen niet iedere mening binnen katholicisme en islam. Een gezamenlijke maatschappelijke oproep bewijst ook geen volledige overeenstemming over theologische vragen."
       },
       {
         "id": "christianity:fratelli",
@@ -627,7 +1237,24 @@
           "chapter": 10,
           "verse": 25,
           "endVerse": 37
-        }
+        },
+        "what": "Franciscus publiceert Fratelli tutti over broederlijkheid en sociale vriendschap. De parabel van de barmhartige Samaritaan wordt een centrale ingang om uitsluiting, grenzen, solidariteit en verantwoordelijkheid voor de ander te bespreken.",
+        "stakeholders": [
+          {
+            "name": "Paus Franciscus",
+            "role": "Hij verbindt Bijbelse reflectie met katholieke sociale leer en hedendaagse maatschappelijke vragen."
+          },
+          {
+            "name": "Uitgesloten mensen, migranten en gemeenschappen in conflict",
+            "role": "Hun ervaringen maken zichtbaar wat maatschappelijke onverschilligheid en vijandschap betekenen."
+          },
+          {
+            "name": "Burgers, politieke verantwoordelijken en religieuze gemeenschappen",
+            "role": "Zij worden aangesproken als mogelijke bouwers van sociale vriendschap."
+          }
+        ],
+        "faithImpact": "De encycliek verbindt naastenliefde met sociale en politieke verantwoordelijkheid over bestaande groepsgrenzen heen. Voor katholieke geloofspraktijk betekent dit dat de vraag wie als naaste wordt behandeld ook betrekking heeft op instituties en publieke keuzes.",
+        "nuance": "De tekst is een morele en spirituele bijdrage aan maatschappelijk debat, geen uitgewerkt beleidsprogramma voor ieder land. Haar oproep tot ontmoeting maakt werkelijke conflicten over rechtvaardigheid en macht niet onbelangrijk."
       },
       {
         "id": "christianity:doctrine-discovery",
@@ -643,7 +1270,24 @@
             "title": "Vaticaan · Gezamenlijke verklaring",
             "url": "https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2023/03/30/230330b.html"
           }
-        ]
+        ],
+        "what": "Twee Vaticaanse dicasteries wijzen in een gezamenlijke verklaring de zogenoemde Doctrine of Discovery af. Zij erkennen dat historische pauselijke documenten in koloniale rechtvaardigingen zijn gebruikt en bespreken de waardigheid en rechten van inheemse volken.",
+        "stakeholders": [
+          {
+            "name": "Dicasteries voor Cultuur en Onderwijs en voor de Integrale Menselijke Ontwikkeling",
+            "role": "Zij formuleren de gezamenlijke Vaticaanse verklaring."
+          },
+          {
+            "name": "Inheemse volken en hun vertegenwoordigers",
+            "role": "Hun ervaringen en langdurige oproepen tot erkenning en herstel vormen een wezenlijke aanleiding."
+          },
+          {
+            "name": "Kerkelijke instellingen en onderzoekers",
+            "role": "Zij dragen verantwoordelijkheid voor verdere historische verantwoording en voor de praktijk van herstel en dialoog."
+          }
+        ],
+        "faithImpact": "De verklaring vraagt om een katholieke bezinning op de verhouding tussen geloofsverkondiging, koloniale macht en menselijke waardigheid. Zij maakt zichtbaar dat trouw aan het geloof ook kritische beoordeling van de eigen institutionele geschiedenis kan vereisen.",
+        "nuance": "Afwijzing van een juridische en politieke leer vervangt geen materieel herstel, archiefonderzoek of verantwoordelijkheid voor concrete misstanden. De verklaring betekent evenmin dat de gevolgen van koloniale machtsverhoudingen daarmee zijn verdwenen."
       }
     ],
     "judaism": [
@@ -670,7 +1314,24 @@
           "chapter": 17,
           "verse": 5,
           "endVerse": 6
-        }
+        },
+        "what": "Assyrische legers nemen Samaria in en beëindigen het noordelijke koninkrijk Israël. Een deel van de bevolking wordt gedeporteerd; de machtswisseling ontwricht bestuur, bewoning en lokale heiligdommen.",
+        "stakeholders": [
+          {
+            "name": "Het Assyrische rijk",
+            "role": "Verovert Samaria en organiseert deportaties en nieuw bestuur."
+          },
+          {
+            "name": "Koning Hosea en de inwoners van Israël",
+            "role": "Verliezen politieke zelfstandigheid en ondergaan de gevolgen van het beleg."
+          },
+          {
+            "name": "Bijbelse geschiedschrijvers",
+            "role": "Geven de nederlaag in 2 Koningen een religieuze duiding."
+          }
+        ],
+        "faithImpact": "De herinnering aan de ondergang wordt verbonden met vragen over trouw aan het verbond, afgoderij en rechtvaardig bestuur. Die bijbelse verklaring is een theologische interpretatie en vormt geen volledige verklaring van de militaire verovering.",
+        "nuance": "De bevolking verdwijnt niet volledig uit het gebied. Assyrische koningsbronnen en de bijbelse vertelling hebben verschillende belangen en accenten."
       },
       {
         "id": "judaism:temple1",
@@ -695,7 +1356,24 @@
           "chapter": 25,
           "verse": 8,
           "endVerse": 12
-        }
+        },
+        "what": "Babylonische troepen nemen Jeruzalem in, verwoesten het koninklijke en religieuze centrum en branden de tempel af. Delen van de Judese bevolking worden weggevoerd; anderen blijven achter of zoeken elders een bestaan.",
+        "stakeholders": [
+          {
+            "name": "Nebukadnessar II en het Babylonische leger",
+            "role": "Voeren de verovering en deportaties uit."
+          },
+          {
+            "name": "Judese koningshuis, priesters en inwoners",
+            "role": "Verliezen instellingen, woonplaatsen en de bestaande tempeldienst."
+          },
+          {
+            "name": "Profetische en schriftelijke tradities",
+            "role": "Verwerken verlies, schuld, hoop en de mogelijkheid van terugkeer."
+          }
+        ],
+        "faithImpact": "Het verlies van de tempel roept indringende vragen op over Gods aanwezigheid en het voortbestaan van het verbond buiten het land. Rouw om Jeruzalem en hoop op herstel blijven deel van gebed, tekstuitleg en collectieve herinnering.",
+        "nuance": "587 en 586 v.Chr. zijn beide gangbare dateringen op grond van verschillende chronologische reconstructies."
       },
       {
         "id": "judaism:cyrus",
@@ -720,7 +1398,24 @@
           "chapter": 1,
           "verse": 1,
           "endVerse": 4
-        }
+        },
+        "what": "Het Perzische rijk verovert Babylon en wordt de nieuwe regionale macht. Ezra presenteert Cyrus als de vorst die de herbouw van de tempel in Jeruzalem toestaat en oproept die onderneming te steunen.",
+        "stakeholders": [
+          {
+            "name": "Cyrus II en het Perzische bestuur",
+            "role": "Vormen het politieke kader voor terugkeer en herstel."
+          },
+          {
+            "name": "Judese ballingen en terugkeerders",
+            "role": "Beslissen of en hoe zij naar Juda terugkeren."
+          },
+          {
+            "name": "Joodse gemeenschappen buiten Juda",
+            "role": "Blijven eigen gemeenschapsleven ontwikkelen in de diaspora."
+          }
+        ],
+        "faithImpact": "De terugkeertraditie biedt taal voor herstel en voor de overtuiging dat ook een niet-Israëlitische vorst binnen Gods handelen kan worden geplaatst. Tegelijk wordt duidelijk dat Joods religieus leven zowel rond Jeruzalem als buiten het land kan voortbestaan.",
+        "nuance": "Een in Ezra overgeleverd besluit is niet zonder meer gelijk aan een onafhankelijk bewaard origineel. Terugkeer verloopt in verschillende fasen."
       },
       {
         "id": "judaism:temple2",
@@ -745,7 +1440,23 @@
           "chapter": 6,
           "verse": 14,
           "endVerse": 18
-        }
+        },
+        "what": "Volgens Ezra wordt de herbouwde tempel voltooid in het zesde regeringsjaar van Darius. De inwijding maakt een hernieuwde offerdienst en gemeenschappelijke vieringen in Jeruzalem mogelijk.",
+        "stakeholders": [
+          {
+            "name": "Darius en het Perzische bestuur",
+            "role": "Bieden de bestuurlijke context waarin de bouw wordt voltooid."
+          },
+          {
+            "name": "Priesters, levieten en bouwers",
+            "role": "Herstellen het heiligdom en organiseren de eredienst."
+          },
+          {
+            "name": "Teruggekeerde en plaatselijke gemeenschappen",
+            "role": "Onderhandelen over deelname, middelen en de inrichting van het gemeenschapsleven."
+          }
+        ],
+        "faithImpact": "De tempel krijgt opnieuw een centrale plaats in offers, pelgrimage en de ordening van de kalender. De herbouw betekent geen eenvoudig herstel van een onafhankelijke monarchie; religieuze verbondenheid moet onder andere politieke omstandigheden worden vormgegeven."
       },
       {
         "id": "judaism:ezra",
@@ -770,7 +1481,24 @@
           "chapter": 8,
           "verse": 1,
           "endVerse": 8
-        }
+        },
+        "what": "Nehemia 8 beschrijft hoe een verzamelde gemeenschap luistert naar openbare Tora-lezing en uitleg. Het verhaal verbindt begrijpen, reageren en vieren met een gezamenlijke heroriëntatie op de overgeleverde voorschriften.",
+        "stakeholders": [
+          {
+            "name": "Ezra",
+            "role": "Treedt in de vertelling op als schriftgeleerde en voorlezer."
+          },
+          {
+            "name": "Levieten en uitleggers",
+            "role": "Helpen de aanwezigen de lezing te begrijpen."
+          },
+          {
+            "name": "De verzamelde gemeenschap",
+            "role": "Luistert, reageert en brengt de tekst in verband met haar gezamenlijke leven."
+          }
+        ],
+        "faithImpact": "De scène legt sterk accent op een gemeenschap die zich rond een gelezen en uitgelegde Tora vormt. Zij biedt een invloedrijk beeld voor de samenhang tussen Schrift, onderricht en gemeenschappelijke praktijk.",
+        "nuance": "De scène bewijst niet dat openbare Tora-lezing op één precies dateerbaar moment is uitgevonden. De datering en redactiegeschiedenis worden verschillend gereconstrueerd."
       },
       {
         "id": "judaism:greek",
@@ -787,7 +1515,24 @@
             "url": "https://teachjewishhistory.org/timeline"
           }
         ],
-        "end": -200
+        "end": -200,
+        "what": "In een Griekstalige omgeving wordt de Tora in het Grieks vertaald. Deze vertaalgeschiedenis raakt later verbonden met de bredere verzameling die gewoonlijk Septuaginta wordt genoemd.",
+        "stakeholders": [
+          {
+            "name": "Joodse vertalers",
+            "role": "Zoeken Griekse formuleringen voor Hebreeuwse teksten en begrippen."
+          },
+          {
+            "name": "Griekstalige Joden in de diaspora",
+            "role": "Lezen en bestuderen de traditie in de taal van hun omgeving."
+          },
+          {
+            "name": "Latere Joodse en christelijke lezers",
+            "role": "Ontvangen de vertaalde teksten binnen uiteenlopende gemeenschappen."
+          }
+        ],
+        "faithImpact": "Vertalen vergroot de toegankelijkheid van de Schrift en maakt interpretatieve keuzes zichtbaar. De gebeurtenis laat zien dat taalwisseling niet automatisch betekent dat een gemeenschap haar religieuze identiteit opgeeft.",
+        "nuance": "De verschillende Griekse boeken hebben niet dezelfde vertalers of ontstaansdatum. De latere christelijke receptie mag niet over de vroege Joodse context heen worden gelegd."
       },
       {
         "id": "judaism:scrolls",
@@ -804,7 +1549,24 @@
             "url": "https://museum.imj.org.il/newsletter/pdf/1.1.18-e.pdf"
           }
         ],
-        "end": 70
+        "end": 70,
+        "what": "Joodse schrijvers bewaren en kopiëren Bijbelteksten, uitleg, liturgische teksten en gemeenschapsregels in de periode van de tweede tempel. De later gevonden Dode-Zeerollen laten uiteenlopende tekstvormen en religieuze interesses zien.",
+        "stakeholders": [
+          {
+            "name": "Schrijvers en tekstgebruikers",
+            "role": "Kopiëren, bewaren en interpreteren religieuze teksten."
+          },
+          {
+            "name": "Gemeenschappen die in de rollen aan het woord komen",
+            "role": "Ordenen gebed, onderricht en gemeenschapsregels op eigen manieren."
+          },
+          {
+            "name": "Latere onderzoekers",
+            "role": "Bestuderen verschillen tussen handschriften en hun historische omgeving."
+          }
+        ],
+        "faithImpact": "De rollen maken zichtbaar dat Joodse schriftcultuur vóór de rabbijnse periode veelzijdig was. Voor geloof en studie zijn zij belangrijke getuigen van continuïteit én variatie in de overdracht van heilige teksten.",
+        "nuance": "De rollen vormen geen doorsnede van al het toenmalige jodendom. De precieze band tussen afzonderlijke manuscripten en Qumran blijft een onderzoeksvraag."
       },
       {
         "id": "judaism:hanukkah",
@@ -824,7 +1586,23 @@
             "title": "Sefaria · Sjabbat 21b",
             "url": "https://www.sefaria.org/Shabbat.21b"
           }
-        ]
+        ],
+        "what": "Na gewapend verzet tegen Seleucidische overheersing en de aantasting van de tempel wordt het heiligdom opnieuw ingewijd. Chanoeka bewaart de herinnering aan deze herinwijding; de latere rabbijnse olievertelling belicht een ander aspect van het feest.",
+        "stakeholders": [
+          {
+            "name": "Judas de Makkabeeër en zijn medestanders",
+            "role": "Leiden de strijd en het herstel van de tempeldienst."
+          },
+          {
+            "name": "Seleucidische machthebbers",
+            "role": "Oefenen politieke macht uit en grijpen in de religieuze verhoudingen in."
+          },
+          {
+            "name": "Joodse gemeenschappen en latere rabbijnen",
+            "role": "Geven de herinnering uiteenlopende rituele en interpretatieve accenten."
+          }
+        ],
+        "faithImpact": "De herinwijding wordt een blijvend ijkpunt voor religieuze volharding en het opnieuw wijden van heilige ruimte. De verschillende overleveringen tonen hoe militaire overwinning, eredienst en wonderherinnering niet in elke periode dezelfde nadruk krijgen."
       },
       {
         "id": "judaism:rome",
@@ -840,7 +1618,23 @@
             "title": "Teach Jewish History · Referentietijdslijn",
             "url": "https://teachjewishhistory.org/timeline"
           }
-        ]
+        ],
+        "what": "Pompeius grijpt in een machtsstrijd rond het Hasmonese bestuur in en neemt Jeruzalem in. Judea komt sterker onder Romeinse invloed te staan, terwijl plaatselijke instellingen nog blijven functioneren.",
+        "stakeholders": [
+          {
+            "name": "Pompeius en Romeinse troepen",
+            "role": "Maken militaire en politieke aanspraken op het gebied."
+          },
+          {
+            "name": "Rivaliserende Hasmonese leiders",
+            "role": "Strijden om macht en zoeken steun in een veranderende politieke omgeving."
+          },
+          {
+            "name": "Priesters en inwoners van Judea",
+            "role": "Moeten zich tot nieuwe machtsverhoudingen verhouden."
+          }
+        ],
+        "faithImpact": "De Romeinse aanwezigheid verscherpt vragen over gezag, samenwerking en weerstand. Religieuze groepen reageren verschillend; er ontstaat geen eenduidige Joodse houding tegenover de imperiale macht."
       },
       {
         "id": "judaism:temple70",
@@ -856,7 +1650,24 @@
             "title": "Metropolitan Museum · Jeruzalem en de tweede tempel",
             "url": "https://www.metmuseum.org/exhibitions/listings/2016/jerusalem/exhibition-galleries"
           }
-        ]
+        ],
+        "what": "Tijdens de Joodse opstand veroveren Romeinse troepen Jeruzalem en verwoesten de tweede tempel. Het verlies treft de offerdienst, priesterlijke instellingen en de bevolking van de stad rechtstreeks.",
+        "stakeholders": [
+          {
+            "name": "Titus en het Romeinse leger",
+            "role": "Voeren het beleg en de verovering uit."
+          },
+          {
+            "name": "Joodse opstandelingen en de bevolking",
+            "role": "Zijn op verschillende manieren betrokken bij de oorlog en ondergaan haar gevolgen."
+          },
+          {
+            "name": "Priesters, geleerden en lokale gemeenschappen",
+            "role": "Zoeken mogelijkheden om religieus leven zonder de bestaande tempeldienst voort te zetten."
+          }
+        ],
+        "faithImpact": "Reeds bestaande vormen van gebed, leren en plaatselijk gemeenschapsleven krijgen verder gewicht. De tempel blijft tegelijk aanwezig in herinnering, liturgie en religieuze hoop; rabbijns jodendom wordt niet op één dag als volledig stelsel gevormd.",
+        "nuance": "De diaspora begint niet in 70: Joodse gemeenschappen leefden al veel eerder buiten Judea."
       },
       {
         "id": "judaism:bar-kokhba",
@@ -873,7 +1684,24 @@
             "url": "https://www.ashmolean.org/node/179046"
           }
         ],
-        "end": 135
+        "end": 135,
+        "what": "De opstand onder leiding van Simon bar Kochba probeert de Romeinse macht te weerstaan. Het Romeinse leger slaat de opstand neer, met zware verliezen en verwoesting in delen van Judea.",
+        "stakeholders": [
+          {
+            "name": "Simon bar Kochba en opstandelingen",
+            "role": "Organiseren verzet en claimen eigen gezag."
+          },
+          {
+            "name": "Keizer Hadrianus en Romeinse legers",
+            "role": "Herstellen de imperiale controle met militaire middelen."
+          },
+          {
+            "name": "Joodse inwoners en religieuze leraren",
+            "role": "Worden met de gevolgen en de beoordeling van de opstand geconfronteerd."
+          }
+        ],
+        "faithImpact": "De afloop laat een ingrijpende herinnering na aan bevrijdingsverwachting, geweld en nederlaag. Latere religieuze beoordeling van messiaanse aanspraken en politieke verlossing kent verschillende stemmen.",
+        "nuance": "Niet alle Joden steunden de opstand. De oorzaak en precieze datering van afzonderlijke Romeinse maatregelen zijn niet op elk punt zeker."
       },
       {
         "id": "judaism:mishnah",
@@ -889,7 +1717,23 @@
             "title": "Sefaria · Misjna",
             "url": "https://www.sefaria.org/texts/Mishnah"
           }
-        ]
+        ],
+        "what": "Rabbijnse rechts- en uitlegtradities worden rond het begin van de derde eeuw geordend in de Misjna. Het werk behandelt het religieuze en sociale leven in zes grote orden en bewaart geregeld meningsverschillen.",
+        "stakeholders": [
+          {
+            "name": "Jehoeda ha-Nasi",
+            "role": "Wordt in de traditie met de redactie verbonden."
+          },
+          {
+            "name": "Tannaïeten, de vroeg-rabbijnse leraren",
+            "role": "Leveren de overgeleverde standpunten en discussies."
+          },
+          {
+            "name": "Latere leerlingen en gemeenschappen",
+            "role": "Bestuderen het werk en leggen het in nieuwe omstandigheden uit."
+          }
+        ],
+        "faithImpact": "De Misjna wordt een fundamenteel tekstueel vertrekpunt voor rabbijnse studie en verdere discussie. Ook voorschriften rond de verdwenen tempeldienst blijven onderwerp van leren, zodat heilige herinnering en dagelijkse praktijk met elkaar verbonden blijven."
       },
       {
         "id": "judaism:yerushalmi",
@@ -906,7 +1750,24 @@
             "url": "https://www.sefaria.org/texts/Talmud"
           }
         ],
-        "end": 450
+        "end": 450,
+        "what": "In leerscholen in het land Israël groeien discussies over de Misjna en andere tradities samen tot de Jeruzalemse Talmoed. De vorming van de tekst beslaat meerdere generaties.",
+        "stakeholders": [
+          {
+            "name": "Rabbijnse leraren in het land Israël",
+            "role": "Ontwikkelen uitleg en juridische discussies."
+          },
+          {
+            "name": "Leerlingen en overleveraars",
+            "role": "Bewaren en ordenen uiteenlopende stemmen."
+          },
+          {
+            "name": "Latere tekstgebruikers",
+            "role": "Vergelijken deze discussies met andere rabbijnse tradities."
+          }
+        ],
+        "faithImpact": "De verzameling bewaart een eigen regionale stem in de uitleg van de Tora en de Misjna. Zij draagt bij aan een leercultuur waarin discussie over toepassing en betekenis zelf een religieuze activiteit is.",
+        "nuance": "De titel betekent niet dat het gehele werk in Jeruzalem is geschreven. Er is geen enkel exact jaar waarin alle redactionele arbeid eindigde."
       },
       {
         "id": "judaism:bavli",
@@ -923,7 +1784,24 @@
             "url": "https://www.sefaria.org/texts/Talmud"
           }
         ],
-        "end": 650
+        "end": 650,
+        "what": "In Babylonische leerscholen worden uitleg, verhalen en juridische discussies rond de Misjna gedurende meerdere eeuwen overgeleverd en geredigeerd. De verzameling krijgt de naam Babylonische Talmoed.",
+        "stakeholders": [
+          {
+            "name": "Babylonische rabbijnen en leerscholen",
+            "role": "Voeren en overleveren de besproken interpretaties."
+          },
+          {
+            "name": "Leerlingen en redacteuren",
+            "role": "Brengen uiteenlopende argumenten en tradities in een literaire vorm bijeen."
+          },
+          {
+            "name": "Latere rabbijnse gemeenschappen",
+            "role": "Gebruiken de Talmoed als belangrijk gezag voor studie en halachische besluitvorming."
+          }
+        ],
+        "faithImpact": "De Babylonische Talmoed wordt in veel rabbijnse tradities een centrale basis voor leren en religieus recht. Haar gezag beëindigt interpretatie niet: commentaar, debat en nieuwe beslissingen blijven nodig voor concrete situaties.",
+        "nuance": "De lange redactiegeschiedenis past niet bij een voorstelling van één auteur of één sluitingsdatum."
       },
       {
         "id": "judaism:masorah",
@@ -940,7 +1818,24 @@
             "url": "https://bibleproject.huji.ac.il/sites/default/files/he_bible_project/files/zer_r.i.1.pdf"
           }
         ],
-        "end": 950
+        "end": 950,
+        "what": "Masoreten geven de overgeleverde Hebreeuwse Bijbeltekst zorgvuldig door met klinkertekens, accenten en notities. De Aleppo-codex is een belangrijk middeleeuws handschrift binnen deze teksttraditie.",
+        "stakeholders": [
+          {
+            "name": "Schrijvers en masoreten",
+            "role": "Bewaken tekst, uitspraak en leesaanwijzingen."
+          },
+          {
+            "name": "De traditie rond de familie Ben Asjer",
+            "role": "Is verbonden met de gezaghebbende Tiberiëns-Masoretische overlevering."
+          },
+          {
+            "name": "Voorlezers en tekstgeleerden",
+            "role": "Gebruiken de tekens en notities bij lezen en bestuderen."
+          }
+        ],
+        "faithImpact": "Nauwkeurige tekstoverdracht ondersteunt gemeenschappelijke lezing en de overtuiging dat aandacht voor letters en uitspraak ertoe doet. Het handschrift toont hoe religieuze zorg voor een heilige tekst ook gespecialiseerde technische kennis vraagt.",
+        "nuance": "De consonantentekst, klinkertekens en latere gedrukte edities hebben een eigen geschiedenis. Eén codex bevat niet alle ooit bestaande tekstvormen."
       },
       {
         "id": "judaism:rashi",
@@ -957,7 +1852,23 @@
             "url": "https://www.sefaria.org/topics/rashi"
           }
         ],
-        "end": 1105
+        "end": 1105,
+        "what": "Rasji schrijft in middeleeuws Noord-Frankrijk uitleg op Bijbel en Talmoed. Zijn beknopte commentaren verbinden aandacht voor woorden en samenhang met eerdere rabbijnse uitleg.",
+        "stakeholders": [
+          {
+            "name": "Sjlomo Jitschaki, Rasji",
+            "role": "Schrijft de commentaren waarmee zijn naam verbonden raakt."
+          },
+          {
+            "name": "Eerdere rabbijnse uitleggers",
+            "role": "Leveren tradities waarmee hij in gesprek gaat."
+          },
+          {
+            "name": "Leerlingen, kopiisten en latere drukkers",
+            "role": "Verspreiden de uitleg en maken haar onderdeel van de leercultuur."
+          }
+        ],
+        "faithImpact": "Zijn commentaren worden voor veel Joodse lezers een vaste gesprekspartner naast de brontekst. De blijvende aanwezigheid van andere uitleggers laat zien dat gezaghebbend commentaar geen einde maakt aan interpretatieve verscheidenheid."
       },
       {
         "id": "judaism:crusades",
@@ -973,7 +1884,24 @@
             "title": "Teach Jewish History · Referentietijdslijn",
             "url": "https://teachjewishhistory.org/timeline"
           }
-        ]
+        ],
+        "what": "In 1096 vallen gewapende groepen op weg naar de Eerste Kruistocht Joodse gemeenschappen in het Rijnland aan. Moord, plundering en gedwongen bekering treffen mensen die geen partij zijn in de oorlog om het Heilige Land.",
+        "stakeholders": [
+          {
+            "name": "Kruisvaarders en plaatselijke gewelddadige groepen",
+            "role": "Plegen aanvallen op Joodse gemeenschappen."
+          },
+          {
+            "name": "Joodse inwoners en gemeenschapsleiders",
+            "role": "Zoeken bescherming en worden geconfronteerd met geweld en dwang."
+          },
+          {
+            "name": "Plaatselijke christelijke machthebbers",
+            "role": "Bieden uiteenlopende, soms ontoereikende vormen van bescherming."
+          }
+        ],
+        "faithImpact": "Het geweld krijgt een plaats in klaagliederen, herinnering en discussies over trouw onder dwang. Voor de verhouding tot het christendom is het een geschiedenis van concreet anti-Joods geweld, niet alleen van abstracte leerstellige verschillen.",
+        "nuance": "De uiteenlopende reacties van slachtoffers mogen niet tot één voorgeschreven geloofsantwoord worden herleid."
       },
       {
         "id": "judaism:maimonides",
@@ -994,7 +1922,23 @@
             "url": "https://www.sefaria.org/texts/Halakhah/Mishneh%20Torah"
           }
         ],
-        "end": 1178
+        "end": 1178,
+        "what": "Maimonides ordent het omvangrijke materiaal van de Joodse wet in de Misjnee Tora. Het systematische Hebreeuwse werk is bedoeld om de praktijk overzichtelijk uiteen te zetten.",
+        "stakeholders": [
+          {
+            "name": "Mosje ben Maimon, Maimonides",
+            "role": "Schrijft en structureert de rechtscode."
+          },
+          {
+            "name": "Talmoedische leraren en eerdere rechtsgeleerden",
+            "role": "Vormen een belangrijk overgeleverd fundament van het werk."
+          },
+          {
+            "name": "Latere rabbijnen en critici",
+            "role": "Bespreken de beslissingen, onderbouwing en grenzen van de codificatie."
+          }
+        ],
+        "faithImpact": "De code maakt religieuze voorschriften op een nieuwe manier toegankelijk en wordt een belangrijk oriëntatiepunt voor halachische studie. Kritiek en verdere commentaren tonen de spanning tussen een helder overzicht en het open karakter van de overgeleverde discussie."
       },
       {
         "id": "judaism:england-expulsion",
@@ -1010,7 +1954,24 @@
             "title": "Jewish Museum London · Menasseh ben Israel en terugkeer",
             "url": "https://jewishmuseum.org.uk/50-objects/jm-990/"
           }
-        ]
+        ],
+        "what": "Koning Edward I beveelt in 1290 de verdrijving van Joden uit Engeland. Gezinnen verliezen hun woonplaats en bestaande gemeenschapsstructuren worden afgebroken.",
+        "stakeholders": [
+          {
+            "name": "Edward I en het Engelse koninklijke bestuur",
+            "role": "Leggen de verdrijving op en handhaven die."
+          },
+          {
+            "name": "Joodse gezinnen en gemeenten",
+            "role": "Moeten vertrekken en elders hun bestaan opnieuw opbouwen."
+          },
+          {
+            "name": "Ontvangende gemeenschappen",
+            "role": "Krijgen te maken met vlucht en hernieuwde vestiging."
+          }
+        ],
+        "faithImpact": "De maatregel verbreekt plaatselijke netwerken van synagoge, onderwijs en begraafplaatsen. Religieuze continuïteit hangt voor verdreven mensen mede af van de mogelijkheid om elders een gemeenschap en haar gebruiken voort te zetten.",
+        "nuance": "Dit is geen theologische ontwikkeling die Joden zelf kiezen. Individuele aanwezigheid en levens van bekeerlingen passen niet volledig in het beeld van eeuwenlange totale afwezigheid."
       },
       {
         "id": "judaism:spain-expulsion",
@@ -1026,7 +1987,24 @@
             "title": "Library of Congress · 1492: An Ongoing Voyage",
             "url": "https://wwws.loc.gov/exhibits/1492/"
           }
-        ]
+        ],
+        "what": "De vorsten van Castilië en Aragon bevelen Joden in 1492 te vertrekken wanneer zij zich niet laten dopen. Vlucht, verlies van bezit en uiteenvallende netwerken raken families en gemeenten ingrijpend.",
+        "stakeholders": [
+          {
+            "name": "Isabella van Castilië en Ferdinand van Aragon",
+            "role": "Vaardigen de verdrijvingsmaatregel uit."
+          },
+          {
+            "name": "Joodse inwoners en Sefardische gemeenten",
+            "role": "Staan onder dwang voor vertrek of bekering."
+          },
+          {
+            "name": "Diasporagemeenschappen rond de Middellandse Zee",
+            "role": "Worden plaatsen waar verdrevenen nieuwe levens en instellingen opbouwen."
+          }
+        ],
+        "faithImpact": "Sefardische liturgie, geleerdheid en gebruiken worden in nieuwe omgevingen voortgezet en aangepast. De ervaring van gedwongen bekering en vervolging beïnvloedt tegelijk vragen over identiteit, verborgen praktijk en de grenzen van gemeenschapslidmaatschap.",
+        "nuance": "De geschiedenis van conversos en inquisitie valt niet volledig samen met die van de verdreven Joden. Er is geen uniform individueel antwoord op de opgelegde dwang."
       },
       {
         "id": "judaism:shulchan",
@@ -1042,7 +2020,23 @@
             "title": "Sefaria · Sjoelchan Aroech",
             "url": "https://www.sefaria.org/texts/Halakhah/Shulchan%20Arukh"
           }
-        ]
+        ],
+        "what": "Josef Karo’s Sjoelchan Aroech verschijnt in druk als geordende uiteenzetting van religieus recht. Glossen van Mosje Isserles voegen vervolgens belangrijke Asjkenazische gebruiken en beslissingen toe.",
+        "stakeholders": [
+          {
+            "name": "Josef Karo",
+            "role": "Stelt de rechtscode op vanuit zijn studie van eerdere halachische bronnen."
+          },
+          {
+            "name": "Mosje Isserles",
+            "role": "Vult het werk aan vanuit andere juridische gewoonten."
+          },
+          {
+            "name": "Rabbijnen en huishoudens",
+            "role": "Gebruiken code en commentaar bij praktische religieuze vragen."
+          }
+        ],
+        "faithImpact": "De gedrukte code wordt een invloedrijk referentiepunt voor het ordenen van dagelijks religieus leven. De combinatie van hoofdtekst en aanvullingen laat zien dat codificatie lokale en regionale gewoonten niet eenvoudig uitwist."
       },
       {
         "id": "judaism:america",
@@ -1058,7 +2052,24 @@
             "title": "American Jewish Historical Society · Collectie en geschiedenis",
             "url": "https://ajhs.org/about/"
           }
-        ]
+        ],
+        "what": "In 1654 krijgt Joodse vestiging in Nieuw-Amsterdam een duurzame gemeenschapsvorm. De nieuwkomers moeten in een koloniale omgeving ruimte zoeken voor bestaan, gezamenlijke organisatie en religieuze praktijk.",
+        "stakeholders": [
+          {
+            "name": "Joodse nieuwkomers en hun gezinnen",
+            "role": "Bouwen bestaanszekerheid en gemeenschappelijke voorzieningen op."
+          },
+          {
+            "name": "Het koloniale bestuur van Nieuw-Amsterdam",
+            "role": "Bepaalt en betwist de voorwaarden voor vestiging."
+          },
+          {
+            "name": "Joodse handels- en familienetwerken",
+            "role": "Verbinden de nieuwe gemeenschap met andere plaatsen in de Atlantische wereld."
+          }
+        ],
+        "faithImpact": "De vestiging draagt bij aan blijvend georganiseerd Joods leven in het latere New York. Het behoud van gebruiken moet er worden gecombineerd met onderhandelingen over rechten en deelname aan een koloniale samenleving.",
+        "nuance": "Deze gebeurtenis is geen beginpunt van alle Joodse aanwezigheid op het Amerikaanse continent. De koloniale context verdient een eigen historische beoordeling."
       },
       {
         "id": "judaism:england-return",
@@ -1074,7 +2085,23 @@
             "title": "Jewish Museum London · Menasseh ben Israel en terugkeer",
             "url": "https://jewishmuseum.org.uk/50-objects/jm-990/"
           }
-        ]
+        ],
+        "what": "In het midden van de zeventiende eeuw wordt openbaar Joods gemeenschapsleven in Engeland opnieuw mogelijk. Gesprekken en praktische toelating leiden geleidelijk tot een hernieuwde aanwezigheid, zonder één allesomvattende terugkeerwet.",
+        "stakeholders": [
+          {
+            "name": "Menasseh ben Israel",
+            "role": "Bepleit ruimte voor Joodse terugkeer en godsdienstig leven."
+          },
+          {
+            "name": "Oliver Cromwell en Engelse bestuurders",
+            "role": "Spelen een rol in beraad en de praktische mogelijkheden van vestiging."
+          },
+          {
+            "name": "Joodse kooplieden en gezinnen",
+            "role": "Maken de hernieuwde gemeenschap concreet in het dagelijkse leven."
+          }
+        ],
+        "faithImpact": "Openbare organisatie maakt de opbouw van gebedshuizen, onderwijs en rituele voorzieningen mogelijk. Het herstel laat tegelijk zien hoe de uitoefening van religie afhankelijk blijft van de politieke en juridische ruimte die een samenleving biedt."
       },
       {
         "id": "judaism:hasidism",
@@ -1091,7 +2118,24 @@
             "url": "https://encyclopedia.yivo.org/article.aspx/Hasidism/Historical_Overview"
           }
         ],
-        "end": 1800
+        "end": 1800,
+        "what": "In achttiende-eeuws Oost-Europa groeit een religieuze vernieuwingsbeweging rond de Baal Sjem Tov en andere leraren. Er ontstaan verschillende groepen met nadruk op vroomheid, gebed, gemeenschapsleven en de leiding van een tsaddiek.",
+        "stakeholders": [
+          {
+            "name": "Jisraël ben Eliëzer, de Baal Sjem Tov",
+            "role": "Wordt met het vroege ontstaan van de beweging verbonden."
+          },
+          {
+            "name": "Chassidische leraren en hun volgelingen",
+            "role": "Ontwikkelen verschillende leerscholen en vormen van religieuze gemeenschap."
+          },
+          {
+            "name": "Mitnagdiem en andere tegenstanders",
+            "role": "Bestrijden delen van de nieuwe leiding en religieuze praktijk."
+          }
+        ],
+        "faithImpact": "Het chassidisme geeft gebed, religieuze ervaring en charismatische leiding een herkenbare plaats binnen eigen gemeenschappen. Het debat met tegenstanders versterkt ook verschillende opvattingen over studie en gezag binnen het traditionele jodendom.",
+        "nuance": "Chassidisme is geen centraal bestuurde eenheid. Richtingen, dynastieën en plaatselijke gebruiken verschillen."
       },
       {
         "id": "judaism:haskalah",
@@ -1108,7 +2152,23 @@
             "url": "https://www.jmberlin.de/en/topic-haskalah-enlightenment"
           }
         ],
-        "end": 1880
+        "end": 1880,
+        "what": "Joodse schrijvers en denkers onderzoeken in de Haskala nieuwe vormen van onderwijs, taalgebruik en deelname aan de omringende samenleving. De beweging krijgt uiteenlopende vormen in verschillende Europese regio’s.",
+        "stakeholders": [
+          {
+            "name": "Moses Mendelssohn en andere maskiliem",
+            "role": "Formuleren voorstellen over leren, taal en maatschappelijke deelname."
+          },
+          {
+            "name": "Joodse scholen, families en schrijvers",
+            "role": "Nemen ideeën over, passen ze aan of wijzen ze af."
+          },
+          {
+            "name": "Rabbijnse leiders en overheden",
+            "role": "Reageren vanuit verschillende opvattingen over gezag en burgerschap."
+          }
+        ],
+        "faithImpact": "De beweging verscherpt vragen over de verhouding tussen religieuze overlevering, algemene vorming en zelfstandig oordeel. Zij leidt niet overal tot dezelfde keuze voor hervorming, secularisering of behoud van traditionele praktijk."
       },
       {
         "id": "judaism:emancipation",
@@ -1124,7 +2184,24 @@
             "title": "Teach Jewish History · Referentietijdslijn",
             "url": "https://teachjewishhistory.org/timeline"
           }
-        ]
+        ],
+        "what": "In 1791 krijgen Joden in Frankrijk formeel toegang tot gelijk burgerschap. De verandering plaatst Joodse inwoners in een nieuwe rechtsverhouding tot de staat en de bredere samenleving.",
+        "stakeholders": [
+          {
+            "name": "De Franse Nationale Vergadering",
+            "role": "Beslist over de wettelijke erkenning van burgerrechten."
+          },
+          {
+            "name": "Joodse inwoners en gemeenschapsvertegenwoordigers",
+            "role": "Zoeken bescherming, gelijke behandeling en ruimte voor religieuze praktijk."
+          },
+          {
+            "name": "De omringende samenleving",
+            "role": "Moet haar verhouding tot een formeel gelijkberechtigde minderheid opnieuw bepalen."
+          }
+        ],
+        "faithImpact": "Burgerlijke gelijkheid biedt nieuwe mogelijkheden voor deelname zonder noodzakelijke bekering. Tegelijk ontstaat debat over hoe individuele burgerrechten zich verhouden tot eigen gemeenschapsinstellingen en bindende religieuze verplichtingen.",
+        "nuance": "Wettelijke gelijkstelling is geen bewijs dat vooroordelen of antisemitisme verdwijnen. De gevolgen verschillen tussen regio’s en sociale groepen."
       },
       {
         "id": "judaism:reform",
@@ -1140,7 +2217,23 @@
             "title": "West London Synagogue · Onze geschiedenis",
             "url": "https://www.wls.org.uk/our-history"
           }
-        ]
+        ],
+        "what": "In 1840 ontstaat de West London Synagogue vanuit een streven naar verandering in het gemeenteleven en de liturgie. Haar geschiedenis vormt één concrete Britse uitwerking van bredere Joodse hervormingsbewegingen.",
+        "stakeholders": [
+          {
+            "name": "De oprichtende families en gemeenteleden",
+            "role": "Organiseren een eigen religieuze gemeenschap."
+          },
+          {
+            "name": "Leiders en leraren van de nieuwe synagoge",
+            "role": "Werken veranderingen in eredienst en onderricht uit."
+          },
+          {
+            "name": "Andere Joodse gemeenten en religieuze leiders",
+            "role": "Reageren vanuit afwijkende opvattingen over overlevering en hervorming."
+          }
+        ],
+        "faithImpact": "De gebeurtenis maakt zichtbaar dat moderne Joodse gemeenschappen verschillend omgaan met liturgie, gezag en maatschappelijke verandering. Religieuze hervorming is daarbij een eigen benadering van traditie, niet een eenvoudige afwezigheid van geloof."
       },
       {
         "id": "judaism:zionism",
@@ -1156,7 +2249,24 @@
             "title": "Library of Congress · De zionistische beweging",
             "url": "https://www.loc.gov/collections/songs-of-america/articles-and-essays/historical-topics/zionist-movement-in-america/"
           }
-        ]
+        ],
+        "what": "Het congres in Bazel geeft het politieke zionisme in 1897 een organisatorisch verband en een gezamenlijk programma. Het bespreekt een nationale toekomst voor Joden in een tijd van antisemitisme en veranderende ideeën over volk en staat.",
+        "stakeholders": [
+          {
+            "name": "Theodor Herzl en congresdeelnemers",
+            "role": "Organiseren de politieke beweging en formuleren haar doelstellingen."
+          },
+          {
+            "name": "Joodse gemeenschappen en religieuze stromingen",
+            "role": "Steunen, bekritiseren of verwerpen onderdelen van het zionistische programma."
+          },
+          {
+            "name": "Bewoners en machthebbers van Ottomaans Palestina",
+            "role": "Maken deel uit van de concrete omgeving waarop de politieke plannen betrekking hebben."
+          }
+        ],
+        "faithImpact": "De beweging roept debat op over het land Israël, diaspora, collectieve veiligheid en de verhouding tussen menselijke politieke actie en religieuze verwachting. Religieus zionisme, seculier zionisme en religieuze of seculiere tegenstand zijn verschillende posities.",
+        "nuance": "Joods-zijn, het joodse geloof, zionisme en een latere staat zijn geen onderling verwisselbare begrippen."
       },
       {
         "id": "judaism:shoah",
@@ -1171,9 +2281,30 @@
           {
             "title": "USHMM · Holocausttijdslijn",
             "url": "https://www.ushmm.org/m/pdfs/USHMM-Survivor-Testimony-Timeline.pdf"
+          },
+          {
+            "title": "USHMM · Inleiding tot de Holocaust",
+            "url": "https://encyclopedia.ushmm.org/content/en/article/introduction-to-the-holocaust"
           }
         ],
-        "end": 1945
+        "end": 1945,
+        "what": "Nazi-Duitsland en zijn bondgenoten en medeplichtigen organiseren uitsluiting, onteigening, deportatie en genocide op Europese Joden. Ongeveer zes miljoen Joden worden vermoord; families, gemeenschappen en culturele werelden worden vernietigd.",
+        "stakeholders": [
+          {
+            "name": "Nazi-Duitse leiders, instellingen en uitvoerders",
+            "role": "Ontwerpen en realiseren vervolging en massamoord."
+          },
+          {
+            "name": "Joodse slachtoffers en overlevenden",
+            "role": "Ondergaan vervolging en zoeken uiteenlopende mogelijkheden tot overleven, hulp en verzet."
+          },
+          {
+            "name": "Medeplichtigen, omstanders en helpers",
+            "role": "Dragen op verschillende manieren bij aan vervolging, laten die toe of bieden hulp."
+          }
+        ],
+        "faithImpact": "De vernietiging treft ook synagogen, leerscholen, religieuze leiders en de overdracht tussen generaties. Overlevenden en latere denkers geven uiteenlopende antwoorden op vragen over herinnering, geloof, stilte en verantwoordelijkheid; er bestaat geen enkel voorgeschreven Joods antwoord.",
+        "nuance": "De genocide mag niet als noodzakelijke stap naar een latere politieke ontwikkeling of als een eenvoudige les met een positief eindpunt worden voorgesteld."
       },
       {
         "id": "judaism:pogrom1938",
@@ -1188,8 +2319,29 @@
           {
             "title": "USHMM · Holocausttijdslijn",
             "url": "https://www.ushmm.org/m/pdfs/USHMM-Survivor-Testimony-Timeline.pdf"
+          },
+          {
+            "title": "USHMM · Novemberpogroms",
+            "url": "https://encyclopedia.ushmm.org/content/en/article/kristallnacht"
           }
-        ]
+        ],
+        "what": "Op 9 en 10 november 1938 organiseren de nazi’s grootschalig anti-Joods geweld. Synagogen worden verbrand, huizen en ondernemingen aangevallen en Joden vermoord en massaal gevangengezet.",
+        "stakeholders": [
+          {
+            "name": "Nazi-leiding, partijorganisaties en uitvoerders",
+            "role": "Sturen en plegen het geweld."
+          },
+          {
+            "name": "Joodse inwoners en gemeenten",
+            "role": "Verliezen mensen, gebedshuizen, bestaansmiddelen en veiligheid."
+          },
+          {
+            "name": "Politie, brandweer en omstanders",
+            "role": "Reageren binnen een vervolgingsstaat vaak met toelating, medewerking of beperkte bescherming."
+          }
+        ],
+        "faithImpact": "De aanvallen treffen doelbewust plaatsen en voorwerpen van religieus en gemeenschappelijk leven. De herdenking richt de aandacht op de kwetsbaarheid van mensen en instellingen en op de verantwoordelijkheid van de samenleving om vervolging tegen te gaan.",
+        "nuance": "De term ‘Kristallnacht’ kan de ernst van het geweld reduceren tot materiële schade. Novemberpogroms benoemt het karakter van de aanvallen duidelijker."
       },
       {
         "id": "judaism:scrolls-discovery",
@@ -1205,7 +2357,24 @@
             "title": "Israel Museum · Shrine of the Book",
             "url": "https://museum.imj.org.il/newsletter/pdf/1.1.18-e.pdf"
           }
-        ]
+        ],
+        "what": "Vanaf 1947 worden in grotten bij de Dode Zee oude handschriften gevonden, aanvankelijk door bedoeïenen. Archeologisch onderzoek en verdere vondsten brengen een veel grotere verzameling teksten aan het licht.",
+        "stakeholders": [
+          {
+            "name": "Bedoeïenen die de eerste rollen vinden",
+            "role": "Brengen de eerste manuscripten uit de grotten aan het licht."
+          },
+          {
+            "name": "Archeologen, tekstgeleerden en conservatoren",
+            "role": "Onderzoeken, ontcijferen en bewaren de handschriften."
+          },
+          {
+            "name": "Musea en andere beherende instellingen",
+            "role": "Maken de teksten en hun geschiedenis toegankelijk voor onderzoek en publiek."
+          }
+        ],
+        "faithImpact": "De handschriften geven nieuwe toegang tot de tekstoverdracht en religieuze verscheidenheid van de tweede-tempelperiode. Zij verrijken de studie van de Hebreeuwse Bijbel, maar hun vondst bepaalt niet automatisch hoe een hedendaagse gemeenschap de tekst gelovig moet lezen.",
+        "nuance": "De ouderdom van een schrijfmateriaal, een handschrift en de compositie van een tekst zijn verschillende dateringsvragen."
       },
       {
         "id": "judaism:israel1948",
@@ -1224,8 +2393,29 @@
           {
             "title": "Verenigde Naties · Staatsverklaring",
             "url": "https://www.un.org/unispal/document/auto-insert-189917/"
+          },
+          {
+            "title": "Verenigde Naties · Historische tijdslijn van de kwestie Palestina",
+            "url": "https://www.un.org/unispal/historical-timeline/"
           }
-        ]
+        ],
+        "what": "Op 14 mei 1948 wordt de staat Israël uitgeroepen terwijl het Britse mandaat afloopt en er oorlog is. De ontwikkeling gaat samen met Joodse staatsvorming en met de Palestijnse vlucht en verdrijving die als Nakba wordt herinnerd.",
+        "stakeholders": [
+          {
+            "name": "David Ben-Goerion en de Joodse politieke leiding",
+            "role": "Roepen de nieuwe staat uit en richten staatsinstellingen in."
+          },
+          {
+            "name": "Joodse inwoners, vluchtelingen en diasporagemeenschappen",
+            "role": "Hebben uiteenlopende belangen, ervaringen en verwachtingen bij de staatsvorming."
+          },
+          {
+            "name": "Palestijnse Arabieren en naburige Arabische staten",
+            "role": "Zijn als bewoners, verdrevenen en strijdende partijen rechtstreeks betrokken bij de oorlog en haar gevolgen."
+          }
+        ],
+        "faithImpact": "Voor veel Joden ontstaat een nieuwe verhouding tussen een oude verbondenheid met het land en het burgerschap of bestaan van een moderne staat. Religieuze opvattingen over de staat, veiligheid, diaspora en heilige plaatsen blijven onderling verschillend; de politieke gebeurtenis vormt geen gezamenlijke geloofsbelijdenis.",
+        "nuance": "De historische ervaring van Palestijnen hoort bij deze context. Jodendom, Israëlische staatsinstellingen en het handelen van een regering mogen niet met elkaar worden gelijkgesteld."
       },
       {
         "id": "judaism:priesand",
@@ -1240,8 +2430,29 @@
           {
             "title": "Jewish Women's Archive · Vrouwen in het rabbinaat",
             "url": "https://jwa.org/rabbis/about"
+          },
+          {
+            "title": "Hebrew Union College · Biografie Sally Priesand",
+            "url": "https://huc.edu/news/biography-of-rabbi-sally-priesand-72-first-woman-rabbi-ordained-in-north-america/"
           }
-        ]
+        ],
+        "what": "Sally Priesand wordt in 1972 aan Hebrew Union College-Jewish Institute of Religion tot rabbijn gewijd. Binnen het Amerikaanse Reform-jodendom betekent dit een doorbraak in de toegang van vrouwen tot het rabbinaat.",
+        "stakeholders": [
+          {
+            "name": "Sally Priesand",
+            "role": "Doorloopt de opleiding en ontvangt de rabbijnse wijding."
+          },
+          {
+            "name": "Hebrew Union College-Jewish Institute of Religion",
+            "role": "Verzorgt de opleiding en verleent de wijding."
+          },
+          {
+            "name": "Gemeenten, vrouwelijke studenten en religieuze stromingen",
+            "role": "Ontwikkelen verschillende reacties op vrouwelijk religieus leiderschap."
+          }
+        ],
+        "faithImpact": "De wijding verbreedt binnen deze stroming wie als leraar, voorganger en religieuze vertegenwoordiger kan optreden. De ontwikkeling beïnvloedt ook gesprekken over gelijkwaardigheid, overlevering en de interpretatie van religieuze bevoegdheid.",
+        "nuance": "Regina Jonas was al in 1935 in Duitsland gewijd. De gebeurtenis verandert het beleid van andere Joodse stromingen niet automatisch."
       },
       {
         "id": "judaism:digital-study",
@@ -1257,7 +2468,23 @@
             "title": "Sefaria · Strategisch plan en oprichtingsgeschiedenis",
             "url": "https://www.sefaria.org.il/static/files/Sefaria_Strategic_Plan.pdf"
           }
-        ]
+        ],
+        "what": "Sefaria begint als een vrij toegankelijke digitale bibliotheek van Joodse teksten, vertalingen en onderlinge verwijzingen. De digitale omgeving brengt bronteksten en uitleg bij een wereldwijd publiek samen.",
+        "stakeholders": [
+          {
+            "name": "De makers en medewerkers van Sefaria",
+            "role": "Ontwikkelen en onderhouden de bibliotheek en haar zoek- en verwijsmogelijkheden."
+          },
+          {
+            "name": "Tekstuitgevers, vertalers en onderzoekers",
+            "role": "Leveren of controleren tekstmateriaal en interpretatieve hulpmiddelen."
+          },
+          {
+            "name": "Leraren en individuele lezers",
+            "role": "Gebruiken het materiaal in formele en zelfstandige studie."
+          }
+        ],
+        "faithImpact": "Digitale toegang verlaagt praktische drempels voor Tora- en commentaarstudie en maakt de verwevenheid van teksten zichtbaar. Het vervangt geen gemeenschapsgezag: lezers moeten vertalingen, context en redactionele keuzes blijven beoordelen."
       }
     ],
     "islam": [
@@ -1275,7 +2502,20 @@
             "title": "Metropolitan Museum · Islam: historische context",
             "url": "https://resources.metmuseum.org/resources/metpublications/pdf/Islamic_art_in_the_Metropolitan_Museum_the_historical_context.pdf"
           }
-        ]
+        ],
+        "what": "De islamitische biografische overlevering plaatst Mohammeds geboorte in Mekka, omstreeks 570. De levensbeschrijvingen situeren hem in de familie- en stamverbanden van de Quraysh, in de wereld rond het Mekkaanse heiligdom.",
+        "stakeholders": [
+          {
+            "name": "Mohammed",
+            "role": "De latere profeet; zijn vroege leven wordt in de sira-overlevering verteld."
+          },
+          {
+            "name": "Quraysh en Mohammeds familie",
+            "role": "Het Mekkaanse sociale verband waarbinnen de biografische verhalen hem plaatsen."
+          }
+        ],
+        "faithImpact": "Het geboortejaar is vooral een aanknopingspunt om de latere profetische loopbaan te begrijpen. De religieuze betekenis van Mohammed berust voor moslims op zijn profeetschap en voorbeeld, niet op een exact historisch vastgesteld geboortejaar.",
+        "nuance": "Het gebruikelijke jaartal is een benadering uit latere overlevering; het is geen eigentijdig geboorteregister. Niet alle moslimgemeenschappen geven een geboorteherdenking dezelfde plaats."
       },
       {
         "id": "islam:revelation",
@@ -1303,7 +2543,28 @@
           "chapter": 1,
           "verse": 1,
           "endVerse": 5
-        }
+        },
+        "what": "Volgens de overlevering ontvangt Mohammed bij Hira de eerste openbaring, verbonden met de beginverzen van soera 96. Een hadith die aan Aisha wordt overgeleverd beschrijft ook hoe Khadija hem opvangt en met Waraqa over de ervaring spreekt.",
+        "stakeholders": [
+          {
+            "name": "Mohammed",
+            "role": "Ontvanger van de openbaring volgens het islamitische geloof."
+          },
+          {
+            "name": "Jibril",
+            "role": "De engel die binnen de overlevering de boodschap overbrengt."
+          },
+          {
+            "name": "Khadija",
+            "role": "Echtgenote en steunfiguur in het overgeleverde verhaal."
+          },
+          {
+            "name": "Aisha en latere overleveraars",
+            "role": "Bronfiguren in de keten waarmee het verhaal later wordt doorgegeven; Aisha is hier niet als ooggetuige van 610 opgevoerd."
+          }
+        ],
+        "faithImpact": "Openbaring vormt het vertrekpunt voor het islamitische verstaan van de Koran als Gods woord. Het verhaal verbindt reciteren, luisteren en leren met het profetische gezag van Mohammed.",
+        "nuance": "De geloofsuitspraak over goddelijke oorsprong en het historisch dateren van overleveringen zijn verschillende vragen. De Koranpassage zelf geeft geen Gregoriaans jaartal."
       },
       {
         "id": "islam:hijra",
@@ -1319,7 +2580,24 @@
             "title": "Metropolitan Museum · Islam: historische context",
             "url": "https://resources.metmuseum.org/resources/metpublications/pdf/Islamic_art_in_the_Metropolitan_Museum_the_historical_context.pdf"
           }
-        ]
+        ],
+        "what": "Mohammed en zijn aanhangers verlaten Mekka en bouwen in Medina een nieuwe gemeenschapsbasis op. De verplaatsing verandert de omstandigheden waarin zij hun geloof beleven en hun onderlinge verhoudingen organiseren.",
+        "stakeholders": [
+          {
+            "name": "Mohammed",
+            "role": "Religieuze leider van de migrerende gemeenschap."
+          },
+          {
+            "name": "De muhajirun",
+            "role": "Volgelingen die Mekka verlaten en in Medina opnieuw een bestaan opbouwen."
+          },
+          {
+            "name": "De ansar",
+            "role": "Medinensische helpers die de nieuwkomers ondersteunen."
+          }
+        ],
+        "faithImpact": "De hidjra wordt het uitgangspunt van de islamitische jaartelling. In de religieuze herinnering gaat de gebeurtenis ook over verbondenheid en het vormen van een gemeenschap, naast individuele overtuiging.",
+        "nuance": "Het islamitische maanjaar valt niet samen met het Gregoriaanse zonnejaar. Het vertrekpunt van de kalender betekent niet dat ieder onderdeel van de kalender al bij de migratie werd vastgelegd."
       },
       {
         "id": "islam:badr",
@@ -1347,7 +2625,24 @@
           "chapter": 1,
           "verse": 123,
           "endVerse": 126
-        }
+        },
+        "what": "Bij Badr komt het tot een gewapende confrontatie tussen de gemeenschap uit Medina en een Mekkaanse tegenmacht. De overwinning wordt in de islamitische herinnering verbonden met Gods bijstand; de Koran verwijst ernaar in soera 3.",
+        "stakeholders": [
+          {
+            "name": "Mohammed en de Medinensische moslimgemeenschap",
+            "role": "De zijde die in de overlevering de overwinning behaalt."
+          },
+          {
+            "name": "De Mekkaanse tegenstanders",
+            "role": "De strijdende tegenpartij in het conflict."
+          },
+          {
+            "name": "Latere uitleggers",
+            "role": "Lezen de verwijzing naar Badr binnen bredere vragen over vertrouwen, strijd en verantwoordelijkheid."
+          }
+        ],
+        "faithImpact": "Badr krijgt betekenis als herinnering aan kwetsbaarheid en bijstand in de beginperiode. De passage wordt binnen de Koran gelezen samen met haar eigen oproepen en beperkingen; zij is geen zelfstandige samenvatting van een algemene leer over oorlog.",
+        "nuance": "Een religieuze duiding van de overwinning is iets anders dan een onafhankelijke reconstructie van alle militaire details. De gebeurtenis mag niet zonder context op hedendaagse conflicten worden toegepast."
       },
       {
         "id": "islam:mecca",
@@ -1363,7 +2658,24 @@
             "title": "University of Washington · Chronologie van de vroege islam",
             "url": "https://faculty.washington.edu/dwaugh/hist225/225chron/islchr.html"
           }
-        ]
+        ],
+        "what": "In 630 komt Mekka onder de controle van Mohammed en zijn gemeenschap. De gebeurtenis verandert de verhouding tussen de eerdere Mekkaanse tegenstanders en de groeiende islamitische gemeenschap.",
+        "stakeholders": [
+          {
+            "name": "Mohammed en zijn volgelingen",
+            "role": "De partij die de stad onder haar gezag brengt."
+          },
+          {
+            "name": "De inwoners en leiders van Mekka",
+            "role": "Moeten zich tot de nieuwe politieke en religieuze situatie verhouden."
+          },
+          {
+            "name": "Bedevaartgangers",
+            "role": "Zullen Mekka binnen de islamitische bedevaartpraktijk blijven bezoeken."
+          }
+        ],
+        "faithImpact": "De gebeurtenis bevestigt de plaats van de Kaäba binnen de islamitische eredienst. Mekka blijft een gedeeld oriëntatiepunt voor gebed en bedevaart van gemeenschappen die geografisch steeds verder uiteen wonen.",
+        "nuance": "Politieke controle over de stad en de theologische betekenis van de Kaäba zijn onderscheiden aspecten. De rituele betekenis wordt ook verbonden met oudere profetische verhalen in de Koran."
       },
       {
         "id": "islam:death",
@@ -1379,7 +2691,28 @@
             "title": "University of Washington · Chronologie van de vroege islam",
             "url": "https://faculty.washington.edu/dwaugh/hist225/225chron/islchr.html"
           }
-        ]
+        ],
+        "what": "Mohammed overlijdt in 632. Zijn overlijden plaatst de gemeenschap voor het praktische en principiële probleem wie haar daarna zal leiden.",
+        "stakeholders": [
+          {
+            "name": "Mohammeds familie",
+            "role": "Speelt een blijvende rol in herinnering en opvattingen over gezag."
+          },
+          {
+            "name": "Abu Bakr",
+            "role": "Wordt de eerste kalief in de gangbare historische opeenvolging."
+          },
+          {
+            "name": "Ali en zijn aanhang",
+            "role": "Zijn positie krijgt een eigen betekenis in sjiitische opvattingen over legitiem leiderschap."
+          },
+          {
+            "name": "De bredere gemeenschap",
+            "role": "Moet religieuze verbondenheid voortzetten zonder de levende profeet."
+          }
+        ],
+        "faithImpact": "De Koran en de herinnering aan Mohammeds woorden en handelen blijven richtinggevend. De vraag naar leiderschap gaat later samen met verschillende opvattingen over gezag, gemeenschap en de plaats van de profeetsfamilie.",
+        "nuance": "Latere soennitische en sjiitische leerstelsels waren in 632 nog niet in hun uiteindelijke vorm aanwezig. Hun verschillende interpretaties van deze geschiedenis moeten afzonderlijk worden weergegeven."
       },
       {
         "id": "islam:rashidun",
@@ -1396,7 +2729,28 @@
             "url": "https://www.metmuseum.org/essays/the-art-of-the-umayyad-period-661-750"
           }
         ],
-        "end": 661
+        "end": 661,
+        "what": "Tussen 632 en 661 volgen Abu Bakr, Umar, Uthman en Ali elkaar op als kalief. De periode omvat uitbreiding van het machtsgebied, bestuurlijke veranderingen en ernstige interne conflicten.",
+        "stakeholders": [
+          {
+            "name": "Abu Bakr en Umar",
+            "role": "De eerste twee leiders in deze historische opeenvolging."
+          },
+          {
+            "name": "Uthman",
+            "role": "De derde kalief, in overleveringen verbonden met Korancodices."
+          },
+          {
+            "name": "Ali",
+            "role": "De vierde kalief en een centrale figuur in sjiitische opvattingen over het imamaat."
+          },
+          {
+            "name": "Plaatselijke gemeenschappen",
+            "role": "Beleven de uitbreiding en de conflicten vanuit verschillende posities."
+          }
+        ],
+        "faithImpact": "In soennitische traditie krijgt deze periode een bijzondere voorbeeldfunctie als tijd van de rechtgeleide kaliefen. Sjiitische tradities plaatsen het legitieme leiderschap in een ander kader, waarin Ali en de imams centraal staan.",
+        "nuance": "‘Rechtgeleid’ is een religieuze waardering binnen een traditie en geen neutrale titel voor iedere historische beschrijving. Politieke uitbreiding betekende evenmin overal onmiddellijke bekering."
       },
       {
         "id": "islam:uthman",
@@ -1412,7 +2766,28 @@
             "title": "Sahih al-Bukhari · Verzameling van de Koran",
             "url": "https://sunnah.com/bukhari:4987"
           }
-        ]
+        ],
+        "what": "Een bekende overlevering beschrijft hoe Uthman een commissie laat werken aan exemplaren van de Koran en deze laat verspreiden. De tekst noemt zorgen over verschillen in recitatie en het gebruik van een aan Hafsa toevertrouwde verzameling.",
+        "stakeholders": [
+          {
+            "name": "Uthman ibn Affan",
+            "role": "De kalief die volgens de overlevering opdracht geeft tot het project."
+          },
+          {
+            "name": "Zayd ibn Thabit en de commissie",
+            "role": "Vervaardigen volgens het verslag de codices."
+          },
+          {
+            "name": "Hafsa",
+            "role": "Bewaart de schriftelijke verzameling waarnaar het verslag verwijst."
+          },
+          {
+            "name": "Recitatoren en regionale gemeenschappen",
+            "role": "De lezers en hoorders voor wie de verspreide codices een referentie vormen."
+          }
+        ],
+        "faithImpact": "Het verhaal is belangrijk voor het islamitische verstaan van de bewaring en overdracht van de Koran. Onderzoek naar handschriften en recitatietradities maakt daarnaast zichtbaar hoe schrift en mondelinge overdracht samen functioneren.",
+        "nuance": "De traditionele situering omstreeks 650 is geen exacte datering van elk bewaard handschrift. Een standaard van consonantenschrift is niet hetzelfde als het verdwijnen van alle erkende recitatievarianten."
       },
       {
         "id": "islam:first-fitna",
@@ -1427,9 +2802,30 @@
           {
             "title": "Metropolitan Museum · Omajjaden",
             "url": "https://www.metmuseum.org/essays/the-art-of-the-umayyad-period-661-750"
+          },
+          {
+            "title": "University of Washington · Chronologie van de vroege islam",
+            "url": "https://faculty.washington.edu/dwaugh/hist225/225chron/islchr.html"
           }
         ],
-        "end": 661
+        "end": 661,
+        "what": "Na de moord op Uthman raakt de gemeenschap verwikkeld in een reeks conflicten over leiderschap en legitimiteit. Ali en Muawiya komen tegenover elkaar te staan; de burgeroorlog loopt uit op een nieuwe machtsverhouding.",
+        "stakeholders": [
+          {
+            "name": "Ali ibn Abi Talib",
+            "role": "Kalief wiens gezag wordt betwist."
+          },
+          {
+            "name": "Muawiya en zijn Syrische machtsbasis",
+            "role": "Tegenpartij in de strijd om leiding en macht."
+          },
+          {
+            "name": "Aanhangers en plaatselijke gemeenschappen",
+            "role": "Raken verdeeld en dragen de gevolgen van het geweld."
+          }
+        ],
+        "faithImpact": "De oorlog maakt de vraag naar rechtmatig gezag en het omgaan met conflicten binnen de eigen gemeenschap scherp. De herinnering eraan wordt later op verschillende manieren onderdeel van islamitische religieuze identiteiten.",
+        "nuance": "Een burgeroorlog verklaart niet op zichzelf de volledige latere leer van soennieten, sjiieten of andere stromingen. Die tradities krijgen geleidelijk vorm."
       },
       {
         "id": "islam:umayyads",
@@ -1446,7 +2842,24 @@
             "url": "https://www.metmuseum.org/essays/the-art-of-the-umayyad-period-661-750"
           }
         ],
-        "end": 750
+        "end": 750,
+        "what": "Muawiya vestigt na de eerdere opvolgingsconflicten de Omajjadische dynastie, met Damascus als machtscentrum. De dynastie bestuurt een uitgestrekt en religieus divers rijk.",
+        "stakeholders": [
+          {
+            "name": "Muawiya en zijn opvolgers",
+            "role": "Dynastieke heersers die het kalifaat vanuit Syrië uitbouwen."
+          },
+          {
+            "name": "Bestuurders en kunstenaars",
+            "role": "Geven vorm aan taalbeleid, munten, gebouwen en openbare representatie."
+          },
+          {
+            "name": "Moslims, christenen en andere onderdanen",
+            "role": "Leven binnen ongelijke en plaatselijk verschillende rechts- en machtsverhoudingen."
+          }
+        ],
+        "faithImpact": "Moskeeën en openbare inscripties maken islamitische overtuigingen zichtbaar in stedelijke ruimte. Religieus gezag wordt tegelijk een punt van debat tegenover dynastieke macht.",
+        "nuance": "Het rijk was religieus niet homogeen. Uitbreiding van de staat en verspreiding van de islam zijn verbonden processen, maar vallen niet samen."
       },
       {
         "id": "islam:karbala",
@@ -1462,7 +2875,24 @@
             "title": "Encyclopaedia Iranica · Husayn ibn Ali",
             "url": "https://www.iranicaonline.org/articles/hosayn-b-ali-i/"
           }
-        ]
+        ],
+        "what": "Husayn ibn Ali en een klein gezelschap worden bij Karbala gedood in de strijd rond het gezag van de Omajjadische heerser Yazid. Overlevenden uit de profeetsfamilie dragen de herinnering aan het verlies verder.",
+        "stakeholders": [
+          {
+            "name": "Husayn ibn Ali",
+            "role": "Kleinzoon van Mohammed en centrale figuur van de sjiitische herinnering aan Karbala."
+          },
+          {
+            "name": "De strijdmacht van Yazids bestuur",
+            "role": "De militaire tegenpartij die Husayns gezelschap verslaat."
+          },
+          {
+            "name": "De profeetsfamilie en latere herdenkende gemeenschappen",
+            "role": "Bewaren en vertolken de herinnering aan het lijden."
+          }
+        ],
+        "faithImpact": "Karbala krijgt voor veel sjiieten een centrale betekenis rond trouw, rechtvaardigheid, martelaarschap en verzet tegen onderdrukking. Ashura-rituelen geven deze herinnering lichamelijk en gemeenschappelijk vorm.",
+        "nuance": "Vormen van rouw verschillen per gemeenschap en periode. Ashura heeft ook binnen soennitische tradities eigen betekenissen en praktijken."
       },
       {
         "id": "islam:dome",
@@ -1479,7 +2909,24 @@
             "url": "https://www.metmuseum.org/essays/the-art-of-the-umayyad-period-661-750"
           }
         ],
-        "end": 692
+        "end": 692,
+        "what": "Onder kalief Abd al-Malik wordt in Jeruzalem de Rotskoepel opgericht. Het monument combineert een opvallende architectuur met religieuze inscripties op een plaats met een lange en gedeelde geschiedenis.",
+        "stakeholders": [
+          {
+            "name": "Abd al-Malik",
+            "role": "Omajjadische opdrachtgever van het monument."
+          },
+          {
+            "name": "Bouwers, ambachtslieden en inscriptiemakers",
+            "role": "Vertalen het programma in ruimte en materiaal."
+          },
+          {
+            "name": "Religieuze gemeenschappen in Jeruzalem",
+            "role": "Verbinden verschillende herinneringen en aanspraken met de plaats."
+          }
+        ],
+        "faithImpact": "Het gebouw geeft islamitische geloofstaal een zichtbare plaats in de stad. Latere religieuze herinnering verbindt de omgeving ook met Mohammeds hemelreis.",
+        "nuance": "De Rotskoepel en de al-Aqsamoskee zijn verschillende gebouwen. Religieuze betekenissen en politieke aanspraken op de plaats mogen niet tot één ongewijzigd verhaal worden samengevoegd."
       },
       {
         "id": "islam:andalus",
@@ -1495,7 +2942,24 @@
             "title": "Metropolitan Museum · Al-Andalus",
             "url": "https://www.metmuseum.org/pt/met-publications/al-andalus-the-art-of-islamic-spain"
           }
-        ]
+        ],
+        "what": "Troepen uit Noord-Afrika steken in 711 over naar het Iberisch schiereiland, waar de Visigotische machtsorde wordt doorbroken. Daaruit ontstaat het gebied dat in Arabische bronnen al-Andalus heet.",
+        "stakeholders": [
+          {
+            "name": "Tariq ibn Ziyad en de overstekende troepen",
+            "role": "Militaire actoren van de eerste veroveringen."
+          },
+          {
+            "name": "Plaatselijke machthebbers en bevolking",
+            "role": "Krijgen te maken met veranderende bestuurlijke verhoudingen."
+          },
+          {
+            "name": "Islamitische, Joodse en christelijke gemeenschappen",
+            "role": "Ontwikkelen in de volgende eeuwen uiteenlopende vormen van samenleven."
+          }
+        ],
+        "faithImpact": "Al-Andalus wordt een plaats van islamitische geleerdheid, rechtspraktijk en artistieke productie. Contacten tussen religies leveren uitwisseling op, maar ook grenzen, ongelijkheid en conflicten.",
+        "nuance": "Het is misleidend om alle eeuwen van al-Andalus als één tijd van volledige tolerantie of ononderbroken onderdrukking te beschrijven."
       },
       {
         "id": "islam:abbasids",
@@ -1510,8 +2974,29 @@
           {
             "title": "Metropolitan Museum · Abbasiden",
             "url": "https://www.metmuseum.org/it/essays/the-art-of-the-abbasid-period-750-1258"
+          },
+          {
+            "title": "University of Washington · Abbasidische opstand en chronologie",
+            "url": "https://faculty.washington.edu/dwaugh/hist225/225chron/islchr.html"
           }
-        ]
+        ],
+        "what": "Een opstand brengt de Abbasiden aan de macht ten koste van de Omajjadische dynastie. Het zwaartepunt van de kalifale politiek verschuift in de volgende periode van Syrië naar Irak.",
+        "stakeholders": [
+          {
+            "name": "De Abbasidische familie",
+            "role": "Nieuwe dynastie die haar aanspraak met verwantschap aan de profeetsfamilie verbindt."
+          },
+          {
+            "name": "Abu Muslim en bondgenoten in Khurasan",
+            "role": "Belangrijke organisatoren van de opstand."
+          },
+          {
+            "name": "De Omajjaden en regionale gemeenschappen",
+            "role": "Verliezen macht of moeten zich tot het nieuwe bestuur verhouden."
+          }
+        ],
+        "faithImpact": "De machtswisseling verandert de patronage van religieuze en culturele instellingen. Zij heft discussies over rechtmatig leiderschap en de zelfstandige autoriteit van geleerden niet op.",
+        "nuance": "Een nieuwe dynastie betekent geen nieuwe religie. De politieke naam Abbasidisch dekt grote verschillen tussen plaatsen en perioden."
       },
       {
         "id": "islam:baghdad",
@@ -1527,7 +3012,24 @@
             "title": "Metropolitan Museum · Abbasiden",
             "url": "https://www.metmuseum.org/it/essays/the-art-of-the-abbasid-period-750-1258"
           }
-        ]
+        ],
+        "what": "Kalief al-Mansur laat Bagdad in 762 als nieuwe hoofdstad aanleggen. De stad groeit uit tot een knooppunt van bestuur, handel en kennisoverdracht.",
+        "stakeholders": [
+          {
+            "name": "Al-Mansur",
+            "role": "Abbasidische opdrachtgever van de hoofdstad."
+          },
+          {
+            "name": "Handelaars, vertalers en geleerden",
+            "role": "Verbindende actoren in de netwerken van de stad."
+          },
+          {
+            "name": "Patroons en religieuze gemeenschappen",
+            "role": "Ondersteunen onderwijs en tekstproductie vanuit verschillende overtuigingen."
+          }
+        ],
+        "faithImpact": "Stedelijke netwerken maken ontmoetingen tussen juridische, theologische en filosofische tradities mogelijk. Bagdad toont hoe de bestudering van geloofsteksten samenhangt met taal, onderwijs en maatschappelijke instellingen.",
+        "nuance": "Niet alle kennisproductie stond onder één centraal instituut of kwam van één geloofsgroep. De religieuze geschiedenis van de stad is breder dan het hof."
       },
       {
         "id": "islam:hadith",
@@ -1548,7 +3050,24 @@
             "url": "https://www.iranicaonline.org/articles/hadith/i-intro/"
           }
         ],
-        "end": 900
+        "end": 900,
+        "what": "In de negende eeuw stellen geleerden invloedrijke verzamelingen samen van overleveringen over Mohammeds woorden en handelen. Zij verzamelen berichten en beoordelen onder meer hun overleveringsketens.",
+        "stakeholders": [
+          {
+            "name": "Al-Bukhari en Muslim ibn al-Hajjaj",
+            "role": "Samenstellers van twee bijzonder gezaghebbende soennitische collecties."
+          },
+          {
+            "name": "Overleveraars en hadithgeleerden",
+            "role": "Dragen berichten over en onderzoeken hun betrouwbaarheid."
+          },
+          {
+            "name": "Rechtsgeleerden en geloofsgemeenschappen",
+            "role": "Gebruiken hadith bij uitleg van praktijk, recht en geloof."
+          }
+        ],
+        "faithImpact": "Hadith wordt naast de Koran een belangrijke bron voor het concrete religieuze leven. Debatten over authenticiteit en uitleg bepalen mede welke handelingen als navolging van de profeet gelden.",
+        "nuance": "De gezagstoekenning aan verzamelingen ontwikkelt zich in de tijd. Sjiitische tradities hebben eigen collecties en gezagskaders; hadith is geen ander woord voor Koran."
       },
       {
         "id": "islam:fatimids",
@@ -1565,7 +3084,24 @@
             "url": "https://www.metmuseum.org/ja/essays/the-art-of-the-fatimid-period-909-1171"
           }
         ],
-        "end": 1171
+        "end": 1171,
+        "what": "De Fatimiden bouwen vanaf 909 een kalifaat uit vanuit Noord-Afrika en veroveren later Egypte. Zij verbinden hun dynastieke gezag met een ismaïlitisch-sjiitische aanspraak op het imamaat.",
+        "stakeholders": [
+          {
+            "name": "De Fatimidische imam-kaliefen",
+            "role": "Verenigen religieuze aanspraak en politieke heerschappij."
+          },
+          {
+            "name": "Ismaïlitische verkondigers en geleerden",
+            "role": "Dragen de religieuze leer en missie van de beweging over."
+          },
+          {
+            "name": "Abbasidische rivalen en diverse onderdanen",
+            "role": "Staan buiten of tegenover de Fatimidische gezagsaanspraak."
+          }
+        ],
+        "faithImpact": "De dynastie ondersteunt een eigen religieuze missie en instellingen van geleerdheid. Het gelijktijdig bestaan van rivaliserende kalifaten maakt verschillende opvattingen over islamitisch leiderschap zichtbaar.",
+        "nuance": "Fatimidische heerschappij betekent niet dat alle inwoners ismaïlitisch werden. De staatsleer en de dagelijkse religie van onderdanen moeten worden onderscheiden."
       },
       {
         "id": "islam:cairo",
@@ -1580,8 +3116,29 @@
           {
             "title": "Metropolitan Museum · Fatimiden",
             "url": "https://www.metmuseum.org/ja/essays/the-art-of-the-fatimid-period-909-1171"
+          },
+          {
+            "title": "Al-Azhar · Geschiedenis van de moskee",
+            "url": "https://azhar.eg/en/Uzbekistan-International-Conference/ArtMID/10764/ArticleID/46011/About-Al-Azhar-Mosque"
           }
-        ]
+        ],
+        "what": "Na de verovering van Egypte laat de Fatimidische bevelhebber Jawhar een nieuwe stad aanleggen: Caïro. Kort daarop ontstaat de al-Azharmoskee als religieus centrum van de nieuwe hoofdstad.",
+        "stakeholders": [
+          {
+            "name": "Jawhar al-Siqilli",
+            "role": "Bevelhebber en organisator van de nieuwe stichting."
+          },
+          {
+            "name": "Kalief al-Muizz",
+            "role": "Fatimidische heerser onder wiens gezag de stad wordt uitgebouwd."
+          },
+          {
+            "name": "Geleerden, studenten en stedelingen",
+            "role": "Maken van moskee en stad plaatsen van religieus leren en dagelijks leven."
+          }
+        ],
+        "faithImpact": "Al-Azhar begint binnen een Fatimidisch-ismaïlitische omgeving en krijgt later een vooraanstaande soennitische rol. De geschiedenis laat zien dat de religieuze identiteit van een instelling kan veranderen.",
+        "nuance": "De stichting van Caïro in 969 is niet de voltooiingsdatum van al-Azhar. De ontwikkeling tot het latere onderwijscentrum bestrijkt vele eeuwen."
       },
       {
         "id": "islam:madrasa",
@@ -1598,7 +3155,24 @@
             "url": "https://www.metmuseum.org/it/essays/the-art-of-the-abbasid-period-750-1258"
           }
         ],
-        "end": 1233
+        "end": 1233,
+        "what": "In Bagdad ontstaat onder kalief al-Mustansir de Mustansiriyya, met onderwijs voor de vier bekende soennitische rechtsscholen. Het complex verbindt leren met materiële ondersteuning van docenten en studenten.",
+        "stakeholders": [
+          {
+            "name": "Al-Mustansir",
+            "role": "Abbasidische heerser en patroon van de madrasa."
+          },
+          {
+            "name": "Docenten van de hanafitische, malikitische, sjafiitische en hanbalitische tradities",
+            "role": "Dragen verschillende juridische leermethoden over."
+          },
+          {
+            "name": "Studenten en ondersteunend personeel",
+            "role": "Vormen het dagelijkse onderwijsverband."
+          }
+        ],
+        "faithImpact": "De instelling geeft verschillende soennitische juridische tradities een zichtbare plaats binnen één onderwijsomgeving. Zij maakt duidelijk dat geloofspraktijk mede wordt gevormd door opleiding, argumentatie en institutionele steun.",
+        "nuance": "De vier rechtsscholen zijn geen vier afzonderlijke religies. Madrasa’s waren bovendien niet de enige plaatsen waar religieuze kennis werd geleerd."
       },
       {
         "id": "islam:baghdad1258",
@@ -1614,7 +3188,24 @@
             "title": "Metropolitan Museum · Abbasiden",
             "url": "https://www.metmuseum.org/it/essays/the-art-of-the-abbasid-period-750-1258"
           }
-        ]
+        ],
+        "what": "Mongoolse troepen onder Hulagu nemen Bagdad in en beëindigen het Abbasidische kalifaat in de stad. De aanval gaat gepaard met vernietiging en zwaar menselijk verlies.",
+        "stakeholders": [
+          {
+            "name": "Hulagu en de Mongoolse strijdmacht",
+            "role": "De veroverende partij."
+          },
+          {
+            "name": "Kalief al-Mustasim en het Abbasidische bestuur",
+            "role": "Het verslagen politieke gezag in Bagdad."
+          },
+          {
+            "name": "De inwoners en geleerden van de stad",
+            "role": "Ondergaan geweld, verlies en ontwrichting van hun instellingen."
+          }
+        ],
+        "faithImpact": "De ondergang van een belangrijk machtscentrum verandert de omgeving van religieuze instellingen en geleerdheid. Moslimgemeenschappen en kennisnetwerken blijven echter op andere plaatsen bestaan en ontwikkelen zich verder.",
+        "nuance": "1258 is geen ‘einde van de islamitische beschaving’. Religieus en intellectueel leven heeft meerdere centra en kan niet met één dynastie worden vereenzelvigd."
       },
       {
         "id": "islam:mali",
@@ -1631,7 +3222,24 @@
             "url": "https://www.historians.org/resource/travel-and-trade-in-later-medieval-africa/"
           }
         ],
-        "end": 1325
+        "end": 1325,
+        "what": "Mansa Musa, vorst van Mali, onderneemt de hadj naar Mekka. De reis brengt zijn hof in contact met een groot netwerk van handelsplaatsen, geleerden en bedevaartgangers.",
+        "stakeholders": [
+          {
+            "name": "Mansa Musa",
+            "role": "West-Afrikaanse vorst en bedevaartganger."
+          },
+          {
+            "name": "Zijn reisgezelschap",
+            "role": "Maakt de tocht mogelijk en draagt contacten en verhalen verder."
+          },
+          {
+            "name": "Geleerden, handelaars en pelgrims langs de route",
+            "role": "Verbinden West-Afrika met andere islamitische regio’s."
+          }
+        ],
+        "faithImpact": "De bedevaart maakt zichtbaar hoe West-Afrikaanse islamitische gemeenschappen deel uitmaken van brede religieuze netwerken. Hadj verbindt persoonlijke godsdienstige plicht, publieke representatie en uitwisseling van kennis.",
+        "nuance": "De vorst vertegenwoordigt niet de volledige religieuze werkelijkheid van Mali. Plaatselijke tradities, verschillende vormen van islam en politieke belangen blijven naast elkaar bestaan."
       },
       {
         "id": "islam:ottomans",
@@ -1647,7 +3255,24 @@
             "title": "Metropolitan Museum · Ottomanen vóór 1600",
             "url": "https://www.metmuseum.org/essays/the-art-of-the-ottomans-before-1600"
           }
-        ]
+        ],
+        "what": "Sultan Mehmed II neemt Constantinopel in 1453 in. De stad wordt een Ottomaans machtscentrum, waar gebouwen en publieke ruimten nieuwe functies krijgen.",
+        "stakeholders": [
+          {
+            "name": "Mehmed II en het Ottomaanse leger",
+            "role": "De veroverende heerser en zijn strijdmacht."
+          },
+          {
+            "name": "Het Byzantijnse bestuur en de stadsbevolking",
+            "role": "Worden geconfronteerd met de beëindiging van de oude machtsorde."
+          },
+          {
+            "name": "Islamitische en christelijke religieuze instellingen",
+            "role": "Krijgen een plaats binnen gewijzigde politieke verhoudingen."
+          }
+        ],
+        "faithImpact": "Moskeeën, onderwijs en vrome stichtingen geven de nieuwe hoofdstad een islamitische institutionele structuur. Het naast elkaar bestaan van religies wordt geregeld binnen hiërarchische machtsverhoudingen.",
+        "nuance": "De betekenis van de verovering verschilt voor de betrokken gemeenschappen. Dynastiek succes mag niet zonder meer als een religieus oordeel worden voorgesteld."
       },
       {
         "id": "islam:granada",
@@ -1663,7 +3288,24 @@
             "title": "Metropolitan Museum · Al-Andalus",
             "url": "https://www.metmuseum.org/pt/met-publications/al-andalus-the-art-of-islamic-spain"
           }
-        ]
+        ],
+        "what": "Met de overdracht van Granada in 1492 eindigt de Nasridische heerschappij op het Iberisch schiereiland. Voor de moslimbevolking volgen onder christelijk gezag veranderende en uiteindelijk steeds beperktere mogelijkheden voor religieuze praktijk.",
+        "stakeholders": [
+          {
+            "name": "De Nasridische heersers",
+            "role": "Verliezen hun politieke machtsbasis."
+          },
+          {
+            "name": "Ferdinand en Isabella en hun bestuur",
+            "role": "Vestigen het nieuwe gezag over Granada."
+          },
+          {
+            "name": "Moslims en hun later als Moriscos aangeduide afstammelingen",
+            "role": "Krijgen te maken met bekeringseisen, toezicht en latere verdrijving."
+          }
+        ],
+        "faithImpact": "Het verlies raakt de zichtbaarheid en continuïteit van islamitische instellingen en praktijken in Spanje. Geloofsuitoefening wordt voor velen verbonden met aanpassing, verborgenheid, migratie of verlies.",
+        "nuance": "1492 is niet de datum van alle latere dwangmaatregelen en verdrijvingen. Een religieuze gemeenschap verdwijnt niet op één dag doordat haar dynastie eindigt."
       },
       {
         "id": "islam:safavid",
@@ -1679,7 +3321,24 @@
             "title": "Metropolitan Museum · Safaviden vóór 1600",
             "url": "https://www.metmuseum.org/essays/the-art-of-the-safavids-before-1600"
           }
-        ]
+        ],
+        "what": "Ismail I vestigt de Safavidische dynastie in Iran en bevordert het twaalver-sjiisme als staatsreligie. De religieuze verandering verloopt in de volgende tijd via bestuur, geleerden, rituelen en ook dwang.",
+        "stakeholders": [
+          {
+            "name": "Ismail I en zijn opvolgers",
+            "role": "Safavidische heersers die een sjiitisch politiek-religieus programma ondersteunen."
+          },
+          {
+            "name": "De Qizilbash",
+            "role": "Militaire en religieuze aanhangers van de opkomende dynastie."
+          },
+          {
+            "name": "Sjiitische geleerden en plaatselijke gemeenschappen",
+            "role": "Geven vorm aan leer en praktijk, soms onder druk van het bestuur."
+          }
+        ],
+        "faithImpact": "Twaalver-sjiitische instellingen en publieke rituelen krijgen in Iran een duurzame positie. De verhouding tussen vorst, geleerde en gemeenschap blijft daarbij onderwerp van onderhandeling en spanning.",
+        "nuance": "De bevolking was niet vanaf 1501 overal plotseling sjiitisch. De geschiedenis omvat weerstand, regionale verschillen en uiteenlopende vormen van religieuze betrokkenheid."
       },
       {
         "id": "islam:holy-cities",
@@ -1695,7 +3354,24 @@
             "title": "Metropolitan Museum · Ottomanen vóór 1600",
             "url": "https://www.metmuseum.org/essays/the-art-of-the-ottomans-before-1600"
           }
-        ]
+        ],
+        "what": "De overwinning van Selim I op de Mamelukken brengt Egypte en Syrië in de Ottomaanse invloedssfeer. Ook de relatie met de leiding van Mekka en Medina verandert, met grote betekenis voor de organisatie van de bedevaart.",
+        "stakeholders": [
+          {
+            "name": "Selim I en het Ottomaanse bestuur",
+            "role": "Breiden hun macht over de voormalige Mamelukse gebieden uit."
+          },
+          {
+            "name": "De Mamelukse machthebbers",
+            "role": "Verliezen hun leidende positie."
+          },
+          {
+            "name": "De leiders van de heilige steden en bedevaartgangers",
+            "role": "Zijn betrokken bij beheer, bescherming en gebruik van de bedevaartroutes."
+          }
+        ],
+        "faithImpact": "Zorg voor de heilige steden en de hadj versterkt het religieuze prestige van de Ottomaanse sultan. Voor gelovigen hangt toegang tot een gedeeld heilig centrum samen met infrastructuur en veiligheid.",
+        "nuance": "Politiek beschermheerschap geeft geen onbeperkt gezag over alle moslims. De lokale inrichting van bestuur en religie blijft belangrijk."
       },
       {
         "id": "islam:mughal",
@@ -1711,7 +3387,24 @@
             "title": "Victoria and Albert Museum · Mogolrijk",
             "url": "https://www.vam.ac.uk/articles/the-arts-of-the-mughal-empire/"
           }
-        ]
+        ],
+        "what": "Babur verslaat in 1526 de machthebber van het sultanaat van Delhi en legt de basis voor het Mogolrijk. Zijn opvolgers ontwikkelen een hofcultuur die Centraal-Aziatische, Perzische en Zuid-Aziatische elementen verbindt.",
+        "stakeholders": [
+          {
+            "name": "Babur",
+            "role": "Centraal-Aziatische stichter van de nieuwe dynastie."
+          },
+          {
+            "name": "Ibrahim Lodi en zijn aanhang",
+            "role": "De verslagen machthebber en tegenpartij."
+          },
+          {
+            "name": "De religieus diverse bevolking van het subcontinent",
+            "role": "Leeft onder veranderende machtsverhoudingen, met uiteenlopende belangen."
+          }
+        ],
+        "faithImpact": "De dynastie wordt een belangrijke patroon van islamitische gebouwen, boekcultuur en geleerdheid in Zuid-Azië. Haar religieuze beleid verandert per vorst en weerspiegelt niet de overtuiging van alle moslims in de regio.",
+        "nuance": "De islam was al ruim vóór de Mogols aanwezig in Zuid-Azië. De stichting van het rijk is dus geen beginpunt van de religie op het subcontinent."
       },
       {
         "id": "islam:mughal-culture",
@@ -1728,7 +3421,24 @@
             "url": "https://www.vam.ac.uk/articles/the-arts-of-the-mughal-empire/"
           }
         ],
-        "end": 1650
+        "end": 1650,
+        "what": "Onder Akbar, Jahangir en Shah Jahan werken kunstenaars uit verschillende regionale en religieuze tradities samen in hofateliers. Handschriften, schilderkunst en architectuur krijgen daardoor nieuwe vormen.",
+        "stakeholders": [
+          {
+            "name": "Akbar, Jahangir en Shah Jahan",
+            "role": "Keizerlijke opdrachtgevers met verschillende religieuze en culturele beleidskeuzes."
+          },
+          {
+            "name": "Hindoeïstische en islamitische ambachtslieden en Iraanse meesters",
+            "role": "Brengen technieken en beeldtradities samen."
+          },
+          {
+            "name": "Geleerden en bezoekers van het hof",
+            "role": "Dragen religieuze en intellectuele uitwisseling mee."
+          }
+        ],
+        "faithImpact": "Kunst en boekproductie worden plaatsen waar religieuze ideeën worden voorgesteld, vertaald en besproken. De uitwisseling toont dat islamitische cultuur niet één vaste artistieke stijl of gesloten traditie is.",
+        "nuance": "Een hofvoorwerp bewijst geen gelijkheid tussen alle religies in de samenleving. Keizerlijke representatie en dagelijks geloofsleven zijn niet hetzelfde."
       },
       {
         "id": "islam:cairo-edition",
@@ -1744,7 +3454,24 @@
             "title": "Quran Archive Project · Egyptische druk 1924",
             "url": "https://qrnr.org/egypt-kfe/"
           }
-        ]
+        ],
+        "what": "In 1924 verschijnt onder Egyptische auspiciën een zorgvuldig voorbereide gedrukte Koraneditie volgens de lezing van Hafs naar Asim. De editie wordt een invloedrijk model voor onderwijs en latere drukwerken.",
+        "stakeholders": [
+          {
+            "name": "De Egyptische uitgavecommissie en drukkers",
+            "role": "Bereiden spelling, leestekens en de materiële uitgave voor."
+          },
+          {
+            "name": "Koning Fuad en het Egyptische onderwijsbestuur",
+            "role": "Het institutionele kader waarin de uitgave tot stand komt."
+          },
+          {
+            "name": "Recitatoren, leraren en leerlingen",
+            "role": "Gebruiken het drukwerk naast mondeling leren en reciteren."
+          }
+        ],
+        "faithImpact": "De ruime verspreiding helpt een bepaalde gedrukte weergave herkenbaar te maken in veel landen. Ze verbindt moderne druktechniek met een oudere traditie van recitatie en tekstzorg.",
+        "nuance": "1924 is geen ontstaansdatum van de Koran en geen afschaffing van alle andere erkende lezingen. Onder meer Noord-Afrikaanse en Zuid-Aziatische druktradities behouden eigen kenmerken."
       },
       {
         "id": "islam:caliphate1924",
@@ -1760,7 +3487,24 @@
             "title": "Library of Congress · Turkey: a country study",
             "url": "https://tile.loc.gov/storage-services/master/frd/frdcstdy/tu/turkeycountrystu00metz_0/turkeycountrystu00metz_0.pdf"
           }
-        ]
+        ],
+        "what": "Het Turkse parlement schaft in maart 1924 het Ottomaanse kalifaat af binnen de hervorming van de nieuwe republiek. Een dynastiek ambt met een lange en veranderlijke geschiedenis houdt op te bestaan.",
+        "stakeholders": [
+          {
+            "name": "Het Turkse parlement en de republikeinse leiding",
+            "role": "Nemen het besluit binnen hun programma voor de nieuwe staat."
+          },
+          {
+            "name": "Abdülmecid II",
+            "role": "De laatste Ottomaanse kalief, wiens ambt wordt afgeschaft."
+          },
+          {
+            "name": "Moslimgeleerden en politieke bewegingen buiten Turkije",
+            "role": "Reageren verschillend op de vraag naar gemeenschap en leiderschap."
+          }
+        ],
+        "faithImpact": "De gebeurtenis verscherpt discussies over de relatie tussen religieuze verbondenheid, nationale staten en politieke leiding. Zij maakt geen einde aan islamitisch gebed, geleerdheid of gemeenschapsleven.",
+        "nuance": "Er ontstaat geen door alle moslims erkende opvolger. De historische betekenis van het Ottomaanse kalifaat en de wenselijkheid van een kalifaat worden uiteenlopend beoordeeld."
       },
       {
         "id": "islam:indonesia",
@@ -1776,7 +3520,24 @@
             "title": "Indonesisch staatssecretariaat · Onafhankelijkheidsverklaring",
             "url": "https://www.setneg.go.id/baca/index/presidential_state_addres_on_the_66th_anniversary_of_independence_of_ri_jakarta_16_agustus_2011"
           }
-        ]
+        ],
+        "what": "Soekarno en Mohammad Hatta roepen in augustus 1945 de onafhankelijkheid van Indonesië uit. De opbouw van de republiek brengt ook discussies mee over religie, burgerschap en de plaats van de grote moslimgemeenschappen.",
+        "stakeholders": [
+          {
+            "name": "Soekarno en Mohammad Hatta",
+            "role": "Leiders die de onafhankelijkheid uitroepen."
+          },
+          {
+            "name": "Nationalistische en islamitische bewegingen",
+            "role": "Dragen verschillende visies op staat en samenleving bij."
+          },
+          {
+            "name": "Religieuze minderheden en de brede bevolking",
+            "role": "Zijn betrokken bij de vormgeving van burgerschap en samenleven."
+          }
+        ],
+        "faithImpact": "Islamitische praktijk en organisaties ontwikkelen zich binnen een nationale staat met religieuze verscheidenheid. De gebeurtenis maakt zichtbaar dat politiek engagement van moslims verschillende institutionele vormen kan aannemen.",
+        "nuance": "De onafhankelijkheidsverklaring is geen volledige beschrijving van het latere staatsbestel of van alle latere conflicten. Een meerderheid moslims betekent niet dat Indonesië één uniforme islamitische traditie heeft."
       },
       {
         "id": "islam:birmingham",
@@ -1792,7 +3553,24 @@
             "title": "University of Birmingham · Vroeg Koranhandschrift",
             "url": "https://www.birmingham.ac.uk/news-archive/2015/birmingham-quran-manuscript-dated-among-the-oldest-in-the-world"
           }
-        ]
+        ],
+        "what": "De Universiteit van Birmingham presenteert in 2015 radiokoolstofonderzoek naar twee perkamentbladen met delen van soera’s 18–20. Het onderzoek dateert het perkament met een bandbreedte van 568–645, met een gerapporteerde waarschijnlijkheid van 95,4 procent.",
+        "stakeholders": [
+          {
+            "name": "De Cadbury Research Library in Birmingham",
+            "role": "Bewaart het handschrift in de Mingana-collectie."
+          },
+          {
+            "name": "De radiokoolstofonderzoekers in Oxford",
+            "role": "Onderzoeken het materiaal waarop de tekst staat."
+          },
+          {
+            "name": "Handschriftgeleerden en moslimgemeenschappen",
+            "role": "Bestuderen of waarderen het stuk vanuit historische en religieuze vragen."
+          }
+        ],
+        "faithImpact": "Het handschrift maakt de vroege materiële overlevering van de Koran zichtbaar voor een breed publiek. Het kan religieuze waardering voor tekstbewaring en historisch onderzoek met elkaar in gesprek brengen.",
+        "nuance": "Een datering van perkament is geen automatische datering van de inkt of het schrijven. De bladen vertegenwoordigen slechts een deel van de Koran en beslissen niet op zichzelf elke vraag over de tekstgeschiedenis."
       },
       {
         "id": "islam:fraternity",
@@ -1808,7 +3586,24 @@
             "title": "Vaticaan · Human Fraternity, gezamenlijk document",
             "url": "https://www.vatican.va/content/francesco/en/travels/2019/outside/documents/papa-francesco_20190204_documento-fratellanza-umana.html"
           }
-        ]
+        ],
+        "what": "Grootimam Ahmad al-Tayyeb en paus Franciscus ondertekenen in Abu Dhabi een gezamenlijk document over menselijke broederlijkheid en samenleven. De tekst verbindt geloof met menselijke waardigheid, vrede en zorg voor kwetsbare mensen.",
+        "stakeholders": [
+          {
+            "name": "Ahmad al-Tayyeb",
+            "role": "Grootimam van al-Azhar en islamitische medeondertekenaar."
+          },
+          {
+            "name": "Paus Franciscus",
+            "role": "Katholieke medeondertekenaar."
+          },
+          {
+            "name": "Religieuze gemeenschappen en publieke instellingen",
+            "role": "Worden uitgenodigd de oproep tot samenleven concreet te maken."
+          }
+        ],
+        "faithImpact": "Het document biedt een zichtbaar voorbeeld van samenwerking vanuit verschillende religieuze overtuigingen. Het stimuleert reflectie op de relatie tussen geloof, geweldloos samenleven en verantwoordelijkheid voor anderen.",
+        "nuance": "Het document maakt de islam en het katholicisme niet tot één religie. De ondertekenaars spreken vanuit hun instellingen en vertegenwoordigen niet elke opvatting binnen beide tradities."
       }
     ]
   },
@@ -1835,7 +3630,24 @@
           "chapter": 1,
           "verse": 26,
           "endVerse": 31
-        }
+        },
+        "what": "Genesis 1 verhaalt de wereld als Gods goede schepping en beschrijft mensen als geschapen naar Gods beeld. De tekst geeft hun een bijzondere verantwoordelijkheid voor het leven op aarde en verbindt de scheppingsorde met Gods rust.",
+        "stakeholders": [
+          {
+            "name": "God als Schepper binnen het verhaal",
+            "role": "God spreekt, schept, zegent en beoordeelt de schepping als goed."
+          },
+          {
+            "name": "De mensheid en andere levende wezens",
+            "role": "Zij krijgen een plaats binnen de beschreven scheppingsorde; mensen ontvangen een bijzondere opdracht."
+          },
+          {
+            "name": "De gelovige lezersgemeenschap",
+            "role": "Zij gebruikt de tekst om oorsprong, waardigheid, begrenzing en verantwoordelijkheid te doordenken."
+          }
+        ],
+        "faithImpact": "Voor de katholieke traditie ondersteunt scheppingsgeloof de waardigheid van ieder mens en de verantwoordelijkheid voor andere schepselen. Het verhaal krijgt betekenis in liturgie, ethiek en bezinning op ecologische zorg.",
+        "nuance": "Dit is een religieuze teksttraditie zonder empirisch vastgestelde kalenderdatum. De beschrijving van Gods handelen wordt als geloofstaal gepresenteerd en niet als een op de tijdslijn gedateerd wetenschappelijk verslag."
       }
     ],
     "judaism": [
@@ -1860,7 +3672,24 @@
           "chapter": 12,
           "verse": 1,
           "endVerse": 9
-        }
+        },
+        "what": "Genesis verhaalt hoe Abram wordt geroepen om zijn vertrouwde omgeving te verlaten en een belofte over land en nakomelingen ontvangt. Het verhaal verbindt migratie, vertrouwen en verantwoordelijkheid met de vorming van een verbondsrelatie.",
+        "stakeholders": [
+          {
+            "name": "God, binnen de vertelling",
+            "role": "Roept Abram en spreekt de belofte uit."
+          },
+          {
+            "name": "Abram en Sarai",
+            "role": "Gaan op weg en dragen de spanning tussen belofte en geleefde werkelijkheid."
+          },
+          {
+            "name": "Familieleden en omringende bewoners",
+            "role": "Vormen de menselijke omgeving waarin het verhaal over land en relaties zich afspeelt."
+          }
+        ],
+        "faithImpact": "Abraham wordt een centrale gestalte voor het nadenken over verbond, trouw en de plaats van Israël tussen andere volken. Joodse uitleg gaat daarbij ook in op onvolkomenheden en morele spanningen in de aartsvaderverhalen.",
+        "nuance": "Deze beschrijving volgt de teksttraditie. Een gebruikelijke ‘aartsvadertijd’ biedt geen onafhankelijk bewezen datum voor afzonderlijke scènes."
       },
       {
         "id": "judaism:exodus",
@@ -1883,7 +3712,24 @@
           "chapter": 12,
           "verse": 1,
           "endVerse": 14
-        }
+        },
+        "what": "Exodus verhaalt de bevrijding van de Israëlieten uit slavernij in Egypte en het vertrek uit het machtsgebied van de farao. Het verhaal vormt de achtergrond van voorschriften over herinneren, vertellen en vieren.",
+        "stakeholders": [
+          {
+            "name": "God, binnen de vertelling",
+            "role": "Bevrijdt het onderdrukte volk en geeft voorschriften voor de herinnering."
+          },
+          {
+            "name": "Mozes, Aäron en de Israëlieten",
+            "role": "Treden op, gaan op weg en leren als bevrijde gemeenschap te leven."
+          },
+          {
+            "name": "De farao en de Egyptenaren",
+            "role": "Vertegenwoordigen in de vertelling de macht waaraan de Israëlieten proberen te ontkomen."
+          }
+        ],
+        "faithImpact": "De uittocht krijgt een blijvende plaats in Pesach, liturgie en de plicht de bevrijding aan volgende generaties door te geven. De herinnering aan eigen vreemdelingschap wordt in de Tora verbonden met verantwoordelijkheid voor kwetsbare anderen.",
+        "nuance": "De religieuze herinnering heeft een andere functie dan een empirische reconstructie. Historische modellen leveren geen algemeen aanvaarde precieze datum voor het volledige verhaal."
       },
       {
         "id": "judaism:sinai",
@@ -1906,7 +3752,24 @@
           "chapter": 19,
           "verse": 1,
           "endVerse": 8
-        }
+        },
+        "what": "Exodus vertelt hoe de bevrijde gemeenschap bij Sinai een verbond aangaat en geboden ontvangt. De vertelling verbindt de ontvangst van onderricht met een gezamenlijke verantwoordelijkheid voor de manier van leven.",
+        "stakeholders": [
+          {
+            "name": "God, binnen de vertelling",
+            "role": "Biedt het verbond en de geboden aan."
+          },
+          {
+            "name": "Mozes",
+            "role": "Bemiddelt tussen de goddelijke woorden en de verzamelde gemeenschap."
+          },
+          {
+            "name": "De Israëlieten",
+            "role": "Worden aangesproken als gemeenschap die op het verbond antwoordt."
+          }
+        ],
+        "faithImpact": "Sinai is een fundamenteel referentiepunt voor het gezag van de Tora en de religieuze betekenis van het doen van geboden. Rabbijnse uitleg en rituele herinnering blijven onderzoeken hoe een later levende gemeenschap zich tot deze ontvangst verhoudt.",
+        "nuance": "De betekenis van Sinai in geloof en ritueel is niet afhankelijk van het aanwijzen van één historisch vastgestelde berglocatie of kalenderdatum."
       }
     ],
     "islam": [
@@ -1931,7 +3794,24 @@
           "chapter": 1,
           "verse": 125,
           "endVerse": 129
-        }
+        },
+        "what": "Koran 2:125–129 verbindt Ibrahim en Ismail met het oprichten van de fundamenten van het Huis. Hun handelen gaat in de tekst samen met gebed om aanvaarding en om een gemeenschap die zich aan God toevertrouwt.",
+        "stakeholders": [
+          {
+            "name": "Ibrahim en Ismail",
+            "role": "Profetische personen die binnen het Koranverhaal bij het Huis werkzaam zijn."
+          },
+          {
+            "name": "God",
+            "role": "Degene tot wie het gebed binnen de religieuze tekst is gericht."
+          },
+          {
+            "name": "De latere biddende en pelgrimerende gemeenschap",
+            "role": "Herkent in het verhaal een profetische voorgeschiedenis van haar praktijk."
+          }
+        ],
+        "faithImpact": "Het verhaal verbindt het heiligdom met gehoorzaamheid, overgave en gebed. Het geeft islamitische bedevaart een plaats in een langere profetische herinnering.",
+        "nuance": "Dit is een religieuze teksttraditie zonder onafhankelijk vastgesteld Gregoriaans jaartal. De Koran wordt met zijn eigen personen, formuleringen en versnummers gelezen."
       },
       {
         "id": "islam:musa",
@@ -1954,7 +3834,24 @@
           "chapter": 1,
           "verse": 52,
           "endVerse": 68
-        }
+        },
+        "what": "In Koran 26:52–68 voert Musa zijn volk weg, terwijl Farao hen achtervolgt. De tekst verhaalt de opening van de zee, de redding van Musa’s groep en de ondergang van de achtervolgers.",
+        "stakeholders": [
+          {
+            "name": "Musa",
+            "role": "De profeet die binnen het Koranverhaal het bevel tot vertrek ontvangt."
+          },
+          {
+            "name": "Farao en zijn strijdmacht",
+            "role": "De machthebber en achtervolgende tegenpartij in het verhaal."
+          },
+          {
+            "name": "Musa’s volk",
+            "role": "De bedreigde en vervolgens geredde gemeenschap."
+          }
+        ],
+        "faithImpact": "De passage verbindt bevrijding met vertrouwen in Gods leiding tegenover overweldigende macht. Binnen de Koran fungeert het verhaal ook als teken dat tot nadenken over ongeloof, macht en barmhartigheid uitnodigt.",
+        "nuance": "De religieuze betekenis van het verhaal wordt niet afhankelijk gemaakt van een in deze app toegewezen historische datum. Het is een eigen Koranvertelling, geen overname van Bijbelse versnummering."
       }
     ]
   }

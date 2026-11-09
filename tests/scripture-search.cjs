@@ -22,6 +22,12 @@ assert.deepEqual(C.search(small,'VREDE hoop',[],{mode:'text'}).results.map(r=>r.
 // The real worker is executed against in-memory corpus indexes, exercising pagination and caching.
 const requests=[],pending=[],messages=[];let deliver;
 const quick=previews(indexes,topics);
+for(const theme of topics)for(const faith of Object.keys(indexes)){
+ const identity=r=>`${r.edition}:${r.book}:${r.chapter}:${r.verse}:${r.endVerse}`;
+ const preview=C.search(quick.traditions[faith],theme.label,topics,{mode:'theme',topicId:theme.id,limit:1000});
+ const complete=C.search(indexes[faith],theme.label,topics,{mode:'all',topicId:theme.id,limit:1000});
+ assert.deepEqual(complete.results.slice(0,preview.results.length).map(identity),preview.results.map(identity),'Thematic cards must not change order when slower text indexes arrive');
+}
 const context={console,URL,Map,Set,Math,Promise,ScriptureSearchCore:C,importScripts(){},fetch:async file=>{requests.push(file);return {ok:true,json:async()=>file==='scripture-topics.json'?{topics}:file==='scripture-topic-preview.json'?quick:indexes[file.match(/^search-index-(.+)\.json$/)[1]]};},self:{postMessage(message){messages.push(message);if(deliver){const done=deliver;deliver=null;done(message)}}}};
 context.self.self=context.self;vm.runInNewContext(fs.readFileSync(path.join(root,'dist/scripture-search-worker.js'),'utf8'),context);
 async function ask(message){return new Promise(resolve=>{deliver=resolve;context.self.onmessage({data:message})});}
@@ -33,11 +39,22 @@ async function ask(message){return new Promise(resolve=>{deliver=resolve;context
  const next=await ask({id:3,query,traditions:['christianity','judaism','islam'],page:1,mode:'text'});const identity=r=>`${r.tradition}:${r.edition}:${r.id}`;assert(!next.results.some(r=>first.results.some(a=>identity(a)===identity(r))),'Mixed-religion pages cannot repeat results');
  const fetched=requests.length;await ask({id:4,query:'vrede',traditions:['christianity','judaism','islam'],page:0,mode:'text'});assert.equal(requests.length,fetched,'Changing a query reuses already loaded indexes');
  const empty=await ask({id:5,query,traditions:[],page:0,mode:'text'});assert.equal(empty.total,0);assert.equal(empty.results.length,0);
+ for(let i=0;i<topics.length;i++){
+  const t=topics[i],before=messages.length;
+  await context.self.onmessage({data:{id:100+i,query:t.label,topicId:t.id,traditions:['christianity','judaism','islam'],page:0,mode:'all'}});
+  const pair=messages.slice(before),identity=r=>`${r.tradition}:${r.edition}:${r.book}:${r.chapter}:${r.verse}:${r.endVerse}`;
+  assert.equal(pair.length,2);assert.equal(pair[0].partial,true);assert.equal(pair[1].partial,false);
+  assert.deepEqual(pair[1].results.slice(0,pair[0].results.length).map(identity),pair[0].results.map(identity),`Mixed-religion theme cards must stay in place: ${t.label}`);
+ }
  // A combined query must deliver themes even when full-text downloads never finish.
  const earlyContext={console,URL,Map,Set,Math,Promise,ScriptureSearchCore:C,importScripts(){},fetch:async file=>file.startsWith('search-index-')?new Promise(()=>{}):{ok:true,json:async()=>file==='scripture-topics.json'?{topics}:quick},self:{}};
  vm.runInNewContext(fs.readFileSync(path.join(root,'dist/scripture-search-worker.js'),'utf8'),earlyContext);
  const immediate=await new Promise(resolve=>{earlyContext.self.postMessage=resolve;earlyContext.self.onmessage({data:{id:6,query:theme.label,topicId:theme.id,traditions:['christianity','judaism','islam'],page:0,mode:'all'}})});
  assert.equal(immediate.partial,true);assert(immediate.results.length>=6,'Curated previews must not wait for slow corpus indexes');
+ const completed=[],computed=[],coalesced={console,URL,Map,Set,Math,Promise,ScriptureSearchCore:{...C,search(...args){computed.push(args[1]);return C.search(...args)}},importScripts(){},fetch:context.fetch,self:{postMessage:d=>completed.push(d)}};
+ vm.runInNewContext(fs.readFileSync(path.join(root,'dist/scripture-search-worker.js'),'utf8'),coalesced);
+ await Promise.all([coalesced.self.onmessage({data:{id:20,query:'god',traditions:['christianity'],page:0,mode:'text'}}),coalesced.self.onmessage({data:{id:21,query:'vrede',traditions:['christianity'],page:0,mode:'text'}})]);
+ assert.deepEqual(completed.map(d=>d.id),[21]);assert.deepEqual(computed,['vrede'],'A replaced query must not consume CPU after its pending download finishes');
  const view=require('../dist/explore-features.js').AtlasExplore.prototype,stale={id:9,error:'late'};assert.doesNotThrow(()=>view.searchResponse.call({searchId:10,view:'topics',el:{hidden:false}},stale),'A late worker response must be discarded before touching the DOM');
  const counts=Object.fromEntries(Object.entries(indexes).map(([k,v])=>[k,v.rows.length]));console.log('Scripture search passed: '+JSON.stringify(counts)+' preserved verse records; themed Hebrew/Dutch separation, AND matching, no-hits, page 11+, mixed-religion pagination, cache reuse, selection and stale-response guards.');
 })().catch(error=>{console.error(error);process.exitCode=1});

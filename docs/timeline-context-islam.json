@@ -1,0 +1,209 @@
+{
+  "islam:birth": {
+    "what": "De islamitische biografische overlevering plaatst Mohammeds geboorte in Mekka, omstreeks 570. De levensbeschrijvingen situeren hem in de familie- en stamverbanden van de Quraysh, in de wereld rond het Mekkaanse heiligdom.",
+    "stakeholders": [{"name":"Mohammed","role":"De latere profeet; zijn vroege leven wordt in de sira-overlevering verteld."},{"name":"Quraysh en Mohammeds familie","role":"Het Mekkaanse sociale verband waarbinnen de biografische verhalen hem plaatsen."}],
+    "faithImpact": "Het geboortejaar is vooral een aanknopingspunt om de latere profetische loopbaan te begrijpen. De religieuze betekenis van Mohammed berust voor moslims op zijn profeetschap en voorbeeld, niet op een exact historisch vastgesteld geboortejaar.",
+    "nuance": "Het gebruikelijke jaartal is een benadering uit latere overlevering; het is geen eigentijdig geboorteregister. Niet alle moslimgemeenschappen geven een geboorteherdenking dezelfde plaats."
+  },
+  "islam:revelation": {
+    "what": "Volgens de overlevering ontvangt Mohammed bij Hira de eerste openbaring, verbonden met de beginverzen van soera 96. Een hadith die aan Aisha wordt overgeleverd beschrijft ook hoe Khadija hem opvangt en met Waraqa over de ervaring spreekt.",
+    "stakeholders": [{"name":"Mohammed","role":"Ontvanger van de openbaring volgens het islamitische geloof."},{"name":"Jibril","role":"De engel die binnen de overlevering de boodschap overbrengt."},{"name":"Khadija","role":"Echtgenote en steunfiguur in het overgeleverde verhaal."},{"name":"Aisha en latere overleveraars","role":"Bronfiguren in de keten waarmee het verhaal later wordt doorgegeven; Aisha is hier niet als ooggetuige van 610 opgevoerd."}],
+    "faithImpact": "Openbaring vormt het vertrekpunt voor het islamitische verstaan van de Koran als Gods woord. Het verhaal verbindt reciteren, luisteren en leren met het profetische gezag van Mohammed.",
+    "nuance": "De geloofsuitspraak over goddelijke oorsprong en het historisch dateren van overleveringen zijn verschillende vragen. De Koranpassage zelf geeft geen Gregoriaans jaartal."
+  },
+  "islam:hijra": {
+    "what": "Mohammed en zijn aanhangers verlaten Mekka en bouwen in Medina een nieuwe gemeenschapsbasis op. De verplaatsing verandert de omstandigheden waarin zij hun geloof beleven en hun onderlinge verhoudingen organiseren.",
+    "stakeholders": [{"name":"Mohammed","role":"Religieuze leider van de migrerende gemeenschap."},{"name":"De muhajirun","role":"Volgelingen die Mekka verlaten en in Medina opnieuw een bestaan opbouwen."},{"name":"De ansar","role":"Medinensische helpers die de nieuwkomers ondersteunen."}],
+    "faithImpact": "De hidjra wordt het uitgangspunt van de islamitische jaartelling. In de religieuze herinnering gaat de gebeurtenis ook over verbondenheid en het vormen van een gemeenschap, naast individuele overtuiging.",
+    "nuance": "Het islamitische maanjaar valt niet samen met het Gregoriaanse zonnejaar. Het vertrekpunt van de kalender betekent niet dat ieder onderdeel van de kalender al bij de migratie werd vastgelegd."
+  },
+  "islam:badr": {
+    "what": "Bij Badr komt het tot een gewapende confrontatie tussen de gemeenschap uit Medina en een Mekkaanse tegenmacht. De overwinning wordt in de islamitische herinnering verbonden met Gods bijstand; de Koran verwijst ernaar in soera 3.",
+    "stakeholders": [{"name":"Mohammed en de Medinensische moslimgemeenschap","role":"De zijde die in de overlevering de overwinning behaalt."},{"name":"De Mekkaanse tegenstanders","role":"De strijdende tegenpartij in het conflict."},{"name":"Latere uitleggers","role":"Lezen de verwijzing naar Badr binnen bredere vragen over vertrouwen, strijd en verantwoordelijkheid."}],
+    "faithImpact": "Badr krijgt betekenis als herinnering aan kwetsbaarheid en bijstand in de beginperiode. De passage wordt binnen de Koran gelezen samen met haar eigen oproepen en beperkingen; zij is geen zelfstandige samenvatting van een algemene leer over oorlog.",
+    "nuance": "Een religieuze duiding van de overwinning is iets anders dan een onafhankelijke reconstructie van alle militaire details. De gebeurtenis mag niet zonder context op hedendaagse conflicten worden toegepast."
+  },
+  "islam:mecca": {
+    "what": "In 630 komt Mekka onder de controle van Mohammed en zijn gemeenschap. De gebeurtenis verandert de verhouding tussen de eerdere Mekkaanse tegenstanders en de groeiende islamitische gemeenschap.",
+    "stakeholders": [{"name":"Mohammed en zijn volgelingen","role":"De partij die de stad onder haar gezag brengt."},{"name":"De inwoners en leiders van Mekka","role":"Moeten zich tot de nieuwe politieke en religieuze situatie verhouden."},{"name":"Bedevaartgangers","role":"Zullen Mekka binnen de islamitische bedevaartpraktijk blijven bezoeken."}],
+    "faithImpact": "De gebeurtenis bevestigt de plaats van de Kaäba binnen de islamitische eredienst. Mekka blijft een gedeeld oriëntatiepunt voor gebed en bedevaart van gemeenschappen die geografisch steeds verder uiteen wonen.",
+    "nuance": "Politieke controle over de stad en de theologische betekenis van de Kaäba zijn onderscheiden aspecten. De rituele betekenis wordt ook verbonden met oudere profetische verhalen in de Koran."
+  },
+  "islam:death": {
+    "what": "Mohammed overlijdt in 632. Zijn overlijden plaatst de gemeenschap voor het praktische en principiële probleem wie haar daarna zal leiden.",
+    "stakeholders": [{"name":"Mohammeds familie","role":"Speelt een blijvende rol in herinnering en opvattingen over gezag."},{"name":"Abu Bakr","role":"Wordt de eerste kalief in de gangbare historische opeenvolging."},{"name":"Ali en zijn aanhang","role":"Zijn positie krijgt een eigen betekenis in sjiitische opvattingen over legitiem leiderschap."},{"name":"De bredere gemeenschap","role":"Moet religieuze verbondenheid voortzetten zonder de levende profeet."}],
+    "faithImpact": "De Koran en de herinnering aan Mohammeds woorden en handelen blijven richtinggevend. De vraag naar leiderschap gaat later samen met verschillende opvattingen over gezag, gemeenschap en de plaats van de profeetsfamilie.",
+    "nuance": "Latere soennitische en sjiitische leerstelsels waren in 632 nog niet in hun uiteindelijke vorm aanwezig. Hun verschillende interpretaties van deze geschiedenis moeten afzonderlijk worden weergegeven."
+  },
+  "islam:rashidun": {
+    "what": "Tussen 632 en 661 volgen Abu Bakr, Umar, Uthman en Ali elkaar op als kalief. De periode omvat uitbreiding van het machtsgebied, bestuurlijke veranderingen en ernstige interne conflicten.",
+    "stakeholders": [{"name":"Abu Bakr en Umar","role":"De eerste twee leiders in deze historische opeenvolging."},{"name":"Uthman","role":"De derde kalief, in overleveringen verbonden met Korancodices."},{"name":"Ali","role":"De vierde kalief en een centrale figuur in sjiitische opvattingen over het imamaat."},{"name":"Plaatselijke gemeenschappen","role":"Beleven de uitbreiding en de conflicten vanuit verschillende posities."}],
+    "faithImpact": "In soennitische traditie krijgt deze periode een bijzondere voorbeeldfunctie als tijd van de rechtgeleide kaliefen. Sjiitische tradities plaatsen het legitieme leiderschap in een ander kader, waarin Ali en de imams centraal staan.",
+    "nuance": "‘Rechtgeleid’ is een religieuze waardering binnen een traditie en geen neutrale titel voor iedere historische beschrijving. Politieke uitbreiding betekende evenmin overal onmiddellijke bekering."
+  },
+  "islam:uthman": {
+    "what": "Een bekende overlevering beschrijft hoe Uthman een commissie laat werken aan exemplaren van de Koran en deze laat verspreiden. De tekst noemt zorgen over verschillen in recitatie en het gebruik van een aan Hafsa toevertrouwde verzameling.",
+    "stakeholders": [{"name":"Uthman ibn Affan","role":"De kalief die volgens de overlevering opdracht geeft tot het project."},{"name":"Zayd ibn Thabit en de commissie","role":"Vervaardigen volgens het verslag de codices."},{"name":"Hafsa","role":"Bewaart de schriftelijke verzameling waarnaar het verslag verwijst."},{"name":"Recitatoren en regionale gemeenschappen","role":"De lezers en hoorders voor wie de verspreide codices een referentie vormen."}],
+    "faithImpact": "Het verhaal is belangrijk voor het islamitische verstaan van de bewaring en overdracht van de Koran. Onderzoek naar handschriften en recitatietradities maakt daarnaast zichtbaar hoe schrift en mondelinge overdracht samen functioneren.",
+    "nuance": "De traditionele situering omstreeks 650 is geen exacte datering van elk bewaard handschrift. Een standaard van consonantenschrift is niet hetzelfde als het verdwijnen van alle erkende recitatievarianten."
+  },
+  "islam:first-fitna": {
+    "what": "Na de moord op Uthman raakt de gemeenschap verwikkeld in een reeks conflicten over leiderschap en legitimiteit. Ali en Muawiya komen tegenover elkaar te staan; de burgeroorlog loopt uit op een nieuwe machtsverhouding.",
+    "stakeholders": [{"name":"Ali ibn Abi Talib","role":"Kalief wiens gezag wordt betwist."},{"name":"Muawiya en zijn Syrische machtsbasis","role":"Tegenpartij in de strijd om leiding en macht."},{"name":"Aanhangers en plaatselijke gemeenschappen","role":"Raken verdeeld en dragen de gevolgen van het geweld."}],
+    "faithImpact": "De oorlog maakt de vraag naar rechtmatig gezag en het omgaan met conflicten binnen de eigen gemeenschap scherp. De herinnering eraan wordt later op verschillende manieren onderdeel van islamitische religieuze identiteiten.",
+    "nuance": "Een burgeroorlog verklaart niet op zichzelf de volledige latere leer van soennieten, sjiieten of andere stromingen. Die tradities krijgen geleidelijk vorm.",
+    "sources": [{"title":"University of Washington · Chronologie van de vroege islam","url":"https://faculty.washington.edu/dwaugh/hist225/225chron/islchr.html"}]
+  },
+  "islam:umayyads": {
+    "what": "Muawiya vestigt na de eerdere opvolgingsconflicten de Omajjadische dynastie, met Damascus als machtscentrum. De dynastie bestuurt een uitgestrekt en religieus divers rijk.",
+    "stakeholders": [{"name":"Muawiya en zijn opvolgers","role":"Dynastieke heersers die het kalifaat vanuit Syrië uitbouwen."},{"name":"Bestuurders en kunstenaars","role":"Geven vorm aan taalbeleid, munten, gebouwen en openbare representatie."},{"name":"Moslims, christenen en andere onderdanen","role":"Leven binnen ongelijke en plaatselijk verschillende rechts- en machtsverhoudingen."}],
+    "faithImpact": "Moskeeën en openbare inscripties maken islamitische overtuigingen zichtbaar in stedelijke ruimte. Religieus gezag wordt tegelijk een punt van debat tegenover dynastieke macht.",
+    "nuance": "Het rijk was religieus niet homogeen. Uitbreiding van de staat en verspreiding van de islam zijn verbonden processen, maar vallen niet samen."
+  },
+  "islam:karbala": {
+    "what": "Husayn ibn Ali en een klein gezelschap worden bij Karbala gedood in de strijd rond het gezag van de Omajjadische heerser Yazid. Overlevenden uit de profeetsfamilie dragen de herinnering aan het verlies verder.",
+    "stakeholders": [{"name":"Husayn ibn Ali","role":"Kleinzoon van Mohammed en centrale figuur van de sjiitische herinnering aan Karbala."},{"name":"De strijdmacht van Yazids bestuur","role":"De militaire tegenpartij die Husayns gezelschap verslaat."},{"name":"De profeetsfamilie en latere herdenkende gemeenschappen","role":"Bewaren en vertolken de herinnering aan het lijden."}],
+    "faithImpact": "Karbala krijgt voor veel sjiieten een centrale betekenis rond trouw, rechtvaardigheid, martelaarschap en verzet tegen onderdrukking. Ashura-rituelen geven deze herinnering lichamelijk en gemeenschappelijk vorm.",
+    "nuance": "Vormen van rouw verschillen per gemeenschap en periode. Ashura heeft ook binnen soennitische tradities eigen betekenissen en praktijken."
+  },
+  "islam:dome": {
+    "what": "Onder kalief Abd al-Malik wordt in Jeruzalem de Rotskoepel opgericht. Het monument combineert een opvallende architectuur met religieuze inscripties op een plaats met een lange en gedeelde geschiedenis.",
+    "stakeholders": [{"name":"Abd al-Malik","role":"Omajjadische opdrachtgever van het monument."},{"name":"Bouwers, ambachtslieden en inscriptiemakers","role":"Vertalen het programma in ruimte en materiaal."},{"name":"Religieuze gemeenschappen in Jeruzalem","role":"Verbinden verschillende herinneringen en aanspraken met de plaats."}],
+    "faithImpact": "Het gebouw geeft islamitische geloofstaal een zichtbare plaats in de stad. Latere religieuze herinnering verbindt de omgeving ook met Mohammeds hemelreis.",
+    "nuance": "De Rotskoepel en de al-Aqsamoskee zijn verschillende gebouwen. Religieuze betekenissen en politieke aanspraken op de plaats mogen niet tot één ongewijzigd verhaal worden samengevoegd."
+  },
+  "islam:andalus": {
+    "what": "Troepen uit Noord-Afrika steken in 711 over naar het Iberisch schiereiland, waar de Visigotische machtsorde wordt doorbroken. Daaruit ontstaat het gebied dat in Arabische bronnen al-Andalus heet.",
+    "stakeholders": [{"name":"Tariq ibn Ziyad en de overstekende troepen","role":"Militaire actoren van de eerste veroveringen."},{"name":"Plaatselijke machthebbers en bevolking","role":"Krijgen te maken met veranderende bestuurlijke verhoudingen."},{"name":"Islamitische, Joodse en christelijke gemeenschappen","role":"Ontwikkelen in de volgende eeuwen uiteenlopende vormen van samenleven."}],
+    "faithImpact": "Al-Andalus wordt een plaats van islamitische geleerdheid, rechtspraktijk en artistieke productie. Contacten tussen religies leveren uitwisseling op, maar ook grenzen, ongelijkheid en conflicten.",
+    "nuance": "Het is misleidend om alle eeuwen van al-Andalus als één tijd van volledige tolerantie of ononderbroken onderdrukking te beschrijven."
+  },
+  "islam:abbasids": {
+    "what": "Een opstand brengt de Abbasiden aan de macht ten koste van de Omajjadische dynastie. Het zwaartepunt van de kalifale politiek verschuift in de volgende periode van Syrië naar Irak.",
+    "stakeholders": [{"name":"De Abbasidische familie","role":"Nieuwe dynastie die haar aanspraak met verwantschap aan de profeetsfamilie verbindt."},{"name":"Abu Muslim en bondgenoten in Khurasan","role":"Belangrijke organisatoren van de opstand."},{"name":"De Omajjaden en regionale gemeenschappen","role":"Verliezen macht of moeten zich tot het nieuwe bestuur verhouden."}],
+    "faithImpact": "De machtswisseling verandert de patronage van religieuze en culturele instellingen. Zij heft discussies over rechtmatig leiderschap en de zelfstandige autoriteit van geleerden niet op.",
+    "nuance": "Een nieuwe dynastie betekent geen nieuwe religie. De politieke naam Abbasidisch dekt grote verschillen tussen plaatsen en perioden.",
+    "sources": [{"title":"University of Washington · Abbasidische opstand en chronologie","url":"https://faculty.washington.edu/dwaugh/hist225/225chron/islchr.html"}]
+  },
+  "islam:baghdad": {
+    "what": "Kalief al-Mansur laat Bagdad in 762 als nieuwe hoofdstad aanleggen. De stad groeit uit tot een knooppunt van bestuur, handel en kennisoverdracht.",
+    "stakeholders": [{"name":"Al-Mansur","role":"Abbasidische opdrachtgever van de hoofdstad."},{"name":"Handelaars, vertalers en geleerden","role":"Verbindende actoren in de netwerken van de stad."},{"name":"Patroons en religieuze gemeenschappen","role":"Ondersteunen onderwijs en tekstproductie vanuit verschillende overtuigingen."}],
+    "faithImpact": "Stedelijke netwerken maken ontmoetingen tussen juridische, theologische en filosofische tradities mogelijk. Bagdad toont hoe de bestudering van geloofsteksten samenhangt met taal, onderwijs en maatschappelijke instellingen.",
+    "nuance": "Niet alle kennisproductie stond onder één centraal instituut of kwam van één geloofsgroep. De religieuze geschiedenis van de stad is breder dan het hof."
+  },
+  "islam:hadith": {
+    "what": "In de negende eeuw stellen geleerden invloedrijke verzamelingen samen van overleveringen over Mohammeds woorden en handelen. Zij verzamelen berichten en beoordelen onder meer hun overleveringsketens.",
+    "stakeholders": [{"name":"Al-Bukhari en Muslim ibn al-Hajjaj","role":"Samenstellers van twee bijzonder gezaghebbende soennitische collecties."},{"name":"Overleveraars en hadithgeleerden","role":"Dragen berichten over en onderzoeken hun betrouwbaarheid."},{"name":"Rechtsgeleerden en geloofsgemeenschappen","role":"Gebruiken hadith bij uitleg van praktijk, recht en geloof."}],
+    "faithImpact": "Hadith wordt naast de Koran een belangrijke bron voor het concrete religieuze leven. Debatten over authenticiteit en uitleg bepalen mede welke handelingen als navolging van de profeet gelden.",
+    "nuance": "De gezagstoekenning aan verzamelingen ontwikkelt zich in de tijd. Sjiitische tradities hebben eigen collecties en gezagskaders; hadith is geen ander woord voor Koran."
+  },
+  "islam:fatimids": {
+    "what": "De Fatimiden bouwen vanaf 909 een kalifaat uit vanuit Noord-Afrika en veroveren later Egypte. Zij verbinden hun dynastieke gezag met een ismaïlitisch-sjiitische aanspraak op het imamaat.",
+    "stakeholders": [{"name":"De Fatimidische imam-kaliefen","role":"Verenigen religieuze aanspraak en politieke heerschappij."},{"name":"Ismaïlitische verkondigers en geleerden","role":"Dragen de religieuze leer en missie van de beweging over."},{"name":"Abbasidische rivalen en diverse onderdanen","role":"Staan buiten of tegenover de Fatimidische gezagsaanspraak."}],
+    "faithImpact": "De dynastie ondersteunt een eigen religieuze missie en instellingen van geleerdheid. Het gelijktijdig bestaan van rivaliserende kalifaten maakt verschillende opvattingen over islamitisch leiderschap zichtbaar.",
+    "nuance": "Fatimidische heerschappij betekent niet dat alle inwoners ismaïlitisch werden. De staatsleer en de dagelijkse religie van onderdanen moeten worden onderscheiden."
+  },
+  "islam:cairo": {
+    "what": "Na de verovering van Egypte laat de Fatimidische bevelhebber Jawhar een nieuwe stad aanleggen: Caïro. Kort daarop ontstaat de al-Azharmoskee als religieus centrum van de nieuwe hoofdstad.",
+    "stakeholders": [{"name":"Jawhar al-Siqilli","role":"Bevelhebber en organisator van de nieuwe stichting."},{"name":"Kalief al-Muizz","role":"Fatimidische heerser onder wiens gezag de stad wordt uitgebouwd."},{"name":"Geleerden, studenten en stedelingen","role":"Maken van moskee en stad plaatsen van religieus leren en dagelijks leven."}],
+    "faithImpact": "Al-Azhar begint binnen een Fatimidisch-ismaïlitische omgeving en krijgt later een vooraanstaande soennitische rol. De geschiedenis laat zien dat de religieuze identiteit van een instelling kan veranderen.",
+    "nuance": "De stichting van Caïro in 969 is niet de voltooiingsdatum van al-Azhar. De ontwikkeling tot het latere onderwijscentrum bestrijkt vele eeuwen.",
+    "sources": [{"title":"Al-Azhar · Geschiedenis van de moskee","url":"https://azhar.eg/en/Uzbekistan-International-Conference/ArtMID/10764/ArticleID/46011/About-Al-Azhar-Mosque"}]
+  },
+  "islam:madrasa": {
+    "what": "In Bagdad ontstaat onder kalief al-Mustansir de Mustansiriyya, met onderwijs voor de vier bekende soennitische rechtsscholen. Het complex verbindt leren met materiële ondersteuning van docenten en studenten.",
+    "stakeholders": [{"name":"Al-Mustansir","role":"Abbasidische heerser en patroon van de madrasa."},{"name":"Docenten van de hanafitische, malikitische, sjafiitische en hanbalitische tradities","role":"Dragen verschillende juridische leermethoden over."},{"name":"Studenten en ondersteunend personeel","role":"Vormen het dagelijkse onderwijsverband."}],
+    "faithImpact": "De instelling geeft verschillende soennitische juridische tradities een zichtbare plaats binnen één onderwijsomgeving. Zij maakt duidelijk dat geloofspraktijk mede wordt gevormd door opleiding, argumentatie en institutionele steun.",
+    "nuance": "De vier rechtsscholen zijn geen vier afzonderlijke religies. Madrasa’s waren bovendien niet de enige plaatsen waar religieuze kennis werd geleerd."
+  },
+  "islam:baghdad1258": {
+    "what": "Mongoolse troepen onder Hulagu nemen Bagdad in en beëindigen het Abbasidische kalifaat in de stad. De aanval gaat gepaard met vernietiging en zwaar menselijk verlies.",
+    "stakeholders": [{"name":"Hulagu en de Mongoolse strijdmacht","role":"De veroverende partij."},{"name":"Kalief al-Mustasim en het Abbasidische bestuur","role":"Het verslagen politieke gezag in Bagdad."},{"name":"De inwoners en geleerden van de stad","role":"Ondergaan geweld, verlies en ontwrichting van hun instellingen."}],
+    "faithImpact": "De ondergang van een belangrijk machtscentrum verandert de omgeving van religieuze instellingen en geleerdheid. Moslimgemeenschappen en kennisnetwerken blijven echter op andere plaatsen bestaan en ontwikkelen zich verder.",
+    "nuance": "1258 is geen ‘einde van de islamitische beschaving’. Religieus en intellectueel leven heeft meerdere centra en kan niet met één dynastie worden vereenzelvigd."
+  },
+  "islam:mali": {
+    "what": "Mansa Musa, vorst van Mali, onderneemt de hadj naar Mekka. De reis brengt zijn hof in contact met een groot netwerk van handelsplaatsen, geleerden en bedevaartgangers.",
+    "stakeholders": [{"name":"Mansa Musa","role":"West-Afrikaanse vorst en bedevaartganger."},{"name":"Zijn reisgezelschap","role":"Maakt de tocht mogelijk en draagt contacten en verhalen verder."},{"name":"Geleerden, handelaars en pelgrims langs de route","role":"Verbinden West-Afrika met andere islamitische regio’s."}],
+    "faithImpact": "De bedevaart maakt zichtbaar hoe West-Afrikaanse islamitische gemeenschappen deel uitmaken van brede religieuze netwerken. Hadj verbindt persoonlijke godsdienstige plicht, publieke representatie en uitwisseling van kennis.",
+    "nuance": "De vorst vertegenwoordigt niet de volledige religieuze werkelijkheid van Mali. Plaatselijke tradities, verschillende vormen van islam en politieke belangen blijven naast elkaar bestaan."
+  },
+  "islam:ottomans": {
+    "what": "Sultan Mehmed II neemt Constantinopel in 1453 in. De stad wordt een Ottomaans machtscentrum, waar gebouwen en publieke ruimten nieuwe functies krijgen.",
+    "stakeholders": [{"name":"Mehmed II en het Ottomaanse leger","role":"De veroverende heerser en zijn strijdmacht."},{"name":"Het Byzantijnse bestuur en de stadsbevolking","role":"Worden geconfronteerd met de beëindiging van de oude machtsorde."},{"name":"Islamitische en christelijke religieuze instellingen","role":"Krijgen een plaats binnen gewijzigde politieke verhoudingen."}],
+    "faithImpact": "Moskeeën, onderwijs en vrome stichtingen geven de nieuwe hoofdstad een islamitische institutionele structuur. Het naast elkaar bestaan van religies wordt geregeld binnen hiërarchische machtsverhoudingen.",
+    "nuance": "De betekenis van de verovering verschilt voor de betrokken gemeenschappen. Dynastiek succes mag niet zonder meer als een religieus oordeel worden voorgesteld."
+  },
+  "islam:granada": {
+    "what": "Met de overdracht van Granada in 1492 eindigt de Nasridische heerschappij op het Iberisch schiereiland. Voor de moslimbevolking volgen onder christelijk gezag veranderende en uiteindelijk steeds beperktere mogelijkheden voor religieuze praktijk.",
+    "stakeholders": [{"name":"De Nasridische heersers","role":"Verliezen hun politieke machtsbasis."},{"name":"Ferdinand en Isabella en hun bestuur","role":"Vestigen het nieuwe gezag over Granada."},{"name":"Moslims en hun later als Moriscos aangeduide afstammelingen","role":"Krijgen te maken met bekeringseisen, toezicht en latere verdrijving."}],
+    "faithImpact": "Het verlies raakt de zichtbaarheid en continuïteit van islamitische instellingen en praktijken in Spanje. Geloofsuitoefening wordt voor velen verbonden met aanpassing, verborgenheid, migratie of verlies.",
+    "nuance": "1492 is niet de datum van alle latere dwangmaatregelen en verdrijvingen. Een religieuze gemeenschap verdwijnt niet op één dag doordat haar dynastie eindigt."
+  },
+  "islam:safavid": {
+    "what": "Ismail I vestigt de Safavidische dynastie in Iran en bevordert het twaalver-sjiisme als staatsreligie. De religieuze verandering verloopt in de volgende tijd via bestuur, geleerden, rituelen en ook dwang.",
+    "stakeholders": [{"name":"Ismail I en zijn opvolgers","role":"Safavidische heersers die een sjiitisch politiek-religieus programma ondersteunen."},{"name":"De Qizilbash","role":"Militaire en religieuze aanhangers van de opkomende dynastie."},{"name":"Sjiitische geleerden en plaatselijke gemeenschappen","role":"Geven vorm aan leer en praktijk, soms onder druk van het bestuur."}],
+    "faithImpact": "Twaalver-sjiitische instellingen en publieke rituelen krijgen in Iran een duurzame positie. De verhouding tussen vorst, geleerde en gemeenschap blijft daarbij onderwerp van onderhandeling en spanning.",
+    "nuance": "De bevolking was niet vanaf 1501 overal plotseling sjiitisch. De geschiedenis omvat weerstand, regionale verschillen en uiteenlopende vormen van religieuze betrokkenheid."
+  },
+  "islam:holy-cities": {
+    "what": "De overwinning van Selim I op de Mamelukken brengt Egypte en Syrië in de Ottomaanse invloedssfeer. Ook de relatie met de leiding van Mekka en Medina verandert, met grote betekenis voor de organisatie van de bedevaart.",
+    "stakeholders": [{"name":"Selim I en het Ottomaanse bestuur","role":"Breiden hun macht over de voormalige Mamelukse gebieden uit."},{"name":"De Mamelukse machthebbers","role":"Verliezen hun leidende positie."},{"name":"De leiders van de heilige steden en bedevaartgangers","role":"Zijn betrokken bij beheer, bescherming en gebruik van de bedevaartroutes."}],
+    "faithImpact": "Zorg voor de heilige steden en de hadj versterkt het religieuze prestige van de Ottomaanse sultan. Voor gelovigen hangt toegang tot een gedeeld heilig centrum samen met infrastructuur en veiligheid.",
+    "nuance": "Politiek beschermheerschap geeft geen onbeperkt gezag over alle moslims. De lokale inrichting van bestuur en religie blijft belangrijk."
+  },
+  "islam:mughal": {
+    "what": "Babur verslaat in 1526 de machthebber van het sultanaat van Delhi en legt de basis voor het Mogolrijk. Zijn opvolgers ontwikkelen een hofcultuur die Centraal-Aziatische, Perzische en Zuid-Aziatische elementen verbindt.",
+    "stakeholders": [{"name":"Babur","role":"Centraal-Aziatische stichter van de nieuwe dynastie."},{"name":"Ibrahim Lodi en zijn aanhang","role":"De verslagen machthebber en tegenpartij."},{"name":"De religieus diverse bevolking van het subcontinent","role":"Leeft onder veranderende machtsverhoudingen, met uiteenlopende belangen."}],
+    "faithImpact": "De dynastie wordt een belangrijke patroon van islamitische gebouwen, boekcultuur en geleerdheid in Zuid-Azië. Haar religieuze beleid verandert per vorst en weerspiegelt niet de overtuiging van alle moslims in de regio.",
+    "nuance": "De islam was al ruim vóór de Mogols aanwezig in Zuid-Azië. De stichting van het rijk is dus geen beginpunt van de religie op het subcontinent."
+  },
+  "islam:mughal-culture": {
+    "what": "Onder Akbar, Jahangir en Shah Jahan werken kunstenaars uit verschillende regionale en religieuze tradities samen in hofateliers. Handschriften, schilderkunst en architectuur krijgen daardoor nieuwe vormen.",
+    "stakeholders": [{"name":"Akbar, Jahangir en Shah Jahan","role":"Keizerlijke opdrachtgevers met verschillende religieuze en culturele beleidskeuzes."},{"name":"Hindoeïstische en islamitische ambachtslieden en Iraanse meesters","role":"Brengen technieken en beeldtradities samen."},{"name":"Geleerden en bezoekers van het hof","role":"Dragen religieuze en intellectuele uitwisseling mee."}],
+    "faithImpact": "Kunst en boekproductie worden plaatsen waar religieuze ideeën worden voorgesteld, vertaald en besproken. De uitwisseling toont dat islamitische cultuur niet één vaste artistieke stijl of gesloten traditie is.",
+    "nuance": "Een hofvoorwerp bewijst geen gelijkheid tussen alle religies in de samenleving. Keizerlijke representatie en dagelijks geloofsleven zijn niet hetzelfde."
+  },
+  "islam:cairo-edition": {
+    "what": "In 1924 verschijnt onder Egyptische auspiciën een zorgvuldig voorbereide gedrukte Koraneditie volgens de lezing van Hafs naar Asim. De editie wordt een invloedrijk model voor onderwijs en latere drukwerken.",
+    "stakeholders": [{"name":"De Egyptische uitgavecommissie en drukkers","role":"Bereiden spelling, leestekens en de materiële uitgave voor."},{"name":"Koning Fuad en het Egyptische onderwijsbestuur","role":"Het institutionele kader waarin de uitgave tot stand komt."},{"name":"Recitatoren, leraren en leerlingen","role":"Gebruiken het drukwerk naast mondeling leren en reciteren."}],
+    "faithImpact": "De ruime verspreiding helpt een bepaalde gedrukte weergave herkenbaar te maken in veel landen. Ze verbindt moderne druktechniek met een oudere traditie van recitatie en tekstzorg.",
+    "nuance": "1924 is geen ontstaansdatum van de Koran en geen afschaffing van alle andere erkende lezingen. Onder meer Noord-Afrikaanse en Zuid-Aziatische druktradities behouden eigen kenmerken."
+  },
+  "islam:caliphate1924": {
+    "what": "Het Turkse parlement schaft in maart 1924 het Ottomaanse kalifaat af binnen de hervorming van de nieuwe republiek. Een dynastiek ambt met een lange en veranderlijke geschiedenis houdt op te bestaan.",
+    "stakeholders": [{"name":"Het Turkse parlement en de republikeinse leiding","role":"Nemen het besluit binnen hun programma voor de nieuwe staat."},{"name":"Abdülmecid II","role":"De laatste Ottomaanse kalief, wiens ambt wordt afgeschaft."},{"name":"Moslimgeleerden en politieke bewegingen buiten Turkije","role":"Reageren verschillend op de vraag naar gemeenschap en leiderschap."}],
+    "faithImpact": "De gebeurtenis verscherpt discussies over de relatie tussen religieuze verbondenheid, nationale staten en politieke leiding. Zij maakt geen einde aan islamitisch gebed, geleerdheid of gemeenschapsleven.",
+    "nuance": "Er ontstaat geen door alle moslims erkende opvolger. De historische betekenis van het Ottomaanse kalifaat en de wenselijkheid van een kalifaat worden uiteenlopend beoordeeld."
+  },
+  "islam:indonesia": {
+    "what": "Soekarno en Mohammad Hatta roepen in augustus 1945 de onafhankelijkheid van Indonesië uit. De opbouw van de republiek brengt ook discussies mee over religie, burgerschap en de plaats van de grote moslimgemeenschappen.",
+    "stakeholders": [{"name":"Soekarno en Mohammad Hatta","role":"Leiders die de onafhankelijkheid uitroepen."},{"name":"Nationalistische en islamitische bewegingen","role":"Dragen verschillende visies op staat en samenleving bij."},{"name":"Religieuze minderheden en de brede bevolking","role":"Zijn betrokken bij de vormgeving van burgerschap en samenleven."}],
+    "faithImpact": "Islamitische praktijk en organisaties ontwikkelen zich binnen een nationale staat met religieuze verscheidenheid. De gebeurtenis maakt zichtbaar dat politiek engagement van moslims verschillende institutionele vormen kan aannemen.",
+    "nuance": "De onafhankelijkheidsverklaring is geen volledige beschrijving van het latere staatsbestel of van alle latere conflicten. Een meerderheid moslims betekent niet dat Indonesië één uniforme islamitische traditie heeft."
+  },
+  "islam:birmingham": {
+    "what": "De Universiteit van Birmingham presenteert in 2015 radiokoolstofonderzoek naar twee perkamentbladen met delen van soera’s 18–20. Het onderzoek dateert het perkament met een bandbreedte van 568–645, met een gerapporteerde waarschijnlijkheid van 95,4 procent.",
+    "stakeholders": [{"name":"De Cadbury Research Library in Birmingham","role":"Bewaart het handschrift in de Mingana-collectie."},{"name":"De radiokoolstofonderzoekers in Oxford","role":"Onderzoeken het materiaal waarop de tekst staat."},{"name":"Handschriftgeleerden en moslimgemeenschappen","role":"Bestuderen of waarderen het stuk vanuit historische en religieuze vragen."}],
+    "faithImpact": "Het handschrift maakt de vroege materiële overlevering van de Koran zichtbaar voor een breed publiek. Het kan religieuze waardering voor tekstbewaring en historisch onderzoek met elkaar in gesprek brengen.",
+    "nuance": "Een datering van perkament is geen automatische datering van de inkt of het schrijven. De bladen vertegenwoordigen slechts een deel van de Koran en beslissen niet op zichzelf elke vraag over de tekstgeschiedenis."
+  },
+  "islam:fraternity": {
+    "what": "Grootimam Ahmad al-Tayyeb en paus Franciscus ondertekenen in Abu Dhabi een gezamenlijk document over menselijke broederlijkheid en samenleven. De tekst verbindt geloof met menselijke waardigheid, vrede en zorg voor kwetsbare mensen.",
+    "stakeholders": [{"name":"Ahmad al-Tayyeb","role":"Grootimam van al-Azhar en islamitische medeondertekenaar."},{"name":"Paus Franciscus","role":"Katholieke medeondertekenaar."},{"name":"Religieuze gemeenschappen en publieke instellingen","role":"Worden uitgenodigd de oproep tot samenleven concreet te maken."}],
+    "faithImpact": "Het document biedt een zichtbaar voorbeeld van samenwerking vanuit verschillende religieuze overtuigingen. Het stimuleert reflectie op de relatie tussen geloof, geweldloos samenleven en verantwoordelijkheid voor anderen.",
+    "nuance": "Het document maakt de islam en het katholicisme niet tot één religie. De ondertekenaars spreken vanuit hun instellingen en vertegenwoordigen niet elke opvatting binnen beide tradities."
+  },
+  "islam:ibrahim": {
+    "what": "Koran 2:125–129 verbindt Ibrahim en Ismail met het oprichten van de fundamenten van het Huis. Hun handelen gaat in de tekst samen met gebed om aanvaarding en om een gemeenschap die zich aan God toevertrouwt.",
+    "stakeholders": [{"name":"Ibrahim en Ismail","role":"Profetische personen die binnen het Koranverhaal bij het Huis werkzaam zijn."},{"name":"God","role":"Degene tot wie het gebed binnen de religieuze tekst is gericht."},{"name":"De latere biddende en pelgrimerende gemeenschap","role":"Herkent in het verhaal een profetische voorgeschiedenis van haar praktijk."}],
+    "faithImpact": "Het verhaal verbindt het heiligdom met gehoorzaamheid, overgave en gebed. Het geeft islamitische bedevaart een plaats in een langere profetische herinnering.",
+    "nuance": "Dit is een religieuze teksttraditie zonder onafhankelijk vastgesteld Gregoriaans jaartal. De Koran wordt met zijn eigen personen, formuleringen en versnummers gelezen."
+  },
+  "islam:musa": {
+    "what": "In Koran 26:52–68 voert Musa zijn volk weg, terwijl Farao hen achtervolgt. De tekst verhaalt de opening van de zee, de redding van Musa’s groep en de ondergang van de achtervolgers.",
+    "stakeholders": [{"name":"Musa","role":"De profeet die binnen het Koranverhaal het bevel tot vertrek ontvangt."},{"name":"Farao en zijn strijdmacht","role":"De machthebber en achtervolgende tegenpartij in het verhaal."},{"name":"Musa’s volk","role":"De bedreigde en vervolgens geredde gemeenschap."}],
+    "faithImpact": "De passage verbindt bevrijding met vertrouwen in Gods leiding tegenover overweldigende macht. Binnen de Koran fungeert het verhaal ook als teken dat tot nadenken over ongeloof, macht en barmhartigheid uitnodigt.",
+    "nuance": "De religieuze betekenis van het verhaal wordt niet afhankelijk gemaakt van een in deze app toegewezen historische datum. Het is een eigen Koranvertelling, geen overname van Bijbelse versnummering."
+  }
+}

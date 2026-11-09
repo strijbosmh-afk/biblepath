@@ -28,9 +28,11 @@
    this.min=Math.min(...this.events.map(e=>e.start))-30;
    this.max=Math.max(...this.events.map(e=>e.end||e.start))+30;
   }
+  matches(filter='',kind='all'){
+   return this.events.filter(e=>(kind==='all'||e.kind===kind)&&fold([e.title,e.summary,e.context,e.what,e.faithImpact,e.category,e.dateLabel,e.start,e.end,...(e.stakeholders||[]).flatMap(s=>[s.name,s.role])].join(' ')).includes(fold(filter)));
+  }
   visible({width,scroll=0,zoom=1,filter='',kind='all'}){
-   const scale=width*zoom/(this.max-this.min);
-   const matches=this.events.filter(e=>(kind==='all'||e.kind===kind)&&fold([e.title,e.summary,e.context,e.category,e.dateLabel,e.start,e.end].join(' ')).includes(fold(filter)));
+   const scale=width*zoom/(this.max-this.min),matches=this.matches(filter,kind);
    const buckets=new Map();
    for(const e of matches){
     const x=(e.start-this.min)*scale;
@@ -64,6 +66,7 @@
    this.resizeObserver?.disconnect();clearTimeout(this.debounce);
    if(same&&this.el.childElementCount&&this.loaded){
     if(view==='timeline')this.resizeObserver?.observe(this.el);
+    if(view==='topics'&&this.searchPending)this.runSearch({keepResults:true});
     return;
    }
    this.loaded=false;
@@ -116,31 +119,49 @@
     <details class="explore-undated"><summary>Verhalen zonder historische datering</summary><div id="timeline-undated"></div></details>`;
    this.el.querySelector('#timeline-kind').value=this.state.kind;
    const scroll=this.el.querySelector('.atlas-timeline-scroll');
-   scroll.scrollLeft=this.state.scroll;
+   this.timelineMarkup=null;
+   scroll.scrollLeft=this.state.scroll;this.bindTimelineGestures(scroll);
+   this.paintTimeline();scroll.scrollLeft=this.state.scroll;this.renderTimelineDetail();
+   this.resizeObserver?.observe(this.el);
+   const undated=this.data.undated?.[this.tradition]||[];
+   this.el.querySelector('#timeline-undated').innerHTML=undated.map(e=>`<article><h3>${esc(e.title)}</h3><p>${esc(e.what||e.context||e.summary)}</p>${this.stakeholders(e)}<h3>Betekenis voor geloof en praktijk</h3><p>${esc(e.faithImpact||e.context)}</p>${e.nuance?`<p class="explore-note">${esc(e.nuance)}</p>`:''}${this.sources(e.sources)}${this.passageButton(e.passage)}</article>`).join('')||'<p>Gedateerde gebeurtenissen staan hierboven. De afwezigheid van een datum zegt niets over de religieuze betekenis van een verhaal.</p>';
+  }
+  bindTimelineGestures(scroll){
    scroll.onscroll=()=>{this.state.scroll=scroll.scrollLeft;this.queueTimeline()};
    scroll.onwheel=e=>{
     if(e.ctrlKey){e.preventDefault();this.zoomTimeline(e.deltaY<0?1.2:1/1.2,e.clientX-scroll.getBoundingClientRect().left)}
-    else if(Math.abs(e.deltaY)>Math.abs(e.deltaX)){e.preventDefault();scroll.scrollLeft+=e.deltaY}
+    else if(Math.abs(e.deltaY)>Math.abs(e.deltaX)){
+     if(this.state.zoom<=1)return;
+     const delta=e.deltaY*(e.deltaMode===1?16:e.deltaMode===2?scroll.clientWidth:1),max=scroll.scrollWidth-scroll.clientWidth;
+     if((delta>0&&scroll.scrollLeft<max-1)||(delta<0&&scroll.scrollLeft>1)){e.preventDefault();scroll.scrollLeft+=delta;}
+    }
    };
-   let dragging=false,x=0,left=0;const pointers=new Map();let distance=0;
+   let dragging=false,x=0,y=0,left=0,moved=false;const pointers=new Map();let distance=0;
+   const separation=()=>{const p=[...pointers.values()];return Math.hypot(p[0].x-p[1].x,p[0].y-p[1].y)};
    scroll.onpointerdown=e=>{
-    if(e.target.closest('button'))return;
-    pointers.set(e.pointerId,e.clientX);scroll.setPointerCapture(e.pointerId);
-    if(pointers.size===2){const vals=[...pointers.values()];distance=Math.abs(vals[0]-vals[1]);dragging=false}
-    else{dragging=true;x=e.clientX;left=scroll.scrollLeft}
+    if(e.button>0)return;
+    if(!pointers.size)moved=false;
+    pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
+    if(pointers.size===2){distance=separation();dragging=false;moved=true;for(const id of pointers.keys())scroll.setPointerCapture(id);}
+    else{dragging=true;x=e.clientX;y=e.clientY;left=scroll.scrollLeft;}
    };
    scroll.onpointermove=e=>{
     if(!pointers.has(e.pointerId))return;
-    pointers.set(e.pointerId,e.clientX);
+    pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
     if(pointers.size===2){
-     const vals=[...pointers.values()],next=Math.abs(vals[0]-vals[1]);
-     if(distance>5)this.zoomTimeline(next/distance,(vals[0]+vals[1])/2-scroll.getBoundingClientRect().left);
+     const vals=[...pointers.values()],next=separation();
+     if(distance>5)this.zoomTimeline(next/distance,(vals[0].x+vals[1].x)/2-scroll.getBoundingClientRect().left);
      distance=next;
-    }else if(dragging)scroll.scrollLeft=left-(e.clientX-x);
+    }else if(dragging){
+     const dx=e.clientX-x,dy=e.clientY-y;
+     if(!moved&&Math.abs(dx)>6&&Math.abs(dx)>Math.abs(dy)){moved=true;scroll.setPointerCapture(e.pointerId);}
+     if(moved){if(e.cancelable)e.preventDefault();scroll.scrollLeft=left-dx;}
+    }
    };
-   scroll.onpointerup=scroll.onpointercancel=e=>{pointers.delete(e.pointerId);dragging=false;distance=0};
+   scroll.onpointerup=scroll.onpointercancel=scroll.onlostpointercapture=e=>{pointers.delete(e.pointerId);dragging=false;distance=0};
+   scroll.onclick=e=>{if(moved&&e.detail!==0){e.preventDefault();e.stopPropagation();}};
    scroll.onkeydown=e=>{
-    if(e.target!==scroll)return;
+    if(e.target!==scroll&&!e.target.closest('.atlas-timeline-event'))return;
     if(['+','=','-','ArrowLeft','ArrowRight','Home','End'].includes(e.key)){
      e.preventDefault();
      if(e.key==='+'||e.key==='=')this.zoomTimeline(1.5);
@@ -150,10 +171,6 @@
      else scroll.scrollLeft+=e.key==='ArrowLeft'?-250:250;
     }
    };
-   this.paintTimeline();scroll.scrollLeft=this.state.scroll;this.renderTimelineDetail();
-   this.resizeObserver?.observe(this.el);
-   const undated=this.data.undated?.[this.tradition]||[];
-   this.el.querySelector('#timeline-undated').innerHTML=undated.map(e=>`<article><h3>${esc(e.title)}</h3><p>${esc(e.context||e.summary)}</p>${this.sources(e.sources)}${this.passageButton(e.passage)}</article>`).join('')||'<p>Gedateerde gebeurtenissen staan hierboven. De afwezigheid van een datum zegt niets over de religieuze betekenis van een verhaal.</p>';
   }
   queueTimeline(){
    if(this.raf)return;
@@ -162,8 +179,10 @@
   paintTimeline(){
    const scroll=this.el.querySelector('.atlas-timeline-scroll');
    if(!scroll||!this.model)return;
-   const width=scroll.clientWidth||800,s=this.state,full=width*s.zoom,scale=full/(this.model.max-this.model.min);
+   const width=scroll.clientWidth||800,s=this.state,full=width*s.zoom,scale=full/(this.model.max-this.model.min),resized=s.width&&s.width!==width,position=resized?s.scroll*width/s.width:scroll.scrollLeft;
    this.el.querySelector('.atlas-timeline-track').style.width=`${full}px`;
+   if(resized)scroll.scrollLeft=position;
+   s.width=width;s.scroll=scroll.scrollLeft;
    const clusters=this.model.visible({width,scroll:scroll.scrollLeft,zoom:s.zoom,filter:s.filter,kind:s.kind});
    let html='';
    const span=(this.model.max-this.model.min)/s.zoom;
@@ -176,15 +195,24 @@
    clusters.forEach(c=>{
     const selected=c.events.some(e=>e.id===s.selected),e=c.events[0];
     const lane=Math.floor(c.x/190)%2;
-    html+=`<button class="atlas-timeline-event ${lane?'below':''} ${selected?'selected':''}" style="left:${Math.max(0,c.x-8)}px" ${c.events.length>1?`data-cluster="${c.events.map(e=>esc(e.id)).join(',')}"`:`data-event="${esc(e.id)}"`} aria-pressed="${selected}"><span>${esc(e.dateLabel||date(e.start))}${c.events.length>1?' – '+esc(c.events.at(-1).dateLabel||date(c.events.at(-1).start)):''}</span><strong>${c.events.length>1?`${c.events.length} gebeurtenissen`:esc(e.title)}</strong><small>${c.events.length>1?'Zoom om te verkennen +':esc(e.category||{history:'Geschiedenis',text:'Tekst',tradition:'Overlevering'}[e.kind])}</small></button>`;
+    const cardLeft=Math.max(0,Math.min(full-183,c.x-8));
+    html+=`<button class="atlas-timeline-event ${lane?'below':''} ${selected?'selected':''}" style="left:${cardLeft}px;--timeline-pin:${c.x-cardLeft}px" ${c.events.length>1?`data-cluster="${c.events.map(e=>esc(e.id)).join(',')}"`:`data-event="${esc(e.id)}"`} aria-pressed="${selected}"><span>${esc(e.dateLabel||date(e.start))}${c.events.length>1?' – '+esc(c.events.at(-1).dateLabel||date(c.events.at(-1).start)):''}</span><strong>${c.events.length>1?`${c.events.length} gebeurtenissen`:esc(e.title)}</strong><small>${c.events.length>1?'Zoom om te verkennen +':esc(e.category||{history:'Geschiedenis',text:'Tekst',tradition:'Overlevering'}[e.kind])}</small></button>`;
    });
-   this.el.querySelector('.atlas-timeline-items').innerHTML=html;
+   const items=this.el.querySelector('.atlas-timeline-items');
+   if(this.timelineMarkup!==html){
+    const focused=items.contains?.(this.el.ownerDocument?.activeElement);
+    items.innerHTML=html;this.timelineMarkup=html;if(focused)scroll.focus({preventScroll:true});
+   }
    this.el.querySelector('#timeline-zoom').textContent=`${Math.round(s.zoom*100)}%`;
    const begin=this.model.min+scroll.scrollLeft/scale,end=Math.min(this.model.max,begin+span);
    this.el.querySelector('#timeline-period').textContent=`${date(Math.round(begin)||1)} – ${date(Math.round(end)||1)}`;
    this.el.querySelector('#timeline-range').value=String(full<=width?0:Math.round(scroll.scrollLeft/(full-width)*1000));
    this.el.querySelector('#timeline-range').disabled=s.zoom===1;
-   this.el.querySelector('#timeline-match-count').textContent=clusters.length?'':'Geen gebeurtenissen bij deze zoekterm of dit filter.';
+   this.el.querySelector('[data-action="zoom-out"]').disabled=s.zoom<=1;
+   this.el.querySelector('[data-action="zoom-in"]').disabled=s.zoom>=1000;
+   this.el.querySelector('[data-action="pan-left"]').disabled=scroll.scrollLeft<=1;
+   this.el.querySelector('[data-action="pan-right"]').disabled=scroll.scrollLeft>=full-width-1;
+   this.el.querySelector('#timeline-match-count').textContent=clusters.length?'':this.model.matches(s.filter,s.kind).length?'Geen gebeurtenissen in dit zichtbare tijdvak. Verplaats de tijdslijn of kies het overzicht.':'Geen gebeurtenissen bij deze zoekterm of dit filter.';
   }
   zoomTimeline(factor,anchor){
    const scroll=this.el.querySelector('.atlas-timeline-scroll');if(!scroll)return;
@@ -196,8 +224,10 @@
    const e=this.model.events.find(e=>e.id===this.state.selected)||this.model.events[0];if(!e)return;
    this.state.selected=e.id;
    // Keep previously issued undated-story buttons valid while selecting other events.
-   this.el.querySelector('#timeline-detail').innerHTML=`<div><span class="library-kicker">GESELECTEERD MOMENT · ${esc({history:'GESCHIEDENIS',tradition:'OVERLEVERING',text:'TEKSTGESCHIEDENIS'}[e.kind]||e.kind)}</span><h2 tabindex="-1">${esc(e.title)}</h2><p class="explore-tag">${esc(e.dateLabel||date(e.start))}</p><p>${esc(e.summary)}</p></div><div><h3>Historische en religieuze context</h3><p>${esc(e.context)}</p>${this.passageButton(e.passage)}${this.sources(e.sources)}</div>`;
+   this.el.querySelector('#timeline-detail').innerHTML=`<div><button class="explore-btn timeline-back" data-action="back-timeline">← Terug naar de tijdslijn</button><span class="library-kicker">GESELECTEERD MOMENT · ${esc({history:'GESCHIEDENIS',tradition:'OVERLEVERING',text:'TEKSTGESCHIEDENIS'}[e.kind]||e.kind)}</span><h2 tabindex="-1">${esc(e.title)}</h2><p class="explore-tag">${esc(e.dateLabel||date(e.start))}</p><h3>Wat gebeurde er?</h3><p>${esc(e.what||e.summary)}</p>${this.stakeholders(e)}</div><div><h3>Betekenis voor geloof en praktijk</h3><p>${esc(e.faithImpact||e.context)}</p><h3>Historische context en nuance</h3><p>${esc(e.nuance||e.context)}</p>${this.passageButton(e.passage)}${this.sources(e.sources)}</div>`;
   }
+  stakeholders(e){return e.stakeholders?.length?`<h3>Wie waren betrokken?</h3><ul class="timeline-stakeholders">${e.stakeholders.map(s=>`<li><strong>${esc(s.name)}</strong><span>${esc(s.role)}</span></li>`).join('')}</ul>`:''}
+  revealTimelineDetail(){const d=this.el.querySelector('#timeline-detail');if(!d?.getBoundingClientRect)return;const rect=d.getBoundingClientRect();if(rect.top>(root.innerHeight||800)-100||rect.bottom<0){d.scrollIntoView({block:'start',behavior:'auto'});d.querySelector('h2')?.focus({preventScroll:true});}}
   challenges(){
    return (this.data.traditions[this.tradition]||[]).filter(e=>(this.state.pillar==='all'||e.pillar===this.state.pillar)&&(this.state.topic==='all'||e.topic===this.state.topic));
   }
@@ -226,7 +256,7 @@
    if(!this.searchInitialized){this.searchState.traditions=[this.tradition];this.searchInitialized=true;}
    const s=this.searchState;
    this.el.innerHTML=`${this.note()}<div class="explore-panel topic-search-panel">
-    <form id="topic-search-form"><label for="topic-query">Zoek een thema of woorden in de heilige boeken</label><div class="topic-search-field"><input type="search" maxlength="200" id="topic-query" value="${esc(s.query)}" placeholder="Bijvoorbeeld: vrede, zorg voor armen, gastvrijheid…"><button class="explore-btn primary" data-action="search">Zoeken →</button></div></form>
+    <form id="topic-search-form"><label for="topic-query">Zoek een thema of woorden in de heilige boeken</label><div class="topic-search-field"><input type="search" maxlength="200" id="topic-query" value="${esc(s.query)}" placeholder="Bijvoorbeeld: vrede, zorg voor armen, gastvrijheid…"><button class="explore-btn primary" type="submit">Zoeken →</button></div></form>
     <fieldset class="topic-religions"><legend>Zoeken binnen</legend>${Object.entries(names).map(([id,label])=>`<label><input type="checkbox" data-search-religion="${id}" ${s.traditions.includes(id)?'checked':''}>${label}</label>`).join('')}</fieldset>
     <div class="topic-search-options"><label>Resultaten<select id="topic-mode"><option value="all">Thema’s en teksttreffers</option><option value="theme">Alleen thematische verwijzingen</option><option value="text">Alleen woorden in de tekst</option></select></label><label>Thema<select id="topic-selection"><option value="">Kies een thema</option>${this.data.topics.map(topic=>`<option value="${esc(topic.id)}">${esc(topic.label)}</option>`).join('')}</select></label></div>
     <p class="explore-note">Zoektaal: Nederlands. Joodse themaverwijzingen openen de Hebreeuwse Tenach. Nederlandse teksttreffers in de Tenach gebruiken de Statenvertaling, een christelijke vertaalhulp met eigen nummering.</p>
@@ -239,38 +269,50 @@
    if(s.query||s.topicId)this.runSearch();
    else this.el.querySelector('#topic-search-status').textContent='Kies een thema of typ een zoekopdracht. De zoekindex wordt alleen voor de geselecteerde religies geladen.';
   }
-  runSearch(){
+  runSearch({keepResults=false}={}){
    clearTimeout(this.debounce);
    const s=this.searchState,id=++this.searchId,status=this.el.querySelector('#topic-search-status');
    if(!status)return;
-   this.el.querySelector('#topic-results').innerHTML='';
-   this.el.querySelector('.topic-pagination').hidden=true;
+   this.searchClock=root.performance?.now?.()||Date.now();delete status.dataset.firstResultMs;delete status.dataset.finalResultMs;
+   if(!keepResults){this.el.querySelector('#topic-results').innerHTML='';this.el.querySelector('.topic-pagination').hidden=true;}
+   else this.renderedSearchId=id;
+   this.searchPending=false;
    if(!s.traditions.length){status.textContent='Selecteer minstens één religie.';return}
    if(!s.query.trim()&&!s.topicId){status.textContent='Voer een zoekterm in of kies een thema.';return}
+   this.searchPending=true;
    status.textContent='Zoeken… Bij de eerste zoekopdracht wordt de index geladen.';
    if(!this.worker){
     try{
-     this.worker=new Worker('scripture-search-worker.js');
+     this.worker=new Worker('scripture-search-worker.js?v=20261109-context');
      this.worker.onmessage=e=>this.searchResponse(e.data);
      this.worker.onerror=()=>{this.worker?.terminate();this.worker=null;if(this.view==='topics')this.searchResponse({id:this.searchId,error:'De zoekfunctie kon niet starten. Probeer opnieuw.'})};
-    }catch{status.textContent='Deze browser ondersteunt de zoekfunctie niet. Gebruik de zoekvelden in Heilige boeken.';return}
+    }catch{this.searchPending=false;status.textContent='Deze browser ondersteunt de zoekfunctie niet. Gebruik de zoekvelden in Heilige boeken.';return}
    }
    this.worker.postMessage({id,query:s.query,traditions:s.traditions,page:s.page,mode:s.mode,topicId:s.topicId});
   }
   searchResponse(d){
    if(d.id!==this.searchId||this.view!=='topics'||this.el.hidden)return;
+   this.searchPending=Boolean(d.partial);
    const status=this.el.querySelector('#topic-search-status');
    if(d.error){status.innerHTML=`${esc(d.error)} <button class="explore-btn" data-action="search">Opnieuw proberen</button>`;return}
-   this.searchResult=d;this.passages=[];
+   this.searchResult=d;
    status.textContent=`${d.total.toLocaleString('nl')} ${d.total===1?'resultaat':'resultaten'}${d.matchedTopics.length?' · thema: '+d.matchedTopics.join(', '):''}${d.total?' · '+Object.entries(d.totals).map(([f,n])=>`${names[f]}: ${n}`).join(' · '):'. Probeer een korter woord, ander thema of extra religie.'}${d.partial?' · Thematische verwijzingen gereed; teksttreffers worden geladen.':''}`;
-   this.el.querySelector('#topic-results').innerHTML=d.results.map(r=>{
+   const list=this.el.querySelector('#topic-results'),keys=d.results.map(r=>JSON.stringify([r.tradition,r.edition,r.book,r.chapter,r.verse,r.endVerse,r.text,r.topics]));
+   const previous=this.searchResultKeys||[],append=this.renderedSearchId===d.id&&previous.length<=keys.length&&previous.every((key,i)=>key===keys[i]);
+   if(!append){this.passages=[];list.innerHTML='';}
+   const markup=d.results.slice(append?previous.length:0).map(r=>{
     const p={tradition:r.tradition,edition:r.edition,book:r.book,chapter:r.chapter,verse:r.verse,endVerse:r.endVerse},he=r.edition==='he';
     return `<article class="explore-panel topic-result"><span class="library-kicker">${esc(names[r.tradition])}</span><h2>${esc(this.reference(p))}</h2><p class="explore-result-kind">${r.topics.length?'Thematische verwijzing · '+esc(r.topics.join(', ')):'Woorden in de tekst'}${he?' · Hebreeuws':''}</p><p class="topic-verse" ${he?'lang="he" dir="rtl"':''}>${this.highlight(r.text,he?'':this.searchState.query)}</p><p class="explore-note">${he?'Hebreeuwse WLC · lees de hele passage met context':r.tradition==='judaism'?'Statenvertaling · christelijke Nederlandse vertaalhulp':r.tradition==='christianity'?'Nederlandse katholieke leeseditie · Canisius / Van Oers':'Nederlandse Koranvertaling · Dutch Islamic Center / Rowwad, QuranEnc'}${r.endVerse>r.verse?' · preview van het eerste vers':''}</p>${this.passageButton(p,'Lees de volledige passage →')}</article>`;
    }).join('');
+   if(markup)list.insertAdjacentHTML('beforeend',markup);
+   this.searchResultKeys=keys;this.renderedSearchId=d.id;
    const page=this.el.querySelector('.topic-pagination');page.hidden=d.total<=30;
    this.el.querySelector('#topic-page').textContent=`Pagina ${this.searchState.page+1} van ${Math.max(1,Math.ceil(d.total/30))}`;
    page.querySelector('[data-action="previous-results"]').disabled=this.searchState.page===0;
    page.querySelector('[data-action="next-results"]').disabled=(this.searchState.page+1)*30>=d.total;
+   const elapsed=Math.round((root.performance?.now?.()||Date.now())-this.searchClock);
+   if(status.dataset.firstResultMs===undefined)status.dataset.firstResultMs=String(elapsed);
+   if(!d.partial)status.dataset.finalResultMs=String(elapsed);
   }
   highlight(text,query){
    const words=fold(query).split(/\s+/).filter(w=>w.length>2);
@@ -280,7 +322,7 @@
    const b=event.target.closest('button');if(!b||!this.el.contains(b))return;
    const d=b.dataset;
    if(d.passage!==undefined){const p=this.passages[+d.passage];if(p)this.onPassage({...p},this.view);return}
-   if(d.event){this.state.selected=d.event;this.renderTimelineDetail();this.paintTimeline();return}
+   if(d.event){this.state.selected=d.event;this.renderTimelineDetail();this.paintTimeline();this.revealTimelineDetail();return}
    if(d.cluster){
     const events=d.cluster.split(',').map(id=>this.model.events.find(e=>e.id===id)).filter(Boolean);
     const scroll=this.el.querySelector('.atlas-timeline-scroll');if(!events.length)return;
@@ -293,6 +335,7 @@
    }
    if(d.pillar){this.state.pillar=d.pillar;this.state.topic='all';this.renderChallenge();this.el.querySelector(`[data-pillar="${d.pillar}"]`)?.focus();return}
    switch(d.action){
+    case'back-timeline':{const scroll=this.el.querySelector('.atlas-timeline-scroll');scroll.scrollIntoView({block:'center',behavior:'auto'});scroll.focus({preventScroll:true});break;}
     case'retry':this.loaded=false;this.open(this.view,this.tradition);break;
     case'zoom-in':this.zoomTimeline(1.8);break;
     case'zoom-out':this.zoomTimeline(1/1.8);break;
@@ -311,7 +354,7 @@
   }
   focusTimelineMatches(){
    const s=this.state,scroll=this.el.querySelector('.atlas-timeline-scroll');
-   const found=this.model.events.filter(e=>(s.kind==='all'||e.kind===s.kind)&&fold([e.title,e.summary,e.context,e.category,e.dateLabel,e.start,e.end].join(' ')).includes(fold(s.filter)));
+   const found=this.model.matches(s.filter,s.kind);
    if(found.length&&s.filter.trim()){
     s.selected=found[0].id;const full=this.model.max-this.model.min,span=Math.max(80,found.at(-1).start-found[0].start+100);
     s.zoom=Math.max(1,Math.min(1000,full/span));this.paintTimeline();scroll.scrollLeft=(found[0].start-this.model.min-40)/full*(scroll.clientWidth||800)*s.zoom;this.renderTimelineDetail();
