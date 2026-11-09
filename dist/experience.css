@@ -25,3 +25,28 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,su
 @media(max-width:760px){.sidebar,.sidebar-shade{transition:none!important}.map-detail-bar{display:flex;gap:8px;align-items:center}.map-detail-toggle{flex:1;min-width:0}.map-detail-bar .map-detail-expand{width:44px!important;min-width:44px;flex:0 0 44px;text-align:center;font-size:22px!important}}
 
 .festival-explore-shortcut{font:600 14px/1.5 var(--sans);min-height:44px;padding:10px 14px;background:#edf2e5;border:1px solid #c7d4b8;border-radius:6px;color:#344b3e;cursor:pointer}.festival-explore{scroll-margin-top:80px}
+
+/* Content must grow with long names, compounds and source references. */
+body{overflow-wrap:anywhere}
+button,a,summary{overflow-wrap:anywhere}
+.index-person,.index-person>div,.atlas-person-card,.atlas-search-hit,.comparison-account,.path-person-copy,.source-context,.reader-credit,.sacred-credit{min-width:0}
+.reader-verse,.verse-text,.reader-chapter-heading h3,.unified-profile-header h2,.atlas-detail h2,.city-detail-heading h2{overflow-wrap:anywhere}
+.map-detail-toggle{white-space:normal;text-align:left}
+.topbar .breadcrumb strong,.breadcrumb #religion-crumb{max-width:none;overflow:visible;text-overflow:clip;white-space:normal;overflow-wrap:anywhere}
+@media(max-width:760px){
+ .topbar{display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 8px;align-items:center;z-index:85;flex-wrap:wrap!important}
+ .topbar>.mobile-menu{grid-column:1;grid-row:1;display:flex}
+ .topbar-tools{grid-column:2;grid-row:1;justify-content:flex-end;margin:0;min-width:0}
+ .topbar .breadcrumb{grid-column:1/-1;grid-row:2;display:flex;flex-basis:auto!important;max-width:none;gap:6px;flex-wrap:wrap;min-width:0}
+ .topbar .breadcrumb>svg{display:none}
+ .topbar #religion-crumb,.topbar .crumb-slash{display:block;max-width:none;flex-shrink:0}
+ .topbar .breadcrumb strong{max-width:none;font-size:14px;flex:1 1 auto}
+ .topbar .language-picker select{max-width:none!important;width:120px}
+ .sidebar{z-index:80}.sidebar-shade.open{z-index:79}
+ .topbar .breadcrumb #religion-crumb{font-size:14px;flex-shrink:1}
+}
+
+.unified-profile-header>div{min-width:0}
+.unified-profile-tabs button{overflow-wrap:normal;hyphens:none}
+@media(max-width:380px){.unified-profile-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-height:500px){.unified-profile .unified-profile-chrome{position:static}}

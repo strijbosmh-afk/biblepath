@@ -1,6 +1,6 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
-const {TimelineModel,AtlasExplore}=require('../dist/explore-features.js');
+const {TimelineModel,TimelineLayout,AtlasExplore}=require('../dist/explore-features.js');
 const data=require('../dist/timeline-events.json'),links=require('../dist/timeline-connections.json');
 const traditions=['christianity','judaism','islam'];
 const events=Object.entries(data.traditions).flatMap(([tradition,entries])=>entries.map(e=>({...e,tradition})));
@@ -20,8 +20,8 @@ assert(ticks.length>=1,'The overview must retain year markers');for(let i=1;i<ti
 for(const width of [305,375,931])for(const zoom of [1,4,20,300]){
  const full=width*zoom,clusters=model.visible({width,zoom,scroll:Math.max(0,full-width-100),separateTraditions:true});
  for(const tradition of traditions){
-  const positions=clusters.filter(c=>c.events[0].tradition===tradition).map(c=>Math.max(0,Math.min(full-183,c.x-8))).sort((a,b)=>a-b);
-  for(let i=1;i<positions.length;i++)assert(positions[i]-positions[i-1]>=189.99,'Cards in the same lane must not overlap, including clamped overview cards');
+  const positions=clusters.filter(c=>c.events[0].tradition===tradition).map(c=>Math.max(0,Math.min(full-TimelineLayout.cardWidth-8,c.x-8))).sort((a,b)=>a-b);
+  for(let i=1;i<positions.length;i++)assert(positions[i]-positions[i-1]>=TimelineLayout.cardGap-.01,'Cards in the same lane must not overlap, including clamped overview cards');
  }
 }
 // Virtualization stays bounded as the corpus grows, while preserving each lane.

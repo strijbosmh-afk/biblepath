@@ -1,6 +1,6 @@
 'use strict';
 const assert=require('node:assert/strict');
-const {TimelineModel,AtlasExplore}=require('../dist/explore-features.js');
+const {TimelineModel,TimelineLayout,AtlasExplore}=require('../dist/explore-features.js');
 const data=require('../dist/timeline-events.json'),{connections}=require('../dist/timeline-connections.json');
 const events=Object.entries(data.traditions).flatMap(([tradition,es])=>es.map(e=>({...e,tradition}))),model=new TimelineModel(events);
 const byId=new Map(events.map(e=>[e.id,e]));
@@ -10,6 +10,10 @@ for(const width of [273,343,931]){
  for(const {link,segments} of all)for(const p of segments){
   assert(link.eventIds.includes(p.fromId)&&link.eventIds.includes(p.toId));assert.notEqual(byId.get(p.fromId).tradition,byId.get(p.toId).tradition);
   assert(!p.clipped&&p.startVisible&&p.endVisible);assert(p.y2>p.y1);
+  const order=['christianity','judaism','islam'];
+  assert.equal(p.y1,TimelineLayout.cardTop+TimelineLayout.cardHeight+order.indexOf(byId.get(p.fromId).tradition)*TimelineLayout.laneHeight,'Connections start at the bottom of the full-text card');
+  assert.equal(p.y2,TimelineLayout.cardTop+order.indexOf(byId.get(p.toId).tradition)*TimelineLayout.laneHeight,'Connections end at the top of the destination card');
+  assert(p.y2+TimelineLayout.cardHeight<TimelineLayout.trackHeight,'All three lanes fit the drawing');
  }
 }
 // Endpoint positions use the event year, never the first year of a grouped card.

@@ -3,6 +3,8 @@
  'use strict';
  const I=()=>root.BibleI18n;
  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ // Keep event cards, virtualized spacing and connection anchors on one geometry.
+ const TimelineLayout=Object.freeze({cardWidth:235,cardHeight:230,cardGap:250,laneHeight:280,cardTop:77,laneTop:42,trackHeight:892});
  const names={christianity:'Christendom · rooms-katholiek',judaism:'Jodendom',islam:'Islam'};
  const rows=[
   ['Timeline','Tijdslijn','Chronologie'],
@@ -55,11 +57,11 @@
    const buckets=new Map(),lastByTradition=new Map();
    for(const e of matches){
     const x=(e.start-this.min)*scale;
-    if(x<scroll-250||x>scroll+width+250)continue;
-    let key=Math.floor(x/190);
+    if(x<scroll-TimelineLayout.cardGap||x>scroll+width+TimelineLayout.cardGap)continue;
+    let key=Math.floor(x/TimelineLayout.cardGap);
     if(separateTraditions){
-     const cardX=Math.max(0,Math.min(width*zoom-183,x-8)),previous=lastByTradition.get(e.tradition);
-     if(previous&&cardX-previous.cardX<190)key=previous.key;
+     const cardX=Math.max(0,Math.min(width*zoom-TimelineLayout.cardWidth-8,x-8)),previous=lastByTradition.get(e.tradition);
+     if(previous&&cardX-previous.cardX<TimelineLayout.cardGap)key=previous.key;
      else {key=e.tradition+':'+e.id;lastByTradition.set(e.tradition,{key,cardX});}
     }
     if(!buckets.has(key))buckets.set(key,[]);
@@ -79,7 +81,7 @@
      let a=linked[i],b=linked[j];if(a.tradition===b.tradition)continue;
      if(order.indexOf(a.tradition)>order.indexOf(b.tradition))[a,b]=[b,a];
      const ax=(a.start-this.min)*scale-scroll,bx=(b.start-this.min)*scale-scroll;
-     const ay=187+order.indexOf(a.tradition)*150,by=77+order.indexOf(b.tradition)*150;
+     const ay=TimelineLayout.cardTop+TimelineLayout.cardHeight+order.indexOf(a.tradition)*TimelineLayout.laneHeight,by=TimelineLayout.cardTop+order.indexOf(b.tradition)*TimelineLayout.laneHeight;
      // Clip in viewport coordinates: SVG size and geometry stay bounded even at maximum zoom.
      const dx=bx-ax;let from=0,to=1;
      if(dx===0){if(ax<0||ax>width)continue;}
@@ -286,7 +288,7 @@
    const clusters=this.model.visible({width,scroll:scroll.scrollLeft,zoom:s.zoom,filter:comparison?'':s.filter,kind:s.kind,separateTraditions:comparison});
    const matches=new Set(this.model.matches(s.filter,s.kind).map(e=>e.id));
    const linkedIds=new Set(comparison?this.filteredConnections().find(c=>c.link.id===s.connection)?.events.map(e=>e.id):[]);
-   let html=comparison?traditions.map((t,i)=>`<div class="timeline-comparison-lane lane-${t}" style="top:${42+i*150}px"><span>${esc(names[t])}</span></div>`).join(''):'';
+   let html=comparison?traditions.map((t,i)=>`<div class="timeline-comparison-lane lane-${t}" style="top:${TimelineLayout.laneTop+i*TimelineLayout.laneHeight}px"><span>${esc(names[t])}</span></div>`).join(''):'';
    const span=(this.model.max-this.model.min)/s.zoom;
    const targetTicks=comparison?Math.max(3,Math.floor(width/120)):8;
    const step=[1,2,5,10,25,50,100,250,500,1000,2500].find(n=>n>=span/targetTicks)||5000;
@@ -297,9 +299,9 @@
    }
    clusters.forEach(c=>{
     const selected=c.events.some(e=>e.id===s.selected),e=c.events[0];
-    const lane=comparison?traditions.indexOf(e.tradition):Math.floor(c.x/190)%2;
-    const cardLeft=Math.max(0,Math.min(full-183,c.x-8));
-    html+=`<button class="atlas-timeline-event ${!comparison&&lane?'below':''} ${selected?'selected':''} ${comparison?'comparison-event lane-'+e.tradition:''} ${c.events.some(e=>linkedIds.has(e.id))?'connection-member':''} ${comparison&&s.filter&&c.events.some(e=>matches.has(e.id))?'timeline-search-match':''}" style="left:${cardLeft}px;--timeline-pin:${c.x-cardLeft}px;${comparison?`top:${77+lane*150}px;`:''}" ${c.events.length>1?`data-cluster="${c.events.map(e=>esc(e.id)).join(',')}"`:`data-event="${esc(e.id)}"`} ${comparison?`aria-label="${esc(names[e.tradition])}: ${esc(c.events.length>1?c.events.length+' gebeurtenissen vanaf '+(e.dateLabel||date(e.start)):(e.dateLabel||date(e.start))+' '+e.title)}"`:''} aria-pressed="${selected}"><span>${esc(e.dateLabel||date(e.start))}${c.events.length>1?' – '+esc(c.events.at(-1).dateLabel||date(c.events.at(-1).start)):''}</span><strong>${c.events.length>1?`${c.events.length} gebeurtenissen`:esc(e.title)}</strong><small>${c.events.length>1?'Zoom en bekijk gebeurtenissen +':esc(e.category||{history:'Geschiedenis',text:'Tekst',tradition:'Overlevering'}[e.kind])}</small></button>`;
+    const lane=comparison?traditions.indexOf(e.tradition):Math.floor(c.x/TimelineLayout.cardGap)%2;
+    const cardLeft=Math.max(0,Math.min(full-TimelineLayout.cardWidth-8,c.x-8));
+    html+=`<button class="atlas-timeline-event ${!comparison&&lane?'below':''} ${selected?'selected':''} ${comparison?'comparison-event lane-'+e.tradition:''} ${c.events.some(e=>linkedIds.has(e.id))?'connection-member':''} ${comparison&&s.filter&&c.events.some(e=>matches.has(e.id))?'timeline-search-match':''}" style="left:${cardLeft}px;--timeline-pin:${c.x-cardLeft}px;${comparison?`top:${TimelineLayout.cardTop+lane*TimelineLayout.laneHeight}px;`:''}" ${c.events.length>1?`data-cluster="${c.events.map(e=>esc(e.id)).join(',')}"`:`data-event="${esc(e.id)}"`} ${comparison?`aria-label="${esc(names[e.tradition])}: ${esc(c.events.length>1?c.events.length+' gebeurtenissen vanaf '+(e.dateLabel||date(e.start)):(e.dateLabel||date(e.start))+' '+e.title)}"`:''} aria-pressed="${selected}"><span>${esc(e.dateLabel||date(e.start))}${c.events.length>1?' – '+esc(c.events.at(-1).dateLabel||date(c.events.at(-1).start)):''}</span><strong>${c.events.length>1?`${c.events.length} gebeurtenissen`:esc(e.title)}</strong><small>${c.events.length>1?'Zoom en bekijk gebeurtenissen +':esc(e.category||{history:'Geschiedenis',text:'Tekst',tradition:'Overlevering'}[e.kind])}</small></button>`;
    });
    const items=this.el.querySelector('.atlas-timeline-items');
    if(this.timelineMarkup!==html){
@@ -325,17 +327,17 @@
   paintTimelineConnections(width,scroll,clusters){
    const layer=this.el.querySelector('.timeline-link-layer'),list=this.el.querySelector('#timeline-link-list');if(!layer||!list)return;
    const s=this.state,links=this.data?.connections||[],options=this.connectionOptions(),eligible=this.model.connectionEntries(links,options),visible=s.showConnections===false?[]:this.model.connections(links,{width,scroll,zoom:s.zoom,...options});
-   const used=[],blocked=clusters.map(c=>({x:Math.max(0,Math.min(width*s.zoom-183,c.x-8))-scroll,y:77+Object.keys(names).indexOf(c.events[0].tradition)*150,w:175,h:110}));
+   const used=[],blocked=clusters.map(c=>({x:Math.max(0,Math.min(width*s.zoom-TimelineLayout.cardWidth-8,c.x-8))-scroll,y:TimelineLayout.cardTop+Object.keys(names).indexOf(c.events[0].tradition)*TimelineLayout.laneHeight,w:TimelineLayout.cardWidth,h:TimelineLayout.cardHeight}));
    const buttons=[];
    const groups=visible.map(({link,segments})=>{
     const number=links.indexOf(link)+1,selected=s.connection===link.id,clipped=segments.some(p=>p.clipped),label=`Verband ${number}: ${link.title}${clipped?' (deels buiten beeld)':''}`;
     const candidates=segments.flatMap(p=>[.5,.3,.7,.15,.85].map(t=>({x:p.x1+(p.x2-p.x1)*t,y:p.y1+(p.y2-p.y1)*t})));
-    const badge=candidates.find(p=>p.x>=23&&p.x<=width-23&&!used.some(q=>Math.hypot(q.x-p.x,q.y-p.y)<44)&&!blocked.some(r=>p.x>r.x-14&&p.x<r.x+r.w+14&&p.y>r.y-14&&p.y<r.y+r.h+14)&&!Object.keys(names).some((t,i)=>p.y>42+i*150-14&&p.y<72+i*150+14&&p.x<Math.min(width,names[t].length*8+30)));
+    const badge=candidates.find(p=>p.x>=23&&p.x<=width-23&&!used.some(q=>Math.hypot(q.x-p.x,q.y-p.y)<44)&&!blocked.some(r=>p.x>r.x-14&&p.x<r.x+r.w+14&&p.y>r.y-14&&p.y<r.y+r.h+14)&&!Object.keys(names).some((t,i)=>p.y>TimelineLayout.laneTop+i*TimelineLayout.laneHeight-14&&p.y<TimelineLayout.cardTop-5+i*TimelineLayout.laneHeight+14&&p.x<Math.min(width,names[t].length*8+30)));
     if(badge)used.push(badge);
     buttons.push(`<button class="explore-btn" data-timeline-link="${esc(link.id)}" aria-pressed="${selected}"><span class="timeline-link-number">${number}</span><span>${esc(link.title)}${clipped?'<small>Een deel valt buiten beeld</small>':''}</span></button>`);
     return `<g class="timeline-link ${link.type==='shared-context'?'shared':''} ${selected?'active':''}" data-timeline-link="${esc(link.id)}" role="button" tabindex="0" focusable="true" aria-label="${esc(label)}" aria-pressed="${selected}" aria-controls="timeline-link-detail"><title>${esc(label)}</title>${segments.map(p=>`<path class="timeline-link-hit" d="M ${p.x1} ${p.y1} L ${p.x2} ${p.y2}"/><path class="timeline-link-stroke" d="M ${p.x1} ${p.y1} L ${p.x2} ${p.y2}"/>${p.startVisible?`<circle class="timeline-link-end" cx="${p.x1}" cy="${p.y1}" r="4"/>`:''}${p.endVisible?`<circle class="timeline-link-end" cx="${p.x2}" cy="${p.y2}" r="4"/>`:''}`).join('')}${badge?`<circle class="timeline-link-badge-hit" cx="${badge.x}" cy="${badge.y}" r="22"/><circle class="timeline-link-badge" cx="${badge.x}" cy="${badge.y}" r="12"/><text x="${badge.x}" y="${badge.y}" dy=".35em" text-anchor="middle">${number}</text>`:''}</g>`;
    }).join('');
-   const html=`<svg width="${width}" height="502" viewBox="0 0 ${width} 502" aria-label="Historische verbanden tussen religies">${groups}</svg>`;
+   const html=`<svg width="${width}" height="${TimelineLayout.trackHeight}" viewBox="0 0 ${width} ${TimelineLayout.trackHeight}" aria-label="Historische verbanden tussen religies">${groups}</svg>`;
    layer.style.left=`${scroll}px`;layer.style.width=`${width}px`;
    if(this.connectionMarkup!==html){
     const focus=this.el.ownerDocument?.activeElement,focused=layer.contains?.(focus)?focus?.closest?.('[data-timeline-link]')?.dataset.timelineLink:null;
@@ -618,6 +620,6 @@
    if(this.raf)cancelAnimationFrame(this.raf);
   }
  }
- const api={AtlasExplore,TimelineModel,TimelineShare,date};Object.assign(root,api);
+ const api={AtlasExplore,TimelineModel,TimelineLayout,TimelineShare,date};Object.assign(root,api);
  if(typeof module!=='undefined'&&module.exports)module.exports=api;
 })(typeof window!=='undefined'?window:globalThis);
