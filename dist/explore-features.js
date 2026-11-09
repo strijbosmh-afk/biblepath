@@ -48,6 +48,26 @@
    }
    return [...buckets.values()].map(entries=>({events:entries,x:(entries[0].start-this.min)*scale}));
   }
+  connections(links,{width,scroll=0,zoom=1,kind='all'}){
+   const order=Object.keys(names),scale=width*zoom/(this.max-this.min),events=new Map(this.events.map(e=>[e.id,e]));
+   return links.map(link=>{
+    const linked=link.eventIds.map(id=>events.get(id)).filter(e=>e&&(kind==='all'||e.kind===kind)),segments=[];
+    for(let i=0;i<linked.length;i++)for(let j=i+1;j<linked.length;j++){
+     let a=linked[i],b=linked[j];if(a.tradition===b.tradition)continue;
+     if(order.indexOf(a.tradition)>order.indexOf(b.tradition))[a,b]=[b,a];
+     const ax=(a.start-this.min)*scale-scroll,bx=(b.start-this.min)*scale-scroll;
+     const ay=187+order.indexOf(a.tradition)*150,by=77+order.indexOf(b.tradition)*150;
+     // Clip in viewport coordinates: SVG size and geometry stay bounded even at maximum zoom.
+     const dx=bx-ax;let from=0,to=1;
+     if(dx===0){if(ax<0||ax>width)continue;}
+     else {const t0=(0-ax)/dx,t1=(width-ax)/dx;from=Math.max(0,Math.min(t0,t1));to=Math.min(1,Math.max(t0,t1));if(from>to)continue;}
+     const x1=Math.max(0,Math.min(width,ax+dx*from)),y1=ay+(by-ay)*from,x2=Math.max(0,Math.min(width,ax+dx*to)),y2=ay+(by-ay)*to;
+     if(Math.hypot(x2-x1,y2-y1)<1)continue;
+     segments.push({x1,y1,x2,y2,fromId:a.id,toId:b.id,clipped:from>0||to<1,startVisible:from===0,endVisible:to===1});
+    }
+    return {link,segments};
+   }).filter(c=>c.segments.length);
+  }
  }
  class AtlasExplore{
   constructor(container,{onPassage=()=>{}}={}){
@@ -117,21 +137,25 @@
       <button class="explore-btn" data-action="overview">Hele tijdslijn</button>
      </div>
      <div class="timeline-legend"><span>${entries.length} gebeurtenissen · ${comparison?'drie religies op dezelfde schaal':esc(names[this.tradition])}</span><span id="timeline-period"></span></div>
-     <div class="atlas-timeline-scroll" tabindex="0" aria-label="Tijdslijn: sleep of scroll horizontaal; gebruik plus, min en de pijltjestoetsen"><div class="atlas-timeline-track"><div class="atlas-timeline-axis"></div><div class="atlas-timeline-items"></div></div></div>
+     ${comparison?'<div class="timeline-link-controls"><label><input type="checkbox" id="timeline-links-toggle" checked> Verbindingslijnen tonen</label><span><i class="line-key"></i> Doorwerking / contact</span><span><i class="line-key shared"></i> Gedeelde context</span><p>Tik op een lijn of de bijbehorende genummerde knop voor context en bronnen. Lijnen geven geen richting van invloed aan.</p></div>':''}
+     <div class="atlas-timeline-scroll" tabindex="0" aria-label="Tijdslijn: sleep of scroll horizontaal; gebruik plus, min en de pijltjestoetsen"><div class="atlas-timeline-track"><div class="atlas-timeline-axis"></div><div class="atlas-timeline-items"></div>${comparison?'<div class="timeline-link-layer"></div>':''}</div></div>
+     ${comparison?'<div id="timeline-link-list" class="timeline-link-list" aria-label="Verbanden in het zichtbare tijdvak"></div>':''}
      <div class="timeline-bottom"><div><button class="explore-btn" data-action="pan-left" aria-label="Eerder in de tijdslijn">←</button><button class="explore-btn" data-action="pan-right" aria-label="Later in de tijdslijn">→</button></div><p>Scroll of sleep van links naar rechts. Zoom voor meer detail; selecteer een moment voor de context.</p></div>
      <label class="timeline-range-label">Positie in de geschiedenis<input id="timeline-range" type="range" min="0" max="1000" value="0" aria-label="Positie in de tijdslijn"></label>
      <p class="explore-note">${esc(this.data.meta?.scopeNote||this.data.meta?.selectionNote||this.data.meta?.scope||'Een brede, redactionele selectie. Religieuze verhalen en historische dateringen worden afzonderlijk aangeduid. Een tijdslijn kan niet elke gebeurtenis of interpretatie omvatten.')}</p>
     </div>
     <p id="timeline-match-count" role="status"></p>
+    ${comparison?'<section class="explore-panel timeline-link-detail" id="timeline-link-detail" aria-labelledby="timeline-link-title" hidden></section>':''}
     <div id="timeline-cluster-list"></div>
     <article class="explore-panel timeline-detail" id="timeline-detail"></article>
     ${comparison?`<details class="timeline-connections"><summary>Contact en onderlinge invloeden (${this.data.connections?.length||0})</summary><p class="explore-note">Deze dossiers onderscheiden aantoonbare contacten van een gedeelde historische context. Bekijk telkens de afzonderlijke gebeurtenissen en hun bronnen.</p>${(this.data.connections||[]).map((c,i)=>`<article class="explore-panel"><h3>${esc(c.title)}</h3><p>${esc(c.context)}</p>${this.sources(c.sources)}<button class="explore-btn" data-connection="${i}">Bekijk deze gebeurtenissen samen →</button></article>`).join('')}</details>`:''}
     <details class="explore-undated"><summary>Verhalen zonder historische datering</summary><div id="timeline-undated"></div></details>`;
    this.el.querySelector('#timeline-kind').value=this.state.kind;
    const scroll=this.el.querySelector('.atlas-timeline-scroll');
-   this.timelineMarkup=null;
+   this.timelineMarkup=null;this.connectionMarkup=null;this.connectionListMarkup=null;
    scroll.scrollLeft=this.state.scroll;this.bindTimelineGestures(scroll);
    this.paintTimeline();scroll.scrollLeft=this.state.scroll;this.renderTimelineDetail();
+   if(comparison){this.el.querySelector('#timeline-links-toggle').checked=this.state.showConnections!==false;this.renderTimelineConnection();}
    this.resizeObserver?.observe(this.el);
    const undated=comparison?Object.entries(this.data.undated||{}).flatMap(([tradition,events])=>events.map(e=>({...e,tradition}))):this.data.undated?.[this.tradition]||[];
    this.el.querySelector('#timeline-undated').innerHTML=undated.map(e=>`<article>${e.tradition?`<p class="explore-tag">${esc(names[e.tradition])}</p>`:''}<h3>${esc(e.title)}</h3><p>${esc(e.what||e.context||e.summary)}</p>${this.stakeholders(e)}<h3>Betekenis voor geloof en praktijk</h3><p>${esc(e.faithImpact||e.context)}</p>${e.nuance?`<p class="explore-note">${esc(e.nuance)}</p>`:''}${this.sources(e.sources)}${this.passageButton(e.passage)}</article>`).join('')||'<p>Gedateerde gebeurtenissen staan hierboven. De afwezigheid van een datum zegt niets over de religieuze betekenis van een verhaal.</p>';
@@ -171,7 +195,9 @@
    scroll.onpointerup=scroll.onpointercancel=scroll.onlostpointercapture=e=>{pointers.delete(e.pointerId);dragging=false;distance=0};
    scroll.onclick=e=>{if(moved&&e.detail!==0){e.preventDefault();e.stopPropagation();}};
    scroll.onkeydown=e=>{
-    if(e.target!==scroll&&!e.target.closest('.atlas-timeline-event'))return;
+    const link=e.target.closest?.('[data-timeline-link]');
+    if(link&&(e.key==='Enter'||e.key===' ')){e.preventDefault();this.openTimelineConnection(link.dataset.timelineLink);return;}
+    if(e.target!==scroll&&!e.target.closest('.atlas-timeline-event')&&!link)return;
     if(['+','=','-','ArrowLeft','ArrowRight','Home','End'].includes(e.key)){
      e.preventDefault();
      if(e.key==='+'||e.key==='=')this.zoomTimeline(1.5);
@@ -197,6 +223,7 @@
    // One camera and one scale keep every religion aligned, including on phones.
    const clusters=this.model.visible({width,scroll:scroll.scrollLeft,zoom:s.zoom,filter:comparison?'':s.filter,kind:s.kind,separateTraditions:comparison});
    const matches=new Set(this.model.matches(s.filter,s.kind).map(e=>e.id));
+   const linkedIds=new Set(comparison?(this.data?.connections||[]).find(c=>c.id===s.connection)?.eventIds:[]);
    let html=comparison?traditions.map((t,i)=>`<div class="timeline-comparison-lane lane-${t}" style="top:${42+i*150}px"><span>${esc(names[t])}</span></div>`).join(''):'';
    const span=(this.model.max-this.model.min)/s.zoom;
    const targetTicks=comparison?Math.max(3,Math.floor(width/120)):8;
@@ -210,13 +237,14 @@
     const selected=c.events.some(e=>e.id===s.selected),e=c.events[0];
     const lane=comparison?traditions.indexOf(e.tradition):Math.floor(c.x/190)%2;
     const cardLeft=Math.max(0,Math.min(full-183,c.x-8));
-    html+=`<button class="atlas-timeline-event ${!comparison&&lane?'below':''} ${selected?'selected':''} ${comparison?'comparison-event lane-'+e.tradition:''} ${comparison&&s.filter&&c.events.some(e=>matches.has(e.id))?'timeline-search-match':''}" style="left:${cardLeft}px;--timeline-pin:${c.x-cardLeft}px;${comparison?`top:${77+lane*150}px;`:''}" ${c.events.length>1?`data-cluster="${c.events.map(e=>esc(e.id)).join(',')}"`:`data-event="${esc(e.id)}"`} ${comparison?`aria-label="${esc(names[e.tradition])}: ${esc(c.events.length>1?c.events.length+' gebeurtenissen vanaf '+(e.dateLabel||date(e.start)):(e.dateLabel||date(e.start))+' '+e.title)}"`:''} aria-pressed="${selected}"><span>${esc(e.dateLabel||date(e.start))}${c.events.length>1?' – '+esc(c.events.at(-1).dateLabel||date(c.events.at(-1).start)):''}</span><strong>${c.events.length>1?`${c.events.length} gebeurtenissen`:esc(e.title)}</strong><small>${c.events.length>1?'Zoom en bekijk gebeurtenissen +':esc(e.category||{history:'Geschiedenis',text:'Tekst',tradition:'Overlevering'}[e.kind])}</small></button>`;
+    html+=`<button class="atlas-timeline-event ${!comparison&&lane?'below':''} ${selected?'selected':''} ${comparison?'comparison-event lane-'+e.tradition:''} ${c.events.some(e=>linkedIds.has(e.id))?'connection-member':''} ${comparison&&s.filter&&c.events.some(e=>matches.has(e.id))?'timeline-search-match':''}" style="left:${cardLeft}px;--timeline-pin:${c.x-cardLeft}px;${comparison?`top:${77+lane*150}px;`:''}" ${c.events.length>1?`data-cluster="${c.events.map(e=>esc(e.id)).join(',')}"`:`data-event="${esc(e.id)}"`} ${comparison?`aria-label="${esc(names[e.tradition])}: ${esc(c.events.length>1?c.events.length+' gebeurtenissen vanaf '+(e.dateLabel||date(e.start)):(e.dateLabel||date(e.start))+' '+e.title)}"`:''} aria-pressed="${selected}"><span>${esc(e.dateLabel||date(e.start))}${c.events.length>1?' – '+esc(c.events.at(-1).dateLabel||date(c.events.at(-1).start)):''}</span><strong>${c.events.length>1?`${c.events.length} gebeurtenissen`:esc(e.title)}</strong><small>${c.events.length>1?'Zoom en bekijk gebeurtenissen +':esc(e.category||{history:'Geschiedenis',text:'Tekst',tradition:'Overlevering'}[e.kind])}</small></button>`;
    });
    const items=this.el.querySelector('.atlas-timeline-items');
    if(this.timelineMarkup!==html){
     const focused=items.contains?.(this.el.ownerDocument?.activeElement);
     items.innerHTML=html;this.timelineMarkup=html;if(focused)scroll.focus({preventScroll:true});
    }
+   if(comparison)this.paintTimelineConnections(width,scroll.scrollLeft,clusters);
    this.el.querySelector('#timeline-zoom').textContent=`${Math.round(s.zoom*100)}%`;
    const begin=this.model.min+scroll.scrollLeft/scale,end=Math.min(this.model.max,begin+span);
    this.el.querySelector('#timeline-period').textContent=`${date(Math.round(begin)||1)} – ${date(Math.round(end)||1)}`;
@@ -227,6 +255,47 @@
    this.el.querySelector('[data-action="pan-left"]').disabled=scroll.scrollLeft<=1;
    this.el.querySelector('[data-action="pan-right"]').disabled=scroll.scrollLeft>=full-width-1;
    this.el.querySelector('#timeline-match-count').textContent=comparison&&s.filter?`${matches.size} zoektreffers. Andere gebeurtenissen blijven zichtbaar om hetzelfde tijdvak te vergelijken.`:clusters.length?'':matches.size?'Geen gebeurtenissen in dit zichtbare tijdvak. Verplaats de tijdslijn of kies het overzicht.':'Geen gebeurtenissen bij deze zoekterm of dit filter.';
+  }
+  paintTimelineConnections(width,scroll,clusters){
+   const layer=this.el.querySelector('.timeline-link-layer'),list=this.el.querySelector('#timeline-link-list');if(!layer||!list)return;
+   const s=this.state,links=this.data?.connections||[],visible=s.showConnections===false?[]:this.model.connections(links,{width,scroll,zoom:s.zoom,kind:s.kind});
+   const used=[],blocked=clusters.map(c=>({x:Math.max(0,Math.min(width*s.zoom-183,c.x-8))-scroll,y:77+Object.keys(names).indexOf(c.events[0].tradition)*150,w:175,h:110}));
+   const buttons=[];
+   const groups=visible.map(({link,segments})=>{
+    const number=links.indexOf(link)+1,selected=s.connection===link.id,clipped=segments.some(p=>p.clipped),label=`Verband ${number}: ${link.title}${clipped?' (deels buiten beeld)':''}`;
+    const candidates=segments.flatMap(p=>[.5,.3,.7,.15,.85].map(t=>({x:p.x1+(p.x2-p.x1)*t,y:p.y1+(p.y2-p.y1)*t})));
+    const badge=candidates.find(p=>p.x>=23&&p.x<=width-23&&!used.some(q=>Math.hypot(q.x-p.x,q.y-p.y)<44)&&!blocked.some(r=>p.x>r.x-14&&p.x<r.x+r.w+14&&p.y>r.y-14&&p.y<r.y+r.h+14)&&!Object.keys(names).some((t,i)=>p.y>42+i*150-14&&p.y<72+i*150+14&&p.x<Math.min(width,names[t].length*8+30)));
+    if(badge)used.push(badge);
+    buttons.push(`<button class="explore-btn" data-timeline-link="${esc(link.id)}" aria-pressed="${selected}"><span class="timeline-link-number">${number}</span><span>${esc(link.title)}${clipped?'<small>Een deel valt buiten beeld</small>':''}</span></button>`);
+    return `<g class="timeline-link ${link.type==='shared-context'?'shared':''} ${selected?'active':''}" data-timeline-link="${esc(link.id)}" role="button" tabindex="0" focusable="true" aria-label="${esc(label)}" aria-pressed="${selected}" aria-controls="timeline-link-detail"><title>${esc(label)}</title>${segments.map(p=>`<path class="timeline-link-hit" d="M ${p.x1} ${p.y1} L ${p.x2} ${p.y2}"/><path class="timeline-link-stroke" d="M ${p.x1} ${p.y1} L ${p.x2} ${p.y2}"/>${p.startVisible?`<circle class="timeline-link-end" cx="${p.x1}" cy="${p.y1}" r="4"/>`:''}${p.endVisible?`<circle class="timeline-link-end" cx="${p.x2}" cy="${p.y2}" r="4"/>`:''}`).join('')}${badge?`<circle class="timeline-link-badge-hit" cx="${badge.x}" cy="${badge.y}" r="22"/><circle class="timeline-link-badge" cx="${badge.x}" cy="${badge.y}" r="12"/><text x="${badge.x}" y="${badge.y}" dy=".35em" text-anchor="middle">${number}</text>`:''}</g>`;
+   }).join('');
+   const html=`<svg width="${width}" height="502" viewBox="0 0 ${width} 502" aria-label="Historische verbanden tussen religies">${groups}</svg>`;
+   layer.style.left=`${scroll}px`;layer.style.width=`${width}px`;
+   if(this.connectionMarkup!==html){
+    const focus=this.el.ownerDocument?.activeElement,focused=layer.contains?.(focus)?focus?.closest?.('[data-timeline-link]')?.dataset.timelineLink:null;
+    layer.innerHTML=html;this.connectionMarkup=html;
+    if(focused){const target=[...(layer.querySelectorAll?.('[data-timeline-link]')||[])].find(e=>e.dataset.timelineLink===focused);(target||this.el.querySelector('.atlas-timeline-scroll')).focus({preventScroll:true});}
+   }
+   const listHtml=s.showConnections===false?'<p>Verbindingslijnen zijn verborgen.</p>':visible.length?`<p>Verbanden in beeld · kies een nummer of tik op de lijn</p><div>${buttons.join('')}</div>`:'<p>Geen verbindingen in dit tijdvak bij dit filter. Verplaats de tijdslijn of bekijk het overzicht.</p>';
+   if(this.connectionListMarkup!==listHtml){list.innerHTML=listHtml;this.connectionListMarkup=listHtml;}
+  }
+  openTimelineConnection(id){
+   if(!(this.data?.connections||[]).some(c=>c.id===id))return;
+   this.state.connection=id;this.renderTimelineConnection();this.paintTimeline();
+   const panel=this.el.querySelector('#timeline-link-detail');panel.scrollIntoView({block:'start',behavior:'auto'});panel.querySelector('h2')?.focus({preventScroll:true});
+  }
+  renderTimelineConnection(){
+   const panel=this.el.querySelector('#timeline-link-detail');if(!panel)return;
+   const link=(this.data?.connections||[]).find(c=>c.id===this.state.connection);panel.hidden=!link;if(!link)return;
+   const events=link.eventIds.map(id=>this.model.events.find(e=>e.id===id)).filter(Boolean);
+   panel.innerHTML=`<button class="explore-btn" data-action="back-timeline">← Terug naar de lijnen</button><p class="explore-tag">${link.type==='shared-context'?'Gedeelde historische context':'Historische doorwerking en contact'}</p><h2 id="timeline-link-title" tabindex="-1">${esc(link.title)}</h2><p>${esc(link.context)}</p><h3>Gebeurtenissen in dit verband</h3><div class="timeline-linked-events">${events.map(e=>`<button class="explore-btn" data-related-event="${esc(e.id)}"><span>${esc(names[e.tradition])} · ${esc(e.dateLabel||date(e.start))}<strong>${esc(e.title)}</strong></span></button>`).join('')}</div><h3>Bronnen</h3>${this.sources(link.sources)}<div class="timeline-link-actions"><button class="explore-btn" data-fit-connection="${esc(link.id)}">Toon het hele verband op de tijdslijn →</button><button class="explore-btn" data-action="close-connection">Verband sluiten</button></div>`;
+  }
+  fitTimelineConnection(id){
+   const link=(this.data?.connections||[]).find(c=>c.id===id);if(!link)return;
+   const s=this.state;s.connection=id;s.showConnections=true;s.filter='';s.kind='all';
+   this.el.querySelector('#timeline-query').value='';this.el.querySelector('#timeline-kind').value='all';this.el.querySelector('#timeline-links-toggle').checked=true;
+   this.focusTimelineEvents(link.eventIds.map(id=>this.model.events.find(e=>e.id===id)).filter(Boolean),{padding:1,minSpan:4});this.renderTimelineConnection();
+   const scroll=this.el.querySelector('.atlas-timeline-scroll');scroll.scrollIntoView({block:'center',behavior:'auto'});scroll.focus({preventScroll:true});
   }
   zoomTimeline(factor,anchor){
    const scroll=this.el.querySelector('.atlas-timeline-scroll');if(!scroll)return;
@@ -347,14 +416,14 @@
    return String(text).split(/([\p{L}\p{N}’']+)/gu).map(w=>words.includes(fold(w))?`<mark>${esc(w)}</mark>`:esc(w)).join('');
   }
   click(event){
-   const b=event.target.closest('button');if(!b||!this.el.contains(b))return;
+   const b=event.target.closest('button,[data-timeline-link]');if(!b||!this.el.contains(b))return;
    const d=b.dataset;
+   if(d.timelineLink){this.openTimelineConnection(d.timelineLink);return;}
+   if(d.fitConnection){this.fitTimelineConnection(d.fitConnection);return;}
    if(d.timelineMode){this.timelineComparison=d.timelineMode==='comparison';this.renderTimeline();this.el.querySelector(`[data-timeline-mode="${d.timelineMode}"]`)?.focus({preventScroll:true});return}
    if(d.connection!==undefined){
     const link=this.data.connections?.[+d.connection];if(!link)return;
-    this.state.filter='';this.state.kind='all';this.el.querySelector('#timeline-query').value='';this.el.querySelector('#timeline-kind').value='all';
-    this.focusTimelineEvents(link.eventIds.map(id=>this.model.events.find(e=>e.id===id)).filter(Boolean),{padding:1,minSpan:4});
-    this.el.querySelector('.atlas-timeline-scroll').scrollIntoView({block:'center',behavior:'auto'});return;
+    this.fitTimelineConnection(link.id);return;
    }
    if(d.relatedEvent){
     const e=this.model.events.find(e=>e.id===d.relatedEvent);if(!e)return;
@@ -375,6 +444,7 @@
    }
    if(d.pillar){this.state.pillar=d.pillar;this.state.topic='all';this.renderChallenge();this.el.querySelector(`[data-pillar="${d.pillar}"]`)?.focus();return}
    switch(d.action){
+    case'close-connection':{this.state.connection=null;this.renderTimelineConnection();this.paintTimeline();const scroll=this.el.querySelector('.atlas-timeline-scroll');scroll.scrollIntoView({block:'center',behavior:'auto'});scroll.focus({preventScroll:true});break;}
     case'show-connections':{const panel=this.el.querySelector('.timeline-connections');panel.open=true;panel.scrollIntoView({block:'start',behavior:'auto'});panel.querySelector('summary').focus({preventScroll:true});break;}
     case'back-timeline':{const scroll=this.el.querySelector('.atlas-timeline-scroll');scroll.scrollIntoView({block:'center',behavior:'auto'});scroll.focus({preventScroll:true});break;}
     case'retry':this.loaded=false;this.open(this.view,this.tradition);break;
@@ -412,6 +482,7 @@
    }
   }
   change(e){
+   if(e.target.id==='timeline-links-toggle'){this.state.showConnections=e.target.checked;this.paintTimeline();}
    if(e.target.id==='timeline-kind'){this.state.kind=e.target.value;this.focusTimelineMatches()}
    if(e.target.id==='challenge-topic'){this.state.topic=e.target.value;this.renderChallenge()}
    if(e.target.dataset.searchReligion){
