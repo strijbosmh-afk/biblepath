@@ -38,7 +38,7 @@ const captured=makeView(931,original);const before=captured.view.sharedTimelineS
 (async()=>{
  const descriptor=Object.getOwnPropertyDescriptor(globalThis,'navigator');let copied='';
  const input={value:'',focus(){this.focused=true},select(){this.selected=true}},status={textContent:''},panel={hidden:true,scrollIntoView(){this.revealed=true}};
- const copyView=Object.create(AtlasExplore.prototype);Object.assign(copyView,{el:{contains:()=>true,querySelector:s=>s==='#timeline-share-url'?input:s==='#timeline-share-status'?status:panel},sharedTimelineState:()=>original});
+ const copyView=Object.create(AtlasExplore.prototype);Object.assign(copyView,{el:{contains:()=>true,querySelector:s=>s==='#timeline-share-url'?input:s==='#timeline-share-status'?status:s==='#timeline-share'?panel:null},sharedTimelineState:()=>original});
  const priorLocation=globalThis.location;globalThis.location={href:'https://www.religieatlas.com/'};
  copyView.shareTimeline();assert(!panel.hidden&&panel.revealed&&input.selected);assert.deepEqual(TimelineShare.parse(new URL(input.value).hash),original);
  Object.defineProperty(globalThis,'navigator',{configurable:true,value:{clipboard:{writeText:async text=>{copied=text}}}});

@@ -118,7 +118,7 @@
     if(view==='topics'&&this.searchPending)this.runSearch({keepResults:true});
     return;
    }
-   this.loaded=false;
+   this.clearShareQR();this.loaded=false;
    this.el.innerHTML='<p class="library-loading" role="status">Dit onderdeel wordt geladen…</p>';
    try{
     const file={timeline:'timeline-events.json',challenge:'reflection-challenges.json',topics:'scripture-topics.json'}[view];
@@ -146,6 +146,7 @@
    return `<button class="explore-btn" data-passage="${id}">${esc(label)}</button>`;
   }
   renderTimeline(){
+   this.clearShareQR();
    const comparison=!!this.timelineComparison;
    const entries=comparison?Object.entries(this.data.traditions).flatMap(([tradition,events])=>events.map(e=>({...e,tradition}))):this.data.traditions[this.tradition]||[];
    this.model=new TimelineModel(entries);
@@ -164,7 +165,7 @@
    this.state.selected||=entries.find(e=>e.start>=0)?.id||entries[0]?.id;
    this.el.innerHTML=`${this.note()}
     <div class="timeline-view-switch" role="group" aria-label="Tijdslijnweergave"><button class="explore-btn" data-timeline-mode="single" aria-pressed="${!comparison}">Eén religie</button><button class="explore-btn" data-timeline-mode="comparison" aria-pressed="${comparison}">Vergelijk de drie religies</button>${comparison?'<button class="explore-btn" data-action="share-timeline">Vergelijking delen →</button>':''}</div>
-    ${comparison?`<section class="explore-panel timeline-share" id="timeline-share" aria-label="Vergelijking delen" hidden><label>Deellink<input id="timeline-share-url" type="text" readonly></label><button class="explore-btn" data-action="copy-timeline-link">Link kopiëren</button><p>Deze link bewaart het zichtbare tijdvak, de lijnfilters en het geselecteerde verband. Latere wijzigingen veranderen deze link niet; maak dan een nieuwe.</p><p id="timeline-share-status" role="status"></p></section><p class="explore-note" role="status">${esc(sharedNotice)}</p>`:''}
+    ${comparison?`<section class="explore-panel timeline-share" id="timeline-share" aria-label="Vergelijking delen" hidden><label>Deellink<input id="timeline-share-url" type="text" readonly></label><button class="explore-btn" data-action="copy-timeline-link">Link kopiëren</button><p>Deze link bewaart het zichtbare tijdvak, de lijnfilters en het geselecteerde verband. Latere wijzigingen veranderen deze link niet; maak dan een nieuwe.</p><div class="timeline-qr" id="timeline-qr" hidden><figure><img id="timeline-qr-image" alt="QR-code om deze gedeelde vergelijking te openen" width="256" height="256"><figcaption>Scan met de camera van je telefoon.</figcaption></figure><div><h3>Open op je telefoon</h3><p>De QR-code opent precies dezelfde vergelijking als de deellink hierboven.</p><div class="timeline-qr-downloads"><a class="explore-btn" id="timeline-qr-png" download="religieatlas-vergelijking-qr.png">Download PNG</a><a class="explore-btn" id="timeline-qr-svg" download="religieatlas-vergelijking-qr.svg">Download SVG</a></div><p class="explore-note">PNG voor een presentatie of document; SVG voor scherp afdrukken op elk formaat.</p></div></div><p id="timeline-qr-status" role="status"></p><p id="timeline-share-status" role="status"></p></section><p class="explore-note" role="status">${esc(sharedNotice)}</p>`:''}
     ${comparison?'<p class="explore-note">Drie parallelle banen, één tijdschaal in jaren. Zoomen en schuiven bewegen alle religies tegelijk. Gelijke horizontale posities duiden hetzelfde tijdvak aan; gelijktijdigheid bewijst geen onderlinge invloed.</p><button class="explore-btn timeline-connections-jump" data-action="show-connections">Verken contact en onderlinge invloeden →</button>':''}
     <div class="explore-panel ${comparison?'timeline-comparison':''}">
      <div class="explore-toolbar">
@@ -358,9 +359,23 @@
   shareTimeline(){
    const panel=this.el.querySelector('#timeline-share'),input=this.el.querySelector('#timeline-share-url');
    input.value=TimelineShare.encode(this.sharedTimelineState(),root.location.href);panel.hidden=false;
+   this.renderShareQR(input.value);
    this.el.querySelector('#timeline-share-status').textContent='De link is klaar. Kies Link kopiëren of kopieer de geselecteerde link.';
    panel.scrollIntoView({block:'start',behavior:'auto'});input.focus({preventScroll:true});input.select();
   }
+  renderShareQR(url){
+   const box=this.el.querySelector('#timeline-qr'),status=this.el.querySelector('#timeline-qr-status');if(!box)return;
+   this.clearShareQR();box.hidden=true;if(status)status.textContent='';
+   const png=this.el.querySelector('#timeline-qr-png'),svg=this.el.querySelector('#timeline-qr-svg'),image=this.el.querySelector('#timeline-qr-image');
+   png?.removeAttribute?.('href');svg?.removeAttribute?.('href');
+   try{
+    const code=root.TimelineQR.create(url),svgUrl=this.shareQRAsset(new Blob([code.svg],{type:'image/svg+xml'}));image.src=svgUrl;svg.href=svgUrl;box.hidden=false;
+    try{const data=root.atob(root.TimelineQR.png(code).split(',')[1]),bytes=Uint8Array.from(data,c=>c.charCodeAt(0));png.href=this.shareQRAsset(new Blob([bytes],{type:'image/png'}));png.hidden=false;}
+    catch{png.hidden=true;if(status)status.textContent='PNG is hier niet beschikbaar. Je kunt de QR-code als SVG downloaden.';}
+   }catch{image?.removeAttribute?.('src');if(status)status.textContent='De QR-code kon niet worden gemaakt. Je kunt de deellink wel kopiëren.';}
+  }
+  shareQRAsset(blob){const url=URL.createObjectURL(blob);(this.qrObjectUrls||=[]).push(url);return url;}
+  clearShareQR(){for(const url of this.qrObjectUrls||[])URL.revokeObjectURL(url);this.qrObjectUrls=[];}
   async copyTimelineLink(){
    const input=this.el.querySelector('#timeline-share-url'),status=this.el.querySelector('#timeline-share-status'),value=input.value;
    try{if(!root.navigator?.clipboard?.writeText)throw Error('clipboard');await root.navigator.clipboard.writeText(value);if(this.el.contains(status))status.textContent='Link gekopieerd. Je kunt deze vergelijking nu delen.';}
@@ -572,7 +587,7 @@
    }
   }
   destroy(){
-   this.leave();this.worker?.terminate();this.el.removeEventListener('click',this.onClick);
+   this.leave();this.clearShareQR();this.worker?.terminate();this.el.removeEventListener('click',this.onClick);
    this.el.removeEventListener('input',this.onInput);this.el.removeEventListener('change',this.onChange);
    if(this.raf)cancelAnimationFrame(this.raf);
   }
