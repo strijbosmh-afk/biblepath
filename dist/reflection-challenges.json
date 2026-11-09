@@ -1,0 +1,1272 @@
+{
+  "version": 1,
+  "language": "nl",
+  "editorialNotice": "Alle stellingen, contextteksten en reflectievragen zijn redactioneel. Zij zijn geen citaten uit de brontekst of officiële uitspraken van Sant’Egidio. De bronpassage blijft leidend; religieuze tradities kennen verschillende interpretaties. Deelname veronderstelt geen persoonlijke geloofsovertuiging.",
+  "catholicInspiration": {
+    "pillars": {
+      "prayer": "Gebed · preghiera",
+      "poor": "Armen · poveri",
+      "peace": "Vrede · pace"
+    },
+    "source": {
+      "title": "Sant’Egidio: gebed, armen en vrede · Franciscus, 11 maart 2018",
+      "url": "https://www.vatican.va/content/francesco/en/speeches/2018/march/documents/papa-francesco_20180311_visita-sant-egidio.html"
+    }
+  },
+  "traditions": {
+    "christianity": [
+      {
+        "id": "christianity:verborgen-gebed",
+        "topic": "Gebed",
+        "pillar": "prayer",
+        "title": "Bidden zonder publiek",
+        "statement": "Welke woorden blijven over als niemand mij hoeft te horen?",
+        "statementType": "editorial",
+        "context": "Binnen de Bergrede bespreekt Jezus de houding van iemand die bidt. De tegenstelling draait om gerichtheid op God en het verlangen door mensen gezien te worden. De passage is geen afwijzing van gezamenlijk gebed. Bij Sant’Egidio voedt gezamenlijk luisteren naar het Evangelie het handelen.",
+        "questions": [
+          "Wanneer stem ik mijn woorden vooral af op een publiek?",
+          "Wat is voor mij het verschil tussen aandacht en vertoon?",
+          "Welke ruimte geef ik aan stilte, ook als ik zelf niet bid?"
+        ],
+        "passage": {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MAT",
+          "chapter": 6,
+          "verse": 5,
+          "endVerse": 8
+        },
+        "sources": [
+          {
+            "title": "Canisius 1939 · MAT 6:5–8",
+            "url": "https://ebible.org/nld1939/MAT06.htm"
+          },
+          {
+            "title": "Sant’Egidio: gebed, armen en vrede · Franciscus, 11 maart 2018",
+            "url": "https://www.vatican.va/content/francesco/en/speeches/2018/march/documents/papa-francesco_20180311_visita-sant-egidio.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:maria-marta",
+        "topic": "Aandacht",
+        "pillar": "prayer",
+        "title": "Aandacht is ook een keuze",
+        "statement": "Kan mijn behulpzaamheid mij verhinderen werkelijk te luisteren?",
+        "statementType": "editorial",
+        "context": "Lucas plaatst Maria’s luisteren naast Marta’s drukte als gastvrouw. De scène nodigt uit om de verhouding tussen zorg, aandacht en onrust te onderzoeken. Een lezing die al het praktische werk minderwaardig maakt, doet de spanning van het verhaal tekort.",
+        "questions": [
+          "Welke vormen van zorg vragen juist om minder activiteit?",
+          "Wie bepaalt in mijn omgeving wat nuttig werk is?",
+          "Wat zou er veranderen als luisteren een gezamenlijke verantwoordelijkheid werd?"
+        ],
+        "passage": {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "LUK",
+          "chapter": 10,
+          "verse": 38,
+          "endVerse": 42
+        },
+        "sources": [
+          {
+            "title": "Canisius 1939 · LUK 10:38–42",
+            "url": "https://ebible.org/nld1939/LUK10.htm"
+          },
+          {
+            "title": "Sant’Egidio: gebed, armen en vrede · Franciscus, 11 maart 2018",
+            "url": "https://www.vatican.va/content/francesco/en/speeches/2018/march/documents/papa-francesco_20180311_visita-sant-egidio.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:leren-bidden",
+        "topic": "Gebed",
+        "pillar": "prayer",
+        "title": "Woorden leren ontvangen",
+        "statement": "Wat kan ik ontvangen uit woorden die ik niet zelf heb bedacht?",
+        "statementType": "editorial",
+        "context": "De leerlingen vragen Jezus hun te leren bidden. Het Onzevader verbindt Gods naam en koninkrijk met brood, vergeving en beproeving. Het meervoud maakt de materiële en relationele behoeften van anderen mede tot onderwerp van gebed.",
+        "questions": [
+          "Welke behoefte van een ander hoor ik in het woord ons?",
+          "Wat geeft een overgeleverde tekst en waar schuurt hij?",
+          "Hoe verhouden vragen, danken en verantwoordelijkheid zich voor mij tot elkaar?"
+        ],
+        "passage": {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "LUK",
+          "chapter": 11,
+          "verse": 1,
+          "endVerse": 4
+        },
+        "sources": [
+          {
+            "title": "Canisius 1939 · LUK 11:1–4",
+            "url": "https://ebible.org/nld1939/LUK11.htm"
+          },
+          {
+            "title": "Sant’Egidio: gebed, armen en vrede · Franciscus, 11 maart 2018",
+            "url": "https://www.vatican.va/content/francesco/en/speeches/2018/march/documents/papa-francesco_20180311_visita-sant-egidio.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:onderscheiding",
+        "topic": "Onderscheiding",
+        "pillar": "prayer",
+        "title": "Onderzoek wat je ontvangt",
+        "statement": "Hoe voorkom ik dat mijn overtuiging alleen bevestigt wat ik al dacht?",
+        "statementType": "editorial",
+        "context": "Paulus sluit zijn brief aan de gemeenschap van Tessalonica af met korte aansporingen tot vreugde, gebed, dank en onderscheidingsvermogen. Openheid en kritisch onderzoek staan hier naast elkaar. Een losse spreuk vervangt niet het lezen van die samenhang.",
+        "questions": [
+          "Welke stemmen wijs ik af voordat ik ze heb onderzocht?",
+          "Aan welke maatstaven herken ik iets goeds?",
+          "Wie mag mijn eigen religieuze of levensbeschouwelijke overtuiging bevragen?"
+        ],
+        "passage": {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "1TH",
+          "chapter": 5,
+          "verse": 16,
+          "endVerse": 22
+        },
+        "sources": [
+          {
+            "title": "Canisius 1939 · 1TH 5:16–22",
+            "url": "https://ebible.org/nld1939/1TH05.htm"
+          },
+          {
+            "title": "Sant’Egidio: gebed, armen en vrede · Franciscus, 11 maart 2018",
+            "url": "https://www.vatican.va/content/francesco/en/speeches/2018/march/documents/papa-francesco_20180311_visita-sant-egidio.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:stilte-en-handelen",
+        "topic": "Stilte",
+        "pillar": "prayer",
+        "title": "Een grens aan beschikbaarheid",
+        "statement": "Kan afstand nemen ook een vorm van verantwoordelijkheid zijn?",
+        "statementType": "editorial",
+        "context": "Marcus vertelt hoe Jezus zich terugtrekt om te bidden terwijl anderen hem zoeken. Daarna gaat hij naar andere plaatsen. In dit verhaal leidt gebed niet eenvoudig tot het voldoen aan iedere verwachting van de mensen die dichtbij staan.",
+        "questions": [
+          "Welke verwachtingen bepalen mijn agenda zonder dat ik ze gekozen heb?",
+          "Wanneer helpt afzondering mij om anders terug te keren?",
+          "Hoe onderscheid ik noodzakelijke rust van het ontlopen van anderen?"
+        ],
+        "passage": {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MRK",
+          "chapter": 1,
+          "verse": 35,
+          "endVerse": 39
+        },
+        "sources": [
+          {
+            "title": "Canisius 1939 · MRK 1:35–39",
+            "url": "https://ebible.org/nld1939/MRK01.htm"
+          },
+          {
+            "title": "Sant’Egidio: gebed, armen en vrede · Franciscus, 11 maart 2018",
+            "url": "https://www.vatican.va/content/francesco/en/speeches/2018/march/documents/papa-francesco_20180311_visita-sant-egidio.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:tollenaar",
+        "topic": "Bescheidenheid",
+        "pillar": "prayer",
+        "title": "Het verhaal dat ik over mezelf vertel",
+        "statement": "Kan mijn tevredenheid over mezelf de ander onzichtbaar maken?",
+        "statementType": "editorial",
+        "context": "Lucas noemt als aanleiding mensen die op hun eigen rechtvaardigheid vertrouwen en anderen minachten. In de gelijkenis worden een farizeeër en een tollenaar tegenover elkaar gezet. Dit verhaal mag niet als typering van alle farizeeën of van het jodendom worden gebruikt.",
+        "questions": [
+          "Met wie vergelijk ik mij om mijzelf gerust te stellen?",
+          "Wat maakt het mogelijk een tekort onder ogen te zien zonder zelfverachting?",
+          "Hoe kan ik kritiek ontvangen zonder onmiddellijk een verdediging op te bouwen?"
+        ],
+        "passage": {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "LUK",
+          "chapter": 18,
+          "verse": 9,
+          "endVerse": 14
+        },
+        "sources": [
+          {
+            "title": "Canisius 1939 · LUK 18:9–14",
+            "url": "https://ebible.org/nld1939/LUK18.htm"
+          },
+          {
+            "title": "Sant’Egidio: gebed, armen en vrede · Franciscus, 11 maart 2018",
+            "url": "https://www.vatican.va/content/francesco/en/speeches/2018/march/documents/papa-francesco_20180311_visita-sant-egidio.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:minste",
+        "topic": "Armoede",
+        "pillar": "poor",
+        "title": "De ander ontmoeten",
+        "statement": "Wie zie ik over het hoofd wanneer ik alleen help wie ik al ken?",
+        "statementType": "editorial",
+        "context": "De scène van het oordeel benoemt honger, dorst, vreemdelingschap, naaktheid, ziekte en gevangenschap. Jezus verbindt het handelen tegenover de geringsten met zichzelf. De identiteit van zijn broeders is onderwerp van uitleg; katholieke praktijk verbindt de tekst onder meer met de werken van barmhartigheid.",
+        "questions": [
+          "Wie verschijnt in mijn dagelijks leven vooral als een categorie?",
+          "Wat verandert er wanneer ik eerst luister voordat ik hulp aanbied?",
+          "Welke afstand tussen mijn overtuiging en mijn handelen wordt hier zichtbaar?"
+        ],
+        "passage": {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MAT",
+          "chapter": 25,
+          "verse": 31,
+          "endVerse": 46
+        },
+        "sources": [
+          {
+            "title": "Canisius 1939 · MAT 25:31–46",
+            "url": "https://ebible.org/nld1939/MAT25.htm"
+          },
+          {
+            "title": "Sant’Egidio: gebed, armen en vrede · Franciscus, 11 maart 2018",
+            "url": "https://www.vatican.va/content/francesco/en/speeches/2018/march/documents/papa-francesco_20180311_visita-sant-egidio.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:samaritaan",
+        "topic": "Naastenliefde",
+        "pillar": "poor",
+        "title": "Een naaste worden",
+        "statement": "Is mijn naaste een bestaande kring, of iemand voor wie ik een keuze maak?",
+        "statementType": "editorial",
+        "context": "De vraag wie de naaste is wordt in Lucas beantwoord met een verhaal over hulp langs de weg. Een Samaritaan biedt concrete zorg en betrekt er een herbergier bij. De scène onderzoekt handelen voorbij groepsgrenzen; zij is geen vrijbrief voor negatieve stereotypen over de andere personages.",
+        "questions": [
+          "Welke groepsgrens bepaalt wie ik spontaan vertrouw?",
+          "Welke rol spelen geld, tijd en samenwerking in zorg?",
+          "Wanneer gebruik ik een definitie om aan een concrete ontmoeting te ontkomen?"
+        ],
+        "passage": {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "LUK",
+          "chapter": 10,
+          "verse": 25,
+          "endVerse": 37
+        },
+        "sources": [
+          {
+            "title": "Canisius 1939 · LUK 10:25–37",
+            "url": "https://ebible.org/nld1939/LUK10.htm"
+          },
+          {
+            "title": "Sant’Egidio: gebed, armen en vrede · Franciscus, 11 maart 2018",
+            "url": "https://www.vatican.va/content/francesco/en/speeches/2018/march/documents/papa-francesco_20180311_visita-sant-egidio.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:open-hand",
+        "topic": "Vrijgevigheid",
+        "pillar": "poor",
+        "title": "Geven binnen een samenleving",
+        "statement": "Kan gulheid bestaan zonder de oorzaken van armoede te onderzoeken?",
+        "statementType": "editorial",
+        "context": "Deuteronomium verbindt de open hand met het sabbatsjaar, schuld en het leven van de gemeenschap. De arme wordt niet alleen als ontvanger van een incidentele gift zichtbaar. De katholieke leescontext neemt deze tekst over uit Israëls Schrift; de oorspronkelijke verbondscontext blijft relevant.",
+        "questions": [
+          "Wat zie ik als persoonlijke pech en wat als maatschappelijke verantwoordelijkheid?",
+          "Welke voorwaarden stel ik aan iemand die hulp vraagt?",
+          "Hoe beïnvloedt mijn beeld van rechtvaardigheid de manier waarop ik geef?"
+        ],
+        "passage": {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "DEU",
+          "chapter": 15,
+          "verse": 7,
+          "endVerse": 11
+        },
+        "sources": [
+          {
+            "title": "Canisius 1939 · DEU 15:7–11",
+            "url": "https://ebible.org/nld1939/DEU15.htm"
+          },
+          {
+            "title": "Sant’Egidio: gebed, armen en vrede · Franciscus, 11 maart 2018",
+            "url": "https://www.vatican.va/content/francesco/en/speeches/2018/march/documents/papa-francesco_20180311_visita-sant-egidio.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:gastmaal",
+        "topic": "Gastvrijheid",
+        "pillar": "poor",
+        "title": "Een tafel zonder wederdienst",
+        "statement": "Wie ontbreekt wanneer ik alleen uitnodig wie mij kan terugvragen?",
+        "statementType": "editorial",
+        "context": "Jezus spreekt in Lucas tijdens een maaltijd over de keuze van gasten. Hij noemt mensen die niet op gelijke wijze kunnen terugbetalen. De tekst bevraagt de logica van wederkerigheid; hij maakt arme mensen niet tot een middel voor de morele verdienste van de gastheer.",
+        "questions": [
+          "Welke vormen van wederdienst verwacht ik zonder het uit te spreken?",
+          "Wie zou de inrichting van mijn tafel ter discussie stellen?",
+          "Hoe blijft gastvrijheid een ontmoeting tussen personen in plaats van een project?"
+        ],
+        "passage": {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "LUK",
+          "chapter": 14,
+          "verse": 12,
+          "endVerse": 14
+        },
+        "sources": [
+          {
+            "title": "Canisius 1939 · LUK 14:12–14",
+            "url": "https://ebible.org/nld1939/LUK14.htm"
+          },
+          {
+            "title": "Sant’Egidio: gebed, armen en vrede · Franciscus, 11 maart 2018",
+            "url": "https://www.vatican.va/content/francesco/en/speeches/2018/march/documents/papa-francesco_20180311_visita-sant-egidio.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:voorkeursbehandeling",
+        "topic": "Waardigheid",
+        "pillar": "poor",
+        "title": "Wie krijgt de beste plaats?",
+        "statement": "Welke privileges laat ik doorgaan voor een neutrale gewoonte?",
+        "statementType": "editorial",
+        "context": "Jakobus stelt de ontvangst van een rijk geklede en een arm geklede bezoeker naast elkaar. Het gaat om status, oordeel en trouw aan het gebod de naaste lief te hebben. De passage brengt ongelijkheid binnen de gemeenschap ter sprake.",
+        "questions": [
+          "Aan welke signalen lees ik aanzien af?",
+          "Welke procedure in mijn omgeving bevoordeelt iemand al vóór het gesprek?",
+          "Wat vraagt gelijke waardigheid behalve beleefd taalgebruik?"
+        ],
+        "passage": {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "JAS",
+          "chapter": 2,
+          "verse": 1,
+          "endVerse": 9
+        },
+        "sources": [
+          {
+            "title": "Canisius 1939 · JAS 2:1–9",
+            "url": "https://ebible.org/nld1939/JAS02.htm"
+          },
+          {
+            "title": "Sant’Egidio: gebed, armen en vrede · Franciscus, 11 maart 2018",
+            "url": "https://www.vatican.va/content/francesco/en/speeches/2018/march/documents/papa-francesco_20180311_visita-sant-egidio.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:gedeelde-bezittingen",
+        "topic": "Solidariteit",
+        "pillar": "poor",
+        "title": "Genoeg voor ieder",
+        "statement": "Wat is van mij wanneer een ander tekortkomt?",
+        "statementType": "editorial",
+        "context": "Handelingen schetst een ideaalbeeld van gedeeld leven in de eerste gemeenschap. Bezit wordt verkocht en middelen worden verdeeld naar behoefte. Het beschrijvende verhaal is geen kant-en-klaar economisch model; het zet de verhouding tussen eigendom en gemeenschappelijke zorg wel op scherp.",
+        "questions": [
+          "Welke bezittingen geven mij vrijheid en welke houden mij vast?",
+          "Wie mag mee bepalen wat een behoefte is?",
+          "Hoe zou solidariteit eruitzien zonder afhankelijkheid en machtsmisbruik te vergroten?"
+        ],
+        "passage": {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "ACT",
+          "chapter": 4,
+          "verse": 32,
+          "endVerse": 35
+        },
+        "sources": [
+          {
+            "title": "Canisius 1939 · ACT 4:32–35",
+            "url": "https://ebible.org/nld1939/ACT04.htm"
+          },
+          {
+            "title": "Sant’Egidio: gebed, armen en vrede · Franciscus, 11 maart 2018",
+            "url": "https://www.vatican.va/content/francesco/en/speeches/2018/march/documents/papa-francesco_20180311_visita-sant-egidio.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:vijanden",
+        "topic": "Verzoening",
+        "pillar": "peace",
+        "title": "De vijand als mens",
+        "statement": "Kan ik iemands menselijkheid erkennen zonder diens handelen goed te keuren?",
+        "statementType": "editorial",
+        "context": "In de Bergrede spreekt Jezus over liefde voor vijanden en gebed voor vervolgers. De passage radicaliseert de kring van de liefde. Zij vraagt niet dat slachtoffers in een onveilige situatie blijven of dat recht en bescherming worden opgegeven.",
+        "questions": [
+          "Wanneer maak ik van een tegenstander één enkel vijandbeeld?",
+          "Welke grens is nodig om vrij over verzoening te kunnen nadenken?",
+          "Wat zou liefde hier kunnen betekenen naast of vóór een gevoel?"
+        ],
+        "passage": {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MAT",
+          "chapter": 5,
+          "verse": 43,
+          "endVerse": 48
+        },
+        "sources": [
+          {
+            "title": "Canisius 1939 · MAT 5:43–48",
+            "url": "https://ebible.org/nld1939/MAT05.htm"
+          },
+          {
+            "title": "Sant’Egidio: gebed, armen en vrede · Franciscus, 11 maart 2018",
+            "url": "https://www.vatican.va/content/francesco/en/speeches/2018/march/documents/papa-francesco_20180311_visita-sant-egidio.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:vrede-stichten",
+        "topic": "Vrede",
+        "pillar": "peace",
+        "title": "Vrede vraagt werk",
+        "statement": "Waar verwar ik vrede met het vermijden van conflict?",
+        "statementType": "editorial",
+        "context": "De zaligsprekingen noemen vredestichters in een reeks die ook treurenden, zachtmoedigen en vervolgden omvat. De tekst beschrijft geen eenvoudige route naar succes. Sant’Egidio verbindt vrede met langdurige ontmoeting en dialoog.",
+        "questions": [
+          "Welk conflict blijft onbesproken omdat rust mij beter uitkomt?",
+          "Wie draagt de kosten van de bestaande vrede?",
+          "Welke kleine handeling kan een vastgelopen verhouding openen?"
+        ],
+        "passage": {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MAT",
+          "chapter": 5,
+          "verse": 1,
+          "endVerse": 12
+        },
+        "sources": [
+          {
+            "title": "Canisius 1939 · MAT 5:1–12",
+            "url": "https://ebible.org/nld1939/MAT05.htm"
+          },
+          {
+            "title": "Sant’Egidio: gebed, armen en vrede · Franciscus, 11 maart 2018",
+            "url": "https://www.vatican.va/content/francesco/en/speeches/2018/march/documents/papa-francesco_20180311_visita-sant-egidio.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:kwaad-vergelden",
+        "topic": "Geweld",
+        "pillar": "peace",
+        "title": "Een andere reactie zoeken",
+        "statement": "Wat doorbreekt vergelding zonder het onrecht te verbergen?",
+        "statementType": "editorial",
+        "context": "Paulus roept de Romeinse gemeenschap op geen kwaad met kwaad te vergelden en, voor zover het van hen afhangt, in vrede te leven. Die formulering erkent een grens aan de macht van één partij. De tekst staat naast vragen over gerechtigheid, bescherming en verantwoordelijkheid.",
+        "questions": [
+          "Welke reactie lijkt vanzelfsprekend omdat zij als terecht voelt?",
+          "Wat ligt werkelijk binnen mijn verantwoordelijkheid?",
+          "Hoe kan een antwoord op kwaad zowel waarachtig als niet-vernederend zijn?"
+        ],
+        "passage": {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "ROM",
+          "chapter": 12,
+          "verse": 17,
+          "endVerse": 21
+        },
+        "sources": [
+          {
+            "title": "Canisius 1939 · ROM 12:17–21",
+            "url": "https://ebible.org/nld1939/ROM12.htm"
+          },
+          {
+            "title": "Sant’Egidio: gebed, armen en vrede · Franciscus, 11 maart 2018",
+            "url": "https://www.vatican.va/content/francesco/en/speeches/2018/march/documents/papa-francesco_20180311_visita-sant-egidio.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:aanspreken",
+        "topic": "Dialoog",
+        "pillar": "peace",
+        "title": "De ander rechtstreeks aanspreken",
+        "statement": "Wanneer wordt spreken over iemand een manier om een gesprek te vermijden?",
+        "statementType": "editorial",
+        "context": "Mattheüs beschrijft stappen voor het omgaan met een conflict binnen de gemeenschap: eerst rechtstreeks, daarna met anderen en uiteindelijk voor de gemeente. Dit is een gemeenschapsregel, geen verbod op het melden van misbruik aan bevoegde instanties.",
+        "questions": [
+          "Welk doel heeft mijn kritiek: herstel, bescherming of bevestiging door omstanders?",
+          "Wanneer is een rechtstreeks gesprek veilig en wanneer niet?",
+          "Wie kan zonder eigen belang helpen om feiten en belangen te onderscheiden?"
+        ],
+        "passage": {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MAT",
+          "chapter": 18,
+          "verse": 15,
+          "endVerse": 17
+        },
+        "sources": [
+          {
+            "title": "Canisius 1939 · MAT 18:15–17",
+            "url": "https://ebible.org/nld1939/MAT18.htm"
+          },
+          {
+            "title": "Sant’Egidio: gebed, armen en vrede · Franciscus, 11 maart 2018",
+            "url": "https://www.vatican.va/content/francesco/en/speeches/2018/march/documents/papa-francesco_20180311_visita-sant-egidio.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:verzoeningsopdracht",
+        "topic": "Verzoening",
+        "pillar": "peace",
+        "title": "Herstel als opdracht",
+        "statement": "Wat verandert er wanneer verzoening een opdracht wordt in plaats van een stemming?",
+        "statementType": "editorial",
+        "context": "Paulus beschrijft verzoening als Gods handelen in Christus en noemt een dienst van verzoening. De theologische uitspraak en de concrete verhouding tussen mensen zijn niet identiek. De passage roept wel de vraag op hoe ontvangen verzoening zichtbaar kan worden in handelen.",
+        "questions": [
+          "Welke schade vraagt eerst om erkenning voordat herstel mogelijk is?",
+          "Wat kan ik aanbieden zonder vergeving af te dwingen?",
+          "Wie heeft in een verzoeningsproces zeggenschap over tempo en voorwaarden?"
+        ],
+        "passage": {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "2CO",
+          "chapter": 5,
+          "verse": 18,
+          "endVerse": 20
+        },
+        "sources": [
+          {
+            "title": "Canisius 1939 · 2CO 5:18–20",
+            "url": "https://ebible.org/nld1939/2CO05.htm"
+          },
+          {
+            "title": "Sant’Egidio: gebed, armen en vrede · Franciscus, 11 maart 2018",
+            "url": "https://www.vatican.va/content/francesco/en/speeches/2018/march/documents/papa-francesco_20180311_visita-sant-egidio.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:muren",
+        "topic": "Verbondenheid",
+        "pillar": "peace",
+        "title": "Een grens die ook een muur wordt",
+        "statement": "Welke identiteit bescherm ik door de ander op afstand te houden?",
+        "statementType": "editorial",
+        "context": "Efeziërs spreekt over vrede en het doorbreken van een scheidingsmuur in Christus, in de verhouding tussen Joden en niet-Joden. Deze christelijke theologie mag niet worden gelezen als afschaffing van levende Joodse identiteit of als ontkenning van blijvende verschillen.",
+        "questions": [
+          "Welke grens helpt om een eigen traditie te bewaren?",
+          "Wanneer verandert die grens in uitsluiting?",
+          "Hoe kan ontmoeting verschillen respecteren zonder ze onbelangrijk te maken?"
+        ],
+        "passage": {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "EPH",
+          "chapter": 2,
+          "verse": 14,
+          "endVerse": 18
+        },
+        "sources": [
+          {
+            "title": "Canisius 1939 · EPH 2:14–18",
+            "url": "https://ebible.org/nld1939/EPH02.htm"
+          },
+          {
+            "title": "Sant’Egidio: gebed, armen en vrede · Franciscus, 11 maart 2018",
+            "url": "https://www.vatican.va/content/francesco/en/speeches/2018/march/documents/papa-francesco_20180311_visita-sant-egidio.html"
+          }
+        ]
+      }
+    ],
+    "judaism": [
+      {
+        "id": "judaism:heiligheid-alledaags",
+        "topic": "Naastenliefde",
+        "pillar": null,
+        "title": "Het gewone leven als toets",
+        "statement": "Wat betekent heiligheid als zij ook over mijn omgang met de buur gaat?",
+        "statementType": "editorial",
+        "context": "Leviticus 19 brengt religieuze, sociale en economische voorschriften samen. Het aanspreken van de ander en het verbod op wraak staan naast liefde voor de naaste. Joodse uitlegtradities onderzoeken hoe deze plichten in concrete verhoudingen kunnen worden vervuld.",
+        "questions": [
+          "Welke vormen van wrok houd ik in stand zonder ze uit te spreken?",
+          "Hoe verschilt iemand aanspreken van iemand vernederen?",
+          "Wat verbindt een verheven ideaal met een alledaagse handeling?"
+        ],
+        "passage": {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "LEV",
+          "chapter": 19,
+          "verse": 17,
+          "endVerse": 18
+        },
+        "sources": [
+          {
+            "title": "Tenach · Leviticus 19:17–18",
+            "url": "https://www.sefaria.org/Leviticus.19.17-18"
+          }
+        ]
+      },
+      {
+        "id": "judaism:herinnering-vreemdeling",
+        "topic": "Gastvrijheid",
+        "pillar": null,
+        "title": "Herinnering die verplicht",
+        "statement": "Kan een herinnering aan kwetsbaarheid mijn blik op een vreemdeling veranderen?",
+        "statementType": "editorial",
+        "context": "Deuteronomium verbindt Gods zorg voor wees, weduwe en vreemdeling met Israëls herinnering aan Egypte. De figuur van de ger heeft een specifieke plaats in de oude samenleving. Moderne toepassingen vragen uitleg; het woord valt niet automatisch samen met iedere huidige juridische categorie.",
+        "questions": [
+          "Welke herinneringen geven mij een bijzondere gevoeligheid voor uitsluiting?",
+          "Waar gebruik ik een eigen verhaal juist om een ander buiten te sluiten?",
+          "Wat vraagt liefde voor de vreemdeling van een gemeenschap, naast persoonlijke sympathie?"
+        ],
+        "passage": {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "DEU",
+          "chapter": 10,
+          "verse": 17,
+          "endVerse": 19
+        },
+        "sources": [
+          {
+            "title": "Tenach · Deuteronomy 10:17–19",
+            "url": "https://www.sefaria.org/Deuteronomy.10.17-19"
+          }
+        ]
+      },
+      {
+        "id": "judaism:sabbat-rust",
+        "topic": "Rust",
+        "pillar": null,
+        "title": "Wie mag rusten?",
+        "statement": "Is rust nog een geschenk als anderen daarvoor altijd beschikbaar moeten zijn?",
+        "statementType": "editorial",
+        "context": "De sabbatsbepaling betrekt kinderen, dienstknechten, dienstmaagden, dieren en de vreemdeling bij de rust. De herinnering aan slavernij in Egypte motiveert het gebod. De concrete praktijk van sjabbat kent uiteenlopende Joodse invullingen.",
+        "questions": [
+          "Welke arbeid maakt mijn vrije tijd mogelijk?",
+          "Wie heeft in mijn omgeving weinig zeggenschap over rust?",
+          "Hoe verandert een gemeenschappelijke rusttijd de verhouding tussen mensen?"
+        ],
+        "passage": {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "DEU",
+          "chapter": 5,
+          "verse": 12,
+          "endVerse": 15
+        },
+        "sources": [
+          {
+            "title": "Tenach · Deuteronomy 5:12–15",
+            "url": "https://www.sefaria.org/Deuteronomy.5.12-15"
+          }
+        ]
+      },
+      {
+        "id": "judaism:sjemita-schuld",
+        "topic": "Armoede",
+        "pillar": null,
+        "title": "Ruimte om opnieuw te beginnen",
+        "statement": "Wanneer wordt een schuld een levenslange identiteit?",
+        "statementType": "editorial",
+        "context": "De tekst verbindt periodieke kwijtschelding met de opdracht niet te weigeren te lenen wanneer het sabbatsjaar nadert. De spanning tussen vrijgevigheid en berekening staat expliciet in het hoofdstuk. Latere Joodse rechtsontwikkeling behandelt ook de economische uitvoerbaarheid.",
+        "questions": [
+          "Wat verwacht ik van iemand die opnieuw wil beginnen?",
+          "Welke risico’s schuif ik af op degene die het minst bezit?",
+          "Hoe verhouden een rechtvaardige regel en een werkbare praktijk zich tot elkaar?"
+        ],
+        "passage": {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "DEU",
+          "chapter": 15,
+          "verse": 1,
+          "endVerse": 11
+        },
+        "sources": [
+          {
+            "title": "Tenach · Deuteronomy 15:1–11",
+            "url": "https://www.sefaria.org/Deuteronomy.15.1-11"
+          }
+        ]
+      },
+      {
+        "id": "judaism:onrustig-gebed",
+        "topic": "Gebed",
+        "pillar": null,
+        "title": "Bidden met een onrustige stem",
+        "statement": "Moet ik eerst rustig worden voordat ik kan bidden?",
+        "statementType": "editorial",
+        "context": "Deze psalm beweegt van de herhaalde vraag hoe lang het lijden duurt naar een belijdenis van vertrouwen. Klacht blijft onderdeel van het gebed. De Hebreeuwse versnummering is hier leidend en kan verschillen van een christelijke leeseditie.",
+        "questions": [
+          "Welke woorden vermijd ik omdat zij te boos of onzeker klinken?",
+          "Wie mag getuige zijn van een klacht die nog niet is opgelost?",
+          "Wat verandert er als vertrouwen naast onzekerheid mag bestaan?"
+        ],
+        "passage": {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "PSA",
+          "chapter": 13,
+          "verse": 2,
+          "endVerse": 6
+        },
+        "sources": [
+          {
+            "title": "Tenach · Psalms 13:2–6",
+            "url": "https://www.sefaria.org/Psalms.13.2-6"
+          }
+        ]
+      },
+      {
+        "id": "judaism:recht-en-ritueel",
+        "topic": "Rechtvaardigheid",
+        "pillar": null,
+        "title": "Wat een viering onderbreekt",
+        "statement": "Welke religieuze praktijk laat ik ongemoeid terwijl zij om verandering vraagt?",
+        "statementType": "editorial",
+        "context": "Amos keert zich tegen feesten en offers wanneer recht en gerechtigheid ontbreken. De profetische kritiek is gericht tot Israël en komt van binnenuit de traditie. De passage verwerpt niet eenvoudig alle ritueel maar bevraagt een breuk tussen eredienst en handelen.",
+        "questions": [
+          "Welke praktijk bevestigt mij zonder mij nog te bevragen?",
+          "Wie ervaart de gevolgen van mijn idee van rechtvaardigheid?",
+          "Wanneer zou een onderbreking meer trouw uitdrukken dan gewoon doorgaan?"
+        ],
+        "passage": {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "AMO",
+          "chapter": 5,
+          "verse": 21,
+          "endVerse": 24
+        },
+        "sources": [
+          {
+            "title": "Tenach · Amos 5:21–24",
+            "url": "https://www.sefaria.org/Amos.5.21-24"
+          }
+        ]
+      },
+      {
+        "id": "judaism:tsedaka-oogst",
+        "topic": "Solidariteit",
+        "pillar": null,
+        "title": "Wat laat ik aan een ander?",
+        "statement": "Wat houd ik bewust buiten mijn eigen opbrengst?",
+        "statementType": "editorial",
+        "context": "De randen van de akker en achtergebleven vruchten zijn in deze bepalingen bestemd voor arme en vreemdeling. De tekst spreekt over structurele toegang tot middelen, niet uitsluitend over de goedheid van een individuele gever.",
+        "questions": [
+          "Welke ruimte bestaat er in mijn handelen voor iemand die ik niet vooraf selecteer?",
+          "Wat is het verschil tussen afstaan en toegankelijk maken?",
+          "Wie beslist welke rest voor een ander genoeg zou moeten zijn?"
+        ],
+        "passage": {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "LEV",
+          "chapter": 19,
+          "verse": 9,
+          "endVerse": 10
+        },
+        "sources": [
+          {
+            "title": "Tenach · Leviticus 19:9–10",
+            "url": "https://www.sefaria.org/Leviticus.19.9-10"
+          }
+        ]
+      },
+      {
+        "id": "judaism:gastvrijheid-abraham",
+        "topic": "Gastvrijheid",
+        "pillar": null,
+        "title": "Onderbroken worden",
+        "statement": "Herken ik een bezoeker ook wanneer diens komst ongelegen is?",
+        "statementType": "editorial",
+        "context": "Genesis vertelt hoe Abraham bezoekers ontvangt bij zijn tent. Het verhaal bevat haast, eten en zorg voordat hun boodschap duidelijk is. De latere betekenis van deze scène in Joodse gastvrijheid gaat samen met de eigen literaire plaats in de Abrahamcyclus.",
+        "questions": [
+          "Welke onderbreking beschouw ik meteen als hinderlijk?",
+          "Hoe kan gastvrijheid ruimte laten voor wederzijdse grenzen?",
+          "Wat kan ik pas ontdekken nadat ik mijn eerste oordeel heb uitgesteld?"
+        ],
+        "passage": {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "GEN",
+          "chapter": 18,
+          "verse": 1,
+          "endVerse": 8
+        },
+        "sources": [
+          {
+            "title": "Tenach · Genesis 18:1–8",
+            "url": "https://www.sefaria.org/Genesis.18.1-8"
+          }
+        ]
+      },
+      {
+        "id": "judaism:kiest-leven",
+        "topic": "Verantwoordelijkheid",
+        "pillar": null,
+        "title": "Een keuze met gevolgen",
+        "statement": "Wie deelt mee in de gevolgen van wat ik voor mijzelf kies?",
+        "statementType": "editorial",
+        "context": "Mozes houdt in Deuteronomium leven en dood, zegen en vloek voor aan het volk binnen de verbondsrede. Het gaat om een gemeenschappelijke verhouding tot God en het leven in het land. De passage is geen belofte dat ieder individu lijden door een juiste keuze kan vermijden.",
+        "questions": [
+          "Welke gevolgen van mijn keuzes blijven buiten beeld?",
+          "Waar is de taal van persoonlijke keuze te beperkt?",
+          "Wat betekent kiezen wanneer omstandigheden de mogelijkheden sterk ongelijk verdelen?"
+        ],
+        "passage": {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "DEU",
+          "chapter": 30,
+          "verse": 15,
+          "endVerse": 20
+        },
+        "sources": [
+          {
+            "title": "Tenach · Deuteronomy 30:15–20",
+            "url": "https://www.sefaria.org/Deuteronomy.30.15-20"
+          }
+        ]
+      },
+      {
+        "id": "judaism:jonah-begrenzing",
+        "topic": "Barmhartigheid",
+        "pillar": null,
+        "title": "Mijn grens aan barmhartigheid",
+        "statement": "Voor wie vind ik een nieuwe kans moeilijk te verdragen?",
+        "statementType": "editorial",
+        "context": "Jona reageert boos op het uitblijven van de ondergang van Nineve. Het slot stelt zijn zorg om de wonderboom naast Gods zorg om de stad en haar dieren. De vertelling laat de vraag open en betrekt daardoor de lezer bij haar spanning.",
+        "questions": [
+          "Aan wie gun ik herstel gemakkelijker dan aan een ander?",
+          "Welke relatie bestaat er tussen mijn behoefte aan recht en mijn boosheid?",
+          "Wat verandert er als ook dieren en onbekende inwoners in beeld komen?"
+        ],
+        "passage": {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "JON",
+          "chapter": 4,
+          "verse": 1,
+          "endVerse": 11
+        },
+        "sources": [
+          {
+            "title": "Tenach · Jonah 4:1–11",
+            "url": "https://www.sefaria.org/Jonah.4.1-11"
+          }
+        ]
+      },
+      {
+        "id": "judaism:stem-stilte",
+        "topic": "Stilte",
+        "pillar": null,
+        "title": "Waar verwacht ik de stem?",
+        "statement": "Welke zachte stem mis ik doordat ik alleen op indrukwekkende signalen let?",
+        "statementType": "editorial",
+        "context": "Elia ontmoet in 1 Koningen wind, aardbeving en vuur, gevolgd door wat vertalingen uiteenlopend weergeven als een zachte stem of het geluid van stilte. Juist die vertaalruimte verdient aandacht. De scène is geen algemene afwijzing van krachtig protest.",
+        "questions": [
+          "Welke vorm van gezag overtuigt mij te snel?",
+          "Wat maakt een kwetsbare stem voor mij moeilijk te horen?",
+          "Hoe kan aandacht voor stilte samengaan met de noodzaak om luid te spreken?"
+        ],
+        "passage": {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "1KI",
+          "chapter": 19,
+          "verse": 11,
+          "endVerse": 13
+        },
+        "sources": [
+          {
+            "title": "Tenach · I_Kings 19:11–13",
+            "url": "https://www.sefaria.org/I_Kings.19.11-13"
+          }
+        ]
+      },
+      {
+        "id": "judaism:leren-vragen",
+        "topic": "Onderwijs",
+        "pillar": null,
+        "title": "Een verhaal doorgeven",
+        "statement": "Welk verhaal geef ik door, en welke vraag krijgt daarin ruimte?",
+        "statementType": "editorial",
+        "context": "Deuteronomium beschrijft hoe op de vraag van een kind naar de bepalingen een verhaal over uittocht en bevrijding volgt. Onderwijs is hier verbonden met herinnering, identiteit en praktijk. Latere Joodse leesculturen geven vragen een eigen plaats.",
+        "questions": [
+          "Waar krijgt een vraag bij mij onmiddellijk een vast antwoord?",
+          "Welke ervaring maakt een overgeleverd verhaal begrijpelijk?",
+          "Wat mag een volgende generatie anders vragen dan de vorige?"
+        ],
+        "passage": {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "DEU",
+          "chapter": 6,
+          "verse": 20,
+          "endVerse": 25
+        },
+        "sources": [
+          {
+            "title": "Tenach · Deuteronomy 6:20–25",
+            "url": "https://www.sefaria.org/Deuteronomy.6.20-25"
+          }
+        ]
+      }
+    ],
+    "islam": [
+      {
+        "id": "islam:kennen-verschillen",
+        "topic": "Diversiteit",
+        "pillar": null,
+        "title": "Kennismaken zonder rangorde",
+        "statement": "Wordt verschil kleiner wanneer ik iemand beter leer kennen, of juist betekenisvoller?",
+        "statementType": "editorial",
+        "context": "De aya spreekt de mensheid aan en noemt volkeren en stammen in verband met elkaar leren kennen. Eer wordt verbonden met taqwa, een begrip dat onder meer godsbewustzijn en vroomheid omvat. De tekst is geen uitspraak dat alle religieuze opvattingen hetzelfde betekenen.",
+        "questions": [
+          "Welke zichtbare verschillen gebruik ik onbewust als rangorde?",
+          "Wat kan ik van iemand leren zonder diens overtuiging over te nemen?",
+          "Wie blijft buiten de kring van mensen die ik wil leren kennen?"
+        ],
+        "passage": {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "49",
+          "chapter": 1,
+          "verse": 13,
+          "endVerse": 13
+        },
+        "sources": [
+          {
+            "title": "Koran 49:13–13 · tekst en tafsir",
+            "url": "https://quran.com/49/13"
+          }
+        ]
+      },
+      {
+        "id": "islam:vrijgevigheid-deugd",
+        "topic": "Vrijgevigheid",
+        "pillar": null,
+        "title": "Wat telt als rechtvaardig?",
+        "statement": "Wat maakt mijn overtuiging zichtbaar wanneer er niemand toekijkt?",
+        "statementType": "editorial",
+        "context": "De aya plaatst de oriëntatie van het gezicht in een breder verband van geloof, geven, gebed, zakat, trouw aan beloften en volharding. De elementen moeten samen worden gelezen. Rituele en ethische aspecten worden hier verbonden, niet eenvoudig tegenover elkaar gezet.",
+        "questions": [
+          "Welke plicht valt mij gemakkelijk en welke schuif ik voor mij uit?",
+          "Hoe verandert een concrete behoefte mijn prioriteiten?",
+          "Wat leert de samenhang van deze aya mij over eenzijdige beelden van religie?"
+        ],
+        "passage": {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "2",
+          "chapter": 1,
+          "verse": 177,
+          "endVerse": 177
+        },
+        "sources": [
+          {
+            "title": "Koran 2:177–177 · tekst en tafsir",
+            "url": "https://quran.com/2/177"
+          }
+        ]
+      },
+      {
+        "id": "islam:gerechtigheid-tegenoverzelf",
+        "topic": "Rechtvaardigheid",
+        "pillar": null,
+        "title": "Getuigen tegen eigen belang",
+        "statement": "Blijft een principe overeind wanneer mijn eigen kring nadeel ondervindt?",
+        "statementType": "editorial",
+        "context": "De aya vraagt om vast te staan voor rechtvaardigheid, ook wanneer getuigenis tegen de eigen persoon, ouders of verwanten ingaat. Rijkdom en armoede mogen het oordeel niet sturen. De tekst bevraagt dus ook loyaliteit die een onrechtvaardige uitkomst beschermt.",
+        "questions": [
+          "Wanneer klinkt partijdigheid in mijn mond als trouw?",
+          "Welke feiten zou ik gemakkelijker erkennen als het over een onbekende ging?",
+          "Wat helpt om recht te doen zonder familiebanden te ontmenselijken?"
+        ],
+        "passage": {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "4",
+          "chapter": 1,
+          "verse": 135,
+          "endVerse": 135
+        },
+        "sources": [
+          {
+            "title": "Koran 4:135–135 · tekst en tafsir",
+            "url": "https://quran.com/4/135"
+          }
+        ]
+      },
+      {
+        "id": "islam:haat-en-recht",
+        "topic": "Rechtvaardigheid",
+        "pillar": null,
+        "title": "Ook tegenover de tegenstander",
+        "statement": "Welk recht erken ik nog bij iemand op wie ik boos ben?",
+        "statementType": "editorial",
+        "context": "De oproep tot rechtvaardigheid in deze aya wordt nadrukkelijk verbonden met de waarschuwing dat afkeer van een volk niet tot onrecht mag leiden. De passage biedt een vertrekpunt voor reflectie over oordeel, macht en groepsidentiteit.",
+        "questions": [
+          "Welke uitzondering maak ik zodra ik iemand als vijand zie?",
+          "Wie kan mijn feitenbeeld corrigeren wanneer emoties sterk zijn?",
+          "Wat vraagt een rechtvaardige procedure voordat er een oordeel is?"
+        ],
+        "passage": {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "5",
+          "chapter": 1,
+          "verse": 8,
+          "endVerse": 8
+        },
+        "sources": [
+          {
+            "title": "Koran 5:8–8 · tekst en tafsir",
+            "url": "https://quran.com/5/8"
+          }
+        ]
+      },
+      {
+        "id": "islam:geen-dwang",
+        "topic": "Gewetensvrijheid",
+        "pillar": null,
+        "title": "Overtuiging en macht",
+        "statement": "Wanneer wordt uitnodigen een vorm van druk?",
+        "statementType": "editorial",
+        "context": "De bekende formulering over het ontbreken van dwang in religie staat in een concrete Korantekst. De historische reikwijdte en juridische toepassing zijn binnen islamitische uitleg onderwerp van debat. De aya mag niet als een volledige samenvatting van alle islamitische rechtsgeschiedenis worden gepresenteerd.",
+        "questions": [
+          "Hoe vrij is een keuze wanneer erkenning ervan afhankelijk lijkt?",
+          "Welke machtsverhouding neem ik mee in een gesprek over overtuiging?",
+          "Hoe kan ik sterk overtuigd zijn en de ruimte van een ander respecteren?"
+        ],
+        "passage": {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "2",
+          "chapter": 1,
+          "verse": 256,
+          "endVerse": 256
+        },
+        "sources": [
+          {
+            "title": "Koran 2:256–256 · tekst en tafsir",
+            "url": "https://quran.com/2/256"
+          }
+        ]
+      },
+      {
+        "id": "islam:zorg-voor-ouders",
+        "topic": "Zorg",
+        "pillar": null,
+        "title": "Afhankelijkheid verdragen",
+        "statement": "Wat gebeurt er met mijn geduld wanneer iemand mijn tempo niet kan volgen?",
+        "statementType": "editorial",
+        "context": "Deze verzen verbinden de aanbidding van God met zorgvuldige omgang met ouders, in het bijzonder wanneer zij oud worden. Zij benoemen spreken, houding en het vragen om barmhartigheid. Toepassing in moeilijke of onveilige familieverhoudingen vraagt om zorgvuldige begeleiding.",
+        "questions": [
+          "Welke afhankelijkheid roept bij mij ongeduld op?",
+          "Wat is het verschil tussen eerbied en het verbergen van schade?",
+          "Welke zorg kan ik delen in plaats van haar alleen te dragen?"
+        ],
+        "passage": {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "17",
+          "chapter": 1,
+          "verse": 23,
+          "endVerse": 24
+        },
+        "sources": [
+          {
+            "title": "Koran 17:23–24 · tekst en tafsir",
+            "url": "https://quran.com/17/23"
+          }
+        ]
+      },
+      {
+        "id": "islam:eenzaamheid-maryam",
+        "topic": "Kwetsbaarheid",
+        "pillar": null,
+        "title": "Kwetsbaarheid is geen mislukking",
+        "statement": "Mag een mens in een heilig verhaal ook zeggen dat het te veel is?",
+        "statementType": "editorial",
+        "context": "Het verhaal van Maryam benoemt terugtrekking, barensnood, wanhoop en ontvangen ondersteuning. Deze passages geven de lichamelijke en emotionele kant van het verhaal ruimte. Reflectie hierover vervangt geen concrete medische of psychosociale zorg.",
+        "questions": [
+          "Welke verwachtingen maken het moeilijk kwetsbaarheid te benoemen?",
+          "Wat doet het met mij wanneer een religieuze tekst nood niet verzwijgt?",
+          "Welke ondersteuning past beter dan een snelle uitleg?"
+        ],
+        "passage": {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "19",
+          "chapter": 1,
+          "verse": 22,
+          "endVerse": 26
+        },
+        "sources": [
+          {
+            "title": "Koran 19:22–26 · tekst en tafsir",
+            "url": "https://quran.com/19/22"
+          }
+        ]
+      },
+      {
+        "id": "islam:gebed-en-socialezorg",
+        "topic": "Gebed",
+        "pillar": null,
+        "title": "Het gebed dat iets blootlegt",
+        "statement": "Wat zegt mijn aandacht voor een kwetsbare ander over mijn gebed?",
+        "statementType": "editorial",
+        "context": "Soera Al-Ma’un verbindt het afstoten van de wees en gebrek aan zorg voor de arme met kritiek op achteloos en opzichtig gebed. De precieze invulling van al-ma’un kent uitlegvarianten, waaronder kleine hulp en gebruiksgoederen.",
+        "questions": [
+          "Welke kleine hulp vind ik te onbelangrijk om bewust te geven?",
+          "Wat is bij mij routine geworden zonder aandacht?",
+          "Welke verhouding zie ik tussen zichtbaar religieus gedrag en betrouwbare zorg?"
+        ],
+        "passage": {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "107",
+          "chapter": 1,
+          "verse": 1,
+          "endVerse": 7
+        },
+        "sources": [
+          {
+            "title": "Koran 107:1–7 · tekst en tafsir",
+            "url": "https://quran.com/107/1"
+          }
+        ]
+      },
+      {
+        "id": "islam:vasten-aandacht",
+        "topic": "Vasten",
+        "pillar": null,
+        "title": "Afzien en aandacht",
+        "statement": "Kan vrijwillig afzien mij dichter bij de ervaring van een ander brengen zonder die ervaring toe te eigenen?",
+        "statementType": "editorial",
+        "context": "De vastenverzen richten zich tot gelovigen en noemen godsbewustzijn, de ramadan en uitzonderingen bij ziekte en reizen. Het vasten is niet alleen een oefening in empathie; het heeft een eigen godsdienstige betekenis en rechtspraktijk.",
+        "questions": [
+          "Welke betekenis geef ik aan een zelfgekozen beperking?",
+          "Waar verschilt mijn vrijwillige onthouding van onvrijwillig tekort?",
+          "Hoe verhouden lichamelijke grenzen en religieuze toewijding zich hier tot elkaar?"
+        ],
+        "passage": {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "2",
+          "chapter": 1,
+          "verse": 183,
+          "endVerse": 185
+        },
+        "sources": [
+          {
+            "title": "Koran 2:183–185 · tekst en tafsir",
+            "url": "https://quran.com/2/183"
+          }
+        ]
+      },
+      {
+        "id": "islam:roddel",
+        "topic": "Waarachtigheid",
+        "pillar": null,
+        "title": "De afwezige ander",
+        "statement": "Wie verdwijnt uit beeld wanneer een verhaal te goed klinkt om niet door te vertellen?",
+        "statementType": "editorial",
+        "context": "Deze verzen waarschuwen tegen spot, beledigende bijnamen, achterdocht, bespieden en kwaadspreken. De beelden zijn scherp en brengen de sociale schade van taal ter sprake. Kritisch onderzoek en verantwoord melden van onrecht vragen een andere afweging dan geroddel.",
+        "questions": [
+          "Welk belang dien ik wanneer ik een verhaal deel?",
+          "Hoe kan ik een beschuldiging onderzoeken zonder haar al als feit te verspreiden?",
+          "Wat zou ik anders zeggen als de afwezige persoon aanwezig was?"
+        ],
+        "passage": {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "49",
+          "chapter": 1,
+          "verse": 11,
+          "endVerse": 12
+        },
+        "sources": [
+          {
+            "title": "Koran 49:11–12 · tekst en tafsir",
+            "url": "https://quran.com/49/11"
+          }
+        ]
+      },
+      {
+        "id": "islam:kwaad-met-goed",
+        "topic": "Verzoening",
+        "pillar": null,
+        "title": "Een onverwacht antwoord",
+        "statement": "Welk antwoord opent iets dat een overwinning niet kan openen?",
+        "statementType": "editorial",
+        "context": "De verzen zetten goede en kwade daden niet op één lijn en roepen op het kwade met iets beters af te weren. Daarbij wordt volharding genoemd. De gedachte vraagt geen ontkenning van gevaar of afstand doen van bescherming.",
+        "questions": [
+          "Welke uitkomst zoek ik behalve winnen?",
+          "Wanneer kan een andere reactie een patroon doorbreken?",
+          "Welke veiligheid en steun heb ik nodig om vrij te kunnen handelen?"
+        ],
+        "passage": {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "41",
+          "chapter": 1,
+          "verse": 34,
+          "endVerse": 35
+        },
+        "sources": [
+          {
+            "title": "Koran 41:34–35 · tekst en tafsir",
+            "url": "https://quran.com/41/34"
+          }
+        ]
+      },
+      {
+        "id": "islam:schepping-maat",
+        "topic": "Schepping",
+        "pillar": null,
+        "title": "Leven met een maat",
+        "statement": "Wanneer behandel ik wat ik ontvang alsof het onbeperkt beschikbaar is?",
+        "statementType": "editorial",
+        "context": "In Soera Ar-Rahman wordt het oprichten van de hemel verbonden met de balans of maat en de oproep daarin niet te overtreden. De verzen worden in verschillende uitlegcontexten gelezen. Ecologische reflectie is een hedendaagse toepassing, niet de enige historische betekenis.",
+        "questions": [
+          "Welke maat gebruik ik om genoeg van meer te onderscheiden?",
+          "Wie draagt gevolgen die niet in mijn berekening voorkomen?",
+          "Wat kan het beeld van een balans zichtbaar maken en wat verbergt het?"
+        ],
+        "passage": {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "55",
+          "chapter": 1,
+          "verse": 7,
+          "endVerse": 9
+        },
+        "sources": [
+          {
+            "title": "Koran 55:7–9 · tekst en tafsir",
+            "url": "https://quran.com/55/7"
+          }
+        ]
+      }
+    ]
+  }
+}

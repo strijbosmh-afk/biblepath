@@ -1,0 +1,1928 @@
+{
+  "version": 1,
+  "language": "nl",
+  "scope": "Redactionele thematische ingangen; geen uitputtende concordantie en geen claim dat de passages in verschillende tradities hetzelfde betekenen. Joodse passages volgen de Hebreeuwse nummering, katholieke passages de Nederlandse katholieke collectie.",
+  "topics": [
+    {
+      "id": "armoede",
+      "label": "Armoede en zorg voor armen",
+      "synonyms": [
+        "armen",
+        "arm",
+        "armoede",
+        "behoeftigen",
+        "honger",
+        "poverty",
+        "poor",
+        "pauvreté",
+        "pauvres"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MAT",
+          "chapter": 25,
+          "verse": 31,
+          "endVerse": 46
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "LUK",
+          "chapter": 14,
+          "verse": 12,
+          "endVerse": 14
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "DEU",
+          "chapter": 15,
+          "verse": 7,
+          "endVerse": 11
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "DEU",
+          "chapter": 15,
+          "verse": 7,
+          "endVerse": 11
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "LEV",
+          "chapter": 19,
+          "verse": 9,
+          "endVerse": 10
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "ISA",
+          "chapter": 58,
+          "verse": 6,
+          "endVerse": 10
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "2",
+          "chapter": 1,
+          "verse": 177,
+          "endVerse": 177
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "107",
+          "chapter": 1,
+          "verse": 1,
+          "endVerse": 7
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "90",
+          "chapter": 1,
+          "verse": 11,
+          "endVerse": 16
+        }
+      ]
+    },
+    {
+      "id": "naastenliefde",
+      "label": "Naastenliefde",
+      "synonyms": [
+        "naaste",
+        "liefde",
+        "barmhartige samaritaan",
+        "liefhebben",
+        "love",
+        "neighbour",
+        "amour",
+        "prochain"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "LUK",
+          "chapter": 10,
+          "verse": 25,
+          "endVerse": 37
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MAT",
+          "chapter": 22,
+          "verse": 34,
+          "endVerse": 40
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "LEV",
+          "chapter": 19,
+          "verse": 17,
+          "endVerse": 18
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "DEU",
+          "chapter": 10,
+          "verse": 17,
+          "endVerse": 19
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "4",
+          "chapter": 1,
+          "verse": 36,
+          "endVerse": 36
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "2",
+          "chapter": 1,
+          "verse": 177,
+          "endVerse": 177
+        }
+      ]
+    },
+    {
+      "id": "rechtvaardigheid",
+      "label": "Rechtvaardigheid",
+      "synonyms": [
+        "recht",
+        "gerechtigheid",
+        "eerlijk",
+        "onrecht",
+        "justice",
+        "righteousness",
+        "équité"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MAT",
+          "chapter": 5,
+          "verse": 6,
+          "endVerse": 10
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "JAS",
+          "chapter": 2,
+          "verse": 1,
+          "endVerse": 9
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "DEU",
+          "chapter": 16,
+          "verse": 18,
+          "endVerse": 20
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "AMO",
+          "chapter": 5,
+          "verse": 21,
+          "endVerse": 24
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "4",
+          "chapter": 1,
+          "verse": 135,
+          "endVerse": 135
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "5",
+          "chapter": 1,
+          "verse": 8,
+          "endVerse": 8
+        }
+      ]
+    },
+    {
+      "id": "vrede",
+      "label": "Vrede",
+      "synonyms": [
+        "vreedzaam",
+        "vredestichten",
+        "vredestichters",
+        "peace",
+        "paix",
+        "sjalom",
+        "salaam"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MAT",
+          "chapter": 5,
+          "verse": 1,
+          "endVerse": 12
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "ROM",
+          "chapter": 12,
+          "verse": 17,
+          "endVerse": 21
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "ISA",
+          "chapter": 2,
+          "verse": 1,
+          "endVerse": 5
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "PSA",
+          "chapter": 34,
+          "verse": 13,
+          "endVerse": 15
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "8",
+          "chapter": 1,
+          "verse": 61,
+          "endVerse": 61
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "49",
+          "chapter": 1,
+          "verse": 9,
+          "endVerse": 10
+        }
+      ]
+    },
+    {
+      "id": "vergeving",
+      "label": "Vergeving",
+      "synonyms": [
+        "vergeven",
+        "schuld",
+        "verzoenen",
+        "forgiveness",
+        "pardon",
+        "pardonner"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MAT",
+          "chapter": 18,
+          "verse": 21,
+          "endVerse": 35
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "LUK",
+          "chapter": 15,
+          "verse": 11,
+          "endVerse": 32
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "GEN",
+          "chapter": 50,
+          "verse": 15,
+          "endVerse": 21
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "PSA",
+          "chapter": 103,
+          "verse": 8,
+          "endVerse": 14
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "24",
+          "chapter": 1,
+          "verse": 22,
+          "endVerse": 22
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "42",
+          "chapter": 1,
+          "verse": 40,
+          "endVerse": 43
+        }
+      ]
+    },
+    {
+      "id": "gebed",
+      "label": "Gebed",
+      "synonyms": [
+        "bidden",
+        "smeekbede",
+        "prayer",
+        "pray",
+        "prière",
+        "salat",
+        "tefila"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MAT",
+          "chapter": 6,
+          "verse": 5,
+          "endVerse": 13
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "LUK",
+          "chapter": 11,
+          "verse": 1,
+          "endVerse": 4
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "DEU",
+          "chapter": 6,
+          "verse": 4,
+          "endVerse": 9
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "PSA",
+          "chapter": 13,
+          "verse": 2,
+          "endVerse": 6
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "1",
+          "chapter": 1,
+          "verse": 1,
+          "endVerse": 7
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "2",
+          "chapter": 1,
+          "verse": 186,
+          "endVerse": 186
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "20",
+          "chapter": 1,
+          "verse": 14,
+          "endVerse": 14
+        }
+      ]
+    },
+    {
+      "id": "vasten",
+      "label": "Vasten",
+      "synonyms": [
+        "onthouding",
+        "ramadan",
+        "fasting",
+        "fast",
+        "jeûne",
+        "jom kipoer"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MAT",
+          "chapter": 6,
+          "verse": 16,
+          "endVerse": 18
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "ISA",
+          "chapter": 58,
+          "verse": 6,
+          "endVerse": 10
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "LEV",
+          "chapter": 16,
+          "verse": 29,
+          "endVerse": 31
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "ISA",
+          "chapter": 58,
+          "verse": 3,
+          "endVerse": 10
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "2",
+          "chapter": 1,
+          "verse": 183,
+          "endVerse": 185
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "2",
+          "chapter": 1,
+          "verse": 187,
+          "endVerse": 187
+        }
+      ]
+    },
+    {
+      "id": "gastvrijheid",
+      "label": "Gastvrijheid",
+      "synonyms": [
+        "gast",
+        "vreemdeling",
+        "vluchteling",
+        "migrant",
+        "hospitality",
+        "stranger",
+        "hospitalité",
+        "étranger"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "LUK",
+          "chapter": 14,
+          "verse": 12,
+          "endVerse": 14
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "HEB",
+          "chapter": 13,
+          "verse": 1,
+          "endVerse": 3
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "GEN",
+          "chapter": 18,
+          "verse": 1,
+          "endVerse": 8
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "DEU",
+          "chapter": 10,
+          "verse": 17,
+          "endVerse": 19
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "4",
+          "chapter": 1,
+          "verse": 36,
+          "endVerse": 36
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "51",
+          "chapter": 1,
+          "verse": 24,
+          "endVerse": 30
+        }
+      ]
+    },
+    {
+      "id": "schepping",
+      "label": "Schepping en natuur",
+      "synonyms": [
+        "natuur",
+        "milieu",
+        "aarde",
+        "ecologie",
+        "creation",
+        "environment",
+        "création",
+        "environnement"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "GEN",
+          "chapter": 1,
+          "verse": 26,
+          "endVerse": 31
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "ROM",
+          "chapter": 8,
+          "verse": 19,
+          "endVerse": 23
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "GEN",
+          "chapter": 2,
+          "verse": 15,
+          "endVerse": 17
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "PSA",
+          "chapter": 104,
+          "verse": 24,
+          "endVerse": 30
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "55",
+          "chapter": 1,
+          "verse": 7,
+          "endVerse": 9
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "30",
+          "chapter": 1,
+          "verse": 41,
+          "endVerse": 41
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "7",
+          "chapter": 1,
+          "verse": 31,
+          "endVerse": 31
+        }
+      ]
+    },
+    {
+      "id": "barmhartigheid",
+      "label": "Barmhartigheid",
+      "synonyms": [
+        "mededogen",
+        "ontferming",
+        "mercy",
+        "compassion",
+        "miséricorde"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "LUK",
+          "chapter": 6,
+          "verse": 36,
+          "endVerse": 38
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MAT",
+          "chapter": 9,
+          "verse": 10,
+          "endVerse": 13
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "MIC",
+          "chapter": 6,
+          "verse": 6,
+          "endVerse": 8
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "JON",
+          "chapter": 4,
+          "verse": 1,
+          "endVerse": 11
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "7",
+          "chapter": 1,
+          "verse": 156,
+          "endVerse": 156
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "39",
+          "chapter": 1,
+          "verse": 53,
+          "endVerse": 53
+        }
+      ]
+    },
+    {
+      "id": "vrijgevigheid",
+      "label": "Vrijgevigheid",
+      "synonyms": [
+        "geven",
+        "delen",
+        "gift",
+        "aalmoes",
+        "zakat",
+        "tsedaka",
+        "charity",
+        "generosity",
+        "générosité"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MAT",
+          "chapter": 6,
+          "verse": 1,
+          "endVerse": 4
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "2CO",
+          "chapter": 9,
+          "verse": 6,
+          "endVerse": 8
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "DEU",
+          "chapter": 15,
+          "verse": 7,
+          "endVerse": 11
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "PRO",
+          "chapter": 19,
+          "verse": 17,
+          "endVerse": 17
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "2",
+          "chapter": 1,
+          "verse": 261,
+          "endVerse": 264
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "76",
+          "chapter": 1,
+          "verse": 8,
+          "endVerse": 9
+        }
+      ]
+    },
+    {
+      "id": "waarachtigheid",
+      "label": "Waarheid en betrouwbaar spreken",
+      "synonyms": [
+        "waarheid",
+        "eerlijkheid",
+        "roddel",
+        "leugen",
+        "truth",
+        "honesty",
+        "vérité"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "EPH",
+          "chapter": 4,
+          "verse": 25,
+          "endVerse": 32
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MAT",
+          "chapter": 5,
+          "verse": 33,
+          "endVerse": 37
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "EXO",
+          "chapter": 20,
+          "verse": 16,
+          "endVerse": 16
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "LEV",
+          "chapter": 19,
+          "verse": 11,
+          "endVerse": 16
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "49",
+          "chapter": 1,
+          "verse": 6,
+          "endVerse": 6
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "49",
+          "chapter": 1,
+          "verse": 11,
+          "endVerse": 12
+        }
+      ]
+    },
+    {
+      "id": "verantwoordelijkheid",
+      "label": "Verantwoordelijkheid en keuze",
+      "synonyms": [
+        "keuze",
+        "kiezen",
+        "vrijheid",
+        "accountability",
+        "responsibility",
+        "responsabilité"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MAT",
+          "chapter": 25,
+          "verse": 14,
+          "endVerse": 30
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "ROM",
+          "chapter": 14,
+          "verse": 10,
+          "endVerse": 13
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "DEU",
+          "chapter": 30,
+          "verse": 15,
+          "endVerse": 20
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "GEN",
+          "chapter": 4,
+          "verse": 8,
+          "endVerse": 10
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "17",
+          "chapter": 1,
+          "verse": 13,
+          "endVerse": 15
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "99",
+          "chapter": 1,
+          "verse": 6,
+          "endVerse": 8
+        }
+      ]
+    },
+    {
+      "id": "hoop",
+      "label": "Hoop",
+      "synonyms": [
+        "verwachting",
+        "toekomst",
+        "vertrouwen",
+        "hope",
+        "espérance"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "ROM",
+          "chapter": 8,
+          "verse": 24,
+          "endVerse": 25
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "HEB",
+          "chapter": 11,
+          "verse": 1,
+          "endVerse": 3
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "ISA",
+          "chapter": 40,
+          "verse": 27,
+          "endVerse": 31
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "JER",
+          "chapter": 29,
+          "verse": 10,
+          "endVerse": 14
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "39",
+          "chapter": 1,
+          "verse": 53,
+          "endVerse": 54
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "94",
+          "chapter": 1,
+          "verse": 5,
+          "endVerse": 8
+        }
+      ]
+    },
+    {
+      "id": "lijden",
+      "label": "Lijden en verdriet",
+      "synonyms": [
+        "verdriet",
+        "rouw",
+        "pijn",
+        "suffering",
+        "grief",
+        "souffrance"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MAT",
+          "chapter": 5,
+          "verse": 4,
+          "endVerse": 4
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "ROM",
+          "chapter": 8,
+          "verse": 18,
+          "endVerse": 25
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "JOB",
+          "chapter": 3,
+          "verse": 1,
+          "endVerse": 11
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "PSA",
+          "chapter": 22,
+          "verse": 2,
+          "endVerse": 6
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "2",
+          "chapter": 1,
+          "verse": 155,
+          "endVerse": 157
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "93",
+          "chapter": 1,
+          "verse": 1,
+          "endVerse": 11
+        }
+      ]
+    },
+    {
+      "id": "dankbaarheid",
+      "label": "Dankbaarheid",
+      "synonyms": [
+        "danken",
+        "dankbaar",
+        "gratitude",
+        "thankfulness",
+        "reconnaissance"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "LUK",
+          "chapter": 17,
+          "verse": 11,
+          "endVerse": 19
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "1TH",
+          "chapter": 5,
+          "verse": 16,
+          "endVerse": 22
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "DEU",
+          "chapter": 8,
+          "verse": 10,
+          "endVerse": 18
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "PSA",
+          "chapter": 100,
+          "verse": 1,
+          "endVerse": 5
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "14",
+          "chapter": 1,
+          "verse": 7,
+          "endVerse": 7
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "31",
+          "chapter": 1,
+          "verse": 12,
+          "endVerse": 12
+        }
+      ]
+    },
+    {
+      "id": "bescheidenheid",
+      "label": "Bescheidenheid en hoogmoed",
+      "synonyms": [
+        "hoogmoed",
+        "nederigheid",
+        "trots",
+        "humility",
+        "pride",
+        "humilité"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "LUK",
+          "chapter": 18,
+          "verse": 9,
+          "endVerse": 14
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "PHP",
+          "chapter": 2,
+          "verse": 1,
+          "endVerse": 8
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "MIC",
+          "chapter": 6,
+          "verse": 6,
+          "endVerse": 8
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "PRO",
+          "chapter": 16,
+          "verse": 18,
+          "endVerse": 19
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "31",
+          "chapter": 1,
+          "verse": 18,
+          "endVerse": 19
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "25",
+          "chapter": 1,
+          "verse": 63,
+          "endVerse": 63
+        }
+      ]
+    },
+    {
+      "id": "rijkdom",
+      "label": "Rijkdom en bezit",
+      "synonyms": [
+        "geld",
+        "bezit",
+        "hebzucht",
+        "wealth",
+        "possessions",
+        "richesse"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "LUK",
+          "chapter": 12,
+          "verse": 13,
+          "endVerse": 21
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MRK",
+          "chapter": 10,
+          "verse": 17,
+          "endVerse": 27
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "DEU",
+          "chapter": 8,
+          "verse": 11,
+          "endVerse": 18
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "ECC",
+          "chapter": 5,
+          "verse": 9,
+          "endVerse": 14
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "102",
+          "chapter": 1,
+          "verse": 1,
+          "endVerse": 8
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "28",
+          "chapter": 1,
+          "verse": 76,
+          "endVerse": 82
+        }
+      ]
+    },
+    {
+      "id": "rust",
+      "label": "Rust en tijd",
+      "synonyms": [
+        "sabbat",
+        "sjabbat",
+        "rusten",
+        "haast",
+        "rest",
+        "sabbath",
+        "repos"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MRK",
+          "chapter": 2,
+          "verse": 23,
+          "endVerse": 28
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MAT",
+          "chapter": 11,
+          "verse": 28,
+          "endVerse": 30
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "EXO",
+          "chapter": 20,
+          "verse": 8,
+          "endVerse": 11
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "DEU",
+          "chapter": 5,
+          "verse": 12,
+          "endVerse": 15
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "62",
+          "chapter": 1,
+          "verse": 9,
+          "endVerse": 11
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "78",
+          "chapter": 1,
+          "verse": 9,
+          "endVerse": 11
+        }
+      ]
+    },
+    {
+      "id": "kennis",
+      "label": "Leren en wijsheid",
+      "synonyms": [
+        "wijsheid",
+        "onderwijs",
+        "kennis",
+        "leren",
+        "wisdom",
+        "knowledge",
+        "sagesse"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "JAS",
+          "chapter": 1,
+          "verse": 5,
+          "endVerse": 8
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "SIR",
+          "chapter": 6,
+          "verse": 18,
+          "endVerse": 23
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "PRO",
+          "chapter": 2,
+          "verse": 1,
+          "endVerse": 11
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "DEU",
+          "chapter": 6,
+          "verse": 20,
+          "endVerse": 25
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "96",
+          "chapter": 1,
+          "verse": 1,
+          "endVerse": 5
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "20",
+          "chapter": 1,
+          "verse": 114,
+          "endVerse": 114
+        }
+      ]
+    },
+    {
+      "id": "familie",
+      "label": "Familie en zorg",
+      "synonyms": [
+        "ouders",
+        "kinderen",
+        "opvoeding",
+        "familie",
+        "parents",
+        "family",
+        "famille"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "EPH",
+          "chapter": 6,
+          "verse": 1,
+          "endVerse": 4
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "LUK",
+          "chapter": 2,
+          "verse": 41,
+          "endVerse": 52
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "EXO",
+          "chapter": 20,
+          "verse": 12,
+          "endVerse": 12
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "DEU",
+          "chapter": 6,
+          "verse": 4,
+          "endVerse": 9
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "17",
+          "chapter": 1,
+          "verse": 23,
+          "endVerse": 24
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "31",
+          "chapter": 1,
+          "verse": 14,
+          "endVerse": 15
+        }
+      ]
+    },
+    {
+      "id": "diversiteit",
+      "label": "Verschil en ontmoeting",
+      "synonyms": [
+        "verschil",
+        "diversiteit",
+        "ontmoeting",
+        "volkeren",
+        "diversity",
+        "difference",
+        "diversité"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "ACT",
+          "chapter": 10,
+          "verse": 34,
+          "endVerse": 35
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "1CO",
+          "chapter": 12,
+          "verse": 12,
+          "endVerse": 26
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "GEN",
+          "chapter": 1,
+          "verse": 26,
+          "endVerse": 28
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "DEU",
+          "chapter": 10,
+          "verse": 17,
+          "endVerse": 19
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "49",
+          "chapter": 1,
+          "verse": 13,
+          "endVerse": 13
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "30",
+          "chapter": 1,
+          "verse": 22,
+          "endVerse": 22
+        }
+      ]
+    },
+    {
+      "id": "verzoening",
+      "label": "Verzoening en conflict",
+      "synonyms": [
+        "conflict",
+        "ruzie",
+        "herstel",
+        "verzoening",
+        "reconciliation",
+        "réconciliation"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MAT",
+          "chapter": 18,
+          "verse": 15,
+          "endVerse": 17
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "2CO",
+          "chapter": 5,
+          "verse": 18,
+          "endVerse": 20
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "GEN",
+          "chapter": 33,
+          "verse": 1,
+          "endVerse": 11
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "LEV",
+          "chapter": 19,
+          "verse": 17,
+          "endVerse": 18
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "49",
+          "chapter": 1,
+          "verse": 9,
+          "endVerse": 10
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "41",
+          "chapter": 1,
+          "verse": 34,
+          "endVerse": 35
+        }
+      ]
+    },
+    {
+      "id": "geweld",
+      "label": "Geweld en vergelding",
+      "synonyms": [
+        "wraak",
+        "vijand",
+        "geweld",
+        "vergelding",
+        "violence",
+        "revenge"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MAT",
+          "chapter": 5,
+          "verse": 38,
+          "endVerse": 48
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "ROM",
+          "chapter": 12,
+          "verse": 17,
+          "endVerse": 21
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "LEV",
+          "chapter": 19,
+          "verse": 17,
+          "endVerse": 18
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "PRO",
+          "chapter": 25,
+          "verse": 21,
+          "endVerse": 22
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "42",
+          "chapter": 1,
+          "verse": 40,
+          "endVerse": 43
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "5",
+          "chapter": 1,
+          "verse": 8,
+          "endVerse": 8
+        }
+      ]
+    },
+    {
+      "id": "aandacht",
+      "label": "Aandacht en stilte",
+      "synonyms": [
+        "stilte",
+        "luisteren",
+        "aandacht",
+        "silence",
+        "listening",
+        "écouter"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "LUK",
+          "chapter": 10,
+          "verse": 38,
+          "endVerse": 42
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MRK",
+          "chapter": 1,
+          "verse": 35,
+          "endVerse": 39
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "1KI",
+          "chapter": 19,
+          "verse": 11,
+          "endVerse": 13
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "PSA",
+          "chapter": 46,
+          "verse": 9,
+          "endVerse": 12
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "7",
+          "chapter": 1,
+          "verse": 204,
+          "endVerse": 205
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "73",
+          "chapter": 1,
+          "verse": 1,
+          "endVerse": 8
+        }
+      ]
+    },
+    {
+      "id": "gemeenschap",
+      "label": "Gemeenschap en solidariteit",
+      "synonyms": [
+        "solidariteit",
+        "gemeenschap",
+        "samenleven",
+        "community",
+        "solidarity",
+        "communauté"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "ACT",
+          "chapter": 4,
+          "verse": 32,
+          "endVerse": 35
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "1CO",
+          "chapter": 12,
+          "verse": 12,
+          "endVerse": 26
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "DEU",
+          "chapter": 15,
+          "verse": 7,
+          "endVerse": 11
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "LEV",
+          "chapter": 19,
+          "verse": 9,
+          "endVerse": 18
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "49",
+          "chapter": 1,
+          "verse": 10,
+          "endVerse": 10
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "3",
+          "chapter": 1,
+          "verse": 103,
+          "endVerse": 104
+        }
+      ]
+    },
+    {
+      "id": "wezen",
+      "label": "Wezen en kwetsbaarheid",
+      "synonyms": [
+        "wees",
+        "wezen",
+        "weduwe",
+        "kwetsbaar",
+        "orphans",
+        "vulnerable",
+        "orphelins"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "JAS",
+          "chapter": 1,
+          "verse": 26,
+          "endVerse": 27
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MRK",
+          "chapter": 12,
+          "verse": 38,
+          "endVerse": 40
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "DEU",
+          "chapter": 24,
+          "verse": 17,
+          "endVerse": 22
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "ISA",
+          "chapter": 1,
+          "verse": 16,
+          "endVerse": 17
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "4",
+          "chapter": 1,
+          "verse": 2,
+          "endVerse": 6
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "93",
+          "chapter": 1,
+          "verse": 6,
+          "endVerse": 11
+        }
+      ]
+    },
+    {
+      "id": "gezondheid",
+      "label": "Ziekte en nabijheid",
+      "synonyms": [
+        "ziek",
+        "ziekte",
+        "gezondheid",
+        "genezing",
+        "illness",
+        "healing",
+        "maladie"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MAT",
+          "chapter": 25,
+          "verse": 35,
+          "endVerse": 40
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MRK",
+          "chapter": 2,
+          "verse": 1,
+          "endVerse": 12
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "PSA",
+          "chapter": 41,
+          "verse": 2,
+          "endVerse": 4
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "EXO",
+          "chapter": 15,
+          "verse": 26,
+          "endVerse": 26
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "26",
+          "chapter": 1,
+          "verse": 80,
+          "endVerse": 80
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "2",
+          "chapter": 1,
+          "verse": 184,
+          "endVerse": 185
+        }
+      ]
+    },
+    {
+      "id": "bevrijding",
+      "label": "Bevrijding en slavernij",
+      "synonyms": [
+        "slavernij",
+        "bevrijding",
+        "uittocht",
+        "vrij",
+        "liberation",
+        "slavery",
+        "libération"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "LUK",
+          "chapter": 4,
+          "verse": 16,
+          "endVerse": 21
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "GAL",
+          "chapter": 5,
+          "verse": 1,
+          "endVerse": 1
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "EXO",
+          "chapter": 3,
+          "verse": 7,
+          "endVerse": 10
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "DEU",
+          "chapter": 5,
+          "verse": 12,
+          "endVerse": 15
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "90",
+          "chapter": 1,
+          "verse": 11,
+          "endVerse": 16
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "4",
+          "chapter": 1,
+          "verse": 75,
+          "endVerse": 75
+        }
+      ]
+    },
+    {
+      "id": "berouw",
+      "label": "Berouw en omkeer",
+      "synonyms": [
+        "bekering",
+        "berouw",
+        "omkeer",
+        "tesjoeva",
+        "tawba",
+        "repentance",
+        "repentir"
+      ],
+      "passages": [
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "LUK",
+          "chapter": 15,
+          "verse": 11,
+          "endVerse": 32
+        },
+        {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MRK",
+          "chapter": 1,
+          "verse": 14,
+          "endVerse": 15
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "EZK",
+          "chapter": 18,
+          "verse": 21,
+          "endVerse": 23
+        },
+        {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "JON",
+          "chapter": 3,
+          "verse": 5,
+          "endVerse": 10
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "39",
+          "chapter": 1,
+          "verse": 53,
+          "endVerse": 54
+        },
+        {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "66",
+          "chapter": 1,
+          "verse": 8,
+          "endVerse": 8
+        }
+      ]
+    }
+  ]
+}

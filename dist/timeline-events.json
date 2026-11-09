@@ -1,0 +1,1961 @@
+{
+  "version": 1,
+  "meta": {
+    "language": "nl",
+    "scope": "Redactionele selectie van belangrijke momenten; geen uitputtende of religieus neutrale canon van gebeurtenissen.",
+    "yearNumbering": "Historische signed years: -586 betekent 586 v.Chr.; er is geen jaar 0. start/end zijn navigatiecoördinaten, dateLabel bewaart onzekerheid en broncontext.",
+    "datingNote": "Geschiedenis, tekstgeschiedenis en religieuze overlevering worden onderscheiden. Ongedateerde verhalen staan buiten de numerieke lijn.",
+    "reviewedOn": "2026-11-09"
+  },
+  "traditions": {
+    "christianity": [
+      {
+        "id": "christianity:birth",
+        "title": "Geboorte van Jezus",
+        "start": -6,
+        "dateLabel": "ca. 6–4 v.Chr.",
+        "kind": "tradition",
+        "category": "Ontstaan",
+        "summary": "De evangeliën situeren Jezus’ geboorte in de wereld van Herodes en het Romeinse rijk.",
+        "context": "De precieze geboortedatum is onzeker. Het christelijke kerstfeest is geen onafhankelijke historische datering.",
+        "sources": [
+          {
+            "title": "USCCB · Mattheüs 2",
+            "url": "https://bible.usccb.org/bible/matthew/2"
+          }
+        ],
+        "end": -4,
+        "passage": {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MAT",
+          "chapter": 2,
+          "verse": 1,
+          "endVerse": 6
+        }
+      },
+      {
+        "id": "christianity:ministry",
+        "title": "Jezus’ openbare optreden",
+        "start": 27,
+        "dateLabel": "ca. 27–30",
+        "kind": "tradition",
+        "category": "Ontstaan",
+        "summary": "De evangelieverhalen verbinden Jezus’ prediking met Gods koninkrijk, genezingen en het vormen van een leerlingengroep.",
+        "context": "Hun volgorde en tijdsaanduidingen verschillen. De jaartallen geven een gebruikelijke historische benadering.",
+        "sources": [
+          {
+            "title": "USCCB · Lucas 3",
+            "url": "https://bible.usccb.org/bible/luke/3"
+          }
+        ],
+        "end": 30,
+        "passage": {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "LUK",
+          "chapter": 3,
+          "verse": 1,
+          "endVerse": 6
+        }
+      },
+      {
+        "id": "christianity:paschal",
+        "title": "Kruisiging en paasgetuigenis",
+        "start": 30,
+        "dateLabel": "ca. 30–33",
+        "kind": "tradition",
+        "category": "Ontstaan",
+        "summary": "Jezus wordt onder Pontius Pilatus gekruisigd. Zijn leerlingen getuigen daarna dat Hij is opgestaan.",
+        "context": "Kruisiging als historische gebeurtenis en verrijzenis als geloofsgetuigenis vragen om een onderscheiden benadering.",
+        "sources": [
+          {
+            "title": "USCCB · Marcus 15–16",
+            "url": "https://bible.usccb.org/bible/mark/15"
+          }
+        ],
+        "end": 33,
+        "passage": {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "MRK",
+          "chapter": 15,
+          "verse": 33,
+          "endVerse": 39
+        }
+      },
+      {
+        "id": "christianity:pentecost",
+        "title": "Pinksteren in Handelingen",
+        "start": 30,
+        "dateLabel": "eerste eeuw · verhalende situering",
+        "kind": "tradition",
+        "category": "Gemeenschap",
+        "summary": "Handelingen beschrijft de gave van de Geest en de verkondiging in verschillende talen.",
+        "context": "De datum op de lijn volgt de verhalende volgorde na Pasen, niet een afzonderlijk vastgestelde kalenderdatum.",
+        "sources": [
+          {
+            "title": "USCCB · Handelingen 2",
+            "url": "https://bible.usccb.org/bible/acts/2"
+          }
+        ],
+        "end": 33,
+        "passage": {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "ACT",
+          "chapter": 2,
+          "verse": 1,
+          "endVerse": 13
+        }
+      },
+      {
+        "id": "christianity:jerusalem",
+        "title": "Overleg in Jeruzalem",
+        "start": 48,
+        "dateLabel": "ca. 48–50",
+        "kind": "text",
+        "category": "Gemeenschap",
+        "summary": "De vroege gemeenschap bespreekt de verhouding tussen niet-Joodse gelovigen en de wet van Mozes.",
+        "context": "Handelingen 15 en Galaten 2 bieden verschillende perspectieven; hun onderlinge chronologie is onderwerp van onderzoek.",
+        "sources": [
+          {
+            "title": "USCCB · Handelingen 15",
+            "url": "https://bible.usccb.org/bible/acts/15"
+          }
+        ],
+        "end": 50,
+        "passage": {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "ACT",
+          "chapter": 15,
+          "verse": 1,
+          "endVerse": 11
+        }
+      },
+      {
+        "id": "christianity:paul",
+        "title": "Brieven van Paulus",
+        "start": 50,
+        "dateLabel": "ca. 50–60",
+        "kind": "text",
+        "category": "Teksten",
+        "summary": "Paulus’ brieven behoren tot de vroegste bewaarde christelijke geschriften.",
+        "context": "Zij richten zich tot concrete gemeenschappen. Niet alle brieven met zijn naam hebben dezelfde auteurschapstoeschrijving.",
+        "sources": [
+          {
+            "title": "USCCB · Eerste brief aan de Tessalonicenzen",
+            "url": "https://bible.usccb.org/bible/1thessalonians/0"
+          }
+        ],
+        "end": 60,
+        "passage": {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "1TH",
+          "chapter": 1,
+          "verse": 1,
+          "endVerse": 5
+        }
+      },
+      {
+        "id": "christianity:gospels",
+        "title": "Ontstaan van de evangeliën",
+        "start": 65,
+        "dateLabel": "ca. 65–100",
+        "kind": "text",
+        "category": "Teksten",
+        "summary": "De vier canonieke evangeliën krijgen in de eerste eeuw hun geschreven vorm.",
+        "context": "De datering is benaderend. Elk evangelie heeft een eigen compositie en theologische invalshoek.",
+        "sources": [
+          {
+            "title": "USCCB · Marcus, inleiding",
+            "url": "https://bible.usccb.org/bible/mark/0"
+          },
+          {
+            "title": "USCCB · Johannes, inleiding",
+            "url": "https://bible.usccb.org/bible/john/0"
+          }
+        ],
+        "end": 100
+      },
+      {
+        "id": "christianity:milan",
+        "title": "Religieuze vrijheid onder Constantijn",
+        "start": 313,
+        "dateLabel": "313",
+        "kind": "history",
+        "category": "Samenleving",
+        "summary": "Constantijn en Licinius staan vrije godsdienstuitoefening toe en regelen teruggave van kerkelijk bezit.",
+        "context": "Het zogenoemde Edict van Milaan maakt het christendom nog niet tot exclusieve staatsgodsdienst.",
+        "sources": [
+          {
+            "title": "Fourth Century Christianity · Edict van Milaan",
+            "url": "https://www.fourthcentury.com/edict-of-milan-a-d-313/"
+          }
+        ]
+      },
+      {
+        "id": "christianity:nicaea",
+        "title": "Concilie van Nicea",
+        "start": 325,
+        "dateLabel": "325",
+        "kind": "history",
+        "category": "Concilies",
+        "summary": "Bisschoppen bespreken de verhouding tussen Vader en Zoon en formuleren een geloofsbelijdenis.",
+        "context": "De katholieke kerk rekent dit tot de oecumenische concilies. Latere receptie en conflicten blijven van belang.",
+        "sources": [
+          {
+            "title": "Corpus Christianorum · kritische concilieteksten",
+            "url": "https://www.corpuschristianorum.org/cccogd"
+          }
+        ]
+      },
+      {
+        "id": "christianity:constantinople",
+        "title": "Concilie van Constantinopel",
+        "start": 381,
+        "dateLabel": "381",
+        "kind": "history",
+        "category": "Concilies",
+        "summary": "Het concilie behandelt de triniteitsleer en de plaats van de heilige Geest.",
+        "context": "De geloofsbelijdenis die met Nicea en Constantinopel wordt verbonden speelt een blijvende liturgische rol.",
+        "sources": [
+          {
+            "title": "Corpus Christianorum · kritische concilieteksten",
+            "url": "https://www.corpuschristianorum.org/cccogd"
+          }
+        ]
+      },
+      {
+        "id": "christianity:ephesus",
+        "title": "Concilie van Efeze",
+        "start": 431,
+        "dateLabel": "431",
+        "kind": "history",
+        "category": "Concilies",
+        "summary": "De eenheid van Christus en de benaming Theotokos voor Maria staan centraal.",
+        "context": "Christologische meningsverschillen hebben gevolgen voor de verhouding tussen kerken in Oost en West.",
+        "sources": [
+          {
+            "title": "Corpus Christianorum · kritische concilieteksten",
+            "url": "https://www.corpuschristianorum.org/cccogd"
+          }
+        ]
+      },
+      {
+        "id": "christianity:chalcedon",
+        "title": "Concilie van Chalcedon",
+        "start": 451,
+        "dateLabel": "451",
+        "kind": "history",
+        "category": "Concilies",
+        "summary": "Het concilie verwoordt Christus als één persoon in twee naturen.",
+        "context": "Niet alle christelijke kerken aanvaarden de formulering. De katholieke lezing is één perspectief binnen die geschiedenis.",
+        "sources": [
+          {
+            "title": "Corpus Christianorum · kritische concilieteksten",
+            "url": "https://www.corpuschristianorum.org/cccogd"
+          }
+        ]
+      },
+      {
+        "id": "christianity:benedict",
+        "title": "Benedictus en Monte Cassino",
+        "start": 529,
+        "dateLabel": "ca. 529–540",
+        "kind": "history",
+        "category": "Gemeenschap",
+        "summary": "Benedictus sticht volgens de overlevering rond 529 Monte Cassino en schrijft zijn kloosterregel.",
+        "context": "De benedictijnse traditie verbindt gebed, gemeenschapsleven en arbeid. De levensbeschrijving bevat ook hagiografische elementen.",
+        "sources": [
+          {
+            "title": "Vaticaanstad · Benedictus van Nursia",
+            "url": "https://www.vaticanstate.va/en/component/content/article/july-11-saint-benedict-of-nursia-patron-of-europe.html?Itemid=216&catid=51"
+          }
+        ],
+        "end": 540
+      },
+      {
+        "id": "christianity:schism",
+        "title": "Excommunicaties tussen Rome en Constantinopel",
+        "start": 1054,
+        "dateLabel": "1054",
+        "kind": "history",
+        "category": "Breuk en hervorming",
+        "summary": "Wederzijdse excommunicaties worden later een symbool van de verwijdering tussen Oost en West.",
+        "context": "De scheiding is een langdurig proces, geen gebeurtenis die op één dag volledig voltooid is.",
+        "sources": [
+          {
+            "title": "Vaticaan · Ut unum sint",
+            "url": "https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_25051995_ut-unum-sint.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:francis",
+        "title": "Franciscaanse levensvorm",
+        "start": 1209,
+        "dateLabel": "1209–1223",
+        "kind": "history",
+        "category": "Gemeenschap",
+        "summary": "Franciscus en zijn broeders krijgen erkenning voor een leven van armoede en evangelische verkondiging.",
+        "context": "Na de eerste goedkeuring in 1209 volgt de bevestigde regel van 1223; ook Clara en leken ontwikkelen eigen vormen.",
+        "sources": [
+          {
+            "title": "Vatican News · Franciscus van Assisi",
+            "url": "https://www.vaticannews.va/en/saints/10/04/st--francis-of-assisi--founder-of-the-franciscan--order--patron-.html"
+          }
+        ],
+        "end": 1223
+      },
+      {
+        "id": "christianity:lateran",
+        "title": "Vierde Lateraans Concilie",
+        "start": 1215,
+        "dateLabel": "1215",
+        "kind": "history",
+        "category": "Concilies",
+        "summary": "Het concilie behandelt leer, sacramenten en kerkelijke organisatie.",
+        "context": "De besluiten omvatten ook discriminerende voorschriften tegenover Joden. Kerkelijke hervorming en uitsluiting moeten samen worden bestudeerd.",
+        "sources": [
+          {
+            "title": "Corpus Christianorum · kritische concilieteksten",
+            "url": "https://www.corpuschristianorum.org/cccogd"
+          }
+        ]
+      },
+      {
+        "id": "christianity:reformation",
+        "title": "Luther en de breuk met Rome",
+        "start": 1521,
+        "dateLabel": "1521",
+        "kind": "history",
+        "category": "Breuk en hervorming",
+        "summary": "Paus Leo X excommuniceert Maarten Luther na het conflict over leer en kerkelijke hervorming.",
+        "context": "De Reformatie is een langdurig proces met verschillende hervormingsbewegingen. De latere katholieke en protestantse tradities hebben gedeelde wortels en uiteenlopende interpretaties.",
+        "sources": [
+          {
+            "title": "Library of Congress · Luther als ketter",
+            "url": "https://guides.loc.gov/martin-luther-priest-heretic-outlaw/luther-the-heretic"
+          }
+        ]
+      },
+      {
+        "id": "christianity:jesuits",
+        "title": "Erkenning van de jezuïeten",
+        "start": 1540,
+        "dateLabel": "1540",
+        "kind": "history",
+        "category": "Gemeenschap",
+        "summary": "Paulus III erkent de Sociëteit van Jezus als religieuze orde.",
+        "context": "Onderwijs en wereldwijde missies worden belangrijk. Hun geschiedenis is ook verweven met Europese koloniale machtsverhoudingen.",
+        "sources": [
+          {
+            "title": "Jezuïeten · Pauselijke goedkeuring in 1540",
+            "url": "https://www.jesuits.global/2021/09/26/on-27-september-1540-the-society-of-jesus-received-papal-approval/"
+          }
+        ]
+      },
+      {
+        "id": "christianity:trent",
+        "title": "Concilie van Trente",
+        "start": 1545,
+        "dateLabel": "1545–1563",
+        "kind": "history",
+        "category": "Concilies",
+        "summary": "Het concilie formuleert katholieke leer en hervormingen in de context van de Reformatie.",
+        "context": "Het vergadert met onderbrekingen. Bijbelcanon, sacramenten en opleiding van geestelijken krijgen blijvende betekenis.",
+        "sources": [
+          {
+            "title": "Gemeente Trento · Het concilie",
+            "url": "https://spazicomuni.comune.trento.it/Aree-tematiche/Cultura-e-turismo/Conoscere/Il-concilio"
+          }
+        ],
+        "end": 1563
+      },
+      {
+        "id": "christianity:vatican1",
+        "title": "Eerste Vaticaans Concilie",
+        "start": 1869,
+        "dateLabel": "1869–1870",
+        "kind": "history",
+        "category": "Concilies",
+        "summary": "Het concilie bespreekt geloof, rede en het pauselijk ambt.",
+        "context": "De definitie van pauselijke onfeilbaarheid heeft specifieke voorwaarden; zij betekent niet dat elke uitspraak van een paus onfeilbaar is.",
+        "sources": [
+          {
+            "title": "Corpus Christianorum · kritische concilieteksten",
+            "url": "https://www.corpuschristianorum.org/cccogd"
+          },
+          {
+            "title": "Vaticaan · Lumen gentium §25",
+            "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19641121_lumen-gentium_en.html"
+          }
+        ],
+        "end": 1870
+      },
+      {
+        "id": "christianity:rerum",
+        "title": "Rerum novarum",
+        "start": 1891,
+        "dateLabel": "15 mei 1891",
+        "kind": "text",
+        "category": "Samenleving",
+        "summary": "Leo XIII bespreekt arbeid, eigendom en sociale verhoudingen in de industriële samenleving.",
+        "context": "De encycliek wordt een belangrijk referentiepunt voor de moderne katholieke sociale leer.",
+        "sources": [
+          {
+            "title": "Vaticaan · Rerum novarum",
+            "url": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_15051891_rerum-novarum.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:vatican2",
+        "title": "Tweede Vaticaans Concilie",
+        "start": 1962,
+        "dateLabel": "1962–1965",
+        "kind": "history",
+        "category": "Concilies",
+        "summary": "Het concilie opent op 11 oktober 1962 en sluit op 8 december 1965.",
+        "context": "De zestien documenten behandelen onder meer liturgie, kerk, openbaring, oecumene en de verhouding tot de wereld.",
+        "sources": [
+          {
+            "title": "Vaticaan · Sluitingsdecreet",
+            "url": "https://www.vatican.va/content/paul-vi/en/apost_letters/documents/hf_p-vi_apl_19651208_in-spiritu-sancto.html"
+          }
+        ],
+        "end": 1965
+      },
+      {
+        "id": "christianity:liturgy",
+        "title": "Sacrosanctum concilium",
+        "start": 1963,
+        "dateLabel": "4 december 1963",
+        "kind": "text",
+        "category": "Liturgie",
+        "summary": "De constitutie over de liturgie vormt het kader voor ingrijpende hervormingen.",
+        "context": "Actieve deelname wordt benadrukt. De concrete uitwerking in rituelen en talen verloopt in de jaren daarna.",
+        "sources": [
+          {
+            "title": "Vaticaan · Sacrosanctum concilium",
+            "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19631204_sacrosanctum-concilium_en.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:pacem",
+        "title": "Pacem in terris",
+        "start": 1963,
+        "dateLabel": "11 april 1963",
+        "kind": "text",
+        "category": "Vrede en dialoog",
+        "summary": "Johannes XXIII verbindt vrede met rechten, plichten en internationale samenwerking.",
+        "context": "De encycliek richt zich ook tot mensen van goede wil buiten de katholieke gemeenschap.",
+        "sources": [
+          {
+            "title": "Vaticaan · Pacem in terris",
+            "url": "https://www.vatican.va/content/john-xxiii/en/encyclicals/documents/hf_j-xxiii_enc_11041963_pacem.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:nostra",
+        "title": "Nostra aetate",
+        "start": 1965,
+        "dateLabel": "28 oktober 1965",
+        "kind": "text",
+        "category": "Vrede en dialoog",
+        "summary": "Het concilie bespreekt de verhouding tot niet-christelijke godsdiensten en verwerpt antisemitisme.",
+        "context": "De verklaring wordt een belangrijk vertrekpunt voor katholiek-Joodse en andere interreligieuze ontmoetingen.",
+        "sources": [
+          {
+            "title": "Vaticaan · Nostra aetate",
+            "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651028_nostra-aetate_en.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:religious-freedom",
+        "title": "Dignitatis humanae",
+        "start": 1965,
+        "dateLabel": "7 december 1965",
+        "kind": "text",
+        "category": "Samenleving",
+        "summary": "Het concilie verwoordt het recht op godsdienstvrijheid en vrijheid van dwang.",
+        "context": "De tekst maakt onderscheid tussen de religieuze waarheidsvraag en de burgerlijke vrijheid van personen en gemeenschappen.",
+        "sources": [
+          {
+            "title": "Vaticaan · Dignitatis humanae",
+            "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651207_dignitatis-humanae_en.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:revelation",
+        "title": "Dei verbum",
+        "start": 1965,
+        "dateLabel": "18 november 1965",
+        "kind": "text",
+        "category": "Teksten",
+        "summary": "Het concilie beschrijft de verhouding tussen openbaring, Schrift en Traditie.",
+        "context": "Het document stimuleert Bijbelstudie en het lezen van de Schrift met aandacht voor tekstsoort en historische context.",
+        "sources": [
+          {
+            "title": "Vaticaan · Dei verbum",
+            "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_en.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:santegidio",
+        "title": "Ontstaan van Sant’Egidio",
+        "start": 1968,
+        "dateLabel": "1968",
+        "kind": "history",
+        "category": "Gemeenschap",
+        "summary": "Rond Andrea Riccardi ontstaat in Rome een gemeenschap die het Evangelie met concreet gemeenschapsleven verbindt.",
+        "context": "Gebed, vriendschap met armen en vrede worden kenmerkende oriëntaties.",
+        "sources": [
+          {
+            "title": "Vaticaan · Gemeenschap van Sant’Egidio",
+            "url": "https://www.laityfamilylife.va/content/laityfamilylife/en/associazioni-e-movimenti/repertorio/comunita-di-santegidio.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:assisi",
+        "title": "Wereldgebedsdag voor vrede in Assisi",
+        "start": 1986,
+        "dateLabel": "27 oktober 1986",
+        "kind": "history",
+        "category": "Vrede en dialoog",
+        "summary": "Johannes Paulus II brengt vertegenwoordigers van verschillende religies in Assisi samen.",
+        "context": "De ontmoeting zoekt gezamenlijke inzet voor vrede terwijl de verschillende gebedstradities herkenbaar blijven.",
+        "sources": [
+          {
+            "title": "Vaticaan · Assisi, slottoespraak",
+            "url": "https://www.vatican.va/content/john-paul-ii/en/speeches/1986/october/documents/hf_jp-ii_spe_19861027_prayer-peace-assisi-final.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:catechism",
+        "title": "Publicatie van de Catechismus",
+        "start": 1992,
+        "dateLabel": "1992",
+        "kind": "text",
+        "category": "Teksten",
+        "summary": "Johannes Paulus II laat de Catechismus van de Katholieke Kerk publiceren.",
+        "context": "De tekst ordent de katholieke geloofsleer rond belijdenis, sacramenten, moreel leven en gebed.",
+        "sources": [
+          {
+            "title": "Vaticaan · Fidei depositum",
+            "url": "https://www.vatican.va/content/john-paul-ii/en/apost_constitutions/documents/hf_jp-ii_apc_19921011_fidei-depositum.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:ecumenism",
+        "title": "Ut unum sint",
+        "start": 1995,
+        "dateLabel": "25 mei 1995",
+        "kind": "text",
+        "category": "Vrede en dialoog",
+        "summary": "Johannes Paulus II bevestigt de katholieke inzet voor de eenheid van christenen.",
+        "context": "De encycliek bespreekt ook dialoog over de manier waarop het pauselijk ambt wordt uitgeoefend.",
+        "sources": [
+          {
+            "title": "Vaticaan · Ut unum sint",
+            "url": "https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_25051995_ut-unum-sint.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:laudato",
+        "title": "Laudato si’",
+        "start": 2015,
+        "dateLabel": "24 mei 2015",
+        "kind": "text",
+        "category": "Samenleving",
+        "summary": "Franciscus verbindt ecologische zorg met armoede, verantwoordelijkheid en menselijke verhoudingen.",
+        "context": "Het begrip integrale ecologie benadrukt dat milieu en sociale rechtvaardigheid samenhangen.",
+        "sources": [
+          {
+            "title": "Vaticaan · Laudato si’",
+            "url": "https://www.vatican.va/content/francesco/en/encyclicals/documents/papa-francesco_20150524_enciclica-laudato-si.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:fraternity",
+        "title": "Document over menselijke broederlijkheid",
+        "start": 2019,
+        "dateLabel": "4 februari 2019",
+        "kind": "text",
+        "category": "Vrede en dialoog",
+        "summary": "Paus Franciscus en grootimam Ahmad al-Tayyeb ondertekenen in Abu Dhabi een gezamenlijke verklaring.",
+        "context": "De tekst bepleit vrede, menselijke waardigheid en burgerschap; zij vertegenwoordigt een concrete dialoog, niet alle stemmen binnen beide religies.",
+        "sources": [
+          {
+            "title": "Vaticaan · Human Fraternity",
+            "url": "https://www.vatican.va/content/francesco/en/travels/2019/outside/documents/papa-francesco_20190204_documento-fratellanza-umana.html"
+          }
+        ]
+      },
+      {
+        "id": "christianity:fratelli",
+        "title": "Fratelli tutti",
+        "start": 2020,
+        "dateLabel": "3 oktober 2020",
+        "kind": "text",
+        "category": "Samenleving",
+        "summary": "Franciscus bespreekt broederlijkheid, sociale vriendschap en de omgang met uitsluiting.",
+        "context": "De barmhartige Samaritaan wordt een centraal beeld voor verantwoordelijkheid over grenzen heen.",
+        "sources": [
+          {
+            "title": "Vaticaan · Fratelli tutti",
+            "url": "https://www.vatican.va/content/francesco/en/encyclicals/documents/papa-francesco_20201003_enciclica-fratelli-tutti.html"
+          }
+        ],
+        "passage": {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "LUK",
+          "chapter": 10,
+          "verse": 25,
+          "endVerse": 37
+        }
+      },
+      {
+        "id": "christianity:doctrine-discovery",
+        "title": "Verklaring over de ‘Doctrine of Discovery’",
+        "start": 2023,
+        "dateLabel": "30 maart 2023",
+        "kind": "text",
+        "category": "Samenleving",
+        "summary": "Twee Vaticaanse dicasteries wijzen de zogenoemde ontdekkingsleer af.",
+        "context": "De verklaring hoort bij het debat over kolonialisme en inheemse rechten; erkenning vervangt niet het werk van herstel en historisch onderzoek.",
+        "sources": [
+          {
+            "title": "Vaticaan · Gezamenlijke verklaring",
+            "url": "https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2023/03/30/230330b.html"
+          }
+        ]
+      }
+    ],
+    "judaism": [
+      {
+        "id": "judaism:assyria",
+        "title": "Val van het noordelijke koninkrijk",
+        "start": -722,
+        "dateLabel": "ca. 722–720 v.Chr.",
+        "kind": "history",
+        "category": "Oudheid",
+        "summary": "De Assyrische verovering van Samaria beëindigt het noordelijke koninkrijk Israël.",
+        "context": "Bijbelse vertelling en Assyrische koningsbronnen bieden verschillende perspectieven op verovering en deportatie.",
+        "sources": [
+          {
+            "title": "Sefaria · 2 Koningen 17",
+            "url": "https://www.sefaria.org/II_Kings.17"
+          }
+        ],
+        "end": -720,
+        "passage": {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "2KI",
+          "chapter": 17,
+          "verse": 5,
+          "endVerse": 6
+        }
+      },
+      {
+        "id": "judaism:temple1",
+        "title": "Verwoesting van de eerste tempel",
+        "start": -587,
+        "dateLabel": "587/586 v.Chr.",
+        "kind": "history",
+        "category": "Oudheid",
+        "summary": "Babylonische troepen verwoesten Jeruzalem en de tempel; delen van de bevolking worden gedeporteerd.",
+        "context": "De bronchronologie leidt tot twee gangbare jaartallen. De ballingschap krijgt een centrale plaats in latere herinnering.",
+        "sources": [
+          {
+            "title": "Sefaria · 2 Koningen 25",
+            "url": "https://www.sefaria.org/II_Kings.25"
+          }
+        ],
+        "end": -586,
+        "passage": {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "2KI",
+          "chapter": 25,
+          "verse": 8,
+          "endVerse": 12
+        }
+      },
+      {
+        "id": "judaism:cyrus",
+        "title": "Perzische macht en terugkeertraditie",
+        "start": -539,
+        "dateLabel": "539–538 v.Chr.",
+        "kind": "history",
+        "category": "Oudheid",
+        "summary": "Na de Perzische verovering van Babylon beschrijft Ezra toestemming om de tempel te herbouwen.",
+        "context": "De terugkeer vindt niet in één beweging plaats. Joodse gemeenschappen blijven ook buiten Juda bestaan.",
+        "sources": [
+          {
+            "title": "Sefaria · Ezra 1",
+            "url": "https://www.sefaria.org/Ezra.1"
+          }
+        ],
+        "end": -538,
+        "passage": {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "EZR",
+          "chapter": 1,
+          "verse": 1,
+          "endVerse": 4
+        }
+      },
+      {
+        "id": "judaism:temple2",
+        "title": "Voltooiing van de tweede tempel",
+        "start": -516,
+        "dateLabel": "ca. 516/515 v.Chr.",
+        "kind": "history",
+        "category": "Oudheid",
+        "summary": "Ezra dateert de voltooiing in het zesde regeringsjaar van Darius.",
+        "context": "De herbouw herstelt de cultus, maar maakt de eerdere politieke en sociale verhoudingen niet eenvoudig ongedaan.",
+        "sources": [
+          {
+            "title": "Sefaria · Ezra 6",
+            "url": "https://www.sefaria.org/Ezra.6"
+          }
+        ],
+        "end": -515,
+        "passage": {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "EZR",
+          "chapter": 6,
+          "verse": 14,
+          "endVerse": 18
+        }
+      },
+      {
+        "id": "judaism:ezra",
+        "title": "Tora-lezing in Ezra en Nehemia",
+        "start": -450,
+        "dateLabel": "vijfde–vierde eeuw v.Chr. · omstreden datering",
+        "kind": "text",
+        "category": "Teksten",
+        "summary": "Nehemia beschrijft openbare Tora-lezing, uitleg en gemeenschappelijke heroriëntatie.",
+        "context": "De precieze datering van Ezra’s optreden en de redactie van de boeken wordt verschillend gereconstrueerd.",
+        "sources": [
+          {
+            "title": "Sefaria · Nehemia 8",
+            "url": "https://www.sefaria.org/Nehemiah.8"
+          }
+        ],
+        "end": -350,
+        "passage": {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "NEH",
+          "chapter": 8,
+          "verse": 1,
+          "endVerse": 8
+        }
+      },
+      {
+        "id": "judaism:greek",
+        "title": "Tora in het Grieks",
+        "start": -300,
+        "dateLabel": "derde eeuw v.Chr. · bij benadering",
+        "kind": "text",
+        "category": "Teksten",
+        "summary": "In de hellenistische diaspora ontstaat een Griekse vertaling van de Tora, later verbonden met de Septuaginta.",
+        "context": "De overige Griekse Bijbelboeken hebben andere ontstaansgeschiedenissen; één datum voor de hele collectie zou misleidend zijn.",
+        "sources": [
+          {
+            "title": "Teach Jewish History · Referentietijdslijn",
+            "url": "https://teachjewishhistory.org/timeline"
+          }
+        ],
+        "end": -200
+      },
+      {
+        "id": "judaism:scrolls",
+        "title": "Joodse tekstculturen rond de Dode Zee",
+        "start": -250,
+        "dateLabel": "ca. 250 v.Chr.–70 n.Chr.",
+        "kind": "text",
+        "category": "Teksten",
+        "summary": "De Dode-Zeerollen bewaren Bijbelhandschriften, uitleg en gemeenschapsregels uit de oudheid.",
+        "context": "De manuscripten tonen tekstuele en religieuze verscheidenheid. Hun verhouding tot Qumran is onderwerp van debat.",
+        "sources": [
+          {
+            "title": "Israel Museum · Shrine of the Book",
+            "url": "https://museum.imj.org.il/newsletter/pdf/1.1.18-e.pdf"
+          }
+        ],
+        "end": 70
+      },
+      {
+        "id": "judaism:hanukkah",
+        "title": "Herinwijding van de tempel",
+        "start": -164,
+        "dateLabel": "164 v.Chr.",
+        "kind": "history",
+        "category": "Feesten en rituelen",
+        "summary": "Na de Makkabese opstand wordt de tempel opnieuw ingewijd.",
+        "context": "Chanoeka herinnert hieraan. De latere rabbijnse vertelling over olie legt een eigen accent.",
+        "sources": [
+          {
+            "title": "Jewish Museum Berlin · Chanoeka",
+            "url": "https://www.jmberlin.de/en/topic-hanukkah"
+          },
+          {
+            "title": "Sefaria · Sjabbat 21b",
+            "url": "https://www.sefaria.org/Shabbat.21b"
+          }
+        ]
+      },
+      {
+        "id": "judaism:rome",
+        "title": "Romeinse inname van Jeruzalem",
+        "start": -63,
+        "dateLabel": "63 v.Chr.",
+        "kind": "history",
+        "category": "Oudheid",
+        "summary": "Pompeius’ optreden brengt Judea sterker binnen de Romeinse invloedssfeer.",
+        "context": "Verschillende Joodse groepen reageren op veranderende politieke en religieuze verhoudingen.",
+        "sources": [
+          {
+            "title": "Teach Jewish History · Referentietijdslijn",
+            "url": "https://teachjewishhistory.org/timeline"
+          }
+        ]
+      },
+      {
+        "id": "judaism:temple70",
+        "title": "Verwoesting van de tweede tempel",
+        "start": 70,
+        "dateLabel": "70",
+        "kind": "history",
+        "category": "Oudheid",
+        "summary": "Romeinse troepen verwoesten de tempel tijdens de Joodse opstand.",
+        "context": "Gebed, leren en gemeenschapsleven ontwikkelen zich verder zonder tempelcultus. Diaspora bestond al vóór deze verwoesting.",
+        "sources": [
+          {
+            "title": "Metropolitan Museum · Jeruzalem en de tweede tempel",
+            "url": "https://www.metmuseum.org/exhibitions/listings/2016/jerusalem/exhibition-galleries"
+          }
+        ]
+      },
+      {
+        "id": "judaism:bar-kokhba",
+        "title": "Bar Kochba-opstand",
+        "start": 132,
+        "dateLabel": "132–135",
+        "kind": "history",
+        "category": "Oudheid",
+        "summary": "Een nieuwe opstand tegen Rome eindigt met zware verliezen en verdere ontwrichting.",
+        "context": "De gevolgen raken bewoning, politieke mogelijkheden en herinnering. De datering van afzonderlijke maatregelen blijft soms omstreden.",
+        "sources": [
+          {
+            "title": "Ashmolean Museum · Munt uit de Bar Kochba-opstand",
+            "url": "https://www.ashmolean.org/node/179046"
+          }
+        ],
+        "end": 135
+      },
+      {
+        "id": "judaism:mishnah",
+        "title": "Redactie van de Misjna",
+        "start": 200,
+        "dateLabel": "ca. 200",
+        "kind": "text",
+        "category": "Teksten",
+        "summary": "De Misjna bundelt rabbijnse rechts- en uitlegtradities en wordt verbonden met Jehoeda ha-Nasi.",
+        "context": "Zij is geen eenvoudige samenvatting van één stem: uiteenlopende meningen blijven naast elkaar bewaard.",
+        "sources": [
+          {
+            "title": "Sefaria · Misjna",
+            "url": "https://www.sefaria.org/texts/Mishnah"
+          }
+        ]
+      },
+      {
+        "id": "judaism:yerushalmi",
+        "title": "Vorming van de Jeruzalemse Talmoed",
+        "start": 350,
+        "dateLabel": "vierde–vijfde eeuw · benadering",
+        "kind": "text",
+        "category": "Teksten",
+        "summary": "Rabbijnse discussie in het land Israël groeit uit tot de Jeruzalemse Talmoed.",
+        "context": "De naam betekent niet dat de gehele tekst in Jeruzalem is geschreven. Redactie is een geleidelijk proces.",
+        "sources": [
+          {
+            "title": "Sefaria · Talmoed",
+            "url": "https://www.sefaria.org/texts/Talmud"
+          }
+        ],
+        "end": 450
+      },
+      {
+        "id": "judaism:bavli",
+        "title": "Vorming van de Babylonische Talmoed",
+        "start": 450,
+        "dateLabel": "vijfde–zevende eeuw · benadering",
+        "kind": "text",
+        "category": "Teksten",
+        "summary": "In Babylonische leerscholen worden Misjna en discussie met elkaar verbonden.",
+        "context": "De Babylonische Talmoed krijgt groot gezag, maar interpretatie en toepassing blijven zich ontwikkelen.",
+        "sources": [
+          {
+            "title": "Sefaria · Talmoed",
+            "url": "https://www.sefaria.org/texts/Talmud"
+          }
+        ],
+        "end": 650
+      },
+      {
+        "id": "judaism:masorah",
+        "title": "Masoretische handschriften en Aleppo-codex",
+        "start": 900,
+        "dateLabel": "ca. 900–950",
+        "kind": "text",
+        "category": "Teksten",
+        "summary": "Schrijvers en masoreten leggen consonanten, klinkertekens, accenten en tekstnotities zorgvuldig vast.",
+        "context": "De Aleppo-codex, vaak rond 930 gedateerd, is een belangrijke getuige; geen enkel handschrift vertegenwoordigt alle tekstgeschiedenis.",
+        "sources": [
+          {
+            "title": "Hebrew University · De Aleppo-codex",
+            "url": "https://bibleproject.huji.ac.il/sites/default/files/he_bible_project/files/zer_r.i.1.pdf"
+          }
+        ],
+        "end": 950
+      },
+      {
+        "id": "judaism:rashi",
+        "title": "Rasji en Bijbeluitleg",
+        "start": 1040,
+        "dateLabel": "1040–1105",
+        "kind": "text",
+        "category": "Teksten",
+        "summary": "Rasji’s uitleg op Bijbel en Talmoed wordt een invloedrijke stem in de Joodse studie.",
+        "context": "Zijn werk verbindt uitleg van de tekst met rabbijnse traditie; andere uitleggers blijven eigen benaderingen volgen.",
+        "sources": [
+          {
+            "title": "Sefaria · Rasji",
+            "url": "https://www.sefaria.org/topics/rashi"
+          }
+        ],
+        "end": 1105
+      },
+      {
+        "id": "judaism:crusades",
+        "title": "Geweld tegen Rijnlandse Joden",
+        "start": 1096,
+        "dateLabel": "1096",
+        "kind": "history",
+        "category": "Vervolging",
+        "summary": "Tijdens de Eerste Kruistocht worden Joodse gemeenschappen in het Rijnland aangevallen.",
+        "context": "Deze vervolging behoort zowel tot Joodse herinneringsgeschiedenis als tot de geschiedenis van christelijk anti-judaïsme.",
+        "sources": [
+          {
+            "title": "Teach Jewish History · Referentietijdslijn",
+            "url": "https://teachjewishhistory.org/timeline"
+          }
+        ]
+      },
+      {
+        "id": "judaism:maimonides",
+        "title": "Maimonides en de Misjnee Tora",
+        "start": 1168,
+        "dateLabel": "ca. 1168–1178",
+        "kind": "text",
+        "category": "Teksten",
+        "summary": "Maimonides ordent de Joodse wet in een systematisch Hebreeuws werk.",
+        "context": "De code krijgt groot gezag maar roept ook kritiek op. Zij staat naast, niet buiten, de discussie over Talmoed en uitleg.",
+        "sources": [
+          {
+            "title": "University of Iowa · Maimonides en zijn werken",
+            "url": "https://heirs.lib.uiowa.edu/record.php?id=81"
+          },
+          {
+            "title": "Sefaria · Misjnee Tora",
+            "url": "https://www.sefaria.org/texts/Halakhah/Mishneh%20Torah"
+          }
+        ],
+        "end": 1178
+      },
+      {
+        "id": "judaism:england-expulsion",
+        "title": "Verdrijving uit Engeland",
+        "start": 1290,
+        "dateLabel": "1290",
+        "kind": "history",
+        "category": "Vervolging",
+        "summary": "De Engelse kroon verdrijft de Joodse bevolking.",
+        "context": "De uitsluiting duurt eeuwen; individuele aanwezigheid en bekeerlingen maken de geschiedenis complexer dan een volledige afwezigheid.",
+        "sources": [
+          {
+            "title": "Jewish Museum London · Menasseh ben Israel en terugkeer",
+            "url": "https://jewishmuseum.org.uk/50-objects/jm-990/"
+          }
+        ]
+      },
+      {
+        "id": "judaism:spain-expulsion",
+        "title": "Verdrijving uit Spanje",
+        "start": 1492,
+        "dateLabel": "1492",
+        "kind": "history",
+        "category": "Vervolging",
+        "summary": "De vorsten van Castilië en Aragon bevelen niet-bekeerde Joden te vertrekken.",
+        "context": "Sefardische gemeenschappen verspreiden zich verder over onder meer het Middellandse Zeegebied. Bekering onder dwang en inquisitie vormen een verwante geschiedenis.",
+        "sources": [
+          {
+            "title": "Library of Congress · 1492: An Ongoing Voyage",
+            "url": "https://wwws.loc.gov/exhibits/1492/"
+          }
+        ]
+      },
+      {
+        "id": "judaism:shulchan",
+        "title": "Druk van de Sjoelchan Aroech",
+        "start": 1565,
+        "dateLabel": "1565",
+        "kind": "text",
+        "category": "Teksten",
+        "summary": "Josef Karo’s rechtscode wordt in Venetië gedrukt.",
+        "context": "Latere glossen, onder meer van Mosje Isserles, verbinden het werk met verschillende gewoonten en juridische tradities.",
+        "sources": [
+          {
+            "title": "Sefaria · Sjoelchan Aroech",
+            "url": "https://www.sefaria.org/texts/Halakhah/Shulchan%20Arukh"
+          }
+        ]
+      },
+      {
+        "id": "judaism:america",
+        "title": "Joodse gemeenschap in Nieuw-Amsterdam",
+        "start": 1654,
+        "dateLabel": "1654",
+        "kind": "history",
+        "category": "Diaspora",
+        "summary": "De Joodse aanwezigheid in het latere New York krijgt een blijvende gemeenschapsvorm.",
+        "context": "Dit is een belangrijk moment in Amerikaans-Joodse geschiedenis, niet het begin van alle Joodse aanwezigheid in Amerika.",
+        "sources": [
+          {
+            "title": "American Jewish Historical Society · Collectie en geschiedenis",
+            "url": "https://ajhs.org/about/"
+          }
+        ]
+      },
+      {
+        "id": "judaism:england-return",
+        "title": "Hernieuwd openbaar Joods leven in Engeland",
+        "start": 1656,
+        "dateLabel": "1656",
+        "kind": "history",
+        "category": "Diaspora",
+        "summary": "Onder Cromwell wordt openbaar Joods gemeenschapsleven opnieuw mogelijk.",
+        "context": "Menasseh ben Israel speelt een belangrijke rol in de onderhandelingen. De terugkeer verloopt geleidelijk en niet via één eenvoudige toelatingswet.",
+        "sources": [
+          {
+            "title": "Jewish Museum London · Menasseh ben Israel en terugkeer",
+            "url": "https://jewishmuseum.org.uk/50-objects/jm-990/"
+          }
+        ]
+      },
+      {
+        "id": "judaism:hasidism",
+        "title": "Opkomst van het chassidisme",
+        "start": 1730,
+        "dateLabel": "achttiende eeuw",
+        "kind": "history",
+        "category": "Stromingen",
+        "summary": "In Oost-Europa ontstaat rond de Baal Sjem Tov een vernieuwingsbeweging met nadruk op vroomheid en gemeenschap.",
+        "context": "Verschillende chassidische richtingen groeien uit. Tegenstanders, later vaak mitnagdiem genoemd, ontwikkelen eigen reacties.",
+        "sources": [
+          {
+            "title": "YIVO · Geschiedenis van het chassidisme",
+            "url": "https://encyclopedia.yivo.org/article.aspx/Hasidism/Historical_Overview"
+          }
+        ],
+        "end": 1800
+      },
+      {
+        "id": "judaism:haskalah",
+        "title": "Haskala en Joodse verlichting",
+        "start": 1770,
+        "dateLabel": "late achttiende–negentiende eeuw",
+        "kind": "history",
+        "category": "Stromingen",
+        "summary": "Joodse denkers en schrijvers onderzoeken onderwijs, taal, burgerrechten en de verhouding tot de omringende samenleving.",
+        "context": "De Haskala heeft uiteenlopende regionale vormen en wordt niet door alle Joodse gemeenschappen hetzelfde ontvangen.",
+        "sources": [
+          {
+            "title": "Jewish Museum Berlin · Haskala",
+            "url": "https://www.jmberlin.de/en/topic-haskalah-enlightenment"
+          }
+        ],
+        "end": 1880
+      },
+      {
+        "id": "judaism:emancipation",
+        "title": "Burgerrechten voor Joden in Frankrijk",
+        "start": 1791,
+        "dateLabel": "1791",
+        "kind": "history",
+        "category": "Samenleving",
+        "summary": "De Franse revolutie maakt formeel gelijk burgerschap voor Joden mogelijk.",
+        "context": "Wettelijke emancipatie beëindigt antisemitisme niet. De verhouding tussen individuele rechten en gemeenschapsautonomie blijft onderwerp van debat.",
+        "sources": [
+          {
+            "title": "Teach Jewish History · Referentietijdslijn",
+            "url": "https://teachjewishhistory.org/timeline"
+          }
+        ]
+      },
+      {
+        "id": "judaism:reform",
+        "title": "Oprichting van West London Synagogue",
+        "start": 1840,
+        "dateLabel": "1840",
+        "kind": "history",
+        "category": "Stromingen",
+        "summary": "In Londen ontstaat een gemeente die liturgische hervormingen nastreeft.",
+        "context": "Zij past binnen bredere Europese vernieuwingsbewegingen. Orthodoxe, liberale en andere Joodse stromingen ontwikkelen verschillende antwoorden.",
+        "sources": [
+          {
+            "title": "West London Synagogue · Onze geschiedenis",
+            "url": "https://www.wls.org.uk/our-history"
+          }
+        ]
+      },
+      {
+        "id": "judaism:zionism",
+        "title": "Eerste Zionistische Congres",
+        "start": 1897,
+        "dateLabel": "1897",
+        "kind": "history",
+        "category": "Samenleving",
+        "summary": "Het congres in Bazel geeft het politieke zionisme een organisatorisch centrum.",
+        "context": "Joodse opvattingen over zionisme en het land Israël zijn en blijven divers; volk, staat en religie vallen niet samen.",
+        "sources": [
+          {
+            "title": "Library of Congress · De zionistische beweging",
+            "url": "https://www.loc.gov/collections/songs-of-america/articles-and-essays/historical-topics/zionist-movement-in-america/"
+          }
+        ]
+      },
+      {
+        "id": "judaism:shoah",
+        "title": "Sjoa: vervolging en genocide",
+        "start": 1933,
+        "dateLabel": "1933–1945",
+        "kind": "history",
+        "category": "Vervolging",
+        "summary": "Nazi-Duitsland en zijn medeplichtigen vervolgen en vermoorden Europese Joden; circa zes miljoen Joden worden gedood.",
+        "context": "De genocide verwoest gemeenschappen, families en culturele werelden. Zij mag niet als louter een episode in staatsvorming worden voorgesteld.",
+        "sources": [
+          {
+            "title": "USHMM · Holocausttijdslijn",
+            "url": "https://www.ushmm.org/m/pdfs/USHMM-Survivor-Testimony-Timeline.pdf"
+          }
+        ],
+        "end": 1945
+      },
+      {
+        "id": "judaism:pogrom1938",
+        "title": "Novemberpogroms",
+        "start": 1938,
+        "dateLabel": "9–10 november 1938",
+        "kind": "history",
+        "category": "Vervolging",
+        "summary": "Synagogen worden in brand gestoken, bedrijven vernield en Joden vermoord en massaal gearresteerd.",
+        "context": "De nazivervolging escaleert zichtbaar. De naam ‘Kristallnacht’ kan de ernst van het geweld verhullen.",
+        "sources": [
+          {
+            "title": "USHMM · Holocausttijdslijn",
+            "url": "https://www.ushmm.org/m/pdfs/USHMM-Survivor-Testimony-Timeline.pdf"
+          }
+        ]
+      },
+      {
+        "id": "judaism:scrolls-discovery",
+        "title": "Ontdekking van de Dode-Zeerollen",
+        "start": 1947,
+        "dateLabel": "1947",
+        "kind": "history",
+        "category": "Teksten",
+        "summary": "Bedoeïenen vinden bij Qumran rollen die het onderzoek naar oude Joodse teksten ingrijpend veranderen.",
+        "context": "Latere vondsten breiden de collectie uit. Datering van perkament, schrift en tekstredactie zijn verschillende vragen.",
+        "sources": [
+          {
+            "title": "Israel Museum · Shrine of the Book",
+            "url": "https://museum.imj.org.il/newsletter/pdf/1.1.18-e.pdf"
+          }
+        ]
+      },
+      {
+        "id": "judaism:israel1948",
+        "title": "Stichting van de staat Israël",
+        "start": 1948,
+        "dateLabel": "14 mei 1948",
+        "kind": "history",
+        "category": "Samenleving",
+        "summary": "De staat Israël wordt uitgeroepen in de context van het einde van het Britse mandaat en oorlog.",
+        "context": "Voor veel Joden is dit een keerpunt; de Palestijnse vlucht en verdrijving en de blijvende conflicten horen bij dezelfde historische context.",
+        "sources": [
+          {
+            "title": "USHMM · Overlevenden en de stichting van Israël",
+            "url": "https://encyclopedia.ushmm.org/content/en/article/postwar-refugee-crisis-and-the-establishment-of-the-state-of-israel"
+          },
+          {
+            "title": "Verenigde Naties · Staatsverklaring",
+            "url": "https://www.un.org/unispal/document/auto-insert-189917/"
+          }
+        ]
+      },
+      {
+        "id": "judaism:priesand",
+        "title": "Sally Priesand wordt rabbijn",
+        "start": 1972,
+        "dateLabel": "1972",
+        "kind": "history",
+        "category": "Stromingen",
+        "summary": "Sally Priesand wordt binnen het Amerikaanse Reform-jodendom tot rabbijn gewijd.",
+        "context": "Zij is de eerste vrouw met rabbijnse wijding in de Verenigde Staten, niet de eerste wereldwijd. Beleid verschilt tussen stromingen.",
+        "sources": [
+          {
+            "title": "Jewish Women's Archive · Vrouwen in het rabbinaat",
+            "url": "https://jwa.org/rabbis/about"
+          }
+        ]
+      },
+      {
+        "id": "judaism:digital-study",
+        "title": "Start van Sefaria",
+        "start": 2013,
+        "dateLabel": "2013",
+        "kind": "history",
+        "category": "Teksten",
+        "summary": "Sefaria ontwikkelt een vrij toegankelijke digitale bibliotheek van Joodse teksten en hun onderlinge verwijzingen.",
+        "context": "Digitale toegang vergroot het bereik, maar vertalingen en redactionele keuzes blijven zichtbaar te beoordelen.",
+        "sources": [
+          {
+            "title": "Sefaria · Strategisch plan en oprichtingsgeschiedenis",
+            "url": "https://www.sefaria.org.il/static/files/Sefaria_Strategic_Plan.pdf"
+          }
+        ]
+      }
+    ],
+    "islam": [
+      {
+        "id": "islam:birth",
+        "title": "Geboorte van Mohammed",
+        "start": 570,
+        "dateLabel": "ca. 570",
+        "kind": "tradition",
+        "category": "Ontstaan",
+        "summary": "De islamitische levensbeschrijving situeert Mohammeds geboorte in Mekka.",
+        "context": "Het gangbare jaartal is benaderend en berust op latere biografische overlevering.",
+        "sources": [
+          {
+            "title": "Metropolitan Museum · Islam: historische context",
+            "url": "https://resources.metmuseum.org/resources/metpublications/pdf/Islamic_art_in_the_Metropolitan_Museum_the_historical_context.pdf"
+          }
+        ]
+      },
+      {
+        "id": "islam:revelation",
+        "title": "Begin van de openbaring",
+        "start": 610,
+        "dateLabel": "ca. 610 · volgens de overlevering",
+        "kind": "tradition",
+        "category": "Ontstaan",
+        "summary": "Mohammed ontvangt volgens de islamitische overlevering de eerste openbaring.",
+        "context": "Soera 96:1–5 wordt met het begin verbonden. Het geloof in goddelijke openbaring en historische datering zijn onderscheiden vragen.",
+        "sources": [
+          {
+            "title": "Koran · Soera 96",
+            "url": "https://quran.com/96"
+          },
+          {
+            "title": "Sahih al-Bukhari · Begin van de openbaring",
+            "url": "https://sunnah.com/bukhari:3"
+          }
+        ],
+        "passage": {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "96",
+          "chapter": 1,
+          "verse": 1,
+          "endVerse": 5
+        }
+      },
+      {
+        "id": "islam:hijra",
+        "title": "Hidjra naar Medina",
+        "start": 622,
+        "dateLabel": "622",
+        "kind": "history",
+        "category": "Ontstaan",
+        "summary": "Mohammed en zijn volgelingen verhuizen van Mekka naar Medina.",
+        "context": "De hidjra wordt het referentiepunt van de islamitische jaartelling. Het maanjaar loopt anders dan het Gregoriaanse zonnejaar.",
+        "sources": [
+          {
+            "title": "Metropolitan Museum · Islam: historische context",
+            "url": "https://resources.metmuseum.org/resources/metpublications/pdf/Islamic_art_in_the_Metropolitan_Museum_the_historical_context.pdf"
+          }
+        ]
+      },
+      {
+        "id": "islam:badr",
+        "title": "Slag bij Badr",
+        "start": 624,
+        "dateLabel": "624",
+        "kind": "history",
+        "category": "Ontstaan",
+        "summary": "De vroege moslimgemeenschap behaalt een militaire overwinning bij Badr.",
+        "context": "De Koran verwijst naar Badr. Het vers is geen volledige chronologische veldslagbeschrijving.",
+        "sources": [
+          {
+            "title": "Koran · Aal Imran 3:123–126",
+            "url": "https://quran.com/3/123"
+          },
+          {
+            "title": "University of Washington · Chronologie van de vroege islam",
+            "url": "https://faculty.washington.edu/dwaugh/hist225/225chron/islchr.html"
+          }
+        ],
+        "passage": {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "3",
+          "chapter": 1,
+          "verse": 123,
+          "endVerse": 126
+        }
+      },
+      {
+        "id": "islam:mecca",
+        "title": "Terugkeer naar Mekka",
+        "start": 630,
+        "dateLabel": "630",
+        "kind": "history",
+        "category": "Ontstaan",
+        "summary": "Mohammed en zijn gemeenschap krijgen de controle over Mekka.",
+        "context": "De Kaäba krijgt een centrale plaats in de islamitische eredienst. De levensbeschrijving duidt de gebeurtenis religieus.",
+        "sources": [
+          {
+            "title": "University of Washington · Chronologie van de vroege islam",
+            "url": "https://faculty.washington.edu/dwaugh/hist225/225chron/islchr.html"
+          }
+        ]
+      },
+      {
+        "id": "islam:death",
+        "title": "Overlijden van Mohammed",
+        "start": 632,
+        "dateLabel": "632",
+        "kind": "history",
+        "category": "Gemeenschap",
+        "summary": "Mohammed overlijdt; de gemeenschap staat voor de vraag naar leiderschap na zijn dood.",
+        "context": "De daaropvolgende opvolgingsgeschiedenis wordt door verschillende islamitische tradities verschillend geïnterpreteerd.",
+        "sources": [
+          {
+            "title": "University of Washington · Chronologie van de vroege islam",
+            "url": "https://faculty.washington.edu/dwaugh/hist225/225chron/islchr.html"
+          }
+        ]
+      },
+      {
+        "id": "islam:rashidun",
+        "title": "De eerste vier kaliefen",
+        "start": 632,
+        "dateLabel": "632–661",
+        "kind": "history",
+        "category": "Gemeenschap",
+        "summary": "Abu Bakr, Umar, Uthman en Ali leiden achtereenvolgens de gemeenschap volgens de gangbare soennitische periodisering.",
+        "context": "De titel ‘rechtgeleide kaliefen’ is traditiegebonden. Sjiitische opvattingen over het legitieme leiderschap hebben een eigen kader.",
+        "sources": [
+          {
+            "title": "Metropolitan Museum · Omajjaden",
+            "url": "https://www.metmuseum.org/essays/the-art-of-the-umayyad-period-661-750"
+          }
+        ],
+        "end": 661
+      },
+      {
+        "id": "islam:uthman",
+        "title": "Uthman en de tekstoverlevering",
+        "start": 650,
+        "dateLabel": "ca. 650 · traditionele situering",
+        "kind": "tradition",
+        "category": "Teksten",
+        "summary": "Overleveringen verbinden Uthman met het laten vervaardigen en verspreiden van standaardexemplaren van de Koran.",
+        "context": "Handschriften en tradities worden naast elkaar onderzocht. De precieze fasering van het proces blijft een onderzoeksvraag.",
+        "sources": [
+          {
+            "title": "Sahih al-Bukhari · Verzameling van de Koran",
+            "url": "https://sunnah.com/bukhari:4987"
+          }
+        ]
+      },
+      {
+        "id": "islam:first-fitna",
+        "title": "Eerste fitna",
+        "start": 656,
+        "dateLabel": "656–661",
+        "kind": "history",
+        "category": "Breuk en hervorming",
+        "summary": "Burgeroorlog en opvolgingsconflicten verdelen de vroege gemeenschap.",
+        "context": "Latere soennitische, sjiitische en andere identiteiten groeien geleidelijk; zij ontstaan niet als volledig uitgewerkte stelsels op één dag.",
+        "sources": [
+          {
+            "title": "Metropolitan Museum · Omajjaden",
+            "url": "https://www.metmuseum.org/essays/the-art-of-the-umayyad-period-661-750"
+          }
+        ],
+        "end": 661
+      },
+      {
+        "id": "islam:umayyads",
+        "title": "Omajjadisch kalifaat",
+        "start": 661,
+        "dateLabel": "661–750",
+        "kind": "history",
+        "category": "Samenleving",
+        "summary": "De Omajjaden vestigen een dynastiek kalifaat met Damascus als machtscentrum.",
+        "context": "Politieke uitbreiding en culturele uitwisseling gaan samen met lokale verschillen en conflicten.",
+        "sources": [
+          {
+            "title": "Metropolitan Museum · Omajjaden",
+            "url": "https://www.metmuseum.org/essays/the-art-of-the-umayyad-period-661-750"
+          }
+        ],
+        "end": 750
+      },
+      {
+        "id": "islam:karbala",
+        "title": "Husayn gedood bij Karbala",
+        "start": 680,
+        "dateLabel": "680",
+        "kind": "history",
+        "category": "Gemeenschap",
+        "summary": "Husayn ibn Ali en zijn kleine gezelschap worden bij Karbala gedood.",
+        "context": "De gebeurtenis krijgt een centrale plaats in sjiitische herinnering en Ashura-rituelen. Moslimgemeenschappen herdenken de dag op verschillende manieren.",
+        "sources": [
+          {
+            "title": "Encyclopaedia Iranica · Husayn ibn Ali",
+            "url": "https://www.iranicaonline.org/articles/hosayn-b-ali-i/"
+          }
+        ]
+      },
+      {
+        "id": "islam:dome",
+        "title": "Rotskoepel in Jeruzalem",
+        "start": 691,
+        "dateLabel": "691–692",
+        "kind": "history",
+        "category": "Ruimte en cultuur",
+        "summary": "De Rotskoepel wordt onder Abd al-Malik gebouwd.",
+        "context": "Architectuur en Korantekst verwoorden religieuze en politieke betekenissen. Het gebouw is niet hetzelfde als de al-Aqsamoskee.",
+        "sources": [
+          {
+            "title": "Metropolitan Museum · Omajjaden",
+            "url": "https://www.metmuseum.org/essays/the-art-of-the-umayyad-period-661-750"
+          }
+        ],
+        "end": 692
+      },
+      {
+        "id": "islam:andalus",
+        "title": "Begin van al-Andalus",
+        "start": 711,
+        "dateLabel": "711",
+        "kind": "history",
+        "category": "Ruimte en cultuur",
+        "summary": "Troepen uit Noord-Afrika steken over naar het Iberisch schiereiland.",
+        "context": "De volgende eeuwen kennen wisselende machtsverhoudingen, culturele uitwisseling en zowel samenwerking als geweld tussen religieuze gemeenschappen.",
+        "sources": [
+          {
+            "title": "Metropolitan Museum · Al-Andalus",
+            "url": "https://www.metmuseum.org/pt/met-publications/al-andalus-the-art-of-islamic-spain"
+          }
+        ]
+      },
+      {
+        "id": "islam:abbasids",
+        "title": "Abbasidische machtswisseling",
+        "start": 750,
+        "dateLabel": "750",
+        "kind": "history",
+        "category": "Samenleving",
+        "summary": "De Abbasiden vervangen de Omajjadische dynastie als voornaamste kalifale macht.",
+        "context": "De politieke verschuiving maakt geen einde aan de diversiteit van lokale gemeenschappen en tradities.",
+        "sources": [
+          {
+            "title": "Metropolitan Museum · Abbasiden",
+            "url": "https://www.metmuseum.org/it/essays/the-art-of-the-abbasid-period-750-1258"
+          }
+        ]
+      },
+      {
+        "id": "islam:baghdad",
+        "title": "Stichting van Bagdad",
+        "start": 762,
+        "dateLabel": "762",
+        "kind": "history",
+        "category": "Ruimte en cultuur",
+        "summary": "Kalief al-Mansur sticht Bagdad als nieuwe hoofdstad.",
+        "context": "De stad wordt een centrum van handel, geleerdheid en tekstproductie; contacten overschrijden taal- en religiegrenzen.",
+        "sources": [
+          {
+            "title": "Metropolitan Museum · Abbasiden",
+            "url": "https://www.metmuseum.org/it/essays/the-art-of-the-abbasid-period-750-1258"
+          }
+        ]
+      },
+      {
+        "id": "islam:hadith",
+        "title": "Grote hadithverzamelingen",
+        "start": 800,
+        "dateLabel": "negende eeuw",
+        "kind": "text",
+        "category": "Teksten",
+        "summary": "In de negende eeuw krijgen verscheidene invloedrijke verzamelingen van profetische overleveringen hun vorm.",
+        "context": "Soennitische en sjiitische collecties en beoordelingsmethoden verschillen. Hadith is niet hetzelfde tekstgenre als de Koran.",
+        "sources": [
+          {
+            "title": "Sahih al-Bukhari · Collectie",
+            "url": "https://sunnah.com/bukhari"
+          },
+          {
+            "title": "Encyclopaedia Iranica · Hadith",
+            "url": "https://www.iranicaonline.org/articles/hadith/i-intro/"
+          }
+        ],
+        "end": 900
+      },
+      {
+        "id": "islam:fatimids",
+        "title": "Fatimidisch kalifaat",
+        "start": 909,
+        "dateLabel": "909–1171",
+        "kind": "history",
+        "category": "Gemeenschap",
+        "summary": "Een ismaïlitisch-sjiitische dynastie bouwt een kalifaat uit in Noord-Afrika en later Egypte.",
+        "context": "De aanwezigheid van meerdere kalifaten toont dat de politieke geschiedenis van de islam niet één ononderbroken eenheidsstaat is.",
+        "sources": [
+          {
+            "title": "Metropolitan Museum · Fatimiden",
+            "url": "https://www.metmuseum.org/ja/essays/the-art-of-the-fatimid-period-909-1171"
+          }
+        ],
+        "end": 1171
+      },
+      {
+        "id": "islam:cairo",
+        "title": "Fatimidisch Caïro",
+        "start": 969,
+        "dateLabel": "969",
+        "kind": "history",
+        "category": "Ruimte en cultuur",
+        "summary": "De Fatimiden veroveren Egypte en stichten Caïro als machtscentrum.",
+        "context": "Religieuze instellingen, handel en kunst verbinden de stad met een brede mediterrane en islamitische wereld.",
+        "sources": [
+          {
+            "title": "Metropolitan Museum · Fatimiden",
+            "url": "https://www.metmuseum.org/ja/essays/the-art-of-the-fatimid-period-909-1171"
+          }
+        ]
+      },
+      {
+        "id": "islam:madrasa",
+        "title": "Mustansiriyya in Bagdad",
+        "start": 1228,
+        "dateLabel": "1228–1233",
+        "kind": "history",
+        "category": "Teksten",
+        "summary": "De Mustansiriyya biedt onderwijs voor de vier bekende soennitische rechtsscholen.",
+        "context": "Rechtsscholen zijn interpretatieve tradities, geen afzonderlijke religies. Onderwijs kent ook andere institutionele vormen.",
+        "sources": [
+          {
+            "title": "Metropolitan Museum · Abbasiden",
+            "url": "https://www.metmuseum.org/it/essays/the-art-of-the-abbasid-period-750-1258"
+          }
+        ],
+        "end": 1233
+      },
+      {
+        "id": "islam:baghdad1258",
+        "title": "Mongoolse inname van Bagdad",
+        "start": 1258,
+        "dateLabel": "1258",
+        "kind": "history",
+        "category": "Samenleving",
+        "summary": "Mongoolse troepen nemen Bagdad in; het Abbasidische kalifaat in de stad eindigt.",
+        "context": "De verwoesting is ingrijpend, maar islamitische geleerdheid en gemeenschappen blijven elders voortbestaan en veranderen.",
+        "sources": [
+          {
+            "title": "Metropolitan Museum · Abbasiden",
+            "url": "https://www.metmuseum.org/it/essays/the-art-of-the-abbasid-period-750-1258"
+          }
+        ]
+      },
+      {
+        "id": "islam:mali",
+        "title": "Mansa Musa’s bedevaart",
+        "start": 1324,
+        "dateLabel": "1324–1325",
+        "kind": "history",
+        "category": "Ruimte en cultuur",
+        "summary": "De vorst van Mali reist voor de hadj naar Mekka.",
+        "context": "Zijn tocht maakt West-Afrikaanse islamitische netwerken zichtbaar. De islamitische geschiedenis reikt veel verder dan het Midden-Oosten.",
+        "sources": [
+          {
+            "title": "American Historical Association · Mansa Musa en reisbronnen",
+            "url": "https://www.historians.org/resource/travel-and-trade-in-later-medieval-africa/"
+          }
+        ],
+        "end": 1325
+      },
+      {
+        "id": "islam:ottomans",
+        "title": "Ottomaanse inname van Constantinopel",
+        "start": 1453,
+        "dateLabel": "1453",
+        "kind": "history",
+        "category": "Samenleving",
+        "summary": "De Ottomanen nemen Constantinopel in en bouwen de stad uit tot hun hoofdstad.",
+        "context": "De nieuwe machtsverhoudingen raken moslims, christenen en Joden. Religieuze status en praktijk verschillen per tijd en plaats.",
+        "sources": [
+          {
+            "title": "Metropolitan Museum · Ottomanen vóór 1600",
+            "url": "https://www.metmuseum.org/essays/the-art-of-the-ottomans-before-1600"
+          }
+        ]
+      },
+      {
+        "id": "islam:granada",
+        "title": "Einde van het Nasridische Granada",
+        "start": 1492,
+        "dateLabel": "1492",
+        "kind": "history",
+        "category": "Samenleving",
+        "summary": "Granada komt onder christelijke heerschappij; de laatste islamitische dynastie op het Iberisch schiereiland eindigt.",
+        "context": "Latere druk tot bekering en verdrijving verandert het leven van moslims en hun afstammelingen ingrijpend.",
+        "sources": [
+          {
+            "title": "Metropolitan Museum · Al-Andalus",
+            "url": "https://www.metmuseum.org/pt/met-publications/al-andalus-the-art-of-islamic-spain"
+          }
+        ]
+      },
+      {
+        "id": "islam:safavid",
+        "title": "Safaviden en sjiisme in Iran",
+        "start": 1501,
+        "dateLabel": "1501",
+        "kind": "history",
+        "category": "Gemeenschap",
+        "summary": "De Safavidische dynastie vestigt zich in Iran en bevordert het twaalver-sjiisme.",
+        "context": "De verandering verloopt geleidelijk en kent dwang en conflict. Iraanse religieuze geschiedenis blijft intern verscheiden.",
+        "sources": [
+          {
+            "title": "Metropolitan Museum · Safaviden vóór 1600",
+            "url": "https://www.metmuseum.org/essays/the-art-of-the-safavids-before-1600"
+          }
+        ]
+      },
+      {
+        "id": "islam:holy-cities",
+        "title": "Mekka en Medina in de Ottomaanse invloedssfeer",
+        "start": 1517,
+        "dateLabel": "1517",
+        "kind": "history",
+        "category": "Ruimte en cultuur",
+        "summary": "Na de overwinning op de Mamelukken breidt de Ottomaanse macht zich uit over Syrië, Egypte en de heilige steden.",
+        "context": "Bescherming van bedevaart en heilige plaatsen versterkt het religieuze prestige van de sultan.",
+        "sources": [
+          {
+            "title": "Metropolitan Museum · Ottomanen vóór 1600",
+            "url": "https://www.metmuseum.org/essays/the-art-of-the-ottomans-before-1600"
+          }
+        ]
+      },
+      {
+        "id": "islam:mughal",
+        "title": "Begin van het Mogolrijk",
+        "start": 1526,
+        "dateLabel": "1526",
+        "kind": "history",
+        "category": "Samenleving",
+        "summary": "Babur vestigt een nieuwe dynastie op het Indiase subcontinent.",
+        "context": "Het rijk verbindt Centraal-Aziatische, Perzische en Zuid-Aziatische tradities. Het vertegenwoordigt niet alle islamitische gemeenschappen in de regio.",
+        "sources": [
+          {
+            "title": "Victoria and Albert Museum · Mogolrijk",
+            "url": "https://www.vam.ac.uk/articles/the-arts-of-the-mughal-empire/"
+          }
+        ]
+      },
+      {
+        "id": "islam:mughal-culture",
+        "title": "Mogolkunst en religieuze ontmoetingen",
+        "start": 1580,
+        "dateLabel": "ca. 1580–1650",
+        "kind": "history",
+        "category": "Ruimte en cultuur",
+        "summary": "Onder Akbar, Jahangir en Shah Jahan ontwikkelen hofkunst en boekcultuur zich sterk.",
+        "context": "Kunstvoorwerpen getuigen van uitwisseling tussen religies en regio’s, naast politieke ongelijkheid en uiteenlopende religieuze beleidskeuzes.",
+        "sources": [
+          {
+            "title": "Victoria and Albert Museum · Mogolrijk",
+            "url": "https://www.vam.ac.uk/articles/the-arts-of-the-mughal-empire/"
+          }
+        ],
+        "end": 1650
+      },
+      {
+        "id": "islam:cairo-edition",
+        "title": "De Caïrose Koraneditie",
+        "start": 1924,
+        "dateLabel": "1924",
+        "kind": "text",
+        "category": "Teksten",
+        "summary": "In Egypte verschijnt een invloedrijke gedrukte Koraneditie volgens de overlevering van Hafs naar Asim.",
+        "context": "Dit is geen ontstaan van de Koran: het betreft een moderne druk binnen een veel oudere schriftelijke en mondelinge traditie.",
+        "sources": [
+          {
+            "title": "Quran Archive Project · Egyptische druk 1924",
+            "url": "https://qrnr.org/egypt-kfe/"
+          }
+        ]
+      },
+      {
+        "id": "islam:caliphate1924",
+        "title": "Afschaffing van het Ottomaanse kalifaat",
+        "start": 1924,
+        "dateLabel": "3 maart 1924",
+        "kind": "history",
+        "category": "Breuk en hervorming",
+        "summary": "Het Turkse parlement schaft het kalifaat af.",
+        "context": "De verhouding tussen religie, natie en politiek krijgt uiteenlopende nieuwe vormen. Er komt geen algemeen erkende opvolger.",
+        "sources": [
+          {
+            "title": "Library of Congress · Turkey: a country study",
+            "url": "https://tile.loc.gov/storage-services/master/frd/frdcstdy/tu/turkeycountrystu00metz_0/turkeycountrystu00metz_0.pdf"
+          }
+        ]
+      },
+      {
+        "id": "islam:indonesia",
+        "title": "Indonesische onafhankelijkheidsverklaring",
+        "start": 1945,
+        "dateLabel": "17 augustus 1945",
+        "kind": "history",
+        "category": "Samenleving",
+        "summary": "Indonesië verklaart zich onafhankelijk; de latere republiek telt grote en diverse moslimgemeenschappen.",
+        "context": "De staat kiest een eigen kader voor religieuze verscheidenheid. Islam en nationalisme worden door verschillende bewegingen anders verbonden.",
+        "sources": [
+          {
+            "title": "Indonesisch staatssecretariaat · Onafhankelijkheidsverklaring",
+            "url": "https://www.setneg.go.id/baca/index/presidential_state_addres_on_the_66th_anniversary_of_independence_of_ri_jakarta_16_agustus_2011"
+          }
+        ]
+      },
+      {
+        "id": "islam:birmingham",
+        "title": "Onderzoek naar het Birmingham-handschrift",
+        "start": 2015,
+        "dateLabel": "2015",
+        "kind": "history",
+        "category": "Teksten",
+        "summary": "De universiteit presenteert radiokoolstofonderzoek naar vroeg Koranperkament.",
+        "context": "De bandbreedte van 568–645 betreft het perkament, niet automatisch het moment waarop de tekst werd geschreven.",
+        "sources": [
+          {
+            "title": "University of Birmingham · Vroeg Koranhandschrift",
+            "url": "https://www.birmingham.ac.uk/news-archive/2015/birmingham-quran-manuscript-dated-among-the-oldest-in-the-world"
+          }
+        ]
+      },
+      {
+        "id": "islam:fraternity",
+        "title": "Document over menselijke broederlijkheid",
+        "start": 2019,
+        "dateLabel": "4 februari 2019",
+        "kind": "text",
+        "category": "Vrede en dialoog",
+        "summary": "Grootimam Ahmad al-Tayyeb en paus Franciscus ondertekenen een verklaring over samenleven en vrede.",
+        "context": "De gezamenlijke tekst is een concrete interreligieuze inzet. Hij vertegenwoordigt niet elke islamitische of katholieke opvatting.",
+        "sources": [
+          {
+            "title": "Vaticaan · Human Fraternity, gezamenlijk document",
+            "url": "https://www.vatican.va/content/francesco/en/travels/2019/outside/documents/papa-francesco_20190204_documento-fratellanza-umana.html"
+          }
+        ]
+      }
+    ]
+  },
+  "undated": {
+    "christianity": [
+      {
+        "id": "christianity:creation",
+        "title": "Schepping en menselijke verantwoordelijkheid",
+        "dateLabel": "Geen historische datering",
+        "kind": "tradition",
+        "category": "Ongedateerde teksttraditie",
+        "summary": "Genesis verbeeldt de wereld als Gods schepping en de mens als verantwoordelijk wezen.",
+        "context": "Een religieuze scheppingstekst is geen gebeurtenis met een empirisch vastgestelde kalenderdatum.",
+        "sources": [
+          {
+            "title": "Genesis 1",
+            "url": "https://bible.usccb.org/bible/genesis/1"
+          }
+        ],
+        "passage": {
+          "tradition": "christianity",
+          "edition": "catholic-nl",
+          "book": "GEN",
+          "chapter": 1,
+          "verse": 26,
+          "endVerse": 31
+        }
+      }
+    ],
+    "judaism": [
+      {
+        "id": "judaism:abraham",
+        "title": "Abraham en het verbond",
+        "dateLabel": "Geen historische datering",
+        "kind": "tradition",
+        "category": "Ongedateerde teksttraditie",
+        "summary": "Genesis vertelt over roeping, migratie en de belofte aan Abraham.",
+        "context": "Een gebruikelijke indeling in een aartsvadertijd is geen onafhankelijke datering van elk verhaal.",
+        "sources": [
+          {
+            "title": "Sefaria · Genesis 12",
+            "url": "https://www.sefaria.org/Genesis.12"
+          }
+        ],
+        "passage": {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "GEN",
+          "chapter": 12,
+          "verse": 1,
+          "endVerse": 9
+        }
+      },
+      {
+        "id": "judaism:exodus",
+        "title": "Uittocht uit Egypte",
+        "dateLabel": "Geen historische datering",
+        "kind": "tradition",
+        "category": "Ongedateerde teksttraditie",
+        "summary": "Exodus verhaalt bevrijding uit slavernij en de wording van een gemeenschap.",
+        "context": "Historische reconstructies en voorgestelde jaartallen verschillen; het religieuze verhaal krijgt hier geen schijnpreciese datum.",
+        "sources": [
+          {
+            "title": "Sefaria · Exodus 12",
+            "url": "https://www.sefaria.org/Exodus.12"
+          }
+        ],
+        "passage": {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "EXO",
+          "chapter": 12,
+          "verse": 1,
+          "endVerse": 14
+        }
+      },
+      {
+        "id": "judaism:sinai",
+        "title": "Verbond en Tora bij Sinai",
+        "dateLabel": "Geen historische datering",
+        "kind": "tradition",
+        "category": "Ongedateerde teksttraditie",
+        "summary": "Exodus verbindt de berg Sinai met verbond en het ontvangen van de geboden.",
+        "context": "De betekenis in Joodse herinnering en ritueel staat los van het ontbreken van een vastgestelde historische datum.",
+        "sources": [
+          {
+            "title": "Sefaria · Exodus 19",
+            "url": "https://www.sefaria.org/Exodus.19"
+          }
+        ],
+        "passage": {
+          "tradition": "judaism",
+          "edition": "he",
+          "book": "EXO",
+          "chapter": 19,
+          "verse": 1,
+          "endVerse": 8
+        }
+      }
+    ],
+    "islam": [
+      {
+        "id": "islam:ibrahim",
+        "title": "Ibrahim en Ismail bij het Huis",
+        "dateLabel": "Geen historische datering",
+        "kind": "tradition",
+        "category": "Ongedateerde teksttraditie",
+        "summary": "De Koran verbindt Ibrahim en Ismail met het oprichten van de fundamenten van het Huis.",
+        "context": "De tekst verbindt gebed en bedevaart met een profetische voorgeschiedenis zonder Gregoriaans jaartal.",
+        "sources": [
+          {
+            "title": "Koran 2:125–129",
+            "url": "https://quran.com/2/125"
+          }
+        ],
+        "passage": {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "2",
+          "chapter": 1,
+          "verse": 125,
+          "endVerse": 129
+        }
+      },
+      {
+        "id": "islam:musa",
+        "title": "Musa en bevrijding",
+        "dateLabel": "Geen historische datering",
+        "kind": "tradition",
+        "category": "Ongedateerde teksttraditie",
+        "summary": "De Koran vertelt hoe Musa tegenover Farao staat en het volk door de zee wordt geleid.",
+        "context": "Dit is een eigen Korantekst en wordt niet van een Bijbelse datering of versnummering voorzien.",
+        "sources": [
+          {
+            "title": "Koran 26:52–68",
+            "url": "https://quran.com/26/52"
+          }
+        ],
+        "passage": {
+          "tradition": "islam",
+          "edition": "nl",
+          "book": "26",
+          "chapter": 1,
+          "verse": 52,
+          "endVerse": 68
+        }
+      }
+    ]
+  }
+}
