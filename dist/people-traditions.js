@@ -44,10 +44,11 @@
     }
   }
   class PeopleIndexView {
-    constructor(container,{onCompare=()=>{},onRead=()=>{}}={}){
-      this.container=container;this.onCompare=onCompare;this.onRead=onRead;this.states=new Map();this.comparisonKeys=new Set();
+    constructor(container,{onCompare=()=>{},onRead=()=>{},onProfile=null}={}){
+      this.container=container;this.onCompare=onCompare;this.onRead=onRead;this.onProfile=onProfile;this.states=new Map();this.comparisonKeys=new Set();
       this.click=event=>{const button=event.target.closest('button');if(!button||!container.contains(button))return;
-        if(button.dataset.profile){this.state.selected=button.dataset.profile;this.state.limit=12;this.renderProfile();container.querySelector('.collection-profile h3')?.focus();}
+        if(button.dataset.profile){this.state.selected=button.dataset.profile;this.state.limit=12;this.renderProfile();if(this.onProfile)this.onProfile(button.dataset.profile);else container.querySelector('.collection-profile h3')?.focus();}
+        else if(button.dataset.fullProfile){this.onProfile?.(this.state.selected);}
         else if(button.dataset.peoplePage){this.state.page+=Number(button.dataset.peoplePage);this.renderList();container.querySelector('.collection-list h3')?.focus();}
         else if(button.dataset.compare){this.onCompare(button.dataset.compare);}
         else if(button.dataset.moreRefs){this.state.limit+=24;this.renderProfile();}
@@ -70,6 +71,7 @@
       this.container.querySelector('.collection-pagination').innerHTML=pages>1?`<button data-people-page="-1" ${this.state.page===1?'disabled':''}>← ${escape(t('Previous'))}</button><span>${escape(t('Page {page} of {total}',{page:this.state.page,total:pages}))}</span><button data-people-page="1" ${this.state.page===pages?'disabled':''}>${escape(t('Next'))} →</button>`:'';
     }
     renderProfile(){const p=this.model.byId.get(this.state.selected),lang=language(),panel=this.container.querySelector('.collection-profile');if(!panel)return;if(!p){panel.innerHTML='';return;}
+      if(this.onProfile){panel.innerHTML=`<span class="collection-kicker">${escape(t('Selected person'))}</span><h3>${escape(local(p.names,lang))}</h3><p>${escape(local(p.summary,lang))}</p><button class="profile-open-button" data-full-profile="true">${escape(root.BibleI18n?.t('Full profile')||'Full profile')} →</button>`;this.container.querySelectorAll('[data-profile]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.profile===p.id)));return;}
       panel.innerHTML=`<span class="collection-kicker">${escape(t(p.profileKind==='index-entry'?'Indexed person':'Editorial profile'))}</span><h3 tabindex="-1">${escape(local(p.names,lang))}</h3><p class="collection-identity">${escape(local(p.disambiguation,lang))}</p><div class="collection-role-tags">${local(p.roles,lang).map(role=>`<span>${escape(role)}</span>`).join('')}</div><p class="collection-summary">${escape(local(p.summary,lang))}</p>${p.comparisonKey&&this.comparisonKeys.has(p.comparisonKey)?`<button class="collection-primary" data-compare="${escape(p.comparisonKey)}">${escape(t('Compare this person'))} →</button>`:''}<h4>${escape(t('Passages and sources'))} <small>${p.refs.length.toLocaleString(lang)}</small></h4><div class="collection-sources">${sourceLinks(p.refs.slice(0,this.state.limit))}</div>${p.refs.length>this.state.limit?`<button class="collection-more" data-more-refs="true">${escape(t('Show more passages'))} (${p.refs.length-this.state.limit})</button>`:''}<p class="collection-source-note">${escape(local(this.model.data.meta.referenceNote,lang))}</p><details class="collection-provenance"><summary>${escape(t('Passages and sources'))}</summary>${sourceLinks((this.model.data.meta.sources||[]).filter(source=>!p.sourceIds?.length||p.sourceIds.includes(source.id)))}</details><button class="collection-reader-link" data-read-collection="true">${escape(t('Open holy books'))} ↗</button>`;
       this.container.querySelectorAll('[data-profile]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.profile===p.id)));
     }

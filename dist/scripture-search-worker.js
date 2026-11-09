@@ -1,5 +1,5 @@
 /* Index downloads and all corpus queries stay off the main UI thread. */
-importScripts('scripture-search-core.js?v=20261109-context');
+importScripts('scripture-search-core.js?v=20261109-workspace');
 const indexes=new Map();let topicsPromise=null,previewPromise=null,latestRequest=null;
 const json=url=>fetch(url).then(r=>{if(!r.ok)throw Error('Download mislukt');return r.json()});
 const topics=()=>topicsPromise||(topicsPromise=json('scripture-topics.json').then(d=>d.topics).catch(e=>{topicsPromise=null;throw e}));

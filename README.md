@@ -99,3 +99,8 @@ Person-reference checks include `node tests/person-passage-map.cjs`, `node tests
 Checks cover source provenance, complete scripture editions, native-script search, numbering boundaries, saved positions/notes, language and tradition switching, late or failed downloads, namesakes, paths, persistent highlights, progressive discovery, parent/child generation order, circle/arrow clearance and edition-safe city references. The place rebuild check requires the pinned `.cache/TIPNR.txt` and `.cache/OpenBible-ancient.jsonl` inputs used by `scripts/import-places.cjs`.
 
 Google Fonts provides typography with system fallbacks. Reader and index functionality needs no external data service after its static assets load. The geographic map uses OpenStreetMap background tiles, while Leaflet and all place data are hosted with the app.
+
+
+## Central search and unified person profiles
+
+Use the search icon in the header or **Doorzoek ReligieAtlas** in the sidebar to search people, places, themes, events, festivals/rituals and scripture passages, with independent religion and information-type filters. Existing specialist search tools remain. Person links open the same religion-specific profile with Overview, Texts, Family and Places tabs. Explicit identity mappings consolidate Catholic additions and family/index records; namesakes and religious collections remain separate. Passage links retain source editions and reviewed numbering. Mobile secondary controls are collapsible; desktop controls stay expanded. Run `node tests/workspace-models.cjs` and `node tests/workspace-ui.cjs` alongside the existing suites.

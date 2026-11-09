@@ -125,6 +125,11 @@ const abrahamRef=context.window.BIBLE_DATA.people.find(person=>person.id==='abra
 personPassages.references[`${abrahamRef.translation?'atlas-'+abrahamRef.translation:'atlas'}|${abrahamRef.label}`]={status:'mapped',targets:[{book:'GEN',chapter:12,verse:2,endVerse:4,edition:'catholic-nl'}]};
 function initialCatholic(edition='catholic-nl'){respond(edition==='catholic-nl'?'catholic-bible-data-nl.json':'catholic-bible-data.json',{meta:{language:edition==='catholic-nl'?'nl':'en',editionId:edition,canon:'catholic'}});respond('catholic-people.json',catholicPeople);respond('places-data.json',{places:[]});}
 for(const file of ['discovery.js','paths.js','sacred-library.js','catholic-people-ui.js','person-passage-map.js','app.js'])vm.runInContext(fs.readFileSync(path.join(root,'dist',file),'utf8'),context);
+let profileView;
+context.window.PersonProfileModel=require('../dist/person-profile.js').PersonProfileModel;
+context.window.PersonProfileView=class{constructor(dialog,callbacks){this.dialog=dialog;this.callbacks=callbacks;profileView=this;}open(model,id){this.model=model;this.profile=model.get(id);assert(this.profile,id);this.dialog.innerHTML=this.profile.name;this.dialog.showModal();return true;}};
+async function profileReady(){for(let i=0;i<4;i++){await settle();for(const file of ['person-comparisons.json','tradition-atlas-judaism.json','tradition-atlas-islam.json'])if(pending(file))respond(file,file==='person-comparisons.json'?comparisons:JSON.parse(fs.readFileSync(path.join(root,'dist',file),'utf8')));}}
+function profilePassage(button){button.addEventListener('click',()=>profileView.callbacks.onRead(profileView.model.tradition,profileView.profile.refs[0],profileView.profile.id));}
 const snapshot=()=>context.window.biblePath.getState(),selectTradition=name=>traditions.find(button=>button.dataset.tradition===name).click(),selectView=(name,tradition='christianity')=>{nav.find(button=>button.dataset.view===name&&(!button.dataset.navTradition||button.dataset.navTradition===tradition)).click();if(name==='cities')control('#cities-show-list').click();},selectPeople=name=>peopleTraditions.find(button=>button.dataset.peopleTradition===name).click();
 
 const selectReligion=name=>religions.find(button=>button.dataset.religion===name).click();
@@ -143,7 +148,7 @@ async function religionNavigationRegression(){
   selectReligion('judaism');
   assert.equal(snapshot().view,'reader');assert.equal(snapshot().tradition,'judaism');assert.equal(snapshot().peopleTradition,'judaism');
   assert(control('#sidebar').classList.contains('open'),'Selecting a religion keeps the mobile submenu open');
-  assert.equal(control('#search-trigger').hidden,true);assert.equal(control('.journeys').hidden,true);assert.equal(control('.journey-label').hidden,true);assert.equal(control('.sidebar-bottom .edition').hidden,true);
+  assert.equal(control('#search-trigger').hidden,false);assert.equal(control('.journeys').hidden,true);assert.equal(control('.journey-label').hidden,true);assert.equal(control('.sidebar-bottom .edition').hidden,true);
   assert.equal(control('#tradition-controls').hidden,true);assert.equal(control('#people-collection-controls').hidden,true);
   assert.deepEqual(religionMenus.map(menu=>menu.hidden),[true,false,true]);
   assert.equal(religions[1].attrs['aria-expanded'],'true');
@@ -167,8 +172,8 @@ async function religionNavigationRegression(){
   selectView('compare');respond('person-comparisons.json',comparisons);await settle();
   assert.deepEqual(religionMenus.map(menu=>menu.hidden),[true,true,true],'Comparison is outside the individual religions');
   assert.equal(activeNav().length,1);assert.equal(activeNav()[0].dataset.view,'compare');
-  assert.equal(control('#search-trigger').hidden,true);
-  comparisonViews[0].callbacks.onPerson('christianity','moses');await settle();
+  assert.equal(control('#search-trigger').hidden,false);
+  comparisonViews[0].callbacks.onPerson('christianity','moses');await profileReady();assert.equal(profileView.profile.id,'moses');profileView.callbacks.onMap('christianity','moses');await settle();
   assert.equal(snapshot().view,'map');assert.equal(snapshot().tradition,'christianity');assert.equal(snapshot().peopleTradition,'christianity');
   assert.equal(control('#search-trigger').hidden,false);assert.equal(control('.journeys').hidden,false);assert.equal(control('.sidebar-bottom .edition').hidden,false);
   assert.equal(control('#religion-crumb').textContent,'Roman Catholic Christianity');
@@ -187,32 +192,24 @@ async function savedReligionRegression(){
 }
 
 async function pendingProfileLanguageRegression(){
-  // A fresh app is essential: the destination collection must still be loading
-  // when the language picker refreshes the current view.
-  initialCatholic();await settle();
-  selectView('compare');respond('person-comparisons.json',comparisons);await settle();
-  comparisonViews[0].callbacks.onPerson('judaism','torah:moses');
-  assert(pending('torah-people.json'),'The linked collection is still loading');
-  assert.equal(peopleIndexes.length,0);
-  await control('#language-select').change('fr');await settle();
-  respond('torah-people.json',torahPeople);await settle();
-  assert.equal(snapshot().view,'index');assert.equal(snapshot().peopleTradition,'judaism');
-  assert.equal(peopleIndexes[0].selected,'torah:moses','Changing language during the download must retain the requested comparison identity');
-  assert.equal(control('#tradition-people-view').rendered,'people:judaism:fr');
-  assert.equal(requests.filter(request=>request.file==='torah-people.json').length,1,'Language refresh shares the pending collection download');
+  initialCatholic();await settle();selectView('compare');respond('person-comparisons.json',comparisons);await settle();
+  comparisonViews[0].callbacks.onPerson('judaism','torah:moses');await settle();assert(pending('torah-people.json'));
+  await control('#language-select').change('fr');await settle();respond('torah-people.json',torahPeople);await profileReady();
+  assert.equal(snapshot().view,'compare');assert.equal(profileView.profile.id,'torah:moses');assert.equal(profileView.model.tradition,'judaism');
+  assert.equal(control('#unified-profile-dialog').open,true);assert.equal(requests.filter(r=>r.file==='torah-people.json').length,1);
 }
 
 async function pendingPassageEditionRegression(){
   // Start with the Dutch edition so Catholic text is still an uncached load.
   respond('bible-data-nl.json',{meta:{language:'nl'}});respond('places-data.json',{places:[]});await settle();
   const personButton=new Control({person:'catholic:judith'}),passageButton=new Control({catholicPassage:'0'});
-  groups.set('#index-grid [data-person]',[personButton]);groups.set('#catholic-profile-content [data-catholic-passage]',[passageButton]);
+  groups.set('#index-grid [data-person]',[personButton]);profilePassage(passageButton);
   selectView('index');respond('catholic-people.json',catholicPeople);await settle();
   selectView('cities');await settle();
   bibleReaders.at(-1).selectedModel.atlasReference=()=>null;
   cityReaders.at(-1).callbacks.onPassage({label:'Psalms 51:18'});await settle();
   assert(pending('bible-data.json'),'A source-edition city passage remains in flight');
-  selectView('index');personButton.click();assert.equal(control('#catholic-profile-dialog').open,true);
+  selectView('index');personButton.click();await profileReady();assert.equal(control('#unified-profile-dialog').open,true);
   passageButton.click();assert(pending('catholic-bible-data-nl.json'));assert.equal(snapshot().reader,null,'The Catholic replacement reader is still loading');
   const respondCatholic=()=>respond('catholic-bible-data-nl.json',{meta:{language:'nl',editionId:'catholic-nl',canon:'catholic'}});
   const respondSource=()=>respond('bible-data.json',{meta:{language:'en'}});
@@ -314,23 +311,21 @@ async function main(){
   assert.equal(control('#comparison-view').rendered,'compare:fr');assert.equal(comparisonViews.length,1,'Re-entering comparison reuses its renderer and data');
   assert.equal(requests.filter(request=>request.file==='person-comparisons.json').length,3);
 
-  comparisonViews[0].callbacks.onPerson('islam','quran:moses');await settle();
-  assert.equal(snapshot().view,'index');assert.equal(snapshot().peopleTradition,'islam');
-  assert.equal(peopleIndexes[0].selected,'quran:moses','Islam comparison opens the Quran identity in its own collection');
+  comparisonViews[0].callbacks.onPerson('islam','quran:moses');await profileReady();
+  assert.equal(snapshot().view,'compare','The comparison remains behind the canonical profile');
+  assert.equal(profileView.model.tradition,'islam');assert.equal(profileView.profile.id,'quran:moses');
+  assert.equal(control('#unified-profile-dialog').open,true);
   assert.equal(control('#people-testament-filters').hidden,true);
   peopleIndexes[0].callbacks.onCompare('moses');await settle();
   assert.equal(snapshot().view,'compare');assert.equal(comparisonViews[0].selected,'moses','Profile comparison callback opens the matching comparison');
-  comparisonViews[0].callbacks.onPerson('judaism','torah:moses');await settle();
-  assert.equal(snapshot().view,'index');assert.equal(snapshot().peopleTradition,'judaism');
-  assert.equal(peopleIndexes[0].selected,'torah:moses','Jewish comparison opens the independent Torah identity');
-  assert.equal(snapshot().tradition,'judaism','A linked Torah identity selects the Jewish context');
-  assert.deepEqual(peopleIndexes[0].comparisonKeys,['moses','abraham']);
-  await control('#language-select').change('nl');await settle();
-  assert.equal(peopleIndexes[0].selected,'torah:moses','Language changes retain selected people profiles');
-  assert.equal(control('#tradition-people-view').rendered,'people:judaism:nl');
+  comparisonViews[0].callbacks.onPerson('judaism','torah:moses');await profileReady();
+  assert.equal(snapshot().view,'compare');assert.equal(profileView.model.tradition,'judaism');
+  assert.equal(profileView.profile.id,'torah:moses','Jewish and Islamic profile identities remain separate');
+  await control('#language-select').change('nl');await profileReady();
+  assert.equal(profileView.profile.id,'torah:moses','Language changes retain the canonical profile');
   selectView('compare');await settle();
   assert.equal(control('#comparison-view').rendered,'compare:nl');assert.equal(comparisonViews[0].selected,'moses');
-  comparisonViews[0].callbacks.onPerson('christianity','moses');await settle();
+  comparisonViews[0].callbacks.onPerson('christianity','moses');await profileReady();assert.equal(profileView.profile.id,'moses');profileView.callbacks.onMap('christianity','moses');await settle();
   assert.equal(snapshot().view,'map');assert.equal(snapshot().focus,'moses','Christianity comparison routes to the existing Bible person');
   assert.equal(control('#people-testament-filters').hidden,false,'Bible relationship map keeps its own testament filters');
   assert.equal(snapshot().tradition,'christianity','Exploring a Bible comparison selects the Catholic context');
@@ -349,18 +344,18 @@ async function main(){
   bibleReaders.at(-1).state.location={bookId:'EXO',chapter:3,verse:2};
   bibleReaders.at(-1).callbacks.onEditionChange('catholic-nl');await settle();
   assert.deepEqual(bibleReaders.at(-1).state.location,catholicLocation,'Each edition preserves its own reading position');
-  const passageButton=new Control({catholicPassage:'0'});groups.set('#catholic-profile-content [data-catholic-passage]',[passageButton]);
-  bibleReaders.at(-1).callbacks.onPerson('catholic:judith');
-  assert.equal(control('#catholic-profile-dialog').open,true);assert.match(control('#catholic-profile-content').innerHTML,/Judit/);
+  const passageButton=new Control({catholicPassage:'0'});profilePassage(passageButton);
+  bibleReaders.at(-1).callbacks.onPerson('catholic:judith');await profileReady();
+  assert.equal(control('#unified-profile-dialog').open,true);assert.match(control('#unified-profile-dialog').innerHTML,/Judit/);
   passageButton.click();assert(pending('person-passage-map.json'),'The first person passage lazily loads its reviewed correspondence');
   assert(!pending('catholic-bible-data.json'),'An English source citation defaults to its Dutch Catholic correspondence');
-  respond('person-passage-map.json',personPassages);await settle();assert.equal(control('#catholic-profile-dialog').open,false);
+  respond('person-passage-map.json',personPassages);await settle();assert.equal(control('#unified-profile-dialog').open,false);
   assert.equal(snapshot().bibleEdition,'catholic-nl');assert.equal(bibleReaders.at(-1).model.meta.language,'nl');
   assert.equal(bibleReaders.at(-1).state.location.bookId,'JDT');assert.equal(bibleReaders.at(-1).state.location.chapter,8);
   assert.equal(bibleReaders.at(-1).state.location.verse,2);assert.equal(bibleReaders.at(-1).state.location.endVerse,3);
   assert.equal(bibleReaders.at(-1).state.personPassage.sourceLabel,'Judith 8:1','Original source coordinates remain attributable');
   assert.equal(bibleReaders.at(-1).state.atlasReference,undefined,'Catholic references exit legacy edition detours');
-  bibleReaders.at(-1).callbacks.onPerson('catholic:judith');
+  bibleReaders.at(-1).callbacks.onPerson('catholic:judith');await profileReady();
   bibleReaders.at(-1).model={reference(){throw Error('Wrong edition: a legacy city reference temporarily selected WEB');}};
   passageButton.click();await settle();assert.equal(bibleReaders.at(-1).model.meta.editionId,'catholic-nl','The person passage exits a temporary WEB detour first');
   assert.equal(snapshot().peopleCount,originalPeopleCount);assert.equal(snapshot().relationshipCount,originalRelationships);
@@ -411,8 +406,8 @@ async function dutchEditionRetryRegression(){
   assert.equal(snapshot().reader,null);assert.match(control('#reader-view').innerHTML,/library-retry/);
   control('#reader-view').querySelector('button').click();assert(pending('catholic-bible-data-nl.json'),'A failed Dutch download can be retried');
   const personButton=new Control({person:'catholic:judith'}),passageButton=new Control({catholicPassage:'0'});
-  groups.set('#index-grid [data-person]',[personButton]);groups.set('#catholic-profile-content [data-catholic-passage]',[passageButton]);
-  selectView('index');personButton.click();passageButton.click();
+  groups.set('#index-grid [data-person]',[personButton]);profilePassage(passageButton);
+  selectView('index');personButton.click();await profileReady();passageButton.click();
   respond('catholic-bible-data-nl.json',{meta:{language:'nl',editionId:'catholic-nl',canon:'catholic'}});await settle();
   respond('person-passage-map.json',personPassages);await settle();
   assert.equal(snapshot().bibleEdition,'catholic-nl');assert.equal(bibleReaders.at(-1).model.meta.editionId,'catholic-nl');
@@ -423,8 +418,8 @@ async function dutchEditionRetryRegression(){
 }
 async function personPassageRetryRegression(){
   initialCatholic();await settle();
-  const passageButton=new Control({catholicPassage:'0'});groups.set('#catholic-profile-content [data-catholic-passage]',[passageButton]);
-  bibleReaders.at(-1).callbacks.onPerson('catholic:judith');passageButton.click();
+  const passageButton=new Control({catholicPassage:'0'});profilePassage(passageButton);
+  bibleReaders.at(-1).callbacks.onPerson('catholic:judith');await profileReady();passageButton.click();
   respond('person-passage-map.json',null,{ok:false});await settle();
   assert.equal(bibleReaders.at(-1).state.personPassage.status,'error','A failed mapping request exposes its retry state');
   const retryRef=bibleReaders.at(-1).state.personPassage.originalReference;
@@ -432,14 +427,14 @@ async function personPassageRetryRegression(){
   bibleReaders.at(-1).callbacks.onEditionChange('catholic');respond('catholic-bible-data.json',{meta:{language:'en',editionId:'catholic',canon:'catholic'}});await settle();
   respond('person-passage-map.json',personPassages);await settle();
   assert.equal(snapshot().bibleEdition,'catholic');assert.equal(bibleReaders.at(-1).state.location.bookId,'GEN','A late mapping result cannot override a manual edition choice');
-  bibleReaders.at(-1).callbacks.onPerson('catholic:judith');passageButton.click();await settle();
+  bibleReaders.at(-1).callbacks.onPerson('catholic:judith');await profileReady();passageButton.click();await settle();
   assert.equal(snapshot().bibleEdition,'catholic-nl');assert.equal(bibleReaders.at(-1).state.location.verse,2,'A fresh person action overrides the saved English edition and reuses the recovered map');
   assert.equal(requests.filter(request=>request.file==='person-passage-map.json').length,2);
 }
 async function personPassageCancelRegression(){
   initialCatholic();await settle();
-  const passageButton=new Control({catholicPassage:'0'});groups.set('#catholic-profile-content [data-catholic-passage]',[passageButton]);
-  bibleReaders.at(-1).callbacks.onPerson('catholic:judith');passageButton.click();
+  const passageButton=new Control({catholicPassage:'0'});profilePassage(passageButton);
+  bibleReaders.at(-1).callbacks.onPerson('catholic:judith');await profileReady();passageButton.click();
   assert.equal(bibleReaders.at(-1).state.personPassage.status,'loading');
   bibleReaders.at(-1).callbacks.onPersonPassageCancel();bibleReaders.at(-1).state.location={bookId:'EXO',chapter:2,verse:null};
   respond('person-passage-map.json',personPassages);await settle();
@@ -512,9 +507,9 @@ async function atlasRegression(){
   const prior=structuredClone(sacredReaders.at(-1).state.location),cancelled=atlasView.callbacks.onPassage({...jref,verse:2});selectView('cities','christianity');await cancelled;
   assert.deepEqual(sacredReaders.at(-1).state.location,prior,'Leaving cancels a pending passage action');
   assert.equal(snapshot().tradition,'christianity');assert.equal(control('#tradition-atlas-view').hidden,true);assert.equal(control('#cities-view').hidden,false);assert.equal(control('#return-to-atlas').hidden,true);
-  selectView('map','judaism');await settle();atlasView.callbacks.onPerson('torah:moses');respond('torah-people.json',torahPeople);await settle();
-  assert.equal(snapshot().view,'index');assert.equal(peopleIndexes.at(-1).selected,'torah:moses');assert.equal(control('#return-to-atlas').hidden,false);
-  control('#return-to-atlas').click();await settle();assert.equal(snapshot().view,'map');assert.equal(snapshot().tradition,'judaism');
+  selectView('map','judaism');await settle();atlasView.callbacks.onPerson('torah:moses');await profileReady();respond('torah-people.json',torahPeople);await settle();
+  await profileReady();assert.equal(snapshot().view,'map');assert.equal(profileView.profile.id,'torah:moses');assert.equal(profileView.model.tradition,'judaism');
+  control('#unified-profile-dialog').close();assert.equal(snapshot().view,'map');assert.equal(snapshot().tradition,'judaism');
   selectView('cities','judaism');selectReligion('islam');await settle();assert.equal(snapshot().view,'cities');assert.equal(atlasView.tradition,'islam');
   console.log('Tradition atlas navigation passed: separate views, lazy cache, stale downloads, retry, source ranges, index links, language and return paths.');
 }

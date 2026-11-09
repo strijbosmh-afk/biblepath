@@ -74,6 +74,7 @@
       this.container.innerHTML=`<div class="festival-introduction"><span class="library-kicker">${esc(t('Religious traditions in context'))}</span><p>${esc(local(this.model.data.meta.scope))}</p></div><div class="festival-toolbar"><label for="festival-search">${esc(t('Search festivals and rituals'))}<input id="festival-search" type="search" value="${esc(this.state.query)}" placeholder="${esc(t('Name, practice or source…'))}"></label><div class="festival-filters" role="group" aria-label="${esc(t('Choose a topic'))}"></div></div><div class="festival-workspace"><section class="festival-list" aria-label="${esc(t('Choose a topic'))}"><p class="festival-count" role="status" aria-live="polite"></p><div class="festival-cards"></div></section><article class="festival-detail"></article></div>`;
       this.renderFilters();this.renderList();
     }
+    open(id){if(!this.model.entries.some(e=>e.id===id))return false;this.state.selected=id;this.state.query='';this.state.kind='all';this.render();this.container.querySelector('.festival-detail h2')?.focus();return true;}
     renderFilters(){this.container.querySelector('.festival-filters').innerHTML=[['all','All topics'],['feast','Festivals'],['season','Seasons'],['ritual','Rituals']].map(([key,label])=>`<button type="button" data-festival-kind="${key}" aria-pressed="${this.state.kind===key}">${esc(t(label))}</button>`).join('');}
     renderList(){
       const matches=this.model.search(this.state.query,this.state.kind);
