@@ -354,3 +354,12 @@ All52 test files passed (48 CJS,4 Python). The final small CSS stacking correcti
 The app sidebar synchronizer also respects the map modal state, so resize/Escape handling cannot remove background inertness. interfaith-app.cjs --map-modal covers desktop/mobile resize, closing and root-navigation cleanup; the complete app suite passed again after this guard.
 
 The final live visual check caught a legacy selected-text rule overriding name-label colors. Graph names now set their dynamic fill/stroke with explicit priority, preserving dark14px labels outside circles and white labels inside selected dark circles. graph-highlights.cjs covers both modes and the override priority.
+
+
+## Comparison picker overlapping rows — 9 November 2026
+
+The desktop .comparison-figures flex column was shrinking all24 buttons into its capped scroll height. Larger type made the name/description content overflow each row and overlap neighboring names. The picker buttons now opt out of flex shrinking, keep their natural height and use a single-column grid with an explicit6px gap. Strong/small text blocks have zero inherited margins and can wrap safely. Existing desktop vertical scrolling and <=1000px horizontal cards keep their original direction and basis. Only people-traditions.css and its index cache key changed; sources, identity data, search, selection and profile actions remain.
+
+Browser geometry checks cover all24 rows at1440/1280/1024/760/390/320px in Dutch and1280/1024/390/320px in English/French. Each name ends before its description begins and both fit in the button. At320px the document stays within the viewport. Search/select of the long Mirjam identity works; clearing the query restores all24 figures. Save the final live screenshot and layout-checks.json in verification/comparison-list-fix after publication.
+
+All52 test files passed (48 CJS and4 Python) after the comparison-picker CSS correction.

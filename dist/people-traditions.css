@@ -57,3 +57,8 @@
   .collection-cards{grid-template-columns:minmax(0,1fr)}
   .collection-card{padding:14px 12px}
 }
+
+/* Comparison rows must keep their natural height inside the scrollable picker.
+   Flex shrinking otherwise squeezes multi-line names and descriptions together. */
+.comparison-figures button{flex-shrink:0;display:grid;grid-template-columns:minmax(0,1fr);align-content:start;gap:6px;height:auto;white-space:normal}
+.comparison-figures button strong,.comparison-figures button small{display:block;min-width:0;margin:0;overflow-wrap:anywhere}
