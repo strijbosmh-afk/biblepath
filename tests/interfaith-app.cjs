@@ -559,6 +559,11 @@ async function explorationRegression(){
   assert.equal(sacredReaders.at(-1).state.edition,'he');assert.equal(sacredReaders.at(-1).state.location.endVerse,2);
   control('#return-to-explore').click();const previous=structuredClone(sacredReaders.at(-1).state.location),late=exploration.callbacks.onPassage({...j,verse:2},'challenge');selectView('timeline','judaism');await late;
   assert.deepEqual(sacredReaders.at(-1).state.location,previous,'Leaving cancels a pending exploration passage');assert.equal(snapshot().view,'timeline');
+  selectView('timeline','islam');await exploration.callbacks.onPassage(j,'timeline');
+  assert.equal(snapshot().tradition,'judaism');assert.equal(sacredReaders.at(-1).state.edition,'he');
+  control('#return-to-explore').click();assert.equal(snapshot().view,'timeline');assert.equal(snapshot().tradition,'islam','A Jewish passage in the comparative timeline returns to the original timeline context');
+  await exploration.callbacks.onPassage({tradition:'christianity',edition:'catholic-nl',book:'MAT',chapter:25,verse:31,endVerse:46},'timeline');
+  assert.equal(snapshot().bibleEdition,'catholic-nl');control('#return-to-explore').click();assert.equal(snapshot().view,'timeline');assert.equal(snapshot().tradition,'islam');
   selectView('index','judaism');assert.equal(control('#return-to-explore').hidden,true);
   console.log('Exploration app routing passed: religion-first timeline/challenge, cross-religion search return, Catholic/Dutch/Hebrew edition ranges and late-reader cancellation.');
 }

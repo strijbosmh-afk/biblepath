@@ -1,0 +1,60 @@
+{
+  "connections": [
+    {
+      "id": "greek-scriptures-gospels",
+      "title": "Joodse Schrift in de taal van de evangeliën",
+      "eventIds": ["judaism:greek", "christianity:gospels"],
+      "type": "influence",
+      "context": "Griekse vertalingen van Joodse geschriften ontstonden eeuwen vóór de evangeliën. De taal en Schriftverwijzingen van het Nieuwe Testament bouwen mede op deze Septuaginttraditie voort. Dit is tekstuele doorwerking over langere tijd, geen gelijktijdige gebeurtenis. De Joodse en katholieke canon en uitleg vallen daardoor niet samen.",
+      "sources": [{"title": "Pauselijke Bijbelcommissie · Joodse geschriften en de christelijke Bijbel, I.A en I.E", "url": "https://www.vatican.va/roman_curia/congregations/cfaith/pcb_documents/rc_con_cfaith_doc_20020212_popolo-ebraico_en.html"}]
+    },
+    {
+      "id": "temple-gospels",
+      "title": "De tempelcrisis en de wereld van de evangeliën",
+      "eventIds": ["judaism:temple70", "christianity:gospels"],
+      "type": "shared-context",
+      "context": "De Romeinse verwoesting van de tempel in 70 valt binnen de ontstaansperiode van de evangeliën. Marcus 13 bespreekt de ondergang van de tempel; de datering van Marcus vlak vóór of na 70 blijft onderwerp van onderzoek. De crisis raakt Joodse gemeenschappen en vroege Jezusbewegingen, met uiteenlopende reacties. Gedeelde historische context bewijst geen eenvoudige oorzaak-gevolgrelatie.",
+      "sources": [{"title": "USCCB · Inleiding op Marcus", "url": "https://bible.usccb.org/bible/mark/0?bk=Mark&ch="}, {"title": "USCCB · Marcus 13, tekst en historische noten", "url": "https://bible.usccb.org/bible/mark/13"}]
+    },
+    {
+      "id": "jerusalem-sacred-site",
+      "title": "Jeruzalem: één plaats, verschillende herinneringen",
+      "eventIds": ["judaism:temple70", "islam:dome"],
+      "type": "shared-context",
+      "context": "De Rotskoepel werd in 691–692 gebouwd op de plaats die Joden kennen als de Tempelberg en moslims als al-Haram al-Sharif. De verbinding betreft een gedeelde plaats met verschillende religieuze herinneringen, ruim zes eeuwen na de tempelverwoesting. Zij maakt de tradities en hun aanspraken niet identiek en vormt geen uitspraak over hedendaagse politieke rechten.",
+      "sources": [{"title": "Metropolitan Museum of Art · The Dome of the Rock", "url": "https://www.metmuseum.org/exhibitions/listings/2012/byzantium-and-islam/blog/where-in-the-world/posts/dome-of-the-rock"}]
+    },
+    {
+      "id": "iberia-1492",
+      "title": "1492: Granada en de verdrijving van Joden",
+      "eventIds": ["islam:granada", "judaism:spain-expulsion"],
+      "type": "shared-context",
+      "context": "In 1492 veroverden Ferdinand en Isabella Granada en vaardigden zij het verdrijvingsedict voor Joden in Castilië en Aragón uit. Beide gebeurtenissen behoren tot de uitbreiding van hun christelijke vorstenmacht. De islamitische machtswisseling en de Joodse verdrijving hadden verschillende juridische gevolgen en tijdspaden; zij waren geen identieke maatregel tegen twee religies.",
+      "sources": [{"title": "Fordham University · Kroniek van de verdrijving uit Spanje (1492)", "url": "https://sourcebooks.fordham.edu/jewish/1492-jews-spain1.asp"}, {"title": "Florida Atlantic University · Het Alhambra-edict, vertaalde primaire tekst", "url": "https://www.fau.edu/artsandletters/pjhr/chhre/pdf/hh-alhambra-1492-english.pdf"}]
+    },
+    {
+      "id": "jesuits-mughal-court",
+      "title": "Jezuïeten aan het Mogolhof",
+      "eventIds": ["christianity:jesuits", "islam:mughal-culture"],
+      "type": "influence",
+      "context": "De in 1540 erkende jezuïetenorde stuurde later missies naar het hof van de Mogolkeizer Akbar. Vanaf 1580 spraken missionarissen daar over het christendom; Europese religieuze beelden bereikten ook het hofatelier. Dit is een concreet contact tussen katholieken en een islamitisch hof, binnen een bredere wereld van religieuze ontmoetingen. Akbars belangstelling betekende geen bekering tot het christendom.",
+      "sources": [{"title": "Library of Congress · Akbar and the Jesuits", "url": "https://www.loc.gov/item/27015060/"}, {"title": "Philadelphia Museum of Art · The Book of War en het Mogolatelier", "url": "https://www.philamuseum.org/exhibitions/the-book-of-war-the-free-library-of-philadelphias-mughal-razmnama-folios"}]
+    },
+    {
+      "id": "shoah-nostra-aetate",
+      "title": "Na de Sjoa: herbezinning en katholiek-Joodse dialoog",
+      "eventIds": ["judaism:shoah", "christianity:nostra"],
+      "type": "influence",
+      "context": "De Sjoa was een beslissende achtergrond voor de katholieke herbezinning op de relatie met het Joodse volk. Nostra aetate (1965) verwerpt collectieve schuld voor Jezus’ dood en betreurt antisemitisme. De verklaring heeft ook andere theologische en historische aanleidingen; zij is geen automatische reactie op één gebeurtenis. Het betreft een verandering in katholiek onderricht, geen vervanging van Joodse zelfinterpretatie.",
+      "sources": [{"title": "Vaticaan · Nostra aetate, paragraaf 4", "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651028_nostra-aetate_en.html"}, {"title": "Vatican Radio · Document over christelijk-Joodse dialoog (2015)", "url": "https://www.archivioradiovaticana.va/storico/2015/12/10/vatican_issues_new_document_on_christian-jewish_dialogue_/en-1193274"}]
+    },
+    {
+      "id": "fraternity-dialogue",
+      "title": "Eén gezamenlijk document, doorwerking in Fratelli tutti",
+      "eventIds": ["christianity:fraternity", "islam:fraternity", "christianity:fratelli"],
+      "type": "influence",
+      "context": "De twee items van 4 februari 2019 tonen dezelfde ondertekening door paus Franciscus en grootimam Ahmad al-Tayyeb vanuit twee religieuze invalshoeken. Zij roepen op tot menselijke waardigheid, vrede en samenleven. Franciscus noemt hun ontmoeting en document vervolgens uitdrukkelijk als inspiratie voor Fratelli tutti (2020). De ondertekenaars vertegenwoordigen specifieke instellingen en spreken niet namens iedere katholiek of moslim.",
+      "sources": [{"title": "Vaticaan · Document over menselijke broederlijkheid (2019)", "url": "https://www.vatican.va/content/francesco/en/travels/2019/outside/documents/papa-francesco_20190204_documento-fratellanza-umana.html"}, {"title": "Vaticaan · Fratelli tutti, inleiding", "url": "https://www.vatican.va/content/francesco/en/encyclicals/documents/papa-francesco_20201003_enciclica-fratelli-tutti.html"}]
+    }
+  ]
+}
