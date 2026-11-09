@@ -1,0 +1,21 @@
+.exploration-back{margin:0 0 16px;min-height:44px;max-width:100%;white-space:normal;text-align:left}
+.has-exploration-trail .reader-return-shortcut:not(.exploration-back){display:none!important}
+.unified-profile-chrome{position:sticky;top:0;z-index:3;background:#fffefa;border-bottom:1px solid #d9dfd0}
+.unified-profile-chrome .unified-profile-header,.unified-profile-chrome .unified-profile-tabs{position:static}
+.unified-profile-back{display:block;min-height:44px!important;margin:8px 20px 0;border:0!important;background:transparent!important;text-align:left;font-size:14px!important;max-width:calc(100% - 40px)}
+.timeline-period-controls{display:flex;align-items:flex-start;flex-wrap:wrap;gap:14px;padding:12px 20px;border-bottom:1px solid #dce3d4}
+.timeline-period-controls>label{min-width:180px;flex:0 1 240px}
+.timeline-custom-period{flex:1 1 320px;min-width:0;border:1px solid #d8e1cf;border-radius:6px;background:#fafcf6}
+.timeline-custom-period>summary{min-height:44px;padding:10px 14px;cursor:pointer;font-size:14px;line-height:1.6}
+#timeline-period-form{padding:8px 14px;display:flex;flex-wrap:wrap;align-items:end;gap:12px}
+#timeline-period-form label{display:grid;grid-template-columns:minmax(75px,1fr) 95px;flex:1 1 185px;gap:4px 6px;min-width:0}
+#timeline-period-form input{grid-column:1;min-width:0}#timeline-period-form select{grid-column:2;min-width:0}#timeline-period-form .explore-btn{align-self:end}
+.timeline-custom-period>.explore-note,#timeline-period-error{padding:0 14px;margin:6px 0 12px}#timeline-period-error{font-size:14px;color:#8b3e26}
+.explore-zoom output{white-space:nowrap;padding:0 8px;min-width:90px!important;font-size:14px!important}
+@media(max-width:760px){
+ .exploration-back{font-size:14px;margin-bottom:10px;padding:10px 12px}
+ .unified-profile-back{margin:4px 8px 0;padding:8px!important;font-size:14px!important;max-width:calc(100% - 16px)}
+ .timeline-period-controls{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:end;padding:10px;gap:8px}.timeline-period-controls>label{min-width:0}
+ .timeline-custom-period[open]{grid-column:1/-1}.timeline-custom-period>summary{padding:10px;font-size:14px}#timeline-period-form{gap:8px;padding:8px 10px}#timeline-period-form label{flex-basis:100%;grid-template-columns:minmax(0,1fr) 95px}
+ #timeline-period-form .explore-btn{width:100%}.explore-zoom output{min-width:80px!important}
+}

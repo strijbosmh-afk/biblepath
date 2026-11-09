@@ -6,7 +6,7 @@
  const names={christianity:'Christendom · rooms-katholiek',judaism:'Jodendom',islam:'Islam'};
  const rows=[
   ['Timeline','Tijdslijn','Chronologie'],
-  ['Reflection challenge','Uitdaging','Défi de réflexion'],
+  ['Reflection challenge','Reflectie','Réflexion'],
   ['Search by topic','Zoeken op thema','Recherche thématique'],
   ['Explore major moments, with sources and historical context.','Verken belangrijke momenten, met bronnen en historische context.','Explorez les grands moments, leurs sources et leur contexte historique.'],
   ['Read, pause and reflect in the context of each tradition.','Lees, vertraag en reflecteer binnen de context van elke traditie.','Lisez, prenez le temps et réfléchissez dans le contexte de chaque tradition.'],
@@ -93,8 +93,8 @@
   }
  }
  class AtlasExplore{
-  constructor(container,{onPassage=()=>{}}={}){
-   this.el=container;this.onPassage=onPassage;this.states=new Map();this.request=0;
+  constructor(container,{onPassage=()=>{},onTimelineMode=()=>{}}={}){
+   this.el=container;this.onPassage=onPassage;this.onTimelineMode=onTimelineMode;this.states=new Map();this.request=0;
    this.worker=null;this.searchId=0;this.searchState={query:'',traditions:['christianity'],page:0,mode:'all',topicId:''};
    this.view='';this.tradition='christianity';this.passages=[];
    this.onClick=e=>this.click(e);this.onInput=e=>this.input(e);this.onChange=e=>this.change(e);
@@ -107,6 +107,23 @@
    return this.states.get(key);
   }
   setSharedComparison(shared){this.timelineComparison=true;this.sharedComparison=shared;this.loaded=false;}
+  setTimelineComparison(comparison){if(Boolean(this.timelineComparison)!==Boolean(comparison)){this.timelineComparison=Boolean(comparison);this.loaded=false;}}
+  getNavigationState(){return {view:this.view,tradition:this.tradition,comparison:Boolean(this.timelineComparison),state:structuredClone(this.state),searchState:structuredClone(this.searchState),period:this.view==='timeline'&&this.model?this.sharedTimelineState():null};}
+  async restoreNavigationState(saved,isCurrent=()=>true){this.timelineComparison=saved.comparison;this.view=saved.view;this.tradition=saved.tradition;const key=`${this.view}:${this.view==='timeline'&&this.timelineComparison?'comparison':this.tradition}`;this.states.set(key,structuredClone(saved.state));this.searchState=structuredClone(saved.searchState);this.loaded=false;await this.open(saved.view,saved.tradition);if(isCurrent()&&saved.period&&this.view==='timeline'&&this.model)this.setTimelinePeriod(saved.period.start,saved.period.end);}
+  chooseTimelineSpan(value){
+   if(!this.model||!['all','100','500','1000'].includes(String(value)))return false;const full=this.model.max-this.model.min,current=this.sharedTimelineState(),span=value==='all'?full:Math.min(full,Number(value));
+   const center=(current.start+current.end)/2,start=Math.max(this.model.min,Math.min(this.model.max-span,center-span/2));this.setTimelinePeriod(start,start+span);return true;
+  }
+  setTimelinePeriod(start,end,{strict=false}={}){
+   if(!this.model)return 'De tijdslijn wordt nog geladen.';
+   const min=this.model.min,max=this.model.max,full=max-min,minSpan=full/1000;
+   if(!Number.isFinite(start)||!Number.isFinite(end)||end<=start||strict&&(!Number.isInteger(start)||!Number.isInteger(end)||start===0||end===0))return 'Kies een geldig begin- en eindjaar; het eindjaar moet later liggen. Er is geen jaar 0.';
+   if(strict&&(start<min||end>max))return `Kies een tijdvak binnen ${date(min)} en ${date(max)}.`;
+   if(strict&&end-start<minSpan)return `Kies een tijdvak van minimaal ${Math.ceil(minSpan)} jaar.`;
+   const span=Math.max(minSpan,Math.min(full,end-start));start=Math.max(min,Math.min(max-span,start));end=start+span;
+   const scroll=this.el.querySelector('.atlas-timeline-scroll'),s=this.state,width=scroll.clientWidth||800;s.sharedRange=null;s.zoom=full/span;this.paintTimeline();scroll.scrollLeft=(start-min)/full*width*s.zoom;s.scroll=scroll.scrollLeft;
+   s.sharedRange={start,end,zoom:s.zoom,scroll:scroll.scrollLeft,width};this.paintTimeline();const error=this.el.querySelector('#timeline-period-error');if(error)error.textContent='';return null;
+  }
   async open(view,tradition){
    const language=I()?.language||'nl';
    const same=this.view===view&&this.tradition===tradition&&this.language===language;
@@ -175,6 +192,7 @@
       <div class="explore-zoom" role="group" aria-label="Tijdslijn zoomen"><button data-action="zoom-out" aria-label="Tijdslijn uitzoomen">−</button><output id="timeline-zoom">100%</output><button data-action="zoom-in" aria-label="Tijdslijn inzoomen">+</button></div>
       <button class="explore-btn" data-action="overview">Hele tijdslijn</button>
      </div>
+     <div class="timeline-period-controls"><label>Tijdvak<select id="timeline-span" aria-label="Kies de omvang van het tijdvak"><option value="all">Hele tijdslijn</option><option value="100">100 jaar</option><option value="500">500 jaar</option><option value="1000">1.000 jaar</option><option value="custom">Eigen tijdvak</option></select></label><details class="timeline-custom-period"><summary>Eigen begin- en eindjaar</summary><form id="timeline-period-form"><label>Van<input id="timeline-from-year" type="number" min="1" max="100000" step="1" required inputmode="numeric" aria-label="Beginjaar"><select id="timeline-from-era" aria-label="Tijdrekening beginjaar"><option value="ce">n.Chr.</option><option value="bce">v.Chr.</option></select></label><label>Tot<input id="timeline-to-year" type="number" min="1" max="100000" step="1" required inputmode="numeric" aria-label="Eindjaar"><select id="timeline-to-era" aria-label="Tijdrekening eindjaar"><option value="ce">n.Chr.</option><option value="bce">v.Chr.</option></select></label><button class="explore-btn" type="submit">Toon tijdvak</button></form><p class="explore-note">Gebruik positieve jaartallen en kies v.Chr. of n.Chr. Er is geen jaar 0.</p><p id="timeline-period-error" role="alert"></p></details></div>
      <div class="timeline-legend"><span>${entries.length} gebeurtenissen · ${comparison?'drie religies op dezelfde schaal':esc(names[this.tradition])}</span><span id="timeline-period"></span></div>
      ${comparison?`<div class="timeline-link-controls"><label><input type="checkbox" id="timeline-links-toggle" ${this.state.showConnections!==false?'checked':''}> Verbindingslijnen tonen</label><span><i class="line-key"></i> Doorwerking / contact</span><span><i class="line-key shared"></i> Gedeelde context</span><div class="timeline-link-filters"><label class="timeline-link-type">Soort verband<select id="timeline-link-type"><option value="all">Alle soorten verbanden</option><option value="influence">Doorwerking / contact</option><option value="shared-context">Gedeelde context</option></select></label><fieldset><legend>Betrokken religies</legend>${Object.entries(names).map(([id,title])=>`<label><input type="checkbox" data-link-religion="${id}" ${(this.state.linkReligions||Object.keys(names)).includes(id)?'checked':''}> ${esc(title)}</label>`).join('')}</fieldset><button class="explore-btn" data-action="reset-link-filters">Lijnfilters herstellen</button></div><p>Alleen lijnen tussen aangevinkte religies worden getoond. Kies minstens twee religies; de drie tijdsbanen blijven zichtbaar. Tik op een lijn of nummer voor context en bronnen. Lijnen geven geen richting van invloed aan.</p><p id="timeline-link-filter-status" role="status" aria-live="polite" aria-atomic="true"></p></div>`:''}
      <div class="atlas-timeline-scroll" tabindex="0" aria-label="Tijdslijn: sleep of scroll horizontaal; gebruik plus, min en de pijltjestoetsen"><div class="atlas-timeline-track"><div class="atlas-timeline-axis"></div><div class="atlas-timeline-items"></div>${comparison?'<div class="timeline-link-layer"></div>':''}</div></div>
@@ -190,6 +208,9 @@
     ${comparison?'<details class="timeline-connections"><summary>Contact en onderlinge invloeden</summary><div id="timeline-connection-catalog"></div></details>':''}
     <details class="explore-undated"><summary>Verhalen zonder historische datering</summary><div id="timeline-undated"></div></details>`;
    this.el.querySelector('#timeline-kind').value=this.state.kind;
+   const periodForm=this.el.querySelector('#timeline-period-form');
+   if(periodForm)periodForm.onsubmit=event=>{event.preventDefault();const q=id=>this.el.querySelector(id),from=Number(q('#timeline-from-year').value)*(q('#timeline-from-era').value==='bce'?-1:1),to=Number(q('#timeline-to-year').value)*(q('#timeline-to-era').value==='bce'?-1:1);const error=this.setTimelinePeriod(from,to,{strict:true});q('#timeline-period-error').textContent=error||'';};
+   const spanSelect=this.el.querySelector('#timeline-span');if(spanSelect)spanSelect.onchange=()=>{if(spanSelect.value==='custom'){this.el.querySelector('.timeline-custom-period').open=true;this.el.querySelector('#timeline-from-year').focus();}else this.chooseTimelineSpan(spanSelect.value);};
    const scroll=this.el.querySelector('.atlas-timeline-scroll');
    this.timelineMarkup=null;this.connectionMarkup=null;this.connectionListMarkup=null;
    scroll.scrollLeft=this.state.scroll;this.bindTimelineGestures(scroll);
@@ -286,9 +307,13 @@
     items.innerHTML=html;this.timelineMarkup=html;if(focused)scroll.focus({preventScroll:true});
    }
    if(comparison)this.paintTimelineConnections(width,scroll.scrollLeft,clusters);
-   this.el.querySelector('#timeline-zoom').textContent=`${Math.round(s.zoom*100)}%`;
+   this.el.querySelector('#timeline-zoom').textContent=`${Math.round(span).toLocaleString('nl')} jaar`;
    const begin=this.model.min+scroll.scrollLeft/scale,end=Math.min(this.model.max,begin+span);
-   this.el.querySelector('#timeline-period').textContent=`${date(Math.round(begin)||1)} – ${date(Math.round(end)||1)}`;
+   const exact=s.sharedRange&&s.sharedRange.zoom===s.zoom&&s.sharedRange.width===width&&s.sharedRange.scroll===scroll.scrollLeft?s.sharedRange:null;
+   const period=exact||{start:begin,end};
+   this.el.querySelector('#timeline-period').textContent=`${date(Math.round(period.start)||1)} – ${date(Math.round(period.end)||1)}`;
+   const select=this.el.querySelector('#timeline-span');if(select)select.value=s.zoom===1?'all':String([100,500,1000].find(years=>Math.abs(years-span)<.01)||'custom');
+   for(const [key,value] of [['from',period.start],['to',period.end]]){const year=this.el.querySelector(`#timeline-${key}-year`),era=this.el.querySelector(`#timeline-${key}-era`);if(year&&year!==this.el.ownerDocument?.activeElement)year.value=Math.abs(Math.round(value)||1);if(era&&era!==this.el.ownerDocument?.activeElement)era.value=value<0?'bce':'ce';}
    this.el.querySelector('#timeline-range').value=String(full<=width?0:Math.round(scroll.scrollLeft/(full-width)*1000));
    this.el.querySelector('#timeline-range').disabled=s.zoom===1;
    this.el.querySelector('[data-action="zoom-out"]').disabled=s.zoom<=1;
@@ -420,15 +445,15 @@
    this.el.innerHTML=`${this.note()}<div class="challenge-controls">
     ${this.tradition==='christianity'?`<div class="explore-filter-group" role="group" aria-label="De drie P’s van Sant’Egidio">${[['all','Alle drie P’s'],['prayer','Gebed'],['poor','Armen'],['peace','Vrede']].map(([id,title])=>`<button class="explore-btn" data-pillar="${id}" aria-pressed="${id===this.state.pillar}">${title}</button>`).join('')}</div>`:''}
     <label>Onderwerp<select id="challenge-topic"><option value="all">Alle onderwerpen</option>${[...new Set(all.map(x=>x.topic))].map(topic=>`<option value="${esc(topic)}" ${topic===this.state.topic?'selected':''}>${esc(topic)}</option>`).join('')}</select></label>
-    <span role="status">${choices.length} uitdagingen</span></div>
+    <span role="status">${choices.length} reflecties</span></div>
     ${e?`<div class="challenge-layout"><article class="explore-panel challenge-body">
      <span class="library-kicker">${esc(e.topic)}${e.pillar?' · '+esc({prayer:'Preghiera · gebed',poor:'Poveri · armen',peace:'Pace · vrede'}[e.pillar]):''}</span>
      <h2>${esc(e.statement||e.title)}</h2><p class="explore-note">Redactionele stelling · een uitnodiging tot eigen reflectie</p>
      <div class="challenge-passage"><h3>Vertrekpunt in de heilige tekst</h3>${this.passageButton(e.passage,this.reference(e.passage)+' · Lees de passage →')}<p class="explore-note">Lees de volledige passage in haar context. De stelling hierboven is geen letterlijk tekstcitaat.</p></div>
      <h3>Context om mee te nemen</h3><p>${esc(e.context)}</p>
      <details><summary>Bronnen en verder lezen</summary>${this.sources(e.sources)}</details>
-     <div class="challenge-actions"><button class="explore-btn primary" data-action="next-challenge">Een andere uitdaging ↻</button><span class="explore-note">Neem de tijd. Je hoeft niets in te vullen.</span></div>
-    </article><aside class="challenge-reflect"><span class="library-kicker">RUIMTE VOOR REFLECTIE</span><h2>Kijk een laag dieper.</h2><ol>${(e.questions||[]).map(q=>`<li>${esc(q)}</li>`).join('')}</ol><p>Welke aanname van jezelf wil je opnieuw onderzoeken?</p></aside></div>`:'<p role="status">Geen uitdagingen voor deze combinatie. Kies een ander onderwerp of alle drie P’s.</p>'}`;
+     <div class="challenge-actions"><button class="explore-btn primary" data-action="next-challenge">Een andere reflectie ↻</button><span class="explore-note">Neem de tijd. Je hoeft niets in te vullen.</span></div>
+    </article><aside class="challenge-reflect"><span class="library-kicker">RUIMTE VOOR REFLECTIE</span><h2>Kijk een laag dieper.</h2><ol>${(e.questions||[]).map(q=>`<li>${esc(q)}</li>`).join('')}</ol><p>Welke aanname van jezelf wil je opnieuw onderzoeken?</p></aside></div>`:'<p role="status">Geen reflecties voor deze combinatie. Kies een ander onderwerp of alle drie P’s.</p>'}`;
   }
   reference(p){
    if(!p)return '';
@@ -505,7 +530,7 @@
    const d=b.dataset;
    if(d.timelineLink){this.openTimelineConnection(d.timelineLink);return;}
    if(d.fitConnection){this.fitTimelineConnection(d.fitConnection);return;}
-   if(d.timelineMode){this.timelineComparison=d.timelineMode==='comparison';this.renderTimeline();this.el.querySelector(`[data-timeline-mode="${d.timelineMode}"]`)?.focus({preventScroll:true});return}
+   if(d.timelineMode){this.timelineComparison=d.timelineMode==='comparison';this.renderTimeline();this.onTimelineMode?.(this.timelineComparison);this.el.querySelector(`[data-timeline-mode="${d.timelineMode}"]`)?.focus({preventScroll:true});return}
    if(d.connection!==undefined){
     const link=this.data.connections?.[+d.connection];if(!link)return;
     this.fitTimelineConnection(link.id);return;

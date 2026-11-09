@@ -32,7 +32,7 @@ const groups=new Map([
 context.document.querySelector=control;context.document.querySelectorAll=selector=>groups.get(selector)||[];
 context.document.addEventListener=()=>{};context.document.documentElement={lang:'nl'};
 const windowHandlers=new Map();context.window.matchMedia=()=>({matches:false});context.window.addEventListener=(name,callback)=>windowHandlers.set(name,callback);
-const I=context.window.BibleI18n={language:'nl',reference:text=>text,t:(text,params={})=>text.replace(/\{(\w+)\}/g,(_,key)=>params[key]??`{${key}}`),localizePeople(){},localizePlaces:data=>data,setLanguage(next){this.language=next;},translateDOM(){},observe(){}};
+const I=context.window.BibleI18n={language:'nl',registerRows(){},reference:text=>text,t:(text,params={})=>text.replace(/\{(\w+)\}/g,(_,key)=>params[key]??`{${key}}`),localizePeople(){},localizePlaces:data=>data,setLanguage(next){this.language=next;},translateDOM(){},observe(){}};
 context.structuredClone=structuredClone;context.URL=URL;
 context.requestAnimationFrame=callback=>callback();
 const storage=new Map();context.localStorage={getItem:key=>storage.get(key),setItem:(key,value)=>storage.set(key,String(value))};
@@ -71,7 +71,9 @@ context.window.SacredReader=class {
 };
 let atlasView;
 context.window.TraditionAtlasView=class {
-  constructor(el,callbacks){this.el=el;this.callbacks=callbacks;this.saved=new Map();atlasView=this;}
+  constructor(el,callbacks){this.el=el;this.callbacks=callbacks;this.state={};this.saved=new Map();atlasView=this;}
+  getState(){return {...this.state,mode:this.mode,placeId:this.placeId};}
+  render(){this.mode=this.state.mode;this.placeId=this.state.placeId;this.changeLanguage();}
   setCollection(data,mode){this.tradition=data.meta.tradition;this.setMode(mode);}
   setMode(mode){this.mode=mode;this.changeLanguage();}
   openPlace(id){this.placeId=id;this.mode='cities';}
@@ -104,12 +106,14 @@ context.window.PeopleIndexView=class {
   setComparisonKeys(keys){this.comparisonKeys=[...keys];}
   open(id){assert(this.data.people.some(person=>person.id===id),`Person ${id} must belong to selected ${this.tradition} collection`);this.selected=id;this.render();}
   changeLanguage(){this.languageChanges++;this.render();}
+  getState(){return {selected:this.selected};}
   render(){this.el.rendered=`people:${this.tradition}:${I.language}`;this.el.innerHTML=`<article>${this.el.rendered}</article>`;}
 };
 context.window.PeopleComparisonView=class {
   constructor(el,data,callbacks){this.el=el;this.data=data;this.callbacks=callbacks;this.selected=null;this.languageChanges=0;this.render();comparisonViews.push(this);}
   open(key){assert(this.data.people.some(person=>person.key===key),`Comparison ${key} must exist`);this.selected=key;this.render();}
   changeLanguage(){this.languageChanges++;this.render();}
+  getState(){return {query:this.query||'',selected:this.selected};}
   render(){this.el.rendered=`compare:${I.language}`;this.el.innerHTML=`<article>${this.el.rendered}</article>`;}
 };
 const tanakh={books:[{id:'GEN',names:{nl:'Genesis',en:'Genesis'},group:'torah',canonicalBook:'Genesis'}],editions:{en:{meta:{language:'en'},books:[{id:'GEN',chapters:[{number:1,verses:[{number:1,text:'In the beginning.'}]}]}]}}};
@@ -124,10 +128,10 @@ const personPassages={meta:{targetEdition:'catholic-nl'},references:{'catholic|J
 const abrahamRef=context.window.BIBLE_DATA.people.find(person=>person.id==='abraham').refs[0];
 personPassages.references[`${abrahamRef.translation?'atlas-'+abrahamRef.translation:'atlas'}|${abrahamRef.label}`]={status:'mapped',targets:[{book:'GEN',chapter:12,verse:2,endVerse:4,edition:'catholic-nl'}]};
 function initialCatholic(edition='catholic-nl'){respond(edition==='catholic-nl'?'catholic-bible-data-nl.json':'catholic-bible-data.json',{meta:{language:edition==='catholic-nl'?'nl':'en',editionId:edition,canon:'catholic'}});respond('catholic-people.json',catholicPeople);respond('places-data.json',{places:[]});}
-for(const file of ['discovery.js','paths.js','sacred-library.js','catholic-people-ui.js','person-passage-map.js','app.js'])vm.runInContext(fs.readFileSync(path.join(root,'dist',file),'utf8'),context);
+for(const file of ['discovery.js','paths.js','sacred-library.js','catholic-people-ui.js','person-passage-map.js','navigation-trail.js','app.js'])vm.runInContext(fs.readFileSync(path.join(root,'dist',file),'utf8'),context);
 let profileView;
 context.window.PersonProfileModel=require('../dist/person-profile.js').PersonProfileModel;
-context.window.PersonProfileView=class{constructor(dialog,callbacks){this.dialog=dialog;this.callbacks=callbacks;profileView=this;}open(model,id){this.model=model;this.profile=model.get(id);assert(this.profile,id);this.dialog.innerHTML=this.profile.name;this.dialog.showModal();return true;}};
+context.window.PersonProfileView=class{constructor(dialog,callbacks){this.dialog=dialog;this.callbacks=callbacks;profileView=this;}open(model,id,{tab='overview'}={}){this.model=model;this.profile=model.get(id);this.tab=tab;assert(this.profile,id);this.render();this.dialog.showModal();return true;}render(){this.dialog.innerHTML=this.profile.name;}};
 async function profileReady(){for(let i=0;i<4;i++){await settle();for(const file of ['person-comparisons.json','tradition-atlas-judaism.json','tradition-atlas-islam.json'])if(pending(file))respond(file,file==='person-comparisons.json'?comparisons:JSON.parse(fs.readFileSync(path.join(root,'dist',file),'utf8')));}}
 function profilePassage(button){button.addEventListener('click',()=>profileView.callbacks.onRead(profileView.model.tradition,profileView.profile.refs[0],profileView.profile.id));}
 const snapshot=()=>context.window.biblePath.getState(),selectTradition=name=>traditions.find(button=>button.dataset.tradition===name).click(),selectView=(name,tradition='christianity')=>{nav.find(button=>button.dataset.view===name&&(!button.dataset.navTradition||button.dataset.navTradition===tradition)).click();if(name==='cities')control('#cities-show-list').click();},selectPeople=name=>peopleTraditions.find(button=>button.dataset.peopleTradition===name).click();
@@ -383,7 +387,7 @@ async function main(){
   assert.equal(bibleReaders.at(-1).state.location.bookId,'GEN');assert.equal(bibleReaders.at(-1).state.location.verse,2);
   assert.equal(bibleReaders.at(-1).state.personPassage.originalReference.translation,abrahamRef.translation,'Source translation metadata reaches the resolver');
   assert.equal(requests.filter(request=>request.file==='person-passage-map.json').length,1,'Both person collections share a successful map download');
-  for(const scenario of ['--religion-navigation','--saved-religion','--festivals','--tradition-atlas','--geography','--exploration']){const check=spawnSync(process.execPath,[__filename,scenario],{encoding:'utf8'});assert.equal(check.status,0,check.stderr||check.stdout);}
+  for(const scenario of ['--navigation','--religion-navigation','--saved-religion','--festivals','--tradition-atlas','--geography','--exploration']){const check=spawnSync(process.execPath,[__filename,scenario],{encoding:'utf8'});assert.equal(check.status,0,check.stderr||check.stdout);}
   const sharedCheck=spawnSync(process.execPath,[__filename,'--exploration','--shared-timeline'],{encoding:'utf8'});assert.equal(sharedCheck.status,0,sharedCheck.stderr||sharedCheck.stdout);
   const pendingProfileCheck=spawnSync(process.execPath,[__filename,'--pending-profile-language'],{encoding:'utf8'});
   assert.equal(pendingProfileCheck.status,0,pendingProfileCheck.stderr||pendingProfileCheck.stdout);
@@ -578,4 +582,24 @@ async function explorationRegression(){
   console.log('Exploration app routing passed: religion-first timeline/challenge, cross-religion search return, Catholic/Dutch/Hebrew edition ranges and late-reader cancellation.');
 }
 
-(process.argv.includes('--exploration')?explorationRegression():process.argv.includes('--geography')?geographyRegression():process.argv.includes('--tradition-atlas')?atlasRegression():process.argv.includes('--festivals')?festivalRegression():process.argv.includes('--religion-navigation')?religionNavigationRegression():process.argv.includes('--saved-religion')?savedReligionRegression():process.argv.includes('--pending-profile-language')?pendingProfileLanguageRegression():process.argv.includes('--pending-passage-race')?pendingPassageEditionRegression():process.argv.includes('--saved-catholic')?savedCatholicRegression():process.argv.includes('--dutch-edition-retry')?dutchEditionRetryRegression():process.argv.includes('--person-passage-retry')?personPassageRetryRegression():process.argv.includes('--person-passage-cancel')?personPassageCancelRegression():main()).catch(error=>{console.error(error);process.exitCode=1;});
+async function navigationRegression(){
+  initialCatholic();await settle();selectView('index');await settle();
+  control('#index-next').click();assert.equal(snapshot().indexPage,2);
+  context.window.scrollY=710;let restoredScroll;context.window.scrollTo=value=>{restoredScroll=value;};
+  bibleReaders.at(-1).callbacks.onPerson('abraham');await profileReady();
+  assert.match(profileView.callbacks.backLabel(),/People index/i);
+  profileView.tab='texts';profileView.limit=48;control('#unified-profile-dialog').scrollTop=230;
+  const reading=profileView.callbacks.onRead('christianity',profileView.profile.refs[0],'abraham');await settle();
+  respond('person-passage-map.json',personPassages);await reading;await settle();
+  assert.equal(snapshot().view,'reader');assert.equal(snapshot().bibleEdition,'catholic-nl');
+  assert.equal(bibleReaders.at(-1).state.location.verse,2);assert.equal(bibleReaders.at(-1).state.location.endVerse,4);
+  await control('#exploration-back').click();await profileReady();
+  assert.equal(snapshot().view,'index');assert.equal(profileView.profile.id,'abraham');assert.equal(profileView.tab,'texts');assert.equal(profileView.limit,48);assert.equal(control('#unified-profile-dialog').scrollTop,230);
+  assert.equal(snapshot().indexPage,2);assert.equal(restoredScroll.top,710);
+  await profileView.callbacks.onBack();await settle();assert.equal(control('#unified-profile-dialog').open,false);assert.equal(snapshot().view,'index');assert.equal(snapshot().indexPage,2);assert.equal(control('#exploration-back').hidden,true);
+  bibleReaders.at(-1).callbacks.onPerson('abraham');await profileReady();assert.equal(control('#exploration-back').hidden,false);
+  selectView('reader');await settle();assert.equal(control('#exploration-back').hidden,true,'Explicit root navigation starts a fresh exploration');
+  console.log('App exploration return passed: paged index → canonical profile → reviewed Catholic passage → same profile tab, expanded references and dialog scroll → same index page and page scroll; main navigation clears the trail.');
+}
+
+(process.argv.includes('--navigation')?navigationRegression():process.argv.includes('--exploration')?explorationRegression():process.argv.includes('--geography')?geographyRegression():process.argv.includes('--tradition-atlas')?atlasRegression():process.argv.includes('--festivals')?festivalRegression():process.argv.includes('--religion-navigation')?religionNavigationRegression():process.argv.includes('--saved-religion')?savedReligionRegression():process.argv.includes('--pending-profile-language')?pendingProfileLanguageRegression():process.argv.includes('--pending-passage-race')?pendingPassageEditionRegression():process.argv.includes('--saved-catholic')?savedCatholicRegression():process.argv.includes('--dutch-edition-retry')?dutchEditionRetryRegression():process.argv.includes('--person-passage-retry')?personPassageRetryRegression():process.argv.includes('--person-passage-cancel')?personPassageCancelRegression():main()).catch(error=>{console.error(error);process.exitCode=1;});

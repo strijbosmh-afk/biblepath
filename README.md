@@ -104,3 +104,10 @@ Google Fonts provides typography with system fallbacks. Reader and index functio
 ## Central search and unified person profiles
 
 Use the search icon in the header or **Doorzoek ReligieAtlas** in the sidebar to search people, places, themes, events, festivals/rituals and scripture passages, with independent religion and information-type filters. Existing specialist search tools remain. Person links open the same religion-specific profile with Overview, Texts, Family and Places tabs. Explicit identity mappings consolidate Catholic additions and family/index records; namesakes and religious collections remain separate. Passage links retain source editions and reviewed numbering. Mobile secondary controls are collapsible; desktop controls stay expanded. Run `node tests/workspace-models.cjs` and `node tests/workspace-ui.cjs` alongside the existing suites.
+
+
+## Consistent navigation and exploration return
+
+Religion menus now use the same Dutch names as their page headings: Heilige boeken, Personenindex, Feestdagen & rituelen, Familiekaart, Plaatsen, Tijdslijn and Reflectie. The shared comparison timeline has its own direct entry under Vergelijken; shared search/comparison screens collapse religion submenus. Places retain both map and list modes.
+
+A contextual return button names its destination and restores the originating query, filters, page, scroll, selected profile/tab, edition-bound reading or map/timeline camera. Nested profiles support the same return chain; explicit main navigation starts a fresh chain. The compact, bounded trail is in memory for the current page session and does not replace browser history. Timeline choices offer the whole timeline, 100/500/1,000 years or a custom BCE/CE range. Existing pan, pinch, zoom, filters, connection dossiers, shared links and QR exports remain available. Run `tests/navigation-trail.cjs`, `tests/timeline-periods.cjs` and the expanded app/reader/map suites with the existing validation list.

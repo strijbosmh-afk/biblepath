@@ -16,6 +16,8 @@
     }
     destroy(){this.save();for(const [event,handler] of Object.entries(this.handlers))this.el.removeEventListener(event,handler);}
     getState(){return {edition:this.edition,location:{...this.location},tab:this.tab,query:this.query,scope:this.scope};}
+    getNavigationState(){return {...this.getState(),page:this.page,showOriginal:this.showOriginal};}
+    setNavigationState(saved){if(!saved||!this.model.editions[saved.edition])return false;this.save();this.edition=saved.edition;this.location=this.model.location(this.edition,saved.location);this.query=saved.query||'';this.scope=saved.scope||'all';this.page=saved.page||0;this.showOriginal=saved.showOriginal!==false;this.tab=['read','search','commentary','notes'].includes(saved.tab)?saved.tab:'read';this.render();return true;}
     save(){this.positions[this.edition]={...this.location};try{localStorage.setItem(this.key,JSON.stringify({edition:this.edition,positions:this.positions,showOriginal:this.showOriginal}));}catch{}}
     changeLanguage(){const previous=this.language;if(previous===window.BibleI18n.language)return;this.language=window.BibleI18n.language;if(this.edition===previous&&this.model.editions[this.language])this.selectEdition(this.language);else this.render();}
     selectEdition(edition){if(!this.model.editions[edition])return;this.save();this.edition=edition;this.location=this.model.location(edition,this.positions[edition]);this.query='';this.page=0;this.tab='read';this.render();}

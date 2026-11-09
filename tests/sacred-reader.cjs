@@ -52,6 +52,7 @@ qEl.change('sacred-edition','ar');assert.match(qEl.innerHTML,/lang="ar" dir="rtl
 qEl.search('114:6');assert.equal(qReader.location.unit,'114');assert.equal(qReader.location.verse,6);assert.match(qEl.innerHTML,/data-move="1" disabled/);
 qEl.click({tab:'commentary'});assert.match(qEl.innerHTML,/https:\/\/quran\.com\/114\/6\/tafsirs/);
 qEl.click({tab:'notes'});assert.doesNotMatch(qEl.innerHTML,/Een gedachte/,'Notes must not leak between traditions');
+const navigation=qReader.getNavigationState();qReader.selectEdition('nl');qReader.open({unit:'2',chapter:1,verse:1});assert(qReader.setNavigationState(navigation));assert.deepEqual(qReader.getNavigationState(),navigation,'Contextual return retains source edition, search, range, tab, page and original-script choice');assert.equal(qReader.setNavigationState({...navigation,edition:'missing'}),false);
 qReader.destroy();assert.equal(qEl.handlers.size,0);
 storage.set('biblepath-reader-islam','{"edition":"missing","positions":null}');
 const recovered=new Reader(new Root(),quran);assert.equal(recovered.edition,'nl');assert.equal(recovered.location.unit,'1');

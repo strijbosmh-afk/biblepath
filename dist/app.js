@@ -42,6 +42,7 @@
   let traditionAtlas=null,atlasRequest=0,atlasPassageRequest=0,returnToAtlas=null;
   const atlasCache=new Map();
   let placesMap=null,geographyLoading=null,geographyRequest=0,geographyFilter=initialTradition,geographyFilterPending=true,returnToGeography=null,pendingAtlasPlace=null;
+  let timelineComparisonRequested=null;
   const state = {layout:'constellation', focus:'abraham', selected:'abraham', depth:'auto', discoveryDepth:1, localRoots:[], testament:'all', spouses:true, view:'reader', tradition:initialTradition, bibleEdition:initialBibleEdition, peopleTradition:initialTradition, indexPage:1};
   let zoomBase = null, zoomTimer, rendering = false, lastSelection;
   const MAX_MAP_PEOPLE = 180, INDEX_PAGE_SIZE = 60;
@@ -54,6 +55,54 @@
   // Exposed read-only snapshots help verify navigation and graph behavior.
   window.biblePath = {getState:() => ({...state, path:activePath ? {kind:activePath.kind,personIds:[...activePath.personIds],steps:activePath.steps.length,indexedCount:activePath.indexedCount} : null, graph:graph.getState(), language:I.language,reader:reader?.getState?.()||null,sacredReader:sacredReader?.getState?.()||null,cities:cities?.getState?.()||null,peopleCount:people.length, relationshipCount:relationships.length})};
   let tooltipTimer, toastTimer, currentTooltipId;
+  const explorationTrail=window.AtlasNavigationTrail?new window.AtlasNavigationTrail({capture:captureExploration,restore:restoreExploration,onChange:updateExplorationBack}):null;
+  function recordExploration(){explorationTrail?.record();}
+  function backLabel(){const previous=explorationTrail?.peek();if(!previous)return '';const place=previous.profile?.name||I.t(previous.title);return I.t('← Back to {place}',{place:previous.profile?place:place.charAt(0).toLocaleLowerCase()+place.slice(1)});}
+  function updateExplorationBack(){const button=$('#exploration-back');if(!button)return;button.hidden=!explorationTrail?.peek();button.disabled=Boolean(explorationTrail?.restoring);button.textContent=backLabel();$('main').classList.toggle('has-exploration-trail',Boolean(explorationTrail?.peek()));}
+  function captureExploration(){
+    const view=state.view,profile=$('#unified-profile-dialog').open&&unifiedProfile?{id:unifiedProfile.profile.id,tradition:unifiedProfile.model.tradition,tab:unifiedProfile.tab,limit:unifiedProfile.limit,top:$('#unified-profile-dialog').scrollTop,name:unifiedProfile.profile.name}:null;
+    const titles={search:'Search results',reader:'Reading',map:'Relationship map',index:'People index',cities:'Places',geography:'Places',festivals:'Festivals & rituals',timeline:'Timeline',challenge:'Reflection challenge',topics:'Search by topic',compare:'Across traditions'};
+    const active=document.activeElement,focus=active?.id?'#'+active.id:active?.dataset?.searchResult!==undefined?`[data-search-result="${active.dataset.searchResult}"]`:active?.dataset?.profile?`[data-profile="${active.dataset.profile}"]`:null;
+    const saved={view,tradition:state.tradition,title:view==='timeline'&&exploreView?.timelineComparison?'Compare timelines':titles[view],profile,focus,scroll:{x:window.scrollX||0,y:window.scrollY||0},state:{...state},indexQuery:$('#index-search').value,inspectorTop:$('#inspector').scrollTop||0,pathPicks:{...pathPicks},camera:{...graph.transform},returns:{library:returnToLibrary,profile:returnToProfile,explore:returnToExplore,festival:returnToFestivals,atlas:returnToAtlas,geography:returnToGeography},options:[...document.querySelectorAll('.compact-options')].map(node=>({key:node.dataset.compactKey,open:node.open}))};
+    if(view==='reader')saved.reading=state.tradition==='christianity'?reader?.getState():sacredReader?.getNavigationState?.()||sacredReader?.getState();
+    if(view==='cities'&&state.tradition==='christianity')saved.cities=cities?.getState();
+    if(view==='geography')saved.geography=placesMap?.getState();
+    if(['cities','map'].includes(view)&&state.tradition!=='christianity')saved.atlas=traditionAtlas?.getState();
+    if(view==='index'&&state.tradition!=='christianity')saved.people=peopleIndex?.getState();
+    if(view==='compare')saved.comparison=comparisonView?.getState();
+    if(view==='search')saved.search=workspaceSearch?.state;
+    if(view==='festivals')saved.festival=festivalView?.state;
+    if(['timeline','challenge','topics'].includes(view))saved.explore=exploreView?.getNavigationState?.();
+    const snapshot=structuredClone(saved);snapshot.activePath=activePath;return snapshot;
+  }
+  async function restoreExploration(saved,isCurrent){
+    $('#unified-profile-dialog').close();pendingCity=null;pendingAtlasPlace=null;pendingPeopleProfile=null;useReligion(saved.tradition);if(saved.state.bibleEdition!==state.bibleEdition)selectBibleEdition(saved.state.bibleEdition);
+    Object.assign(state,saved.state);Object.assign(pathPicks,saved.pathPicks);activePath=saved.activePath;
+    $('#index-search').value=saved.indexQuery;$('#depth-select').value=String(state.depth);$('#show-spouses').checked=state.spouses;
+    returnToLibrary=saved.returns.library;returnToProfile=saved.returns.profile;returnToExplore=saved.returns.explore;returnToFestivals=saved.returns.festival;returnToAtlas=saved.returns.atlas;returnToGeography=saved.returns.geography;
+    if(saved.search&&workspaceSearch)workspaceSearch.state=structuredClone(saved.search);
+    if(saved.explore)timelineComparisonRequested=saved.explore.comparison;
+    setView(saved.view);let component;
+    if(saved.view==='reader'){component=await ensureReader();if(!isCurrent())return;if(saved.reading){if(saved.tradition==='christianity')component?.setState(saved.reading);else if(component?.setNavigationState)component.setNavigationState(saved.reading);else component?.setState?.(saved.reading);}}
+    if(saved.view==='cities'&&saved.tradition==='christianity'){component=await ensureCities();if(!isCurrent())return;if(saved.cities)component?.setState(saved.cities);}
+    if(saved.geography){component=await ensureGeography();if(!isCurrent())return;component?.setNavigationState?.(saved.geography);}
+    if(saved.atlas){component=await ensureTraditionAtlas();if(!isCurrent())return;Object.assign(component.state,structuredClone(saved.atlas));component.render?.();}
+    if(saved.people){component=await ensurePeopleIndex();if(!isCurrent())return;Object.assign(component.state,structuredClone(saved.people));component.render?.();}
+    if(saved.comparison){component=await ensureComparisons();if(!isCurrent())return;component.query=saved.comparison.query;component.selected=saved.comparison.selected;component.render?.();}
+    if(saved.festival){component=await ensureFestivals();if(!isCurrent())return;Object.assign(component.state,structuredClone(saved.festival));component.render?.();}
+    if(saved.explore){await ensureExplore();if(!isCurrent())return;await exploreView.restoreNavigationState?.(saved.explore,isCurrent);syncTimelineNavigation();}
+    if(saved.search){await ensureWorkspaceSearch();if(!isCurrent())return;}
+    if(saved.view==='map'&&saved.tradition==='christianity'){renderPathPickers();renderGraph({preserveDiscovery:true});Object.assign(graph.transform,saved.camera);graph.applyTransform?.({reason:'restore'});$('#inspector').scrollTop=saved.inspectorTop;}
+    if(saved.profile){await openUnifiedProfile(saved.profile.tradition,saved.profile.id,{tab:saved.profile.tab});if(!isCurrent())return;unifiedProfile.limit=saved.profile.limit;unifiedProfile.render();$('#unified-profile-dialog').scrollTop=saved.profile.top;}
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{if(!isCurrent())return;const options=new Map(saved.options.map(item=>[item.key,item.open]));if(window.matchMedia('(max-width:760px)').matches)document.querySelectorAll('.compact-options').forEach(node=>{if(options.has(node.dataset.compactKey))node.open=options.get(node.dataset.compactKey);});if(saved.focus)$(saved.focus)?.focus?.({preventScroll:true});window.scrollTo?.({left:saved.scroll.x,top:saved.scroll.y,behavior:'auto'});}));
+  }
+  function syncTimelineNavigation(){
+    if(state.view!=='timeline')return;const comparison=Boolean(exploreView?.timelineComparison),title=comparison?'Compare timelines':'Timeline';
+    $('.intro h1').textContent=I.t(title);$('.intro .eyebrow').textContent=I.t(comparison?'Compare religions':religionNames[state.tradition]);$('#religion-crumb').textContent=I.t(comparison?'Compare religions':religionNames[state.tradition]);$('.breadcrumb strong').textContent=I.t(title);
+    $$('[data-religion]').forEach(button=>{const active=!comparison&&button.dataset.religion===state.tradition;button.classList.toggle('active',active);button.setAttribute('aria-expanded',String(active));button.setAttribute('aria-pressed',String(active));});
+    $$('[data-religion-menu]').forEach(menu=>{menu.hidden=comparison||menu.dataset.religionMenu!==state.tradition;});
+    $$('.nav-item').forEach(button=>{const active=button.dataset.view==='timeline'&&(comparison?button.dataset.timelineComparison==='true':button.dataset.navTradition===state.tradition);button.classList.toggle('active',active);button.setAttribute('aria-current',active?'page':'false');});
+  }
   const normalize = text => text.toLocaleLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
   const searchable = new Map(people.map(p => [p.id, normalize([p.name,...(p.aliases || []),p.disambiguation || '',p.description,p.era,...(p.allReferences || p.refs.map(r=>r.label))].join(' '))]));
 
@@ -167,6 +216,7 @@
   }
 
   function explorePerson(id, depth) {
+    recordExploration();
     const person = personById.get(id);
     if (!person) return;
     useReligion('christianity');
@@ -201,6 +251,7 @@
     return true;
   }
   function navigateReligion(tradition,view,{keepSidebar=false}={}){
+    explorationTrail?.clear();if(view==='timeline'||!view&&state.view==='timeline')timelineComparisonRequested=false;
     returnToExplore=null;
     if(!useReligion(tradition))return;
     returnToGeography=null;pendingAtlasPlace=null;geographyFilter=tradition;geographyFilterPending=true;
@@ -257,7 +308,7 @@
     $$('[data-tradition]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.tradition===state.tradition)));
     $('#people-testament-filters').hidden = !bibleContext||!['map','index'].includes(view);
     $('#return-to-library').hidden = state.tradition!=='christianity' || !returnToLibrary || !['map','index'].includes(view);
-    const titles={map:['One story. Many connections.','Explore the people of the Bible, one relationship at a time.'],index:['Three collections. Distinct accounts.','Choose a collection to explore its people. Each tradition keeps its own profiles and sources.'],compare:['People across traditions.','Explore how people are portrayed in Roman Catholic Christianity, Judaism and Islam, with each account alongside its sources.'],reader:['Read each tradition in its own context.','Choose the Bible, Tanakh or Qur’an. Each edition keeps its own sources and reading position.'],cities:['Places that hold a story.','Explore biblical cities and the passages that bring them to life.']};
+    const titles={map:['Relationship map','Explore the people of the Bible, one relationship at a time.'],index:['Three collections. Distinct accounts.','Choose a collection to explore its people. Each tradition keeps its own profiles and sources.'],compare:['People across traditions.','Explore how people are portrayed in Roman Catholic Christianity, Judaism and Islam, with each account alongside its sources.'],reader:['Read each tradition in its own context.','Choose the Bible, Tanakh or Qur’an. Each edition keeps its own sources and reading position.'],cities:['Places','Explore biblical cities and the passages that bring them to life.']};
     if(view==='reader')titles.reader=['Holy books',{
       christianity:'Read the Catholic Bible and explore its texts, people and context.',
       judaism:'Read the Tanakh and explore its Jewish context.',
@@ -265,17 +316,18 @@
     }[state.tradition]];
     if(view==='index')titles.index=[{christianity:'People in the Catholic Bible',judaism:'People in the Torah',islam:'People in the Qur’an'}[state.tradition],'Explore people and follow their passages within this religion.'];
     if(view==='festivals')titles.festivals=['Festivals & rituals','Celebrations and practices, with their sources, historical development and internal diversity.'];
-    if(view==='geography')titles.geography=['Places map','Explore places by religion, then follow their people and texts.'];
+    if(view==='geography')titles.geography=['Places','Explore places by religion, then follow their people and texts.'];
     titles.timeline=['Timeline','Explore major moments, with sources and historical context.'];
     titles.challenge=['Reflection challenge','Read, pause and reflect in the context of each tradition.'];
     titles.topics=['Search by topic','Find themes and passages in one or more religions.'];
     titles.search=['Search ReligieAtlas','Find people, places, topics and scripture passages.'];
-    if(atlasContext)titles[view]=view==='map'?['Relationship map','Family relationships in this tradition, with a source for every connection.']:['Cities explorer','Cities and places in this tradition, with textual sources and historical context.'];
+    if(atlasContext)titles[view]=view==='map'?['Relationship map','Family relationships in this tradition, with a source for every connection.']:['Places','Cities and places in this tradition, with textual sources and historical context.'];
     $('.intro h1').textContent=I.t(titles[view][0]);$('.intro p').textContent=I.t(titles[view][1]);
     $('#religion-crumb').textContent=I.t(view==='compare'?'Compare religions':religionNames[state.tradition]);
     $('.breadcrumb strong').textContent=I.t({map:'Relationship map',index:'People index',compare:'Across traditions',reader:'Holy books',cities:'Cities explorer',geography:'Places map',festivals:'Festivals & rituals',timeline:'Timeline',challenge:'Reflection challenge',topics:'Search by topic',search:'Search ReligieAtlas'}[view]);
-    $$('[data-religion]').forEach(button=>{const active=view!=='compare'&&button.dataset.religion===state.tradition;button.classList.toggle('active',active);button.setAttribute('aria-expanded',String(active));button.setAttribute('aria-pressed',String(active));});
-    $$('[data-religion-menu]').forEach(menu=>{menu.hidden=view==='compare'||menu.dataset.religionMenu!==state.tradition;});
+    const sharedSection=['compare','topics','search'].includes(view);
+    $$('[data-religion]').forEach(button=>{const active=!sharedSection&&button.dataset.religion===state.tradition;button.classList.toggle('active',active);button.setAttribute('aria-expanded',String(active));button.setAttribute('aria-pressed',String(active));});
+    $$('[data-religion-menu]').forEach(menu=>{menu.hidden=sharedSection||menu.dataset.religionMenu!==state.tradition;});
     $$('.nav-item').forEach(button=>{const active=button.dataset.view===(view==='geography'?'cities':view)&&(!button.dataset.navTradition||button.dataset.navTradition===state.tradition);button.classList.toggle('active',active);button.setAttribute('aria-current',active?'page':'false');});
     const bibleTools=['reader','map','index','cities','geography'].includes(view)&&state.tradition==='christianity';
     $('#search-trigger').hidden=false;$('.journey-label').hidden=!bibleTools;$('.journeys').hidden=!bibleTools;$('.sidebar-bottom .edition').hidden=!bibleTools;
@@ -289,6 +341,7 @@
     if (atlasContext) ensureTraditionAtlas();
     if (view === 'geography') ensureGeography();
     updateCounts();
+    updateExplorationBack();
     if(!keepSidebar)closeSidebar();
   }
 
@@ -304,12 +357,13 @@
     return new window.PersonProfileModel(tradition,{collection,atlas,comparisons});
   }
   async function openUnifiedProfile(tradition,id,{tab='overview'}={}){
+    recordExploration();
     const request=++profileRequest;
     pendingUnifiedProfile={tradition,id,tab};
     try{
       const model=await unifiedModel(tradition);if(request!==profileRequest)return;
       if(!unifiedProfile)unifiedProfile=new window.PersonProfileView($('#unified-profile-dialog'),{
-        onRead:readUnifiedProfile,onCompare:openComparison,
+        onRead:readUnifiedProfile,onCompare:openComparison,onNavigate:recordExploration,onBack:()=>explorationTrail?.back().catch(()=>toast(I.t('The previous view could not be restored. Try again.'))),backLabel,
         onPlace:(religion,placeId)=>openGeographicPlace({tradition:religion,id:placeId}),
         onMap:async(religion,mapId)=>{if(religion==='christianity')explorePerson(mapId);else{useReligion(religion);setView('map');const atlas=await ensureTraditionAtlas();if(state.view==='map'&&state.tradition===religion)atlas?.openPerson(mapId);}}
       });
@@ -317,6 +371,7 @@
     }catch{if(request===profileRequest){pendingUnifiedProfile=null;toast(I.t('The profile could not load. Try again.'));}}
   }
   async function readUnifiedProfile(tradition,ref,id){
+    recordExploration();
     const origin={tradition,id,view:state.view,originTradition:state.tradition,tab:unifiedProfile.tab};
     $('#unified-profile-dialog').close();
     if(tradition==='christianity')openPersonPassage(ref);
@@ -330,7 +385,7 @@
   }
   function ensureWorkspaceSearch(){
     if(!workspaceSearch)workspaceSearch=new window.AtlasSearchView($('#atlas-search-view'),{load:indexWorkspaceCollection,onResult:openWorkspaceResult,onPassage:p=>openExplorePassage(p,'search')});
-    workspaceSearch.open();
+    return workspaceSearch.open();
   }
   async function indexWorkspaceCollection(tradition,index){
     if(!workspaceIndexed.has(index))workspaceIndexed.set(index,new Set());
@@ -348,7 +403,7 @@
     indexed.add(key);
   }
   async function openWorkspaceResult(result){
-    if(!result)return;const {tradition,type,id}=result;
+    if(!result)return;const {tradition,type,id}=result;if(type!=='people')recordExploration();
     if(type==='people'){openUnifiedProfile(tradition,id);return;}
     if(type==='places'){openGeographicPlace({tradition,id});return;}
     if(type==='topics'){workspaceSearch.state.query=typeof result.title==='string'?result.title:result.title.nl;workspaceSearch.state.type='texts';workspaceSearch.state.page=0;workspaceSearch.open();return;}
@@ -357,11 +412,13 @@
     if(type==='events'){setView('timeline');await ensureExplore();if(state.view==='timeline'&&state.tradition===tradition)exploreView.openEvent(id);}
   }
   function ensureExplore(){
-    if(!exploreView)exploreView=new window.AtlasExplore($('#explore-features-view'),{onPassage:openExplorePassage});
+    if(!exploreView)exploreView=new window.AtlasExplore($('#explore-features-view'),{onPassage:openExplorePassage,onTimelineMode:syncTimelineNavigation});
+    if(timelineComparisonRequested!==null){exploreView.setTimelineComparison?.(timelineComparisonRequested);timelineComparisonRequested=null;}
     if(state.view==='timeline'&&pendingTimelineShare){exploreView.setSharedComparison(pendingTimelineShare);pendingTimelineShare=null;}
-    return exploreView.open(state.view,state.tradition);
+    return exploreView.open(state.view,state.tradition).then(()=>{syncTimelineNavigation();return exploreView;});
   }
   async function openExplorePassage(passage,origin){
+    recordExploration();
     if(!Object.hasOwn(religionNames,passage.tradition)||!['timeline','challenge','topics','search'].includes(origin))return;
     const sourceTradition=state.view==='reader'&&returnToExplore?.view===origin?returnToExplore.tradition:state.tradition,tradition=passage.tradition;
     returnToFestivals=null;returnToAtlas=null;returnToGeography=null;
@@ -398,6 +455,7 @@
     }).catch(()=>{if(request===geographyRequest&&state.view==='geography')libraryError(container,ensureGeography);return null;});
   }
   function openGeographicPlace({tradition,id}){
+    recordExploration();
     if(!Object.hasOwn(religionNames,tradition)||typeof id!=='string')return;
     useReligion(tradition);returnToGeography={tradition,id};
     if(tradition==='christianity'){pendingCity=id;setView('cities');return;}
@@ -413,13 +471,14 @@
       if(request!==atlasRequest||tradition!==state.tradition||mode!==state.view)return null;
       if(!traditionAtlas)traditionAtlas=new window.TraditionAtlasView(container,{
         onPassage:openAtlasPassage,
-        onModeChange:mode=>setView(mode),
+        onModeChange:mode=>setView(mode),onNavigate:recordExploration,
         onPerson:id=>openUnifiedProfile(state.tradition,id),onProfile:id=>openUnifiedProfile(state.tradition,id)
       });
       traditionAtlas.setCollection(data,mode);showPlace();return traditionAtlas;
     }).catch(()=>{atlasCache.delete(tradition);if(request===atlasRequest&&tradition===state.tradition&&mode===state.view)libraryError(container,ensureTraditionAtlas);return null;});
   }
   async function openAtlasPassage(passage){
+    recordExploration();
     const tradition=state.tradition;
     if(passage.tradition!==tradition||!['judaism','islam'].includes(tradition))return;
     const origin=returnToAtlas?.tradition===tradition?returnToAtlas:{tradition,mode:state.view};
@@ -447,6 +506,7 @@
     }).catch(()=>{festivalCache.delete(tradition);if(request===festivalRequest&&state.view==='festivals')libraryError(container,ensureFestivals);return null;});
   }
   async function openFestivalPassage(passage,entryId){
+    recordExploration();
     const tradition=passage.tradition;
     if(tradition!==state.tradition||!Object.hasOwn(religionNames,tradition))return;
     returnToAtlas=null;returnToFestivals={tradition,entryId};
@@ -505,7 +565,7 @@
     }).catch(()=>{libraryError(container,ensureComparisons);return null;}).finally(()=>{comparisonLoading=null;});
     return comparisonLoading;
   }
-  function openComparison(key){setView('compare');ensureComparisons().then(view=>{if(state.view==='compare')view?.open(key);});}
+  function openComparison(key){recordExploration();setView('compare');ensureComparisons().then(view=>{if(state.view==='compare')view?.open(key);});}
   function openCollectionPerson(tradition,id){openUnifiedProfile(tradition,id);}
   function loadRawPlaces() {if(!placesPromise)placesPromise=loadJson('places-data.json').catch(error=>{placesPromise=null;throw error;});return placesPromise;}
   function loadPlaces() {return loadRawPlaces().then(data=>I.localizePlaces(data));}
@@ -622,12 +682,13 @@
     citiesLoading=loadPlaces().then(places=>{cities=new window.BibleCities($('#cities-view'),places,window.BIBLE_DATA,{onPerson:id=>openLibraryPerson(id,'cities'),onPassage:openPassage});if(savedCitiesState){cities.setState(savedCitiesState);savedCitiesState=null;}showPendingCity();return cities;}).catch(()=>{libraryError($('#cities-view'),ensureCities);return null;}).finally(()=>{citiesLoading=null;});
     return citiesLoading;
   }
-  function openPassage(reference) {cancelPersonRequest();pendingPassage=reference;if(isCatholicEdition(reference.edition))selectBibleEdition(reference.edition);selectTradition('christianity');}
+  function openPassage(reference) {recordExploration();cancelPersonRequest();pendingPassage=reference;if(isCatholicEdition(reference.edition))selectBibleEdition(reference.edition);selectTradition('christianity');}
   function openPersonPassage(reference){
+    recordExploration();
     pendingPassage={...(typeof reference==='string'?{label:reference}:reference),personPassage:true,passageRequest:++personPassageRequest};
     selectBibleEdition('catholic-nl');selectTradition('christianity');
   }
-  function openCity(id) {pendingCity=id;useReligion('christianity');setView('cities');}
+  function openCity(id) {recordExploration();pendingCity=id;useReligion('christianity');setView('cities');}
   function openLibraryPerson(id,origin){openUnifiedProfile('christianity',id);}
 
   function renderIndex() {
@@ -667,7 +728,7 @@
   $('#person-tooltip').addEventListener('mouseleave',delayHideTooltip);
 
   function openSearch(target = null) {
-    if(!target){setView('search');$('#atlas-search-query')?.focus();return;}
+    if(!target){if(state.view!=='search')recordExploration();setView('search');$('#atlas-search-query')?.focus();return;}
     searchTarget = typeof target === 'string' ? target : null;
     $('#global-search').placeholder = searchTarget ? `Choose ${searchTarget === 'from' ? 'the starting person' : 'the destination person'}…` : 'Whose story will you discover?';
     $('#global-search').setAttribute('aria-label',searchTarget ? `Find ${searchTarget === 'from' ? 'starting' : 'destination'} person` : 'Find a biblical person');
@@ -824,7 +885,7 @@
   function closeSidebar() {$('#sidebar').classList.remove('open');$('#sidebar-shade').classList.remove('open');syncSidebarAccess();}
   function toast(message) {clearTimeout(toastTimer);$('#toast').textContent=message;$('#toast').hidden=false;toastTimer=setTimeout(()=>$('#toast').hidden=true,3000);}
   $$('.layout-option').forEach(button=>button.addEventListener('click',()=>{state.layout=button.dataset.layout;renderGraph({preserveDiscovery:true});}));
-  $$('.nav-item').forEach(button=>button.addEventListener('click',()=>{if(button.dataset.navTradition)navigateReligion(button.dataset.navTradition,button.dataset.view);else{returnToGeography=null;pendingAtlasPlace=null;setView(button.dataset.view);}}));
+  $$('.nav-item').forEach(button=>button.addEventListener('click',()=>{if(button.dataset.navTradition)navigateReligion(button.dataset.navTradition,button.dataset.view);else{explorationTrail?.clear();returnToGeography=null;pendingAtlasPlace=null;if(button.dataset.timelineComparison==='true')timelineComparisonRequested=true;setView(button.dataset.view);}}));
   $$('[data-religion]').forEach(button=>button.addEventListener('click',()=>navigateReligion(button.dataset.religion,null,{keepSidebar:true})));
   $$('[data-tradition]').forEach(button=>button.addEventListener('click',()=>selectTradition(button.dataset.tradition)));
   $$('[data-people-tradition]').forEach(button=>button.addEventListener('click',()=>selectPeopleCollection(button.dataset.peopleTradition)));
@@ -845,6 +906,7 @@
   $('#path-swap').addEventListener('click',()=>{[pathPicks.from,pathPicks.to]=[pathPicks.to,pathPicks.from];renderPathPickers();if(activePath)findConnection();});
   $('#path-scripture-only').addEventListener('change',()=>{if(activePath)findConnection();});
   $('#path-clear').addEventListener('click',()=>clearPath());
+  $('#exploration-back').addEventListener('click',()=>explorationTrail?.back().catch(()=>toast(I.t('The previous view could not be restored. Try again.'))));
   $('#central-search-trigger').addEventListener('click',()=>openSearch());
   $('#return-to-profile').addEventListener('click',()=>{if(!returnToProfile)return;const origin=returnToProfile;useReligion(origin.originTradition);setView(origin.view);openUnifiedProfile(origin.tradition,origin.id,{tab:origin.tab});});
   $('#return-to-library').addEventListener('click',()=>{if(returnToLibrary)setView(returnToLibrary);});
@@ -852,8 +914,8 @@
   $('#return-to-atlas').addEventListener('click',()=>{if(returnToAtlas?.tradition===state.tradition)setView(returnToAtlas.mode);});
   $('#return-to-geography').addEventListener('click',()=>setView('geography'));
   $('#return-to-explore').addEventListener('click',()=>{if(returnToExplore){const origin=returnToExplore;useReligion(origin.tradition);setView(origin.view);}});
-  $('#cities-show-map').addEventListener('click',()=>setView('geography'));
-  $('#cities-show-list').addEventListener('click',()=>setView('cities'));
+  $('#cities-show-map').addEventListener('click',()=>{recordExploration();setView('geography');});
+  $('#cities-show-list').addEventListener('click',()=>{recordExploration();setView('cities');});
   $('#path-details').addEventListener('click',()=>{renderPathInspector();$('#inspector').scrollIntoView({block:'nearest',behavior:'smooth'});});
   $('#map-fullscreen').addEventListener('click',()=>{const expanded=$('#map-view').classList.toggle('expanded');$('#map-fullscreen').setAttribute('aria-label',expanded?'Exit expanded map':'Expand map');requestAnimationFrame(()=>graph.fit());});
   $('#empty-reset').addEventListener('click',()=>{setTestamentState('all');explorePerson('abraham','auto');});
@@ -864,7 +926,7 @@
   $('#help-button').addEventListener('click',()=>openInfo('help'));
   $('#about-button').addEventListener('click',()=>openInfo('about'));$('#sources-button').addEventListener('click',()=>openInfo('about'));
   $$('[data-close]').forEach(button=>button.addEventListener('click',()=>document.getElementById(button.dataset.close).close()));
-  $$('dialog').forEach(dialog=>dialog.addEventListener('click',event=>{if(event.target===dialog){const rect=dialog.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)dialog.close();}}));
+  $$('dialog').forEach(dialog=>dialog.addEventListener('click',event=>{if(event.target===dialog){const rect=dialog.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom){if(dialog.id==='unified-profile-dialog'&&explorationTrail?.peek())explorationTrail.back();else dialog.close();}}}));
   $('#mobile-menu').setAttribute('aria-controls','sidebar');
   $('#help-button').setAttribute('aria-label','How to explore');
   $('#mobile-menu').addEventListener('click',()=>{$('#sidebar').classList.toggle('open');$('#sidebar-shade').classList.toggle('open');syncSidebarAccess();});$('#sidebar-shade').addEventListener('click',closeSidebar);
@@ -873,7 +935,7 @@
     if(event.key==='Escape'){hideTooltip();closeSidebar();if($('#map-view').classList.contains('expanded')){$('#map-view').classList.remove('expanded');$('#map-fullscreen').setAttribute('aria-label','Expand map');requestAnimationFrame(()=>graph.fit());}}
   });
   window.addEventListener('resize',()=>{hideTooltip();syncSidebarAccess();});
-  window.addEventListener('hashchange',()=>{const shared=window.TimelineShare?.parse(window.location?.hash||'');if(shared){pendingTimelineShare=shared;returnToExplore=null;setView('timeline');}});
+  window.addEventListener('hashchange',()=>{const shared=window.TimelineShare?.parse(window.location?.hash||'');if(shared){explorationTrail?.clear();pendingTimelineShare=shared;returnToExplore=null;setView('timeline');}});
   function updateCounts() {
   const indexed=state.view==='index'&&state.peopleTradition==='christianity'&&catholicPeople?catholicPeople.entries(I.language):people;
   $('#count-all').textContent=indexed.length.toLocaleString(I.language);$('#count-ot').textContent=indexed.filter(p=>discovery.allows(p,'OT')).length.toLocaleString(I.language);$('#count-nt').textContent=indexed.filter(p=>discovery.allows(p,'NT')).length.toLocaleString(I.language);
