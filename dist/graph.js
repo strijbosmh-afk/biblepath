@@ -822,7 +822,7 @@
         const overlap=boxes.some(b=>box.x<b.x+b.width&&box.x+box.width>b.x&&box.y<b.y+b.height&&box.y+box.height>b.y);
         const visible=important||!overlap;label.setAttribute('visibility',visible?'visible':'hidden');
         if(!visible)continue;boxes.push(box);label.setAttribute('font-size',font);label.style.fontSize=font+'px';label.setAttribute('stroke',inside?'none':'#fffefa');label.setAttribute('stroke-width',3/k);label.setAttribute('paint-order','stroke');label.setAttribute('stroke-linejoin','round');
-        const color=inside&&(group.classList.contains('is-selected')||['start','end','start-end'].includes(group.getAttribute('data-path-role')))?'#fffdf5':'#31422c';label.setAttribute('fill',color);label.style.fill=color;
+        const color=inside&&(group.classList.contains('is-selected')||['start','end','start-end'].includes(group.getAttribute('data-path-role')))?'#fffdf5':'#31422c';label.setAttribute('fill',color);label.style.fill=color;label.style.setProperty?.('fill',color,'important');label.style.setProperty?.('stroke',inside?'none':'#fffefa','important');label.style.setProperty?.('stroke-width',3/k+'px','important');
         lines.forEach((line,i)=>line.setAttribute('y',inside?(i-(lines.length-1)/2)*16/k+5/k:this.radius+(18+i*16)/k));
       }
     }
