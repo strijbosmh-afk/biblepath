@@ -19,7 +19,7 @@
     ['Ritual & practice','Ritueel & praktijk','Rite et pratique'],['Diversity & interpretation','Diversiteit & interpretatie','Diversité et interprétation'],
     ['Sources & reading','Bronnen & verder lezen','Sources et lectures'],
     ['Sacred text','Heilige tekst','Texte sacré'],['Tradition & interpretation','Traditie & interpretatie','Tradition et interprétation'],['Historical & contemporary sources','Historische & hedendaagse bronnen','Sources historiques et contemporaines'],
-    ['Open original source','Open oorspronkelijke bron','Ouvrir la source originale'],
+    ['Open original source','Bekijk oorspronkelijke bron','Ouvrir la source originale'],
     ['Read passage · Dutch Catholic Bible','Lees passage · Nederlandse katholieke Bijbel','Lire le passage · Bible catholique néerlandaise'],
     ['Read passage · Hebrew Tanakh','Lees passage · Hebreeuwse Tenach','Lire le passage · Tanakh hébreu'],
     ['Read passage · Dutch Qur’an translation','Lees passage · Nederlandse Koranvertaling','Lire le passage · Traduction néerlandaise du Coran'],
@@ -56,10 +56,12 @@
     }
   }
   class FestivalView {
-    constructor(container,{onPassage=()=>{}}={}){
-      this.container=container;this.onPassage=onPassage;this.states=new Map();
+    constructor(container,{onPassage=()=>{},onExplore=()=>{}}={}){
+      this.container=container;this.onPassage=onPassage;this.onExplore=onExplore;this.states=new Map();
       this.click=event=>{const b=event.target.closest('button');if(!b||!container.contains(b))return;
-        if(b.dataset.festival){this.state.selected=b.dataset.festival;this.renderList();container.querySelector('.festival-detail h2')?.focus();}
+        if(b.dataset.festivalExploreJump!==undefined){const section=container.querySelector('.festival-explore');section?.scrollIntoView({block:'start'});section?.querySelector('h3')?.focus({preventScroll:true});}
+        else if(b.dataset.festivalExplore!==undefined){const entry=this.model.byId.get(this.state.selected),link=root.AtlasRelated?.resolve(entry,Number(b.dataset.festivalExplore));if(link){if(link.type==='passage')this.onPassage(link.passage,entry.id);else this.onExplore(link,entry.id);}}
+        else if(b.dataset.festival){this.state.selected=b.dataset.festival;this.renderList();container.querySelector('.festival-detail h2')?.focus();}
         else if(['all','feast','season','ritual'].includes(b.dataset.festivalKind)){this.state.kind=b.dataset.festivalKind;this.renderFilters();this.renderList();container.querySelector(`[data-festival-kind="${this.state.kind}"]`)?.focus();}
         else if(b.dataset.festivalPassage){const e=this.model.byId.get(this.state.selected),ref=e?.references.find(r=>r.id===b.dataset.festivalPassage);if(ref?.passage)this.onPassage({...ref.passage},e.id);}
       };
@@ -89,7 +91,7 @@
       const sourceId=id=>`festival-source-${e.id}-${id}`;
       const cites=ids=>`<span class="festival-citations">${ids.map(id=>{const i=e.references.findIndex(r=>r.id===id);return `<a href="#${esc(sourceId(id))}" aria-label="${esc(local(e.references[i].label))}">[${i+1}]</a>`;}).join(' ')}</span>`;
       const readLabels={christianity:'Read passage · Dutch Catholic Bible',judaism:'Read passage · Hebrew Tanakh',islam:'Read passage · Dutch Qur’an translation'};
-      panel.innerHTML=`<header class="festival-detail-heading"><span class="festival-kind">${esc(t(kinds[e.kind]))}</span><h2 tabindex="-1">${esc(local(e.title))}</h2><p>${esc(local(e.summary))}</p></header><section class="festival-calendar"><h3>${esc(t('Calendar & rhythm'))}</h3><p>${esc(local(e.calendar.text))} ${cites(e.calendar.sourceIds)}</p><small>${esc(t('Calendar rules describe recurring observances; local dates and practices may differ.'))}</small></section><div class="festival-sections">${e.sections.map(s=>`<section><h3>${esc(t(sections[s.id]))}</h3><p>${esc(local(s.text))} ${cites(s.sourceIds)}</p></section>`).join('')}</div><section class="festival-references"><h3>${esc(t('Sources & reading'))}</h3>${e.references.map((r,i)=>`<div class="festival-reference" id="${esc(sourceId(r.id))}" tabindex="-1"><span class="festival-source-kind">${esc(t(referenceKinds[r.kind]))} · ${i+1}</span><h4>${esc(local(r.label))}</h4><p>${esc(local(r.context))}</p><div class="festival-source-actions">${r.passage?`<button type="button" data-festival-passage="${esc(r.id)}">${esc(t(readLabels[r.passage.tradition]))} →</button>`:''}<a href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener noreferrer">${esc(t('Open original source'))} ↗</a></div></div>`).join('')}</section>`;
+      panel.innerHTML=`<header class="festival-detail-heading"><span class="festival-kind">${esc(t(kinds[e.kind]))}</span><h2 tabindex="-1">${esc(local(e.title))}</h2><p>${esc(local(e.summary))}</p>${root.AtlasRelated?`<button class="festival-explore-shortcut" data-festival-explore-jump="true">${esc(t('Explore further'))} ↓</button>`:''}</header><section class="festival-calendar"><h3>${esc(t('Calendar & rhythm'))}</h3><p>${esc(local(e.calendar.text))} ${cites(e.calendar.sourceIds)}</p><small>${esc(t('Calendar rules describe recurring observances; local dates and practices may differ.'))}</small></section><div class="festival-sections">${e.sections.map(s=>`<section><h3>${esc(t(sections[s.id]))}</h3><p>${esc(local(s.text))} ${cites(s.sourceIds)}</p></section>`).join('')}</div>${root.AtlasRelated?.render(e)||''}<section class="festival-references"><h3>${esc(t('Sources & reading'))}</h3>${e.references.map((r,i)=>`<div class="festival-reference" id="${esc(sourceId(r.id))}" tabindex="-1"><span class="festival-source-kind">${esc(t(referenceKinds[r.kind]))} · ${i+1}</span><h4>${esc(local(r.label))}</h4><p>${esc(local(r.context))}</p><div class="festival-source-actions">${r.passage?`<button type="button" data-festival-passage="${esc(r.id)}">${esc(t(readLabels[r.passage.tradition]))} →</button>`:''}<a href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener noreferrer">${esc(t('Open original source'))} ↗</a></div></div>`).join('')}</section>`;
     }
   }
   root.FestivalCollection=FestivalCollection;root.FestivalView=FestivalView;

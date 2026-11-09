@@ -92,12 +92,15 @@ let exploration;
 context.window.AtlasExplore=class {
   constructor(el,callbacks){this.el=el;this.callbacks=callbacks;this.opens=[];exploration=this;}
   setSharedComparison(shared){this.shared=shared;}
+  setTimelineComparison(value){this.timelineComparison=value;}
+  openEvent(id){this.eventId=id;}
   open(view,tradition){this.view=view;this.tradition=tradition;this.opens.push({view,tradition});return Promise.resolve(this);}
   leave(){this.left=true;}
 };
 context.window.FestivalView=class {
-  constructor(el,callbacks){this.el=el;this.callbacks=callbacks;festivalView=this;}
+  constructor(el,callbacks){this.el=el;this.callbacks=callbacks;this.state={};festivalView=this;}
   setCollection(data){this.tradition=data.meta.tradition;this.changeLanguage();}
+  open(id){this.state={selected:id,query:'',kind:'all'};}
   changeLanguage(){this.el.rendered=`festivals:${this.tradition}:${I.language}`;}
 };
 context.window.PeopleIndexView=class {
@@ -387,7 +390,7 @@ async function main(){
   assert.equal(bibleReaders.at(-1).state.location.bookId,'GEN');assert.equal(bibleReaders.at(-1).state.location.verse,2);
   assert.equal(bibleReaders.at(-1).state.personPassage.originalReference.translation,abrahamRef.translation,'Source translation metadata reaches the resolver');
   assert.equal(requests.filter(request=>request.file==='person-passage-map.json').length,1,'Both person collections share a successful map download');
-  for(const scenario of ['--navigation','--religion-navigation','--saved-religion','--festivals','--tradition-atlas','--geography','--exploration']){const check=spawnSync(process.execPath,[__filename,scenario],{encoding:'utf8'});assert.equal(check.status,0,check.stderr||check.stdout);}
+  for(const scenario of ['--festival-explore','--navigation','--religion-navigation','--saved-religion','--festivals','--tradition-atlas','--geography','--exploration']){const check=spawnSync(process.execPath,[__filename,scenario],{encoding:'utf8'});assert.equal(check.status,0,check.stderr||check.stdout);}
   const sharedCheck=spawnSync(process.execPath,[__filename,'--exploration','--shared-timeline'],{encoding:'utf8'});assert.equal(sharedCheck.status,0,sharedCheck.stderr||sharedCheck.stdout);
   const pendingProfileCheck=spawnSync(process.execPath,[__filename,'--pending-profile-language'],{encoding:'utf8'});
   assert.equal(pendingProfileCheck.status,0,pendingProfileCheck.stderr||pendingProfileCheck.stdout);
@@ -602,4 +605,16 @@ async function navigationRegression(){
   console.log('App exploration return passed: paged index → canonical profile → reviewed Catholic passage → same profile tab, expanded references and dialog scroll → same index page and page scroll; main navigation clears the trail.');
 }
 
-(process.argv.includes('--navigation')?navigationRegression():process.argv.includes('--exploration')?explorationRegression():process.argv.includes('--geography')?geographyRegression():process.argv.includes('--tradition-atlas')?atlasRegression():process.argv.includes('--festivals')?festivalRegression():process.argv.includes('--religion-navigation')?religionNavigationRegression():process.argv.includes('--saved-religion')?savedReligionRegression():process.argv.includes('--pending-profile-language')?pendingProfileLanguageRegression():process.argv.includes('--pending-passage-race')?pendingPassageEditionRegression():process.argv.includes('--saved-catholic')?savedCatholicRegression():process.argv.includes('--dutch-edition-retry')?dutchEditionRetryRegression():process.argv.includes('--person-passage-retry')?personPassageRetryRegression():process.argv.includes('--person-passage-cancel')?personPassageCancelRegression():main()).catch(error=>{console.error(error);process.exitCode=1;});
+async function festivalExploreRegression(){
+ initialCatholic();await settle();selectView('festivals','islam');respond('festivals-islam.json',JSON.parse(fs.readFileSync(path.join(root,'dist/festivals-islam.json'),'utf8')));await settle();
+ festivalView.state={selected:'islam:ramadan',query:'Ramadan',kind:'feast'};context.window.scrollY=640;
+ await festivalView.callbacks.onExplore({type:'events',tradition:'islam',id:'islam:revelation'});await settle();assert.equal(snapshot().view,'timeline');assert.equal(exploration.eventId,'islam:revelation');assert.equal(exploration.timelineComparison,false);
+ await control('#exploration-back').click();await settle();assert.equal(snapshot().view,'festivals');assert.equal(festivalView.state.selected,'islam:ramadan');assert.equal(festivalView.state.query,'Ramadan');
+ const person=festivalView.callbacks.onExplore({type:'people',tradition:'islam',id:'quran:abraham'});await profileReady();if(pending('quran-people.json'))respond('quran-people.json',quranPeople);await profileReady();await person;assert.equal(profileView.profile.id,'quran:abraham');assert.equal(profileView.model.tradition,'islam');await profileView.callbacks.onBack();await settle();assert.equal(festivalView.state.query,'Ramadan');
+ await festivalView.callbacks.onExplore({type:'festivals',tradition:'islam',id:'islam:eid-al-fitr'});assert.equal(festivalView.state.selected,'islam:eid-al-fitr');await control('#exploration-back').click();await settle();assert.equal(festivalView.state.selected,'islam:ramadan');
+ await festivalView.callbacks.onExplore({type:'places',tradition:'islam',id:'islam:mecca'});await settle();assert.equal(snapshot().view,'cities');assert.equal(atlasView.placeId,'islam:mecca');await control('#exploration-back').click();await settle();assert.equal(snapshot().view,'festivals');assert.equal(festivalView.state.query,'Ramadan');
+ await festivalView.callbacks.onExplore({type:'events',tradition:'judaism',id:'judaism:hanukkah'});assert.equal(snapshot().view,'festivals','A stale foreign-religion action cannot change the dossier');
+ console.log('Festival exploration app routing passed: tradition-bound timeline/person/place/dossier links and return to the same dossier, query/filter and religious context.');
+}
+
+(process.argv.includes('--festival-explore')?festivalExploreRegression():process.argv.includes('--navigation')?navigationRegression():process.argv.includes('--exploration')?explorationRegression():process.argv.includes('--geography')?geographyRegression():process.argv.includes('--tradition-atlas')?atlasRegression():process.argv.includes('--festivals')?festivalRegression():process.argv.includes('--religion-navigation')?religionNavigationRegression():process.argv.includes('--saved-religion')?savedReligionRegression():process.argv.includes('--pending-profile-language')?pendingProfileLanguageRegression():process.argv.includes('--pending-passage-race')?pendingPassageEditionRegression():process.argv.includes('--saved-catholic')?savedCatholicRegression():process.argv.includes('--dutch-edition-retry')?dutchEditionRetryRegression():process.argv.includes('--person-passage-retry')?personPassageRetryRegression():process.argv.includes('--person-passage-cancel')?personPassageCancelRegression():main()).catch(error=>{console.error(error);process.exitCode=1;});

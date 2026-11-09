@@ -150,7 +150,8 @@
       if(typeof key==='object')key=keyOf(key.tradition,key.id);const record=this.model?.byKey.get(key);if(!record||!(this.matches||[]).some(r=>r.key===key))return false;
       this.state.selected=key;this.renderDetail();this.renderResults();this.renderMarkers();if(this.map&&record.mapped&&pan)this.map.panTo([record.lat,record.lon]);
       const panel=this.container.querySelector('.pm-detail');panel.scrollTop=0;
-      if(focus){
+      this.callbacks.onSelection?.();
+      if(focus&&!root.matchMedia?.('(max-width:760px)').matches){
         const heading=panel.querySelector?.('h3')||this.container.querySelector('.pm-detail h3');
         heading?.focus?.({preventScroll:true});
         const bounds=heading?.getBoundingClientRect?.(),viewportHeight=root.innerHeight||root.document?.documentElement?.clientHeight;

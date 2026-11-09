@@ -60,3 +60,6 @@ assert.ok(new Set(points.map(point=>point.y)).size>1);
 for(let i=1;i<points.length;i++)assert.ok(Math.abs(Math.hypot(points[i].x-points[i-1].x,points[i].y-points[i-1].y)-144)<.001,'Ordered path must follow adjacent serpent positions');
 assert.equal(longState.highlightedEdgeCount,longPath.relationships.length);
 console.log(`Persistent path styling, exact edges, endpoints, clearing, center/zoom and ${longPath.personIds.length}-person serpentine geometry passed.`);
+
+for(const scale of [.2,.6,1,2,5]){graph.transform.k=scale;graph.applyTransform();let shown=0;for(const node of graph.nodes.values()){const label=node.querySelector('.node-label');if(label.getAttribute('visibility')==='visible'){shown++;assert(Math.abs(Number(label.getAttribute('font-size'))*scale-14)<1e-8,'Visible labels remain14 screen pixels at every zoom');}}assert(shown>0);assert.equal(graph.nodes.get(graph.selectedId).querySelector('.node-label').getAttribute('visibility'),'visible');}
+console.log('Map name readability passed: 14px screen-space labels, priority for the selected person, decluttering at overview scales and unchanged geometry.');

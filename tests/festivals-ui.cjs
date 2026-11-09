@@ -2,6 +2,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const strings=new Map();
 const I=globalThis.BibleI18n={language:'nl',registerRows(rows){for(const row of rows)strings.set(row[0],row);},t(key,params={}){return (strings.get(key)?.[{en:0,nl:1,fr:2}[this.language]]||key).replace(/\{(\w+)\}/g,(_,k)=>params[k]??'');}};
+globalThis.AtlasRelated=require('../dist/related-exploration.js');
 const {FestivalCollection,FestivalView}=require('../dist/festivals.js');
 const data=tradition=>JSON.parse(fs.readFileSync(path.join(__dirname,'../dist/festivals-'+tradition+'.json'),'utf8'));
 class Root{
@@ -11,8 +12,8 @@ class Root{
   click(dataset){const b={dataset};b.closest=()=>b;this.handlers.get('click')({target:b});}
   input(value){this.handlers.get('input')({target:{id:'festival-search',value}});}
 }
-const catholic=data('christianity'),jewish=data('judaism'),islam=data('islam'),host=new Root(),opened=[];
-const view=new FestivalView(host,{onPassage:(p,id)=>opened.push({p,id})});view.setCollection(catholic);
+const catholic=data('christianity'),jewish=data('judaism'),islam=data('islam'),host=new Root(),opened=[],explored=[];
+const view=new FestivalView(host,{onPassage:(p,id)=>opened.push({p,id}),onExplore:(link,id)=>explored.push({link,id})});view.setCollection(catholic);
 assert.match(host.innerHTML,/Religieuze tradities in context/);assert.doesNotMatch(host.querySelector('.festival-detail').innerHTML,/festival-questions|Kritische studievragen/);
 const second=catholic.entries[1];host.click({festival:second.id});assert.equal(view.state.selected,second.id);
 host.input(second.title.nl);assert.equal(view.state.selected,second.id);assert.equal(new FestivalCollection(catholic).search(second.title.nl).length,1);
@@ -26,6 +27,7 @@ for(const source of [catholic,jewish,islam]){
   const r=entry.references.find(r=>r.passage);host.click({festivalPassage:r.id});assert.deepEqual(opened.at(-1),{p:r.passage,id:entry.id});
   const html=host.querySelector('.festival-detail').innerHTML;assert(html.includes(r.url.replaceAll('&','&amp;')));assert.match(html,/noopener noreferrer/);assert.match(html,/festival-source-/);
 }
+view.setCollection(catholic);view.open('christianity:christmas');const links=AtlasRelated.linksFor(view.model.byId.get(view.state.selected));const person=links.findIndex(x=>x.type==='people');host.click({festivalExplore:String(person)});assert.equal(explored.at(-1).link.id,'jesus');const text=links.findIndex(x=>x.type==='passage');host.click({festivalExplore:String(text)});assert.deepEqual(opened.at(-1).p,links[text].passage);const before=explored.length;host.click({festivalExplore:'999'});assert.equal(explored.length,before);assert.match(host.querySelector('.festival-detail').innerHTML,/Verder verkennen/);
 const selected=view.state.selected;for(const lang of ['fr','en','nl']){I.language=lang;view.changeLanguage();assert.equal(view.state.selected,selected);assert(host.querySelector('.festival-detail').innerHTML.includes(view.model.byId.get(selected).title[lang]));}
 const unsafe=structuredClone(catholic);unsafe.entries[0].references[0].url='javascript:alert(1)';assert.throws(()=>new FestivalCollection(unsafe),/sources/);
 const unknown=structuredClone(catholic);unknown.entries[0].sections[0].sourceIds=['missing'];assert.throws(()=>new FestivalCollection(unknown),/source/);

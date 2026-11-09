@@ -253,7 +253,7 @@
       });
       const links = [...groups].map(([book,refs]) => `<div class="city-reference-group"><h3>${escape(book === 'References'?t('References'):displayBook(book))}</h3><div>${refs.map(({ref,index}) => {
         const label = `${escape(reference(ref.label))}${icon(typeof this.callbacks.onPassage === 'function' ? 'arrow' : 'external')}`;
-        if (typeof this.callbacks.onPassage === 'function') return `<button type="button" class="city-verse" data-city-action="passage" data-city-ref="${index}">${label}</button>`;
+        if (typeof this.callbacks.onPassage === 'function') return `<div class="city-reference-actions"><button type="button" class="city-verse" data-city-action="passage" data-city-ref="${index}"><span>${tr('Read passage')} · ${label}</span></button>${ref.url?`<a href="${escape(ref.url)}" target="_blank" rel="noopener noreferrer">${tr('Original source')} ↗</a>`:''}</div>`;
         return ref.url ? `<a class="city-verse" href="${escape(ref.url)}" target="_blank" rel="noopener noreferrer">${label}<span class="city-sr-only"> ${tr('(opens in a new tab)')}</span></a>` : `<span class="city-verse">${escape(reference(ref.label))}</span>`;
       }).join('')}</div></div>`).join('');
       const remaining = place.refs.length-this.referenceLimit;

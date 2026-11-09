@@ -43,11 +43,12 @@
   const atlasCache=new Map();
   let placesMap=null,geographyLoading=null,geographyRequest=0,geographyFilter=initialTradition,geographyFilterPending=true,returnToGeography=null,pendingAtlasPlace=null;
   let timelineComparisonRequested=null;
+  let mapWorkspace=null;
   const state = {layout:'constellation', focus:'abraham', selected:'abraham', depth:'auto', discoveryDepth:1, localRoots:[], testament:'all', spouses:true, view:'reader', tradition:initialTradition, bibleEdition:initialBibleEdition, peopleTradition:initialTradition, indexPage:1};
   let zoomBase = null, zoomTimer, rendering = false, lastSelection;
   const MAX_MAP_PEOPLE = 180, INDEX_PAGE_SIZE = 60;
   const graph = new window.BibleGraph($('#graph'), {
-    onSelect: person => {state.selected = person.id; renderInspector(person); hideTooltip();},
+    onSelect: person => {state.selected = person.id; renderInspector(person); hideTooltip();mapWorkspace?.showSelection();},
     onHover: showTooltip,
     onLeave: delayHideTooltip,
     onZoom: handleZoom
@@ -64,6 +65,7 @@
     const titles={search:'Search results',reader:'Reading',map:'Relationship map',index:'People index',cities:'Places',geography:'Places',festivals:'Festivals & rituals',timeline:'Timeline',challenge:'Reflection challenge',topics:'Search by topic',compare:'Across traditions'};
     const active=document.activeElement,focus=active?.id?'#'+active.id:active?.dataset?.searchResult!==undefined?`[data-search-result="${active.dataset.searchResult}"]`:active?.dataset?.profile?`[data-profile="${active.dataset.profile}"]`:null;
     const saved={view,tradition:state.tradition,title:view==='timeline'&&exploreView?.timelineComparison?'Compare timelines':titles[view],profile,focus,scroll:{x:window.scrollX||0,y:window.scrollY||0},state:{...state},indexQuery:$('#index-search').value,inspectorTop:$('#inspector').scrollTop||0,pathPicks:{...pathPicks},camera:{...graph.transform},returns:{library:returnToLibrary,profile:returnToProfile,explore:returnToExplore,festival:returnToFestivals,atlas:returnToAtlas,geography:returnToGeography},options:[...document.querySelectorAll('.compact-options')].map(node=>({key:node.dataset.compactKey,open:node.open}))};
+    if(['map','geography'].includes(view))saved.mapWorkspace=mapWorkspace?.getState();
     if(view==='reader')saved.reading=state.tradition==='christianity'?reader?.getState():sacredReader?.getNavigationState?.()||sacredReader?.getState();
     if(view==='cities'&&state.tradition==='christianity')saved.cities=cities?.getState();
     if(view==='geography')saved.geography=placesMap?.getState();
@@ -94,7 +96,15 @@
     if(saved.search){await ensureWorkspaceSearch();if(!isCurrent())return;}
     if(saved.view==='map'&&saved.tradition==='christianity'){renderPathPickers();renderGraph({preserveDiscovery:true});Object.assign(graph.transform,saved.camera);graph.applyTransform?.({reason:'restore'});$('#inspector').scrollTop=saved.inspectorTop;}
     if(saved.profile){await openUnifiedProfile(saved.profile.tradition,saved.profile.id,{tab:saved.profile.tab});if(!isCurrent())return;unifiedProfile.limit=saved.profile.limit;unifiedProfile.render();$('#unified-profile-dialog').scrollTop=saved.profile.top;}
+    mountMapWorkspace();mapWorkspace?.restore(saved.mapWorkspace);
     requestAnimationFrame(()=>requestAnimationFrame(()=>{if(!isCurrent())return;const options=new Map(saved.options.map(item=>[item.key,item.open]));if(window.matchMedia('(max-width:760px)').matches)document.querySelectorAll('.compact-options').forEach(node=>{if(options.has(node.dataset.compactKey))node.open=options.get(node.dataset.compactKey);});if(saved.focus)$(saved.focus)?.focus?.({preventScroll:true});window.scrollTo?.({left:saved.scroll.x,top:saved.scroll.y,behavior:'auto'});}));
+  }
+  function mountMapWorkspace(){
+    if(!mapWorkspace)return;
+    const host=state.view==='geography'?$('#places-map-view .pm-workspace'):state.view==='map'?(state.tradition==='christianity'?$('#map-view'):$('#tradition-atlas-view .atlas-map-workspace')):null;
+    if(!host)return;
+    const biblical=state.view==='map'&&state.tradition==='christianity';
+    mapWorkspace.mount(host,{key:state.view==='geography'?'places':state.tradition+'-family',label:I.t(state.view==='geography'?'Places map':'Relationship map'),map:host.querySelector(biblical?'.map-pane':state.view==='geography'?'.pm-map-panel':'.atlas-map-panel'),detail:host.querySelector(biblical?'#inspector':state.view==='geography'?'.pm-detail':'.atlas-person-detail'),resize:()=>{if(state.view==='geography')placesMap?.resize();else window.dispatchEvent(new Event('resize'));}});
   }
   function syncTimelineNavigation(){
     if(state.view!=='timeline')return;const comparison=Boolean(exploreView?.timelineComparison),title=comparison?'Compare timelines':'Timeline';
@@ -193,7 +203,7 @@
       <div class="profile-tags"><span>${person.testament === 'OT' ? 'Old Testament' : 'New Testament'}</span><span>${person.gender === 'female' ? 'Woman' : person.gender === 'male' ? 'Man' : 'Person'}</span></div>
       ${person.disambiguation ? `<p class="profile-identity">${escape(person.disambiguation)}</p>` : ''}
       <p class="profile-description">${escape(person.description)}</p><button class="profile-open-button" id="open-full-profile">${escape(I.t('Full profile'))} →</button>
-      <div class="profile-section"><h3>${icon('book')} IN SCRIPTURE <span class="reference-count">${(person.referenceCount || person.refs.length).toLocaleString(I.language)} refs</span></h3>${referenceLinks.map((ref,index)=>`<div class="person-reference-row"><button class="reference-link" data-person-passage="${index}" aria-label="${escape(I.t('Read {reference} in the Dutch Catholic Bible',{reference:I.reference(ref.label)}))}"><span>${escape(I.reference(ref.label))}${ref.provenance === 'indexed-name' ? '<small class="reference-provenance">Indexed name reference</small>' : ''}</span>${icon('arrow')}</button><a class="person-reference-source" href="${escape(ref.url)}" target="_blank" rel="noopener noreferrer">${escape(I.t('Original source'))} ↗</a></div>`).join('')}${person.refs.length > referenceLimit ? `<button class="more-references" id="more-references">Show more passages (${person.refs.length-referenceLimit} remaining)</button>` : ''}${referenceLinks.some(ref=>ref.provenance === 'indexed-name') ? '<p class="reference-caveat">Name references may include descendants or a group bearing the same name. Read the passage in context.</p>' : ''}</div>
+      <div class="profile-section"><h3>${icon('book')} IN SCRIPTURE <span class="reference-count">${(person.referenceCount || person.refs.length).toLocaleString(I.language)} refs</span></h3>${referenceLinks.map((ref,index)=>`<div class="person-reference-row"><button class="reference-link" data-person-passage="${index}" aria-label="${escape(I.t('Read {reference} in the Dutch Catholic Bible',{reference:I.reference(ref.label)}))}"><span><small class="reference-read-action">${escape(I.t('Read passage'))} →</small>${escape(I.reference(ref.label))}${ref.provenance === 'indexed-name' ? '<small class="reference-provenance">Indexed name reference</small>' : ''}</span>${icon('arrow')}</button><a class="person-reference-source" href="${escape(ref.url)}" target="_blank" rel="noopener noreferrer">${escape(I.t('Original source'))} ↗</a></div>`).join('')}${person.refs.length > referenceLimit ? `<button class="more-references" id="more-references">Show more passages (${person.refs.length-referenceLimit} remaining)</button>` : ''}${referenceLinks.some(ref=>ref.provenance === 'indexed-name') ? '<p class="reference-caveat">Name references may include descendants or a group bearing the same name. Read the passage in context.</p>' : ''}</div>
       <div class="profile-section"><h3>${icon('tree')} FAMILY CONNECTIONS</h3>
         ${family.parents.length ? `<div class="family-row"><span class="family-label">Parents</span><div class="family-names">${relativeButtons(family.parents)}</div></div>` : ''}
         ${family.spouses.length ? `<div class="family-row"><span class="family-label">Spouse${family.spouses.length > 1 ? 's' : ''}</span><div class="family-names">${relativeButtons(family.spouses)}</div></div>` : ''}
@@ -258,6 +268,7 @@
     setView(view==='cities'?'geography':view||(['reader','index','festivals','map','cities','geography','timeline','challenge'].includes(state.view)?state.view:'reader'),{keepSidebar});
   }
   function setView(view,{keepSidebar=false}={}) {
+    mapWorkspace?.leave();
     if(view!=='search')workspaceSearch?.leave();
     profileRequest++;
     pendingUnifiedProfile=null;
@@ -341,7 +352,7 @@
     if (atlasContext) ensureTraditionAtlas();
     if (view === 'geography') ensureGeography();
     updateCounts();
-    updateExplorationBack();
+    updateExplorationBack();mountMapWorkspace();
     if(!keepSidebar)closeSidebar();
   }
 
@@ -357,7 +368,7 @@
     return new window.PersonProfileModel(tradition,{collection,atlas,comparisons});
   }
   async function openUnifiedProfile(tradition,id,{tab='overview'}={}){
-    recordExploration();
+    recordExploration();mapWorkspace?.setFullscreen(false,{focus:false});
     const request=++profileRequest;
     pendingUnifiedProfile={tradition,id,tab};
     try{
@@ -445,13 +456,13 @@
   }
   function ensureGeography(){
     const request=++geographyRequest,container=$('#places-map-view');
-    if(placesMap){if(geographyFilterPending){placesMap.setTradition(geographyFilter);geographyFilterPending=false;}placesMap.changeLanguage();requestAnimationFrame(()=>{if(state.view==='geography')placesMap.resize();});return Promise.resolve(placesMap);}
+    if(placesMap){if(geographyFilterPending){placesMap.setTradition(geographyFilter);geographyFilterPending=false;}placesMap.changeLanguage();requestAnimationFrame(()=>{if(state.view==='geography'){mountMapWorkspace();placesMap.resize();}});return Promise.resolve(placesMap);}
     container.innerHTML=`<div class="library-loading" role="status">${escape(I.t('Opening the places map…'))}</div>`;
     if(!geographyLoading)geographyLoading=Promise.all([loadJson('place-geography.json'),loadRawPlaces(),loadAtlasCollection('judaism'),loadAtlasCollection('islam')]).catch(error=>{geographyLoading=null;throw error;});
     return geographyLoading.then(([geography,christianity,judaism,islam])=>{
       if(request!==geographyRequest||state.view!=='geography')return null;
-      if(!placesMap){let candidate;try{candidate=new window.PlacesMapView(container,{onPlace:openGeographicPlace});candidate.setData(geography,{christianity,judaism,islam});placesMap=candidate;}catch(error){candidate?.destroy();geographyLoading=null;throw error;}}
-      placesMap.setTradition(geographyFilter);geographyFilterPending=false;requestAnimationFrame(()=>{if(state.view==='geography')placesMap.resize();});return placesMap;
+      if(!placesMap){let candidate;try{candidate=new window.PlacesMapView(container,{onPlace:openGeographicPlace,onSelection:()=>mapWorkspace?.showSelection()});candidate.setData(geography,{christianity,judaism,islam});placesMap=candidate;}catch(error){candidate?.destroy();geographyLoading=null;throw error;}}
+      placesMap.setTradition(geographyFilter);geographyFilterPending=false;requestAnimationFrame(()=>{if(state.view==='geography'){mountMapWorkspace();placesMap.resize();}});return placesMap;
     }).catch(()=>{if(request===geographyRequest&&state.view==='geography')libraryError(container,ensureGeography);return null;});
   }
   function openGeographicPlace({tradition,id}){
@@ -471,7 +482,7 @@
       if(request!==atlasRequest||tradition!==state.tradition||mode!==state.view)return null;
       if(!traditionAtlas)traditionAtlas=new window.TraditionAtlasView(container,{
         onPassage:openAtlasPassage,
-        onModeChange:mode=>setView(mode),onNavigate:recordExploration,
+        onModeChange:mode=>setView(mode),onNavigate:recordExploration,onRender:mountMapWorkspace,onSelection:()=>mapWorkspace?.showSelection(),
         onPerson:id=>openUnifiedProfile(state.tradition,id),onProfile:id=>openUnifiedProfile(state.tradition,id)
       });
       traditionAtlas.setCollection(data,mode);showPlace();return traditionAtlas;
@@ -501,9 +512,16 @@
     if(!festivalCache.has(tradition))festivalCache.set(tradition,loadJson(`festivals-${tradition}.json`).catch(error=>{festivalCache.delete(tradition);throw error;}));
     return festivalCache.get(tradition).then(data=>{
       if(request!==festivalRequest||tradition!==state.tradition||state.view!=='festivals')return null;
-      if(!festivalView)festivalView=new window.FestivalView(container,{onPassage:openFestivalPassage});
+      if(!festivalView)festivalView=new window.FestivalView(container,{onPassage:openFestivalPassage,onExplore:openRelatedExploration});
       festivalView.setCollection(data);return festivalView;
     }).catch(()=>{festivalCache.delete(tradition);if(request===festivalRequest&&state.view==='festivals')libraryError(container,ensureFestivals);return null;});
+  }
+  async function openRelatedExploration(link){
+    if(!link||link.tradition!==state.tradition)return;recordExploration();
+    if(link.type==='people'){await openUnifiedProfile(link.tradition,link.id);return;}
+    if(link.type==='places'){openGeographicPlace(link);return;}
+    if(link.type==='festivals'){const view=await ensureFestivals();if(state.view==='festivals'&&state.tradition===link.tradition)view?.open(link.id);return;}
+    if(link.type==='events'){timelineComparisonRequested=false;setView('timeline');await ensureExplore();if(state.view==='timeline'&&state.tradition===link.tradition){exploreView.openEvent(link.id);syncTimelineNavigation();}}
   }
   async function openFestivalPassage(passage,entryId){
     recordExploration();
@@ -917,7 +935,7 @@
   $('#cities-show-map').addEventListener('click',()=>{recordExploration();setView('geography');});
   $('#cities-show-list').addEventListener('click',()=>{recordExploration();setView('cities');});
   $('#path-details').addEventListener('click',()=>{renderPathInspector();$('#inspector').scrollIntoView({block:'nearest',behavior:'smooth'});});
-  $('#map-fullscreen').addEventListener('click',()=>{const expanded=$('#map-view').classList.toggle('expanded');$('#map-fullscreen').setAttribute('aria-label',expanded?'Exit expanded map':'Expand map');requestAnimationFrame(()=>graph.fit());});
+  $('#map-fullscreen').addEventListener('click',()=>mapWorkspace?.setFullscreen(!mapWorkspace.getState()?.full));
   $('#empty-reset').addEventListener('click',()=>{setTestamentState('all');explorePerson('abraham','auto');});
   $('#index-search').addEventListener('input',()=>{state.indexPage=1;renderIndex();});$('#search-trigger').addEventListener('click',()=>openSearch());$('#global-search').addEventListener('input',renderSearch);
   $('#index-previous').addEventListener('click',()=>{state.indexPage--;renderIndex();$('#index-view').scrollIntoView({block:'start'});});
@@ -967,6 +985,7 @@
   }
   $('#language-select').value=I.language;
   $('#language-select').addEventListener('change',event=>changeLanguage(event.target.value));
+  if(window.AtlasMapWorkspace)mapWorkspace=new window.AtlasMapWorkspace(document);
   useReligion(state.tradition);setTestamentState('all');syncSidebarAccess();renderPathPickers();renderGraph();setView(pendingTimelineShare?'timeline':'reader');
   I.setLanguage(I.language);I.observe();
   if(window.AtlasCompact&&window.MutationObserver)new window.AtlasCompact(document);

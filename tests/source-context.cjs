@@ -1,0 +1,7 @@
+const assert=require('node:assert/strict');const strings=new Map();globalThis.BibleI18n={language:'nl',registerRows:rows=>rows.forEach(r=>strings.set(r[0],r)),t(s){return strings.get(s)?.[{nl:1,en:0,fr:2}[this.language]]||s;}};const {textContext}=require('../dist/source-context.js');
+for(const [tradition,edition,language,kind] of [['christianity','catholic-nl','nl','Vertaling'],['christianity','catholic','en','Vertaling'],['judaism','he','he','Grondtekst'],['judaism','nl','nl','Vertaling'],['islam','ar','ar','Grondtekst'],['islam','nl','nl','Vertaling']]){
+ const html=textContext({tradition,edition,language,title:'<img src=x onerror=1>'});assert.match(html,/Interfacetaal/);assert.match(html,/Teksttaal/);assert(html.includes(kind));assert(!html.includes('<img'));assert.match(html,/eigen taal, bron en versnummering/);
+}
+assert.equal(BibleI18n.t('Original source'),'Bekijk oorspronkelijke bron');assert.equal(BibleI18n.t('Open original source'),BibleI18n.t('Original source'));assert.equal(BibleI18n.t('Read passage'),'Lees passage');console.log('Source context passed: independent interface/text languages, translation vs original, edition labels, safe markup and predictable source actions.');
+
+BibleI18n.language='fr';assert.match(textContext({tradition:'islam',edition:'ar',language:'ar'}),/Langue de l’interface/);BibleI18n.language='en';assert.match(textContext({tradition:'judaism',edition:'he',language:'he'}),/Original language text/);

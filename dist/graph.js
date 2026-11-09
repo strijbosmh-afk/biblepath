@@ -690,7 +690,7 @@
     }
 
     draw() {
-      this.guides.replaceChildren(); this.edgeLayer.replaceChildren(); this.nodeLayer.replaceChildren(); this.labelLayer.replaceChildren(); this.nodes.clear();
+      this.guides.replaceChildren(); this.edgeLayer.replaceChildren(); this.nodeLayer.replaceChildren(); this.labelLayer.replaceChildren(); this.nodes.clear();this.labelScaleKey=null;
       if (this.layout === 'radial') (this.ringRadii || []).forEach(radius => this.guides.append(el('circle', {cx: 0, cy: 0, r: radius, fill: 'none', stroke: '#d8ddd1', 'stroke-width': 1, 'stroke-dasharray': '3 9', opacity: '.7'})));
       if (this.layout === 'radial' && this.disconnectedIsland) {
         const island = this.disconnectedIsland;
@@ -763,7 +763,7 @@
     }
 
     highlight(hoverId) {
-      this.hoverId=hoverId;
+      this.hoverId=hoverId;this.labelScaleKey=null;
       this.nodes.forEach((group, id) => {
         const selected = id === this.selectedId;
         const onPath=this.pathPersonIds.has(id),start=onPath&&id===this.highlightPath?.startId,end=onPath&&id===this.highlightPath?.endId;
@@ -809,7 +809,22 @@
         if(type==='parent')edge.setAttribute('marker-end',`url(#${this.id}-${onPath?'path-arrow':'arrow'})`);
         edge.style.opacity=onPath?'1':this.highlightPath?(connected?'0.6':'0.22'):connected?'1':'0.55';
       });
-      this.updateRelationshipLabels();
+      this.updateRelationshipLabels();this.updateNodeLabels();
+    }
+
+    updateNodeLabels(){
+      const k=this.transform.k,key=[k,this.selectedId,this.hoverId,this.nodes.size].join('|');if(this.labelScaleKey===key)return;this.labelScaleKey=key;
+      const boxes=[],nodes=[...this.nodes].sort(([a],[b])=>Number(b===this.selectedId||b===this.hoverId)-Number(a===this.selectedId||a===this.hoverId));
+      for(const [id,group] of nodes){
+        const label=group.querySelector('.node-label'),lines=[...label.children],p=this.positions.get(id);if(!p)continue;
+        const important=id===this.selectedId||id===this.hoverId,inside=k>=1.6,font=14/k,width=Math.max(...lines.map(line=>line.textContent.length))*8+8,height=lines.length*16,top=inside?p.y*k-height/2:p.y*k+this.radius*k+7;
+        const box={x:p.x*k-width/2,y:top,width,height};
+        const overlap=boxes.some(b=>box.x<b.x+b.width&&box.x+box.width>b.x&&box.y<b.y+b.height&&box.y+box.height>b.y);
+        const visible=important||!overlap;label.setAttribute('visibility',visible?'visible':'hidden');
+        if(!visible)continue;boxes.push(box);label.setAttribute('font-size',font);label.style.fontSize=font+'px';label.setAttribute('stroke',inside?'none':'#fffefa');label.setAttribute('stroke-width',3/k);label.setAttribute('paint-order','stroke');label.setAttribute('stroke-linejoin','round');
+        const color=inside&&(group.classList.contains('is-selected')||['start','end','start-end'].includes(group.getAttribute('data-path-role')))?'#fffdf5':'#31422c';label.setAttribute('fill',color);label.style.fill=color;
+        lines.forEach((line,i)=>line.setAttribute('y',inside?(i-(lines.length-1)/2)*16/k+5/k:this.radius+(18+i*16)/k));
+      }
     }
 
     updateRelationshipLabels() {
@@ -890,7 +905,7 @@
     applyTransform(metadata={reason:'pan'}) {
       const {x, y, k} = this.transform;
       this.viewport.setAttribute('transform', `translate(${x} ${y}) scale(${k})`);
-      this.updateRelationshipLabels();
+      this.updateRelationshipLabels();this.updateNodeLabels();
       this.callbacks.onZoom?.(k,{userInitiated:false,...metadata});
     }
 

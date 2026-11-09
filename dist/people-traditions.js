@@ -28,7 +28,7 @@
   const language=()=>root.BibleI18n?.language||'nl';
   const t=(key,params={})=>{const lang=language();const row=rows.find(r=>r[0]===key);return String(row?.[lang==='nl'?1:lang==='fr'?2:0]??key).replace(/\{(\w+)\}/g,(_,name)=>params[name]??`{${name}}`);};
   const sourceLabel=ref=>local(ref.labelLocales,language())||ref.label;
-  function sourceLinks(refs){return refs.map(ref=>`<a href="${escape(safeUrl(ref.url))}" target="_blank" rel="noopener noreferrer">${escape(root.BibleI18n?.reference?.(sourceLabel(ref))||sourceLabel(ref))} <span aria-hidden="true">↗</span></a>`).join('');}
+  function sourceLinks(refs){return refs.map(ref=>`<a href="${escape(safeUrl(ref.url))}" target="_blank" rel="noopener noreferrer">${escape(root.BibleI18n?.t?.('Original source')||'Original source')} · ${escape(root.BibleI18n?.reference?.(sourceLabel(ref))||sourceLabel(ref))} <span aria-hidden="true">↗</span></a>`).join('');}
   function comparisonSources(panel){
     const doctrine=ref=>['catechism','magisterium'].includes(ref.corpus),refs=panel.refs||[];
     const scripture=refs.filter(ref=>!doctrine(ref)),teaching=refs.filter(doctrine);
