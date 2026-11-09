@@ -32,6 +32,8 @@ const groups=new Map([
 context.document.querySelector=control;context.document.querySelectorAll=selector=>groups.get(selector)||[];
 context.document.addEventListener=()=>{};context.document.documentElement={lang:'nl'};
 const windowHandlers=new Map();context.window.matchMedia=()=>({matches:false});context.window.addEventListener=(name,callback)=>windowHandlers.set(name,callback);
+let modalMap=false;
+if(process.argv.includes('--map-modal'))context.window.AtlasMapWorkspace=class{getState(){return {full:modalMap};}setFullscreen(value){modalMap=Boolean(value);}leave(){modalMap=false;}mount(){}restore(){}showSelection(){}};
 const I=context.window.BibleI18n={language:'nl',registerRows(){},reference:text=>text,t:(text,params={})=>text.replace(/\{(\w+)\}/g,(_,key)=>params[key]??`{${key}}`),localizePeople(){},localizePlaces:data=>data,setLanguage(next){this.language=next;},translateDOM(){},observe(){}};
 context.structuredClone=structuredClone;context.URL=URL;
 context.requestAnimationFrame=callback=>callback();
@@ -390,7 +392,7 @@ async function main(){
   assert.equal(bibleReaders.at(-1).state.location.bookId,'GEN');assert.equal(bibleReaders.at(-1).state.location.verse,2);
   assert.equal(bibleReaders.at(-1).state.personPassage.originalReference.translation,abrahamRef.translation,'Source translation metadata reaches the resolver');
   assert.equal(requests.filter(request=>request.file==='person-passage-map.json').length,1,'Both person collections share a successful map download');
-  for(const scenario of ['--festival-explore','--navigation','--religion-navigation','--saved-religion','--festivals','--tradition-atlas','--geography','--exploration']){const check=spawnSync(process.execPath,[__filename,scenario],{encoding:'utf8'});assert.equal(check.status,0,check.stderr||check.stdout);}
+  for(const scenario of ['--map-modal','--festival-explore','--navigation','--religion-navigation','--saved-religion','--festivals','--tradition-atlas','--geography','--exploration']){const check=spawnSync(process.execPath,[__filename,scenario],{encoding:'utf8'});assert.equal(check.status,0,check.stderr||check.stdout);}
   const sharedCheck=spawnSync(process.execPath,[__filename,'--exploration','--shared-timeline'],{encoding:'utf8'});assert.equal(sharedCheck.status,0,sharedCheck.stderr||sharedCheck.stdout);
   const pendingProfileCheck=spawnSync(process.execPath,[__filename,'--pending-profile-language'],{encoding:'utf8'});
   assert.equal(pendingProfileCheck.status,0,pendingProfileCheck.stderr||pendingProfileCheck.stdout);
@@ -617,4 +619,13 @@ async function festivalExploreRegression(){
  console.log('Festival exploration app routing passed: tradition-bound timeline/person/place/dossier links and return to the same dossier, query/filter and religious context.');
 }
 
-(process.argv.includes('--festival-explore')?festivalExploreRegression():process.argv.includes('--navigation')?navigationRegression():process.argv.includes('--exploration')?explorationRegression():process.argv.includes('--geography')?geographyRegression():process.argv.includes('--tradition-atlas')?atlasRegression():process.argv.includes('--festivals')?festivalRegression():process.argv.includes('--religion-navigation')?religionNavigationRegression():process.argv.includes('--saved-religion')?savedReligionRegression():process.argv.includes('--pending-profile-language')?pendingProfileLanguageRegression():process.argv.includes('--pending-passage-race')?pendingPassageEditionRegression():process.argv.includes('--saved-catholic')?savedCatholicRegression():process.argv.includes('--dutch-edition-retry')?dutchEditionRetryRegression():process.argv.includes('--person-passage-retry')?personPassageRetryRegression():process.argv.includes('--person-passage-cancel')?personPassageCancelRegression():main()).catch(error=>{console.error(error);process.exitCode=1;});
+async function mapModalRegression(){
+ initialCatholic();await settle();selectView('map');await settle();assert.equal(control('#sidebar').inert,false);
+ control('#map-fullscreen').click();assert(modalMap);windowHandlers.get('resize')();assert.equal(control('#sidebar').inert,true,'Desktop resize must keep background navigation inert in the modal map');
+ context.window.matchMedia=()=>({matches:true});control('#sidebar').classList.add('open');windowHandlers.get('resize')();assert.equal(control('#sidebar').inert,true,'An open mobile sidebar remains inert behind the modal workspace');
+ control('#map-fullscreen').click();windowHandlers.get('resize')();assert.equal(control('#sidebar').inert,false,'Closing full screen restores normal sidebar access');
+ control('#map-fullscreen').click();selectView('reader');await settle();assert.equal(modalMap,false,'Root navigation exits the workspace');
+ console.log('Modal map app regression passed: desktop/mobile resize preserves background inertness and closing or navigation restores access.');
+}
+
+(process.argv.includes('--map-modal')?mapModalRegression():process.argv.includes('--festival-explore')?festivalExploreRegression():process.argv.includes('--navigation')?navigationRegression():process.argv.includes('--exploration')?explorationRegression():process.argv.includes('--geography')?geographyRegression():process.argv.includes('--tradition-atlas')?atlasRegression():process.argv.includes('--festivals')?festivalRegression():process.argv.includes('--religion-navigation')?religionNavigationRegression():process.argv.includes('--saved-religion')?savedReligionRegression():process.argv.includes('--pending-profile-language')?pendingProfileLanguageRegression():process.argv.includes('--pending-passage-race')?pendingPassageEditionRegression():process.argv.includes('--saved-catholic')?savedCatholicRegression():process.argv.includes('--dutch-edition-retry')?dutchEditionRetryRegression():process.argv.includes('--person-passage-retry')?personPassageRetryRegression():process.argv.includes('--person-passage-cancel')?personPassageCancelRegression():main()).catch(error=>{console.error(error);process.exitCode=1;});

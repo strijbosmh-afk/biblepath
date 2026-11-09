@@ -897,7 +897,7 @@
   function syncSidebarAccess() {
     const mobile = window.matchMedia('(max-width:760px)').matches;
     const open = $('#sidebar').classList.contains('open');
-    $('#sidebar').inert = mobile && !open;
+    $('#sidebar').inert = Boolean(mapWorkspace?.getState()?.full) || mobile && !open;
     $('#mobile-menu').setAttribute('aria-expanded',String(open));
   }
   function closeSidebar() {$('#sidebar').classList.remove('open');$('#sidebar-shade').classList.remove('open');syncSidebarAccess();}
