@@ -1,7 +1,7 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..'),read=name=>JSON.parse(fs.readFileSync(path.join(root,'dist',name),'utf8'));
-const {TimelineModel,AtlasExplore,date}=require('../dist/explore-features.js');
+const {TimelineModel,AtlasExplore,date,findReflections}=require('../dist/explore-features.js');
 const timeline=read('timeline-events.json'),challenges=read('reflection-challenges.json'),topics=read('scripture-topics.json');
 const catholic=read('catholic-bible-data-nl.json'),tanakh=read('tanakh-data.json'),quran=read('quran-data.json');
 function validatePassage(p,tradition){
@@ -24,6 +24,18 @@ for(const tradition of ['christianity','judaism','islam']){
  for(const e of entries){assert(e.statementType==='editorial','An editorial prompt must not masquerade as a scripture quotation');assert(e.title?.trim()&&e.context.length>80);assert.equal(e.questions.length,3);assert(e.questions.every(q=>q.length>15));sources(e.sources);validatePassage(e.passage,tradition);passages++;totalChallenges++;}
 }
 const catholicChallenges=challenges.traditions.christianity;for(const pillar of ['prayer','poor','peace'])assert(catholicChallenges.filter(e=>e.pillar===pillar).length>=6);
+for(const entry of catholicChallenges){
+ const {book,chapter,verse,endVerse}=entry.passage;
+ const corpus=catholic.books.find(b=>b.id===book).chapters.find(c=>c.number===chapter).verses;
+ const expected=corpus.filter(v=>v.number>=verse&&v.number<=endVerse).map(({number,text})=>({number,text}));
+ assert.deepEqual(entry.verses,expected,'The reflection sheet quotes the exact reader edition');
+}
+assert.equal(findReflections(catholicChallenges,'Ik voel me eenzaam')[0].id,'christianity:eenzaamheid');
+assert.equal(findReflections(catholicChallenges,'VERGÉVING')[0].id,'christianity:vergeven');
+assert.equal(findReflections(catholicChallenges,'vergeven')[0].id,'christianity:vergeven');
+assert(findReflections(catholicChallenges,'vrede').length>1,'Related reflections remain selectable');
+assert.deepEqual(findReflections(catholicChallenges,'astrofysica'),[]);
+assert.deepEqual(findReflections(catholicChallenges,'Ik zoek een reflectie'),[]);
 assert.equal(date(-586),'586 v.Chr.');assert.equal(date(622),'622 n.Chr.');
 assert(topics.topics.length>=25);assert.equal(new Set(topics.topics.map(t=>t.id)).size,topics.topics.length);
 for(const topic of topics.topics){assert(topic.label&&topic.synonyms.length);for(const tradition of ['christianity','judaism','islam'])assert(topic.passages.some(p=>p.tradition===tradition));for(const p of topic.passages){validatePassage(p,p.tradition);passages++;}}
@@ -33,6 +45,24 @@ for(const scroll of [0,120000,499000]){const clusters=dense.visible({width:1000,
 const sample={id:'bce',start:-586,title:'Één geschiedenis',kind:'history',summary:'',context:'',category:''};assert.equal(new TimelineModel([sample]).visible({width:390,filter:'EEN'})[0].events[0].id,'bce');
 const view=Object.create(AtlasExplore.prototype);view.states=new Map();view.view='challenge';view.tradition='christianity';view.data=challenges;view.state.pillar='peace';assert(view.challenges().every(e=>e.pillar==='peace'));
 view.tradition='judaism';assert.equal(view.state.pillar,'all','Religion state remains separate');view.state.topic=challenges.traditions.judaism[0].topic;assert(view.challenges().every(e=>e.topic===view.state.topic));view.tradition='christianity';assert.equal(view.state.pillar,'peace');
+const printButton={dataset:{action:'print-reflection'}};
+const status={focus(){}};
+view.el={innerHTML:'',hidden:false,contains:()=>true,querySelector(selector){return selector==='#reflection-result'?status:selector==='#reflection-sheet'&&this.innerHTML.includes('id="reflection-sheet"')?{}:null;}};
+let printed=0;
+global.print=()=>printed++;
+const clickPrint=()=>view.click({target:{closest:()=>printButton}});
+view.submit({target:{id:'reflection-form',elements:{namedItem:()=>({value:'eenzaam'})}},preventDefault(){}});
+assert.match(view.el.innerHTML,/Iemand bijstaan/);
+assert.match(view.el.innerHTML,/Bij mijn eerste verdediging/);
+assert.equal(view.passages[0].edition,'catholic-nl');
+clickPrint();
+assert.equal(printed,1);
+view.selectReflection('<img src=x onerror=alert(1)>');
+assert(!view.el.innerHTML.includes('<img'));
+assert(!view.el.innerHTML.includes('id="reflection-sheet"'));
+clickPrint();
+assert.equal(printed,1,'An empty search result cannot print a previous reflection');
+delete global.print;
 const malicious='<img src=x onerror=alert(1)> Vrede & hoop';assert(!view.highlight(malicious,'vrede').includes('<img'));assert(view.highlight(malicious,'vrede').includes('<mark>Vrede</mark>'));assert(view.highlight(malicious,'vrede').includes('&amp;'));
 assert(!view.sources([{title:'attack',url:'javascript:alert(1)'}]).includes('javascript:'));assert(view.sources([{title:'<script>',url:'https://example.org/'}]).includes('&lt;script&gt;'));
 console.log(`Exploration passed: ${totalEvents} dated events, ${totalChallenges} distinct sourced challenges, ${topics.topics.length} themes, ${passages} corpus-validated passage ranges, BCE dates, separate religion state, safe rendering and bounded timeline virtualization.`);

@@ -19,6 +19,20 @@
  const date=y=>y<0?`${Math.abs(y)} v.Chr.`:`${y} n.Chr.`;
  const safeUrl=s=>{try{const u=new URL(s);return u.protocol==='https:'&&!u.username&&!u.password?u.href:''}catch{return ''}};
  const fold=s=>String(s??'').normalize('NFD').replace(/\p{M}/gu,'').toLowerCase();
+ const reflectionWords=value=>fold(value).match(/[a-z0-9]+/g)||[];
+ const reflectionStopWords=new Set(['de','het','een','en','ik','me','mij','mijn','je','jij','we','wij','over','voor','van','bij','in','op','om','te','met','naar','hoe','kan','kun','wil','worden','zoek','reflectie','onderwerp','voel','voelen','ben','zijn','heb','hebben','ga','gaan','meer','graag','soms','voelt','als','wat','doe','doen']);
+ function findReflections(entries,query){
+  const terms=[...new Set(reflectionWords(query).filter(word=>!reflectionStopWords.has(word)))];
+  if(!terms.length)return [];
+  const phrase=terms.join(' ');
+  return entries.map(entry=>{
+   const topic=reflectionWords(entry.topic).join(' ');
+   const labels=[entry.topic,entry.title,...(entry.keywords||[])].map(label=>reflectionWords(label).join(' '));
+   const words=new Set(labels.flatMap(label=>label.split(' ')));
+   if(!terms.every(term=>words.has(term)))return null;
+   return {entry,score:topic===phrase?3:labels.includes(phrase)?2:1};
+  }).filter(Boolean).sort((a,b)=>b.score-a.score).map(match=>match.entry);
+ }
  const TimelineShare={
   parse(hash){
    if(typeof hash!=='string'||!hash.startsWith('#vergelijking='))return null;
@@ -99,8 +113,9 @@
    this.el=container;this.onPassage=onPassage;this.onTimelineMode=onTimelineMode;this.onDossier=onDossier;this.states=new Map();this.request=0;
    this.worker=null;this.searchId=0;this.searchState={query:'',traditions:['christianity'],page:0,mode:'all',topicId:''};
    this.view='';this.tradition='christianity';this.passages=[];
-   this.onClick=e=>this.click(e);this.onInput=e=>this.input(e);this.onChange=e=>this.change(e);
+   this.onClick=e=>this.click(e);this.onInput=e=>this.input(e);this.onChange=e=>this.change(e);this.onSubmit=e=>this.submit(e);
    this.el.addEventListener('click',this.onClick);this.el.addEventListener('input',this.onInput);this.el.addEventListener('change',this.onChange);
+   this.el.addEventListener('submit',this.onSubmit);
    this.resizeObserver=typeof ResizeObserver!=='undefined'?new ResizeObserver(()=>{if(this.view==='timeline'&&!this.el.hidden)this.paintTimeline()}):null;
   }
   get state(){
@@ -438,14 +453,16 @@
   stakeholders(e){return e.stakeholders?.length?`<h3>Wie waren betrokken?</h3><ul class="timeline-stakeholders">${e.stakeholders.map(s=>`<li><strong>${esc(s.name)}</strong><span>${esc(s.role)}</span></li>`).join('')}</ul>`:''}
   revealTimelineDetail(){const d=this.el.querySelector('#timeline-detail');if(!d?.getBoundingClientRect)return;const rect=d.getBoundingClientRect();if(rect.top>(root.innerHeight||800)-100||rect.bottom<0){d.scrollIntoView({block:'start',behavior:'auto'});d.querySelector('h2')?.focus({preventScroll:true});}}
   challenges(){
-   return (this.data.traditions[this.tradition]||[]).filter(e=>(this.state.pillar==='all'||e.pillar===this.state.pillar)&&(this.state.topic==='all'||e.topic===this.state.topic));
+   const entries=(this.data.traditions[this.tradition]||[]).filter(e=>(this.state.pillar==='all'||e.pillar===this.state.pillar)&&(this.state.topic==='all'||e.topic===this.state.topic));
+   if(this.tradition==='christianity'&&this.state.reflectionQuery)return findReflections(entries,this.state.reflectionQuery);
+   return entries;
   }
   renderChallenge(){
+   if(this.tradition==='christianity'){this.renderCatholicReflection();return;}
    const all=this.data.traditions[this.tradition]||[],choices=this.challenges();
    if(!choices.some(e=>e.id===this.state.selected))this.state.selected=choices[0]?.id;
    const e=choices.find(e=>e.id===this.state.selected);this.passages=[];
    this.el.innerHTML=`${this.note()}<div class="challenge-controls">
-    ${this.tradition==='christianity'?`<div class="explore-filter-group" role="group" aria-label="De drie P’s van Sant’Egidio">${[['all','Alle drie P’s'],['prayer','Gebed'],['poor','Armen'],['peace','Vrede']].map(([id,title])=>`<button class="explore-btn" data-pillar="${id}" aria-pressed="${id===this.state.pillar}">${title}</button>`).join('')}</div>`:''}
     <label>Onderwerp<select id="challenge-topic"><option value="all">Alle onderwerpen</option>${[...new Set(all.map(x=>x.topic))].map(topic=>`<option value="${esc(topic)}" ${topic===this.state.topic?'selected':''}>${esc(topic)}</option>`).join('')}</select></label>
     <span role="status">${choices.length} reflecties</span></div>
     ${e?`<div class="challenge-layout"><article class="explore-panel challenge-body">
@@ -455,7 +472,94 @@
      <h3>Context om mee te nemen</h3><p>${esc(e.context)}</p>
      <details><summary>Bronnen en verder lezen</summary>${this.sources(e.sources)}</details>
      <div class="challenge-actions"><button class="explore-btn primary" data-action="next-challenge">Een andere reflectie ↻</button><span class="explore-note">Neem de tijd. Je hoeft niets in te vullen.</span></div>
-    </article><aside class="challenge-reflect"><span class="library-kicker">RUIMTE VOOR REFLECTIE</span><h2>Kijk een laag dieper.</h2><ol>${(e.questions||[]).map(q=>`<li>${esc(q)}</li>`).join('')}</ol><p>Welke aanname van jezelf wil je opnieuw onderzoeken?</p></aside></div>`:'<p role="status">Geen reflecties voor deze combinatie. Kies een ander onderwerp of alle drie P’s.</p>'}`;
+    </article><aside class="challenge-reflect"><span class="library-kicker">RUIMTE VOOR REFLECTIE</span><h2>Kijk een laag dieper.</h2><ol>${(e.questions||[]).map(q=>`<li>${esc(q)}</li>`).join('')}</ol><p>Welke aanname van jezelf wil je opnieuw onderzoeken?</p></aside></div>`:'<p role="status">Geen reflecties gevonden. Kies een ander onderwerp.</p>'}`;
+  }
+  selectReflection(value){
+   this.state.reflectionQuery=String(value??'').trim().slice(0,120);
+   this.state.pillar='all';
+   this.state.topic='all';
+   this.state.selected=null;
+   this.renderCatholicReflection();
+   this.el.querySelector('#reflection-result')?.focus();
+  }
+  submit(event){
+   if(event.target.id!=='reflection-form'||this.view!=='challenge'||this.tradition!=='christianity')return;
+   event.preventDefault();
+   this.selectReflection(event.target.elements.namedItem('subject').value);
+  }
+  renderCatholicReflection(){
+   const entries=this.data.traditions.christianity;
+   const choices=this.challenges();
+   const entry=choices.find(item=>item.id===this.state.selected)||choices[0];
+   const query=this.state.reflectionQuery||'';
+   const topics=[...new Set(entries.filter(item=>this.state.pillar==='all'||item.pillar===this.state.pillar).map(item=>item.topic))].sort((a,b)=>a.localeCompare(b,'nl'));
+   const pillars={all:'Alle pijlers',prayer:'Gebed',poor:'Vriendschap met de armen',peace:'Vrede'};
+   this.state.selected=entry?.id??null;
+   this.passages=[];
+   this.el.innerHTML=`${this.note()}
+    <section class="reflection-picker explore-panel" aria-label="Kies een reflectie">
+     <form id="reflection-form" role="search">
+      <label for="reflection-query">Waarover wil je reflecteren?</label>
+      <div class="reflection-search">
+       <input id="reflection-query" name="subject" type="search" maxlength="120" placeholder="Bijv. eenzaamheid, vergeving of hoop" value="${esc(query)}">
+       <button type="submit" class="explore-btn primary">Zoek reflectie</button>
+      </div>
+     </form>
+     <div class="reflection-suggestions" role="group" aria-label="Voorgestelde onderwerpen">
+      ${['Eenzaamheid','Vergeving','Hoop','Vriendschap','Vrede'].map(topic=>`<button type="button" class="explore-btn" data-reflection-query="${topic}">${topic}</button>`).join('')}
+     </div>
+     <details class="reflection-browse"${this.state.pillar!=='all'||this.state.topic!=='all'?' open':''}>
+      <summary>Blader op onderwerp of pijler</summary>
+      <div class="challenge-controls">
+       <div class="explore-filter-group" role="group" aria-label="Pijlers van Sant’Egidio">
+        ${Object.entries(pillars).map(([id,label])=>`<button type="button" class="explore-btn" data-pillar="${id}" aria-pressed="${id===this.state.pillar}">${label}</button>`).join('')}
+       </div>
+       <label>Onderwerp<select id="challenge-topic"><option value="all">Alle onderwerpen</option>${topics.map(topic=>`<option value="${esc(topic)}"${topic===this.state.topic?' selected':''}>${esc(topic)}</option>`).join('')}</select></label>
+      </div>
+     </details>
+    </section>
+    <div class="reflection-results">
+     <p id="reflection-result" role="status" tabindex="-1">${this.reflectionStatus(query,choices.length)}</p>
+     ${entry?`<div class="reflection-actions">
+      ${choices.length>1?`<label for="reflection-selection">Kies een reflectie<select id="reflection-selection">${choices.map(item=>`<option value="${esc(item.id)}"${item===entry?' selected':''}>${esc(item.title)}</option>`).join('')}</select></label>`:''}
+      <button type="button" class="explore-btn" data-action="print-reflection">Druk reflectie af</button>
+     </div>`:''}
+    </div>
+    ${entry?this.reflectionSheet(entry,pillars[entry.pillar]):''}`;
+  }
+  reflectionStatus(query,count){
+   if(!count)return query?`Geen reflectie gevonden voor ‘${esc(query)}’. Probeer een ander woord of kies een onderwerp hierboven.`:'Kies een onderwerp om een reflectie te lezen.';
+   const results=count===1?'1 reflectie':`${count} reflecties`;
+   return query?`${results} voor ‘${esc(query)}’`:results;
+  }
+  reflectionSheet(entry,pillar){
+   const reference=this.reference(entry.passage);
+   const description=[...new Set([entry.topic,pillar])].join(' · ');
+   return `<article id="reflection-sheet" class="reflection-sheet explore-panel" aria-labelledby="reflection-title">
+    <header class="reflection-heading">
+     <p class="reflection-brand">ReligieAtlas · Reflectie</p>
+     <h2 id="reflection-title">${esc(entry.title)}</h2>
+     <p class="reflection-pillar">${esc(description)} · Geïnspireerd door Sant’Egidio</p>
+    </header>
+    <div class="reflection-columns">
+     <section class="reflection-reading" aria-labelledby="reflection-reference">
+      <h3 id="reflection-reference">${esc(reference)}</h3>
+      <blockquote>${entry.verses.map(verse=>`<p><sup>${esc(verse.number)}</sup> ${esc(verse.text)}</p>`).join('')}</blockquote>
+      <p class="reflection-edition">Nederlandse katholieke Bijbel · Petrus Canisiusvertaling (1939)</p>
+      ${this.passageButton(entry.passage,'Lees in de Bijbel →')}
+     </section>
+     <section class="reflection-point" aria-labelledby="reflection-point-title">
+      <h3 id="reflection-point-title">Reflectiepunt</h3>
+      <p>${esc(entry.questions[0])}</p>
+     </section>
+    </div>
+    <section class="reflection-context">
+     <h3>Bij de tekst</h3>
+     <p>${esc(entry.context)}</p>
+     <details><summary>Bronnen en verder lezen</summary>${this.sources(entry.sources)}</details>
+    </section>
+    <p class="reflection-print-source">www.religieatlas.com · ReligieAtlas<br>Inspiratie: www.santegidio.be · Gebed, armen en vrede</p>
+   </article>`;
   }
   reference(p){
    if(!p)return '';
@@ -555,8 +659,20 @@
     this.el.querySelector('#timeline-cluster-list').innerHTML=`<section class="timeline-cluster-choices explore-panel"><h3>Gebeurtenissen in deze groep</h3><p class="explore-note">Kies een gebeurtenis voor de context, ook wanneer dateringen samenvallen.</p>${events.map(e=>`<button class="explore-btn" data-event="${esc(e.id)}">${esc(e.dateLabel||date(e.start))} · ${esc(e.title)}</button>`).join('')}</section>`;
     this.renderTimelineDetail();this.paintTimeline();return;
    }
-   if(d.pillar){this.state.pillar=d.pillar;this.state.topic='all';this.renderChallenge();this.el.querySelector(`[data-pillar="${d.pillar}"]`)?.focus();return}
+   if(d.reflectionQuery){this.selectReflection(d.reflectionQuery);return;}
+   if(d.pillar){
+    this.state.pillar=d.pillar;
+    this.state.topic='all';
+    this.state.reflectionQuery='';
+    this.renderChallenge();
+    this.el.querySelector('.reflection-browse').open=true;
+    this.el.querySelector(`[data-pillar="${d.pillar}"]`)?.focus();
+    return;
+   }
    switch(d.action){
+    case'print-reflection':
+     if(this.view==='challenge'&&!this.el.hidden&&this.el.querySelector('#reflection-sheet'))root.print?.();
+     break;
     case'share-timeline':this.shareTimeline();break;
     case'copy-timeline-link':this.copyTimelineLink();break;
     case'reset-link-filters':{this.state.linkType='all';this.state.linkReligions=Object.keys(names);this.el.querySelector('#timeline-link-type').value='all';this.el.querySelectorAll('[data-link-religion]').forEach(e=>{e.checked=true});this.applyConnectionFilters();break;}
@@ -602,7 +718,18 @@
    if(e.target.dataset.linkReligion){this.state.linkReligions=[...this.el.querySelectorAll('[data-link-religion]:checked')].map(x=>x.dataset.linkReligion);this.applyConnectionFilters();}
    if(e.target.id==='timeline-links-toggle'){this.state.showConnections=e.target.checked;this.paintTimeline();}
    if(e.target.id==='timeline-kind'){this.state.kind=e.target.value;this.focusTimelineMatches();if(this.timelineComparison)this.applyConnectionFilters();}
-   if(e.target.id==='challenge-topic'){this.state.topic=e.target.value;this.renderChallenge()}
+   if(e.target.id==='challenge-topic'){
+    this.state.topic=e.target.value;
+    this.state.reflectionQuery='';
+    this.renderChallenge();
+    const select=this.el.querySelector('#challenge-topic');
+    select?.focus({preventScroll:true});
+   }
+   if(e.target.id==='reflection-selection'){
+    this.state.selected=e.target.value;
+    this.renderCatholicReflection();
+    this.el.querySelector('#reflection-selection')?.focus({preventScroll:true});
+   }
    if(e.target.dataset.searchReligion){
     this.searchState.traditions=[...this.el.querySelectorAll('[data-search-religion]:checked')].map(x=>x.dataset.searchReligion);
     this.searchState.page=0;this.runSearch();
@@ -617,10 +744,10 @@
   }
   destroy(){
    this.leave();this.clearShareQR();this.worker?.terminate();this.el.removeEventListener('click',this.onClick);
-   this.el.removeEventListener('input',this.onInput);this.el.removeEventListener('change',this.onChange);
+   this.el.removeEventListener('input',this.onInput);this.el.removeEventListener('change',this.onChange);this.el.removeEventListener('submit',this.onSubmit);
    if(this.raf)cancelAnimationFrame(this.raf);
   }
  }
- const api={AtlasExplore,TimelineModel,TimelineLayout,TimelineShare,date};Object.assign(root,api);
+ const api={AtlasExplore,TimelineModel,TimelineLayout,TimelineShare,date,findReflections};Object.assign(root,api);
  if(typeof module!=='undefined'&&module.exports)module.exports=api;
 })(typeof window!=='undefined'?window:globalThis);
