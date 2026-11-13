@@ -36,6 +36,8 @@ De [kopie van het geaccepteerde ontvangstbewijs](docs/storage-receipts/q-4120b9a
 
 Drive-locaties: [momentopname](https://drive.google.com/drive/folders/1W7UfUAzFUuLmv1ryQlFUFhofW19jSfSm), [gedeeltelijke gespreksexport](https://drive.google.com/drive/folders/1dgkDHGSE8R1EQazN4csAeIPBLz1WoljC) en [sessieverslag](https://drive.google.com/drive/folders/1ejZdCEh4iNklW2oJl68QZHfSteimYmQ7). Voor hervatten op een andere pc: gebruik de actuele `main` uit Git, registreer de lokale clone en controleer daar de native startmap en opslagketen opnieuw.
 
+Het inhoudelijke sessieverslag over de 200 reflecties is op pc1830 via de native Stop-hook geëxporteerd vanuit de geregistreerde projectmap, bij commit `8484b06`. Op 2026-11-13 om 14:24:30 UTC is het ontvangstbewijs voor 15 bestanden geaccepteerd (`q-35f3322617dadd7f0a0652f7e7a20858`). Voor het verslag zijn eigenaar, oudermappen, bestandsgrootte van 950 bytes en SHA256 van opnieuw gedownloade bytes geverifieerd. De lokale wachtrij en foutenlijst waren leeg.
+
 ## Reflecties op onderwerp
 
 Onder Christendom → Reflectie staan 200 katholieke reflecties. De verdeling is 67 bij gebed, 67 bij vriendschap met mensen in armoede en 66 bij vrede. Elke reflectie toont een eigen passage uit de Nederlandse katholieke Bijbel, één reflectiepunt, context en bronnen. De afdrukopmaak toont het gekozen overzicht. De passages zijn gecontroleerd tegen de leeseditie en de 158 verschillende nieuwe hoofdstuklinks bij eBible zijn bereikbaar.
