@@ -600,7 +600,6 @@
    const description=[...new Set([entry.topic,pillar])].join(' · ');
    return `<article id="reflection-sheet" class="reflection-sheet explore-panel" aria-labelledby="reflection-title">
     <header class="reflection-heading">
-     <p class="reflection-brand">ReligieAtlas · Reflectie</p>
      <h2 id="reflection-title">${esc(entry.title)}</h2>
      <p class="reflection-pillar">${esc(description)} · Geïnspireerd door Sant’Egidio</p>
     </header>
@@ -621,7 +620,6 @@
      <p>${esc(entry.context)}</p>
      <details><summary>Bronnen en verder lezen</summary>${this.sources(entry.sources)}</details>
     </section>
-    <p class="reflection-print-source">www.religieatlas.com · ReligieAtlas<br>Inspiratie: www.santegidio.be · Gebed, armen en vrede</p>
    </article>`;
   }
   reference(p){

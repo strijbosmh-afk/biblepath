@@ -122,15 +122,11 @@
   padding-bottom: 18px;
   border-bottom: 1px solid var(--explore-line);
 }
-.reflection-brand,
 .reflection-pillar,
 .reflection-edition {
   color: #485e43;
   font-size: 14px;
   line-height: 1.6;
-}
-.reflection-brand {
-  display: none;
 }
 #explore-features-view .reflection-heading h2 {
   margin: 0;
@@ -188,9 +184,6 @@
   margin: 0;
   max-width: 74ch;
 }
-.reflection-print-source {
-  display: none;
-}
 @media (max-width: 760px) {
   .reflection-columns {
     grid-template-columns: minmax(0, 1fr);
@@ -214,7 +207,9 @@
 }
 @media print {
   @page reflection {
-    margin: 16mm;
+    /* Chrome omits its automatic headers and footers without page margins. */
+    size: A4;
+    margin: 0;
   }
   body:has(#explore-features-view:not([hidden]) #reflection-sheet) {
     page: reflection;
@@ -244,47 +239,72 @@
     background: #fff !important;
     box-shadow: none !important;
   }
-  #reflection-sheet .reflection-brand,
-  #reflection-sheet .reflection-print-source {
-    display: block;
-    font-size: 10pt;
+  #explore-features-view #reflection-sheet {
+    /* Apply the inset again when the sheet continues on another page. */
+    padding: 14mm 17mm !important;
+    box-decoration-break: clone;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
   }
-  #reflection-sheet .reflection-brand {
-    margin: 0 0 4mm;
+  #reflection-sheet .reflection-heading {
+    border-top: 1.4mm solid #3b5546;
+    border-bottom: 0.25mm solid #b7c5ad;
+    padding: 4mm 0 3mm;
   }
   #explore-features-view #reflection-sheet h2 {
-    font: 26pt/1.14 Georgia, serif !important;
+    font: 29pt/1.14 Georgia, serif !important;
+    color: #293c33;
   }
   #explore-features-view #reflection-sheet h3 {
-    font: 15pt/1.25 Georgia, serif !important;
+    font: 15pt/1.2 Georgia, serif !important;
+    color: #344b3e;
     break-after: avoid;
+  }
+  #reflection-sheet .reflection-pillar,
+  #reflection-sheet .reflection-edition {
+    font-size: 9pt;
   }
   #reflection-sheet .reflection-columns {
     display: block;
-    margin-top: 5mm;
+    margin-top: 4mm;
   }
   #reflection-sheet .reflection-heading,
-  #reflection-sheet .reflection-point {
+  #reflection-sheet .reflection-point,
+  #reflection-sheet .reflection-context,
+  #reflection-sheet blockquote p {
     break-inside: avoid;
+  }
+  #reflection-sheet .reflection-reading blockquote {
+    padding: 0 0 0 3.6mm;
+    border-left: 0.65mm solid #95a987;
+  }
+  #reflection-sheet .reflection-reading blockquote p {
+    margin: 0 0 0.65mm;
+    line-height: 1.32;
+  }
+  #reflection-sheet .reflection-reading sup {
+    font-size: 8pt;
+    line-height: 0;
+    vertical-align: 0.25em;
   }
   #reflection-sheet .reflection-reading blockquote,
   #reflection-sheet .reflection-point p {
     font-size: 11pt;
-    line-height: 1.45;
+    line-height: 1.35;
+    orphans: 2;
+    widows: 2;
   }
   #reflection-sheet .reflection-point {
-    margin-top: 5mm;
-    padding: 4mm;
-    border-color: #777;
-    background: #fff;
+    margin-top: 4mm;
+    padding: 3.5mm 4mm;
+    border: 0.25mm solid #becbb3;
+    border-left: 1.05mm solid #708862;
+    background: #edf2e6;
   }
   #reflection-sheet .reflection-context {
-    margin-top: 5mm;
-    padding-top: 4mm;
+    margin-top: 4mm;
+    padding-top: 3mm;
     font-size: 10pt;
-  }
-  #reflection-sheet .reflection-print-source {
-    margin-top: 5mm;
-    overflow-wrap: anywhere;
+    line-height: 1.45;
   }
 }

@@ -34,4 +34,6 @@ Open `BiblePath/repository` als werkmap en beoordeel de nieuwe Softwareprojecten
 
 Onder Christendom → Reflectie staan 27 katholieke reflecties die aansluiten bij gebed, vriendschap met mensen in armoede en vrede. Een gekozen reflectie toont de verzen uit de Nederlandse katholieke Bijbel, één reflectiepunt, context en bronnen. De afdrukopmaak toont het gekozen overzicht.
 
-De reflectiezoeker ondersteunt EN, OF, NIET, AND, OR, NOT en haakjes. De gebruikelijke voorrang is NIET, EN, OF. De browsercontrole bevestigde combinaties, ongeldige invoer, passagekoppelingen en herstel van het gekozen resultaat na terugkeer uit de Bijbellezer. Het native afdrukvoorbeeld blijft een afzonderlijke controle, omdat het venster in de ingebouwde browser niet beschikbaar was voor inspectie.
+De reflectiezoeker ondersteunt EN, OF, NIET, AND, OR, NOT en haakjes. De gebruikelijke voorrang is NIET, EN, OF. De browsercontrole bevestigde combinaties, ongeldige invoer, passagekoppelingen en herstel van het gekozen resultaat na terugkeer uit de Bijbellezer.
+
+De afdruk gebruikt A4 met groene accenten en een kader voor het reflectiepunt. De paginamarges van de browser staan op nul, zodat Chrome geen automatische kop- of voettekst plaatst. De leesmarge zit in het document en wordt herhaald op vervolgpagina’s. De korte en langste reflectie passen elk op één A4 in de PDF-uitvoer van Chrome 157. Een proef met 48 verzen behield alle tekst en marges op drie pagina’s. Het native afdrukdialoogvenster was niet toegankelijk voor inspectie.
