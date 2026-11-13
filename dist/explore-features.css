@@ -61,6 +61,15 @@
   gap: 8px;
   margin-top: 12px;
 }
+.reflection-search-help {
+  margin: 9px 0 0;
+  font-size: 14px;
+  color: #485e43;
+  overflow-wrap: anywhere;
+}
+.reflection-search-help code {
+  font-size: inherit;
+}
 .reflection-suggestions .explore-btn {
   border-radius: 999px;
   padding-inline: 14px;

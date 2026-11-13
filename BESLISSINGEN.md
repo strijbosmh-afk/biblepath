@@ -27,3 +27,7 @@ Gebruik uitsluitend `strijbosmh@gmail.com` als uploadaccount én eigenaar van de
 De projectindeling is `01_Context`, `02_Chats/<sessie-id>`, `03_Sessies/<sessie-id>`, `04_Momentopnamen` en `99_Archief`. De logische sleutels `Chatexports`, `Sessies` en `Momentopnamen` blijven naar de overeenkomstige vaste map-ID's verwijzen.
 
 Een volledige pc-overdracht mag pas als gecontroleerd worden gemeld als de bedoelde Git-commit op de remote staat en de relevante Drive-export is teruggelezen. Bestaande ongecommitte code blijft expliciet onaf werk. Automatische opslag is pas bewezen met een echte native Stop-aanroep, de bijbehorende export en een geaccepteerd Drive-ontvangstbewijs; registratie, een handmatige helperaanroep of een lege wachtrij zijn daarvoor onvoldoende.
+
+## 2026-11-13 — Reflecties op onderwerp
+
+Koppel zoektermen en synoniemen aan redactioneel voorbereide reflecties. Elke reflectie gebruikt een gecontroleerde passage uit de Nederlandse katholieke leeseditie. Zo blijven tekst en reflectiepunt aan elkaar gekoppeld en kan de gebruiker de bron openen. De zoekopdracht wordt in de browser verwerkt. De afdrukopmaak gebruikt het gekozen overzicht op de pagina.

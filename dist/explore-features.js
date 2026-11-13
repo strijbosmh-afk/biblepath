@@ -21,15 +21,70 @@
  const fold=s=>String(s??'').normalize('NFD').replace(/\p{M}/gu,'').toLowerCase();
  const reflectionWords=value=>fold(value).match(/[a-z0-9]+/g)||[];
  const reflectionStopWords=new Set(['de','het','een','en','ik','me','mij','mijn','je','jij','we','wij','over','voor','van','bij','in','op','om','te','met','naar','hoe','kan','kun','wil','worden','zoek','reflectie','onderwerp','voel','voelen','ben','zijn','heb','hebben','ga','gaan','meer','graag','soms','voelt','als','wat','doe','doen']);
+ const reflectionOperators=new Map([
+  ['en','and'],['and','and'],['of','or'],['or','or'],['niet','not'],['not','not']
+ ]);
+ function parseReflectionQuery(query){
+  const raw=String(query??'').match(/[\p{L}\p{N}]+|[()]/gu)||[];
+  const hasOperators=raw.some(token=>token==='('||token===')'||reflectionOperators.has(token.toLowerCase()));
+  if(!hasOperators)return null;
+  const tokens=[];
+  for(const rawToken of raw){
+   const operator=reflectionOperators.get(rawToken.toLowerCase());
+   if(operator||rawToken==='('||rawToken===')'){
+    tokens.push({type:operator||rawToken,label:rawToken});
+    continue;
+   }
+   for(const word of reflectionWords(rawToken)){
+    if(!reflectionStopWords.has(word))tokens.push({type:'word',word,label:rawToken});
+   }
+  }
+  let position=0;
+  const take=type=>tokens[position]?.type===type?tokens[position++]:null;
+  const expected=()=>{
+   const token=tokens[position];
+   return new SyntaxError(token?`Verwacht een zoekwoord bij ‘${token.label}’.`:'Voeg een zoekwoord toe na de operator.');
+  };
+  function parseOperand(){
+   if(take('not')){
+    const operand=parseOperand();
+    return words=>!operand(words);
+   }
+   if(take('(')){
+    const expression=parseOr();
+    if(!take(')'))throw new SyntaxError('Sluit de groep af met een haakje ).');
+    return expression;
+   }
+   const word=take('word');
+   if(!word)throw expected();
+   return words=>words.has(word.word);
+  }
+  function parseAnd(){
+   const operands=[parseOperand()];
+   while(take('and')||['word','not','('].includes(tokens[position]?.type)){
+    operands.push(parseOperand());
+   }
+   return words=>operands.every(operand=>operand(words));
+  }
+  function parseOr(){
+   const operands=[parseAnd()];
+   while(take('or'))operands.push(parseAnd());
+   return words=>operands.some(operand=>operand(words));
+  }
+  const matches=parseOr();
+  if(position<tokens.length)throw new SyntaxError('Er staat een sluitend haakje zonder openingshaakje.');
+  return matches;
+ }
  function findReflections(entries,query){
+  const matches=parseReflectionQuery(query);
   const terms=[...new Set(reflectionWords(query).filter(word=>!reflectionStopWords.has(word)))];
-  if(!terms.length)return [];
+  if(!matches&&!terms.length)return [];
   const phrase=terms.join(' ');
   return entries.map(entry=>{
    const topic=reflectionWords(entry.topic).join(' ');
    const labels=[entry.topic,entry.title,...(entry.keywords||[])].map(label=>reflectionWords(label).join(' '));
    const words=new Set(labels.flatMap(label=>label.split(' ')));
-   if(!terms.every(term=>words.has(term)))return null;
+   if(matches?!matches(words):!terms.every(term=>words.has(term)))return null;
    return {entry,score:topic===phrase?3:labels.includes(phrase)?2:1};
   }).filter(Boolean).sort((a,b)=>b.score-a.score).map(match=>match.entry);
  }
@@ -489,7 +544,14 @@
   }
   renderCatholicReflection(){
    const entries=this.data.traditions.christianity;
-   const choices=this.challenges();
+   let choices=[];
+   let searchError='';
+   try{
+    choices=this.challenges();
+   }catch(error){
+    if(!(error instanceof SyntaxError))throw error;
+    searchError=error.message;
+   }
    const entry=choices.find(item=>item.id===this.state.selected)||choices[0];
    const query=this.state.reflectionQuery||'';
    const topics=[...new Set(entries.filter(item=>this.state.pillar==='all'||item.pillar===this.state.pillar).map(item=>item.topic))].sort((a,b)=>a.localeCompare(b,'nl'));
@@ -501,10 +563,11 @@
      <form id="reflection-form" role="search">
       <label for="reflection-query">Waarover wil je reflecteren?</label>
       <div class="reflection-search">
-       <input id="reflection-query" name="subject" type="search" maxlength="120" placeholder="Bijv. eenzaamheid, vergeving of hoop" value="${esc(query)}">
+       <input id="reflection-query" name="subject" type="search" maxlength="120" placeholder="Bijv. eenzaamheid, vergeving of hoop" value="${esc(query)}" aria-describedby="reflection-search-help${searchError?' reflection-result':''}"${searchError?' aria-invalid="true"':''}>
        <button type="submit" class="explore-btn primary">Zoek reflectie</button>
       </div>
      </form>
+     <p id="reflection-search-help" class="reflection-search-help">Combineer onderwerpen met <strong>EN</strong>, <strong>OF</strong> en <strong>NIET</strong>. Bijvoorbeeld <code>(hoop OF vrede) EN NIET oorlog</code>.</p>
      <div class="reflection-suggestions" role="group" aria-label="Voorgestelde onderwerpen">
       ${['Eenzaamheid','Vergeving','Hoop','Vriendschap','Vrede'].map(topic=>`<button type="button" class="explore-btn" data-reflection-query="${topic}">${topic}</button>`).join('')}
      </div>
@@ -519,7 +582,7 @@
      </details>
     </section>
     <div class="reflection-results">
-     <p id="reflection-result" role="status" tabindex="-1">${this.reflectionStatus(query,choices.length)}</p>
+     <p id="reflection-result" role="status" tabindex="-1">${searchError?esc(searchError):this.reflectionStatus(query,choices.length)}</p>
      ${entry?`<div class="reflection-actions">
       ${choices.length>1?`<label for="reflection-selection">Kies een reflectie<select id="reflection-selection">${choices.map(item=>`<option value="${esc(item.id)}"${item===entry?' selected':''}>${esc(item.title)}</option>`).join('')}</select></label>`:''}
       <button type="button" class="explore-btn" data-action="print-reflection">Druk reflectie af</button>

@@ -36,6 +36,17 @@ assert.equal(findReflections(catholicChallenges,'vergeven')[0].id,'christianity:
 assert(findReflections(catholicChallenges,'vrede').length>1,'Related reflections remain selectable');
 assert.deepEqual(findReflections(catholicChallenges,'astrofysica'),[]);
 assert.deepEqual(findReflections(catholicChallenges,'Ik zoek een reflectie'),[]);
+const matchingTopics=query=>findReflections(catholicChallenges,query).map(entry=>entry.topic);
+assert.deepEqual(matchingTopics('hoop OF rouw'),['Hoop','Rouw']);
+assert.deepEqual(matchingTopics('HOOP or rouw AND NOT verdriet'),['Hoop'],'NOT and AND bind before OR');
+assert.deepEqual(matchingTopics('(hoop OF rouw) EN NIET verdriet'),['Hoop']);
+assert.deepEqual(matchingTopics('vrede EN oorlog'),['Vrede']);
+assert.deepEqual(matchingTopics('vrede EN NIET oorlog'),['Verzoening']);
+assert.deepEqual(matchingTopics('NIET (hoop OR rouw)').filter(topic=>['Hoop','Rouw'].includes(topic)),[]);
+assert.deepEqual(matchingTopics('Ik voel me eenzaam OF ik zoek hoop'),['Eenzaamheid','Hoop']);
+for(const invalid of ['hoop EN','OF hoop','(vrede OF hoop','hoop)','hoop OF OF vrede','NIET','()']){
+ assert.throws(()=>findReflections(catholicChallenges,invalid),SyntaxError,invalid);
+}
 assert.equal(date(-586),'586 v.Chr.');assert.equal(date(622),'622 n.Chr.');
 assert(topics.topics.length>=25);assert.equal(new Set(topics.topics.map(t=>t.id)).size,topics.topics.length);
 for(const topic of topics.topics){assert(topic.label&&topic.synonyms.length);for(const tradition of ['christianity','judaism','islam'])assert(topic.passages.some(p=>p.tradition===tradition));for(const p of topic.passages){validatePassage(p,p.tradition);passages++;}}
@@ -62,6 +73,10 @@ assert(!view.el.innerHTML.includes('<img'));
 assert(!view.el.innerHTML.includes('id="reflection-sheet"'));
 clickPrint();
 assert.equal(printed,1,'An empty search result cannot print a previous reflection');
+view.selectReflection('hoop OF');
+assert.match(view.el.innerHTML,/aria-invalid="true"/);
+assert.match(view.el.innerHTML,/Voeg een zoekwoord toe na de operator/);
+assert(!view.el.innerHTML.includes('id="reflection-sheet"'));
 delete global.print;
 const malicious='<img src=x onerror=alert(1)> Vrede & hoop';assert(!view.highlight(malicious,'vrede').includes('<img'));assert(view.highlight(malicious,'vrede').includes('<mark>Vrede</mark>'));assert(view.highlight(malicious,'vrede').includes('&amp;'));
 assert(!view.sources([{title:'attack',url:'javascript:alert(1)'}]).includes('javascript:'));assert(view.sources([{title:'<script>',url:'https://example.org/'}]).includes('&lt;script&gt;'));
