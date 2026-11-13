@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "projectId": "biblepath",
+  "name": "BiblePath",
+  "displayName": "ReligieAtlas",
+  "repository": {
+    "url": "https://github.com/strijbosmh-afk/biblepath.git",
+    "remoteName": "origin",
+    "defaultBranch": "main"
+  },
+  "drive": {
+    "rootFolderId": "11htmN9UTcAIqY0NL5H4WKvqqukKMpoJo",
+    "projectsFolderId": "16p--jP821tgRyEHLYegsyFFW-EMTr4IR",
+    "projectFolderId": "1kOy4qi6XqtVR64G22pgfIgjA0f_ywtwV",
+    "contextFolderId": "1j6adkdqtVfyrbZhyMDzVHO2T8Zz42-Ns",
+    "chatExportsFolderId": "1TPuVnBs0IY1WwRpP3FL1MIsTmHn0xTnk",
+    "sessionsFolderId": "1ac7pGwdjTF9_AsA4EFWAwVb7WZnXinMx",
+    "snapshotsFolderId": "1aYQMxMj8uX_rYaxysTaJ3g5vK8NYHOr_",
+    "archiveFolderId": "12lnzVswxNENGh4XvkD2U6CSzAYyjIzNq",
+    "standardPromptFileId": "1iLPQAgxNR8PpOVMB7S1CWRa3v2v6BlMe",
+    "projectRegisterFileId": "1PpX6daJRs7HTHNWVjxYUgxcXTJDAGaOp",
+    "layoutFileId": "1nunx8LGAmjicjQdSOFS7d9I5SOgZD8pq",
+    "layoutVersion": 2,
+    "expectedOwnerEmail": "strijbosmh@gmail.com",
+    "folders": {
+      "Context": "1j6adkdqtVfyrbZhyMDzVHO2T8Zz42-Ns",
+      "Chatexports": "1TPuVnBs0IY1WwRpP3FL1MIsTmHn0xTnk",
+      "Sessies": "1ac7pGwdjTF9_AsA4EFWAwVb7WZnXinMx",
+      "Momentopnamen": "1aYQMxMj8uX_rYaxysTaJ3g5vK8NYHOr_",
+      "Archief": "12lnzVswxNENGh4XvkD2U6CSzAYyjIzNq"
+    }
+  },
+  "documentation": [
+    "README.md",
+    "RESUME_BUILDING.md",
+    "AGENTS.md",
+    "STATUS.md",
+    "BESLISSINGEN.md",
+    "INSTALLATIE.md"
+  ],
+  "lastVerifiedHandoff": null,
+  "automaticStorage": {
+    "status": "awaiting-hook-review-and-native-verification",
+    "verified": false
+  },
+  "workflow": {
+    "promptVersion": "2.0.0",
+    "promptUpdated": "2026-11-13",
+    "gitIsSourceOfTruth": true,
+    "localRegistration": "%USERPROFILE%/.codex/softwareprojecten/config.json"
+  }
+}

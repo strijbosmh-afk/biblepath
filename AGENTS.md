@@ -1,0 +1,12 @@
+# BiblePath / ReligieAtlas
+
+Dit is de echte Git-root van project `biblepath`. De bovenliggende map bevat een afzonderlijke lege Git-repository; gebruik die niet voor commits of overdracht.
+
+- Lees bij sessiestart `PROJECT.json`, `STATUS.md` en de centrale standaardprompt via Drive-bestands-ID `1iLPQAgxNR8PpOVMB7S1CWRa3v2v6BlMe`. Lokale registratie: `%USERPROFILE%/.codex/softwareprojecten/config.json`; fallbackprompt: `%USERPROFILE%/.codex/softwareprojecten/STANDAARDPROMPT.md`. Vermeld versie en niet-gecontroleerde cloudstatus bij offline gebruik.
+- Controleer werkmap, branch, commit, remote en lokale wijzigingen. Git is leidend voor code en technische documentatie. Afgesproken remote: `https://github.com/strijbosmh-afk/biblepath.git`, branch `main`. Behoud bestaande wijzigingen; commit uitsluitend taakbestanden en controleer een push op de remote.
+- `dist/` is hier bewerkbare broncode. Sluit die niet uit als buildcache. Volg `INSTALLATIE.md`; lees `RESUME_BUILDING.md` alleen voor relevante productcontext.
+- Werk `STATUS.md` bij na betekenisvol werk, keuzes in `BESLISSINGEN.md` en gewijzigde startvoorwaarden in `INSTALLATIE.md`. Bewaar per sessie een verslag met project-ID, sessie-ID, pc, UTC, branch, commit, onaf werk, controles en volgende stap. Benoem gespreksexport als volledig beschikbaar transcript, gedeeltelijke tekst of samenvatting.
+- Drive gebruikt uitsluitend de geadverteerde privéverbinding van `strijbosmh@gmail.com`. Controleer profiel en eigenaar/parent van Mijn Drive, hoofdmap, projectmap en concrete bestemming. Gebruik vaste IDs uit `PROJECT.json`; `Chatexports`, `Sessies` en `Momentopnamen` blijven logische sleutels. Gebruik per sessie submappen voor chats en verslagen.
+- Laat de vertrouwde native Stop-hook exports maken. Een handmatige helperaanroep bewijst geen automatische opslag. Verwerk de wachtrij in de native vervolgbeurt via normale Drive-tools en bevestig pas na eigenaar/parent/grootte en remote checksum of SHA256 van opnieuw gedownloade bytes. Geen lokale hash als cloudbewijs. Behoud mislukte exports.
+- Exporteer geen .env-bestanden, sleutels, tokens, authenticatie, browserprofielen, actieve .git, target of node_modules. Een export is geen native hervatbare chat.
+- Meld lokale opslag, Git-publicatie, Drive-verificatie en onaf werk afzonderlijk. Automatische opslag is pas bewezen met native Stop, bijbehorende export en geaccepteerde ontvangst na Drive-readback.
