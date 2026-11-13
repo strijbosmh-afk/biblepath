@@ -20,23 +20,37 @@ for(const tradition of ['christianity','judaism','islam']){
  assert.equal(visibleIds.size,events.length,'Overview retains every dated event, grouped rather than dropped');
  const expected=events.filter(e=>e.kind==='text').map(e=>e.id).sort();assert.deepEqual(model.visible({width:900,kind:'text'}).flatMap(c=>c.events.map(e=>e.id)).sort(),expected);
  const needle=events[events.length-1].title;assert(model.visible({width:900,filter:needle.toUpperCase()}).some(c=>c.events.some(e=>e.title===needle)),'Search finds offscreen chronological events in overview');
- const entries=challenges.traditions[tradition];assert(entries.length>=(tradition==='christianity'?18:12));assert.equal(new Set(entries.map(e=>e.statement)).size,entries.length,'Challenges need distinct reflection prompts');
- for(const e of entries){assert(e.statementType==='editorial','An editorial prompt must not masquerade as a scripture quotation');assert(e.title?.trim()&&e.context.length>80);assert.equal(e.questions.length,3);assert(e.questions.every(q=>q.length>15));sources(e.sources);validatePassage(e.passage,tradition);passages++;totalChallenges++;}
+ const entries=challenges.traditions[tradition];assert.equal(entries.length,tradition==='christianity'?200:12);
+ for(const field of ['id','title','statement'])assert.equal(new Set(entries.map(e=>e[field])).size,entries.length,`Challenges need distinct ${field} values`);
+ for(const e of entries){assert(e.statementType==='editorial','An editorial prompt must not masquerade as a scripture quotation');assert(e.title?.trim()&&e.context.length>80);assert(e.questions.length>=1&&e.questions.length<=3);assert(e.questions.every(q=>q.length>15));sources(e.sources);validatePassage(e.passage,tradition);passages++;totalChallenges++;}
 }
-const catholicChallenges=challenges.traditions.christianity;for(const pillar of ['prayer','poor','peace'])assert(catholicChallenges.filter(e=>e.pillar===pillar).length>=6);
+const catholicChallenges=challenges.traditions.christianity;
+for(const [pillar,count] of Object.entries({prayer:67,poor:67,peace:66})){
+ assert.equal(catholicChallenges.filter(e=>e.pillar===pillar).length,count);
+}
+const passageKeys=new Set();
 for(const entry of catholicChallenges){
  const {book,chapter,verse,endVerse}=entry.passage;
+ const key=[book,chapter,verse,endVerse].join(':');
+ assert(!passageKeys.has(key),`Repeated reflection passage: ${key}`);
+ passageKeys.add(key);
+ assert(entry.keywords.length>0,`Missing search terms for ${entry.id}`);
  const corpus=catholic.books.find(b=>b.id===book).chapters.find(c=>c.number===chapter).verses;
  const expected=corpus.filter(v=>v.number>=verse&&v.number<=endVerse).map(({number,text})=>({number,text}));
  assert.deepEqual(entry.verses,expected,'The reflection sheet quotes the exact reader edition');
 }
 assert.equal(findReflections(catholicChallenges,'Ik voel me eenzaam')[0].id,'christianity:eenzaamheid');
 assert.equal(findReflections(catholicChallenges,'VERGÉVING')[0].id,'christianity:vergeven');
-assert.equal(findReflections(catholicChallenges,'vergeven')[0].id,'christianity:vergeven');
+assert.equal(findReflections(catholicChallenges,'vergeven')[0].topic,'Vergeven','An exact topic ranks above a synonym');
+assert.equal(findReflections(catholicChallenges,'ouderen EN nieuwkomers')[0].id,'christianity:iemand-laten-meetellen');
+assert.equal(findReflections(catholicChallenges,'tobit EN herdenken')[0].passage.book,'TOB');
+assert(findReflections(catholicChallenges,'vrede EN oorlog').some(e=>e.id==='christianity:van-zwaarden-naar-werktuigen'));
 assert(findReflections(catholicChallenges,'vrede').length>1,'Related reflections remain selectable');
 assert.deepEqual(findReflections(catholicChallenges,'astrofysica'),[]);
 assert.deepEqual(findReflections(catholicChallenges,'Ik zoek een reflectie'),[]);
-const matchingTopics=query=>findReflections(catholicChallenges,query).map(entry=>entry.topic);
+const originalIds=new Set(['hoop','rouw','vrede-stichten','verzoeningsopdracht','eenzaamheid'].map(id=>'christianity:'+id));
+const booleanExamples=catholicChallenges.filter(entry=>originalIds.has(entry.id));
+const matchingTopics=query=>findReflections(booleanExamples,query).map(entry=>entry.topic);
 assert.deepEqual(matchingTopics('hoop OF rouw'),['Hoop','Rouw']);
 assert.deepEqual(matchingTopics('HOOP or rouw AND NOT verdriet'),['Hoop'],'NOT and AND bind before OR');
 assert.deepEqual(matchingTopics('(hoop OF rouw) EN NIET verdriet'),['Hoop']);

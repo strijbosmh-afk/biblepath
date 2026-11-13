@@ -38,7 +38,7 @@ Drive-locaties: [momentopname](https://drive.google.com/drive/folders/1W7UfUAzFU
 
 ## Reflecties op onderwerp
 
-Onder Christendom → Reflectie staan 27 katholieke reflecties die aansluiten bij gebed, vriendschap met mensen in armoede en vrede. Een gekozen reflectie toont de verzen uit de Nederlandse katholieke Bijbel, één reflectiepunt, context en bronnen. De afdrukopmaak toont het gekozen overzicht.
+Onder Christendom → Reflectie staan 200 katholieke reflecties. De verdeling is 67 bij gebed, 67 bij vriendschap met mensen in armoede en 66 bij vrede. Elke reflectie toont een eigen passage uit de Nederlandse katholieke Bijbel, één reflectiepunt, context en bronnen. De afdrukopmaak toont het gekozen overzicht. De passages zijn gecontroleerd tegen de leeseditie en de 158 verschillende nieuwe hoofdstuklinks bij eBible zijn bereikbaar.
 
 De reflectiezoeker ondersteunt EN, OF, NIET, AND, OR, NOT en haakjes. De gebruikelijke voorrang is NIET, EN, OF. De browsercontrole bevestigde combinaties, ongeldige invoer, passagekoppelingen en herstel van het gekozen resultaat na terugkeer uit de Bijbellezer.
 
