@@ -1,6 +1,6 @@
 # BiblePath / ReligieAtlas
 
-Dit is de echte Git-root van project `biblepath`. De bovenliggende map bevat een afzonderlijke lege Git-repository; gebruik die niet voor commits of overdracht.
+Dit is de echte Git-root van project `biblepath`. Op deze pc staat de actieve repository in `C:\Users\Michiel Strijbos\Projects\BiblePath`, buiten OneDrive. De oude OneDrive-werkmap is geen actieve bronrepository; gebruik die niet voor commits of overdracht.
 
 - Lees bij sessiestart `PROJECT.json`, `STATUS.md` en de centrale standaardprompt via Drive-bestands-ID `1iLPQAgxNR8PpOVMB7S1CWRa3v2v6BlMe`. Lokale registratie: `%USERPROFILE%/.codex/softwareprojecten/config.json`; fallbackprompt: `%USERPROFILE%/.codex/softwareprojecten/STANDAARDPROMPT.md`. Vermeld versie en niet-gecontroleerde cloudstatus bij offline gebruik.
 - Controleer werkmap, branch, commit, remote en lokale wijzigingen. Git is leidend voor code en technische documentatie. Afgesproken remote: `https://github.com/strijbosmh-afk/biblepath.git`, branch `main`. Behoud bestaande wijzigingen; commit uitsluitend taakbestanden en controleer een push op de remote.

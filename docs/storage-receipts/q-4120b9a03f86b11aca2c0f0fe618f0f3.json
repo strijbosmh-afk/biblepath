@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "queueId": "q-4120b9a03f86b11aca2c0f0fe618f0f3",
+  "acknowledgedAt": "2026-11-13T13:48:56.333Z",
+  "status": "cloud-readback-verified",
+  "evidenceSource": "caller-supplied Google Drive metadata checksum or fresh download checksum",
+  "files": [
+    {
+      "relativePath": "Momentopnamen/q-4120b9a03f86b11aca2c0f0fe618f0f3/AGENTS.md",
+      "driveFileId": "1QVFgM-V0tr4uHUZdpr4BPIPTFrPGC9-_",
+      "verified": true,
+      "size": 2528,
+      "verificationMethod": "download-sha256",
+      "readbackSha256": "fe1f69b5d2939a578e97e698eefae8fab1da0e2cb8ce3589031a6f6e0b6a71bc",
+      "parentId": "1W7UfUAzFUuLmv1ryQlFUFhofW19jSfSm",
+      "ownerEmail": "strijbosmh@gmail.com"
+    },
+    {
+      "relativePath": "Momentopnamen/q-4120b9a03f86b11aca2c0f0fe618f0f3/BESLISSINGEN.md",
+      "driveFileId": "1Xxg3zXYp5yNSXHTF-iK4xqPaYWG096sq",
+      "verified": true,
+      "size": 4030,
+      "verificationMethod": "download-sha256",
+      "readbackSha256": "24ccbf5b6bb1fb06ff11655fc675e147d81166c1026f968740cb0668e2e8ffe7",
+      "parentId": "1W7UfUAzFUuLmv1ryQlFUFhofW19jSfSm",
+      "ownerEmail": "strijbosmh@gmail.com"
+    },
+    {
+      "relativePath": "Momentopnamen/q-4120b9a03f86b11aca2c0f0fe618f0f3/INSTALLATIE.md",
+      "driveFileId": "1NZgYJeSkr-g-q6POBzFYuTpQhuywVJ_p",
+      "verified": true,
+      "size": 6882,
+      "verificationMethod": "download-sha256",
+      "readbackSha256": "c5fb8f9631bc95edebd97355e75187583e99cf4befb169d273e6a96105a58b3e",
+      "parentId": "1W7UfUAzFUuLmv1ryQlFUFhofW19jSfSm",
+      "ownerEmail": "strijbosmh@gmail.com"
+    },
+    {
+      "relativePath": "Momentopnamen/q-4120b9a03f86b11aca2c0f0fe618f0f3/README.md",
+      "driveFileId": "1ttkD8F8MgyjfBnuP1N3S-tvhfvqnEzFh",
+      "verified": true,
+      "size": 25686,
+      "verificationMethod": "download-sha256",
+      "readbackSha256": "d155ce33b1b57a8ccc7e87ba5c47857e356f425ade992bfda377d1bf7c459778",
+      "parentId": "1W7UfUAzFUuLmv1ryQlFUFhofW19jSfSm",
+      "ownerEmail": "strijbosmh@gmail.com"
+    },
+    {
+      "relativePath": "Momentopnamen/q-4120b9a03f86b11aca2c0f0fe618f0f3/RESUME_BUILDING.md",
+      "driveFileId": "1Uho-g4UJCJCIt7LHCdXtfsobb-Ma6g5e",
+      "verified": true,
+      "size": 68198,
+      "verificationMethod": "download-sha256",
+      "readbackSha256": "49561f75aa30b1affcea3922109cb6f61f9ed45118ee58bcbb42a78a0844c7bb",
+      "parentId": "1W7UfUAzFUuLmv1ryQlFUFhofW19jSfSm",
+      "ownerEmail": "strijbosmh@gmail.com"
+    },
+    {
+      "relativePath": "Momentopnamen/q-4120b9a03f86b11aca2c0f0fe618f0f3/STATUS.md",
+      "driveFileId": "1aJqXz5SLCOpzJpFlpx_UjTlYPgkFZi9b",
+      "verified": true,
+      "size": 4511,
+      "verificationMethod": "download-sha256",
+      "readbackSha256": "47bc175a450346ab8e952e2b5c1d533f3cb54dec1b932d705a98cf1a3759cc6b",
+      "parentId": "1W7UfUAzFUuLmv1ryQlFUFhofW19jSfSm",
+      "ownerEmail": "strijbosmh@gmail.com"
+    },
+    {
+      "relativePath": "Momentopnamen/q-4120b9a03f86b11aca2c0f0fe618f0f3/dist/vendor/qrcodegen/README.md",
+      "driveFileId": "1WBrG62yGv0h192jVobTtVrnbjDruYW2x",
+      "verified": true,
+      "size": 565,
+      "verificationMethod": "download-sha256",
+      "readbackSha256": "e43d653b3d99d8821c71e23a83cdb183d7be2c32ea53f60ba4db1ee5db2444a8",
+      "parentId": "1pljEX2RcmKQrcuN1NVY_ZNg2-fJ7Kz_R",
+      "ownerEmail": "strijbosmh@gmail.com"
+    },
+    {
+      "relativePath": "Momentopnamen/q-4120b9a03f86b11aca2c0f0fe618f0f3/docs/lived-religion-sources.md",
+      "driveFileId": "1_fZuxqzGQlNkaNZWRIJmkrzylhzmLxpi",
+      "verified": true,
+      "size": 2945,
+      "verificationMethod": "download-sha256",
+      "readbackSha256": "41a18014a09b695d80958b9f6cc4d9137ab4c164f00a8ade8b13d0f785891dad",
+      "parentId": "1ai82pFWW3EXJElu6FCmgIN12ZboYDLid",
+      "ownerEmail": "strijbosmh@gmail.com"
+    },
+    {
+      "relativePath": "Momentopnamen/q-4120b9a03f86b11aca2c0f0fe618f0f3/docs/person-passage-mapping.md",
+      "driveFileId": "1wXoihZg_FvdHnbIwAAR6OSPWWIHvzhrL",
+      "verified": true,
+      "size": 5662,
+      "verificationMethod": "download-sha256",
+      "readbackSha256": "b1d4751fc30668dd1f86d789ed9c359ce358a17f35c750c4760ca06921f15904",
+      "parentId": "1ai82pFWW3EXJElu6FCmgIN12ZboYDLid",
+      "ownerEmail": "strijbosmh@gmail.com"
+    },
+    {
+      "relativePath": "Momentopnamen/q-4120b9a03f86b11aca2c0f0fe618f0f3/docs/timeline-sources.md",
+      "driveFileId": "1vERINFwRUxEe9KqQusF687OUxv5V8BeC",
+      "verified": true,
+      "size": 3315,
+      "verificationMethod": "download-sha256",
+      "readbackSha256": "9187151bc180ab2f54fd030d78f274dfba609e8a05be2f1f52602b178ae02535",
+      "parentId": "1ai82pFWW3EXJElu6FCmgIN12ZboYDLid",
+      "ownerEmail": "strijbosmh@gmail.com"
+    },
+    {
+      "relativePath": "Chatexports/01a1d527-955a-7103-a3e3-b3bab04dbd97/20261113T134550Z-pc1830-q-4120b9a03f86b11aca2c0f0fe618f0f3.md",
+      "driveFileId": "1WSneRnBFg5ofWH6cjpLVw3nYV6nLg0Jq",
+      "verified": true,
+      "size": 1390,
+      "verificationMethod": "download-sha256",
+      "readbackSha256": "cb69d6a2bc1e53c08b12ca87fd4af3c113c3018227634403a989574e27b62752",
+      "parentId": "1dgkDHGSE8R1EQazN4csAeIPBLz1WoljC",
+      "ownerEmail": "strijbosmh@gmail.com"
+    },
+    {
+      "relativePath": "Sessies/01a1d527-955a-7103-a3e3-b3bab04dbd97/20261113T134550Z-pc1830-q-4120b9a03f86b11aca2c0f0fe618f0f3.md",
+      "driveFileId": "1FHy7aN9JHqajtWctm5wOLOiNmIker3D_",
+      "verified": true,
+      "size": 1191,
+      "verificationMethod": "download-sha256",
+      "readbackSha256": "6947a316883a81d37862c2046e4020a43925f20337f1ac287e155989b741e5e9",
+      "parentId": "1ejZdCEh4iNklW2oJl68QZHfSteimYmQ7",
+      "ownerEmail": "strijbosmh@gmail.com"
+    },
+    {
+      "relativePath": "Momentopnamen/q-4120b9a03f86b11aca2c0f0fe618f0f3/MANIFEST.json",
+      "driveFileId": "1OrB_YUh7xTrTFNvPMqeCkfg0d3d6GTNg",
+      "verified": true,
+      "size": 5636,
+      "verificationMethod": "download-sha256",
+      "readbackSha256": "00a51f143f7ec70f24285fc4bc68e07a451ef45112f6cd14ef9da80efcccc921",
+      "parentId": "1W7UfUAzFUuLmv1ryQlFUFhofW19jSfSm",
+      "ownerEmail": "strijbosmh@gmail.com"
+    }
+  ]
+}

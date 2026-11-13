@@ -1,5 +1,17 @@
 # Beslissingen — BiblePath / ReligieAtlas
 
+## 2026-11-13 — Native opslagbewijs vastleggen
+
+- De native opslagtest is geslaagd voor queue `q-4120b9a03f86b11aca2c0f0fe618f0f3`: 13 bestanden zijn teruggelezen via de privé-Driveverbinding en met `download-sha256` gecontroleerd. `acknowledge` heeft het ontvangstbewijs geaccepteerd.
+- Bewaar een ongewijzigde kopie van het geaccepteerde ontvangstbewijs onder `docs/storage-receipts/`, met een verwijzing in `PROJECT.json` en `STATUS.md`. Zo blijven de Drive-ID's en gemeten hashes ook vanuit Git beschikbaar.
+- Dit bewijs blijft gekoppeld aan de oorspronkelijke sessie, queue en snapshotcommit `44a2809`. Een latere documentatiecommit verandert dat bereik niet; de gedeeltelijke gespreksexport is geen native hervatbare chat.
+
+## 2026-11-13 — Actieve repository buiten zakelijke OneDrive
+
+- Op expliciet verzoek van de gebruiker is `C:\Users\Michiel Strijbos\Projects\BiblePath` de actieve lokale Git-root. De lokale projectregistratie verwijst met zowel `localPath` als `workspacePath` naar deze map.
+- Alle 836 gekopieerde bestanden zijn met SHA256 tegen het origineel gecontroleerd. Bestaande codewijzigingen en Git-geschiedenis zijn behouden. Na een beleidsblokkade op verwijdering zijn de oorspronkelijke bestanden zonder verwijdering verplaatst naar `C:\Users\Michiel Strijbos\Projects\BiblePath-recovery-20261113`. Deze herstelkopie staat ook buiten OneDrive. Op de oorspronkelijke repositorylocatie blijven alleen lege mappen over.
+- De vaste privé-Google Drive-bestemmingen blijven gelden. Alleen een native Stop, automatische vervolgbeurt en geverifieerde Drive-readback bewijzen automatische opslag. De verhuizing verandert de hookdefinities en hooktrust niet.
+
 ## 2026-11-13 — Projectregistratie en bronrepository
 
 - Gebruik de vaste project-ID `biblepath` en de naam BiblePath; ReligieAtlas is de naam van de app.

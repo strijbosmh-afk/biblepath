@@ -40,8 +40,25 @@
   ],
   "lastVerifiedHandoff": null,
   "automaticStorage": {
-    "status": "awaiting-hook-review-and-native-verification",
-    "verified": false
+    "status": "cloud-readback-verified",
+    "verified": true,
+    "verifiedAt": "2026-11-13T13:48:56.333Z",
+    "nativeSessionId": "01a1d527-955a-7103-a3e3-b3bab04dbd97",
+    "nativeTurnId": "01a1d527-9f58-70a0-87e2-0e50fb9b6c2f",
+    "nativeStartDirectory": "C:\\Users\\Michiel Strijbos\\Projects\\BiblePath",
+    "machine": "pc1830",
+    "queueId": "q-4120b9a03f86b11aca2c0f0fe618f0f3",
+    "verifiedFiles": 13,
+    "verifiedBytes": 132539,
+    "verificationMethod": "download-sha256",
+    "verifiedAccountEmail": "strijbosmh@gmail.com",
+    "conversationCoverage": "partial-conversational-text",
+    "receiptPath": "%USERPROFILE%/.codex/softwareprojecten/state/receipts/q-4120b9a03f86b11aca2c0f0fe618f0f3.json",
+    "receiptRepositoryPath": "docs/storage-receipts/q-4120b9a03f86b11aca2c0f0fe618f0f3.json",
+    "snapshotFolderId": "1W7UfUAzFUuLmv1ryQlFUFhofW19jSfSm",
+    "chatFolderId": "1dgkDHGSE8R1EQazN4csAeIPBLz1WoljC",
+    "sessionFolderId": "1ejZdCEh4iNklW2oJl68QZHfSteimYmQ7",
+    "snapshotGitCommit": "44a28090c46985a59e694b8640646ba0ba704c65"
   },
   "workflow": {
     "promptVersion": "2.0.0",

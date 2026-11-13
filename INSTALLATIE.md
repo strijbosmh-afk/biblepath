@@ -29,7 +29,7 @@ git rev-parse HEAD
 
 Vergelijk de commit met de laatste geverifieerde overdracht voordat je verderwerkt. De vijf bij de start aangetroffen wijzigingen zijn tijdens de inrichting extern vastgelegd in commit `e8f0566` en op `origin/main` teruggevonden. Zie `STATUS.md` voor onaf werk en `PROJECT.json` voor de vaste project- en Drive-ID's. Registreer de nieuwe lokale map apart; lokale absolute paden mogen per pc verschillen.
 
-Op de huidige pc is de werkelijke Git-root de submap `BiblePath\repository`. Open die map als codeproject. De bovenliggende map `BiblePath` bevat een afzonderlijke lege Git-repository en losse eerdere publicatiebestanden; gebruik die niet als bronrepository.
+Op de huidige pc is de werkelijke Git-root `C:\Users\Michiel Strijbos\Projects\BiblePath`, buiten de zakelijke OneDrive. Open deze map als codeproject. De oorspronkelijke repository is als herstelkopie bewaard in `C:\Users\Michiel Strijbos\Projects\BiblePath-recovery-20261113`; gebruik die niet voor actief werk. Op de oude repositorylocatie binnen OneDrive staan alleen lege mappen. De overige bestanden in de buitenste OneDrive-werkmap vallen buiten deze verhuizing.
 
 ## Lokaal starten
 
@@ -89,6 +89,8 @@ Registratie of een handmatige controle bewijst geen werkende automatische opslag
 
 ## Softwareprojecten op deze pc
 
-De lokale registratie staat in `%USERPROFILE%/.codex/softwareprojecten/config.json`; helper en promptcache staan ernaast. Alleen de echte repositorymap is geregistreerd. De twee globale hooks in `%USERPROFILE%/.codex/hooks.json` moeten eerst via **Settings > Hooks** of **Review hooks** worden beoordeeld. Dit volgt uit de [officiële hookdocumentatie](https://learn.chatgpt.com/docs/hooks). Open daarna deze repositorymap als werkmap en laat een normale beurt eindigen. Controleer native Stop, export en Drive-ontvangst afzonderlijk; de huidige chat vanuit de bovenliggende map valt buiten de exportselectie.
+De lokale registratie staat in `%USERPROFILE%/.codex/softwareprojecten/config.json`; helper en promptcache staan ernaast. `localPath` en `workspacePath` wijzen beide naar `C:\Users\Michiel Strijbos\Projects\BiblePath`. De gebruiker heeft de twee globale Softwareprojecten-hooks beoordeeld en vertrouwd; tijdens de verhuizing zijn hookdefinities en hooktrust niet aangepast. Volgens de [officiële hookdocumentatie](https://learn.chatgpt.com/docs/hooks) moeten gewijzigde hookdefinities opnieuw worden beoordeeld. Start voor de opslagtest een nieuwe chat met deze repository als echte native startmap en laat een normale beurt eindigen. Controleer native Stop, export en Drive-ontvangst afzonderlijk. Alleen het aanpassen van een shellwerkmap bewijst dit niet.
+
+Deze opslagtest is op deze pc geslaagd op 2026-11-13. `PROJECT.json` en `STATUS.md` verwijzen naar de geteste sessie, Drive-locaties en het geaccepteerde ontvangstbewijs onder `docs/storage-receipts/`. Dit bewijs geldt voor die export; op een nieuwe pc moet de keten opnieuw worden gecontroleerd.
 
 Op een andere pc: gebruik het bestaande installatiepakket van Softwareprojecten of de centrale beheerrepository en registreer de clone met `node archive.mjs --config <configpad> register --cwd <clonepad> --project-id biblepath --name BiblePath`. Neem daarna de vaste Drive-ID's uit PROJECT.json over in de lokale registratie (driveFolderId en folders); behoud bestaande registraties. Controleer opnieuw de geadverteerde privéverbinding.
